@@ -113,6 +113,11 @@ namespace PRESENTACION
             n = 0;
         }
 
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
         private void Btn_Usuarios_Click(object sender, EventArgs e)
         {
             Form Formulario;

@@ -12,7 +12,7 @@ namespace PRESENTACION
         [STAThread]
         static void Main()
         {
-            Application.Run(new FormAgregarMedicamento());
+            Application.Run(new FormPrincipal());
         }
     }
 }
