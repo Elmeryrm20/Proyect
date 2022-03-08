@@ -40,23 +40,24 @@ namespace PRESENTACION
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textCodigo = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.textCantidad = new System.Windows.Forms.TextBox();
+            this.textLaboratorio = new System.Windows.Forms.TextBox();
+            this.textFecha_Vencimiento = new System.Windows.Forms.TextBox();
+            this.textGramaje = new System.Windows.Forms.TextBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textProcedencia = new System.Windows.Forms.TextBox();
+            this.cmbCaja = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -159,25 +160,6 @@ namespace PRESENTACION
             this.label11.TabIndex = 10;
             this.label11.Text = "Caja";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox1.Location = new System.Drawing.Point(391, 84);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 156);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox2.Location = new System.Drawing.Point(391, 312);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 41);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -187,55 +169,55 @@ namespace PRESENTACION
             this.label12.TabIndex = 13;
             this.label12.Text = "Suba una imagen";
             // 
-            // textBox1
+            // textCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 14;
+            this.textCodigo.Location = new System.Drawing.Point(138, 81);
+            this.textCodigo.Name = "textCodigo";
+            this.textCodigo.Size = new System.Drawing.Size(149, 20);
+            this.textCodigo.TabIndex = 14;
             // 
-            // textBox2
+            // textNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 15;
+            this.textNombre.Location = new System.Drawing.Point(138, 108);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(149, 20);
+            this.textNombre.TabIndex = 15;
             // 
-            // textBox3
+            // textCantidad
             // 
-            this.textBox3.Location = new System.Drawing.Point(138, 134);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 20);
-            this.textBox3.TabIndex = 16;
+            this.textCantidad.Location = new System.Drawing.Point(138, 134);
+            this.textCantidad.Name = "textCantidad";
+            this.textCantidad.Size = new System.Drawing.Size(149, 20);
+            this.textCantidad.TabIndex = 16;
             // 
-            // textBox4
+            // textLaboratorio
             // 
-            this.textBox4.Location = new System.Drawing.Point(138, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 20);
-            this.textBox4.TabIndex = 17;
+            this.textLaboratorio.Location = new System.Drawing.Point(138, 160);
+            this.textLaboratorio.Name = "textLaboratorio";
+            this.textLaboratorio.Size = new System.Drawing.Size(149, 20);
+            this.textLaboratorio.TabIndex = 17;
             // 
-            // textBox5
+            // textFecha_Vencimiento
             // 
-            this.textBox5.Location = new System.Drawing.Point(138, 187);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(149, 20);
-            this.textBox5.TabIndex = 18;
+            this.textFecha_Vencimiento.Location = new System.Drawing.Point(138, 187);
+            this.textFecha_Vencimiento.Name = "textFecha_Vencimiento";
+            this.textFecha_Vencimiento.Size = new System.Drawing.Size(149, 20);
+            this.textFecha_Vencimiento.TabIndex = 18;
             // 
-            // textBox6
+            // textGramaje
             // 
-            this.textBox6.Location = new System.Drawing.Point(138, 215);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(149, 20);
-            this.textBox6.TabIndex = 19;
+            this.textGramaje.Location = new System.Drawing.Point(138, 215);
+            this.textGramaje.Name = "textGramaje";
+            this.textGramaje.Size = new System.Drawing.Size(149, 20);
+            this.textGramaje.TabIndex = 19;
             // 
-            // comboBox1
+            // cmbTipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 243);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 21);
-            this.comboBox1.TabIndex = 20;
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Location = new System.Drawing.Point(138, 243);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(149, 21);
+            this.cmbTipo.TabIndex = 20;
             // 
             // radioButton1
             // 
@@ -259,41 +241,61 @@ namespace PRESENTACION
             this.radioButton2.Text = "Pediátrico";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // textProcedencia
             // 
-            this.textBox7.Location = new System.Drawing.Point(138, 294);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(149, 20);
-            this.textBox7.TabIndex = 23;
+            this.textProcedencia.Location = new System.Drawing.Point(138, 294);
+            this.textProcedencia.Name = "textProcedencia";
+            this.textProcedencia.Size = new System.Drawing.Size(149, 20);
+            this.textProcedencia.TabIndex = 23;
             // 
-            // comboBox2
+            // cmbCaja
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(137, 320);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(150, 21);
-            this.comboBox2.TabIndex = 24;
+            this.cmbCaja.FormattingEnabled = true;
+            this.cmbCaja.Location = new System.Drawing.Point(137, 320);
+            this.cmbCaja.Name = "cmbCaja";
+            this.cmbCaja.Size = new System.Drawing.Size(150, 21);
+            this.cmbCaja.TabIndex = 24;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox2.Location = new System.Drawing.Point(391, 312);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 41);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox1.Location = new System.Drawing.Point(391, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 156);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 406);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.cmbCaja);
+            this.Controls.Add(this.textProcedencia);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cmbTipo);
+            this.Controls.Add(this.textGramaje);
+            this.Controls.Add(this.textFecha_Vencimiento);
+            this.Controls.Add(this.textLaboratorio);
+            this.Controls.Add(this.textCantidad);
+            this.Controls.Add(this.textNombre);
+            this.Controls.Add(this.textCodigo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -312,8 +314,8 @@ namespace PRESENTACION
             this.Name = "FormAgregarMedicamento";
             this.Text = "FormAgregarMedicamento";
             this.Load += new System.EventHandler(this.FormAgregarMedicamento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,17 +337,18 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textCodigo;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.TextBox textCantidad;
+        private System.Windows.Forms.TextBox textLaboratorio;
+        private System.Windows.Forms.TextBox textFecha_Vencimiento;
+        private System.Windows.Forms.TextBox textGramaje;
+        private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textProcedencia;
+        private System.Windows.Forms.ComboBox cmbCaja;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
