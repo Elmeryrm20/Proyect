@@ -24,7 +24,7 @@ namespace PRESENTACION
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
