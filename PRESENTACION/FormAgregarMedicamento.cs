@@ -16,5 +16,10 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
+
+        private void FormAgregarMedicamento_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
