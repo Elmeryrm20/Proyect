@@ -26,5 +26,115 @@ namespace PRESENTACION
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormInicio();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
+        private void Btn_Agregar_Click(object sender, EventArgs e)
+        {
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormAgregarMedicamento>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormAgregarMedicamento();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
+        private void Btn_Cajas_Click(object sender, EventArgs e)
+        {
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormMedicamentos();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
+        private void Btn_Usuarios_Click(object sender, EventArgs e)
+        {
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormUsuarios>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormUsuarios();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
+        private void Btn_Salidas_Click(object sender, EventArgs e)
+        {
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormSalidaMedicamento>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormSalidaMedicamento();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
     }
 }
