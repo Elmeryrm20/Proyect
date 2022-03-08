@@ -54,6 +54,7 @@ namespace PRESENTACION
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -166,6 +167,7 @@ namespace PRESENTACION
             this.pictureBox1.Size = new System.Drawing.Size(150, 156);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -179,7 +181,7 @@ namespace PRESENTACION
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(427, 243);
+            this.label12.Location = new System.Drawing.Point(422, 243);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 13);
             this.label12.TabIndex = 13;
@@ -272,6 +274,10 @@ namespace PRESENTACION
             this.comboBox2.Size = new System.Drawing.Size(150, 21);
             this.comboBox2.TabIndex = 24;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,5 +346,6 @@ namespace PRESENTACION
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
