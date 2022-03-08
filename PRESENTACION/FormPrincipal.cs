@@ -16,7 +16,7 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
-
+        int n, mx, my;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -91,6 +91,26 @@ namespace PRESENTACION
             {
                 Formulario.BringToFront();
             }
+        }
+        
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            n = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (n == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            n = 0;
         }
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)
