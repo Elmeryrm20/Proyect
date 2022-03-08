@@ -58,9 +58,9 @@ namespace PRESENTACION
             // 
             this.panel1.BackColor = System.Drawing.Color.Yellow;
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.Btn_Normal);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_Maximizar);
+            this.panel1.Controls.Add(this.Btn_Normal);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -120,10 +120,8 @@ namespace PRESENTACION
             // 
             // Btn_Salidas
             // 
-            this.Btn_Salidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Salidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Btn_Salidas.Location = new System.Drawing.Point(4, 186);
+            this.Btn_Salidas.Location = new System.Drawing.Point(4, 170);
             this.Btn_Salidas.Name = "Btn_Salidas";
             this.Btn_Salidas.Size = new System.Drawing.Size(180, 34);
             this.Btn_Salidas.TabIndex = 4;
@@ -135,7 +133,7 @@ namespace PRESENTACION
             this.Btn_Usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Btn_Usuarios.Location = new System.Drawing.Point(3, 142);
+            this.Btn_Usuarios.Location = new System.Drawing.Point(3, 126);
             this.Btn_Usuarios.Name = "Btn_Usuarios";
             this.Btn_Usuarios.Size = new System.Drawing.Size(180, 34);
             this.Btn_Usuarios.TabIndex = 3;
@@ -147,7 +145,7 @@ namespace PRESENTACION
             this.Btn_Cajas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Cajas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Btn_Cajas.Location = new System.Drawing.Point(3, 102);
+            this.Btn_Cajas.Location = new System.Drawing.Point(3, 86);
             this.Btn_Cajas.Name = "Btn_Cajas";
             this.Btn_Cajas.Size = new System.Drawing.Size(180, 34);
             this.Btn_Cajas.TabIndex = 2;
@@ -159,7 +157,7 @@ namespace PRESENTACION
             this.Btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Btn_Agregar.Location = new System.Drawing.Point(3, 62);
+            this.Btn_Agregar.Location = new System.Drawing.Point(3, 46);
             this.Btn_Agregar.Name = "Btn_Agregar";
             this.Btn_Agregar.Size = new System.Drawing.Size(180, 34);
             this.Btn_Agregar.TabIndex = 1;
@@ -170,8 +168,8 @@ namespace PRESENTACION
             // 
             this.Btn_Inicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Inicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Btn_Inicio.Location = new System.Drawing.Point(3, 22);
+            this.Btn_Inicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Btn_Inicio.Location = new System.Drawing.Point(3, 6);
             this.Btn_Inicio.Name = "Btn_Inicio";
             this.Btn_Inicio.Size = new System.Drawing.Size(180, 34);
             this.Btn_Inicio.TabIndex = 0;

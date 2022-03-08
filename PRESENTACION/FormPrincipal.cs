@@ -115,27 +115,23 @@ namespace PRESENTACION
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Normal)
-            {
+            
                 this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
                 this.WindowState = FormWindowState.Maximized;
                 btn_Maximizar.Visible = false;
                 Btn_Normal.Visible = true;
-                panel2.Size = new Size(300, 406 );
-
-            }
+            
            
         }
 
         private void Btn_Normal_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
+           
                 this.WindowState = FormWindowState.Normal;
                 btn_Maximizar.Visible = true;
                 Btn_Normal.Visible = false;
 
-            }
+            
         }
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)
