@@ -31,8 +31,9 @@ namespace PRESENTACION
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Btn_Normal = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Maximizar = new System.Windows.Forms.PictureBox();
+            this.Btn_Normal = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Btn_Salidas = new System.Windows.Forms.PictureBox();
             this.Btn_Usuarios = new System.Windows.Forms.PictureBox();
@@ -40,18 +41,17 @@ namespace PRESENTACION
             this.Btn_Agregar = new System.Windows.Forms.PictureBox();
             this.Btn_Inicio = new System.Windows.Forms.PictureBox();
             this.PnlCuerpo = new System.Windows.Forms.Panel();
-            this.btn_Maximizar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Salidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cajas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,6 +81,28 @@ namespace PRESENTACION
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Location = new System.Drawing.Point(748, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btn_Maximizar
+            // 
+            this.btn_Maximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_Maximizar.BackColor = System.Drawing.Color.Gray;
+            this.btn_Maximizar.Location = new System.Drawing.Point(715, 9);
+            this.btn_Maximizar.Name = "btn_Maximizar";
+            this.btn_Maximizar.Size = new System.Drawing.Size(27, 27);
+            this.btn_Maximizar.TabIndex = 3;
+            this.btn_Maximizar.TabStop = false;
+            this.btn_Maximizar.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
             // Btn_Normal
             // 
             this.Btn_Normal.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -92,17 +114,6 @@ namespace PRESENTACION
             this.Btn_Normal.TabStop = false;
             this.Btn_Normal.Visible = false;
             this.Btn_Normal.Click += new System.EventHandler(this.Btn_Normal_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(748, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -120,6 +131,8 @@ namespace PRESENTACION
             // 
             // Btn_Salidas
             // 
+            this.Btn_Salidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Salidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Btn_Salidas.Location = new System.Drawing.Point(4, 170);
             this.Btn_Salidas.Name = "Btn_Salidas";
@@ -182,17 +195,6 @@ namespace PRESENTACION
             this.PnlCuerpo.Size = new System.Drawing.Size(592, 406);
             this.PnlCuerpo.TabIndex = 2;
             // 
-            // btn_Maximizar
-            // 
-            this.btn_Maximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_Maximizar.BackColor = System.Drawing.Color.Gray;
-            this.btn_Maximizar.Location = new System.Drawing.Point(715, 9);
-            this.btn_Maximizar.Name = "btn_Maximizar";
-            this.btn_Maximizar.Size = new System.Drawing.Size(27, 27);
-            this.btn_Maximizar.TabIndex = 3;
-            this.btn_Maximizar.TabStop = false;
-            this.btn_Maximizar.Click += new System.EventHandler(this.pictureBox4_Click_1);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,15 +209,15 @@ namespace PRESENTACION
             this.Text = "FormPrincipal";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Salidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Usuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cajas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).EndInit();
             this.ResumeLayout(false);
 
         }

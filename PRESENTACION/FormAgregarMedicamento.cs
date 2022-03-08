@@ -29,7 +29,7 @@ namespace PRESENTACION
             openFileDialog1.Title = "Escoja una imagen";
             openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             openFileDialog1.ShowDialog();
-            
+
 
             if (File.Exists(openFileDialog1.FileName))
             {
@@ -46,6 +46,7 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+            pictureBox1.Image.Save(@"..\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
     }
 }
