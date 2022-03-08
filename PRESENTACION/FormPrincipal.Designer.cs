@@ -40,6 +40,7 @@ namespace PRESENTACION
             this.Btn_Agregar = new System.Windows.Forms.PictureBox();
             this.Btn_Inicio = new System.Windows.Forms.PictureBox();
             this.PnlCuerpo = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -50,11 +51,13 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cajas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Yellow;
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -176,6 +179,17 @@ namespace PRESENTACION
             this.PnlCuerpo.Size = new System.Drawing.Size(592, 406);
             this.PnlCuerpo.TabIndex = 2;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox4.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox4.Location = new System.Drawing.Point(715, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +212,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cajas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,5 +230,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox Btn_Agregar;
         private System.Windows.Forms.PictureBox Btn_Inicio;
         private System.Windows.Forms.Panel PnlCuerpo;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
