@@ -154,8 +154,6 @@ namespace PRESENTACION
             // 
             // Btn_Agregar
             // 
-            this.Btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Btn_Agregar.Location = new System.Drawing.Point(3, 46);
             this.Btn_Agregar.Name = "Btn_Agregar";
