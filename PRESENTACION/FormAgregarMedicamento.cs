@@ -17,10 +17,10 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
-
+        public string fecha;
         private void FormAgregarMedicamento_Load(object sender, EventArgs e)
         {
-
+            fecha = dtFecha_Vencimiento.Text;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -42,9 +42,10 @@ namespace PRESENTACION
                 pictureBox1.Load(Imagen);
             }
         }
-
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            
             if (textCodigo.Text == "")
             {
                 MessageBox.Show("Falta completar el campo código.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -61,13 +62,17 @@ namespace PRESENTACION
             {
                 MessageBox.Show("Falta completar el campo laboratorio.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (textFecha_Vencimiento.Text == "")
+            else if (dtFecha_Vencimiento.Text == fecha)
             {
                 MessageBox.Show("Falta completar el campo Fecha de Vencimiento.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (textGramaje.Text == "")
             {
                 MessageBox.Show("Falta completar el campo Gramaje.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (cmbTipo.Text == "")
+            {
+                MessageBox.Show("Falta escojer el tipo.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (radioButton1.Checked == false && radioButton2.Checked == false)
             {
@@ -76,6 +81,10 @@ namespace PRESENTACION
             else if (textProcedencia.Text == "")
             {
                 MessageBox.Show("Falta completar el campo Procedencia.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (cmbCaja.Text == "")
+            {
+                MessageBox.Show("Falta escojer en caja.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (pictureBox1.Image == null)
             {

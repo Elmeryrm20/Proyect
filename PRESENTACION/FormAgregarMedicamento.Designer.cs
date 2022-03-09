@@ -45,7 +45,6 @@ namespace PRESENTACION
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textCantidad = new System.Windows.Forms.TextBox();
             this.textLaboratorio = new System.Windows.Forms.TextBox();
-            this.textFecha_Vencimiento = new System.Windows.Forms.TextBox();
             this.textGramaje = new System.Windows.Forms.TextBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -55,6 +54,7 @@ namespace PRESENTACION
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -172,50 +172,45 @@ namespace PRESENTACION
             // 
             this.textCodigo.Location = new System.Drawing.Point(138, 81);
             this.textCodigo.Name = "textCodigo";
-            this.textCodigo.Size = new System.Drawing.Size(149, 20);
+            this.textCodigo.Size = new System.Drawing.Size(194, 20);
             this.textCodigo.TabIndex = 14;
             // 
             // textNombre
             // 
             this.textNombre.Location = new System.Drawing.Point(138, 108);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(149, 20);
+            this.textNombre.Size = new System.Drawing.Size(194, 20);
             this.textNombre.TabIndex = 15;
             // 
             // textCantidad
             // 
             this.textCantidad.Location = new System.Drawing.Point(138, 134);
             this.textCantidad.Name = "textCantidad";
-            this.textCantidad.Size = new System.Drawing.Size(149, 20);
+            this.textCantidad.Size = new System.Drawing.Size(194, 20);
             this.textCantidad.TabIndex = 16;
             // 
             // textLaboratorio
             // 
             this.textLaboratorio.Location = new System.Drawing.Point(138, 160);
             this.textLaboratorio.Name = "textLaboratorio";
-            this.textLaboratorio.Size = new System.Drawing.Size(149, 20);
+            this.textLaboratorio.Size = new System.Drawing.Size(194, 20);
             this.textLaboratorio.TabIndex = 17;
-            // 
-            // textFecha_Vencimiento
-            // 
-            this.textFecha_Vencimiento.Location = new System.Drawing.Point(138, 187);
-            this.textFecha_Vencimiento.Name = "textFecha_Vencimiento";
-            this.textFecha_Vencimiento.Size = new System.Drawing.Size(149, 20);
-            this.textFecha_Vencimiento.TabIndex = 18;
             // 
             // textGramaje
             // 
             this.textGramaje.Location = new System.Drawing.Point(138, 215);
             this.textGramaje.Name = "textGramaje";
-            this.textGramaje.Size = new System.Drawing.Size(149, 20);
+            this.textGramaje.Size = new System.Drawing.Size(194, 20);
             this.textGramaje.TabIndex = 19;
             // 
             // cmbTipo
             // 
             this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "xdd"});
             this.cmbTipo.Location = new System.Drawing.Point(138, 243);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(149, 21);
+            this.cmbTipo.Size = new System.Drawing.Size(194, 21);
             this.cmbTipo.TabIndex = 20;
             // 
             // radioButton1
@@ -244,15 +239,17 @@ namespace PRESENTACION
             // 
             this.textProcedencia.Location = new System.Drawing.Point(138, 294);
             this.textProcedencia.Name = "textProcedencia";
-            this.textProcedencia.Size = new System.Drawing.Size(149, 20);
+            this.textProcedencia.Size = new System.Drawing.Size(194, 20);
             this.textProcedencia.TabIndex = 23;
             // 
             // cmbCaja
             // 
             this.cmbCaja.FormattingEnabled = true;
+            this.cmbCaja.Items.AddRange(new object[] {
+            "xdd"});
             this.cmbCaja.Location = new System.Drawing.Point(137, 320);
             this.cmbCaja.Name = "cmbCaja";
-            this.cmbCaja.Size = new System.Drawing.Size(150, 21);
+            this.cmbCaja.Size = new System.Drawing.Size(195, 21);
             this.cmbCaja.TabIndex = 24;
             // 
             // openFileDialog1
@@ -279,18 +276,27 @@ namespace PRESENTACION
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // dtFecha_Vencimiento
+            // 
+            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(137, 186);
+            this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 9, 0, 7, 53, 0);
+            this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
+            this.dtFecha_Vencimiento.Size = new System.Drawing.Size(195, 20);
+            this.dtFecha_Vencimiento.TabIndex = 25;
+            this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 9, 0, 7, 53, 0);
+            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 406);
+            this.Controls.Add(this.dtFecha_Vencimiento);
             this.Controls.Add(this.cmbCaja);
             this.Controls.Add(this.textProcedencia);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.textGramaje);
-            this.Controls.Add(this.textFecha_Vencimiento);
             this.Controls.Add(this.textLaboratorio);
             this.Controls.Add(this.textCantidad);
             this.Controls.Add(this.textNombre);
@@ -340,7 +346,6 @@ namespace PRESENTACION
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textCantidad;
         private System.Windows.Forms.TextBox textLaboratorio;
-        private System.Windows.Forms.TextBox textFecha_Vencimiento;
         private System.Windows.Forms.TextBox textGramaje;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -348,5 +353,6 @@ namespace PRESENTACION
         private System.Windows.Forms.TextBox textProcedencia;
         private System.Windows.Forms.ComboBox cmbCaja;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DateTimePicker dtFecha_Vencimiento;
     }
 }
