@@ -208,6 +208,7 @@ namespace PRESENTACION
             this.Btn_Historial.Size = new System.Drawing.Size(180, 34);
             this.Btn_Historial.TabIndex = 5;
             this.Btn_Historial.TabStop = false;
+            this.Btn_Historial.Click += new System.EventHandler(this.Btn_Historial_Click);
             // 
             // FormPrincipal
             // 

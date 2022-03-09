@@ -134,6 +134,28 @@ namespace PRESENTACION
             
         }
 
+        private void Btn_Historial_Click(object sender, EventArgs e)
+        {
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormHistorial>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormHistorial();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
         private void Btn_Usuarios_Click(object sender, EventArgs e)
         {
             Form Formulario;
