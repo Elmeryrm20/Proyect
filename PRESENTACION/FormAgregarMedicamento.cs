@@ -45,11 +45,44 @@ namespace PRESENTACION
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (textNombre.Text != "")
-            {       
+            if (textCodigo.Text == "")
+            {
+                MessageBox.Show("Falta completar el campo código.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textNombre.Text == "")
+            {
+                MessageBox.Show("Falta completar el campo nombre.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textCantidad.Text == "")
+            {
+                MessageBox.Show("Falta completar el campo cantidad", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textLaboratorio.Text == "")
+            {
+                MessageBox.Show("Falta completar el campo laboratorio.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textFecha_Vencimiento.Text == "")
+            {
+                MessageBox.Show("Falta completar el campo Fecha de Vencimiento.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textGramaje.Text == "")
+            {
+                MessageBox.Show("Falta completar el campo Gramaje.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textProcedencia.Text == "")
+            {
+                MessageBox.Show("Falta completar el campo Procedencia.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("Falta completar el campo Subir Imagen.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
                 string str = Convert.ToString(Directory.GetCurrentDirectory());
-                str = str.Replace(@"\bin\Debug","");
+                str = str.Replace(@"\bin\Debug", "");
                 pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
     }

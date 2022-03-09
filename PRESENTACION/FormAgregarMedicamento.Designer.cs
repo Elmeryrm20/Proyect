@@ -53,7 +53,6 @@ namespace PRESENTACION
             this.textProcedencia = new System.Windows.Forms.TextBox();
             this.cmbCaja = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -349,6 +348,5 @@ namespace PRESENTACION
         private System.Windows.Forms.TextBox textProcedencia;
         private System.Windows.Forms.ComboBox cmbCaja;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
