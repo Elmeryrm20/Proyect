@@ -41,6 +41,7 @@ namespace PRESENTACION
             this.Btn_Agregar = new System.Windows.Forms.PictureBox();
             this.Btn_Inicio = new System.Windows.Forms.PictureBox();
             this.PnlCuerpo = new System.Windows.Forms.Panel();
+            this.Btn_Historial = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,6 +53,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cajas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Historial)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -118,6 +120,7 @@ namespace PRESENTACION
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.Btn_Historial);
             this.panel2.Controls.Add(this.Btn_Salidas);
             this.panel2.Controls.Add(this.Btn_Usuarios);
             this.panel2.Controls.Add(this.Btn_Cajas);
@@ -195,6 +198,18 @@ namespace PRESENTACION
             this.PnlCuerpo.Size = new System.Drawing.Size(592, 406);
             this.PnlCuerpo.TabIndex = 2;
             // 
+            // Btn_Historial
+            // 
+            this.Btn_Historial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Historial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Historial.Location = new System.Drawing.Point(3, 210);
+            this.Btn_Historial.Name = "Btn_Historial";
+            this.Btn_Historial.Size = new System.Drawing.Size(180, 34);
+            this.Btn_Historial.TabIndex = 5;
+            this.Btn_Historial.TabStop = false;
+            this.Btn_Historial.Click += new System.EventHandler(this.Btn_Historial_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +233,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cajas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Historial)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,5 +252,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox Btn_Inicio;
         private System.Windows.Forms.Panel PnlCuerpo;
         private System.Windows.Forms.PictureBox btn_Maximizar;
+        private System.Windows.Forms.PictureBox Btn_Historial;
     }
 }

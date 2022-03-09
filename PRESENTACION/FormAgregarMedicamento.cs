@@ -46,8 +46,7 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             if (textNombre.Text != "")
-            {
-                
+            {       
                 string str = Convert.ToString(Directory.GetCurrentDirectory());
                 str = str.Replace(@"\bin\Debug","");
                 pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
