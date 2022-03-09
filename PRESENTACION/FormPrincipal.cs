@@ -15,8 +15,29 @@ namespace PRESENTACION
         public FormPrincipal()
         {
             InitializeComponent();
+
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormInicio();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
         }
         int n, mx, my;
+
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -47,6 +68,7 @@ namespace PRESENTACION
             {
                 Formulario.BringToFront();
             }
+            
         }
 
         private void Btn_Agregar_Click(object sender, EventArgs e)
@@ -132,6 +154,28 @@ namespace PRESENTACION
                 Btn_Normal.Visible = false;
 
             
+        }
+
+        private void Btn_Historial_Click(object sender, EventArgs e)
+        {
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormHistorial>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormHistorial();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
         }
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)

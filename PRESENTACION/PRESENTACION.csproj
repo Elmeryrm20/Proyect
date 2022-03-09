@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="FormHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistorial.Designer.cs">
+      <DependentUpon>FormHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarMedicamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,10 +101,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="validar.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormAgregarMedicamento.resx">
       <DependentUpon>FormAgregarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistorial.resx">
+      <DependentUpon>FormHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
