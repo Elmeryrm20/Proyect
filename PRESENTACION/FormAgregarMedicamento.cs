@@ -47,7 +47,9 @@ namespace PRESENTACION
         {
             if (textNombre.Text != "")
             {
+                
                 string str = Convert.ToString(Directory.GetCurrentDirectory());
+                str = str.Replace(@"\bin\Debug","");
                 pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
             }
         }
