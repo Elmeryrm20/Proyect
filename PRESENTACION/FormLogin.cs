@@ -34,7 +34,8 @@ namespace PRESENTACION
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            textBox1.MaxLength = 8;
+            textBox1.Text = textBox1.Text.Trim();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -45,6 +46,11 @@ namespace PRESENTACION
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
         }
     }
 }

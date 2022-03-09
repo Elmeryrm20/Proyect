@@ -95,6 +95,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="validar.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormAgregarMedicamento.resx">
