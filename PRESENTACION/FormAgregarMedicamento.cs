@@ -45,8 +45,11 @@ namespace PRESENTACION
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
-            pictureBox1.Image.Save(@"C:\Users\Piero\Source\Repos\Elmeryrm20\Proyect\PRESENTACION\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            if (textNombre.Text != "")
+            {
+                string str = Convert.ToString(Directory.GetCurrentDirectory());
+                pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
         }
     }
 }
