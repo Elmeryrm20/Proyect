@@ -98,5 +98,10 @@ namespace PRESENTACION
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
+
+        private void dtFecha_Vencimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

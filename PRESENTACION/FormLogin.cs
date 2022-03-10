@@ -34,8 +34,23 @@ namespace PRESENTACION
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            textBox1.MaxLength = 8;
-            textBox1.Text = textBox1.Text.Trim();
+            
+            if (radioButton1.Checked==true)
+            {
+                textBox1.MaxLength = 8;
+                textBox1.Text = textBox1.Text.Trim();
+            }
+            else if (radioButton2.Checked==true)
+            {
+                label2.Text = "PASAPORTE :";
+            }
+            else
+            {
+                label2.Text = "DNI :";
+            }
+
+            label2.Text = "DNI :";
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -65,12 +80,55 @@ namespace PRESENTACION
 
         private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            validar.soloNumeros(e);
+            if (radioButton1.Checked==true)
+            {
+                validar.soloNumeros(e);
+            }
+            
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            if (radioButton1.Checked == true)
+            {
+                label2.Text = "DNI";
+                textBox1.MaxLength = 8;
+                textBox1.Text = textBox1.Text.Trim();
+            }
+            else if (radioButton2.Checked == true)
+            {
+                label2.Text = "PASAPORTE";
+                textBox1.MaxLength = 20;
+            }
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start("http://www.wa.link/zc9hj0");
         }
     }
 }
