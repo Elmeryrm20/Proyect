@@ -62,7 +62,6 @@
             this.label1.Size = new System.Drawing.Size(125, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "CRUZ ROJA";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -74,7 +73,6 @@
             this.label2.Size = new System.Drawing.Size(39, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "DNI :";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -104,7 +102,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 24);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
             // 
             // textBox2
@@ -116,8 +113,6 @@
             this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(183, 24);
             this.textBox2.TabIndex = 11;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // panel1
             // 
@@ -169,7 +164,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(662, 379);
             this.panel2.TabIndex = 13;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // groupBox1
             // 
@@ -206,7 +200,6 @@
             this.radioButton2.TabIndex = 13;
             this.radioButton2.Text = "PASAPORTE";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -220,7 +213,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "DNI";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // pictureBox2
             // 
@@ -231,7 +223,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(215, 41);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // FormLogin
             // 
