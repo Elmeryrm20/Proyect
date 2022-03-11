@@ -36,7 +36,25 @@ namespace PRESENTACION
             }
         }
         int n, mx, my;
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (n == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx - 211, MousePosition.Y - my);
+            }
+        }
 
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            n = 0;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            n = 1;
+            mx = e.X;
+            my = e.Y;
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -115,25 +133,7 @@ namespace PRESENTACION
             }
         }
         
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            n = 1;
-            mx = e.X;
-            my = e.Y;
-        }
-
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (n == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-            }
-        }
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            n = 0;
-        }
+        
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
@@ -177,6 +177,8 @@ namespace PRESENTACION
                 Formulario.BringToFront();
             }
         }
+
+        
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)
         {

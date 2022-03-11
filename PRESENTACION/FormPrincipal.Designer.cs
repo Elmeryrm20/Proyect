@@ -202,6 +202,9 @@ namespace PRESENTACION
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(670, 40);
             this.panel1.TabIndex = 4;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // pictureBox2
             // 
