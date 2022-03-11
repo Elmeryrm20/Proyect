@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DATOS
+{
+    internal class Consultas
+    {
+        D_Empleado Conexion= new D_Empleado();
+    }
+}
