@@ -57,15 +57,15 @@ namespace PRESENTACION
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (du.conexionexitosa() == 1)
-            {
-                MessageBox.Show("Conección Exitosa");
-            }
-            else
-            {
-                MessageBox.Show("Conección Fallida");
+            //if (du.conexionexitosa() == 1)
+            //{
+            //    MessageBox.Show("Conección Exitosa");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Conección Fallida");
 
-            }
+            //}
         }
     }
 }
