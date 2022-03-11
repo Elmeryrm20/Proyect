@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DATOS;
 
 namespace PRESENTACION
 {
@@ -17,7 +18,7 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-
+        D_Empleado du = new D_Empleado();
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -52,6 +53,19 @@ namespace PRESENTACION
                 textBox1.MaxLength = 20;
             }
             
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (du.conexionexitosa() == 1)
+            {
+                MessageBox.Show("Conección Exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Conección Fallida");
+
+            }
         }
     }
 }
