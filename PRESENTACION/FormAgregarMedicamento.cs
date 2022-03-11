@@ -28,6 +28,7 @@ namespace PRESENTACION
 
             openFileDialog1.Title = "Escoja una imagen";
             openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            
             openFileDialog1.ShowDialog();
 
 
@@ -93,11 +94,6 @@ namespace PRESENTACION
                 pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-        }
-
-        private void dtFecha_Vencimiento_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

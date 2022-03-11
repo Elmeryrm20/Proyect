@@ -266,7 +266,6 @@ namespace PRESENTACION
             this.dtFecha_Vencimiento.Size = new System.Drawing.Size(195, 20);
             this.dtFecha_Vencimiento.TabIndex = 25;
             this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 9, 0, 7, 53, 0);
-            this.dtFecha_Vencimiento.ValueChanged += new System.EventHandler(this.dtFecha_Vencimiento_ValueChanged);
             // 
             // FormAgregarMedicamento
             // 
