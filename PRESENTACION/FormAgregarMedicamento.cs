@@ -78,10 +78,6 @@ namespace PRESENTACION
             {
                 MessageBox.Show("Falta escoger para quién será.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (textProcedencia.Text == "")
-            {
-                MessageBox.Show("Falta completar el campo Procedencia.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             else if (cmbCaja.Text == "")
             {
                 MessageBox.Show("Falta escojer en caja.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
