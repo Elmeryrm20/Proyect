@@ -132,13 +132,16 @@ namespace PRESENTACION
                 Formulario.BringToFront();
             }
         }
-        
-        
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            
+        }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
             
-                this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
+                this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
                 this.WindowState = FormWindowState.Maximized;
                 btn_Maximizar.Visible = false;
                 Btn_Normal.Visible = true;
