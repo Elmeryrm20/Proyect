@@ -168,11 +168,12 @@ namespace PRESENTACION
             // 
             // Btn_Agregar
             // 
-            this.Btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Btn_Agregar.Location = new System.Drawing.Point(3, 46);
             this.Btn_Agregar.Name = "Btn_Agregar";
-            this.Btn_Agregar.Size = new System.Drawing.Size(202, 34);
+            this.Btn_Agregar.Size = new System.Drawing.Size(208, 34);
             this.Btn_Agregar.TabIndex = 1;
             this.Btn_Agregar.TabStop = false;
             this.Btn_Agregar.Click += new System.EventHandler(this.Btn_Agregar_Click);
