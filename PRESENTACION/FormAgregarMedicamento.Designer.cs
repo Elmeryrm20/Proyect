@@ -30,7 +30,6 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@ namespace PRESENTACION
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textCodigo = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textCantidad = new System.Windows.Forms.TextBox();
             this.textLaboratorio = new System.Windows.Forms.TextBox();
@@ -67,19 +65,10 @@ namespace PRESENTACION
             this.label1.TabIndex = 0;
             this.label1.Text = "Agregar Producto";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(92, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Código";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 111);
+            this.label3.Location = new System.Drawing.Point(88, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 2;
@@ -88,7 +77,7 @@ namespace PRESENTACION
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(83, 138);
+            this.label4.Location = new System.Drawing.Point(83, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 3;
@@ -97,7 +86,7 @@ namespace PRESENTACION
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 164);
+            this.label5.Location = new System.Drawing.Point(72, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 4;
@@ -106,7 +95,7 @@ namespace PRESENTACION
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 190);
+            this.label6.Location = new System.Drawing.Point(20, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 13);
             this.label6.TabIndex = 5;
@@ -115,7 +104,7 @@ namespace PRESENTACION
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(86, 218);
+            this.label7.Location = new System.Drawing.Point(86, 208);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 6;
@@ -124,7 +113,7 @@ namespace PRESENTACION
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(104, 246);
+            this.label8.Location = new System.Drawing.Point(104, 236);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(28, 13);
             this.label8.TabIndex = 7;
@@ -133,7 +122,7 @@ namespace PRESENTACION
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(102, 271);
+            this.label9.Location = new System.Drawing.Point(102, 261);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 8;
@@ -142,7 +131,7 @@ namespace PRESENTACION
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(104, 296);
+            this.label11.Location = new System.Drawing.Point(104, 286);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 13);
             this.label11.TabIndex = 10;
@@ -157,37 +146,30 @@ namespace PRESENTACION
             this.label12.TabIndex = 13;
             this.label12.Text = "Suba una imagen";
             // 
-            // textCodigo
-            // 
-            this.textCodigo.Location = new System.Drawing.Point(138, 81);
-            this.textCodigo.Name = "textCodigo";
-            this.textCodigo.Size = new System.Drawing.Size(194, 20);
-            this.textCodigo.TabIndex = 14;
-            // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(138, 108);
+            this.textNombre.Location = new System.Drawing.Point(138, 98);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(194, 20);
             this.textNombre.TabIndex = 15;
             // 
             // textCantidad
             // 
-            this.textCantidad.Location = new System.Drawing.Point(138, 134);
+            this.textCantidad.Location = new System.Drawing.Point(138, 124);
             this.textCantidad.Name = "textCantidad";
             this.textCantidad.Size = new System.Drawing.Size(194, 20);
             this.textCantidad.TabIndex = 16;
             // 
             // textLaboratorio
             // 
-            this.textLaboratorio.Location = new System.Drawing.Point(138, 160);
+            this.textLaboratorio.Location = new System.Drawing.Point(138, 150);
             this.textLaboratorio.Name = "textLaboratorio";
             this.textLaboratorio.Size = new System.Drawing.Size(194, 20);
             this.textLaboratorio.TabIndex = 17;
             // 
             // textGramaje
             // 
-            this.textGramaje.Location = new System.Drawing.Point(138, 215);
+            this.textGramaje.Location = new System.Drawing.Point(138, 205);
             this.textGramaje.Name = "textGramaje";
             this.textGramaje.Size = new System.Drawing.Size(194, 20);
             this.textGramaje.TabIndex = 19;
@@ -197,7 +179,7 @@ namespace PRESENTACION
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "xdd"});
-            this.cmbTipo.Location = new System.Drawing.Point(138, 243);
+            this.cmbTipo.Location = new System.Drawing.Point(138, 233);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(194, 21);
             this.cmbTipo.TabIndex = 20;
@@ -205,7 +187,7 @@ namespace PRESENTACION
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(137, 269);
+            this.radioButton1.Location = new System.Drawing.Point(137, 259);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(55, 17);
             this.radioButton1.TabIndex = 21;
@@ -216,7 +198,7 @@ namespace PRESENTACION
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(198, 270);
+            this.radioButton2.Location = new System.Drawing.Point(198, 260);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(72, 17);
             this.radioButton2.TabIndex = 22;
@@ -229,7 +211,7 @@ namespace PRESENTACION
             this.cmbCaja.FormattingEnabled = true;
             this.cmbCaja.Items.AddRange(new object[] {
             "xdd"});
-            this.cmbCaja.Location = new System.Drawing.Point(137, 292);
+            this.cmbCaja.Location = new System.Drawing.Point(137, 282);
             this.cmbCaja.Name = "cmbCaja";
             this.cmbCaja.Size = new System.Drawing.Size(195, 21);
             this.cmbCaja.TabIndex = 24;
@@ -246,7 +228,7 @@ namespace PRESENTACION
             this.pictureBox2.Size = new System.Drawing.Size(150, 41);
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
-
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -256,11 +238,11 @@ namespace PRESENTACION
             this.pictureBox1.Size = new System.Drawing.Size(150, 156);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dtFecha_Vencimiento
             // 
-            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(137, 186);
+            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(137, 176);
             this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 11, 0, 0, 0, 0);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
             this.dtFecha_Vencimiento.Size = new System.Drawing.Size(195, 20);
@@ -281,7 +263,6 @@ namespace PRESENTACION
             this.Controls.Add(this.textLaboratorio);
             this.Controls.Add(this.textCantidad);
             this.Controls.Add(this.textNombre);
-            this.Controls.Add(this.textCodigo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -293,11 +274,11 @@ namespace PRESENTACION
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAgregarMedicamento";
             this.Text = "FormAgregarMedicamento";
+            this.Load += new System.EventHandler(this.FormAgregarMedicamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -308,7 +289,6 @@ namespace PRESENTACION
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -320,7 +300,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textCodigo;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textCantidad;
         private System.Windows.Forms.TextBox textLaboratorio;
