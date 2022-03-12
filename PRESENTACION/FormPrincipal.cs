@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DATOS;
 
 namespace PRESENTACION
 {
@@ -17,6 +18,9 @@ namespace PRESENTACION
             InitializeComponent();
 
         }
+
+        Consultas consultas = new Consultas();
+
         public FormPrincipal(string DNI,String Tipo)
         {
             InitializeComponent();
@@ -126,6 +130,7 @@ namespace PRESENTACION
 
         private void Btn_Cajas_Click(object sender, EventArgs e)
         {
+            consultas.ConsultaMed();
             Form Formulario;
             Formulario = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
@@ -138,7 +143,7 @@ namespace PRESENTACION
                 PnlCuerpo.Controls.Add(Formulario);
                 PnlCuerpo.Tag = Formulario;
                 Formulario.Show();
-                Formulario.BringToFront();
+                Formulario.BringToFront();           
             }
             else
             {
