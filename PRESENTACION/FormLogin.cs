@@ -18,7 +18,7 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        D_Empleado du = new D_Empleado();
+        Consultas du = new Consultas();
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -32,40 +32,60 @@ namespace PRESENTACION
 
         private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (radioButton1.Checked==true)
+            if (radioButton1.Checked == true)
             {
                 validar.soloNumeros(e);
-            }  
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            txtusuario.Text = "";
             if (radioButton1.Checked == true)
             {
                 label2.Text = "DNI";
-                textBox1.MaxLength = 8;
-                textBox1.Text = textBox1.Text.Trim();
+                txtusuario.MaxLength = 8;
+                txtusuario.Text = txtusuario.Text.Trim();
             }
             else if (radioButton2.Checked == true)
             {
                 label2.Text = "PASAPORTE";
-                textBox1.MaxLength = 20;
+                txtusuario.MaxLength = 20;
             }
-            
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            //if (du.conexionexitosa() == 1)
-            //{
-            //    MessageBox.Show("Conección Exitosa");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Conección Fallida");
+            DataTable dt = du.D_Login(txtusuario.Text, txtcontraseña.Text);
 
-            //}
+            //MessageBox.Show(dt.Rows[0][0].ToString());
+
+            if (dt.Rows.Count == 1)
+            {
+                this.Hide();
+                if (dt.Rows[0][2].ToString() == "1")
+                {
+                    FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), "1");
+                    A.Show();
+                    AddOwnedForm(A);
+                    //MessageBox.Show("Eres Encargado");
+
+                }
+                else if (dt.Rows[0][2].ToString() == "2")
+                {
+                    FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), "2");
+                    A.Show();
+                    AddOwnedForm(A);
+                    //MessageBox.Show("Eres Admin");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Datos Incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
     }
 }

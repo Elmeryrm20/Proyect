@@ -16,6 +16,13 @@ namespace PRESENTACION
         {
             InitializeComponent();
 
+        }
+        public FormPrincipal(string DNI,String Tipo)
+        {
+            InitializeComponent();
+
+
+
             Form Formulario;
             Formulario = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
