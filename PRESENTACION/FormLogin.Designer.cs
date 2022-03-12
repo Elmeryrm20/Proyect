@@ -43,6 +43,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.DtgPrueba = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -50,6 +51,7 @@
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -150,6 +152,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.DtgPrueba);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.txtusuario);
@@ -225,6 +228,15 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // DtgPrueba
+            // 
+            this.DtgPrueba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgPrueba.Location = new System.Drawing.Point(85, 84);
+            this.DtgPrueba.Name = "DtgPrueba";
+            this.DtgPrueba.Size = new System.Drawing.Size(240, 150);
+            this.DtgPrueba.TabIndex = 15;
+            this.DtgPrueba.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgPrueba_CellContentClick);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +258,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +280,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView DtgPrueba;
     }
 }

@@ -67,7 +67,7 @@ namespace DATOS
         {
             Conexion.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SELECT Tra_DNI,Usu_Contraseña,Usu_Tipo FROM usuario WHERE Tra_DNI = @DNI AND Usu_Contraseña = @password", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SELECT Tra_DNI,Usu_Pass,Usu_Tipo FROM usuario WHERE Tra_DNI = @DNI AND Usu_Pass = @password", Conexion.connection);
             cmd.Parameters.AddWithValue("DNI", DNI);
             cmd.Parameters.AddWithValue("password", password);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);

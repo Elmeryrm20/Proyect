@@ -16,6 +16,9 @@ namespace PRESENTACION
         public FormLogin()
         {
             InitializeComponent();
+            DtgPrueba.DataSource = du.D_Login("123","123");
+
+
         }
 
         Consultas du = new Consultas();
@@ -85,6 +88,11 @@ namespace PRESENTACION
             {
                 MessageBox.Show("Datos Incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
+        }
+
+        private void DtgPrueba_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
