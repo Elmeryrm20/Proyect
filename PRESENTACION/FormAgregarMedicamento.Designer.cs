@@ -246,7 +246,7 @@ namespace PRESENTACION
             this.pictureBox2.Size = new System.Drawing.Size(150, 41);
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+
             // 
             // pictureBox1
             // 
@@ -256,7 +256,7 @@ namespace PRESENTACION
             this.pictureBox1.Size = new System.Drawing.Size(150, 156);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+
             // 
             // dtFecha_Vencimiento
             // 
@@ -298,7 +298,6 @@ namespace PRESENTACION
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAgregarMedicamento";
             this.Text = "FormAgregarMedicamento";
-            this.Load += new System.EventHandler(this.FormAgregarMedicamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

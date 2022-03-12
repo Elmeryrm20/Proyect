@@ -58,6 +58,12 @@ namespace PRESENTACION
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                btn_Maximizar.Visible = true;
+                Btn_Normal.Visible = false;
+            }
             n = 1;
             mx = e.X;
             my = e.Y;
