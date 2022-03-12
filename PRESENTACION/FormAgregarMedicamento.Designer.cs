@@ -261,11 +261,11 @@ namespace PRESENTACION
             // dtFecha_Vencimiento
             // 
             this.dtFecha_Vencimiento.Location = new System.Drawing.Point(137, 186);
-            this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 9, 0, 7, 53, 0);
+            this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 11, 0, 0, 0, 0);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
             this.dtFecha_Vencimiento.Size = new System.Drawing.Size(195, 20);
             this.dtFecha_Vencimiento.TabIndex = 25;
-            this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 9, 0, 7, 53, 0);
+            this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 11, 0, 0, 0, 0);
             // 
             // FormAgregarMedicamento
             // 
