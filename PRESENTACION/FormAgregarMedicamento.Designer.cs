@@ -44,13 +44,13 @@ namespace PRESENTACION
             this.textLaboratorio = new System.Windows.Forms.TextBox();
             this.textGramaje = new System.Windows.Forms.TextBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.cmbCaja = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
+            this.LblMuestra1 = new System.Windows.Forms.Label();
+            this.CmbPresentacion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -113,7 +113,7 @@ namespace PRESENTACION
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(104, 236);
+            this.label8.Location = new System.Drawing.Point(104, 248);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(28, 13);
             this.label8.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace PRESENTACION
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(102, 261);
+            this.label9.Location = new System.Drawing.Point(103, 282);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 8;
@@ -131,16 +131,16 @@ namespace PRESENTACION
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(104, 286);
+            this.label11.Location = new System.Drawing.Point(84, 317);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(28, 13);
+            this.label11.Size = new System.Drawing.Size(48, 13);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Caja";
+            this.label11.Text = "Almacen";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(422, 243);
+            this.label12.Location = new System.Drawing.Point(422, 259);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 13);
             this.label12.TabIndex = 13;
@@ -162,9 +162,10 @@ namespace PRESENTACION
             // 
             // textLaboratorio
             // 
-            this.textLaboratorio.Location = new System.Drawing.Point(138, 150);
+            this.textLaboratorio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textLaboratorio.Location = new System.Drawing.Point(138, 154);
             this.textLaboratorio.Name = "textLaboratorio";
-            this.textLaboratorio.Size = new System.Drawing.Size(194, 20);
+            this.textLaboratorio.Size = new System.Drawing.Size(194, 13);
             this.textLaboratorio.TabIndex = 17;
             // 
             // textGramaje
@@ -179,42 +180,23 @@ namespace PRESENTACION
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "xdd"});
-            this.cmbTipo.Location = new System.Drawing.Point(138, 233);
+            this.cmbTipo.Location = new System.Drawing.Point(138, 245);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(194, 21);
             this.cmbTipo.TabIndex = 20;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(137, 259);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 17);
-            this.radioButton1.TabIndex = 21;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Adulto";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(198, 260);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(72, 17);
-            this.radioButton2.TabIndex = 22;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pediátrico";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.cmbTipo.Text = "Selecciona Tipo";
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
             // 
             // cmbCaja
             // 
             this.cmbCaja.FormattingEnabled = true;
             this.cmbCaja.Items.AddRange(new object[] {
             "xdd"});
-            this.cmbCaja.Location = new System.Drawing.Point(137, 282);
+            this.cmbCaja.Location = new System.Drawing.Point(138, 312);
             this.cmbCaja.Name = "cmbCaja";
             this.cmbCaja.Size = new System.Drawing.Size(195, 21);
             this.cmbCaja.TabIndex = 24;
+            this.cmbCaja.Text = "Selecciona Almacen";
             // 
             // openFileDialog1
             // 
@@ -242,6 +224,7 @@ namespace PRESENTACION
             // 
             // dtFecha_Vencimiento
             // 
+            this.dtFecha_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFecha_Vencimiento.Location = new System.Drawing.Point(137, 176);
             this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 11, 0, 0, 0, 0);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
@@ -249,15 +232,38 @@ namespace PRESENTACION
             this.dtFecha_Vencimiento.TabIndex = 25;
             this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 11, 0, 0, 0, 0);
             // 
+            // LblMuestra1
+            // 
+            this.LblMuestra1.AutoSize = true;
+            this.LblMuestra1.ForeColor = System.Drawing.Color.Red;
+            this.LblMuestra1.Location = new System.Drawing.Point(296, 48);
+            this.LblMuestra1.Name = "LblMuestra1";
+            this.LblMuestra1.Size = new System.Drawing.Size(54, 13);
+            this.LblMuestra1.TabIndex = 26;
+            this.LblMuestra1.Text = "Muestra 1";
+            this.LblMuestra1.Click += new System.EventHandler(this.LblMuestra1_Click);
+            // 
+            // CmbPresentacion
+            // 
+            this.CmbPresentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmbPresentacion.FormattingEnabled = true;
+            this.CmbPresentacion.Items.AddRange(new object[] {
+            "xdd"});
+            this.CmbPresentacion.Location = new System.Drawing.Point(139, 279);
+            this.CmbPresentacion.Name = "CmbPresentacion";
+            this.CmbPresentacion.Size = new System.Drawing.Size(194, 21);
+            this.CmbPresentacion.TabIndex = 27;
+            this.CmbPresentacion.Text = "Selecciona Presentación";
+            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 406);
+            this.Controls.Add(this.CmbPresentacion);
+            this.Controls.Add(this.LblMuestra1);
             this.Controls.Add(this.dtFecha_Vencimiento);
             this.Controls.Add(this.cmbCaja);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.textGramaje);
             this.Controls.Add(this.textLaboratorio);
@@ -305,10 +311,10 @@ namespace PRESENTACION
         private System.Windows.Forms.TextBox textLaboratorio;
         private System.Windows.Forms.TextBox textGramaje;
         private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.ComboBox cmbCaja;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DateTimePicker dtFecha_Vencimiento;
+        private System.Windows.Forms.Label LblMuestra1;
+        private System.Windows.Forms.ComboBox CmbPresentacion;
     }
 }

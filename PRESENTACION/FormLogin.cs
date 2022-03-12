@@ -16,7 +16,7 @@ namespace PRESENTACION
         public FormLogin()
         {
             InitializeComponent();
-            DtgPrueba.DataSource = du.D_Login("123","123");
+            //DtgPrueba.DataSource = du.D_Login("123","123");
 
 
         }

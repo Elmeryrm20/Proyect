@@ -235,6 +235,7 @@
             this.DtgPrueba.Name = "DtgPrueba";
             this.DtgPrueba.Size = new System.Drawing.Size(240, 150);
             this.DtgPrueba.TabIndex = 15;
+            this.DtgPrueba.Visible = false;
             this.DtgPrueba.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgPrueba_CellContentClick);
             // 
             // FormLogin
