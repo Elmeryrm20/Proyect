@@ -77,7 +77,7 @@ namespace PRESENTACION
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox2.Location = new System.Drawing.Point(31, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(74, 26);
             this.pictureBox2.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace PRESENTACION
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox3.Location = new System.Drawing.Point(123, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(106, 16);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(74, 26);
             this.pictureBox3.TabIndex = 4;
@@ -95,7 +95,7 @@ namespace PRESENTACION
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox4.Location = new System.Drawing.Point(216, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(199, 16);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(74, 26);
             this.pictureBox4.TabIndex = 5;
@@ -139,9 +139,9 @@ namespace PRESENTACION
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 376);
+            this.panel3.Location = new System.Drawing.Point(0, 356);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(659, 43);
+            this.panel3.Size = new System.Drawing.Size(659, 63);
             this.panel3.TabIndex = 9;
             // 
             // FormMedicamentos

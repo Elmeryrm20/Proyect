@@ -29,6 +29,39 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
+        //public DataTable ConsultaMed(string Nombre, int Cantidad, string Laboratorio, string fecha_v, string Gramage,string Tipo,string caja)
+        //{
 
+        //    Conexion.connection.Open();
+
+        //    string query= "INSERT INTRO medicamento(Med_Composicion, Med_Fecha_V, Med_Total_I, Med_Fecha_I, Med_Total_E, Pre_C, Lab_C, Tip_C, Alm_C) value ('"+Nombre +"','"+Cantidad +"');";
+        //    MySqlCommand comando = new MySqlCommand(query, Conexion.connection);
+        //    comando.ExecuteNonQuery();
+        //    Conexion.connection.Close();
+        //}
+        public DataTable tipo()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SELECT Tip_Descripcion FROM TipoMed", Conexion.connection);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+        }
+        public DataTable caja()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SELECT Alm_Descripcion FROM Almacen", Conexion.connection);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+        }
     }
 }

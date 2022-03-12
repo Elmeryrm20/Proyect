@@ -8,20 +8,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DATOS;
 
 namespace PRESENTACION
 {
     public partial class FormAgregarMedicamento : Form
     {
+        Consultas consultas = new Consultas();
         public FormAgregarMedicamento()
         {
             InitializeComponent();
+            ObtenerTipo();
+            ObtenerCaja();
+        }
+
+        void ObtenerTipo()
+        {
+            cmbTipo.DisplayMember = "tip_descripcion";
+            cmbTipo.DataSource=consultas.tipo();
+           
+        }
+        void ObtenerCaja()
+        {
+           cmbCaja.DisplayMember = "Alm_Descripcion";
+            cmbCaja.DataSource = consultas.caja();
+
         }
         public string fecha;
         private void FormAgregarMedicamento_Load(object sender, EventArgs e)
         {
             fecha = dtFecha_Vencimiento.Text;
         }
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
