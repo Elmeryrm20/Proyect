@@ -15,7 +15,7 @@ namespace PRESENTACION
             ObtenerCaja();
             ObtenerPresentacion();
         }
-
+        validar validacion = new validar();
         void ObtenerTipo()
         {
             cmbTipo.DisplayMember = "tip_descripcion";
@@ -40,7 +40,10 @@ namespace PRESENTACION
 
         private void FormAgregarMedicamento_Load(object sender, EventArgs e)
         {
-            fecha = dtFecha_Vencimiento.Text;
+            fecha = DateTime.Now.ToString("d");
+            dtFecha_Vencimiento.MinDate = DateTime.Now;
+            dtFecha_Vencimiento.Value = DateTime.Now;
+
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -77,16 +80,14 @@ namespace PRESENTACION
             {
                 MessageBox.Show("Falta escojer en caja.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //else if (pictureBox1.Image == null)
-            //{
-            //    MessageBox.Show("Falta completar el campo Subir Imagen.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
             else
             {
-                //string str = Convert.ToString(Directory.GetCurrentDirectory());
-                //str = str.Replace(@"\bin\Debug", "");
-                //pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
-
+                if (pictureBox1.Image != null)
+                {
+                    string str = Convert.ToString(Directory.GetCurrentDirectory());
+                    str = str.Replace(@"\bin\Debug", "");
+                    pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                }
 
                 consultas.D_AgregarMedicamento(textNombre.Text + " " + textGramaje.Text, int.Parse(textCantidad.Text), 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1);
 
@@ -119,9 +120,19 @@ namespace PRESENTACION
             LblMuestra1.Text = dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd");
         }
 
-        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbTipo_KeyPress(object sender, KeyPressEventArgs e)
         {
+            validacion.Texto_Inmodificable(e);
+        }
 
+        private void CmbPresentacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.Texto_Inmodificable(e);
+        }
+
+        private void cmbCaja_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.Texto_Inmodificable(e);
         }
     }
 }

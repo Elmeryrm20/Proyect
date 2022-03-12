@@ -58,6 +58,13 @@ namespace PRESENTACION
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             n = 0;
+            if (MousePosition.Y == 0)
+            {
+                this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+                this.WindowState = FormWindowState.Maximized;
+                btn_Maximizar.Visible = false;
+                Btn_Normal.Visible = true;
+            }
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -68,9 +75,11 @@ namespace PRESENTACION
                 btn_Maximizar.Visible = true;
                 Btn_Normal.Visible = false;
             }
+            
             n = 1;
             mx = e.X;
             my = e.Y;
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -82,7 +91,16 @@ namespace PRESENTACION
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+                this.WindowState = FormWindowState.Maximized;
+                btn_Maximizar.Visible = false;
+                Btn_Normal.Visible = true;
+            }
+        }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Form Formulario;
@@ -195,7 +213,7 @@ namespace PRESENTACION
             }
         }
 
-        
+
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)
         {

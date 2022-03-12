@@ -151,14 +151,14 @@ namespace PRESENTACION
             this.textNombre.Location = new System.Drawing.Point(138, 98);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(194, 20);
-            this.textNombre.TabIndex = 15;
+            this.textNombre.TabIndex = 1;
             // 
             // textCantidad
             // 
             this.textCantidad.Location = new System.Drawing.Point(138, 124);
             this.textCantidad.Name = "textCantidad";
             this.textCantidad.Size = new System.Drawing.Size(194, 20);
-            this.textCantidad.TabIndex = 16;
+            this.textCantidad.TabIndex = 2;
             // 
             // textLaboratorio
             // 
@@ -166,37 +166,35 @@ namespace PRESENTACION
             this.textLaboratorio.Location = new System.Drawing.Point(138, 154);
             this.textLaboratorio.Name = "textLaboratorio";
             this.textLaboratorio.Size = new System.Drawing.Size(194, 13);
-            this.textLaboratorio.TabIndex = 17;
+            this.textLaboratorio.TabIndex = 3;
             // 
             // textGramaje
             // 
             this.textGramaje.Location = new System.Drawing.Point(138, 205);
             this.textGramaje.Name = "textGramaje";
             this.textGramaje.Size = new System.Drawing.Size(194, 20);
-            this.textGramaje.TabIndex = 19;
+            this.textGramaje.TabIndex = 5;
             // 
             // cmbTipo
             // 
+            this.cmbTipo.BackColor = System.Drawing.SystemColors.Window;
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Items.AddRange(new object[] {
-            "xdd"});
             this.cmbTipo.Location = new System.Drawing.Point(138, 245);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(194, 21);
-            this.cmbTipo.TabIndex = 20;
+            this.cmbTipo.TabIndex = 6;
             this.cmbTipo.Text = "Selecciona Tipo";
-            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
+            this.cmbTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipo_KeyPress);
             // 
             // cmbCaja
             // 
             this.cmbCaja.FormattingEnabled = true;
-            this.cmbCaja.Items.AddRange(new object[] {
-            "xdd"});
             this.cmbCaja.Location = new System.Drawing.Point(138, 312);
             this.cmbCaja.Name = "cmbCaja";
             this.cmbCaja.Size = new System.Drawing.Size(195, 21);
-            this.cmbCaja.TabIndex = 24;
+            this.cmbCaja.TabIndex = 8;
             this.cmbCaja.Text = "Selecciona Almacen";
+            this.cmbCaja.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCaja_KeyPress);
             // 
             // openFileDialog1
             // 
@@ -205,6 +203,7 @@ namespace PRESENTACION
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Location = new System.Drawing.Point(391, 312);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 41);
@@ -215,6 +214,7 @@ namespace PRESENTACION
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(391, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 156);
@@ -226,11 +226,11 @@ namespace PRESENTACION
             // 
             this.dtFecha_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFecha_Vencimiento.Location = new System.Drawing.Point(137, 176);
-            this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 11, 0, 0, 0, 0);
+            this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 9, 0, 0, 0, 0);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
             this.dtFecha_Vencimiento.Size = new System.Drawing.Size(195, 20);
-            this.dtFecha_Vencimiento.TabIndex = 25;
-            this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 11, 0, 0, 0, 0);
+            this.dtFecha_Vencimiento.TabIndex = 4;
+            this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 9, 0, 0, 0, 0);
             // 
             // LblMuestra1
             // 
@@ -247,13 +247,12 @@ namespace PRESENTACION
             // 
             this.CmbPresentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbPresentacion.FormattingEnabled = true;
-            this.CmbPresentacion.Items.AddRange(new object[] {
-            "xdd"});
             this.CmbPresentacion.Location = new System.Drawing.Point(139, 279);
             this.CmbPresentacion.Name = "CmbPresentacion";
             this.CmbPresentacion.Size = new System.Drawing.Size(194, 21);
-            this.CmbPresentacion.TabIndex = 27;
+            this.CmbPresentacion.TabIndex = 7;
             this.CmbPresentacion.Text = "Selecciona Presentación";
+            this.CmbPresentacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbPresentacion_KeyPress);
             // 
             // FormAgregarMedicamento
             // 

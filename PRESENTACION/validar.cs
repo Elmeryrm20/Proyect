@@ -44,5 +44,9 @@ namespace PRESENTACION
                 pE.Handled = true;
             }
         }
+        public void Texto_Inmodificable(KeyPressEventArgs pE)
+        {
+            pE.Handled = true;
+        }
     }
 }
