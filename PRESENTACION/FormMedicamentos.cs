@@ -18,11 +18,13 @@ namespace PRESENTACION
         {
             InitializeComponent();
             rellenartabla();
+            
            
         }
         void rellenartabla()
         {
             dgb_Medicamentos.DataSource = consultas.ConsultaMed();
+            dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
        
         private void FormMedicamentos_Load(object sender, EventArgs e)

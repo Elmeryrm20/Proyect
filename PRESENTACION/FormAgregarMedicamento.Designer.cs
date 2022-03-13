@@ -41,7 +41,6 @@ namespace PRESENTACION
             this.label12 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textCantidad = new System.Windows.Forms.TextBox();
-            this.textLaboratorio = new System.Windows.Forms.TextBox();
             this.textGramaje = new System.Windows.Forms.TextBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.cmbCaja = new System.Windows.Forms.ComboBox();
@@ -51,6 +50,7 @@ namespace PRESENTACION
             this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
             this.LblMuestra1 = new System.Windows.Forms.Label();
             this.CmbPresentacion = new System.Windows.Forms.ComboBox();
+            this.cmbLab = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +95,7 @@ namespace PRESENTACION
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 180);
+            this.label6.Location = new System.Drawing.Point(20, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 13);
             this.label6.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace PRESENTACION
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(86, 208);
+            this.label7.Location = new System.Drawing.Point(86, 210);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 6;
@@ -160,17 +160,9 @@ namespace PRESENTACION
             this.textCantidad.Size = new System.Drawing.Size(194, 20);
             this.textCantidad.TabIndex = 2;
             // 
-            // textLaboratorio
-            // 
-            this.textLaboratorio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textLaboratorio.Location = new System.Drawing.Point(138, 154);
-            this.textLaboratorio.Name = "textLaboratorio";
-            this.textLaboratorio.Size = new System.Drawing.Size(194, 13);
-            this.textLaboratorio.TabIndex = 3;
-            // 
             // textGramaje
             // 
-            this.textGramaje.Location = new System.Drawing.Point(138, 205);
+            this.textGramaje.Location = new System.Drawing.Point(138, 207);
             this.textGramaje.Name = "textGramaje";
             this.textGramaje.Size = new System.Drawing.Size(194, 20);
             this.textGramaje.TabIndex = 5;
@@ -225,7 +217,7 @@ namespace PRESENTACION
             // dtFecha_Vencimiento
             // 
             this.dtFecha_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(137, 176);
+            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(137, 178);
             this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 9, 0, 0, 0, 0);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
             this.dtFecha_Vencimiento.Size = new System.Drawing.Size(195, 20);
@@ -245,7 +237,6 @@ namespace PRESENTACION
             // 
             // CmbPresentacion
             // 
-            this.CmbPresentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbPresentacion.FormattingEnabled = true;
             this.CmbPresentacion.Location = new System.Drawing.Point(139, 279);
             this.CmbPresentacion.Name = "CmbPresentacion";
@@ -254,18 +245,27 @@ namespace PRESENTACION
             this.CmbPresentacion.Text = "Selecciona Presentación";
             this.CmbPresentacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbPresentacion_KeyPress);
             // 
+            // cmbLab
+            // 
+            this.cmbLab.FormattingEnabled = true;
+            this.cmbLab.Location = new System.Drawing.Point(137, 151);
+            this.cmbLab.Name = "cmbLab";
+            this.cmbLab.Size = new System.Drawing.Size(195, 21);
+            this.cmbLab.TabIndex = 27;
+            this.cmbLab.Text = "Selecciona Laboratorio";
+            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 406);
+            this.Controls.Add(this.cmbLab);
             this.Controls.Add(this.CmbPresentacion);
             this.Controls.Add(this.LblMuestra1);
             this.Controls.Add(this.dtFecha_Vencimiento);
             this.Controls.Add(this.cmbCaja);
             this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.textGramaje);
-            this.Controls.Add(this.textLaboratorio);
             this.Controls.Add(this.textCantidad);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label12);
@@ -307,7 +307,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textCantidad;
-        private System.Windows.Forms.TextBox textLaboratorio;
         private System.Windows.Forms.TextBox textGramaje;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.ComboBox cmbCaja;
@@ -315,5 +314,6 @@ namespace PRESENTACION
         private System.Windows.Forms.DateTimePicker dtFecha_Vencimiento;
         private System.Windows.Forms.Label LblMuestra1;
         private System.Windows.Forms.ComboBox CmbPresentacion;
+        private System.Windows.Forms.ComboBox cmbLab;
     }
 }

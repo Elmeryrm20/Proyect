@@ -14,6 +14,7 @@ namespace PRESENTACION
             ObtenerTipo();
             ObtenerCaja();
             ObtenerPresentacion();
+            ObtenerLaboratorio();
         }
         validar validacion = new validar();
         void ObtenerTipo()
@@ -34,6 +35,11 @@ namespace PRESENTACION
             cmbCaja.DisplayMember = "Alm_Descripcion";
             cmbCaja.DataSource = consultas.caja();
 
+        }
+        void ObtenerLaboratorio()
+        {
+            cmbLab.DisplayMember = "Lab_Descripcion";
+            cmbLab.DataSource = consultas.D_Laboratorio();
         }
 
         public string fecha;
@@ -56,7 +62,7 @@ namespace PRESENTACION
             {
                 MessageBox.Show("Falta completar el campo cantidad", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (textLaboratorio.Text == "")
+            else if (cmbLab.SelectedIndex == -1)
             {
                 MessageBox.Show("Falta completar el campo laboratorio.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -89,7 +95,7 @@ namespace PRESENTACION
                     pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
 
-                consultas.D_AgregarMedicamento(textNombre.Text + " " + textGramaje.Text, int.Parse(textCantidad.Text), 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1);
+                consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1);
 
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }

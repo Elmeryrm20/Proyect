@@ -21,9 +21,9 @@ namespace DATOS
         {
             Conexion.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM medicamento", Conexion.connection);
-            MySqlDataAdapter adaptador = new MySqlDataAdapter();
-            adaptador.SelectCommand = comando;
+            MySqlCommand comando = new MySqlCommand("SP_Consulta_Medicamento_Basico", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             Conexion.connection.Close();
@@ -45,9 +45,9 @@ namespace DATOS
         {
             Conexion.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SELECT Tip_Descripcion FROM TipoMed", Conexion.connection);
-            MySqlDataAdapter adaptador = new MySqlDataAdapter();
-            adaptador.SelectCommand = comando;
+            MySqlCommand comando = new MySqlCommand("SP_TipoMed", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             Conexion.connection.Close();
@@ -58,9 +58,9 @@ namespace DATOS
         {
             Conexion.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SELECT Pre_Descripcion FROM PresentacionMed", Conexion.connection);
-            MySqlDataAdapter adaptador = new MySqlDataAdapter();
-            adaptador.SelectCommand = comando;
+            MySqlCommand comando = new MySqlCommand("SP_Presentacion", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             Conexion.connection.Close();
@@ -71,9 +71,21 @@ namespace DATOS
         {
             Conexion.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SELECT Alm_Descripcion FROM Almacen", Conexion.connection);
-            MySqlDataAdapter adaptador = new MySqlDataAdapter();
-            adaptador.SelectCommand = comando;
+            MySqlCommand comando = new MySqlCommand("SP_Almacen", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+        }
+        public DataTable D_Laboratorio()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_Laboratorio", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             Conexion.connection.Close();
@@ -94,5 +106,6 @@ namespace DATOS
 
             return dt;
         }
+
     }
 }
