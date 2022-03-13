@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="FormAgregarLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarLaboratorio.Designer.cs">
+      <DependentUpon>FormAgregarLaboratorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
