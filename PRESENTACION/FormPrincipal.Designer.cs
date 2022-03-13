@@ -220,9 +220,10 @@ namespace PRESENTACION
             // PnlCuerpo
             // 
             this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
+            this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnlCuerpo.Location = new System.Drawing.Point(211, 40);
             this.PnlCuerpo.Name = "PnlCuerpo";
-            this.PnlCuerpo.Size = new System.Drawing.Size(625, 494);
+            this.PnlCuerpo.Size = new System.Drawing.Size(670, 494);
             this.PnlCuerpo.TabIndex = 5;
             // 
             // FormPrincipal
