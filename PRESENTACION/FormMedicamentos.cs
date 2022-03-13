@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using DATOS;
 
 namespace PRESENTACION
@@ -27,12 +28,26 @@ namespace PRESENTACION
             dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
        
+       
         private void FormMedicamentos_Load(object sender, EventArgs e)
         {
+
 
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text);
+            dgb_Medicamentos.DataSource = dt;
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

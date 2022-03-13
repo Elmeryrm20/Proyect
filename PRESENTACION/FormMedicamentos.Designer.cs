@@ -30,7 +30,7 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.dgb_Medicamentos = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txb_Buscar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -51,24 +51,29 @@ namespace PRESENTACION
             // 
             // dgb_Medicamentos
             // 
+            this.dgb_Medicamentos.AllowUserToAddRows = false;
+            this.dgb_Medicamentos.AllowUserToDeleteRows = false;
             this.dgb_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgb_Medicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgb_Medicamentos.Location = new System.Drawing.Point(0, 0);
             this.dgb_Medicamentos.Name = "dgb_Medicamentos";
+            this.dgb_Medicamentos.ReadOnly = true;
             this.dgb_Medicamentos.Size = new System.Drawing.Size(657, 349);
             this.dgb_Medicamentos.TabIndex = 0;
             // 
-            // textBox1
+            // txb_Buscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 20);
-            this.textBox1.TabIndex = 1;
+            this.txb_Buscar.Location = new System.Drawing.Point(34, 35);
+            this.txb_Buscar.Name = "txb_Buscar";
+            this.txb_Buscar.Size = new System.Drawing.Size(296, 20);
+            this.txb_Buscar.TabIndex = 1;
+            this.txb_Buscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txb_Buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox1.Location = new System.Drawing.Point(336, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(345, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 20);
             this.pictureBox1.TabIndex = 2;
@@ -115,7 +120,7 @@ namespace PRESENTACION
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txb_Buscar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -172,7 +177,7 @@ namespace PRESENTACION
         #endregion
 
         private System.Windows.Forms.DataGridView dgb_Medicamentos;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txb_Buscar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

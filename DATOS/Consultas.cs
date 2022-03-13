@@ -7,6 +7,7 @@ using System.Data;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
+
 namespace DATOS
 {
     public class Consultas
@@ -106,6 +107,19 @@ namespace DATOS
 
             return dt;
         }
+        public DataTable D_Consulta_Dinamica(string Busqueda)
+        {
+            Conexion.connection.Open();
 
+            MySqlCommand comando = new MySqlCommand("SP_Busqueda_Dinamica", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("texto",Busqueda);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+
+        }
     }
 }
