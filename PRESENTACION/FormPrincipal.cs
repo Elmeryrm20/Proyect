@@ -53,8 +53,8 @@ namespace PRESENTACION
             {
                 this.SetDesktopLocation(MousePosition.X - mx - 211, MousePosition.Y - my);
             }
-            label1.Text = MousePosition.X.ToString() + " " + MousePosition.Y.ToString();
-            label2.Text = mx.ToString() + " " + my.ToString();
+            //label1.Text = MousePosition.X.ToString() + " " + MousePosition.Y.ToString();
+            //label2.Text = mx.ToString() + " " + my.ToString();
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)

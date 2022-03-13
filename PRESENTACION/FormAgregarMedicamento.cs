@@ -53,11 +53,10 @@ namespace PRESENTACION
             cmbTipo.Text = "Tipo";
             CmbPresentacion.Text = "Presentacion";
             cmbCaja.Text = "Caja";
-
         }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
             if (textNombre.Text == "")
             {
                 MessageBox.Show("Falta completar el campo nombre.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -145,7 +144,12 @@ namespace PRESENTACION
             validacion.Texto_Inmodificable(e);
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void cmbLab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.Texto_Inmodificable(e);
+        }
+
+        private void bnt_Agregar_Lab_Click(object sender, EventArgs e)
         {
             FormAgregarLaboratorio frm = new FormAgregarLaboratorio();
             frm.ShowDialog();
