@@ -51,7 +51,7 @@ namespace PRESENTACION
             dtFecha_Vencimiento.Value = DateTime.Now;
             cmbLab.Text = "Laboratorio";
             cmbTipo.Text = "Tipo";
-            CmbPresentacion = "Presentacion";
+            CmbPresentacion.Text = "Presentacion";
             cmbCaja.Text = "Caja";
 
         }
