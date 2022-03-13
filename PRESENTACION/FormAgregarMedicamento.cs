@@ -49,7 +49,9 @@ namespace PRESENTACION
             fecha = DateTime.Now.ToString("d");
             dtFecha_Vencimiento.MinDate = DateTime.Now;
             dtFecha_Vencimiento.Value = DateTime.Now;
-            cmbLab.Text = "Laboratorio"; 
+            cmbLab.Text = "Laboratorio";
+            cmbTipo.Text = "Tipo";
+            cmbCaja.Text = "Caja";
 
         }
         private void pictureBox2_Click(object sender, EventArgs e)
