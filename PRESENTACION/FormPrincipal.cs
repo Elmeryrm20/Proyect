@@ -53,6 +53,8 @@ namespace PRESENTACION
             {
                 this.SetDesktopLocation(MousePosition.X - mx - 211, MousePosition.Y - my);
             }
+            label1.Text = MousePosition.X.ToString() + " " + MousePosition.Y.ToString();
+            label2.Text = mx.ToString() + " " + my.ToString();
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)
@@ -75,11 +77,10 @@ namespace PRESENTACION
                 btn_Maximizar.Visible = true;
                 Btn_Normal.Visible = false;
             }
-            
             n = 1;
             mx = e.X;
             my = e.Y;
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

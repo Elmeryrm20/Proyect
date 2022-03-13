@@ -41,23 +41,6 @@ namespace PRESENTACION
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            txtusuario.Text = "";
-            if (radioButton1.Checked == true)
-            {
-                label2.Text = "DNI";
-                txtusuario.MaxLength = 8;
-                txtusuario.Text = txtusuario.Text.Trim();
-            }
-            else if (radioButton2.Checked == true)
-            {
-                label2.Text = "PASAPORTE";
-                txtusuario.MaxLength = 20;
-            }
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             DataTable dt = du.D_Login(txtusuario.Text, txtcontraseña.Text);
@@ -94,6 +77,49 @@ namespace PRESENTACION
         private void DtgPrueba_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                lbldocumento.Text = "DNI";
+                txtusuario.MaxLength = 8;
+                txtusuario.Text = txtusuario.Text.Trim();
+                txtusuario.Enabled = true;
+                txtcontraseña.Enabled = true;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                lbldocumento.Text = "PASAPORTE";
+                txtusuario.MaxLength = 20;
+                txtusuario.Enabled = true;
+                txtcontraseña.Enabled = true;
+            }
+        }
+        int n, mx, my;
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (n == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            n = 0;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            n = 1;
+            mx = e.X;
+            my = e.Y;
         }
     }
 }

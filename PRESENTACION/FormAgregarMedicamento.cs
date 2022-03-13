@@ -148,8 +148,7 @@ namespace PRESENTACION
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             FormAgregarLaboratorio frm = new FormAgregarLaboratorio();
-
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }
