@@ -121,5 +121,35 @@ namespace DATOS
             return tabla;
 
         }
+        public DataTable ConsultaUsuario()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_ListaUsuario", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+        }
+        public DataTable D_Insertar_Laboratorio(string Nombre, string Direccion, string Telefono)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_Insertar_Laboaratorio", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Descripcion", Nombre);
+            comando.Parameters.AddWithValue("Direccion", Direccion);
+            comando.Parameters.AddWithValue("Telefono", Telefono);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            Conexion.connection.Close();
+
+            return dt;
+
+        }
     }
 }

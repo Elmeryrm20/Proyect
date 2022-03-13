@@ -144,5 +144,12 @@ namespace PRESENTACION
         {
             validacion.Texto_Inmodificable(e);
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            FormAgregarLaboratorio frm = new FormAgregarLaboratorio();
+
+            frm.Show();
+        }
     }
 }

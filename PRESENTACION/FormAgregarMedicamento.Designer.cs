@@ -51,10 +51,10 @@ namespace PRESENTACION
             this.LblMuestra1 = new System.Windows.Forms.Label();
             this.CmbPresentacion = new System.Windows.Forms.ComboBox();
             this.cmbLab = new System.Windows.Forms.ComboBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.bnt_Agregar_Lab = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnt_Agregar_Lab)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -256,21 +256,22 @@ namespace PRESENTACION
             this.cmbLab.TabIndex = 27;
             this.cmbLab.Text = "Selecciona Laboratorio";
             // 
-            // pictureBox3
+            // bnt_Agregar_Lab
             // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox3.Location = new System.Drawing.Point(338, 151);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 21);
-            this.pictureBox3.TabIndex = 28;
-            this.pictureBox3.TabStop = false;
+            this.bnt_Agregar_Lab.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bnt_Agregar_Lab.Location = new System.Drawing.Point(338, 151);
+            this.bnt_Agregar_Lab.Name = "bnt_Agregar_Lab";
+            this.bnt_Agregar_Lab.Size = new System.Drawing.Size(47, 21);
+            this.bnt_Agregar_Lab.TabIndex = 28;
+            this.bnt_Agregar_Lab.TabStop = false;
+            this.bnt_Agregar_Lab.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 406);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.bnt_Agregar_Lab);
             this.Controls.Add(this.cmbLab);
             this.Controls.Add(this.CmbPresentacion);
             this.Controls.Add(this.LblMuestra1);
@@ -298,7 +299,7 @@ namespace PRESENTACION
             this.Load += new System.EventHandler(this.FormAgregarMedicamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnt_Agregar_Lab)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,6 +329,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Label LblMuestra1;
         private System.Windows.Forms.ComboBox CmbPresentacion;
         private System.Windows.Forms.ComboBox cmbLab;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox bnt_Agregar_Lab;
     }
 }

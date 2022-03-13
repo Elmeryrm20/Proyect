@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DATOS;
 
 namespace PRESENTACION
 {
     public partial class FormAgregarLaboratorio : Form
     {
+        Consultas consultas = new Consultas();
         public FormAgregarLaboratorio()
         {
             InitializeComponent();
@@ -40,6 +42,18 @@ namespace PRESENTACION
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            consultas.D_Insertar_Laboratorio(Txt_Nombre.Text ,txt_Direccion.Text,txt_Telefono.Text);
+
+            MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }
