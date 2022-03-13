@@ -110,6 +110,9 @@
     <Compile Include="validar.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAgregarLaboratorio.resx">
+      <DependentUpon>FormAgregarLaboratorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarMedicamento.resx">
       <DependentUpon>FormAgregarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
