@@ -45,8 +45,8 @@ namespace PRESENTACION
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtCargo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmb_Cargo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,13 +183,6 @@ namespace PRESENTACION
             this.label9.TabIndex = 15;
             this.label9.Text = "Cargo";
             // 
-            // txtCargo
-            // 
-            this.txtCargo.Location = new System.Drawing.Point(152, 247);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(153, 20);
-            this.txtCargo.TabIndex = 16;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(372, 304);
@@ -198,13 +191,21 @@ namespace PRESENTACION
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // cmb_Cargo
+            // 
+            this.cmb_Cargo.FormattingEnabled = true;
+            this.cmb_Cargo.Location = new System.Drawing.Point(153, 250);
+            this.cmb_Cargo.Name = "cmb_Cargo";
+            this.cmb_Cargo.Size = new System.Drawing.Size(152, 21);
+            this.cmb_Cargo.TabIndex = 18;
+            // 
             // FormAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 406);
+            this.Controls.Add(this.cmb_Cargo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCorreo);
@@ -249,7 +250,7 @@ namespace PRESENTACION
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmb_Cargo;
     }
 }

@@ -18,11 +18,18 @@ namespace PRESENTACION
         {
             InitializeComponent();
             ObtenerCaja();
+            ObtenerCargoTra();
         }
         void ObtenerCaja()
         {
             cmbTipoDocumento.DisplayMember = "Tid_Descripcion";
             cmbTipoDocumento.DataSource = consultas.D_TipoDNI();
+
+        }
+        void ObtenerCargoTra()
+        {
+            cmb_Cargo.DisplayMember = "Car_Descripcion";
+            cmb_Cargo.DataSource = consultas.D_CargoTrabajador();
 
         }
         private void FormAgregarUsuario_Load(object sender, EventArgs e)

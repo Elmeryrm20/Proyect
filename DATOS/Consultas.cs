@@ -163,5 +163,17 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
+        public DataTable D_CargoTrabajador()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("P_CargoTrabajador", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+        }
     }
 }
