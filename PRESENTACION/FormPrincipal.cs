@@ -231,10 +231,10 @@ namespace PRESENTACION
         private void Btn_Salidas_Click(object sender, EventArgs e)
         {
             Form Formulario;
-            Formulario = PnlCuerpo.Controls.OfType<FormSalidaMedicamento>().FirstOrDefault(); //Busca en la colección el formulario
+            Formulario = PnlCuerpo.Controls.OfType<FormAgregarUsuario>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
             {
-                Formulario = new FormSalidaMedicamento();
+                Formulario = new FormAgregarUsuario();
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;

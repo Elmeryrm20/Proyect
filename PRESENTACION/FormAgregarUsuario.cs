@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace PRESENTACION
 {
-    public partial class FormSalidaMedicamento : Form
+    public partial class FormAgregarUsuario : Form
     {
-        public FormSalidaMedicamento()
+        public FormAgregarUsuario()
         {
             InitializeComponent();
+        }
+
+        private void FormAgregarUsuario_Load(object sender, EventArgs e)
+        {
+            dtpFecha_Nacimiento.MaxDate = DateTime.Now;
+            dtpFecha_Nacimiento.Value = DateTime.Now;
         }
     }
 }

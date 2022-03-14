@@ -101,11 +101,11 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSalidaMedicamento.cs">
+    <Compile Include="FormAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSalidaMedicamento.Designer.cs">
-      <DependentUpon>FormSalidaMedicamento.cs</DependentUpon>
+    <Compile Include="FormAgregarUsuario.Designer.cs">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="FormMedicamentos.resx">
       <DependentUpon>FormMedicamentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSalidaMedicamento.resx">
-      <DependentUpon>FormSalidaMedicamento.cs</DependentUpon>
+    <EmbeddedResource Include="FormAgregarUsuario.resx">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
