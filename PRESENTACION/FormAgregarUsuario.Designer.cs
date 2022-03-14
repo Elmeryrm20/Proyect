@@ -182,13 +182,7 @@ namespace PRESENTACION
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 15;
             this.label9.Text = "Cargo";
-            // 
-            // txtCargo
-            // 
-            this.txtCargo.Location = new System.Drawing.Point(152, 247);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(153, 20);
-            this.txtCargo.TabIndex = 8;
+       
             // 
             // pictureBox1
             // 
