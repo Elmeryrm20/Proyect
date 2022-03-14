@@ -55,6 +55,7 @@ namespace PRESENTACION
 
             MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             this.Close();
+
         }
         int n, mx, my;
         private void panel1_MouseMove(object sender, MouseEventArgs e)
