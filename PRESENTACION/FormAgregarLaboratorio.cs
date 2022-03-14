@@ -51,11 +51,25 @@ namespace PRESENTACION
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            consultas.D_Insertar_Laboratorio(Txt_Nombre.Text ,txt_Direccion.Text,txt_Telefono.Text);
+            if (Txt_Nombre.Text == "")
+            {
+                MessageBox.Show("Falta Ingresar Nombre.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txt_Direccion.Text == "")
+            {
+                MessageBox.Show("Falta Ingresar Direccion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txt_Telefono.Text == "")
+            {
+                MessageBox.Show("Falta Ingresar Telefono.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            { 
+                consultas.D_Insertar_Laboratorio(Txt_Nombre.Text, txt_Direccion.Text, txt_Telefono.Text);
 
-            MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            this.Close();
-
+                MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                this.Close();
+            }
         }
         int n, mx, my;
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -64,6 +78,11 @@ namespace PRESENTACION
             {
                 this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
             }
+        }
+
+        private void Txt_Nombre_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)

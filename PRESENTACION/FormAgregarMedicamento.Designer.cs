@@ -128,7 +128,7 @@ namespace PRESENTACION
             this.cmbLab.Location = new System.Drawing.Point(129, 78);
             this.cmbLab.Name = "cmbLab";
             this.cmbLab.Size = new System.Drawing.Size(195, 21);
-            this.cmbLab.TabIndex = 47;
+            this.cmbLab.TabIndex = 3;
             this.cmbLab.Text = "Selecciona Laboratorio";
             this.cmbLab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbLab_KeyPress);
             this.cmbLab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbLab_MouseDown);
@@ -139,7 +139,7 @@ namespace PRESENTACION
             this.CmbPresentacion.Location = new System.Drawing.Point(131, 206);
             this.CmbPresentacion.Name = "CmbPresentacion";
             this.CmbPresentacion.Size = new System.Drawing.Size(194, 21);
-            this.CmbPresentacion.TabIndex = 40;
+            this.CmbPresentacion.TabIndex = 9;
             this.CmbPresentacion.Text = "Selecciona Presentación";
             this.CmbPresentacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbPresentacion_KeyPress);
             // 
@@ -150,7 +150,7 @@ namespace PRESENTACION
             this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 9, 0, 0, 0, 0);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
             this.dtFecha_Vencimiento.Size = new System.Drawing.Size(195, 20);
-            this.dtFecha_Vencimiento.TabIndex = 33;
+            this.dtFecha_Vencimiento.TabIndex = 4;
             this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 9, 0, 0, 0, 0);
             // 
             // cmbCaja
@@ -159,7 +159,7 @@ namespace PRESENTACION
             this.cmbCaja.Location = new System.Drawing.Point(130, 239);
             this.cmbCaja.Name = "cmbCaja";
             this.cmbCaja.Size = new System.Drawing.Size(195, 21);
-            this.cmbCaja.TabIndex = 41;
+            this.cmbCaja.TabIndex = 10;
             this.cmbCaja.Text = "Selecciona Almacen";
             this.cmbCaja.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCaja_KeyPress);
             // 
@@ -170,7 +170,7 @@ namespace PRESENTACION
             this.cmbTipo.Location = new System.Drawing.Point(130, 172);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(194, 21);
-            this.cmbTipo.TabIndex = 37;
+            this.cmbTipo.TabIndex = 8;
             this.cmbTipo.Text = "Selecciona Tipo";
             this.cmbTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipo_KeyPress);
             // 
@@ -179,21 +179,21 @@ namespace PRESENTACION
             this.textGramaje.Location = new System.Drawing.Point(130, 134);
             this.textGramaje.Name = "textGramaje";
             this.textGramaje.Size = new System.Drawing.Size(194, 20);
-            this.textGramaje.TabIndex = 35;
+            this.textGramaje.TabIndex = 7;
             // 
             // textCantidad
             // 
             this.textCantidad.Location = new System.Drawing.Point(130, 51);
             this.textCantidad.Name = "textCantidad";
             this.textCantidad.Size = new System.Drawing.Size(194, 20);
-            this.textCantidad.TabIndex = 30;
+            this.textCantidad.TabIndex = 2;
             // 
             // textNombre
             // 
             this.textNombre.Location = new System.Drawing.Point(130, 25);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(194, 20);
-            this.textNombre.TabIndex = 29;
+            this.textNombre.TabIndex = 1;
             // 
             // label12
             // 

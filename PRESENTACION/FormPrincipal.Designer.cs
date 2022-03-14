@@ -62,6 +62,7 @@ namespace PRESENTACION
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Location = new System.Drawing.Point(565, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 27);
@@ -73,6 +74,7 @@ namespace PRESENTACION
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(631, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 27);
@@ -84,6 +86,7 @@ namespace PRESENTACION
             // 
             this.btn_Maximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_Maximizar.BackColor = System.Drawing.Color.Gray;
+            this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Maximizar.Location = new System.Drawing.Point(598, 6);
             this.btn_Maximizar.Name = "btn_Maximizar";
             this.btn_Maximizar.Size = new System.Drawing.Size(27, 27);
@@ -95,6 +98,7 @@ namespace PRESENTACION
             // 
             this.Btn_Normal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Btn_Normal.BackColor = System.Drawing.Color.Black;
+            this.Btn_Normal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Normal.Location = new System.Drawing.Point(598, 6);
             this.Btn_Normal.Name = "Btn_Normal";
             this.Btn_Normal.Size = new System.Drawing.Size(27, 27);
@@ -123,6 +127,7 @@ namespace PRESENTACION
             this.Btn_Historial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Historial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Historial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Historial.Location = new System.Drawing.Point(3, 210);
             this.Btn_Historial.Name = "Btn_Historial";
             this.Btn_Historial.Size = new System.Drawing.Size(205, 34);
@@ -135,6 +140,7 @@ namespace PRESENTACION
             this.Btn_Salidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Salidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Salidas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Salidas.Location = new System.Drawing.Point(4, 170);
             this.Btn_Salidas.Name = "Btn_Salidas";
             this.Btn_Salidas.Size = new System.Drawing.Size(205, 34);
@@ -147,6 +153,7 @@ namespace PRESENTACION
             this.Btn_Usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Usuarios.Location = new System.Drawing.Point(3, 126);
             this.Btn_Usuarios.Name = "Btn_Usuarios";
             this.Btn_Usuarios.Size = new System.Drawing.Size(205, 34);
@@ -159,6 +166,7 @@ namespace PRESENTACION
             this.Btn_Cajas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Cajas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Cajas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Cajas.Location = new System.Drawing.Point(3, 86);
             this.Btn_Cajas.Name = "Btn_Cajas";
             this.Btn_Cajas.Size = new System.Drawing.Size(205, 34);
@@ -171,6 +179,7 @@ namespace PRESENTACION
             this.Btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Agregar.Location = new System.Drawing.Point(3, 46);
             this.Btn_Agregar.Name = "Btn_Agregar";
             this.Btn_Agregar.Size = new System.Drawing.Size(208, 34);
@@ -183,6 +192,7 @@ namespace PRESENTACION
             this.Btn_Inicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Inicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Btn_Inicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Inicio.Location = new System.Drawing.Point(3, 6);
             this.Btn_Inicio.Name = "Btn_Inicio";
             this.Btn_Inicio.Size = new System.Drawing.Size(205, 34);
@@ -211,6 +221,7 @@ namespace PRESENTACION
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Location = new System.Drawing.Point(21, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 27);
