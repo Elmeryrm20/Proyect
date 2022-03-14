@@ -131,6 +131,7 @@ namespace PRESENTACION
             this.cmbLab.TabIndex = 47;
             this.cmbLab.Text = "Selecciona Laboratorio";
             this.cmbLab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbLab_KeyPress);
+            this.cmbLab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbLab_MouseDown);
             // 
             // CmbPresentacion
             // 
@@ -309,6 +310,8 @@ namespace PRESENTACION
             this.Name = "FormAgregarMedicamento";
             this.Text = "FormAgregarMedicamento";
             this.Load += new System.EventHandler(this.FormAgregarMedicamento_Load);
+            this.SizeChanged += new System.EventHandler(this.FormAgregarMedicamento_SizeChanged);
+            this.Resize += new System.EventHandler(this.FormAgregarMedicamento_Resize);
             this.gpbAgregar_Producto.ResumeLayout(false);
             this.gpbAgregar_Producto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_Agregar_Lab)).EndInit();

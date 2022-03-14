@@ -46,6 +46,10 @@ namespace PRESENTACION
                 Formulario.BringToFront();
             }
         }
+        void centrar()
+        {
+
+        }
         int n, mx, my;
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {

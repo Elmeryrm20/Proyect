@@ -33,13 +33,6 @@ namespace PRESENTACION
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            if (radioButton1.Checked == true)
-            {
-                validar.soloNumeros(e);
-            }
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -72,34 +65,6 @@ namespace PRESENTACION
                 MessageBox.Show("Datos Incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
-        }
-
-        private void DtgPrueba_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked == true)
-            {
-                lbldocumento.Text = "DNI";
-                txtusuario.MaxLength = 8;
-                txtusuario.Text = txtusuario.Text.Trim();
-                txtusuario.Enabled = true;
-                txtcontraseña.Enabled = true;
-            }
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked == true)
-            {
-                lbldocumento.Text = "PASAPORTE";
-                txtusuario.MaxLength = 20;
-                txtusuario.Enabled = true;
-                txtcontraseña.Enabled = true;
-            }
         }
         int n, mx, my;
         private void panel1_MouseMove(object sender, MouseEventArgs e)

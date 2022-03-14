@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace PRESENTACION
 {
@@ -15,6 +16,7 @@ namespace PRESENTACION
             ObtenerCaja();
             ObtenerPresentacion();
             ObtenerLaboratorio();
+
         }
         validar validacion = new validar();
         void ObtenerTipo()
@@ -49,10 +51,10 @@ namespace PRESENTACION
             fecha = DateTime.Now.ToString("d");
             dtFecha_Vencimiento.MinDate = DateTime.Now;
             dtFecha_Vencimiento.Value = DateTime.Now;
-            cmbLab.Text = "Laboratorio";
-            cmbTipo.Text = "Tipo";
-            CmbPresentacion.Text = "Presentacion";
-            cmbCaja.Text = "Caja";
+            cmbLab.Text = "Seleccione Laboratorio";
+            cmbTipo.Text = "Seleccione Tipo";
+            CmbPresentacion.Text = "Seleccione Presentacion";
+            cmbCaja.Text = "Seleccione Caja";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -101,6 +103,15 @@ namespace PRESENTACION
                 consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1);
 
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                
+                textNombre.Text = "";
+                textCantidad.Text = "";
+                textGramaje.Text = "";
+                cmbCaja.Text = "Seleccione Caja";
+                cmbLab.Text = "Seleccione Laboratorio";
+                cmbTipo.Text = "Seleccione Tipo";
+                CmbPresentacion.Text = "Seleccione Presentacion";
+                dtFecha_Vencimiento.Value = DateTime.Now;
             }
         }
 
@@ -153,6 +164,30 @@ namespace PRESENTACION
         {
             FormAgregarLaboratorio frm = new FormAgregarLaboratorio();
             frm.ShowDialog();
+        }
+
+        private void FormAgregarMedicamento_Resize(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FormAgregarMedicamento_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.Width > 592 && this.Height > 406)
+            {
+                var bounds = Screen.FromControl(this).Bounds;
+                double xval = bounds.Width / 16;
+                int x = (int)Math.Round(xval);
+                double yval = bounds.Height / 8;
+                int y = (int)Math.Round(yval);
+                gpbAgregar_Producto.Location = new Point(x, y);
+            }
+            
+        }
+
+        private void cmbLab_MouseDown(object sender, MouseEventArgs e)
+        {
+            ObtenerLaboratorio();
         }
     }
 }

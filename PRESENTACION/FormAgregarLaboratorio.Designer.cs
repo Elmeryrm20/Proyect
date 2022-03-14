@@ -113,6 +113,7 @@ namespace PRESENTACION
             // Txt_Nombre
             // 
             this.Txt_Nombre.Location = new System.Drawing.Point(96, 113);
+            this.Txt_Nombre.MaxLength = 50;
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Size = new System.Drawing.Size(223, 20);
             this.Txt_Nombre.TabIndex = 5;
@@ -147,6 +148,7 @@ namespace PRESENTACION
             // txt_Telefono
             // 
             this.txt_Telefono.Location = new System.Drawing.Point(96, 194);
+            this.txt_Telefono.MaxLength = 50;
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(223, 20);
             this.txt_Telefono.TabIndex = 2;
@@ -154,6 +156,7 @@ namespace PRESENTACION
             // txt_Direccion
             // 
             this.txt_Direccion.Location = new System.Drawing.Point(96, 153);
+            this.txt_Direccion.MaxLength = 50;
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Size = new System.Drawing.Size(223, 20);
             this.txt_Direccion.TabIndex = 1;

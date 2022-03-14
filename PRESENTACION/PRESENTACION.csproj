@@ -53,6 +53,18 @@
     <Compile Include="FormAgregarLaboratorio.Designer.cs">
       <DependentUpon>FormAgregarLaboratorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormControldeEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControldeEntradas.Designer.cs">
+      <DependentUpon>FormControldeEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControldeSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControldeSalidas.Designer.cs">
+      <DependentUpon>FormControldeSalidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
