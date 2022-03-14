@@ -29,12 +29,36 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgb_Control_Entradas = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Control_Entradas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgb_Control_Entradas
+            // 
+            this.dgb_Control_Entradas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.dgb_Control_Entradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgb_Control_Entradas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgb_Control_Entradas.Location = new System.Drawing.Point(0, 0);
+            this.dgb_Control_Entradas.Name = "dgb_Control_Entradas";
+            this.dgb_Control_Entradas.Size = new System.Drawing.Size(690, 405);
+            this.dgb_Control_Entradas.TabIndex = 0;
+            // 
+            // FormControldeEntradas
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(690, 405);
+            this.Controls.Add(this.dgb_Control_Entradas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormControldeEntradas";
             this.Text = "FormControldeEntradas";
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Control_Entradas)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgb_Control_Entradas;
     }
 }

@@ -128,6 +128,12 @@
     <EmbeddedResource Include="FormAgregarMedicamento.resx">
       <DependentUpon>FormAgregarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormControldeEntradas.resx">
+      <DependentUpon>FormControldeEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControldeSalidas.resx">
+      <DependentUpon>FormControldeSalidas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHistorial.resx">
       <DependentUpon>FormHistorial.cs</DependentUpon>
     </EmbeddedResource>

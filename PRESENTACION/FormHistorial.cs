@@ -15,6 +15,7 @@ namespace PRESENTACION
         public FormHistorial()
         {
             InitializeComponent();
+            LlamarEntrada();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,6 +31,56 @@ namespace PRESENTACION
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+        public void LlamarEntrada()
+        {
+            Form Formulario;
+            Formulario = pnl_Contenedor_Entradas.Controls.OfType<FormControldeEntradas>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormControldeEntradas();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                pnl_Contenedor_Entradas.Controls.Add(Formulario);
+                pnl_Contenedor_Entradas.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LlamarEntrada();
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form Formulario;
+            Formulario = pnl_Contenedor_Entradas.Controls.OfType<FormControldeSalidas>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormControldeSalidas();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                pnl_Contenedor_Entradas.Controls.Add(Formulario);
+                pnl_Contenedor_Entradas.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
         }
     }
 }
