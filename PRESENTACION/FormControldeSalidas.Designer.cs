@@ -29,12 +29,36 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgb_Contral_Salida = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Contral_Salida)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgb_Contral_Salida
+            // 
+            this.dgb_Contral_Salida.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgb_Contral_Salida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgb_Contral_Salida.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgb_Contral_Salida.Location = new System.Drawing.Point(0, 0);
+            this.dgb_Contral_Salida.Name = "dgb_Contral_Salida";
+            this.dgb_Contral_Salida.Size = new System.Drawing.Size(639, 349);
+            this.dgb_Contral_Salida.TabIndex = 0;
+            // 
+            // FormControldeSalidas
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(639, 349);
+            this.Controls.Add(this.dgb_Contral_Salida);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormControldeSalidas";
             this.Text = "FormControldeSalidas";
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Contral_Salida)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgb_Contral_Salida;
     }
 }

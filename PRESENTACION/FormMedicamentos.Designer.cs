@@ -53,11 +53,13 @@ namespace PRESENTACION
             // 
             this.dgb_Medicamentos.AllowUserToAddRows = false;
             this.dgb_Medicamentos.AllowUserToDeleteRows = false;
+            this.dgb_Medicamentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgb_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgb_Medicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgb_Medicamentos.Location = new System.Drawing.Point(0, 0);
             this.dgb_Medicamentos.Name = "dgb_Medicamentos";
             this.dgb_Medicamentos.ReadOnly = true;
+            this.dgb_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgb_Medicamentos.Size = new System.Drawing.Size(657, 349);
             this.dgb_Medicamentos.TabIndex = 0;
             // 
