@@ -65,21 +65,21 @@ namespace PRESENTACION
             this.txtDocumento.Location = new System.Drawing.Point(151, 95);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(154, 20);
-            this.txtDocumento.TabIndex = 1;
+            this.txtDocumento.TabIndex = 2;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(151, 121);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(154, 20);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TabIndex = 3;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(151, 147);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(154, 20);
-            this.txtApellido.TabIndex = 3;
+            this.txtApellido.TabIndex = 4;
             // 
             // label2
             // 
@@ -87,7 +87,7 @@ namespace PRESENTACION
             this.label2.Location = new System.Drawing.Point(83, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 40;
             this.label2.Text = "Documento";
             // 
             // label3
@@ -96,7 +96,7 @@ namespace PRESENTACION
             this.label3.Location = new System.Drawing.Point(101, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 50;
             this.label3.Text = "Nombre";
             // 
             // label4
@@ -105,7 +105,7 @@ namespace PRESENTACION
             this.label4.Location = new System.Drawing.Point(101, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 70;
             this.label4.Text = "Apellido";
             // 
             // label5
@@ -114,7 +114,7 @@ namespace PRESENTACION
             this.label5.Location = new System.Drawing.Point(37, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 13);
-            this.label5.TabIndex = 7;
+            this.label5.TabIndex = 50;
             this.label5.Text = "Fecha de Nacimiento";
             // 
             // dtpFecha_Nacimiento
@@ -123,7 +123,7 @@ namespace PRESENTACION
             this.dtpFecha_Nacimiento.Location = new System.Drawing.Point(151, 173);
             this.dtpFecha_Nacimiento.Name = "dtpFecha_Nacimiento";
             this.dtpFecha_Nacimiento.Size = new System.Drawing.Size(154, 20);
-            this.dtpFecha_Nacimiento.TabIndex = 8;
+            this.dtpFecha_Nacimiento.TabIndex = 5;
             // 
             // label6
             // 
@@ -158,21 +158,21 @@ namespace PRESENTACION
             this.cmbTipoDocumento.Location = new System.Drawing.Point(152, 70);
             this.cmbTipoDocumento.Name = "cmbTipoDocumento";
             this.cmbTipoDocumento.Size = new System.Drawing.Size(153, 21);
-            this.cmbTipoDocumento.TabIndex = 12;
+            this.cmbTipoDocumento.TabIndex = 1;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(151, 197);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(154, 20);
-            this.txtCorreo.TabIndex = 13;
+            this.txtCorreo.TabIndex = 6;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(152, 221);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(153, 20);
-            this.txtTelefono.TabIndex = 14;
+            this.txtTelefono.TabIndex = 7;
             // 
             // label9
             // 
@@ -183,8 +183,16 @@ namespace PRESENTACION
             this.label9.TabIndex = 15;
             this.label9.Text = "Cargo";
             // 
+            // txtCargo
+            // 
+            this.txtCargo.Location = new System.Drawing.Point(152, 247);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(153, 20);
+            this.txtCargo.TabIndex = 8;
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.Location = new System.Drawing.Point(372, 304);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(131, 47);
