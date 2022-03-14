@@ -151,5 +151,17 @@ namespace DATOS
             return dt;
 
         }
+        public DataTable D_TipoDNI()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("P_TipoDNI", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+        }
     }
 }
