@@ -63,7 +63,7 @@ namespace PRESENTACION
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(565, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(636, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 27);
             this.pictureBox3.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace PRESENTACION
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(631, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(702, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 27);
             this.pictureBox1.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace PRESENTACION
             this.btn_Maximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_Maximizar.BackColor = System.Drawing.Color.Gray;
             this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Maximizar.Location = new System.Drawing.Point(598, 6);
+            this.btn_Maximizar.Location = new System.Drawing.Point(669, 6);
             this.btn_Maximizar.Name = "btn_Maximizar";
             this.btn_Maximizar.Size = new System.Drawing.Size(27, 27);
             this.btn_Maximizar.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace PRESENTACION
             this.Btn_Normal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Btn_Normal.BackColor = System.Drawing.Color.Black;
             this.Btn_Normal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Normal.Location = new System.Drawing.Point(598, 6);
+            this.Btn_Normal.Location = new System.Drawing.Point(669, 6);
             this.Btn_Normal.Name = "Btn_Normal";
             this.Btn_Normal.Size = new System.Drawing.Size(27, 27);
             this.Btn_Normal.TabIndex = 2;
@@ -109,7 +109,7 @@ namespace PRESENTACION
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
             this.panel2.Controls.Add(this.Btn_Historial);
             this.panel2.Controls.Add(this.Btn_Salidas);
             this.panel2.Controls.Add(this.Btn_Usuarios);
@@ -119,18 +119,18 @@ namespace PRESENTACION
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(211, 534);
+            this.panel2.Size = new System.Drawing.Size(140, 534);
             this.panel2.TabIndex = 1;
             // 
             // Btn_Historial
             // 
             this.Btn_Historial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Historial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Historial.BackColor = System.Drawing.Color.Red;
             this.Btn_Historial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Historial.Location = new System.Drawing.Point(3, 210);
+            this.Btn_Historial.Location = new System.Drawing.Point(0, 225);
             this.Btn_Historial.Name = "Btn_Historial";
-            this.Btn_Historial.Size = new System.Drawing.Size(205, 34);
+            this.Btn_Historial.Size = new System.Drawing.Size(140, 35);
             this.Btn_Historial.TabIndex = 5;
             this.Btn_Historial.TabStop = false;
             this.Btn_Historial.Click += new System.EventHandler(this.Btn_Historial_Click);
@@ -139,11 +139,11 @@ namespace PRESENTACION
             // 
             this.Btn_Salidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Salidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Salidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(24)))), ((int)(((byte)(16)))));
             this.Btn_Salidas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Salidas.Location = new System.Drawing.Point(4, 170);
+            this.Btn_Salidas.Location = new System.Drawing.Point(0, 190);
             this.Btn_Salidas.Name = "Btn_Salidas";
-            this.Btn_Salidas.Size = new System.Drawing.Size(205, 34);
+            this.Btn_Salidas.Size = new System.Drawing.Size(140, 35);
             this.Btn_Salidas.TabIndex = 4;
             this.Btn_Salidas.TabStop = false;
             this.Btn_Salidas.Click += new System.EventHandler(this.Btn_Salidas_Click);
@@ -152,11 +152,11 @@ namespace PRESENTACION
             // 
             this.Btn_Usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Usuarios.BackColor = System.Drawing.Color.Red;
             this.Btn_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Usuarios.Location = new System.Drawing.Point(3, 126);
+            this.Btn_Usuarios.Location = new System.Drawing.Point(0, 155);
             this.Btn_Usuarios.Name = "Btn_Usuarios";
-            this.Btn_Usuarios.Size = new System.Drawing.Size(205, 34);
+            this.Btn_Usuarios.Size = new System.Drawing.Size(140, 35);
             this.Btn_Usuarios.TabIndex = 3;
             this.Btn_Usuarios.TabStop = false;
             this.Btn_Usuarios.Click += new System.EventHandler(this.Btn_Usuarios_Click);
@@ -165,11 +165,11 @@ namespace PRESENTACION
             // 
             this.Btn_Cajas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Cajas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Cajas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(24)))), ((int)(((byte)(16)))));
             this.Btn_Cajas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Cajas.Location = new System.Drawing.Point(3, 86);
+            this.Btn_Cajas.Location = new System.Drawing.Point(0, 120);
             this.Btn_Cajas.Name = "Btn_Cajas";
-            this.Btn_Cajas.Size = new System.Drawing.Size(205, 34);
+            this.Btn_Cajas.Size = new System.Drawing.Size(140, 35);
             this.Btn_Cajas.TabIndex = 2;
             this.Btn_Cajas.TabStop = false;
             this.Btn_Cajas.Click += new System.EventHandler(this.Btn_Cajas_Click);
@@ -178,11 +178,11 @@ namespace PRESENTACION
             // 
             this.Btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Btn_Agregar.BackColor = System.Drawing.Color.Red;
             this.Btn_Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Agregar.Location = new System.Drawing.Point(3, 46);
+            this.Btn_Agregar.Location = new System.Drawing.Point(0, 85);
             this.Btn_Agregar.Name = "Btn_Agregar";
-            this.Btn_Agregar.Size = new System.Drawing.Size(208, 34);
+            this.Btn_Agregar.Size = new System.Drawing.Size(140, 35);
             this.Btn_Agregar.TabIndex = 1;
             this.Btn_Agregar.TabStop = false;
             this.Btn_Agregar.Click += new System.EventHandler(this.Btn_Agregar_Click);
@@ -191,27 +191,27 @@ namespace PRESENTACION
             // 
             this.Btn_Inicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Inicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Btn_Inicio.BackColor = System.Drawing.Color.White;
             this.Btn_Inicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Inicio.Location = new System.Drawing.Point(3, 6);
+            this.Btn_Inicio.Location = new System.Drawing.Point(28, 6);
             this.Btn_Inicio.Name = "Btn_Inicio";
-            this.Btn_Inicio.Size = new System.Drawing.Size(205, 34);
+            this.Btn_Inicio.Size = new System.Drawing.Size(85, 68);
             this.Btn_Inicio.TabIndex = 0;
             this.Btn_Inicio.TabStop = false;
             this.Btn_Inicio.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Yellow;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_Maximizar);
             this.panel1.Controls.Add(this.Btn_Normal);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(211, 0);
+            this.panel1.Location = new System.Drawing.Point(140, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(670, 40);
+            this.panel1.Size = new System.Drawing.Size(741, 40);
             this.panel1.TabIndex = 4;
             this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -232,9 +232,9 @@ namespace PRESENTACION
             // 
             this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
             this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlCuerpo.Location = new System.Drawing.Point(211, 40);
+            this.PnlCuerpo.Location = new System.Drawing.Point(140, 40);
             this.PnlCuerpo.Name = "PnlCuerpo";
-            this.PnlCuerpo.Size = new System.Drawing.Size(670, 494);
+            this.PnlCuerpo.Size = new System.Drawing.Size(741, 494);
             this.PnlCuerpo.TabIndex = 5;
             // 
             // FormPrincipal
