@@ -182,7 +182,6 @@ namespace PRESENTACION
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 15;
             this.label9.Text = "Cargo";
-       
             // 
             // pictureBox1
             // 
@@ -192,6 +191,7 @@ namespace PRESENTACION
             this.pictureBox1.Size = new System.Drawing.Size(131, 47);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cmb_Cargo
             // 

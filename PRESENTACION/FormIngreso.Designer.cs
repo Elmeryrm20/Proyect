@@ -43,6 +43,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -85,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 134);
+            this.label2.Location = new System.Drawing.Point(45, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 2;
@@ -94,7 +95,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(116, 247);
+            this.pictureBox1.Location = new System.Drawing.Point(108, 228);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 31);
             this.pictureBox1.TabIndex = 3;
@@ -103,7 +104,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 134);
+            this.textBox1.Location = new System.Drawing.Point(150, 120);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(105, 20);
             this.textBox1.TabIndex = 4;
@@ -111,7 +112,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 173);
+            this.label3.Location = new System.Drawing.Point(58, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 5;

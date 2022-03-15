@@ -41,18 +41,19 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
             this.panel1.Controls.Add(this.btnSerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(323, 37);
+            this.panel1.Size = new System.Drawing.Size(348, 37);
             this.panel1.TabIndex = 0;
             // 
             // btnSerrar
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Black;
-            this.btnSerrar.Location = new System.Drawing.Point(284, 3);
+            this.btnSerrar.Location = new System.Drawing.Point(309, 3);
             this.btnSerrar.Name = "btnSerrar";
             this.btnSerrar.Size = new System.Drawing.Size(27, 27);
             this.btnSerrar.TabIndex = 3;
@@ -63,7 +64,7 @@
             // 
             this.lbl_Nombre.AutoSize = true;
             this.lbl_Nombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre.Location = new System.Drawing.Point(12, 53);
+            this.lbl_Nombre.Location = new System.Drawing.Point(23, 52);
             this.lbl_Nombre.Name = "lbl_Nombre";
             this.lbl_Nombre.Size = new System.Drawing.Size(50, 18);
             this.lbl_Nombre.TabIndex = 2;
@@ -79,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 115);
+            this.label2.Location = new System.Drawing.Point(23, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 5;
@@ -88,7 +89,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 192);
+            this.pictureBox1.Location = new System.Drawing.Point(115, 217);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 31);
             this.pictureBox1.TabIndex = 7;
@@ -98,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 321);
+            this.ClientSize = new System.Drawing.Size(348, 304);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);

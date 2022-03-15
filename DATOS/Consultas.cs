@@ -187,9 +187,33 @@ namespace DATOS
             da.Fill(dt);
 
             Conexion.connection.Close();
+            return dt;
+        }
+        public DataTable D_Insertar_Trabajador(string DNI,string Nombre, string Apellido, string Fecha_N,string Direccion,String Telefono,int Tipo,int Cargo)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_Ingresar_Trabajador", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Tra_DNI", DNI);
+            comando.Parameters.AddWithValue("Tra_Nombre", Nombre);
+            comando.Parameters.AddWithValue("Tra_Apellido", Apellido);
+            comando.Parameters.AddWithValue("Tra_Nacimiento", Fecha_N);
+            comando.Parameters.AddWithValue("Tra_Correo", Direccion);
+            comando.Parameters.AddWithValue("Tra_Telefono", Telefono);
+            comando.Parameters.AddWithValue("Tid_Codigo", Tipo);
+            comando.Parameters.AddWithValue("Car_Codigo", Cargo);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            Conexion.connection.Close();
 
             return dt;
 
         }
+
+
+
     }
 }

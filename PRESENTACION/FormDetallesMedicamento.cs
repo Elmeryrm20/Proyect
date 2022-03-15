@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DATOS;
+using System.IO;
+
 
 namespace PRESENTACION
 {
@@ -31,6 +33,7 @@ namespace PRESENTACION
 
         void Medicamentos_Detallados(int valor )
         {
+            
             lbl_Nombre.Text=consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
             lbl_Ingeso.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"].ToString();
             lbl_Egreso.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"].ToString();
@@ -43,7 +46,14 @@ namespace PRESENTACION
             int Egreso= (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
             lbl_Existencia.Text = (Ingreso - Egreso).ToString();
             lbl_Porcentage.Text = (((Ingreso - Egreso) / Ingreso)*100).ToString() + " %";
-
+            //-----------------Imagen--------------------------
+            string Nombre_Imagen = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
+            string str = Convert.ToString(Directory.GetCurrentDirectory());
+            str = str.Replace(@"\bin\Debug", "");
+            ptb_Imagen.Image = Image.FromFile(str + @"\Resources\" + Nombre_Imagen + ".jpeg");
+            ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
+            ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
+            //-----------------------------------------------
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

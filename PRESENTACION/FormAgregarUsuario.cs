@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DATOS;
 
+
 namespace PRESENTACION
 {
     public partial class FormAgregarUsuario : Form
@@ -36,6 +37,12 @@ namespace PRESENTACION
         {
             dtpFecha_Nacimiento.MaxDate = DateTime.Now;
             dtpFecha_Nacimiento.Value = DateTime.Now;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            consultas.D_Insertar_Trabajador(txtDocumento.Text ,( txtNombre.Text).ToUpper(),(txtApellido.Text).ToUpper(), dtpFecha_Nacimiento.Value.ToString("yyyy-MM-dd"), txtCorreo.Text, txtTelefono.Text, cmbTipoDocumento.SelectedIndex + 1, cmb_Cargo.SelectedIndex + 1);
+            MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }
