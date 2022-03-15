@@ -69,5 +69,17 @@ namespace PRESENTACION
             FormDetallesMedicamento frm = new FormDetallesMedicamento(valor_ID);
             frm.ShowDialog();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            FormIngreso frm = new FormIngreso(valor_ID);
+            frm.ShowDialog();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            FormEgreso frm = new FormEgreso(valor_ID);
+            frm.ShowDialog();
+        }
     }
 }

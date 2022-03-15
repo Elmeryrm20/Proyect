@@ -102,6 +102,7 @@ namespace PRESENTACION
             this.pictureBox3.Size = new System.Drawing.Size(74, 26);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -111,6 +112,7 @@ namespace PRESENTACION
             this.pictureBox4.Size = new System.Drawing.Size(74, 26);
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label1
             // 

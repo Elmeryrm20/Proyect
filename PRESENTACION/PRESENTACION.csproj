@@ -71,6 +71,12 @@
     <Compile Include="FormControldeSalidas.Designer.cs">
       <DependentUpon>FormControldeSalidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEgreso.Designer.cs">
+      <DependentUpon>FormEgreso.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     </Compile>
     <Compile Include="FormAgregarMedicamento.Designer.cs">
       <DependentUpon>FormAgregarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngreso.Designer.cs">
+      <DependentUpon>FormIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
@@ -143,8 +155,14 @@
     <EmbeddedResource Include="FormControldeSalidas.resx">
       <DependentUpon>FormControldeSalidas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEgreso.resx">
+      <DependentUpon>FormEgreso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHistorial.resx">
       <DependentUpon>FormHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngreso.resx">
+      <DependentUpon>FormIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
