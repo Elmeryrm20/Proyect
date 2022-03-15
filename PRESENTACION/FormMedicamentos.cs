@@ -28,7 +28,7 @@ namespace PRESENTACION
             dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        int valor_ID = 0;
+        int valor_ID = 1;
         private void FormMedicamentos_Load(object sender, EventArgs e)
         {
 

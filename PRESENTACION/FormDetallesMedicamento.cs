@@ -31,10 +31,17 @@ namespace PRESENTACION
 
         void Medicamentos_Detallados(int valor )
         {
-            dgb_detalles_M.DataSource = consultas.D_Medicamento_Detallado(valor);
-            dgb_detalles_M.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            lbl_Nombre.Text=consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
+            lbl_Ingeso.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"].ToString();
+            lbl_Egreso.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"].ToString();
+            lbl_Almacen.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["ALMACEN"].ToString();
+            lbl_F_Vencimiento.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["FEC.VENCIMIENTO"].ToString();
+            lbl_Tipo.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TIPO"].ToString();
+            lbl_Laboratorio.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["LABORATORIO"].ToString();
+            lbl_Presentacion.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["PRESENTACIÒN"].ToString();
+
         }
 
-     
+
     }
 }
