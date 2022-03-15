@@ -175,5 +175,21 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
+        public DataTable D_Medicamento_Detallado(int ID_Medicamento)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("P_Detalles_Medicamento", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Medicamento_ID", ID_Medicamento);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            Conexion.connection.Close();
+
+            return dt;
+
+        }
     }
 }
