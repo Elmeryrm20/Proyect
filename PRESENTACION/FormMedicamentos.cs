@@ -54,7 +54,8 @@ namespace PRESENTACION
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            rellenartabla();
+            txb_Buscar.Text = " ";
         }
 
         private void dgb_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
