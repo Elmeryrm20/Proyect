@@ -190,9 +190,7 @@
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DATOS\DATOS.csproj">
       <Project>{a46d7383-74fe-4eed-b8ad-09d7be99723d}</Project>
@@ -201,6 +199,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuUsuarios02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAcercaDe01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAcercaDe02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAgregar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAgregar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAgregarUsuario01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAgregarUsuario02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuConfiguracion01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuConfiguracion02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuHistorial01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuHistorial02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuInicio01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuInicio02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuMedicamentos01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuMedicamentos02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuUsuarios01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
