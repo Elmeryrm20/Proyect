@@ -210,7 +210,21 @@ namespace DATOS
             return dt;
 
         }
+        public DataTable D_Validacion_Contraseña(string DNI)
+        {
+            Conexion.connection.Open();
 
+            MySqlCommand cmd = new MySqlCommand("SP_Viricar_Contraseña", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("texto", DNI);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            Conexion.connection.Close();
+
+            return dt;
+        }
 
 
     }
