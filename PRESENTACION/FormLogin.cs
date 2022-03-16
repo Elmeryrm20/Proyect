@@ -43,7 +43,7 @@ namespace PRESENTACION
             if (dt.Rows.Count == 1)
             {
                 this.Hide();
-                if (dt.Rows[0][2].ToString() == "1")
+                if (dt.Rows[0][1].ToString() == "1")
                 {
                     FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), "1");
                     A.Show();
@@ -51,7 +51,7 @@ namespace PRESENTACION
                     //MessageBox.Show("Eres Encargado");
 
                 }
-                else if (dt.Rows[0][2].ToString() == "2")
+                else if (dt.Rows[0][1].ToString() == "2")
                 {
                     FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), "2");
                     A.Show();
