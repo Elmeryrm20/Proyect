@@ -75,7 +75,7 @@ namespace PRESENTACION
             // txtDocumento
             // 
             this.txtDocumento.Location = new System.Drawing.Point(201, 117);
-            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(204, 22);
             this.txtDocumento.TabIndex = 2;
@@ -83,7 +83,7 @@ namespace PRESENTACION
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(201, 149);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(204, 22);
             this.txtNombre.TabIndex = 3;
@@ -91,7 +91,7 @@ namespace PRESENTACION
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(201, 181);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(204, 22);
             this.txtApellido.TabIndex = 4;
@@ -140,7 +140,7 @@ namespace PRESENTACION
             // 
             this.dtpFecha_Nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha_Nacimiento.Location = new System.Drawing.Point(201, 213);
-            this.dtpFecha_Nacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha_Nacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha_Nacimiento.Name = "dtpFecha_Nacimiento";
             this.dtpFecha_Nacimiento.Size = new System.Drawing.Size(204, 22);
             this.dtpFecha_Nacimiento.TabIndex = 5;
@@ -180,7 +180,7 @@ namespace PRESENTACION
             // 
             this.cmbTipoDocumento.FormattingEnabled = true;
             this.cmbTipoDocumento.Location = new System.Drawing.Point(203, 86);
-            this.cmbTipoDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoDocumento.Name = "cmbTipoDocumento";
             this.cmbTipoDocumento.Size = new System.Drawing.Size(203, 24);
             this.cmbTipoDocumento.TabIndex = 1;
@@ -188,7 +188,7 @@ namespace PRESENTACION
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(201, 242);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(204, 22);
             this.txtCorreo.TabIndex = 6;
@@ -196,7 +196,7 @@ namespace PRESENTACION
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(203, 272);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(203, 22);
             this.txtTelefono.TabIndex = 7;
@@ -215,7 +215,7 @@ namespace PRESENTACION
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.Location = new System.Drawing.Point(496, 374);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(175, 58);
             this.pictureBox1.TabIndex = 17;
@@ -226,7 +226,7 @@ namespace PRESENTACION
             // 
             this.cmb_Cargo.FormattingEnabled = true;
             this.cmb_Cargo.Location = new System.Drawing.Point(204, 308);
-            this.cmb_Cargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Cargo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Cargo.Name = "cmb_Cargo";
             this.cmb_Cargo.Size = new System.Drawing.Size(201, 24);
             this.cmb_Cargo.TabIndex = 18;
@@ -238,7 +238,7 @@ namespace PRESENTACION
             // lbltipodoc
             // 
             this.lbltipodoc.AutoSize = true;
-            this.lbltipodoc.Location = new System.Drawing.Point(425, 89);
+            this.lbltipodoc.Location = new System.Drawing.Point(605, 89);
             this.lbltipodoc.Name = "lbltipodoc";
             this.lbltipodoc.Size = new System.Drawing.Size(54, 17);
             this.lbltipodoc.TabIndex = 71;
@@ -247,7 +247,7 @@ namespace PRESENTACION
             // lbldoc
             // 
             this.lbldoc.AutoSize = true;
-            this.lbldoc.Location = new System.Drawing.Point(425, 122);
+            this.lbldoc.Location = new System.Drawing.Point(605, 122);
             this.lbldoc.Name = "lbldoc";
             this.lbldoc.Size = new System.Drawing.Size(54, 17);
             this.lbldoc.TabIndex = 72;
@@ -256,7 +256,7 @@ namespace PRESENTACION
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
-            this.lblnombre.Location = new System.Drawing.Point(425, 154);
+            this.lblnombre.Location = new System.Drawing.Point(605, 154);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(54, 17);
             this.lblnombre.TabIndex = 73;
@@ -265,7 +265,7 @@ namespace PRESENTACION
             // lblapellido
             // 
             this.lblapellido.AutoSize = true;
-            this.lblapellido.Location = new System.Drawing.Point(425, 186);
+            this.lblapellido.Location = new System.Drawing.Point(605, 186);
             this.lblapellido.Name = "lblapellido";
             this.lblapellido.Size = new System.Drawing.Size(54, 17);
             this.lblapellido.TabIndex = 74;
@@ -274,7 +274,7 @@ namespace PRESENTACION
             // lblcorreo
             // 
             this.lblcorreo.AutoSize = true;
-            this.lblcorreo.Location = new System.Drawing.Point(453, 247);
+            this.lblcorreo.Location = new System.Drawing.Point(633, 247);
             this.lblcorreo.Name = "lblcorreo";
             this.lblcorreo.Size = new System.Drawing.Size(54, 17);
             this.lblcorreo.TabIndex = 75;
@@ -283,7 +283,7 @@ namespace PRESENTACION
             // lbltelefono
             // 
             this.lbltelefono.AutoSize = true;
-            this.lbltelefono.Location = new System.Drawing.Point(453, 277);
+            this.lbltelefono.Location = new System.Drawing.Point(633, 277);
             this.lbltelefono.Name = "lbltelefono";
             this.lbltelefono.Size = new System.Drawing.Size(54, 17);
             this.lbltelefono.TabIndex = 76;
@@ -292,7 +292,7 @@ namespace PRESENTACION
             // lblcargo
             // 
             this.lblcargo.AutoSize = true;
-            this.lblcargo.Location = new System.Drawing.Point(425, 315);
+            this.lblcargo.Location = new System.Drawing.Point(605, 315);
             this.lblcargo.Name = "lblcargo";
             this.lblcargo.Size = new System.Drawing.Size(54, 17);
             this.lblcargo.TabIndex = 77;
@@ -301,7 +301,7 @@ namespace PRESENTACION
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(425, 218);
+            this.lblfecha.Location = new System.Drawing.Point(605, 218);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(54, 17);
             this.lblfecha.TabIndex = 78;
@@ -339,7 +339,7 @@ namespace PRESENTACION
             this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAgregarUsuario";
             this.Text = "FormSalidaMedicamento";
             this.Load += new System.EventHandler(this.FormAgregarUsuario_Load);
