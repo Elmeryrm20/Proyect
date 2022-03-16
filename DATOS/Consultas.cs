@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 
 namespace DATOS
 {
     public class Consultas
     {
-        D_Empleado Conexion= new D_Empleado();
+        D_Empleado Conexion = new D_Empleado();
 
         //public DataTable ConsultaMed(int codigo, string composicion, string fecha_v, int total_i, string fecha_i, int total_e,)
         //{
@@ -92,13 +87,15 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
+
         public DataTable D_Login(string DNI, string password)
         {
             Conexion.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SELECT Tra_DNI,Usu_Pass,Usu_Tipo FROM usuario WHERE Tra_DNI = @DNI AND Usu_Pass = @password", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Login", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
-            cmd.Parameters.AddWithValue("password", password);
+            cmd.Parameters.AddWithValue("PASS", password);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -107,13 +104,14 @@ namespace DATOS
 
             return dt;
         }
+
         public DataTable D_Consulta_Dinamica(string Busqueda)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("SP_Busqueda_Dinamica", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("texto",Busqueda);
+            comando.Parameters.AddWithValue("texto", Busqueda);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
@@ -189,7 +187,7 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable D_Insertar_Trabajador(string DNI,string Nombre, string Apellido, string Fecha_N,string Direccion,String Telefono,int Tipo,int Cargo)
+        public DataTable D_Insertar_Trabajador(string DNI, string Nombre, string Apellido, string Fecha_N, string Direccion, String Telefono, int Tipo, int Cargo)
         {
             Conexion.connection.Open();
 
