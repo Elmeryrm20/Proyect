@@ -69,7 +69,7 @@ namespace PRESENTACION
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Location = new System.Drawing.Point(616, 6);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox3.Size = new System.Drawing.Size(36, 33);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -81,7 +81,7 @@ namespace PRESENTACION
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(682, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox1.Size = new System.Drawing.Size(36, 33);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -93,7 +93,7 @@ namespace PRESENTACION
             this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Maximizar.Location = new System.Drawing.Point(649, 6);
             this.btn_Maximizar.Name = "btn_Maximizar";
-            this.btn_Maximizar.Size = new System.Drawing.Size(27, 27);
+            this.btn_Maximizar.Size = new System.Drawing.Size(36, 33);
             this.btn_Maximizar.TabIndex = 3;
             this.btn_Maximizar.TabStop = false;
             this.btn_Maximizar.Click += new System.EventHandler(this.pictureBox4_Click_1);
@@ -105,7 +105,7 @@ namespace PRESENTACION
             this.Btn_Normal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Normal.Location = new System.Drawing.Point(649, 6);
             this.Btn_Normal.Name = "Btn_Normal";
-            this.Btn_Normal.Size = new System.Drawing.Size(27, 27);
+            this.Btn_Normal.Size = new System.Drawing.Size(36, 33);
             this.Btn_Normal.TabIndex = 2;
             this.Btn_Normal.TabStop = false;
             this.Btn_Normal.Visible = false;
@@ -124,6 +124,7 @@ namespace PRESENTACION
             this.panel2.Controls.Add(this.Btn_Inicio);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 534);
             this.panel2.TabIndex = 1;
@@ -234,11 +235,13 @@ namespace PRESENTACION
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(28, 7);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(36, 33);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // PnlCuerpo
             // 
@@ -279,13 +282,14 @@ namespace PRESENTACION
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 534);
+            this.ClientSize = new System.Drawing.Size(1175, 657);
             this.Controls.Add(this.PnlCuerpo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";

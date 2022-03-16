@@ -294,9 +294,8 @@ namespace PRESENTACION
 
         }
 
-        private void Btn_Acerca_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(8);
 
         }
 
