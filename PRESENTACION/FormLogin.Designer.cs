@@ -38,6 +38,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtContraseña2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.DtgPrueba = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,6 +101,7 @@
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(183, 24);
             this.txtusuario.TabIndex = 4;
+            this.txtusuario.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtusuario_KeyUp);
             // 
             // txtcontraseña
             // 
@@ -148,6 +151,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtContraseña2);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.DtgPrueba);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.txtusuario);
@@ -163,6 +168,29 @@
             this.panel2.Size = new System.Drawing.Size(662, 379);
             this.panel2.TabIndex = 13;
             // 
+            // txtContraseña2
+            // 
+            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña2.Location = new System.Drawing.Point(362, 265);
+            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña2.Name = "txtContraseña2";
+            this.txtContraseña2.PasswordChar = '•';
+            this.txtContraseña2.Size = new System.Drawing.Size(183, 24);
+            this.txtContraseña2.TabIndex = 17;
+            this.txtContraseña2.Visible = false;
+            this.txtContraseña2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(359, 239);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 17);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "REPETIR CONTRASEÑA :";
+            // 
             // DtgPrueba
             // 
             this.DtgPrueba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -174,7 +202,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(345, 261);
+            this.pictureBox2.Location = new System.Drawing.Point(343, 311);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(215, 41);
@@ -220,5 +248,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView DtgPrueba;
+        private System.Windows.Forms.TextBox txtContraseña2;
+        private System.Windows.Forms.Label label2;
     }
 }

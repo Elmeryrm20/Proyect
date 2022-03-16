@@ -75,6 +75,40 @@ namespace PRESENTACION
             }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void txtusuario_KeyUp(object sender, KeyEventArgs e)
+        {
+            DataTable data = du.D_Validacion_Contraseña(txtusuario.Text);
+            try
+            {
+                string DNI = data.Rows[0]["Tra_DNI"].ToString();
+                String Contraseña = data.Rows[0]["Usu_Pass"].ToString();
+                label2.Text = Contraseña;
+                if (Contraseña=="")
+                {
+                    lblcontraseña.Text = "INGRESE NUEVA CONTRASEÑA";
+                    txtContraseña2.Visible = true;
+
+                }
+                else
+                {
+                    txtContraseña2.Visible = false;
+                }
+
+            }
+            catch (Exception)
+            {
+                label2.Text = "Usuario no Existe";
+             
+            }
+          
+            
+        }
+
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             n = 0;

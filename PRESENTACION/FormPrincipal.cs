@@ -288,20 +288,14 @@ namespace PRESENTACION
             }
         }
 
-<<<<<<< HEAD
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-=======
         private void Btn_Config_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(7);
 
         }
 
-        private void Btn_Acerca_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(8);
->>>>>>> aa861c64131da6362a99409769001353a7550785
 
         }
 
