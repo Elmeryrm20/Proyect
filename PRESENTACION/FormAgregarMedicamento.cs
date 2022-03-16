@@ -64,29 +64,17 @@ namespace PRESENTACION
                 errorProvider1.SetError(textNombre, "Por favor, ingrese un nombre");
                 valor = false;
             }
-            else
-            {
-                errorProvider1.SetError(textNombre, "");
-            }
 
             if (textCantidad.Text == "")
             {
                 errorProvider1.SetError(textCantidad, "Por favor, ingrese una cantidad");
                 valor = false;
             }
-            else
-            {
-                errorProvider1.SetError(textCantidad, "");
-            }
 
-            if (cmbLab.SelectedIndex == -1)
+            if (cmbLab.Text == "Seleccione Laboratorio")
             {
                 errorProvider1.SetError(cmbLab, "Por favor, seleccione o ingrese un laboratorio.");
                 valor = false;
-            }
-            else
-            {
-                errorProvider1.SetError(cmbLab, "");
             }
 
             if (dtFecha_Vencimiento.Text == fecha)
@@ -94,49 +82,29 @@ namespace PRESENTACION
                 errorProvider1.SetError(dtFecha_Vencimiento, "Por favor, ingrese una fecha.");
                 valor = false;
             }
-            else
-            {
-                errorProvider1.SetError(dtFecha_Vencimiento, "");
-            }
 
             if (textGramaje.Text == "")
             {
                 errorProvider1.SetError(textGramaje, "Por favor, ingrese un valor para gramaje.");
                 valor = false;
             }
-            else
-            {
-                errorProvider1.SetError(textGramaje, "");
-            }
 
-            if (cmbTipo.SelectedIndex == -1)
+            if (cmbTipo.Text == "Seleccione Tipo")
             {
                 errorProvider1.SetError(cmbTipo, "Por favor, seleccione un tipo.");
                 valor = false;
             }
-            else
-            {
-                errorProvider1.SetError(cmbTipo, "");
-            }
 
-            if (CmbPresentacion.SelectedIndex == -1)
+            if (CmbPresentacion.Text == "Seleccione Presentacion")
             {
                 errorProvider1.SetError(CmbPresentacion, "Por favor, seleccione una presentacion.");
                 valor = false;
             }
-            else
-            {
-                errorProvider1.SetError(CmbPresentacion, "");
-            }
 
-            if (cmbCaja.SelectedIndex == -1)
+            if (cmbCaja.Text == "Seleccione Caja")
             {
                 errorProvider1.SetError(cmbCaja, "Por favor, seleccione una caja.");
                 valor = false;
-            }
-            else
-            {
-                errorProvider1.SetError(cmbCaja, "");
             }
             return valor;
         }

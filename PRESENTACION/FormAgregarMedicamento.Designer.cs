@@ -111,14 +111,14 @@ namespace PRESENTACION
             this.gpbAgregar_Producto.Controls.Add(this.label3);
             this.gpbAgregar_Producto.Location = new System.Drawing.Point(26, 86);
             this.gpbAgregar_Producto.Name = "gpbAgregar_Producto";
-            this.gpbAgregar_Producto.Size = new System.Drawing.Size(544, 291);
+            this.gpbAgregar_Producto.Size = new System.Drawing.Size(554, 291);
             this.gpbAgregar_Producto.TabIndex = 29;
             this.gpbAgregar_Producto.TabStop = false;
             // 
             // bnt_Agregar_Lab
             // 
             this.bnt_Agregar_Lab.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bnt_Agregar_Lab.Location = new System.Drawing.Point(330, 78);
+            this.bnt_Agregar_Lab.Location = new System.Drawing.Point(345, 78);
             this.bnt_Agregar_Lab.Name = "bnt_Agregar_Lab";
             this.bnt_Agregar_Lab.Size = new System.Drawing.Size(47, 21);
             this.bnt_Agregar_Lab.TabIndex = 48;
@@ -201,7 +201,7 @@ namespace PRESENTACION
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(414, 186);
+            this.label12.Location = new System.Drawing.Point(429, 185);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 13);
             this.label12.TabIndex = 46;
@@ -211,7 +211,7 @@ namespace PRESENTACION
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(383, 239);
+            this.pictureBox2.Location = new System.Drawing.Point(398, 238);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 41);
             this.pictureBox2.TabIndex = 45;
@@ -222,7 +222,7 @@ namespace PRESENTACION
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(383, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(398, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 156);
             this.pictureBox1.TabIndex = 44;
@@ -310,6 +310,7 @@ namespace PRESENTACION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(592, 406);
             this.Controls.Add(this.LblMuestra1);
             this.Controls.Add(this.label1);
