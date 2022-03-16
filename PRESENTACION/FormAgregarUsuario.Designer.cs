@@ -48,6 +48,7 @@ namespace PRESENTACION
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmb_Cargo = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbltipodoc = new System.Windows.Forms.Label();
             this.lbldoc = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@ namespace PRESENTACION
             this.lbltelefono = new System.Windows.Forms.Label();
             this.lblcargo = new System.Windows.Forms.Label();
             this.lblfecha = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -144,6 +144,7 @@ namespace PRESENTACION
             this.dtpFecha_Nacimiento.Name = "dtpFecha_Nacimiento";
             this.dtpFecha_Nacimiento.Size = new System.Drawing.Size(204, 22);
             this.dtpFecha_Nacimiento.TabIndex = 5;
+            this.dtpFecha_Nacimiento.ValueChanged += new System.EventHandler(this.dtpFecha_Nacimiento_ValueChanged);
             // 
             // label6
             // 
@@ -230,6 +231,10 @@ namespace PRESENTACION
             this.cmb_Cargo.Size = new System.Drawing.Size(201, 24);
             this.cmb_Cargo.TabIndex = 18;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // lbltipodoc
             // 
             this.lbltipodoc.AutoSize = true;
@@ -302,10 +307,6 @@ namespace PRESENTACION
             this.lblfecha.TabIndex = 78;
             this.lblfecha.Text = "label17";
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // FormAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -369,14 +370,14 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmb_Cargo;
-        private System.Windows.Forms.Label lbltipodoc;
-        private System.Windows.Forms.Label lbldoc;
-        private System.Windows.Forms.Label lblnombre;
-        private System.Windows.Forms.Label lblapellido;
-        private System.Windows.Forms.Label lblcorreo;
-        private System.Windows.Forms.Label lbltelefono;
-        private System.Windows.Forms.Label lblcargo;
-        private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblfecha;
+        private System.Windows.Forms.Label lblcargo;
+        private System.Windows.Forms.Label lbltelefono;
+        private System.Windows.Forms.Label lblcorreo;
+        private System.Windows.Forms.Label lblapellido;
+        private System.Windows.Forms.Label lblnombre;
+        private System.Windows.Forms.Label lbldoc;
+        private System.Windows.Forms.Label lbltipodoc;
     }
 }

@@ -42,29 +42,108 @@ namespace PRESENTACION
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            ValidarCampo();
+            ValidarTipoDoc();
+            ValidarDoc();
+            ValidarNombre();
+            ValidarApellido();
+            ValidarCargo();
+            
             consultas.D_Insertar_Trabajador(txtDocumento.Text ,( txtNombre.Text).ToUpper(),(txtApellido.Text).ToUpper(), dtpFecha_Nacimiento.Value.ToString("yyyy-MM-dd"), txtCorreo.Text, txtTelefono.Text, cmbTipoDocumento.SelectedIndex + 1, cmb_Cargo.SelectedIndex + 1);
             MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
-        private bool ValidarCampo()
+        private bool ValidarTipoDoc()
         {
-            bool ok = true;
-            if (txtApellido.Text=="")
+            bool tipodoc = true;
+            if (cmbTipoDocumento.Text == "")
             {
-                ok = false;
-                errorProvider1.SetError(txtApellido,"Ingresar Apellido");
+                tipodoc = false;
+                errorProvider1.SetError(cmbTipoDocumento, "Ingresar Tipo de Documento");
+                
             }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return tipodoc;
+        }
+
+        private bool ValidarDoc()
+        {
+            bool doc = true;
             if (txtDocumento.Text == "")
             {
-                ok = false;
-                errorProvider1.SetError(txtDocumento, "Ingresar Apellido");
+                doc = false;
+                errorProvider1.SetError(txtDocumento, "Ingresar Documento");
+
             }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return doc;
+        }
+        private bool ValidarNombre()
+        {
+            bool nombre = true;
             if (txtNombre.Text == "")
             {
-                ok = false;
-                errorProvider1.SetError(txtNombre, "Ingresar Apellido");
+                nombre = false;
+                errorProvider1.SetError(txtNombre, "Ingresar Nombre");
+
             }
-            return ok;
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return nombre;
+        }
+        private bool ValidarApellido()
+        {
+            bool apellido = true;
+            if (txtApellido.Text == "")
+            {
+                apellido = false;
+                errorProvider1.SetError(txtApellido, "Ingresar Apellido");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return apellido;
+        }
+        private bool ValidarCargo()
+        {
+            bool cargo = true;
+            if (cmb_Cargo.Text == "")
+            {
+                cargo = false;
+                errorProvider1.SetError(cmb_Cargo, "Ingresar Cargo");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return cargo;
+        }
+        private bool ValidarFecha()
+        {
+            bool fecha=true;
+            if (dtpFecha_Nacimiento.CustomFormat == !DateTime)
+            {
+                fecha = false;
+                errorProvider1.SetError(cmb_Cargo, "Ingresar Fecha ");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return fecha;
+        }
+
+        private void dtpFecha_Nacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

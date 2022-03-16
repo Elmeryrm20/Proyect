@@ -204,7 +204,10 @@ namespace PRESENTACION
             }
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
 
+        }
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)
         {
