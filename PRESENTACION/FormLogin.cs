@@ -80,31 +80,52 @@ namespace PRESENTACION
 
         }
 
-        public void txtusuario_KeyUp(object sender, KeyEventArgs e)
-        {
-            DataTable data = du.D_Validacion_Contraseña(txtusuario.Text);
-            try
-            {
-                string DNI = data.Rows[0]["Tra_DNI"].ToString();
-                String Contraseña = data.Rows[0]["Usu_Pass"].ToString();
-               
-                    if (Contraseña == "")
-                    {
-                        lblcontraseña.Text = "INGRESE NUEVA CONTRASEÑA";
-                        txtContraseña2.Visible = true;
-                    }
-                else
-                {
+       
 
-                }
-            }
-            catch (Exception)
-            {
-                label2.Text = "Usuario no Existe";
-             
-            }
-          
-            
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FormIngresarNewContraseña frm = new FormIngresarNewContraseña() ;
+
+            frm.Show();
+        }
+
+     
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbldocumento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblcontraseña_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcontraseña_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)

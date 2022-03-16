@@ -38,10 +38,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtContraseña2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.DtgPrueba = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -61,6 +60,7 @@
             this.label1.Size = new System.Drawing.Size(125, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "CRUZ ROJA";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbldocumento
             // 
@@ -72,6 +72,7 @@
             this.lbldocumento.Size = new System.Drawing.Size(106, 17);
             this.lbldocumento.TabIndex = 5;
             this.lbldocumento.Text = "DOCUMENTO :";
+            this.lbldocumento.Click += new System.EventHandler(this.lbldocumento_Click);
             // 
             // lblcontraseña
             // 
@@ -83,6 +84,7 @@
             this.lblcontraseña.Size = new System.Drawing.Size(111, 17);
             this.lblcontraseña.TabIndex = 6;
             this.lblcontraseña.Text = "CONTRASEÑA :";
+            this.lblcontraseña.Click += new System.EventHandler(this.lblcontraseña_Click);
             // 
             // pictureBox1
             // 
@@ -92,6 +94,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(280, 321);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtusuario
             // 
@@ -101,7 +104,7 @@
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(183, 24);
             this.txtusuario.TabIndex = 4;
-            this.txtusuario.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtusuario_KeyUp);
+            this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             // 
             // txtcontraseña
             // 
@@ -112,6 +115,7 @@
             this.txtcontraseña.PasswordChar = '•';
             this.txtcontraseña.Size = new System.Drawing.Size(183, 24);
             this.txtcontraseña.TabIndex = 11;
+            this.txtcontraseña.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
             // 
             // panel1
             // 
@@ -123,6 +127,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(662, 37);
             this.panel1.TabIndex = 12;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
@@ -151,7 +156,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtContraseña2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.DtgPrueba);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -168,29 +172,6 @@
             this.panel2.Size = new System.Drawing.Size(662, 379);
             this.panel2.TabIndex = 13;
             // 
-            // txtContraseña2
-            // 
-            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña2.Location = new System.Drawing.Point(362, 265);
-            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña2.Name = "txtContraseña2";
-            this.txtContraseña2.PasswordChar = '•';
-            this.txtContraseña2.Size = new System.Drawing.Size(183, 24);
-            this.txtContraseña2.TabIndex = 17;
-            this.txtContraseña2.Visible = false;
-            this.txtContraseña2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(359, 239);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 17);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "REPETIR CONTRASEÑA :";
-            // 
             // DtgPrueba
             // 
             this.DtgPrueba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -202,13 +183,25 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(343, 311);
+            this.pictureBox2.Location = new System.Drawing.Point(350, 250);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(215, 41);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(395, 304);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Aun no tengo contraseña";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FormLogin
             // 
@@ -248,7 +241,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView DtgPrueba;
-        private System.Windows.Forms.TextBox txtContraseña2;
         private System.Windows.Forms.Label label2;
     }
 }

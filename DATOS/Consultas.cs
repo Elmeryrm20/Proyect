@@ -225,7 +225,21 @@ namespace DATOS
 
             return dt;
         }
+        public DataTable D_Agregar_Contraseña(string DNI, string password)
+        {
+            Conexion.connection.Open();
 
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Contraseña", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("DNI", DNI);
+            cmd.Parameters.AddWithValue("Contraseña", password);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+
+            return dt;
+        }
 
     }
 }

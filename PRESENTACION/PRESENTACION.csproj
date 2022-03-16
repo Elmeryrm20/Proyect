@@ -89,6 +89,12 @@
     <Compile Include="FormAgregarMedicamento.Designer.cs">
       <DependentUpon>FormAgregarMedicamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormIngresarNewContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngresarNewContraseña.Designer.cs">
+      <DependentUpon>FormIngresarNewContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHistorial.resx">
       <DependentUpon>FormHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngresarNewContraseña.resx">
+      <DependentUpon>FormIngresarNewContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIngreso.resx">
       <DependentUpon>FormIngreso.cs</DependentUpon>
