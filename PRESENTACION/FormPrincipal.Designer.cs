@@ -29,38 +29,95 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PnlCuerpo = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Maximizar = new System.Windows.Forms.PictureBox();
             this.Btn_Normal = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Btn_Acerca = new System.Windows.Forms.PictureBox();
+            this.Btn_Config = new System.Windows.Forms.PictureBox();
             this.Btn_Historial = new System.Windows.Forms.PictureBox();
             this.Btn_AgregarUsuario = new System.Windows.Forms.PictureBox();
             this.Btn_Usuarios = new System.Windows.Forms.PictureBox();
             this.Btn_Medicamentos = new System.Windows.Forms.PictureBox();
             this.Btn_Agregar = new System.Windows.Forms.PictureBox();
             this.Btn_Inicio = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PnlCuerpo = new System.Windows.Forms.Panel();
-            this.Btn_Config = new System.Windows.Forms.PictureBox();
-            this.Btn_Acerca = new System.Windows.Forms.PictureBox();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Config)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Historial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_AgregarUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Medicamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Config)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(27)))), ((int)(((byte)(35)))));
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.Btn_Acerca);
+            this.panel2.Controls.Add(this.Btn_Config);
+            this.panel2.Controls.Add(this.Btn_Historial);
+            this.panel2.Controls.Add(this.Btn_AgregarUsuario);
+            this.panel2.Controls.Add(this.Btn_Usuarios);
+            this.panel2.Controls.Add(this.Btn_Medicamentos);
+            this.panel2.Controls.Add(this.Btn_Agregar);
+            this.panel2.Controls.Add(this.Btn_Inicio);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(160, 534);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btn_Maximizar);
+            this.panel1.Controls.Add(this.Btn_Normal);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(160, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(721, 40);
+            this.panel1.TabIndex = 4;
+            this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // PnlCuerpo
+            // 
+            this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
+            this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlCuerpo.Location = new System.Drawing.Point(160, 40);
+            this.PnlCuerpo.Name = "PnlCuerpo";
+            this.PnlCuerpo.Size = new System.Drawing.Size(721, 494);
+            this.PnlCuerpo.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Black;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(21, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -111,22 +168,42 @@ namespace PRESENTACION
             this.Btn_Normal.Visible = false;
             this.Btn_Normal.Click += new System.EventHandler(this.Btn_Normal_Click);
             // 
-            // panel2
+            // pictureBox4
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(27)))), ((int)(((byte)(35)))));
-            this.panel2.Controls.Add(this.Btn_Acerca);
-            this.panel2.Controls.Add(this.Btn_Config);
-            this.panel2.Controls.Add(this.Btn_Historial);
-            this.panel2.Controls.Add(this.Btn_AgregarUsuario);
-            this.panel2.Controls.Add(this.Btn_Usuarios);
-            this.panel2.Controls.Add(this.Btn_Medicamentos);
-            this.panel2.Controls.Add(this.Btn_Agregar);
-            this.panel2.Controls.Add(this.Btn_Inicio);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(160, 534);
-            this.panel2.TabIndex = 1;
+            this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.Logo01;
+            this.pictureBox4.Location = new System.Drawing.Point(48, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
+            // Btn_Acerca
+            // 
+            this.Btn_Acerca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Acerca.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Acerca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Acerca.Image = global::PRESENTACION.Properties.Resources.MenuAcercaDe01;
+            this.Btn_Acerca.Location = new System.Drawing.Point(0, 325);
+            this.Btn_Acerca.Name = "Btn_Acerca";
+            this.Btn_Acerca.Size = new System.Drawing.Size(160, 35);
+            this.Btn_Acerca.TabIndex = 7;
+            this.Btn_Acerca.TabStop = false;
+            this.Btn_Acerca.Click += new System.EventHandler(this.Btn_Acerca_Click);
+            // 
+            // Btn_Config
+            // 
+            this.Btn_Config.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Config.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Config.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Config.Image = global::PRESENTACION.Properties.Resources.MenuConfiguracion01;
+            this.Btn_Config.Location = new System.Drawing.Point(0, 290);
+            this.Btn_Config.Name = "Btn_Config";
+            this.Btn_Config.Size = new System.Drawing.Size(160, 35);
+            this.Btn_Config.TabIndex = 6;
+            this.Btn_Config.TabStop = false;
+            this.Btn_Config.Click += new System.EventHandler(this.Btn_Config_Click);
             // 
             // Btn_Historial
             // 
@@ -212,71 +289,6 @@ namespace PRESENTACION
             this.Btn_Inicio.TabStop = false;
             this.Btn_Inicio.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btn_Maximizar);
-            this.panel1.Controls.Add(this.Btn_Normal);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(160, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(721, 40);
-            this.panel1.TabIndex = 4;
-            this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // PnlCuerpo
-            // 
-            this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
-            this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlCuerpo.Location = new System.Drawing.Point(160, 40);
-            this.PnlCuerpo.Name = "PnlCuerpo";
-            this.PnlCuerpo.Size = new System.Drawing.Size(721, 494);
-            this.PnlCuerpo.TabIndex = 5;
-            // 
-            // Btn_Config
-            // 
-            this.Btn_Config.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Config.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Config.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Config.Image = global::PRESENTACION.Properties.Resources.MenuConfiguracion01;
-            this.Btn_Config.Location = new System.Drawing.Point(0, 290);
-            this.Btn_Config.Name = "Btn_Config";
-            this.Btn_Config.Size = new System.Drawing.Size(160, 35);
-            this.Btn_Config.TabIndex = 6;
-            this.Btn_Config.TabStop = false;
-            this.Btn_Config.Click += new System.EventHandler(this.Btn_Config_Click);
-            // 
-            // Btn_Acerca
-            // 
-            this.Btn_Acerca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Acerca.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Acerca.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Acerca.Image = global::PRESENTACION.Properties.Resources.MenuAcercaDe01;
-            this.Btn_Acerca.Location = new System.Drawing.Point(0, 325);
-            this.Btn_Acerca.Name = "Btn_Acerca";
-            this.Btn_Acerca.Size = new System.Drawing.Size(160, 35);
-            this.Btn_Acerca.TabIndex = 7;
-            this.Btn_Acerca.TabStop = false;
-            this.Btn_Acerca.Click += new System.EventHandler(this.Btn_Acerca_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,21 +301,22 @@ namespace PRESENTACION
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).EndInit();
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Config)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Historial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_AgregarUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Usuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Medicamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Config)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,5 +338,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Panel PnlCuerpo;
         private System.Windows.Forms.PictureBox Btn_Acerca;
         private System.Windows.Forms.PictureBox Btn_Config;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
