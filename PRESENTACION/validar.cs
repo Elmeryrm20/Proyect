@@ -9,13 +9,13 @@ namespace PRESENTACION
 {
     class validar
     {
-        public static void soloNumeros (KeyPressEventArgs pE)
+        public static void soloNumeros(KeyPressEventArgs pE)
         {
             if (char.IsDigit(pE.KeyChar))
             {
                 pE.Handled = false;
             }
-            else if(char.IsControl(pE.KeyChar))
+            else if (char.IsControl(pE.KeyChar))
             {
                 pE.Handled = false;
             }
@@ -48,5 +48,8 @@ namespace PRESENTACION
         {
             pE.Handled = true;
         }
+
+        
+
     }
 }

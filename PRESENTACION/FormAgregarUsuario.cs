@@ -41,8 +41,30 @@ namespace PRESENTACION
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+            ValidarCampo();
             consultas.D_Insertar_Trabajador(txtDocumento.Text ,( txtNombre.Text).ToUpper(),(txtApellido.Text).ToUpper(), dtpFecha_Nacimiento.Value.ToString("yyyy-MM-dd"), txtCorreo.Text, txtTelefono.Text, cmbTipoDocumento.SelectedIndex + 1, cmb_Cargo.SelectedIndex + 1);
             MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+        private bool ValidarCampo()
+        {
+            bool ok = true;
+            if (txtApellido.Text=="")
+            {
+                ok = false;
+                errorProvider1.SetError(txtApellido,"Ingresar Apellido");
+            }
+            if (txtDocumento.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtDocumento, "Ingresar Apellido");
+            }
+            if (txtNombre.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtNombre, "Ingresar Apellido");
+            }
+            return ok;
         }
     }
 }
