@@ -56,42 +56,94 @@ namespace PRESENTACION
             CmbPresentacion.Text = "Seleccione Presentacion";
             cmbCaja.Text = "Seleccione Caja";
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private bool Validaciones()
         {
+            bool valor = true;
             if (textNombre.Text == "")
             {
-                MessageBox.Show("Falta completar el campo nombre.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (textCantidad.Text == "")
-            {
-                MessageBox.Show("Falta completar el campo cantidad", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (cmbLab.SelectedIndex == -1)
-            {
-                MessageBox.Show("Falta completar el campo laboratorio.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (dtFecha_Vencimiento.Text == fecha)
-            {
-                MessageBox.Show("Falta completar el campo Fecha de Vencimiento.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (textGramaje.Text == "")
-            {
-                MessageBox.Show("Falta completar el campo Gramaje.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (cmbTipo.SelectedIndex == -1)
-            {
-                MessageBox.Show("Falta escojer el tipo.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (CmbPresentacion.SelectedIndex == -1)
-            {
-                MessageBox.Show("Falta escoger para quién será.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (cmbCaja.SelectedIndex == -1)
-            {
-                MessageBox.Show("Falta escojer en caja.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorProvider1.SetError(textNombre, "Por favor, ingrese un nombre");
+                valor = false;
             }
             else
+            {
+                errorProvider1.SetError(textNombre, "");
+            }
+
+            if (textCantidad.Text == "")
+            {
+                errorProvider1.SetError(textCantidad, "Por favor, ingrese una cantidad");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(textCantidad, "");
+            }
+
+            if (cmbLab.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cmbLab, "Por favor, seleccione o ingrese un laboratorio.");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(cmbLab, "");
+            }
+
+            if (dtFecha_Vencimiento.Text == fecha)
+            {
+                errorProvider1.SetError(dtFecha_Vencimiento, "Por favor, ingrese una fecha.");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(dtFecha_Vencimiento, "");
+            }
+
+            if (textGramaje.Text == "")
+            {
+                errorProvider1.SetError(textGramaje, "Por favor, ingrese un valor para gramaje.");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(textGramaje, "");
+            }
+
+            if (cmbTipo.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cmbTipo, "Por favor, seleccione un tipo.");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(cmbTipo, "");
+            }
+
+            if (CmbPresentacion.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(CmbPresentacion, "Por favor, seleccione una presentacion.");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(CmbPresentacion, "");
+            }
+
+            if (cmbCaja.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cmbCaja, "Por favor, seleccione una caja.");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(cmbCaja, "");
+            }
+            return valor;
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Validaciones();
+            if (Validaciones() == true)
             {
                 if (pictureBox1.Image != null)
                 {
