@@ -91,6 +91,81 @@ namespace PRESENTACION
 
         }
 
+        //Metodos de Selección de Menú Principal
+        private sbyte Ultimo = 0;
+        private void SeleccionarBoton(sbyte x)
+        {
+            switch (x)
+            {
+                case 1:
+                    Btn_Inicio.Image = Properties.Resources.MenuInicio02;
+                    break;
+                case 2:
+                    Btn_Medicamentos.Image = Properties.Resources.MenuMedicamentos02;
+                    break;
+                case 3:
+                    Btn_Agregar.Image = Properties.Resources.MenuAgregar02;
+                    break;
+                case 4:
+                    Btn_Usuarios.Image = Properties.Resources.MenuUsuarios02;
+                    break;
+                case 5:
+                    Btn_AgregarUsuario.Image = Properties.Resources.MenuAgregarUsuario02;
+                    break;
+                case 6:
+                    Btn_Historial.Image = Properties.Resources.MenuHistorial02;
+                    break;
+                case 7:
+                    Btn_Config.Image = Properties.Resources.MenuConfiguracion02;
+                    break;
+                case 8:
+                    Btn_Acerca.Image = Properties.Resources.MenuAcercaDe02;
+                    break;
+                default:
+                    break;
+            }
+
+            if (Ultimo != x)
+            {
+                DeseleccionarBoton(Ultimo);
+                Ultimo = x;
+            }
+            
+        }
+
+        private void DeseleccionarBoton(sbyte y)
+        {
+            switch (y)
+            {
+                case 1:
+                    Btn_Inicio.Image = Properties.Resources.MenuInicio01;
+                    break;
+                case 2:
+                    Btn_Medicamentos.Image = Properties.Resources.MenuMedicamentos01;
+                    break;
+                case 3:
+                    Btn_Agregar.Image = Properties.Resources.MenuAgregar01;
+                    break;
+                case 4:
+                    Btn_Usuarios.Image = Properties.Resources.MenuUsuarios01;
+                    break;
+                case 5:
+                    Btn_AgregarUsuario.Image = Properties.Resources.MenuAgregarUsuario01;
+                    break;
+                case 6:
+                    Btn_Historial.Image = Properties.Resources.MenuHistorial01;
+                    break;
+                case 7:
+                    Btn_Config.Image = Properties.Resources.MenuConfiguracion01;
+                    break;
+                case 8:
+                    Btn_Acerca.Image = Properties.Resources.MenuAcercaDe01;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -112,11 +187,15 @@ namespace PRESENTACION
         }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            SeleccionarBoton(1);
             LlamarInicio();
+
         }
 
         private void Btn_Agregar_Click(object sender, EventArgs e)
         {
+            SeleccionarBoton(3);
+
             Form Formulario;
             Formulario = PnlCuerpo.Controls.OfType<FormAgregarMedicamento>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
@@ -139,6 +218,8 @@ namespace PRESENTACION
 
         private void Btn_Cajas_Click(object sender, EventArgs e)
         {
+            SeleccionarBoton(2);
+
             consultas.ConsultaMed();
             Form Formulario;
             Formulario = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
@@ -184,6 +265,9 @@ namespace PRESENTACION
 
         private void Btn_Historial_Click(object sender, EventArgs e)
         {
+            SeleccionarBoton(6);
+
+
             Form Formulario;
             Formulario = PnlCuerpo.Controls.OfType<FormHistorial>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
@@ -204,10 +288,23 @@ namespace PRESENTACION
             }
         }
 
+        private void Btn_Config_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(7);
 
+        }
+
+        private void Btn_Acerca_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(8);
+
+        }
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)
         {
+            SeleccionarBoton(4);
+
+
             Form Formulario;
             Formulario = PnlCuerpo.Controls.OfType<FormUsuarios>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
@@ -230,6 +327,9 @@ namespace PRESENTACION
 
         private void Btn_Salidas_Click(object sender, EventArgs e)
         {
+            SeleccionarBoton(5);
+
+
             Form Formulario;
             Formulario = PnlCuerpo.Controls.OfType<FormAgregarUsuario>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
