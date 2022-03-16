@@ -35,8 +35,8 @@ namespace PRESENTACION
         }
         private void FormAgregarUsuario_Load(object sender, EventArgs e)
         {
-            dtpFecha_Nacimiento.MaxDate = DateTime.Now;
-            dtpFecha_Nacimiento.Value = DateTime.Now;
+            dtpFecha_Nacimiento.MaxDate = DateTime.Now.Date;
+            dtpFecha_Nacimiento.Value = DateTime.Now.Date;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
