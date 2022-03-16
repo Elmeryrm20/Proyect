@@ -97,7 +97,7 @@ namespace PRESENTACION
                 {
                     string str = Convert.ToString(Directory.GetCurrentDirectory());
                     str = str.Replace(@"\bin\Debug", "");
-                    pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                    pictureBox1.Image.Save(str + @"\Resources\" + textNombre.Text +" "+textGramaje.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
 
                 consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1);
