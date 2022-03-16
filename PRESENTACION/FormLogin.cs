@@ -93,6 +93,10 @@ namespace PRESENTACION
                         lblcontraseña.Text = "INGRESE NUEVA CONTRASEÑA";
                         txtContraseña2.Visible = true;
                     }
+                else
+                {
+
+                }
             }
             catch (Exception)
             {
