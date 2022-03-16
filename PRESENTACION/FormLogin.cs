@@ -87,18 +87,12 @@ namespace PRESENTACION
             {
                 string DNI = data.Rows[0]["Tra_DNI"].ToString();
                 String Contraseña = data.Rows[0]["Usu_Pass"].ToString();
-                label2.Text = Contraseña;
-                if (Contraseña=="")
-                {
-                    lblcontraseña.Text = "INGRESE NUEVA CONTRASEÑA";
-                    txtContraseña2.Visible = true;
-
-                }
-                else
-                {
-                    txtContraseña2.Visible = false;
-                }
-
+               
+                    if (Contraseña == "")
+                    {
+                        lblcontraseña.Text = "INGRESE NUEVA CONTRASEÑA";
+                        txtContraseña2.Visible = true;
+                    }
             }
             catch (Exception)
             {
