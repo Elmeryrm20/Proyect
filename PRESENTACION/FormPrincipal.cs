@@ -299,6 +299,11 @@ namespace PRESENTACION
 
         }
 
+        private void Btn_Acerca_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(8);
+        }
+
         private void Btn_Usuarios_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(4);

@@ -191,9 +191,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo01.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DATOS\DATOS.csproj">
       <Project>{a46d7383-74fe-4eed-b8ad-09d7be99723d}</Project>
       <Name>DATOS</Name>
@@ -249,6 +246,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MenuUsuarios01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
