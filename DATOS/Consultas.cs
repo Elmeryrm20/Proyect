@@ -179,7 +179,7 @@ namespace DATOS
 
             MySqlCommand comando = new MySqlCommand("P_Detalles_Medicamento", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("Medicamento_ID", ID_Medicamento);
+            comando.Parameters.AddWithValue("Id_Medicamento", ID_Medicamento);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
