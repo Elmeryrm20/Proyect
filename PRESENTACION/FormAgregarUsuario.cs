@@ -126,20 +126,8 @@ namespace PRESENTACION
             }
             return cargo;
         }
-        private bool ValidarFecha()
-        {
-            bool fecha=true;
-            if (dtpFecha_Nacimiento.CustomFormat == !DateTime)
-            {
-                fecha = false;
-                errorProvider1.SetError(cmb_Cargo, "Ingresar Fecha ");
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            return fecha;
-        }
+        
+
 
         private void dtpFecha_Nacimiento_ValueChanged(object sender, EventArgs e)
         {
