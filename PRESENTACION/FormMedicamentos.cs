@@ -60,7 +60,7 @@ namespace PRESENTACION
 
         private void dgb_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            valor_ID =(int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
+            valor_ID = e.RowIndex;
             label2.Text = valor_ID.ToString();
         }
 
