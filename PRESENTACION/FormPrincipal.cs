@@ -59,7 +59,7 @@ namespace PRESENTACION
         {
             if (n == 1)
             {
-                this.SetDesktopLocation(MousePosition.X - mx - 211, MousePosition.Y - my);
+                this.SetDesktopLocation(MousePosition.X - mx - Convert.ToInt32(panel2.Width), MousePosition.Y - my);
             }
             //label1.Text = MousePosition.X.ToString() + " " + MousePosition.Y.ToString();
             //label2.Text = mx.ToString() + " " + my.ToString();
