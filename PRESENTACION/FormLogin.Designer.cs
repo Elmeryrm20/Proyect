@@ -28,98 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbldocumento = new System.Windows.Forms.Label();
-            this.lblcontraseña = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.txtcontraseña = new System.Windows.Forms.TextBox();
+            this.TxtPass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.DtgPrueba = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.DtgPrueba = new System.Windows.Forms.DataGridView();
+            this.PibIngresar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(382, 74);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CRUZ ROJA";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lbldocumento
-            // 
-            this.lbldocumento.AutoSize = true;
-            this.lbldocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldocumento.Location = new System.Drawing.Point(363, 127);
-            this.lbldocumento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbldocumento.Name = "lbldocumento";
-            this.lbldocumento.Size = new System.Drawing.Size(106, 17);
-            this.lbldocumento.TabIndex = 5;
-            this.lbldocumento.Text = "DOCUMENTO :";
-            this.lbldocumento.Click += new System.EventHandler(this.lbldocumento_Click);
-            // 
-            // lblcontraseña
-            // 
-            this.lblcontraseña.AutoSize = true;
-            this.lblcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcontraseña.Location = new System.Drawing.Point(359, 181);
-            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblcontraseña.Name = "lblcontraseña";
-            this.lblcontraseña.Size = new System.Drawing.Size(111, 17);
-            this.lblcontraseña.TabIndex = 6;
-            this.lblcontraseña.Text = "CONTRASEÑA :";
-            this.lblcontraseña.Click += new System.EventHandler(this.lblcontraseña_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(9, 41);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 321);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtusuario
             // 
-            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.Location = new System.Drawing.Point(362, 145);
+            this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.txtusuario.Location = new System.Drawing.Point(417, 129);
             this.txtusuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(183, 24);
-            this.txtusuario.TabIndex = 4;
+            this.txtusuario.Size = new System.Drawing.Size(175, 15);
+            this.txtusuario.TabIndex = 2;
+            this.txtusuario.Text = "DNI";
             this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
+            this.txtusuario.Enter += new System.EventHandler(this.Txtusuario_Enter);
+            this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
+            this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
+            this.txtusuario.MouseEnter += new System.EventHandler(this.txtusuario_MouseEnter);
             // 
-            // txtcontraseña
+            // TxtPass
             // 
-            this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontraseña.Location = new System.Drawing.Point(362, 207);
-            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2);
-            this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.PasswordChar = '•';
-            this.txtcontraseña.Size = new System.Drawing.Size(183, 24);
-            this.txtcontraseña.TabIndex = 11;
-            this.txtcontraseña.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
+            this.TxtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.TxtPass.Location = new System.Drawing.Point(417, 194);
+            this.TxtPass.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtPass.MaxLength = 20;
+            this.TxtPass.Name = "TxtPass";
+            this.TxtPass.Size = new System.Drawing.Size(175, 15);
+            this.TxtPass.TabIndex = 3;
+            this.TxtPass.Text = "Contraseña";
+            this.TxtPass.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
+            this.TxtPass.Enter += new System.EventHandler(this.txtcontraseña_Enter);
+            this.TxtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
+            this.TxtPass.Leave += new System.EventHandler(this.txtcontraseña_Leave);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -141,6 +106,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(27, 27);
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
@@ -156,58 +122,75 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.DtgPrueba);
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.PibIngresar);
             this.panel2.Controls.Add(this.txtusuario);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.lbldocumento);
-            this.panel2.Controls.Add(this.txtcontraseña);
+            this.panel2.Controls.Add(this.TxtPass);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.lblcontraseña);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(662, 379);
-            this.panel2.TabIndex = 13;
-            // 
-            // DtgPrueba
-            // 
-            this.DtgPrueba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgPrueba.Location = new System.Drawing.Point(28, 130);
-            this.DtgPrueba.Name = "DtgPrueba";
-            this.DtgPrueba.Size = new System.Drawing.Size(240, 150);
-            this.DtgPrueba.TabIndex = 15;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(350, 250);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(215, 41);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.panel2.Size = new System.Drawing.Size(660, 360);
+            this.panel2.TabIndex = 1;
+            this.panel2.TabStop = true;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(395, 304);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(428, 338);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Aun no tengo contraseña";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // DtgPrueba
+            // 
+            this.DtgPrueba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgPrueba.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DtgPrueba.Location = new System.Drawing.Point(28, 130);
+            this.DtgPrueba.Name = "DtgPrueba";
+            this.DtgPrueba.Size = new System.Drawing.Size(240, 150);
+            this.DtgPrueba.TabIndex = 15;
+            this.DtgPrueba.Visible = false;
+            // 
+            // PibIngresar
+            // 
+            this.PibIngresar.BackColor = System.Drawing.Color.Transparent;
+            this.PibIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibIngresar.Image = global::PRESENTACION.Properties.Resources.BotonIngresar01;
+            this.PibIngresar.Location = new System.Drawing.Point(400, 279);
+            this.PibIngresar.Margin = new System.Windows.Forms.Padding(2);
+            this.PibIngresar.Name = "PibIngresar";
+            this.PibIngresar.Size = new System.Drawing.Size(180, 50);
+            this.PibIngresar.TabIndex = 0;
+            this.PibIngresar.TabStop = false;
+            this.PibIngresar.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.PibIngresar.MouseEnter += new System.EventHandler(this.PibIngresar_MouseEnter);
+            this.PibIngresar.MouseLeave += new System.EventHandler(this.PibIngresar_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(9, 41);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(280, 321);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 379);
+            this.BackgroundImage = global::PRESENTACION.Properties.Resources.Login01;
+            this.ClientSize = new System.Drawing.Size(660, 360);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -215,29 +198,25 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbldocumento;
-        private System.Windows.Forms.Label lblcontraseña;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtusuario;
-        private System.Windows.Forms.TextBox txtcontraseña;
+        private System.Windows.Forms.TextBox TxtPass;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PibIngresar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView DtgPrueba;
