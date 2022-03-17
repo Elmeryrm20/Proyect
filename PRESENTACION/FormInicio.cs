@@ -17,11 +17,17 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
-        public FormInicio(string DNI)
+        public FormInicio(string DNI, string Nombre)
         {
             InitializeComponent();
-            label1.Text = DNI;
+            this.DNI = DNI;
+            this.Nombre = Nombre;
+            label1.Text = Nombre;
+
         }
+        readonly string DNI;
+        readonly string Nombre;
+
 
 
 

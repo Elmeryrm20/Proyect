@@ -22,20 +22,26 @@ namespace PRESENTACION
 
         Consultas consultas = new Consultas();
 
-        public FormPrincipal(string DNI,String Tipo)
+        public FormPrincipal(string DNI,String Tipo, string Nombre)
         {
             InitializeComponent();
-            
+            this.DNI = DNI;
+            this.Tipo = Tipo;
+            this.Nombre = Nombre;
             LlamarInicio();
 
         }
+        readonly string DNI;
+        readonly string Tipo;
+        readonly string Nombre;
+
         public void LlamarInicio()
         {
             Form Formulario;
             Formulario = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
             {
-                Formulario = new FormInicio();
+                Formulario = new FormInicio(DNI,Nombre);
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;

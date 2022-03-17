@@ -46,7 +46,7 @@ namespace PRESENTACION
                 if (dt.Rows[0][1].ToString() == "1")
                 {
                     
-                    FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), "1");
+                    FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
                     A.Show();
                     AddOwnedForm(A);
                     //MessageBox.Show("Eres Encargado");
@@ -54,7 +54,7 @@ namespace PRESENTACION
                 }
                 else if (dt.Rows[0][1].ToString() == "2")
                 {
-                    FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), "2");
+                    FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
                     A.Show();
                     AddOwnedForm(A);
                     //MessageBox.Show("Eres Admin");
