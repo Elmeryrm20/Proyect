@@ -232,7 +232,7 @@ namespace PRESENTACION
             Formulario = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
             {
-                Formulario = new FormMedicamentos();
+                Formulario = new FormMedicamentos(DNI);
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;

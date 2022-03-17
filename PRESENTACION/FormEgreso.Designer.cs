@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -70,12 +70,12 @@
             this.lbl_Nombre.TabIndex = 2;
             this.lbl_Nombre.Text = "label1";
             // 
-            // textBox1
+            // txtCantidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtCantidad.Location = new System.Drawing.Point(132, 115);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(105, 20);
+            this.txtCantidad.TabIndex = 6;
             // 
             // label2
             // 
@@ -94,6 +94,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(105, 31);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormEgreso
             // 
@@ -101,7 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 304);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.panel1);
@@ -122,7 +123,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnSerrar;
         private System.Windows.Forms.Label lbl_Nombre;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

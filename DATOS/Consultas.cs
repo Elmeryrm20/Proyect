@@ -240,6 +240,70 @@ namespace DATOS
 
             return dt;
         }
+        public DataTable SP_Agregar_Ingreso_Medicamento(string Cod_Medicamento, string Cantidad, string Fecha_Actual)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Ingreso_Medicamento", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Cod_Medicamento", Cod_Medicamento);
+            cmd.Parameters.AddWithValue("Cantidad", Cantidad);
+            cmd.Parameters.AddWithValue("Fecha_Actual", Fecha_Actual);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+
+            return dt;
+        }
+        public DataTable SP_Agregar_Egreso_Medicamento(string Med_Codigo, string Cantidad)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Egreso_Medicamento", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
+            cmd.Parameters.AddWithValue("Cantidad", Cantidad);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+        public DataTable SP_Agregar_Detalle_Ingreso(string Med_Codigo, string Cantidad,string Ing_Fecha,string Tra_DNI,string Dei_Fecha_V)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Ingreso", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
+            cmd.Parameters.AddWithValue("Cantidad", Cantidad);
+            cmd.Parameters.AddWithValue("Ing_Fecha", Ing_Fecha);
+            cmd.Parameters.AddWithValue("Tra_DNI", Tra_DNI);
+            cmd.Parameters.AddWithValue("Dei_Fecha_V", Dei_Fecha_V);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+        public DataTable SP_Agregar_Detalle_Egreso(string Med_Codigo, string Cantidad, string Egr_Fecha, string Tra_DNI, int Dee_N_Semana)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Egreso", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
+            cmd.Parameters.AddWithValue("Cantidad", Cantidad);
+            cmd.Parameters.AddWithValue("Egr_Fecha", Egr_Fecha);
+            cmd.Parameters.AddWithValue("Tra_DNI", Tra_DNI);
+            cmd.Parameters.AddWithValue("Dee_N_Semana", Dee_N_Semana);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
 
     }
 }

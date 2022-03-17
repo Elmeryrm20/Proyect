@@ -1,28 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DATOS;
+using System;
 using System.Windows.Forms;
-using DATOS;
 
 namespace PRESENTACION
 {
     public partial class FormIngreso : Form
     {
         Consultas consultas = new Consultas();
+        #region Constructores
         public FormIngreso()
         {
             InitializeComponent();
         }
-        public FormIngreso(int valor)
+        public FormIngreso(int valor, string DNI)
         {
             InitializeComponent();
-            Ingreso(valor);
-        }
+            this.DNI = DNI;
+            this.valor = valor;
+            Ingreso();
+        } 
+        #endregion
+
+        readonly int valor;
+        readonly string DNI;
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -33,7 +33,7 @@ namespace PRESENTACION
         {
             this.Hide();
         }
-        void Ingreso(int valor)
+        void Ingreso()
         {
             lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
 
@@ -41,9 +41,18 @@ namespace PRESENTACION
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                consultas.SP_Agregar_Ingreso_Medicamento(valor.ToString(), Txt_Cantidad.Text, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+                consultas.SP_Agregar_Detalle_Ingreso(valor.ToString(), Txt_Cantidad.Text, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+                MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cagaste prro problemas de conexion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
-      
+
     }
 }

@@ -24,14 +24,17 @@ namespace PRESENTACION
         public FormDetallesMedicamento(int valor)
         {
             InitializeComponent();
-            Medicamentos_Detallados(valor);
+            this.valor = valor;
+            Medicamentos_Detallados();
         }
+        readonly int valor;
+
         private void btnSerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
-        void Medicamentos_Detallados(int valor )
+        void Medicamentos_Detallados()
         {
             
             lbl_Nombre.Text=consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
@@ -45,7 +48,8 @@ namespace PRESENTACION
             int Ingreso =(int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
             int Egreso= (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
             lbl_Existencia.Text = (Ingreso - Egreso).ToString();
-            lbl_Porcentage.Text = (((Ingreso - Egreso) / Ingreso)*100).ToString() + " %";
+            double Porcentaje=Convert.ToDouble((Ingreso - Egreso)*100/ Ingreso);
+            lbl_Porcentage.Text = Math.Round(Porcentaje).ToString() + " %";
             //-----------------Imagen--------------------------
             string Nombre_Imagen = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
             string str = Convert.ToString(Directory.GetCurrentDirectory());

@@ -34,8 +34,9 @@
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dtp_FechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,12 +103,12 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // textBox1
+            // Txt_Cantidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
-            this.textBox1.TabIndex = 4;
+            this.Txt_Cantidad.Location = new System.Drawing.Point(150, 120);
+            this.Txt_Cantidad.Name = "Txt_Cantidad";
+            this.Txt_Cantidad.Size = new System.Drawing.Size(158, 20);
+            this.Txt_Cantidad.TabIndex = 4;
             // 
             // label3
             // 
@@ -118,13 +119,22 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "F.Vencimiento:";
             // 
+            // dtp_FechaVencimiento
+            // 
+            this.dtp_FechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_FechaVencimiento.Location = new System.Drawing.Point(150, 159);
+            this.dtp_FechaVencimiento.Name = "dtp_FechaVencimiento";
+            this.dtp_FechaVencimiento.Size = new System.Drawing.Size(158, 20);
+            this.dtp_FechaVencimiento.TabIndex = 6;
+            // 
             // FormIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 304);
+            this.Controls.Add(this.dtp_FechaVencimiento);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Txt_Cantidad);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_Nombre);
@@ -149,8 +159,9 @@
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Cantidad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtp_FechaVencimiento;
     }
 }

@@ -18,10 +18,18 @@ namespace PRESENTACION
         public FormMedicamentos()
         {
             InitializeComponent();
-            rellenartabla();
             
            
         }
+        public FormMedicamentos(string DNI)
+        {
+            InitializeComponent();
+            this.DNI = DNI;
+            rellenartabla();
+           
+        }
+        readonly string DNI;
+
         void rellenartabla()
         {
             dgb_Medicamentos.DataSource = consultas.ConsultaMed();
@@ -72,13 +80,13 @@ namespace PRESENTACION
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            FormIngreso frm = new FormIngreso(valor_ID);
+            FormIngreso frm = new FormIngreso(valor_ID, DNI);
             frm.ShowDialog();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            FormEgreso frm = new FormEgreso(valor_ID);
+            FormEgreso frm = new FormEgreso(valor_ID,DNI);
             frm.ShowDialog();
         }
     }

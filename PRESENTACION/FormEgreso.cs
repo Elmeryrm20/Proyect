@@ -20,20 +20,38 @@ namespace PRESENTACION
            
 
         }
-        public FormEgreso(int valor)
+
+        public FormEgreso(int valor ,string DNI)
         {
             InitializeComponent();
-            Egreso(valor);
+            this.valor = valor;
+            this.DNI = DNI;
+            Egreso();
         }
-
+        readonly int valor;
+        readonly string DNI;
         private void btnSerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-        void Egreso(int valor)
+        void Egreso()
         {
             lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                consultas.SP_Agregar_Egreso_Medicamento(valor.ToString(), txtCantidad.Text);
+                consultas.SP_Agregar_Detalle_Egreso(valor.ToString(), txtCantidad.Text, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI,4);
+                MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cagaste prro problemas de conexion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }
