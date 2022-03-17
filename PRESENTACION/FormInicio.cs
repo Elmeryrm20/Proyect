@@ -23,11 +23,32 @@ namespace PRESENTACION
             this.DNI = DNI;
             this.Nombre = Nombre;
             label1.Text = Nombre;
+            saludo();
 
         }
         readonly string DNI;
         readonly string Nombre;
+        void saludo()
+        {
+            int hora=(int)DateTime.Now.Hour;
 
+            if (hora>=6 && hora<=12)
+            {
+                label4.Text = "dìa"; 
+            }
+            else if (hora<=18 && hora>=13)
+            {
+                label4.Text = "tarde";
+            }
+            else if (hora <= 24 && hora >= 19)
+            {
+                label4.Text = "noche";
+            }
+            else
+            {
+                label4.Text = "madrugada";
+            }
+        }
 
 
 
