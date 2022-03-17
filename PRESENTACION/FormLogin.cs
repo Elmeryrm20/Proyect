@@ -45,6 +45,7 @@ namespace PRESENTACION
                 this.Hide();
                 if (dt.Rows[0][1].ToString() == "1")
                 {
+                    
                     FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), "1");
                     A.Show();
                     AddOwnedForm(A);

@@ -16,6 +16,7 @@ namespace PRESENTACION
         public FormPrincipal()
         {
             InitializeComponent();
+            
 
         }
 
@@ -24,7 +25,7 @@ namespace PRESENTACION
         public FormPrincipal(string DNI,String Tipo)
         {
             InitializeComponent();
-
+            
             LlamarInicio();
 
         }
