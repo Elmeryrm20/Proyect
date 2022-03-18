@@ -31,7 +31,8 @@ namespace PRESENTACION
 
         private void btnSerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            ptb_Imagen.Dispose();
+            this.Close();
         }
 
         void Medicamentos_Detallados()
