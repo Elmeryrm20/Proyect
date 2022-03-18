@@ -53,6 +53,9 @@ namespace PRESENTACION
             }
         }
 
-
+        private void Txt_Cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
     }
 }

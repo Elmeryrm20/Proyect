@@ -109,6 +109,7 @@
             this.Txt_Cantidad.Name = "Txt_Cantidad";
             this.Txt_Cantidad.Size = new System.Drawing.Size(158, 20);
             this.Txt_Cantidad.TabIndex = 4;
+            this.Txt_Cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Cantidad_KeyPress);
             // 
             // label3
             // 
