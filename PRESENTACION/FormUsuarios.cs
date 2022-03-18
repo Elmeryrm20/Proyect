@@ -29,5 +29,16 @@ namespace PRESENTACION
         {
 
         }
+
+        private void pb_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            mostrarUsuario();
+
+        }
     }
 }

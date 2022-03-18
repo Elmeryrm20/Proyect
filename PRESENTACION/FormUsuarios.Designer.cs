@@ -30,21 +30,25 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dgb_Usuario = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pb = new System.Windows.Forms.PictureBox();
+            this.bt_ActualizarU = new System.Windows.Forms.PictureBox();
+            this.bt_EditarU = new System.Windows.Forms.PictureBox();
+            this.bt_AgregarU = new System.Windows.Forms.PictureBox();
+            this.bt_EliminarU = new System.Windows.Forms.PictureBox();
+            this.dgb_Usuario = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_ActualizarU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_EditarU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_AgregarU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_EliminarU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,21 +56,12 @@ namespace PRESENTACION
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 21);
+            this.label1.Location = new System.Drawing.Point(12, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "Usuarios";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // dgb_Usuario
-            // 
-            this.dgb_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgb_Usuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgb_Usuario.Location = new System.Drawing.Point(0, 0);
-            this.dgb_Usuario.Name = "dgb_Usuario";
-            this.dgb_Usuario.Size = new System.Drawing.Size(592, 293);
-            this.dgb_Usuario.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -88,49 +83,86 @@ namespace PRESENTACION
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pb);
+            this.panel2.Controls.Add(this.bt_EliminarU);
+            this.panel2.Controls.Add(this.bt_ActualizarU);
+            this.panel2.Controls.Add(this.bt_EditarU);
+            this.panel2.Controls.Add(this.bt_AgregarU);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 352);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(592, 54);
             this.panel2.TabIndex = 4;
             // 
-            // pictureBox4
+            // bt_ActualizarU
             // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox4.Location = new System.Drawing.Point(228, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(90, 36);
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.bt_ActualizarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_ActualizarU.Location = new System.Drawing.Point(320, 6);
+            this.bt_ActualizarU.Name = "bt_ActualizarU";
+            this.bt_ActualizarU.Size = new System.Drawing.Size(90, 36);
+            this.bt_ActualizarU.TabIndex = 2;
+            this.bt_ActualizarU.TabStop = false;
+            this.bt_ActualizarU.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // pictureBox3
+            // bt_EditarU
             // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox3.Location = new System.Drawing.Point(119, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(90, 36);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.bt_EditarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_EditarU.Location = new System.Drawing.Point(116, 6);
+            this.bt_EditarU.Name = "bt_EditarU";
+            this.bt_EditarU.Size = new System.Drawing.Size(90, 36);
+            this.bt_EditarU.TabIndex = 1;
+            this.bt_EditarU.TabStop = false;
             // 
-            // pb
+            // bt_AgregarU
             // 
-            this.pb.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pb.Location = new System.Drawing.Point(14, 6);
-            this.pb.Name = "pb";
-            this.pb.Size = new System.Drawing.Size(90, 36);
-            this.pb.TabIndex = 0;
-            this.pb.TabStop = false;
+            this.bt_AgregarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_AgregarU.Location = new System.Drawing.Point(14, 6);
+            this.bt_AgregarU.Name = "bt_AgregarU";
+            this.bt_AgregarU.Size = new System.Drawing.Size(90, 36);
+            this.bt_AgregarU.TabIndex = 0;
+            this.bt_AgregarU.TabStop = false;
+            this.bt_AgregarU.Click += new System.EventHandler(this.pb_Click);
+            // 
+            // bt_EliminarU
+            // 
+            this.bt_EliminarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_EliminarU.Location = new System.Drawing.Point(218, 6);
+            this.bt_EliminarU.Name = "bt_EliminarU";
+            this.bt_EliminarU.Size = new System.Drawing.Size(90, 36);
+            this.bt_EliminarU.TabIndex = 3;
+            this.bt_EliminarU.TabStop = false;
+            // 
+            // dgb_Usuario
+            // 
+            this.dgb_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgb_Usuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgb_Usuario.Location = new System.Drawing.Point(0, 0);
+            this.dgb_Usuario.Name = "dgb_Usuario";
+            this.dgb_Usuario.Size = new System.Drawing.Size(528, 293);
+            this.dgb_Usuario.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 59);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(32, 293);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(560, 59);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(32, 293);
+            this.panel5.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dgb_Usuario);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 59);
+            this.panel3.Location = new System.Drawing.Point(32, 59);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(592, 293);
+            this.panel3.Size = new System.Drawing.Size(528, 293);
             this.panel3.TabIndex = 5;
             // 
             // FormUsuarios
@@ -139,19 +171,22 @@ namespace PRESENTACION
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 406);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUsuarios";
             this.Text = "FormUsuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_ActualizarU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_EditarU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_AgregarU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_EliminarU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -160,13 +195,16 @@ namespace PRESENTACION
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgb_Usuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox bt_ActualizarU;
+        private System.Windows.Forms.PictureBox bt_EditarU;
+        private System.Windows.Forms.PictureBox bt_AgregarU;
+        private System.Windows.Forms.PictureBox bt_EliminarU;
+        private System.Windows.Forms.DataGridView dgb_Usuario;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pb;
     }
 }

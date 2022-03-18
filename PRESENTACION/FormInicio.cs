@@ -42,7 +42,7 @@ namespace PRESENTACION
             }
             else if (hora <= 24 && hora >= 19)
             {
-                label4.Text = "noche";
+                label4.Text = "noche de trabajo";
             }
             else
             {
