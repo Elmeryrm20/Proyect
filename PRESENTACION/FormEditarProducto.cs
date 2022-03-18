@@ -66,7 +66,8 @@ namespace PRESENTACION
 
         private void Btn_Editar_Click(object sender, EventArgs e)
         {
-
+            string str = Convert.ToString(Directory.GetCurrentDirectory());
+            str = str.Replace(@"\bin\Debug", "");
             try
             {
 
@@ -77,7 +78,7 @@ namespace PRESENTACION
             catch (Exception)
             {
 
-                MessageBox.Show("Error", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Error", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
