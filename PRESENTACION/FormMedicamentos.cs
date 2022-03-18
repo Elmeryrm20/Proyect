@@ -29,7 +29,6 @@ namespace PRESENTACION
            
         }
         readonly string DNI;
-
         void rellenartabla()
         {
             dgb_Medicamentos.DataSource = consultas.ConsultaMed();
@@ -40,11 +39,6 @@ namespace PRESENTACION
         private void FormMedicamentos_Load(object sender, EventArgs e)
         {
 
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -88,6 +82,13 @@ namespace PRESENTACION
         {
             FormEgreso frm = new FormEgreso(valor_ID,DNI);
             frm.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormEditarProducto frm = new FormEditarProducto(valor_ID);
+            frm.ShowDialog();
+
         }
     }
 }

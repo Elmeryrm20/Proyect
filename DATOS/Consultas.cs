@@ -304,6 +304,25 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
+        public DataTable SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Editar_Producto", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codigo", codigo);
+            cmd.Parameters.AddWithValue("composicion", composicion);
+            cmd.Parameters.AddWithValue("fecha", fecha);
+            cmd.Parameters.AddWithValue("pre", pre);
+            cmd.Parameters.AddWithValue("lab", lab);
+            cmd.Parameters.AddWithValue("tip", tip);
+            cmd.Parameters.AddWithValue("alm", alm);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
 
     }
 }

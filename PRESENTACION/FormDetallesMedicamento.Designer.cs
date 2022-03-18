@@ -265,7 +265,7 @@
             this.ptb_Imagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ptb_Imagen.Location = new System.Drawing.Point(267, 6);
             this.ptb_Imagen.Name = "ptb_Imagen";
-            this.ptb_Imagen.Size = new System.Drawing.Size(136, 132);
+            this.ptb_Imagen.Size = new System.Drawing.Size(140, 140);
             this.ptb_Imagen.TabIndex = 3;
             this.ptb_Imagen.TabStop = false;
             this.ptb_Imagen.Click += new System.EventHandler(this.pictureBox1_Click);
