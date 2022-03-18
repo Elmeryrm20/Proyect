@@ -49,14 +49,6 @@ namespace PRESENTACION
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmb_Cargo = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lbltipodoc = new System.Windows.Forms.Label();
-            this.lbldoc = new System.Windows.Forms.Label();
-            this.lblnombre = new System.Windows.Forms.Label();
-            this.lblapellido = new System.Windows.Forms.Label();
-            this.lblcorreo = new System.Windows.Forms.Label();
-            this.lbltelefono = new System.Windows.Forms.Label();
-            this.lblcargo = new System.Windows.Forms.Label();
-            this.lblfecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -233,93 +225,14 @@ namespace PRESENTACION
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
-            // 
-            // lbltipodoc
-            // 
-            this.lbltipodoc.AutoSize = true;
-            this.lbltipodoc.Location = new System.Drawing.Point(605, 89);
-            this.lbltipodoc.Name = "lbltipodoc";
-            this.lbltipodoc.Size = new System.Drawing.Size(54, 17);
-            this.lbltipodoc.TabIndex = 71;
-            this.lbltipodoc.Text = "label10";
-            // 
-            // lbldoc
-            // 
-            this.lbldoc.AutoSize = true;
-            this.lbldoc.Location = new System.Drawing.Point(605, 122);
-            this.lbldoc.Name = "lbldoc";
-            this.lbldoc.Size = new System.Drawing.Size(54, 17);
-            this.lbldoc.TabIndex = 72;
-            this.lbldoc.Text = "label11";
-            // 
-            // lblnombre
-            // 
-            this.lblnombre.AutoSize = true;
-            this.lblnombre.Location = new System.Drawing.Point(605, 154);
-            this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(54, 17);
-            this.lblnombre.TabIndex = 73;
-            this.lblnombre.Text = "label12";
-            // 
-            // lblapellido
-            // 
-            this.lblapellido.AutoSize = true;
-            this.lblapellido.Location = new System.Drawing.Point(605, 186);
-            this.lblapellido.Name = "lblapellido";
-            this.lblapellido.Size = new System.Drawing.Size(54, 17);
-            this.lblapellido.TabIndex = 74;
-            this.lblapellido.Text = "label13";
-            // 
-            // lblcorreo
-            // 
-            this.lblcorreo.AutoSize = true;
-            this.lblcorreo.Location = new System.Drawing.Point(633, 247);
-            this.lblcorreo.Name = "lblcorreo";
-            this.lblcorreo.Size = new System.Drawing.Size(54, 17);
-            this.lblcorreo.TabIndex = 75;
-            this.lblcorreo.Text = "label14";
-            // 
-            // lbltelefono
-            // 
-            this.lbltelefono.AutoSize = true;
-            this.lbltelefono.Location = new System.Drawing.Point(633, 277);
-            this.lbltelefono.Name = "lbltelefono";
-            this.lbltelefono.Size = new System.Drawing.Size(54, 17);
-            this.lbltelefono.TabIndex = 76;
-            this.lbltelefono.Text = "label15";
-            // 
-            // lblcargo
-            // 
-            this.lblcargo.AutoSize = true;
-            this.lblcargo.Location = new System.Drawing.Point(605, 315);
-            this.lblcargo.Name = "lblcargo";
-            this.lblcargo.Size = new System.Drawing.Size(54, 17);
-            this.lblcargo.TabIndex = 77;
-            this.lblcargo.Text = "label16";
-            // 
-            // lblfecha
-            // 
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(605, 218);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(54, 17);
-            this.lblfecha.TabIndex = 78;
-            this.lblfecha.Text = "label17";
             // 
             // FormAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 500);
-            this.Controls.Add(this.lblfecha);
-            this.Controls.Add(this.lblcargo);
-            this.Controls.Add(this.lbltelefono);
-            this.Controls.Add(this.lblcorreo);
-            this.Controls.Add(this.lblapellido);
-            this.Controls.Add(this.lblnombre);
-            this.Controls.Add(this.lbldoc);
-            this.Controls.Add(this.lbltipodoc);
             this.Controls.Add(this.cmb_Cargo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
@@ -371,13 +284,5 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmb_Cargo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lblfecha;
-        private System.Windows.Forms.Label lblcargo;
-        private System.Windows.Forms.Label lbltelefono;
-        private System.Windows.Forms.Label lblcorreo;
-        private System.Windows.Forms.Label lblapellido;
-        private System.Windows.Forms.Label lblnombre;
-        private System.Windows.Forms.Label lbldoc;
-        private System.Windows.Forms.Label lbltipodoc;
     }
 }

@@ -54,27 +54,7 @@ namespace PRESENTACION
            
         }
 
-        /*private void ValidarDoc()
-        {
-            while (txtDocumento.Text == "")
-            {
-                errorProvider1.SetError(txtDocumento, "Ingresar Documento");
-                txtDocumento.Text = "";
-            }
-            while (txtNombre.Text == "")
-            {
-                errorProvider1.SetError(txtNombre, "Ingresar Nombre");
-            }
-            while (txtApellido.Text == "")
-            {
-                errorProvider1.SetError(txtDocumento, "Ingresar Apellido");
-            }
-            while (txtDocumento.Text == "")
-            {
-                errorProvider1.SetError(txtDocumento, "Ingresar Documento");
-            }
-        }*/
-
+        
 
         private bool ValidarDoc()
         {
@@ -105,10 +85,12 @@ namespace PRESENTACION
                 doc = false;
                 errorProvider1.SetError(cmbTipoDocumento, "Ingresar Datos correctos");
             }
-            else
+            if (dtpFecha_Nacimiento.Text == DateTime.Now.ToString("d"))
             {
-
+                errorProvider1.SetError(dtpFecha_Nacimiento, "Por favor, ingrese una fecha");
+                doc = false;
             }
+
             return doc;
         }
         private void BorrarMss()
@@ -118,6 +100,7 @@ namespace PRESENTACION
             errorProvider1.SetError(txtNombre, "");
             errorProvider1.SetError(cmbTipoDocumento, "");
             errorProvider1.SetError(cmb_Cargo, "");
+            errorProvider1.SetError(dtpFecha_Nacimiento, "");
         }
 
         private void dtpFecha_Nacimiento_ValueChanged(object sender, EventArgs e)
