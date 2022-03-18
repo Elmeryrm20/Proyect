@@ -74,13 +74,14 @@ namespace PRESENTACION
             {
                 if (ptb_Imagen.Image != null)
                 {
+                    ptb_Imagen.Image = null;
                     if (txtNombre.Text == nombre_original)
                     {
                         ptb_Imagen.Image.Save(directorio, System.Drawing.Imaging.ImageFormat.Jpeg);
                     }
                     else
                     {
-                        File.Move(directorio, txtNombre.Text + ".jpeg");
+                        File.Delete(directorio);
                         ptb_Imagen.Image.Save(str + @"\Resources\" + txtNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
                     }
                 }
