@@ -155,7 +155,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(415, 189);
+            this.label12.Location = new System.Drawing.Point(415, 181);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 13);
             this.label12.TabIndex = 67;
@@ -178,7 +178,7 @@
             this.ptb_Imagen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptb_Imagen.Location = new System.Drawing.Point(336, 30);
             this.ptb_Imagen.Name = "ptb_Imagen";
-            this.ptb_Imagen.Size = new System.Drawing.Size(150, 156);
+            this.ptb_Imagen.Size = new System.Drawing.Size(150, 150);
             this.ptb_Imagen.TabIndex = 65;
             this.ptb_Imagen.TabStop = false;
             this.ptb_Imagen.Click += new System.EventHandler(this.pictureBox1_Click);

@@ -44,13 +44,24 @@ namespace PRESENTACION
         {
             try
             {
-                consultas.SP_Agregar_Egreso_Medicamento(valor.ToString(), txtCantidad.Text);
-                consultas.SP_Agregar_Detalle_Egreso(valor.ToString(), txtCantidad.Text, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI,4);
-                MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
+                int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
+                int Existencias = Ingreso - Egreso;
+
+                if (Convert.ToInt32(txtCantidad.Text)<=Existencias)
+                {
+                    consultas.SP_Agregar_Egreso_Medicamento(valor.ToString(), txtCantidad.Text);
+                    consultas.SP_Agregar_Detalle_Egreso(valor.ToString(), txtCantidad.Text, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, 4);
+                    MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show("Los productos exeden al stock del mediacamento", "Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Cagaste prro problemas de conexion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Error", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
