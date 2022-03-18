@@ -39,7 +39,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Btn_Editar = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptb_Imagen = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Editar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,7 +84,7 @@
             this.panel2.Controls.Add(this.txtNombre);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.Btn_Editar);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.ptb_Imagen);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
@@ -155,11 +155,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(400, 186);
+            this.label12.Location = new System.Drawing.Point(415, 189);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 13);
+            this.label12.Size = new System.Drawing.Size(71, 13);
             this.label12.TabIndex = 67;
-            this.label12.Text = "Suba una imagen";
+            this.label12.Text = "Editar imagen";
             // 
             // Btn_Editar
             // 
@@ -172,15 +172,16 @@
             this.Btn_Editar.TabStop = false;
             this.Btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
             // 
-            // pictureBox1
+            // ptb_Imagen
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(336, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 156);
-            this.pictureBox1.TabIndex = 65;
-            this.pictureBox1.TabStop = false;
+            this.ptb_Imagen.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ptb_Imagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptb_Imagen.Location = new System.Drawing.Point(336, 30);
+            this.ptb_Imagen.Name = "ptb_Imagen";
+            this.ptb_Imagen.Size = new System.Drawing.Size(150, 156);
+            this.ptb_Imagen.TabIndex = 65;
+            this.ptb_Imagen.TabStop = false;
+            this.ptb_Imagen.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label11
             // 
@@ -252,7 +253,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Editar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Imagen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,7 +271,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox Btn_Editar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptb_Imagen;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;

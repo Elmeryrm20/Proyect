@@ -34,11 +34,11 @@ namespace PRESENTACION
 
             if (hora>=6 && hora<=12)
             {
-                label4.Text = "dìa"; 
+                label4.Text = "dìa de trabajo"; 
             }
             else if (hora<=18 && hora>=13)
             {
-                label4.Text = "tarde";
+                label4.Text = "tarde de trabajo";
             }
             else if (hora <= 24 && hora >= 19)
             {
@@ -46,7 +46,7 @@ namespace PRESENTACION
             }
             else
             {
-                label4.Text = "madrugada";
+                label4.Text = "madrugada de trabajo";
             }
         }
 
