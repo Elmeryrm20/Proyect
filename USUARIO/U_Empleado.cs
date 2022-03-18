@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace USUARIO
 {
-    public class Class1
+    public class U_Empleado
     {
     }
 }

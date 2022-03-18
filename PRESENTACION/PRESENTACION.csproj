@@ -213,6 +213,10 @@
       <Project>{a46d7383-74fe-4eed-b8ad-09d7be99723d}</Project>
       <Name>DATOS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\USUARIO\USUARIO.csproj">
+      <Project>{dc922046-b397-44b2-9b4d-588062413418}</Project>
+      <Name>USUARIO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

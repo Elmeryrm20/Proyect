@@ -1,7 +1,9 @@
 ﻿using DATOS;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
+using USUARIO;
 
 namespace PRESENTACION
 {
@@ -15,6 +17,7 @@ namespace PRESENTACION
 
         Consultas du = new Consultas();
 
+        #region Botones de Ventana
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -24,10 +27,15 @@ namespace PRESENTACION
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        #endregion
 
+        #region Botones Principales
+
+
+        //Validación campos vacíos
         private void ValidacionTextbox()
         {
-            
+
             PibIngresar.Image = Properties.Resources.BotonIngresar02;
 
             if (txtusuario.Text == "" || txtusuario.Text == "DNI")
@@ -50,64 +58,82 @@ namespace PRESENTACION
             }
         }
 
-        private void Ingresar()
+        U_DatosUsuario01 ud = new U_DatosUsuario01();
+
+        private void AdmitirPass()
         {
-            DataTable dt = du.D_Login(txtusuario.Text, TxtPass.Text);
+            PibCheckUsu.Visible = true;
+            PibCheckUsu.BackColor = Color.Green;
 
-            //MessageBox.Show(dt.Rows[0][0].ToString());
 
-            if (dt.Rows.Count == 1)
+            if (TxtPass.Text == ud.Pass)
             {
                 this.Hide();
-                if (dt.Rows[0][1].ToString() == "1")
-                {
-
-                    FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
-                    A.Show();
-                    AddOwnedForm(A);
-                    //MessageBox.Show("Eres Encargado");
-
-                }
-                else if (dt.Rows[0][1].ToString() == "2")
-                {
-                    FormPrincipal A = new FormPrincipal(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
-                    A.Show();
-                    AddOwnedForm(A);
-                    //MessageBox.Show("Eres Admin");
-
-                }
+                FormPrincipal A = new FormPrincipal(ud.DNI, ud.Tipo, ud.Nombre);
+                A.Show();
+                AddOwnedForm(A);
             }
             else
             {
-                MessageBox.Show("Datos Incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("Contraseña Incorrecta", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                PibCheckPass.Visible = true;
                 PibIngresar.Image = Properties.Resources.BotonIngresar01;
-                txtusuario.SelectAll();
-                txtusuario.Focus();
+                TxtPass.SelectAll();
+                TxtPass.Focus();
             }
         }
 
+        //Método de Ingreso
+        private void Ingresar()
+        {
+            //0 Codigo
+            //1 Password
+            //2 Tipo
+            //3 Nombre
+
+            if (txtusuario.Text != ud.DNI)
+            {
+                DataTable dt = du.D_Login(txtusuario.Text);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    ud.DNI = dt.Rows[0][0].ToString();
+                    ud.Pass = dt.Rows[0][1].ToString();
+                    ud.Tipo = dt.Rows[0][2].ToString();
+                    ud.Nombre = dt.Rows[0][3].ToString();
+                    AdmitirPass();
+
+                }
+                else
+                {
+                    //MessageBox.Show("Usuario Incorrecto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    PibCheckUsu.Visible = true;
+                    PibCheckUsu.BackColor = Color.Red;
+                    PibIngresar.Image = Properties.Resources.BotonIngresar01;
+
+                    TxtPass.Text = "Contraseña";
+                    PibCheckPass.Visible = false;
+
+                    txtusuario.SelectAll();
+                    txtusuario.Focus();
+                }
+
+            }
+            else
+            {
+                AdmitirPass();
+            }
+
+        }
+
+        //Boton principal
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             ValidacionTextbox();
 
         }
 
-        int n, mx, my;
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (n == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
+        //Nueva Contraseña
         private void label2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -116,8 +142,13 @@ namespace PRESENTACION
 
             frm.Show();
         }
+        #endregion
 
+        #region Eventos sin usar
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -163,7 +194,9 @@ namespace PRESENTACION
         {
 
         }
+        #endregion
 
+        #region Animación Botón Ingresar
         private void PibIngresar_MouseEnter(object sender, EventArgs e)
         {
             PibIngresar.Image = Properties.Resources.BotonIngresar02;
@@ -174,6 +207,11 @@ namespace PRESENTACION
             PibIngresar.Image = Properties.Resources.BotonIngresar01;
 
         }
+        #endregion
+
+        #region Métodos de los TextBox
+
+
 
         private bool ActivarTextbox = false;
         private void Txtusuario_Enter(object sender, EventArgs e)
@@ -228,7 +266,7 @@ namespace PRESENTACION
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             //ActivarTextbox = true;
-
+            PibCheckUsu.Visible = false;
             if (e.KeyChar == (char)Keys.Enter)
             {
                 ValidacionTextbox();
@@ -239,12 +277,27 @@ namespace PRESENTACION
 
         private void txtcontraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+            PibCheckPass.Visible = false;
+
             if (e.KeyChar == (char)Keys.Enter)
             {
                 ValidacionTextbox();
 
             }
 
+        }
+
+        #endregion
+
+        #region Panel Movimiento
+        int n, mx, my;
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (n == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)
@@ -258,5 +311,6 @@ namespace PRESENTACION
             mx = e.X;
             my = e.Y;
         }
+        #endregion
     }
 }

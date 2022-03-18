@@ -88,6 +88,7 @@ namespace DATOS
             return tabla;
         }
 
+
         public DataTable D_Login(string DNI, string password)
         {
             Conexion.connection.Open();
@@ -104,6 +105,20 @@ namespace DATOS
 
             return dt;
         }
+        public DataTable D_Login(string DNI)
+        {
+            Conexion.connection.Open();
+            string query = "SELECT Tra_DNI AS 'DNI', Usu_PASS AS 'Constraseña', Usu_Tipo AS 'Tipo', concat(Tra_Nombre,' ',Tra_Apellido) AS 'Nombre' FROM trabajador WHERE Tra_DNI='" + DNI + "';";
+            MySqlCommand comando = new MySqlCommand(query, Conexion.connection);
+            comando.ExecuteNonQuery();
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+
+        }
+
 
         public DataTable D_Consulta_Dinamica(string Busqueda)
         {
