@@ -133,10 +133,13 @@ namespace PRESENTACION
             // 
             // dgb_Usuario
             // 
+            this.dgb_Usuario.AllowUserToAddRows = false;
+            this.dgb_Usuario.AllowUserToDeleteRows = false;
             this.dgb_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgb_Usuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgb_Usuario.Location = new System.Drawing.Point(0, 0);
             this.dgb_Usuario.Name = "dgb_Usuario";
+            this.dgb_Usuario.ReadOnly = true;
             this.dgb_Usuario.Size = new System.Drawing.Size(528, 293);
             this.dgb_Usuario.TabIndex = 1;
             // 
