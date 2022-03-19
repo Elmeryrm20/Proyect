@@ -31,26 +31,26 @@
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.TxtPass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PibMinimizar = new System.Windows.Forms.PictureBox();
+            this.PibCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PibCheckPass = new System.Windows.Forms.PictureBox();
+            this.PibCheckUsu = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DtgPrueba = new System.Windows.Forms.DataGridView();
             this.PibIngresar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PibCheckUsu = new System.Windows.Forms.PictureBox();
-            this.PibCheckPass = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCheckPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCheckUsu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibCheckUsu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibCheckPass)).BeginInit();
             this.SuspendLayout();
             // 
             // txtusuario
@@ -58,7 +58,7 @@
             this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.txtusuario.Location = new System.Drawing.Point(417, 129);
+            this.txtusuario.Location = new System.Drawing.Point(425, 152);
             this.txtusuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
@@ -76,7 +76,7 @@
             this.TxtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.TxtPass.Location = new System.Drawing.Point(417, 194);
+            this.TxtPass.Location = new System.Drawing.Point(425, 217);
             this.TxtPass.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPass.MaxLength = 20;
             this.TxtPass.Name = "TxtPass";
@@ -91,8 +91,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.PibMinimizar);
+            this.panel1.Controls.Add(this.PibCerrar);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -103,28 +103,33 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
-            // pictureBox4
+            // PibMinimizar
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackColor = System.Drawing.Color.Black;
-            this.pictureBox4.Location = new System.Drawing.Point(590, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.PibMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.PibMinimizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar03;
+            this.PibMinimizar.Location = new System.Drawing.Point(596, 6);
+            this.PibMinimizar.Name = "PibMinimizar";
+            this.PibMinimizar.Size = new System.Drawing.Size(24, 24);
+            this.PibMinimizar.TabIndex = 13;
+            this.PibMinimizar.TabStop = false;
+            this.PibMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.PibMinimizar.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
+            this.PibMinimizar.MouseLeave += new System.EventHandler(this.PibMinimizar_MouseLeave);
             // 
-            // pictureBox3
+            // PibCerrar
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Location = new System.Drawing.Point(623, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.PibCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.PibCerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar03;
+            this.PibCerrar.Location = new System.Drawing.Point(626, 6);
+            this.PibCerrar.Name = "PibCerrar";
+            this.PibCerrar.Size = new System.Drawing.Size(24, 24);
+            this.PibCerrar.TabIndex = 12;
+            this.PibCerrar.TabStop = false;
+            this.PibCerrar.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.PibCerrar.MouseEnter += new System.EventHandler(this.PibCerrar_MouseEnter);
+            this.PibCerrar.MouseLeave += new System.EventHandler(this.PibCerrar_MouseLeave);
             // 
             // panel2
             // 
@@ -147,12 +152,42 @@
             this.panel2.TabStop = true;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // PibCheckPass
+            // 
+            this.PibCheckPass.BackColor = System.Drawing.Color.Transparent;
+            this.PibCheckPass.Image = global::PRESENTACION.Properties.Resources.BotonValidarCheck01;
+            this.PibCheckPass.Location = new System.Drawing.Point(619, 212);
+            this.PibCheckPass.Name = "PibCheckPass";
+            this.PibCheckPass.Size = new System.Drawing.Size(24, 24);
+            this.PibCheckPass.TabIndex = 18;
+            this.PibCheckPass.TabStop = false;
+            this.PibCheckPass.Visible = false;
+            // 
+            // PibCheckUsu
+            // 
+            this.PibCheckUsu.Image = global::PRESENTACION.Properties.Resources.BotonValidarCheck02;
+            this.PibCheckUsu.Location = new System.Drawing.Point(619, 147);
+            this.PibCheckUsu.Name = "PibCheckUsu";
+            this.PibCheckUsu.Size = new System.Drawing.Size(24, 24);
+            this.PibCheckUsu.TabIndex = 18;
+            this.PibCheckUsu.TabStop = false;
+            this.PibCheckUsu.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Lime;
+            this.pictureBox2.Location = new System.Drawing.Point(-15, -15);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(428, 338);
+            this.label2.Location = new System.Drawing.Point(432, 338);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 13);
             this.label2.TabIndex = 16;
@@ -174,7 +209,7 @@
             this.PibIngresar.BackColor = System.Drawing.Color.Transparent;
             this.PibIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibIngresar.Image = global::PRESENTACION.Properties.Resources.BotonIngresar01;
-            this.PibIngresar.Location = new System.Drawing.Point(400, 279);
+            this.PibIngresar.Location = new System.Drawing.Point(405, 277);
             this.PibIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.PibIngresar.Name = "PibIngresar";
             this.PibIngresar.Size = new System.Drawing.Size(180, 50);
@@ -194,38 +229,11 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Lime;
-            this.pictureBox2.Location = new System.Drawing.Point(-15, -15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
-            // PibCheckUsu
-            // 
-            this.PibCheckUsu.Location = new System.Drawing.Point(610, 124);
-            this.PibCheckUsu.Name = "PibCheckUsu";
-            this.PibCheckUsu.Size = new System.Drawing.Size(20, 20);
-            this.PibCheckUsu.TabIndex = 18;
-            this.PibCheckUsu.TabStop = false;
-            // 
-            // PibCheckPass
-            // 
-            this.PibCheckPass.BackColor = System.Drawing.Color.Red;
-            this.PibCheckPass.Location = new System.Drawing.Point(610, 189);
-            this.PibCheckPass.Name = "PibCheckPass";
-            this.PibCheckPass.Size = new System.Drawing.Size(20, 20);
-            this.PibCheckPass.TabIndex = 18;
-            this.PibCheckPass.TabStop = false;
-            this.PibCheckPass.Visible = false;
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PRESENTACION.Properties.Resources.Login01;
+            this.BackgroundImage = global::PRESENTACION.Properties.Resources.FondoLogin02;
             this.ClientSize = new System.Drawing.Size(660, 360);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -235,16 +243,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCheckPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCheckUsu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibCheckUsu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibCheckPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,8 +264,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox PibIngresar;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox PibMinimizar;
+        private System.Windows.Forms.PictureBox PibCerrar;
         private System.Windows.Forms.DataGridView DtgPrueba;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox PibCheckPass;

@@ -29,34 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PibVolver = new System.Windows.Forms.PictureBox();
+            this.PibMinimizar = new System.Windows.Forms.PictureBox();
+            this.PibCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtusuario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbldocumento = new System.Windows.Forms.Label();
-            this.txtcontraseña = new System.Windows.Forms.TextBox();
-            this.lblcontraseña = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtContraseña2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btn_Volver = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtusuario = new System.Windows.Forms.TextBox();
+            this.txtcontraseña = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PibVolver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
-            this.panel1.Controls.Add(this.btn_Volver);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.PibVolver);
+            this.panel1.Controls.Add(this.PibMinimizar);
+            this.panel1.Controls.Add(this.PibCerrar);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -64,108 +60,114 @@
             this.panel1.TabIndex = 14;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // PibVolver
+            // 
+            this.PibVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibVolver.BackColor = System.Drawing.Color.Transparent;
+            this.PibVolver.Image = global::PRESENTACION.Properties.Resources.BotonVentanaAtras01;
+            this.PibVolver.Location = new System.Drawing.Point(10, 4);
+            this.PibVolver.Name = "PibVolver";
+            this.PibVolver.Size = new System.Drawing.Size(24, 24);
+            this.PibVolver.TabIndex = 14;
+            this.PibVolver.TabStop = false;
+            this.PibVolver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
+            // PibMinimizar
+            // 
+            this.PibMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.PibMinimizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar01;
+            this.PibMinimizar.Location = new System.Drawing.Point(595, 4);
+            this.PibMinimizar.Name = "PibMinimizar";
+            this.PibMinimizar.Size = new System.Drawing.Size(24, 24);
+            this.PibMinimizar.TabIndex = 13;
+            this.PibMinimizar.TabStop = false;
+            this.PibMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // PibCerrar
+            // 
+            this.PibCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.PibCerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
+            this.PibCerrar.Location = new System.Drawing.Point(625, 4);
+            this.PibCerrar.Name = "PibCerrar";
+            this.PibCerrar.Size = new System.Drawing.Size(24, 24);
+            this.PibCerrar.TabIndex = 12;
+            this.PibCerrar.TabStop = false;
+            this.PibCerrar.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.txtContraseña2);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.txtusuario);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.lbldocumento);
             this.panel2.Controls.Add(this.txtcontraseña);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.lblcontraseña);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(662, 379);
+            this.panel2.Size = new System.Drawing.Size(660, 360);
             this.panel2.TabIndex = 15;
             // 
-            // txtusuario
+            // txtContraseña2
             // 
-            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.Location = new System.Drawing.Point(362, 145);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(2);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(183, 24);
-            this.txtusuario.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(382, 74);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CRUZ ROJA";
-            // 
-            // lbldocumento
-            // 
-            this.lbldocumento.AutoSize = true;
-            this.lbldocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldocumento.Location = new System.Drawing.Point(363, 127);
-            this.lbldocumento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbldocumento.Name = "lbldocumento";
-            this.lbldocumento.Size = new System.Drawing.Size(106, 17);
-            this.lbldocumento.TabIndex = 5;
-            this.lbldocumento.Text = "DOCUMENTO :";
-            // 
-            // txtcontraseña
-            // 
-            this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontraseña.Location = new System.Drawing.Point(362, 207);
-            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2);
-            this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.PasswordChar = '•';
-            this.txtcontraseña.Size = new System.Drawing.Size(183, 24);
-            this.txtcontraseña.TabIndex = 11;
-            // 
-            // lblcontraseña
-            // 
-            this.lblcontraseña.AutoSize = true;
-            this.lblcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcontraseña.Location = new System.Drawing.Point(359, 181);
-            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblcontraseña.Name = "lblcontraseña";
-            this.lblcontraseña.Size = new System.Drawing.Size(111, 17);
-            this.lblcontraseña.TabIndex = 6;
-            this.lblcontraseña.Text = "CONTRASEÑA :";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackColor = System.Drawing.Color.Black;
-            this.pictureBox4.Location = new System.Drawing.Point(590, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Location = new System.Drawing.Point(623, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.txtContraseña2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(123)))));
+            this.txtContraseña2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña2.ForeColor = System.Drawing.Color.White;
+            this.txtContraseña2.Location = new System.Drawing.Point(410, 222);
+            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña2.MaxLength = 20;
+            this.txtContraseña2.Name = "txtContraseña2";
+            this.txtContraseña2.PasswordChar = '•';
+            this.txtContraseña2.Size = new System.Drawing.Size(183, 19);
+            this.txtContraseña2.TabIndex = 17;
+            this.txtContraseña2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContraseña2.TextChanged += new System.EventHandler(this.txtContraseña2_TextChanged);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(352, 300);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.BotonReestablecer01;
+            this.pictureBox2.Location = new System.Drawing.Point(414, 276);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(215, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(180, 50);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(123)))));
+            this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.ForeColor = System.Drawing.Color.White;
+            this.txtusuario.Location = new System.Drawing.Point(410, 76);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtusuario.MaxLength = 20;
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(183, 19);
+            this.txtusuario.TabIndex = 4;
+            this.txtusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtcontraseña
+            // 
+            this.txtcontraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(123)))));
+            this.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcontraseña.ForeColor = System.Drawing.Color.White;
+            this.txtcontraseña.Location = new System.Drawing.Point(410, 148);
+            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcontraseña.MaxLength = 20;
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.PasswordChar = '•';
+            this.txtcontraseña.Size = new System.Drawing.Size(183, 19);
+            this.txtcontraseña.TabIndex = 11;
+            this.txtcontraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcontraseña.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
             // 
             // pictureBox1
             // 
@@ -176,43 +178,12 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // txtContraseña2
-            // 
-            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña2.Location = new System.Drawing.Point(362, 261);
-            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña2.Name = "txtContraseña2";
-            this.txtContraseña2.PasswordChar = '•';
-            this.txtContraseña2.Size = new System.Drawing.Size(183, 24);
-            this.txtContraseña2.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(359, 235);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 17);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "REPETIR CONTRASEÑA :";
-            // 
-            // btn_Volver
-            // 
-            this.btn_Volver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Volver.BackColor = System.Drawing.Color.Black;
-            this.btn_Volver.Location = new System.Drawing.Point(3, 3);
-            this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(27, 27);
-            this.btn_Volver.TabIndex = 14;
-            this.btn_Volver.TabStop = false;
-            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
-            // 
             // FormIngresarNewContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 379);
+            this.BackgroundImage = global::PRESENTACION.Properties.Resources.FondoReestablecer01;
+            this.ClientSize = new System.Drawing.Size(660, 360);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -220,32 +191,28 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormIngresarNewContraseña";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PibVolver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox PibMinimizar;
+        private System.Windows.Forms.PictureBox PibCerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtusuario;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbldocumento;
         private System.Windows.Forms.TextBox txtcontraseña;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblcontraseña;
         private System.Windows.Forms.TextBox txtContraseña2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox btn_Volver;
+        private System.Windows.Forms.PictureBox PibVolver;
     }
 }

@@ -83,9 +83,169 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Login01 {
+        internal static System.Drawing.Bitmap BotonReestablecer01 {
             get {
-                object obj = ResourceManager.GetObject("Login01", resourceCulture);
+                object obj = ResourceManager.GetObject("BotonReestablecer01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonReestablecer02 {
+            get {
+                object obj = ResourceManager.GetObject("BotonReestablecer02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonValidarCheck01 {
+            get {
+                object obj = ResourceManager.GetObject("BotonValidarCheck01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonValidarCheck02 {
+            get {
+                object obj = ResourceManager.GetObject("BotonValidarCheck02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaAtras01 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaAtras01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaAtras04 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaAtras04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaCerrar01 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaCerrar01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaCerrar02 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaCerrar02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaCerrar03 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaCerrar03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaCerrar04 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaCerrar04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaMinimizar01 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaMinimizar01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaMinimizar02 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaMinimizar02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaMinimizar03 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaMinimizar03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonVentanaMinimizar04 {
+            get {
+                object obj = ResourceManager.GetObject("BotonVentanaMinimizar04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoLogin01 {
+            get {
+                object obj = ResourceManager.GetObject("FondoLogin01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoLogin02 {
+            get {
+                object obj = ResourceManager.GetObject("FondoLogin02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoReestablecer01 {
+            get {
+                object obj = ResourceManager.GetObject("FondoReestablecer01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

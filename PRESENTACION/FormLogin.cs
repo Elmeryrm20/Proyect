@@ -27,6 +27,29 @@ namespace PRESENTACION
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            PibMinimizar.Image = Properties.Resources.BotonVentanaMinimizar04;
+        }
+
+        private void PibMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            PibMinimizar.Image = Properties.Resources.BotonVentanaMinimizar03;
+
+        }
+
+        private void PibCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            PibCerrar.Image = Properties.Resources.BotonVentanaCerrar04;
+
+        }
+
+        private void PibCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            PibCerrar.Image = Properties.Resources.BotonVentanaCerrar03;
+
+        }
         #endregion
 
         #region Botones Principales
@@ -63,7 +86,9 @@ namespace PRESENTACION
         private void AdmitirPass()
         {
             PibCheckUsu.Visible = true;
-            PibCheckUsu.BackColor = Color.Green;
+            //PibCheckUsu.BackColor = Color.Green;
+            PibCheckUsu.Image = Properties.Resources.BotonValidarCheck02;
+
 
 
             if (TxtPass.Text == ud.Pass)
@@ -108,7 +133,8 @@ namespace PRESENTACION
                 {
                     //MessageBox.Show("Usuario Incorrecto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     PibCheckUsu.Visible = true;
-                    PibCheckUsu.BackColor = Color.Red;
+                    //PibCheckUsu.BackColor = Color.Red;
+                    PibCheckUsu.Image = Properties.Resources.BotonValidarCheck01;
                     PibIngresar.Image = Properties.Resources.BotonIngresar01;
 
                     TxtPass.Text = "Contraseña";

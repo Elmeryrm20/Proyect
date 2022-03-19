@@ -124,8 +124,56 @@
   <data name="BotonIngresar02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonIngresar02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BotonReestablecer01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonReestablecer01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonReestablecer02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonReestablecer02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonValidarCheck01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonValidarCheck01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonValidarCheck02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonValidarCheck02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaAtras01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaAtras01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaAtras04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaAtras04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaCerrar01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaCerrar01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaCerrar02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaCerrar02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaCerrar03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaCerrar03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaCerrar04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaCerrar04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaMinimizar01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaMinimizar01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaMinimizar02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaMinimizar02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaMinimizar03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaMinimizar03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonVentanaMinimizar04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonVentanaMinimizar04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoLogin01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoLogin01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoLogin02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoLogin02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoReestablecer01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoReestablecer01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

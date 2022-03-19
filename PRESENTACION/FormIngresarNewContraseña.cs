@@ -99,5 +99,15 @@ namespace PRESENTACION
 
             frm.Show();
         }
+
+        private void txtContraseña2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcontraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

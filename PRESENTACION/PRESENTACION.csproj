@@ -282,13 +282,61 @@
     <None Include="Resources\Logo01.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login01.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\BotonIngresar01.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BotonIngresar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonReestablecer01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonReestablecer02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonValidarCheck01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonValidarCheck02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaAtras01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaAtras04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaCerrar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaCerrar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaCerrar03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaCerrar04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMinimizar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMinimizar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMinimizar03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMinimizar04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoLogin01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoReestablecer01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoLogin02.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
