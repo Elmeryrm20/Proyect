@@ -70,19 +70,25 @@ namespace PRESENTACION
             str = str.Replace(@"\bin\Debug", "");
             string nombre_original = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÒN"].ToString();
             string directorio = str + @"\Resources\" + nombre_original + ".jpeg";
+
             try
             {
                 if (ptb_Imagen.Image != null)
                 {
-                    ptb_Imagen.Image = null;
                     if (txtNombre.Text == nombre_original)
                     {
+                        ptb_Imagen.Image.Save(str + @"\Resources\" + nombre_original + "2.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ptb_Imagen.Load(str + @"\Resources\" + txtNombre.Text + "2.jpeg");
+                        File.Delete(directorio);
                         ptb_Imagen.Image.Save(directorio, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ptb_Imagen.Load(directorio);
+                        File.Delete(str + @"\Resources\" + nombre_original + "2.jpeg");
                     }
                     else
                     {
-                        File.Delete(directorio);
                         ptb_Imagen.Image.Save(str + @"\Resources\" + txtNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ptb_Imagen.Load(str + @"\Resources\" + txtNombre.Text + ".jpeg");
+                        File.Delete(directorio);
                     }
                 }
                 consultas.SP_Editar_Producto(id_Medicamento, txtNombre.Text, txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1);
@@ -143,7 +149,7 @@ namespace PRESENTACION
                 string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÒN"].ToString();
                 string str = Convert.ToString(Directory.GetCurrentDirectory());
                 str = str.Replace(@"\bin\Debug", "");
-                ptb_Imagen.Image = Image.FromFile(str + @"\Resources\" + Nombre_Imagen + ".jpeg");
+                ptb_Imagen.Load(str + @"\Resources\" + Nombre_Imagen + ".jpeg");
                 ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
                 ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
             }
