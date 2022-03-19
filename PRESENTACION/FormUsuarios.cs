@@ -19,7 +19,8 @@ namespace PRESENTACION
             InitializeComponent();
             mostrarUsuario();
         }
-        void mostrarUsuario()
+        string valor_ID = "";
+        public void mostrarUsuario()
         {
             dgb_Usuario.DataSource = consultas.ConsultaUsuario();
             dgb_Usuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -39,6 +40,26 @@ namespace PRESENTACION
         {
             mostrarUsuario();
 
+        }
+
+        private void bt_EditarU_Click(object sender, EventArgs e)
+        {
+            if (valor_ID !="")
+            {
+                FormEditarUsuario frm = new FormEditarUsuario(valor_ID);
+                frm.ShowDialog(); 
+            }
+            else
+            {
+                MessageBox.Show("Seleccione Usuario", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+        }
+
+        private void dgb_Usuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            valor_ID = dgb_Usuario.CurrentRow.Cells[0].Value.ToString();
+            label1.Text = valor_ID.ToString();
         }
     }
 }

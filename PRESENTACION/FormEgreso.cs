@@ -32,7 +32,7 @@ namespace PRESENTACION
         readonly string DNI;
         private void btnSerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
         void Egreso()
         {

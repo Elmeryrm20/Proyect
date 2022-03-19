@@ -60,8 +60,7 @@ namespace PRESENTACION
         }
         private void btnSerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
+            this.Close();
         }
 
         private void Btn_Editar_Click(object sender, EventArgs e)
@@ -70,7 +69,7 @@ namespace PRESENTACION
             try
             {
 
-                consultas.SP_Editar_Producto(id_Medicamento, txtNombre.Text, txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1);
+                consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1);
                 MessageBox.Show("Los cambios Guardados", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
@@ -121,6 +120,12 @@ namespace PRESENTACION
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void FormEditarProducto_Load(object sender, EventArgs e)
         {
 
         }
