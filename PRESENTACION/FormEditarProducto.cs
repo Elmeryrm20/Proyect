@@ -164,9 +164,6 @@ namespace PRESENTACION
         }
 
 
-        private void FormEditarProducto_Load(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
