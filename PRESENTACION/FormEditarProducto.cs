@@ -65,32 +65,14 @@ namespace PRESENTACION
 
         private void Btn_Editar_Click(object sender, EventArgs e)
         {
-            string str = Convert.ToString(Directory.GetCurrentDirectory());
-            str = str.Replace(@"\bin\Debug", "");
-            string nombre_original = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÒN"].ToString();
-            string directorio = str + @"\Resources\" + nombre_original + ".jpeg";
 
             try
             {
-                if (ptb_Imagen.Image != null)
-                {
-                    if (txtNombre.Text == nombre_original)
-                    {
-                        ptb_Imagen.Image.Save(str + @"\Resources\" + nombre_original + "2.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
-                        ptb_Imagen.Load(str + @"\Resources\" + txtNombre.Text + "2.jpeg");
-                        File.Delete(directorio);
-                        ptb_Imagen.Image.Save(directorio, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        ptb_Imagen.Load(directorio);
-                        File.Delete(str + @"\Resources\" + nombre_original + "2.jpeg");
-                    }
-                    else
-                    {
-                        ptb_Imagen.Image.Save(str + @"\Resources\" + txtNombre.Text + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
-                        ptb_Imagen.Load(str + @"\Resources\" + txtNombre.Text + ".jpeg");
-                        File.Delete(directorio);
-                    }
-                }
-                consultas.SP_Editar_Producto(id_Medicamento, txtNombre.Text, txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1);
+                MemoryStream ms = new MemoryStream();
+                ptb_Imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                byte[] img = ms.ToArray();
+                
+                consultas.SP_Editar_Producto(id_Medicamento, txtNombre.Text, txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1,img);
                 MessageBox.Show("Los cambios Guardados", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
@@ -112,7 +94,25 @@ namespace PRESENTACION
                 cmbCaja.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["ALMACEN"].ToString();
                 CmbPresentacion.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["PRESENTACIÒN"].ToString();
                 cmbLab.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["LABORATORIO"].ToString();
-                
+                try
+                {
+                    MemoryStream img = new MemoryStream((byte[])consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["imagen"]);
+                    Bitmap imagen = new Bitmap(img);
+                    ptb_Imagen.Image = imagen;
+                    ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
+                    ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
+
+                }
+                catch (Exception)
+                {
+                    string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÒN"].ToString();
+                    string str = Convert.ToString(Directory.GetCurrentDirectory());
+                    str = str.Replace(@"\bin\Debug", "");
+                    ptb_Imagen.Image = Image.FromFile(str + @"\Resources\Error.jpg");
+                    ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
+                    ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+
             }
             catch (Exception)
             {
@@ -143,24 +143,7 @@ namespace PRESENTACION
 
         private void FormEditarProducto_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÒN"].ToString();
-                string str = Convert.ToString(Directory.GetCurrentDirectory());
-                str = str.Replace(@"\bin\Debug", "");
-                ptb_Imagen.Load(str + @"\Resources\" + Nombre_Imagen + ".jpeg");
-                ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
-                ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
-            }
-            catch (Exception)
-            {
-                string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÒN"].ToString();
-                string str = Convert.ToString(Directory.GetCurrentDirectory());
-                str = str.Replace(@"\bin\Debug", "");
-                ptb_Imagen.Image = Image.FromFile(str + @"\Resources\Error.jpg");
-                ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
-                ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
-            }
+           
         }
 
 

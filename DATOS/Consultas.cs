@@ -26,11 +26,11 @@ namespace DATOS
             return tabla;
         }
 
-        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C)
+        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C,byte[] imagen)
         {
 
             Conexion.connection.Open();
-            string query = "INSERT INTO medicamento(Med_Composicion, Med_Fecha_V, Med_Total_I, Med_Fecha_I, Med_Total_E, Pre_C, Lab_C, Tip_C, Alm_C) value ('" + Med_Composicion + "','" + fecha_v + "','" + Med_Total_I + "','" + Fecha_I + "','" + Med_Total_E + "','" + Pre_C + "','" + Laboratorio + "','" + Tipo + "','" + caja + "');";
+            string query = "INSERT INTO medicamento(Med_Composicion, Med_Fecha_V, Med_Total_I, Med_Fecha_I, Med_Total_E, Pre_C, Lab_C, Tip_C, Alm_C,imagen) value ('" + Med_Composicion + "','" + fecha_v + "','" + Med_Total_I + "','" + Fecha_I + "','" + Med_Total_E + "','" + Pre_C + "','" + Laboratorio + "','" + Tipo + "','" + caja + "','" +imagen+"');";
             MySqlCommand comando = new MySqlCommand(query, Conexion.connection);
             comando.ExecuteNonQuery();
             Conexion.connection.Close();
@@ -343,7 +343,7 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm)
+        public DataTable SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm,byte[] imagen)
         {
             Conexion.connection.Open();
 
@@ -356,6 +356,7 @@ namespace DATOS
             cmd.Parameters.AddWithValue("lab", lab);
             cmd.Parameters.AddWithValue("tip", tip);
             cmd.Parameters.AddWithValue("alm", alm);
+            cmd.Parameters.AddWithValue("imagen", imagen);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
