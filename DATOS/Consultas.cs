@@ -396,5 +396,17 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
+        public DataTable SP_Restablecer_C(string DNI)
+        {
+            Conexion.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("SP_Restablecer_C", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("DNI", DNI);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
     }
 }

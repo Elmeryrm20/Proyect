@@ -31,25 +31,27 @@ namespace PRESENTACION
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgb_Usuario = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.bt_EliminarU = new System.Windows.Forms.PictureBox();
             this.bt_ActualizarU = new System.Windows.Forms.PictureBox();
             this.bt_EditarU = new System.Windows.Forms.PictureBox();
             this.bt_AgregarU = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgb_Usuario = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Restablecer = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EliminarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_ActualizarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EditarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_AgregarU)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Restablecer)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,8 +75,17 @@ namespace PRESENTACION
             this.panel1.Size = new System.Drawing.Size(592, 59);
             this.panel1.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(527, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 33);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btn_Restablecer);
             this.panel2.Controls.Add(this.bt_EliminarU);
             this.panel2.Controls.Add(this.bt_ActualizarU);
             this.panel2.Controls.Add(this.bt_EditarU);
@@ -84,45 +95,6 @@ namespace PRESENTACION
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(592, 54);
             this.panel2.TabIndex = 4;
-            // 
-            // dgb_Usuario
-            // 
-            this.dgb_Usuario.AllowUserToAddRows = false;
-            this.dgb_Usuario.AllowUserToDeleteRows = false;
-            this.dgb_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgb_Usuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgb_Usuario.Location = new System.Drawing.Point(0, 0);
-            this.dgb_Usuario.Name = "dgb_Usuario";
-            this.dgb_Usuario.ReadOnly = true;
-            this.dgb_Usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgb_Usuario.Size = new System.Drawing.Size(528, 293);
-            this.dgb_Usuario.TabIndex = 1;
-            this.dgb_Usuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Usuario_CellContentClick);
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 59);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(32, 293);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(560, 59);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(32, 293);
-            this.panel5.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dgb_Usuario);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(32, 59);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(528, 293);
-            this.panel3.TabIndex = 5;
             // 
             // bt_EliminarU
             // 
@@ -163,13 +135,54 @@ namespace PRESENTACION
             this.bt_AgregarU.TabStop = false;
             this.bt_AgregarU.Click += new System.EventHandler(this.pb_Click);
             // 
-            // pictureBox1
+            // dgb_Usuario
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(527, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 33);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.dgb_Usuario.AllowUserToAddRows = false;
+            this.dgb_Usuario.AllowUserToDeleteRows = false;
+            this.dgb_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgb_Usuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgb_Usuario.Location = new System.Drawing.Point(0, 0);
+            this.dgb_Usuario.Name = "dgb_Usuario";
+            this.dgb_Usuario.ReadOnly = true;
+            this.dgb_Usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgb_Usuario.Size = new System.Drawing.Size(528, 293);
+            this.dgb_Usuario.TabIndex = 1;
+            this.dgb_Usuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Usuario_CellContentClick);
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 59);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(32, 293);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(560, 59);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(32, 293);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dgb_Usuario);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(32, 59);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(528, 293);
+            this.panel3.TabIndex = 5;
+            // 
+            // btn_Restablecer
+            // 
+            this.btn_Restablecer.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_Restablecer.Location = new System.Drawing.Point(426, 6);
+            this.btn_Restablecer.Name = "btn_Restablecer";
+            this.btn_Restablecer.Size = new System.Drawing.Size(90, 36);
+            this.btn_Restablecer.TabIndex = 4;
+            this.btn_Restablecer.TabStop = false;
+            this.btn_Restablecer.Click += new System.EventHandler(this.btn_Restablecer_Click);
             // 
             // FormUsuarios
             // 
@@ -186,14 +199,15 @@ namespace PRESENTACION
             this.Text = "FormUsuarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).EndInit();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bt_EliminarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_ActualizarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EditarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_AgregarU)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Restablecer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,5 +226,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox btn_Restablecer;
     }
 }

@@ -20,6 +20,7 @@ namespace PRESENTACION
             mostrarUsuario();
         }
         string valor_ID = "";
+        string NOMBRE = "";
         public void mostrarUsuario()
         {
             dgb_Usuario.DataSource = consultas.ConsultaUsuario();
@@ -59,7 +60,31 @@ namespace PRESENTACION
         private void dgb_Usuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             valor_ID = dgb_Usuario.CurrentRow.Cells[0].Value.ToString();
+            NOMBRE = dgb_Usuario.CurrentRow.Cells[1].Value.ToString();
             label1.Text = valor_ID.ToString();
+        }
+
+        private void btn_Restablecer_Click(object sender, EventArgs e)
+        {
+            if (NOMBRE != "")
+            {
+                DialogResult result = MessageBox.Show("Seguro que desea restablecer la contraseña de " +NOMBRE , "Excelente!", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    consultas.SP_Restablecer_C(valor_ID);
+                    MessageBox.Show("Se a Restablecido la contraseña", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione Usuario", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+          
         }
     }
 }
