@@ -89,14 +89,13 @@ namespace DATOS
         }
 
 
-        public DataTable D_Login(string DNI, string password)
+        public DataTable D_Login(string DNI)
         {
             Conexion.connection.Open();
 
             MySqlCommand cmd = new MySqlCommand("SP_Login", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
-            cmd.Parameters.AddWithValue("PASS", password);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -105,7 +104,7 @@ namespace DATOS
 
             return dt;
         }
-        public DataTable D_Login(string DNI)
+        public DataTable D_Login(string DNI, string password)
         {
             Conexion.connection.Open();
             string query = "SELECT Tra_DNI AS 'DNI', Usu_PASS AS 'Constraseña', Usu_Tipo AS 'Tipo', concat(Tra_Nombre,' ',Tra_Apellido) AS 'Nombre' FROM trabajador WHERE Tra_DNI='" + DNI + "';";

@@ -1,7 +1,7 @@
 ﻿using DATOS;
 using System;
 using System.Data;
-using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using USUARIO;
 
@@ -20,7 +20,12 @@ namespace PRESENTACION
         #region Botones de Ventana
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("¿Desea Salir?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -162,11 +167,13 @@ namespace PRESENTACION
         //Nueva Contraseña
         private void label2_Click(object sender, EventArgs e)
         {
-            this.Hide();
 
+            this.Hide();
             FormIngresarNewContraseña frm = new FormIngresarNewContraseña();
 
             frm.Show();
+
+            AddOwnedForm(frm);
         }
         #endregion
 
@@ -317,25 +324,35 @@ namespace PRESENTACION
         #endregion
 
         #region Panel Movimiento
-        int n, mx, my;
+
+        //Mover Formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        //int n, mx, my;
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (n == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-            }
+            //if (n == 1)
+            //{
+            //    this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            //}
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
-            n = 0;
+            //n = 0;
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            n = 1;
-            mx = e.X;
-            my = e.Y;
+            //n = 1;
+            //mx = e.X;
+            //my = e.Y;
+
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
     }

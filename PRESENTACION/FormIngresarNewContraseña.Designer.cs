@@ -34,7 +34,7 @@
             this.PibCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtContraseña2 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PibIngresar = new System.Windows.Forms.PictureBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +43,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@
             this.panel1.Size = new System.Drawing.Size(662, 37);
             this.panel1.TabIndex = 14;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // PibVolver
             // 
@@ -71,6 +72,8 @@
             this.PibVolver.TabIndex = 14;
             this.PibVolver.TabStop = false;
             this.PibVolver.Click += new System.EventHandler(this.btn_Volver_Click);
+            this.PibVolver.MouseEnter += new System.EventHandler(this.PibVolver_MouseEnter);
+            this.PibVolver.MouseLeave += new System.EventHandler(this.PibVolver_MouseLeave);
             // 
             // PibMinimizar
             // 
@@ -83,6 +86,8 @@
             this.PibMinimizar.TabIndex = 13;
             this.PibMinimizar.TabStop = false;
             this.PibMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.PibMinimizar.MouseEnter += new System.EventHandler(this.PibMinimizar_MouseEnter);
+            this.PibMinimizar.MouseLeave += new System.EventHandler(this.PibMinimizar_MouseLeave);
             // 
             // PibCerrar
             // 
@@ -95,12 +100,14 @@
             this.PibCerrar.TabIndex = 12;
             this.PibCerrar.TabStop = false;
             this.PibCerrar.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.PibCerrar.MouseEnter += new System.EventHandler(this.PibCerrar_MouseEnter);
+            this.PibCerrar.MouseLeave += new System.EventHandler(this.PibCerrar_MouseLeave);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.txtContraseña2);
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.PibIngresar);
             this.panel2.Controls.Add(this.txtusuario);
             this.panel2.Controls.Add(this.txtcontraseña);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -127,17 +134,19 @@
             this.txtContraseña2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContraseña2.TextChanged += new System.EventHandler(this.txtContraseña2_TextChanged);
             // 
-            // pictureBox2
+            // PibIngresar
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.BotonReestablecer01;
-            this.pictureBox2.Location = new System.Drawing.Point(414, 276);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(180, 50);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.PibIngresar.BackColor = System.Drawing.Color.Transparent;
+            this.PibIngresar.Image = global::PRESENTACION.Properties.Resources.BotonReestablecer01;
+            this.PibIngresar.Location = new System.Drawing.Point(414, 276);
+            this.PibIngresar.Margin = new System.Windows.Forms.Padding(2);
+            this.PibIngresar.Name = "PibIngresar";
+            this.PibIngresar.Size = new System.Drawing.Size(180, 50);
+            this.PibIngresar.TabIndex = 0;
+            this.PibIngresar.TabStop = false;
+            this.PibIngresar.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.PibIngresar.MouseEnter += new System.EventHandler(this.PibIngresar_MouseEnter);
+            this.PibIngresar.MouseLeave += new System.EventHandler(this.PibIngresar_MouseLeave);
             // 
             // txtusuario
             // 
@@ -196,7 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -208,7 +217,7 @@
         private System.Windows.Forms.PictureBox PibCerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PibIngresar;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.TextBox txtcontraseña;
         private System.Windows.Forms.PictureBox pictureBox1;

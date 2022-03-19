@@ -28,6 +28,9 @@ namespace PRESENTACION
             this.DNI = DNI;
             this.Tipo = Tipo;
             this.Nombre = Nombre;
+
+            SeleccionarBoton(1);
+
             LlamarInicio();
 
         }

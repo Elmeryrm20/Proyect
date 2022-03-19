@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,11 +94,15 @@ namespace PRESENTACION
 
         private void btn_Volver_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
-            FormLogin frm = new FormLogin();
+            //FormLogin frm = new FormLogin();
 
-            frm.Show();
+            //frm.Show();
+
+            FormLogin hg = ((FormLogin)Owner);
+            hg.Show();
+            this.Close();
         }
 
         private void txtContraseña2_TextChanged(object sender, EventArgs e)
@@ -108,6 +113,65 @@ namespace PRESENTACION
         private void txtcontraseña_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void PibIngresar_MouseEnter(object sender, EventArgs e)
+        {
+            PibIngresar.Image = Properties.Resources.BotonReestablecer02;
+        }
+
+        private void PibIngresar_MouseLeave(object sender, EventArgs e)
+        {
+            PibIngresar.Image = Properties.Resources.BotonReestablecer01;
+
+        }
+
+        private void PibMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            PibMinimizar.Image = Properties.Resources.BotonVentanaMinimizar02;
+
+        }
+
+        private void PibMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            PibMinimizar.Image = Properties.Resources.BotonVentanaMinimizar01;
+
+        }
+
+        private void PibCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            PibCerrar.Image = Properties.Resources.BotonVentanaCerrar02;
+
+        }
+
+        private void PibCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            PibCerrar.Image = Properties.Resources.BotonVentanaCerrar01;
+
+        }
+
+        private void PibVolver_MouseEnter(object sender, EventArgs e)
+        {
+            PibVolver.Image = Properties.Resources.BotonVentanaAtras04;
+
+        }
+
+        private void PibVolver_MouseLeave(object sender, EventArgs e)
+        {
+            PibVolver.Image = Properties.Resources.BotonVentanaAtras01;
+
+        }
+
+        //Mover Formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
