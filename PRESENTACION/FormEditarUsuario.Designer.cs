@@ -40,7 +40,6 @@
             this.txt_Correo = new System.Windows.Forms.TextBox();
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
-            this.txt_DNI = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_DNI = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -79,6 +79,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txt_DNI);
             this.panel2.Controls.Add(this.txt_Fecha);
             this.panel2.Controls.Add(this.btn_Editar);
             this.panel2.Controls.Add(this.cmb_Estado);
@@ -88,7 +89,6 @@
             this.panel2.Controls.Add(this.txt_Correo);
             this.panel2.Controls.Add(this.txt_Apellido);
             this.panel2.Controls.Add(this.txt_Nombre);
-            this.panel2.Controls.Add(this.txt_DNI);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -174,13 +174,6 @@
             this.txt_Nombre.Size = new System.Drawing.Size(199, 20);
             this.txt_Nombre.TabIndex = 10;
             // 
-            // txt_DNI
-            // 
-            this.txt_DNI.Location = new System.Drawing.Point(123, 25);
-            this.txt_DNI.Name = "txt_DNI";
-            this.txt_DNI.Size = new System.Drawing.Size(199, 20);
-            this.txt_DNI.TabIndex = 9;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -262,6 +255,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI";
             // 
+            // txt_DNI
+            // 
+            this.txt_DNI.AutoSize = true;
+            this.txt_DNI.Location = new System.Drawing.Point(123, 24);
+            this.txt_DNI.Name = "txt_DNI";
+            this.txt_DNI.Size = new System.Drawing.Size(24, 13);
+            this.txt_DNI.TabIndex = 19;
+            this.txt_DNI.Text = "text";
+            // 
             // FormEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,7 +299,6 @@
         private System.Windows.Forms.TextBox txt_Correo;
         private System.Windows.Forms.TextBox txt_Apellido;
         private System.Windows.Forms.TextBox txt_Nombre;
-        private System.Windows.Forms.TextBox txt_DNI;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -307,5 +308,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txt_DNI;
     }
 }
