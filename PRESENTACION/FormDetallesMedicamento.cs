@@ -56,7 +56,7 @@ namespace PRESENTACION
                 string Nombre_Imagen = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
                 string str = Convert.ToString(Directory.GetCurrentDirectory());
                 str = str.Replace(@"\bin\Debug", "");
-                ptb_Imagen.Image = Image.FromFile(str + @"\Resources\" + Nombre_Imagen + ".jpeg");
+                ptb_Imagen.Load(str + @"\Resources\" + Nombre_Imagen + ".jpeg");
                 ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
                 ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
             }
