@@ -152,6 +152,7 @@
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(199, 20);
             this.txt_Telefono.TabIndex = 13;
+            this.txt_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Telefono_KeyPress);
             // 
             // txt_Correo
             // 

@@ -96,5 +96,10 @@ namespace PRESENTACION
 
             }
         }
+
+        private void txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
     }
 }
