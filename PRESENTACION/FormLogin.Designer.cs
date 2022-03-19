@@ -38,6 +38,9 @@
             this.DtgPrueba = new System.Windows.Forms.DataGridView();
             this.PibIngresar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PibCheckUsu = new System.Windows.Forms.PictureBox();
+            this.PibCheckPass = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -45,6 +48,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCheckUsu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCheckPass)).BeginInit();
             this.SuspendLayout();
             // 
             // txtusuario
@@ -123,6 +129,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.PibCheckPass);
+            this.panel2.Controls.Add(this.PibCheckUsu);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.DtgPrueba);
             this.panel2.Controls.Add(this.PibIngresar);
@@ -185,6 +194,33 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Lime;
+            this.pictureBox2.Location = new System.Drawing.Point(-15, -15);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // PibCheckUsu
+            // 
+            this.PibCheckUsu.Location = new System.Drawing.Point(610, 124);
+            this.PibCheckUsu.Name = "PibCheckUsu";
+            this.PibCheckUsu.Size = new System.Drawing.Size(20, 20);
+            this.PibCheckUsu.TabIndex = 18;
+            this.PibCheckUsu.TabStop = false;
+            // 
+            // PibCheckPass
+            // 
+            this.PibCheckPass.BackColor = System.Drawing.Color.Red;
+            this.PibCheckPass.Location = new System.Drawing.Point(610, 189);
+            this.PibCheckPass.Name = "PibCheckPass";
+            this.PibCheckPass.Size = new System.Drawing.Size(20, 20);
+            this.PibCheckPass.TabIndex = 18;
+            this.PibCheckPass.TabStop = false;
+            this.PibCheckPass.Visible = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +242,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCheckUsu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCheckPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +260,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView DtgPrueba;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox PibCheckPass;
+        private System.Windows.Forms.PictureBox PibCheckUsu;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

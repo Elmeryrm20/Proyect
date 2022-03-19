@@ -88,6 +88,7 @@ namespace DATOS
             return tabla;
         }
 
+
         public DataTable D_Login(string DNI, string password)
         {
             Conexion.connection.Open();
@@ -104,6 +105,20 @@ namespace DATOS
 
             return dt;
         }
+        public DataTable D_Login(string DNI)
+        {
+            Conexion.connection.Open();
+            string query = "SELECT Tra_DNI AS 'DNI', Usu_PASS AS 'Constraseña', Usu_Tipo AS 'Tipo', concat(Tra_Nombre,' ',Tra_Apellido) AS 'Nombre' FROM trabajador WHERE Tra_DNI='" + DNI + "';";
+            MySqlCommand comando = new MySqlCommand(query, Conexion.connection);
+            comando.ExecuteNonQuery();
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+
+        }
+
 
         public DataTable D_Consulta_Dinamica(string Busqueda)
         {
@@ -166,6 +181,30 @@ namespace DATOS
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("P_CargoTrabajador", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+        }
+        public DataTable D_TipoTrabajador()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("P_TipoTrabajador", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            Conexion.connection.Close();
+            return tabla;
+        }
+        public DataTable D_EstadoTrabajador()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("P_EstadoTrabajador", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -323,6 +362,51 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
+        public DataTable SP_ListaU_Para_Edit(string Med_Codigo)
+        {
+            Conexion.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("SP_ListaU_Para_Edit", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Codigo", Med_Codigo);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
 
+        public DataTable SP_Editar_Usuario(string DNI, string Nombre, string Apellido, string fecha_N, string Correo, string Telefono, int Tipo, int Cargo, int Estado)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Editar_Usuario", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("DNI", DNI);
+            cmd.Parameters.AddWithValue("Nombre", Nombre);
+            cmd.Parameters.AddWithValue("Apellido", Apellido);
+            cmd.Parameters.AddWithValue("fecha_N", fecha_N);
+            cmd.Parameters.AddWithValue("Correo", Correo);
+            cmd.Parameters.AddWithValue("Telefono", Telefono);
+            cmd.Parameters.AddWithValue("Tipo", Tipo);
+            cmd.Parameters.AddWithValue("Cargo", Cargo);
+            cmd.Parameters.AddWithValue("Estado", Estado);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+        public DataTable SP_Restablecer_C(string DNI)
+        {
+            Conexion.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("SP_Restablecer_C", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("DNI", DNI);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
     }
 }

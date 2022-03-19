@@ -31,7 +31,7 @@ namespace PRESENTACION
 
         private void btnSerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
         void Ingreso()
         {
@@ -53,6 +53,9 @@ namespace PRESENTACION
             }
         }
 
-
+        private void Txt_Cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
     }
 }

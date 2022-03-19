@@ -32,7 +32,7 @@ namespace PRESENTACION
         readonly string DNI;
         private void btnSerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
         void Egreso()
         {
@@ -76,22 +76,7 @@ namespace PRESENTACION
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (e.KeyChar == '-')
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+            validar.soloNumeros(e);
         }
     }
 }

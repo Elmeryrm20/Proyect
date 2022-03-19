@@ -77,6 +77,12 @@
     <Compile Include="FormEditarProducto.Designer.cs">
       <DependentUpon>FormEditarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarUsuario.Designer.cs">
+      <DependentUpon>FormEditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEgreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="FormEditarProducto.resx">
       <DependentUpon>FormEditarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarUsuario.resx">
+      <DependentUpon>FormEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEgreso.resx">
       <DependentUpon>FormEgreso.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +221,10 @@
     <ProjectReference Include="..\DATOS\DATOS.csproj">
       <Project>{a46d7383-74fe-4eed-b8ad-09d7be99723d}</Project>
       <Name>DATOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USUARIO\USUARIO.csproj">
+      <Project>{dc922046-b397-44b2-9b4d-588062413418}</Project>
+      <Name>USUARIO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

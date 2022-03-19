@@ -61,7 +61,6 @@ namespace PRESENTACION
         private void btnSerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void Btn_Editar_Click(object sender, EventArgs e)
@@ -162,6 +161,12 @@ namespace PRESENTACION
                 ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
                 ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
             }
+        }
+
+
+        private void FormEditarProducto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

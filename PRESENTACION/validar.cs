@@ -11,11 +11,12 @@ namespace PRESENTACION
     {
         public static void soloNumeros(KeyPressEventArgs pE)
         {
-            if (char.IsDigit(pE.KeyChar))
+
+            if (Char.IsDigit(pE.KeyChar))
             {
                 pE.Handled = false;
             }
-            else if (char.IsControl(pE.KeyChar))
+            else if (Char.IsControl(pE.KeyChar))
             {
                 pE.Handled = false;
             }
