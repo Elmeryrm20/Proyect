@@ -27,6 +27,8 @@ namespace PRESENTACION
             this.valor = valor;
             this.DNI = DNI;
             Egreso();
+            label1.Text = valor.ToString();
+
         }
         readonly int valor;
         readonly string DNI;
@@ -45,16 +47,17 @@ namespace PRESENTACION
 
             if (txtCantidad.Text.Length != 0)
             {
+
                 try
                 {
                     int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
                     int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
                     int Existencias = Ingreso - Egreso;
-
+                    int cantidad = Convert.ToInt32(txtCantidad.Text);
                     if (Convert.ToInt32(txtCantidad.Text) <= Existencias)
                     {
-                        consultas.SP_Agregar_Egreso_Medicamento(valor.ToString(), txtCantidad.Text);
-                        consultas.SP_Agregar_Detalle_Egreso(valor.ToString(), txtCantidad.Text, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, 4);
+                        consultas.SP_Agregar_Egreso_Medicamento(valor,cantidad);
+                        consultas.SP_Agregar_Detalle_Egreso(valor, cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, 4);
                         MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
@@ -64,8 +67,10 @@ namespace PRESENTACION
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Error", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } 
+
+                    MessageBox.Show("Error", "Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             else
             {

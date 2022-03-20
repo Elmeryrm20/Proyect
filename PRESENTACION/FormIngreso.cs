@@ -40,10 +40,11 @@ namespace PRESENTACION
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            int cantidad = Convert.ToInt32(Txt_Cantidad.Text);
             try
             {
-                consultas.SP_Agregar_Ingreso_Medicamento(valor.ToString(), Txt_Cantidad.Text, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
-                consultas.SP_Agregar_Detalle_Ingreso(valor, Txt_Cantidad.Text, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+                consultas.SP_Agregar_Ingreso_Medicamento(valor,cantidad, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+                consultas.SP_Agregar_Detalle_Ingreso(valor,cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
                 MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception)
