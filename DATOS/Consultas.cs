@@ -9,10 +9,6 @@ namespace DATOS
     {
         D_Empleado Conexion = new D_Empleado();
 
-        //public DataTable ConsultaMed(int codigo, string composicion, string fecha_v, int total_i, string fecha_i, int total_e,)
-        //{
-
-        //}
         public DataTable ConsultaMed()
         {
             Conexion.connection.Open();
@@ -22,6 +18,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -42,6 +47,15 @@ namespace DATOS
             cmd.Parameters.AddWithValue("tipo", Tipo);
             cmd.Parameters.AddWithValue("alm", caja);
             cmd.Parameters.AddWithValue("imagen", imagen);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
 
         }
@@ -55,6 +69,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -68,6 +91,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -81,6 +113,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -93,6 +134,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -108,7 +158,15 @@ namespace DATOS
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
 
             return dt;
@@ -122,6 +180,15 @@ namespace DATOS
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return dt;
 
@@ -138,6 +205,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
 
@@ -151,6 +227,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -163,7 +248,15 @@ namespace DATOS
             comando.Parameters.AddWithValue("Descripcion", Nombre);
             comando.Parameters.AddWithValue("Direccion", Direccion);
             comando.Parameters.AddWithValue("Telefono", Telefono);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
 
         }
@@ -176,6 +269,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -189,6 +291,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -201,6 +312,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -213,6 +333,15 @@ namespace DATOS
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return tabla;
         }
@@ -226,7 +355,15 @@ namespace DATOS
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
             return dt;
         }
