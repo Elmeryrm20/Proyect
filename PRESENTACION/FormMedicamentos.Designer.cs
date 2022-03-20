@@ -295,9 +295,9 @@ namespace PRESENTACION
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(389, 45);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.Size = new System.Drawing.Size(53, 13);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Eliminar";
+            this.label9.Text = "Actualizar";
             // 
             // FormMedicamentos
             // 

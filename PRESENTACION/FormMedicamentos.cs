@@ -68,7 +68,7 @@ namespace PRESENTACION
 
         }
 
-        //Botón Búsqueda
+        //Botón Actualizar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Rellenartabla();
@@ -77,7 +77,6 @@ namespace PRESENTACION
 
         int valor_ID = 1;
 
-        //Obtener Id del Medicamento
         private void dgb_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -95,36 +94,37 @@ namespace PRESENTACION
         //Abrir Formulario de Detalles
         private void btn_Detalles_Click(object sender, EventArgs e)
         {
-            FormDetallesMedicamento frm = new FormDetallesMedicamento(valor_ID);
-            frm.ShowDialog();
+            FormDetallesMedicamento frm1 = new FormDetallesMedicamento(valor_ID);
+            frm1.ShowDialog();
         }
 
         //Abrir Formulario de Ingreso
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             
-            FormIngreso frm = new FormIngreso(valor_ID, DNI);
-            AddOwnedForm(frm);
-            frm.ShowDialog();
+            FormIngreso frm2 = new FormIngreso(valor_ID, DNI);
+            AddOwnedForm(frm2);
+            frm2.ShowDialog();
         }
 
         //Abrir Formulario de Egreso
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            FormEgreso frm = new FormEgreso(valor_ID, DNI);
-            AddOwnedForm(frm);
-            frm.ShowDialog();
+            FormEgreso frm3 = new FormEgreso(valor_ID, DNI);
+            AddOwnedForm(frm3);
+            frm3.ShowDialog();
         }
 
         //Abrir Formulario de Editar
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FormEditarProducto frm = new FormEditarProducto(valor_ID);
-            frm.ShowDialog();
+            FormEditarProducto frm4 = new FormEditarProducto(valor_ID);
+            frm4.ShowDialog();
 
         }
         #endregion
 
+        //Obtener Id del Medicamento
         private void dgb_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;

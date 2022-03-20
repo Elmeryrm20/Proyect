@@ -444,13 +444,32 @@ namespace DATOS
             Conexion.connection.Close();
 
         }
-        public void SP_Agregar_Egreso_Medicamento(int Cod_Medicamento, int Cantidad)
+        public void D_ActualizarEgreso(int Med_Codigo, int CantidadEgresada)
+        {
+            Conexion.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("Sp_ActualizarEgreso", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
+            cmd.Parameters.AddWithValue("Cantidad", CantidadEgresada);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            Conexion.connection.Close();
+        }
+        public void SP_Agregar_Egreso_Medicamento(int Med_Codigo, int Cantidad)
         {
             Conexion.connection.Open();
 
             MySqlCommand cmd = new MySqlCommand("SP_Agregar_Egreso_Medicamento", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Med_Codigo", Cod_Medicamento);
+            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
             cmd.Parameters.AddWithValue("Cantidad", Cantidad);
 
             try
