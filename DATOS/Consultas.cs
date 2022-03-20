@@ -444,12 +444,12 @@ namespace DATOS
             Conexion.connection.Close();
 
         }
-        public void D_ActualizarEgreso(int Med_Codigo, int CantidadEgresada)
+        public void D_ActualizarEgreso(int Med_id, int CantidadEgresada)
         {
             Conexion.connection.Open();
             MySqlCommand cmd = new MySqlCommand("Sp_ActualizarEgreso", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
+            cmd.Parameters.AddWithValue("Med_id", Med_id);
             cmd.Parameters.AddWithValue("Cantidad", CantidadEgresada);
 
             try
@@ -463,27 +463,7 @@ namespace DATOS
 
             Conexion.connection.Close();
         }
-        public void SP_Agregar_Egreso_Medicamento(int Med_Codigo, int Cantidad)
-        {
-            Conexion.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Egreso_Medicamento", Conexion.connection);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
-            cmd.Parameters.AddWithValue("Cantidad", Cantidad);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
-            Conexion.connection.Close();
-
-        }
         public void SP_Agregar_Detalle_Ingreso(int Med_Codigo, int Cantidad, string Ing_Fecha, string Tra_DNI, string Dei_Fecha_V)
         {
             Conexion.connection.Open();

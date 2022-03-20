@@ -73,6 +73,7 @@ namespace PRESENTACION
         {
             Rellenartabla();
             txb_Buscar.Clear();
+            valor_ID = 1;
         }
 
         int valor_ID = 1;
