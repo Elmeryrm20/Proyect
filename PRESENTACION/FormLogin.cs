@@ -12,10 +12,18 @@ namespace PRESENTACION
         public FormLogin()
         {
             InitializeComponent();
-
+            Utilidades();
         }
 
         Consultas du = new Consultas();
+
+        private void Utilidades()
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(PibMinimizar, "Minimizar");
+            toolTip.SetToolTip(PibCerrar, "Cerrar");
+
+        }
 
         #region Botones de Ventana
         private void pictureBox3_Click(object sender, EventArgs e)

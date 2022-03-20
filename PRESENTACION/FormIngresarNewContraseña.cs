@@ -18,9 +18,17 @@ namespace PRESENTACION
         public FormIngresarNewContraseña()
         {
             InitializeComponent();
+            Utilidades();
+        }
+        private void Utilidades()
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(PibMinimizar, "Minimizar");
+            toolTip.SetToolTip(PibCerrar, "Cerrar");
+            toolTip.SetToolTip(PibVolver, "Volver a la ventana de Login");
+
         }
 
-      
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
