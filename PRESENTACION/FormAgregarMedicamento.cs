@@ -113,14 +113,21 @@ namespace PRESENTACION
             Validaciones();
             if (Validaciones() == true)
             {
-                MemoryStream ms = new MemoryStream();
-                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] img = ms.ToArray();
 
-                consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1,img);
+                if (pictureBox1.Image!=null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    byte[] img = ms.ToArray();
+                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
+                }
+                else
+                {
+                    byte[] img = null;
+                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
+                }
 
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                
                 textNombre.Text = "";
                 textCantidad.Text = "";
                 textGramaje.Text = "";
@@ -129,6 +136,7 @@ namespace PRESENTACION
                 cmbTipo.Text = "Seleccione Tipo";
                 CmbPresentacion.Text = "Seleccione Presentacion";
                 dtFecha_Vencimiento.Value = DateTime.Now;
+                pictureBox1.Image = null;
             }
         }
 

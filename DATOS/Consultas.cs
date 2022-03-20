@@ -26,15 +26,27 @@ namespace DATOS
             return tabla;
         }
 
-        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C,byte[] imagen)
+        public DataTable D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C,byte[] imagen)
         {
 
             Conexion.connection.Open();
-            string query = "INSERT INTO medicamento(Med_Composicion, Med_Fecha_V, Med_Total_I, Med_Fecha_I, Med_Total_E, Pre_C, Lab_C, Tip_C, Alm_C,imagen) value ('" + Med_Composicion + "','" + fecha_v + "','" + Med_Total_I + "','" + Fecha_I + "','" + Med_Total_E + "','" + Pre_C + "','" + Laboratorio + "','" + Tipo + "','" + caja + "','" +imagen+"');";
-            MySqlCommand comando = new MySqlCommand(query, Conexion.connection);
-            comando.ExecuteNonQuery();
+            MySqlCommand cmd = new MySqlCommand("SP_Ingresar_Medicamento", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Composicion", Med_Composicion);
+            cmd.Parameters.AddWithValue("fecha_V", fecha_v);
+            cmd.Parameters.AddWithValue("cantidad_I", Med_Total_I);
+            cmd.Parameters.AddWithValue("fecha_i", Fecha_I);
+            cmd.Parameters.AddWithValue("cantidad_E", Med_Total_E);
+            cmd.Parameters.AddWithValue("pre", Pre_C);
+            cmd.Parameters.AddWithValue("lab", Laboratorio);
+            cmd.Parameters.AddWithValue("tipo", Tipo);
+            cmd.Parameters.AddWithValue("alm", caja);
+            cmd.Parameters.AddWithValue("imagen", imagen);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
             Conexion.connection.Close();
-
+            return dt;
         }
 
         public DataTable tipo()

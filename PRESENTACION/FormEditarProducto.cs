@@ -68,12 +68,21 @@ namespace PRESENTACION
 
             try
             {
-                MemoryStream ms = new MemoryStream();
-                ptb_Imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] img = ms.ToArray();
-                
-                consultas.SP_Editar_Producto(id_Medicamento, txtNombre.Text, txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1,img);
+                if (ptb_Imagen.Image!=null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    ptb_Imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    byte[] img = ms.ToArray();
+
+                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img);
+                }
+                else
+                {
+                    byte[] img = null;
+                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img);
+                }
                 MessageBox.Show("Los cambios Guardados", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Consulta_Editar_Medicamento();
 
             }
             catch (Exception)
