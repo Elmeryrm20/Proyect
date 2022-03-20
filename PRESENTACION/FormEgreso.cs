@@ -1,32 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using DATOS;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DATOS;
 
 namespace PRESENTACION
 {
     public partial class FormEgreso : Form
     {
-        Consultas consultas=new Consultas();
+        Consultas consultas = new Consultas();
         public FormEgreso()
         {
             InitializeComponent();
-           
+
 
         }
 
-        public FormEgreso(int valor ,string DNI)
+        public FormEgreso(int valor, string DNI)
         {
             InitializeComponent();
             this.valor = valor;
             this.DNI = DNI;
-            Egreso();
+            ObtenerIngresoEgreso();
         }
         readonly int valor;
         readonly string DNI;
@@ -34,12 +28,21 @@ namespace PRESENTACION
         {
             this.Close();
         }
-        void Egreso()
+
+        int Ingreso = 0;
+        int Egreso = 0;
+        void ObtenerIngresoEgreso()
         {
-            lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
-            int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
-            int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
-            label1.Text = (Ingreso - Egreso).ToString();
+            DataTable dt = new DataTable();
+            dt = consultas.D_Medicamento_Detallado(valor);
+            //lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
+            //int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
+            //int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
+            lbl_Nombre.Text = dt.Rows[0][0].ToString();
+            Ingreso = (int)dt.Rows[0][1];
+            Egreso = (int)dt.Rows[0][2];
+
+            LblStock.Text = (Ingreso - Egreso).ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -50,15 +53,22 @@ namespace PRESENTACION
 
                 try
                 {
-                    int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
-                    int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
+                    //int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
+                    //int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
+
                     int Existencias = Ingreso - Egreso;
                     int cantidad = Convert.ToInt32(txtCantidad.Text);
                     if (Convert.ToInt32(txtCantidad.Text) <= Existencias)
                     {
-                        consultas.SP_Agregar_Egreso_Medicamento(valor,cantidad);
+                        consultas.SP_Agregar_Egreso_Medicamento(valor, cantidad);
                         consultas.SP_Agregar_Detalle_Egreso(valor, cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, 4);
                         MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Ingreso = 0;
+                        Egreso = 0;
+                        FormMedicamentos FrmMed = Owner as FormMedicamentos;
+                        FrmMed.Rellenartabla();
+                        FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[valor - 1].Cells[0];
+                        Close();
                     }
                     else
                     {
@@ -84,6 +94,6 @@ namespace PRESENTACION
             validar.soloNumeros(e);
         }
 
-      
+
     }
 }

@@ -34,7 +34,7 @@ namespace PRESENTACION
         readonly string DNI;
 
         #region Métodos al cargar el formulario
-        void Rellenartabla()
+        public void Rellenartabla()
         {
             dgb_Medicamentos.DataSource = consultas.ConsultaMed();
             dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -102,7 +102,9 @@ namespace PRESENTACION
         //Abrir Formulario de Ingreso
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            
             FormIngreso frm = new FormIngreso(valor_ID, DNI);
+            AddOwnedForm(frm);
             frm.ShowDialog();
         }
 
@@ -110,6 +112,7 @@ namespace PRESENTACION
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             FormEgreso frm = new FormEgreso(valor_ID, DNI);
+            AddOwnedForm(frm);
             frm.ShowDialog();
         }
 

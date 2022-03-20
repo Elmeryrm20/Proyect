@@ -330,8 +330,6 @@ namespace PRESENTACION
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgb_Medicamentos;
         private System.Windows.Forms.TextBox txb_Buscar;
         private System.Windows.Forms.PictureBox btn_Actualizar;
         private System.Windows.Forms.PictureBox btn_Detalles;
@@ -354,5 +352,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.DataGridView dgb_Medicamentos;
     }
 }

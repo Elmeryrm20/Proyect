@@ -19,7 +19,7 @@ namespace PRESENTACION
             this.DNI = DNI;
             this.valor = valor;
             Ingreso();
-        } 
+        }
         #endregion
 
         int valor;
@@ -45,9 +45,14 @@ namespace PRESENTACION
             int cantidad = Convert.ToInt32(Txt_Cantidad.Text);
             try
             {
-                consultas.SP_Agregar_Ingreso_Medicamento(valor,cantidad, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
-                consultas.SP_Agregar_Detalle_Ingreso(valor,cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+                consultas.SP_Agregar_Ingreso_Medicamento(valor, cantidad, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+                consultas.SP_Agregar_Detalle_Ingreso(valor, cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
                 MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                FormMedicamentos FrmMed = Owner as FormMedicamentos;
+                FrmMed.Rellenartabla();
+                FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[valor-1].Cells[0];
+                Close();
             }
             catch (Exception)
             {
