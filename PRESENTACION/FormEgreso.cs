@@ -27,8 +27,6 @@ namespace PRESENTACION
             this.valor = valor;
             this.DNI = DNI;
             Egreso();
-            label1.Text = valor.ToString();
-
         }
         readonly int valor;
         readonly string DNI;
@@ -39,7 +37,9 @@ namespace PRESENTACION
         void Egreso()
         {
             lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
-
+            int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
+            int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
+            label1.Text = (Ingreso - Egreso).ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -83,5 +83,7 @@ namespace PRESENTACION
         {
             validar.soloNumeros(e);
         }
+
+      
     }
 }

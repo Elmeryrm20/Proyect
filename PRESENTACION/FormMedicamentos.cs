@@ -99,7 +99,7 @@ namespace PRESENTACION
         private void btn_Filtrar_Click(object sender, EventArgs e)
         {
             label4.Text= cmbTipo.SelectedText.ToString();
-            dgb_Medicamentos.DataSource=consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedText.ToString());
+            dgb_Medicamentos.DataSource= consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedText.ToString());
         }
     }
 }
