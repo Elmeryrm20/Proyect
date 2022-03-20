@@ -33,29 +33,30 @@ namespace PRESENTACION
             this.txb_Buscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Filtrar = new System.Windows.Forms.PictureBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btn_Detalles = new System.Windows.Forms.PictureBox();
             this.btn_Actualizar = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btn_Filtrar = new System.Windows.Forms.PictureBox();
+            this.btn_Detalles = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Filtrar)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Detalles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Actualizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Filtrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Detalles)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgb_Medicamentos
@@ -94,8 +95,9 @@ namespace PRESENTACION
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btn_Filtrar);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmbTipo);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txb_Buscar);
@@ -104,6 +106,34 @@ namespace PRESENTACION
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(659, 73);
             this.panel1.TabIndex = 7;
+            // 
+            // btn_Filtrar
+            // 
+            this.btn_Filtrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Filtrar.Location = new System.Drawing.Point(551, 43);
+            this.btn_Filtrar.Name = "btn_Filtrar";
+            this.btn_Filtrar.Size = new System.Drawing.Size(56, 21);
+            this.btn_Filtrar.TabIndex = 9;
+            this.btn_Filtrar.TabStop = false;
+            this.btn_Filtrar.Click += new System.EventHandler(this.btn_Filtrar_Click);
+            // 
+            // cmbTipo
+            // 
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Location = new System.Drawing.Point(415, 43);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(130, 21);
+            this.cmbTipo.TabIndex = 8;
+            this.cmbTipo.Text = "Filtrar por...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(342, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Composicion";
             // 
             // label2
             // 
@@ -128,31 +158,6 @@ namespace PRESENTACION
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(659, 63);
             this.panel3.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 73);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(40, 283);
-            this.panel2.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(619, 73);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(40, 283);
-            this.panel4.TabIndex = 11;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.dgb_Medicamentos);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(40, 73);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(579, 283);
-            this.panel5.TabIndex = 12;
             // 
             // pictureBox2
             // 
@@ -184,16 +189,6 @@ namespace PRESENTACION
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // btn_Detalles
-            // 
-            this.btn_Detalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_Detalles.Location = new System.Drawing.Point(14, 16);
-            this.btn_Detalles.Name = "btn_Detalles";
-            this.btn_Detalles.Size = new System.Drawing.Size(74, 26);
-            this.btn_Detalles.TabIndex = 3;
-            this.btn_Detalles.TabStop = false;
-            this.btn_Detalles.Click += new System.EventHandler(this.btn_Detalles_Click);
-            // 
             // btn_Actualizar
             // 
             this.btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -204,31 +199,49 @@ namespace PRESENTACION
             this.btn_Actualizar.TabStop = false;
             this.btn_Actualizar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label3
+            // btn_Detalles
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(342, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Composicion";
+            this.btn_Detalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Detalles.Location = new System.Drawing.Point(14, 16);
+            this.btn_Detalles.Name = "btn_Detalles";
+            this.btn_Detalles.Size = new System.Drawing.Size(74, 26);
+            this.btn_Detalles.TabIndex = 3;
+            this.btn_Detalles.TabStop = false;
+            this.btn_Detalles.Click += new System.EventHandler(this.btn_Detalles_Click);
             // 
-            // comboBox1
+            // panel2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(415, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 21);
-            this.comboBox1.TabIndex = 8;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 73);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(40, 283);
+            this.panel2.TabIndex = 10;
             // 
-            // btn_Filtrar
+            // panel4
             // 
-            this.btn_Filtrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Filtrar.Location = new System.Drawing.Point(551, 43);
-            this.btn_Filtrar.Name = "btn_Filtrar";
-            this.btn_Filtrar.Size = new System.Drawing.Size(56, 21);
-            this.btn_Filtrar.TabIndex = 9;
-            this.btn_Filtrar.TabStop = false;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(619, 73);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(40, 283);
+            this.panel4.TabIndex = 11;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dgb_Medicamentos);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(40, 73);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(579, 283);
+            this.panel5.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(412, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "label4";
             // 
             // FormMedicamentos
             // 
@@ -247,15 +260,15 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Filtrar)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Detalles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Actualizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Filtrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Detalles)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -278,6 +291,7 @@ namespace PRESENTACION
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btn_Filtrar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.Label label4;
     }
 }

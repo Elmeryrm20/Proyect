@@ -26,6 +26,7 @@ namespace PRESENTACION
             InitializeComponent();
             this.DNI = DNI;
             rellenartabla();
+            Elementos_Filtrar();
            
         }
         readonly string DNI;
@@ -34,7 +35,11 @@ namespace PRESENTACION
             dgb_Medicamentos.DataSource = consultas.ConsultaMed();
             dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
+        void Elementos_Filtrar()
+        {
+            cmbTipo.DisplayMember = "tip_descripcion";
+            cmbTipo.DataSource = consultas.tipo();
+        }
         int valor_ID = 1;
         private void FormMedicamentos_Load(object sender, EventArgs e)
         {
@@ -89,6 +94,12 @@ namespace PRESENTACION
             FormEditarProducto frm = new FormEditarProducto(valor_ID);
             frm.ShowDialog();
 
+        }
+
+        private void btn_Filtrar_Click(object sender, EventArgs e)
+        {
+            label4.Text= cmbTipo.SelectedText.ToString();
+            dgb_Medicamentos.DataSource=consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedText.ToString());
         }
     }
 }

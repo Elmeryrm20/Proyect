@@ -320,10 +320,9 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable SP_Agregar_Detalle_Ingreso(string Med_Codigo, string Cantidad,string Ing_Fecha,string Tra_DNI,string Dei_Fecha_V)
+        public void SP_Agregar_Detalle_Ingreso(int Med_Codigo, string Cantidad,string Ing_Fecha,string Tra_DNI,string Dei_Fecha_V)
         {
             Conexion.connection.Open();
-
             MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Ingreso", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
@@ -331,11 +330,7 @@ namespace DATOS
             cmd.Parameters.AddWithValue("Ing_Fecha", Ing_Fecha);
             cmd.Parameters.AddWithValue("Tra_DNI", Tra_DNI);
             cmd.Parameters.AddWithValue("Dei_Fecha_V", Dei_Fecha_V);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
             Conexion.connection.Close();
-            return dt;
         }
         public DataTable SP_Agregar_Detalle_Egreso(string Med_Codigo, string Cantidad, string Egr_Fecha, string Tra_DNI, int Dee_N_Semana)
         {
@@ -419,6 +414,20 @@ namespace DATOS
             da.Fill(dt);
             Conexion.connection.Close();
             return dt;
+        }
+        public DataTable SP_Consulta_Medicamento_Filtrado(string Tipo)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_Consulta_Medicamento_Filtrado", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Tipo", Tipo);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+
         }
     }
 }
