@@ -30,13 +30,6 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.PnlCuerpo = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_Maximizar = new System.Windows.Forms.PictureBox();
-            this.Btn_Normal = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Btn_Acerca = new System.Windows.Forms.PictureBox();
             this.Btn_Config = new System.Windows.Forms.PictureBox();
@@ -46,13 +39,14 @@ namespace PRESENTACION
             this.Btn_Medicamentos = new System.Windows.Forms.PictureBox();
             this.Btn_Agregar = new System.Windows.Forms.PictureBox();
             this.Btn_Inicio = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Maximizar = new System.Windows.Forms.PictureBox();
+            this.Btn_Normal = new System.Windows.Forms.PictureBox();
+            this.PnlCuerpo = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Config)).BeginInit();
@@ -62,6 +56,12 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Medicamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -81,99 +81,6 @@ namespace PRESENTACION
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 534);
             this.panel2.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btn_Maximizar);
-            this.panel1.Controls.Add(this.Btn_Normal);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(160, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(721, 32);
-            this.panel1.TabIndex = 4;
-            this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // PnlCuerpo
-            // 
-            this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
-            this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlCuerpo.Location = new System.Drawing.Point(160, 32);
-            this.PnlCuerpo.Margin = new System.Windows.Forms.Padding(2);
-            this.PnlCuerpo.Name = "PnlCuerpo";
-            this.PnlCuerpo.Size = new System.Drawing.Size(721, 502);
-            this.PnlCuerpo.TabIndex = 5;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(642, 5);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(692, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btn_Maximizar
-            // 
-            this.btn_Maximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_Maximizar.BackColor = System.Drawing.Color.Gray;
-            this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Maximizar.Location = new System.Drawing.Point(667, 5);
-            this.btn_Maximizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Maximizar.Name = "btn_Maximizar";
-            this.btn_Maximizar.Size = new System.Drawing.Size(27, 27);
-            this.btn_Maximizar.TabIndex = 3;
-            this.btn_Maximizar.TabStop = false;
-            this.btn_Maximizar.Click += new System.EventHandler(this.pictureBox4_Click_1);
-            // 
-            // Btn_Normal
-            // 
-            this.Btn_Normal.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Btn_Normal.BackColor = System.Drawing.Color.Black;
-            this.Btn_Normal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Normal.Location = new System.Drawing.Point(667, 5);
-            this.Btn_Normal.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Normal.Name = "Btn_Normal";
-            this.Btn_Normal.Size = new System.Drawing.Size(27, 27);
-            this.Btn_Normal.TabIndex = 2;
-            this.Btn_Normal.TabStop = false;
-            this.Btn_Normal.Visible = false;
-            this.Btn_Normal.Click += new System.EventHandler(this.Btn_Normal_Click);
             // 
             // pictureBox4
             // 
@@ -304,6 +211,102 @@ namespace PRESENTACION
             this.Btn_Inicio.TabStop = false;
             this.Btn_Inicio.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btn_Maximizar);
+            this.panel1.Controls.Add(this.Btn_Normal);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(160, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(721, 32);
+            this.panel1.TabIndex = 4;
+            this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.BotonVentanaAtras01;
+            this.pictureBox2.Location = new System.Drawing.Point(21, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar01;
+            this.pictureBox3.Location = new System.Drawing.Point(642, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
+            this.pictureBox1.Location = new System.Drawing.Point(692, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btn_Maximizar
+            // 
+            this.btn_Maximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_Maximizar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Maximizar.Location = new System.Drawing.Point(667, 5);
+            this.btn_Maximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Maximizar.Name = "btn_Maximizar";
+            this.btn_Maximizar.Size = new System.Drawing.Size(24, 24);
+            this.btn_Maximizar.TabIndex = 3;
+            this.btn_Maximizar.TabStop = false;
+            this.btn_Maximizar.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
+            // Btn_Normal
+            // 
+            this.Btn_Normal.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_Normal.BackColor = System.Drawing.Color.Black;
+            this.Btn_Normal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Normal.Location = new System.Drawing.Point(667, 5);
+            this.Btn_Normal.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Normal.Name = "Btn_Normal";
+            this.Btn_Normal.Size = new System.Drawing.Size(27, 27);
+            this.Btn_Normal.TabIndex = 2;
+            this.Btn_Normal.TabStop = false;
+            this.Btn_Normal.Visible = false;
+            this.Btn_Normal.Click += new System.EventHandler(this.Btn_Normal_Click);
+            // 
+            // PnlCuerpo
+            // 
+            this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
+            this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlCuerpo.Location = new System.Drawing.Point(160, 32);
+            this.PnlCuerpo.Margin = new System.Windows.Forms.Padding(2);
+            this.PnlCuerpo.Name = "PnlCuerpo";
+            this.PnlCuerpo.Size = new System.Drawing.Size(721, 502);
+            this.PnlCuerpo.TabIndex = 5;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,12 +320,6 @@ namespace PRESENTACION
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Config)).EndInit();
@@ -332,6 +329,12 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Medicamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Normal)).EndInit();
             this.ResumeLayout(false);
 
         }

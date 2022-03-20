@@ -1,7 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-
+using System.Windows.Forms;
 
 namespace DATOS
 {
@@ -26,7 +26,7 @@ namespace DATOS
             return tabla;
         }
 
-        public DataTable D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C,byte[] imagen)
+        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C,byte[] imagen)
         {
 
             Conexion.connection.Open();
@@ -42,11 +42,8 @@ namespace DATOS
             cmd.Parameters.AddWithValue("tipo", Tipo);
             cmd.Parameters.AddWithValue("alm", caja);
             cmd.Parameters.AddWithValue("imagen", imagen);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
             Conexion.connection.Close();
-            return dt;
+
         }
 
         public DataTable tipo()
@@ -157,7 +154,7 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
-        public DataTable D_Insertar_Laboratorio(string Nombre, string Direccion, string Telefono)
+        public void D_Insertar_Laboratorio(string Nombre, string Direccion, string Telefono)
         {
             Conexion.connection.Open();
 
@@ -166,13 +163,8 @@ namespace DATOS
             comando.Parameters.AddWithValue("Descripcion", Nombre);
             comando.Parameters.AddWithValue("Direccion", Direccion);
             comando.Parameters.AddWithValue("Telefono", Telefono);
-            MySqlDataAdapter da = new MySqlDataAdapter(comando);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
 
             Conexion.connection.Close();
-
-            return dt;
 
         }
         public DataTable D_TipoDNI()
@@ -187,6 +179,7 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
+
         public DataTable D_CargoTrabajador()
         {
             Conexion.connection.Open();
@@ -237,7 +230,7 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable D_Insertar_Trabajador(string DNI, string Nombre, string Apellido, string Fecha_N, string Direccion, String Telefono, int Tipo, int Cargo)
+        public void D_Insertar_Trabajador(string DNI, string Nombre, string Apellido, string Fecha_N, string Direccion, String Telefono, int Tipo, int Cargo)
         {
             Conexion.connection.Open();
 
@@ -251,13 +244,18 @@ namespace DATOS
             comando.Parameters.AddWithValue("Tra_Telefono", Telefono);
             comando.Parameters.AddWithValue("Tid_Codigo", Tipo);
             comando.Parameters.AddWithValue("Car_Codigo", Cargo);
-            MySqlDataAdapter da = new MySqlDataAdapter(comando);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
 
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
 
-            return dt;
 
         }
         public DataTable D_Validacion_Contraseña(string DNI)
@@ -275,7 +273,8 @@ namespace DATOS
 
             return dt;
         }
-        public DataTable D_Agregar_Contraseña(string DNI, string password)
+
+        public void D_Agregar_Contraseña(string DNI, string password)
         {
             Conexion.connection.Open();
 
@@ -283,14 +282,21 @@ namespace DATOS
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
             cmd.Parameters.AddWithValue("Contraseña", password);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
             Conexion.connection.Close();
 
-            return dt;
         }
-        public DataTable SP_Agregar_Ingreso_Medicamento(int Cod_Medicamento, int Cantidad, string Fecha_Actual)
+        public void SP_Agregar_Ingreso_Medicamento(int Cod_Medicamento, int Cantidad, string Fecha_Actual)
         {
             Conexion.connection.Open();
 
@@ -299,13 +305,21 @@ namespace DATOS
             cmd.Parameters.AddWithValue("Cod_Medicamento", Cod_Medicamento);
             cmd.Parameters.AddWithValue("Cantidad", Cantidad);
             cmd.Parameters.AddWithValue("Fecha_Actual", Fecha_Actual);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
             Conexion.connection.Close();
-            return dt;
+
         }
-        public DataTable SP_Agregar_Egreso_Medicamento(int Cod_Medicamento, int Cantidad)
+        public void SP_Agregar_Egreso_Medicamento(int Cod_Medicamento, int Cantidad)
         {
             Conexion.connection.Open();
 
@@ -313,13 +327,20 @@ namespace DATOS
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Codigo", Cod_Medicamento);
             cmd.Parameters.AddWithValue("Cantidad", Cantidad);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
             Conexion.connection.Close();
-            return dt;
+
         }
-        public DataTable SP_Agregar_Detalle_Ingreso(int Med_Codigo,int Cantidad,string Ing_Fecha,string Tra_DNI,string Dei_Fecha_V)
+        public void SP_Agregar_Detalle_Ingreso(int Med_Codigo,int Cantidad,string Ing_Fecha,string Tra_DNI,string Dei_Fecha_V)
         {
             Conexion.connection.Open();
             MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Ingreso", Conexion.connection);
@@ -329,13 +350,19 @@ namespace DATOS
             cmd.Parameters.AddWithValue("Ing_Fecha", Ing_Fecha);
             cmd.Parameters.AddWithValue("Tra_DNI", Tra_DNI);
             cmd.Parameters.AddWithValue("Dei_Fecha_V", Dei_Fecha_V);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
-            return dt;
+
         }
-        public DataTable SP_Agregar_Detalle_Egreso(int Med_Codigo, int Cantidad, string Egr_Fecha, string Tra_DNI, int Dee_N_Semana)
+        public void SP_Agregar_Detalle_Egreso(int Med_Codigo, int Cantidad, string Egr_Fecha, string Tra_DNI, int Dee_N_Semana)
         {
             Conexion.connection.Open();
 
@@ -346,13 +373,19 @@ namespace DATOS
             cmd.Parameters.AddWithValue("Egr_Fecha", Egr_Fecha);
             cmd.Parameters.AddWithValue("Tra_DNI", Tra_DNI);
             cmd.Parameters.AddWithValue("Dee_N_Semana", Dee_N_Semana);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
-            return dt;
+            
         }
-        public DataTable SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm,byte[] imagen)
+        public void SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm,byte[] imagen)
         {
             Conexion.connection.Open();
 
@@ -366,12 +399,18 @@ namespace DATOS
             cmd.Parameters.AddWithValue("tip", tip);
             cmd.Parameters.AddWithValue("alm", alm);
             cmd.Parameters.AddWithValue("imagen", imagen);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
-            return dt;
         }
+
         public DataTable SP_ListaU_Para_Edit(string Med_Codigo)
         {
             Conexion.connection.Open();
@@ -385,7 +424,7 @@ namespace DATOS
             return dt;
         }
 
-        public DataTable SP_Editar_Usuario(string DNI, string Nombre, string Apellido, string fecha_N, string Correo, string Telefono, int Tipo, int Cargo, int Estado)
+        public void SP_Editar_Usuario(string DNI, string Nombre, string Apellido, string fecha_N, string Correo, string Telefono, int Tipo, int Cargo, int Estado)
         {
             Conexion.connection.Open();
 
@@ -400,24 +439,36 @@ namespace DATOS
             cmd.Parameters.AddWithValue("Tipo", Tipo);
             cmd.Parameters.AddWithValue("Cargo", Cargo);
             cmd.Parameters.AddWithValue("Estado", Estado);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
-            return dt;
+
         }
-        public DataTable SP_Restablecer_C(string DNI)
+        public void SP_Restablecer_C(string DNI)
         {
             Conexion.connection.Open();
             MySqlCommand cmd = new MySqlCommand("SP_Restablecer_C", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             Conexion.connection.Close();
-            return dt;
         }
+
         public DataTable SP_Consulta_Medicamento_Filtrado(string Tipo)
         {
             Conexion.connection.Open();
