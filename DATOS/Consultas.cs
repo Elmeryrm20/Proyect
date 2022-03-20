@@ -450,7 +450,7 @@ namespace DATOS
 
             MySqlCommand cmd = new MySqlCommand("SP_Agregar_Egreso_Medicamento", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Codigo", Cod_Medicamento);
+            cmd.Parameters.AddWithValue("Med_Codigo", Cod_Medicamento);
             cmd.Parameters.AddWithValue("Cantidad", Cantidad);
 
             try
@@ -470,7 +470,7 @@ namespace DATOS
             Conexion.connection.Open();
             MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Ingreso", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Codigo", Med_Codigo);
+            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
             cmd.Parameters.AddWithValue("Cantidad", Cantidad);
             cmd.Parameters.AddWithValue("Ing_Fecha", Ing_Fecha);
             cmd.Parameters.AddWithValue("Tra_DNI", Tra_DNI);

@@ -37,7 +37,7 @@ namespace PRESENTACION
             this.btn_Filtrar = new System.Windows.Forms.PictureBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LblIndice = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -77,6 +77,7 @@ namespace PRESENTACION
             this.dgb_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgb_Medicamentos.Size = new System.Drawing.Size(579, 283);
             this.dgb_Medicamentos.TabIndex = 0;
+            this.dgb_Medicamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellClick);
             this.dgb_Medicamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellContentClick);
             // 
             // txb_Buscar
@@ -149,15 +150,15 @@ namespace PRESENTACION
             this.label3.TabIndex = 7;
             this.label3.Text = "Composicion";
             // 
-            // label2
+            // LblIndice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(605, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.LblIndice.AutoSize = true;
+            this.LblIndice.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIndice.Location = new System.Drawing.Point(605, 24);
+            this.LblIndice.Name = "LblIndice";
+            this.LblIndice.Size = new System.Drawing.Size(53, 18);
+            this.LblIndice.TabIndex = 6;
+            this.LblIndice.Text = "Indice";
             // 
             // panel3
             // 
@@ -169,7 +170,7 @@ namespace PRESENTACION
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.LblIndice);
             this.panel3.Controls.Add(this.btn_Actualizar);
             this.panel3.Controls.Add(this.btn_Detalles);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -339,7 +340,7 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LblIndice;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;

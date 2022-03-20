@@ -33,7 +33,7 @@ namespace PRESENTACION
         Consultas consultas = new Consultas();
         readonly string DNI;
 
-        #region Métodos Automáticos
+        #region Métodos al cargar el formulario
         void Rellenartabla()
         {
             dgb_Medicamentos.DataSource = consultas.ConsultaMed();
@@ -47,7 +47,6 @@ namespace PRESENTACION
         } 
         #endregion
 
-
         #region Sin Usar
         private void FormMedicamentos_Load(object sender, EventArgs e)
         {
@@ -60,7 +59,7 @@ namespace PRESENTACION
         } 
         #endregion
 
-        #region Búsqueda y Filtro
+        #region Búsqueda,Filtro y obtener ID
         //Búsqueda Dinámica
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -76,13 +75,12 @@ namespace PRESENTACION
             txb_Buscar.Clear();
         }
 
-        int valor_ID = 0;
+        int valor_ID = 1;
 
         //Obtener Id del Medicamento
         private void dgb_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            valor_ID =(int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
-            label2.Text = valor_ID.ToString();
+            
         }
 
         //Botón Filtrar
@@ -121,7 +119,13 @@ namespace PRESENTACION
             FormEditarProducto frm = new FormEditarProducto(valor_ID);
             frm.ShowDialog();
 
-        } 
+        }
         #endregion
+
+        private void dgb_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
+            LblIndice.Text = valor_ID.ToString();
+        }
     }
 }
