@@ -7,6 +7,7 @@ namespace PRESENTACION
     public partial class FormIngreso : Form
     {
         Consultas consultas = new Consultas();
+
         #region Constructores
         public FormIngreso()
         {
@@ -21,7 +22,7 @@ namespace PRESENTACION
         } 
         #endregion
 
-        readonly int valor;
+        int valor;
         readonly string DNI;
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -38,6 +39,7 @@ namespace PRESENTACION
             lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
         }
 
+        //Botone de Ingresar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             int cantidad = Convert.ToInt32(Txt_Cantidad.Text);

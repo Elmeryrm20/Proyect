@@ -76,7 +76,7 @@ namespace PRESENTACION
             txb_Buscar.Clear();
         }
 
-        int valor_ID = 1;
+        int valor_ID = 0;
 
         //Obtener Id del Medicamento
         private void dgb_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
