@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DATOS;
 
 namespace PRESENTACION
 {
@@ -15,6 +16,14 @@ namespace PRESENTACION
         public FormControldeEntradas()
         {
             InitializeComponent();
+            RellenarDataGridView();
+        }
+
+        Consultas du = new Consultas();
+
+        private void RellenarDataGridView()
+        {
+            DgvHistorialIngreso.DataSource = du.D_HistorialIngreso();
         }
     }
 }

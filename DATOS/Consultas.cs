@@ -254,6 +254,51 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
+
+        public DataTable D_HistorialIngreso()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("Sp_HistorialIngreso", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return tabla;
+        }
+
+        public DataTable D_HistorialEgreso()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("Sp_HistorialEgreso", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return tabla;
+        }
+
         public DataTable ConsultaUsuario()
         {
             Conexion.connection.Open();

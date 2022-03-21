@@ -30,7 +30,9 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.dgb_Contral_Salida = new System.Windows.Forms.DataGridView();
+            this.DgvHistorialEgreso = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Contral_Salida)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).BeginInit();
             this.SuspendLayout();
             // 
             // dgb_Contral_Salida
@@ -43,16 +45,26 @@ namespace PRESENTACION
             this.dgb_Contral_Salida.Size = new System.Drawing.Size(639, 349);
             this.dgb_Contral_Salida.TabIndex = 0;
             // 
+            // DgvHistorialEgreso
+            // 
+            this.DgvHistorialEgreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvHistorialEgreso.Location = new System.Drawing.Point(43, 31);
+            this.DgvHistorialEgreso.Name = "DgvHistorialEgreso";
+            this.DgvHistorialEgreso.Size = new System.Drawing.Size(553, 287);
+            this.DgvHistorialEgreso.TabIndex = 2;
+            // 
             // FormControldeSalidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 349);
+            this.Controls.Add(this.DgvHistorialEgreso);
             this.Controls.Add(this.dgb_Contral_Salida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormControldeSalidas";
             this.Text = "FormControldeSalidas";
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Contral_Salida)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -60,5 +72,6 @@ namespace PRESENTACION
         #endregion
 
         private System.Windows.Forms.DataGridView dgb_Contral_Salida;
+        private System.Windows.Forms.DataGridView DgvHistorialEgreso;
     }
 }
