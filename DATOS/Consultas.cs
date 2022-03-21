@@ -680,7 +680,6 @@ namespace DATOS
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
             cmd.Parameters.AddWithValue("ESTADO", Estado);
-
             try
             {
                 cmd.ExecuteNonQuery();
@@ -692,7 +691,19 @@ namespace DATOS
             }
             Conexion.connection.Close();
         }
+        public DataTable SP_Existencia_T(string DNI)
+        {
+            Conexion.connection.Open();
 
+            MySqlCommand comando = new MySqlCommand("SP_Existencia_T", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("DNI", DNI);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
 
     }
 }
