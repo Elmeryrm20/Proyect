@@ -61,12 +61,12 @@ namespace PRESENTACION
         {
             valor_ID = dgb_Usuario.CurrentRow.Cells[0].Value.ToString();
             NOMBRE = dgb_Usuario.CurrentRow.Cells[1].Value.ToString();
-            label1.Text = valor_ID.ToString();
+            label1.Text = valor_ID.ToString()+" "+NOMBRE;
         }
 
         private void btn_Restablecer_Click(object sender, EventArgs e)
         {
-            if (NOMBRE != "")
+            if (valor_ID != "")
             {
                 DialogResult result = MessageBox.Show("Seguro que desea restablecer la contraseña de " +NOMBRE , "Excelente!", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -85,6 +85,29 @@ namespace PRESENTACION
 
             }
           
+        }
+
+        private void bt_EliminarU_Click(object sender, EventArgs e)
+        {
+            if (valor_ID != "")
+            {
+                DialogResult result = MessageBox.Show("Seguro que desea eliminar la contraseña de " + NOMBRE, "Excelente!", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    consultas.SP_Eliminar_U(valor_ID);
+                    MessageBox.Show("Usuario Eliminado", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    mostrarUsuario(); 
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione Usuario", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
         }
     }
 }

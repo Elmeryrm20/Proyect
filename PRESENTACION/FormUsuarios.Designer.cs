@@ -33,6 +33,7 @@ namespace PRESENTACION
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Restablecer = new System.Windows.Forms.PictureBox();
             this.bt_EliminarU = new System.Windows.Forms.PictureBox();
             this.bt_ActualizarU = new System.Windows.Forms.PictureBox();
             this.bt_EditarU = new System.Windows.Forms.PictureBox();
@@ -41,17 +42,16 @@ namespace PRESENTACION
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_Restablecer = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Restablecer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EliminarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_ActualizarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EditarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_AgregarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Restablecer)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,6 +96,16 @@ namespace PRESENTACION
             this.panel2.Size = new System.Drawing.Size(592, 54);
             this.panel2.TabIndex = 4;
             // 
+            // btn_Restablecer
+            // 
+            this.btn_Restablecer.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_Restablecer.Location = new System.Drawing.Point(426, 6);
+            this.btn_Restablecer.Name = "btn_Restablecer";
+            this.btn_Restablecer.Size = new System.Drawing.Size(90, 36);
+            this.btn_Restablecer.TabIndex = 4;
+            this.btn_Restablecer.TabStop = false;
+            this.btn_Restablecer.Click += new System.EventHandler(this.btn_Restablecer_Click);
+            // 
             // bt_EliminarU
             // 
             this.bt_EliminarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -104,6 +114,7 @@ namespace PRESENTACION
             this.bt_EliminarU.Size = new System.Drawing.Size(90, 36);
             this.bt_EliminarU.TabIndex = 3;
             this.bt_EliminarU.TabStop = false;
+            this.bt_EliminarU.Click += new System.EventHandler(this.bt_EliminarU_Click);
             // 
             // bt_ActualizarU
             // 
@@ -174,16 +185,6 @@ namespace PRESENTACION
             this.panel3.Size = new System.Drawing.Size(528, 293);
             this.panel3.TabIndex = 5;
             // 
-            // btn_Restablecer
-            // 
-            this.btn_Restablecer.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btn_Restablecer.Location = new System.Drawing.Point(426, 6);
-            this.btn_Restablecer.Name = "btn_Restablecer";
-            this.btn_Restablecer.Size = new System.Drawing.Size(90, 36);
-            this.btn_Restablecer.TabIndex = 4;
-            this.btn_Restablecer.TabStop = false;
-            this.btn_Restablecer.Click += new System.EventHandler(this.btn_Restablecer_Click);
-            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,13 +202,13 @@ namespace PRESENTACION
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Restablecer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EliminarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_ActualizarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EditarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_AgregarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Restablecer)).EndInit();
             this.ResumeLayout(false);
 
         }

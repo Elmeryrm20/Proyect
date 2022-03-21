@@ -672,5 +672,25 @@ namespace DATOS
             return dt;
 
         }
+        public void SP_Eliminar_U(String DNI)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Eliminar_U", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("DNI", DNI);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+        }
+
+
     }
 }
