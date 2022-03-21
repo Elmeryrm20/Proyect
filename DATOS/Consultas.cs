@@ -672,13 +672,15 @@ namespace DATOS
             return dt;
 
         }
-        public void SP_Eliminar_U(String DNI)
+        public void SP_Eliminar_U(String DNI,int Estado)
         {
             Conexion.connection.Open();
 
             MySqlCommand cmd = new MySqlCommand("SP_Eliminar_U", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
+            cmd.Parameters.AddWithValue("ESTADO", Estado);
+
             try
             {
                 cmd.ExecuteNonQuery();

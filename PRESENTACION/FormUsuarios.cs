@@ -94,7 +94,7 @@ namespace PRESENTACION
                 DialogResult result = MessageBox.Show("Seguro que desea eliminar la contraseña de " + NOMBRE, "Excelente!", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    consultas.SP_Eliminar_U(valor_ID);
+                    consultas.SP_Eliminar_U(valor_ID,3);
                     MessageBox.Show("Usuario Eliminado", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     mostrarUsuario(); 
                 }
