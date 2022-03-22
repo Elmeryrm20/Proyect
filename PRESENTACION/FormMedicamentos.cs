@@ -190,5 +190,17 @@ namespace PRESENTACION
             PibActualizar.Image = Properties.Resources.BotonFormActualizar01;
 
         }
+
+        private void Pib_Filtrar_MouseEnter(object sender, EventArgs e)
+        {
+            Pib_Filtrar.Image = Properties.Resources.BotonFormBusqueda02;
+
+        }
+
+        private void Pib_Filtrar_MouseLeave(object sender, EventArgs e)
+        {
+            Pib_Filtrar.Image = Properties.Resources.BotonFormBusqueda01;
+
+        }
     }
 }

@@ -25,6 +25,14 @@ namespace PRESENTACION
         private void RellenarDataGridView()
         {
             DgvHistorialEgreso.DataSource = du.D_HistorialEgreso();
+            dgb_Contral_Salida.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+        }
+
+        private void PibActualizar_Click(object sender, EventArgs e)
+        {
+            RellenarDataGridView();
+
         }
     }
 }
