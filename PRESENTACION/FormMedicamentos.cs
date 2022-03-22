@@ -131,5 +131,64 @@ namespace PRESENTACION
             valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
             LblIndice.Text = valor_ID.ToString();
         }
+
+        private void PibDetalles_MouseEnter(object sender, EventArgs e)
+        {
+            PibDetalles.Image = Properties.Resources.BotonFormDetalles02;
+        }
+
+        private void PibIngreso_MouseEnter(object sender, EventArgs e)
+        {
+            PibIngreso.Image = Properties.Resources.BotonFormIngreso02;
+
+        }
+
+        private void PibDetalles_MouseLeave(object sender, EventArgs e)
+        {
+            PibDetalles.Image = Properties.Resources.BotonFormDetalles01;
+
+        }
+
+        private void PibIngreso_MouseLeave(object sender, EventArgs e)
+        {
+            PibIngreso.Image = Properties.Resources.BotonFormIngreso01;
+
+        }
+
+        private void PibSalida_MouseEnter(object sender, EventArgs e)
+        {
+            PibSalida.Image = Properties.Resources.BotonFormSalida02;
+
+        }
+
+        private void PibSalida_MouseLeave(object sender, EventArgs e)
+        {
+            PibSalida.Image = Properties.Resources.BotonFormSalida01;
+
+        }
+
+        private void PibEditar_MouseEnter(object sender, EventArgs e)
+        {
+            PibEditar.Image = Properties.Resources.BotonFormEditar02;
+
+        }
+
+        private void PibEditar_MouseLeave(object sender, EventArgs e)
+        {
+            PibEditar.Image = Properties.Resources.BotonFormEditar01;
+
+        }
+
+        private void PibActualizar_MouseEnter(object sender, EventArgs e)
+        {
+            PibActualizar.Image = Properties.Resources.BotonFormActualizar02;
+
+        }
+
+        private void PibActualizar_MouseLeave(object sender, EventArgs e)
+        {
+            PibActualizar.Image = Properties.Resources.BotonFormActualizar01;
+
+        }
     }
 }
