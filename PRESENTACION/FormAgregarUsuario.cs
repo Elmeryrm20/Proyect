@@ -56,7 +56,8 @@ namespace PRESENTACION
                     DialogResult result = MessageBox.Show("El usuario " + Existencia + " estubo registrado desea activarle la cuenta", "Excelente!", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
-                        consultas.SP_Eliminar_U(Existencia, 2);
+                        consultas.SP_Eliminar_U(Existencia, 1);
+                        consultas.SP_Restablecer_C(Existencia);
                         MessageBox.Show("Usuario restaurado", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                     else
