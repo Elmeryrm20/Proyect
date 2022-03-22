@@ -34,29 +34,31 @@ namespace PRESENTACION
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.Pib_Filtrar = new System.Windows.Forms.PictureBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LblIndice = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.PibEditar = new System.Windows.Forms.PictureBox();
             this.PibSalida = new System.Windows.Forms.PictureBox();
             this.PibIngreso = new System.Windows.Forms.PictureBox();
             this.PibActualizar = new System.Windows.Forms.PictureBox();
             this.PibDetalles = new System.Windows.Forms.PictureBox();
-            this.Pib_Filtrar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.cmb_Almacen = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibDetalles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgb_Medicamentos
@@ -96,6 +98,8 @@ namespace PRESENTACION
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmb_Almacen);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.Pib_Filtrar);
             this.panel1.Controls.Add(this.cmbTipo);
@@ -111,17 +115,29 @@ namespace PRESENTACION
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(412, 7);
+            this.label4.Location = new System.Drawing.Point(272, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "label4";
-            this.label4.Visible = false;
+            // 
+            // Pib_Filtrar
+            // 
+            this.Pib_Filtrar.BackColor = System.Drawing.Color.Transparent;
+            this.Pib_Filtrar.Image = global::PRESENTACION.Properties.Resources.BotonFormBusqueda01;
+            this.Pib_Filtrar.Location = new System.Drawing.Point(586, 15);
+            this.Pib_Filtrar.Name = "Pib_Filtrar";
+            this.Pib_Filtrar.Size = new System.Drawing.Size(110, 40);
+            this.Pib_Filtrar.TabIndex = 9;
+            this.Pib_Filtrar.TabStop = false;
+            this.Pib_Filtrar.Click += new System.EventHandler(this.btn_Filtrar_Click);
+            this.Pib_Filtrar.MouseEnter += new System.EventHandler(this.Pib_Filtrar_MouseEnter);
+            this.Pib_Filtrar.MouseLeave += new System.EventHandler(this.Pib_Filtrar_MouseLeave);
             // 
             // cmbTipo
             // 
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(415, 34);
+            this.cmbTipo.Location = new System.Drawing.Point(450, 9);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(130, 21);
             this.cmbTipo.TabIndex = 8;
@@ -130,7 +146,7 @@ namespace PRESENTACION
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(342, 38);
+            this.label3.Location = new System.Drawing.Point(377, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 7;
@@ -159,31 +175,6 @@ namespace PRESENTACION
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(708, 63);
             this.panel3.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 76);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(40, 280);
-            this.panel2.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(668, 73);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(40, 280);
-            this.panel4.TabIndex = 11;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.dgb_Medicamentos);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(40, 76);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(628, 283);
-            this.panel5.TabIndex = 12;
             // 
             // PibEditar
             // 
@@ -250,18 +241,48 @@ namespace PRESENTACION
             this.PibDetalles.MouseEnter += new System.EventHandler(this.PibDetalles_MouseEnter);
             this.PibDetalles.MouseLeave += new System.EventHandler(this.PibDetalles_MouseLeave);
             // 
-            // Pib_Filtrar
+            // panel2
             // 
-            this.Pib_Filtrar.BackColor = System.Drawing.Color.Transparent;
-            this.Pib_Filtrar.Image = global::PRESENTACION.Properties.Resources.BotonFormBusqueda01;
-            this.Pib_Filtrar.Location = new System.Drawing.Point(558, 27);
-            this.Pib_Filtrar.Name = "Pib_Filtrar";
-            this.Pib_Filtrar.Size = new System.Drawing.Size(110, 40);
-            this.Pib_Filtrar.TabIndex = 9;
-            this.Pib_Filtrar.TabStop = false;
-            this.Pib_Filtrar.Click += new System.EventHandler(this.btn_Filtrar_Click);
-            this.Pib_Filtrar.MouseEnter += new System.EventHandler(this.Pib_Filtrar_MouseEnter);
-            this.Pib_Filtrar.MouseLeave += new System.EventHandler(this.Pib_Filtrar_MouseLeave);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 73);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(40, 283);
+            this.panel2.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(668, 73);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(40, 283);
+            this.panel4.TabIndex = 11;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dgb_Medicamentos);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(40, 73);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(628, 283);
+            this.panel5.TabIndex = 12;
+            // 
+            // cmb_Almacen
+            // 
+            this.cmb_Almacen.FormattingEnabled = true;
+            this.cmb_Almacen.Location = new System.Drawing.Point(450, 36);
+            this.cmb_Almacen.Name = "cmb_Almacen";
+            this.cmb_Almacen.Size = new System.Drawing.Size(130, 21);
+            this.cmb_Almacen.TabIndex = 12;
+            this.cmb_Almacen.Text = "Filtrar por...";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(416, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Caja";
             // 
             // FormMedicamentos
             // 
@@ -280,15 +301,15 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PibEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibDetalles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -312,5 +333,7 @@ namespace PRESENTACION
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.DataGridView dgb_Medicamentos;
+        private System.Windows.Forms.ComboBox cmb_Almacen;
+        private System.Windows.Forms.Label label2;
     }
 }

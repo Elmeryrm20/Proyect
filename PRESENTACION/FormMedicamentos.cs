@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using DATOS;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using DATOS;
 
 namespace PRESENTACION
 {
@@ -26,8 +19,9 @@ namespace PRESENTACION
             this.DNI = DNI;
             Rellenartabla();
             Elementos_Filtrar();
+            Almacen_Filtrar();
 
-        } 
+        }
         #endregion
 
         Consultas consultas = new Consultas();
@@ -43,20 +37,36 @@ namespace PRESENTACION
         void Elementos_Filtrar()
         {
             cmbTipo.DisplayMember = "tip_descripcion";
+            cmbTipo.ValueMember = "tip_descripcion";
             cmbTipo.DataSource = consultas.tipo();
-        } 
+        }
+        void Almacen_Filtrar()
+        {
+            cmb_Almacen.DisplayMember = "Alm_Descripcion";
+            cmb_Almacen.ValueMember = "Alm_Descripcion";
+            cmb_Almacen.DataSource = consultas.P_AlmMedicamento();
+        }
+        void limpiar()
+        {
+            Rellenartabla();
+            txb_Buscar.Clear();
+            valor_ID = 1;
+            cmbTipo.Text = "Seleccione Tipo";
+            cmb_Almacen.Text = "Seleccione Caja";
+        }
         #endregion
 
         #region Sin Usar
         private void FormMedicamentos_Load(object sender, EventArgs e)
         {
-
+            cmbTipo.Text = "Seleccione Tipo";
+            cmb_Almacen.Text = "Seleccione Caja";
 
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-        } 
+        }
         #endregion
 
         #region Búsqueda,Filtro y obtener ID
@@ -71,23 +81,42 @@ namespace PRESENTACION
         //Botón Actualizar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Rellenartabla();
-            txb_Buscar.Clear();
-            valor_ID = 1;
+            limpiar();
         }
 
         int valor_ID = 1;
 
         private void dgb_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         //Botón Filtrar
         private void btn_Filtrar_Click(object sender, EventArgs e)
         {
-            label4.Text= cmbTipo.SelectedText.ToString();
-            dgb_Medicamentos.DataSource= consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedText.ToString());
+            string Tipo = cmbTipo.SelectedValue.ToString();
+            string Almacen = cmb_Almacen.SelectedValue.ToString();
+
+            if (cmbTipo.Text!= "Seleccione Tipo" && cmb_Almacen.Text!= "Seleccione Caja")
+            {
+                label4.Text = Tipo + " " + Almacen;
+                dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(Tipo,Almacen);
+            }
+            else if (cmbTipo.Text != "Seleccione Tipo" && cmb_Almacen.Text == "Seleccione Caja")
+            {
+                label4.Text = Tipo;
+               dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(Tipo); 
+            }
+            else if (cmbTipo.Text == "Seleccione Tipo" && cmb_Almacen.Text != "Seleccione Caja")
+            {
+                label4.Text = Almacen;
+                dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(Almacen);
+            }
+            else
+            {
+                label4.Text = "error";
+                limpiar();
+            }
         }
         #endregion
 
@@ -102,7 +131,7 @@ namespace PRESENTACION
         //Abrir Formulario de Ingreso
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
+
             FormIngreso frm2 = new FormIngreso(valor_ID, DNI);
             AddOwnedForm(frm2);
             frm2.ShowDialog();

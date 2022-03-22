@@ -672,6 +672,35 @@ namespace DATOS
             return dt;
 
         }
+        public DataTable SP_Medicamento_Filtrado_Almacen(string Almacen)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_Medicamento_Filtrado_Almacen", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Almacen", Almacen);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+
+        }
+        public DataTable SP_Medicamento_Filtrado_Ambos(string tipo,string Almacen)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_Medicamento_Filtrado_Ambos", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Almacen",Almacen);
+            comando.Parameters.AddWithValue("tipo", tipo);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+
+        }
         public void SP_Eliminar_U(String DNI,int Estado)
         {
             Conexion.connection.Open();
@@ -698,6 +727,17 @@ namespace DATOS
             MySqlCommand comando = new MySqlCommand("SP_Existencia_T", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("DNI", DNI);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+        public DataTable P_AlmMedicamento()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("P_AlmMedicamento", Conexion.connection);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
