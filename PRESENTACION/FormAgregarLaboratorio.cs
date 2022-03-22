@@ -85,6 +85,17 @@ namespace PRESENTACION
 
         }
 
+        private void btnSerrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnSerrar.Image = Properties.Resources.BotonVentanaCerrar02;
+        }
+
+        private void btnSerrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnSerrar.Image = Properties.Resources.BotonVentanaCerrar01;
+
+        }
+
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             n = 1;
