@@ -91,7 +91,7 @@ namespace PRESENTACION
         {
             if (valor_ID != "")
             {
-                DialogResult result = MessageBox.Show("Seguro que desea eliminar la contraseña de " + NOMBRE, "Excelente!", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Seguro que desea eliminar a " + NOMBRE, "Excelente!", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     consultas.SP_Eliminar_U(valor_ID,3);

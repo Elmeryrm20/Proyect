@@ -87,6 +87,7 @@ namespace PRESENTACION
 
                 consultas.SP_Editar_Usuario(DNI, (txt_Nombre.Text).ToUpper(), (txt_Apellido.Text).ToUpper(),txt_Fecha.Value.ToString("yyyy-MM-dd"), txt_Correo.Text, txt_Telefono.Text, cmb_Tipo.SelectedIndex + 1, cmb_Cargo.SelectedIndex + 1, cmb_Estado.SelectedIndex + 1);
                 MessageBox.Show("Los cambios Guardados", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Consulta_Editar_Trabajador();
 
             }
             catch (Exception)
