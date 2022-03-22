@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.CmbPresentacion = new System.Windows.Forms.ComboBox();
@@ -38,8 +37,6 @@
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.Btn_Editar = new System.Windows.Forms.PictureBox();
-            this.ptb_Imagen = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,11 +44,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Btn_Editar = new System.Windows.Forms.PictureBox();
+            this.ptb_Imagen = new System.Windows.Forms.PictureBox();
+            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Editar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,17 +63,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(502, 42);
             this.panel1.TabIndex = 1;
-            // 
-            // btnSerrar
-            // 
-            this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSerrar.BackColor = System.Drawing.Color.Black;
-            this.btnSerrar.Location = new System.Drawing.Point(463, 9);
-            this.btnSerrar.Name = "btnSerrar";
-            this.btnSerrar.Size = new System.Drawing.Size(27, 27);
-            this.btnSerrar.TabIndex = 2;
-            this.btnSerrar.TabStop = false;
-            this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
             // 
             // panel2
             // 
@@ -162,28 +151,6 @@
             this.label12.TabIndex = 67;
             this.label12.Text = "Editar imagen";
             // 
-            // Btn_Editar
-            // 
-            this.Btn_Editar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Btn_Editar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Editar.Location = new System.Drawing.Point(180, 223);
-            this.Btn_Editar.Name = "Btn_Editar";
-            this.Btn_Editar.Size = new System.Drawing.Size(150, 41);
-            this.Btn_Editar.TabIndex = 66;
-            this.Btn_Editar.TabStop = false;
-            this.Btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
-            // 
-            // ptb_Imagen
-            // 
-            this.ptb_Imagen.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ptb_Imagen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptb_Imagen.Location = new System.Drawing.Point(336, 30);
-            this.ptb_Imagen.Name = "ptb_Imagen";
-            this.ptb_Imagen.Size = new System.Drawing.Size(150, 150);
-            this.ptb_Imagen.TabIndex = 65;
-            this.ptb_Imagen.TabStop = false;
-            this.ptb_Imagen.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -242,6 +209,41 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // Btn_Editar
+            // 
+            this.Btn_Editar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Btn_Editar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Editar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
+            this.Btn_Editar.Location = new System.Drawing.Point(180, 223);
+            this.Btn_Editar.Name = "Btn_Editar";
+            this.Btn_Editar.Size = new System.Drawing.Size(110, 40);
+            this.Btn_Editar.TabIndex = 66;
+            this.Btn_Editar.TabStop = false;
+            this.Btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
+            // 
+            // ptb_Imagen
+            // 
+            this.ptb_Imagen.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ptb_Imagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptb_Imagen.Location = new System.Drawing.Point(336, 30);
+            this.ptb_Imagen.Name = "ptb_Imagen";
+            this.ptb_Imagen.Size = new System.Drawing.Size(150, 150);
+            this.ptb_Imagen.TabIndex = 65;
+            this.ptb_Imagen.TabStop = false;
+            this.ptb_Imagen.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnSerrar
+            // 
+            this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
+            this.btnSerrar.Location = new System.Drawing.Point(463, 9);
+            this.btnSerrar.Name = "btnSerrar";
+            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnSerrar.TabIndex = 2;
+            this.btnSerrar.TabStop = false;
+            this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
+            // 
             // FormEditarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,11 +256,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarProducto";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Editar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

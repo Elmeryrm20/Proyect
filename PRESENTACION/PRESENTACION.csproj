@@ -231,54 +231,6 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MenuUsuarios02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuAcercaDe01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuAcercaDe02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuAgregar01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuAgregar02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuAgregarUsuario01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuAgregarUsuario02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuConfiguracion01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuConfiguracion02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuHistorial01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuHistorial02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuInicio01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuInicio02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuMedicamentos01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuMedicamentos02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MenuUsuarios01.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Logo01.png" />
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +289,201 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FondoLogin02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormImprimir02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormInforme02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormeEliminar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormQuitarUsuario02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormAgregarUsuario02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormCancelar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormActualizar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormBusqueda02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormSalida02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormIngreso02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormEditar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormDetalles02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormImprimir01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormInforme01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormeEliminar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormQuitarUsuario01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormAgregarUsuario01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormCancelar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormActualizar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormBusqueda01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormSalida01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormIngreso01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormEditar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormDetalles01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMinimizar06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMinimizar05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaCerrar06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaCerrar05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMaximizar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMaximizar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaRestaurar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaRestaurar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaContraer02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaContraer01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaCerrarSesion02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaCerrarSesion01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonGuardar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonGuardar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuEgreso02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuEstadistica02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuReporteIncidencias02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuHistorial02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAgregar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuSalida02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuUsuarios02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuConfiguracion02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAcercaDe02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuMedicamentos02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAgregarUsuario02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuInicio02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuEgreso01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuEstadistica01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuReporteIncidencias01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuHistorial01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAgregar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuSalida01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuUsuarios01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuConfiguracion01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAcercaDe01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuMedicamentos01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuAgregarUsuario01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuInicio01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoReestablecer02.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

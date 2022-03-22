@@ -34,7 +34,6 @@ namespace PRESENTACION
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.LblMuestra1 = new System.Windows.Forms.Label();
             this.gpbAgregar_Producto = new System.Windows.Forms.GroupBox();
-            this.bnt_Agregar_Lab = new System.Windows.Forms.PictureBox();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.CmbPresentacion = new System.Windows.Forms.ComboBox();
             this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
@@ -44,8 +43,6 @@ namespace PRESENTACION
             this.textCantidad = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,11 +52,14 @@ namespace PRESENTACION
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bnt_Agregar_Lab = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbAgregar_Producto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_Agregar_Lab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +85,7 @@ namespace PRESENTACION
             this.LblMuestra1.Size = new System.Drawing.Size(54, 13);
             this.LblMuestra1.TabIndex = 26;
             this.LblMuestra1.Text = "Muestra 1";
+            this.LblMuestra1.Visible = false;
             this.LblMuestra1.Click += new System.EventHandler(this.LblMuestra1_Click);
             // 
             // gpbAgregar_Producto
@@ -114,16 +115,6 @@ namespace PRESENTACION
             this.gpbAgregar_Producto.Size = new System.Drawing.Size(554, 291);
             this.gpbAgregar_Producto.TabIndex = 29;
             this.gpbAgregar_Producto.TabStop = false;
-            // 
-            // bnt_Agregar_Lab
-            // 
-            this.bnt_Agregar_Lab.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bnt_Agregar_Lab.Location = new System.Drawing.Point(345, 78);
-            this.bnt_Agregar_Lab.Name = "bnt_Agregar_Lab";
-            this.bnt_Agregar_Lab.Size = new System.Drawing.Size(47, 21);
-            this.bnt_Agregar_Lab.TabIndex = 48;
-            this.bnt_Agregar_Lab.TabStop = false;
-            this.bnt_Agregar_Lab.Click += new System.EventHandler(this.bnt_Agregar_Lab_Click);
             // 
             // cmbLab
             // 
@@ -207,28 +198,6 @@ namespace PRESENTACION
             this.label12.TabIndex = 46;
             this.label12.Text = "Suba una imagen";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(398, 238);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 41);
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(398, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 156);
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -306,6 +275,39 @@ namespace PRESENTACION
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
+            // bnt_Agregar_Lab
+            // 
+            this.bnt_Agregar_Lab.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bnt_Agregar_Lab.Location = new System.Drawing.Point(345, 78);
+            this.bnt_Agregar_Lab.Name = "bnt_Agregar_Lab";
+            this.bnt_Agregar_Lab.Size = new System.Drawing.Size(47, 21);
+            this.bnt_Agregar_Lab.TabIndex = 48;
+            this.bnt_Agregar_Lab.TabStop = false;
+            this.bnt_Agregar_Lab.Click += new System.EventHandler(this.bnt_Agregar_Lab_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
+            this.pictureBox2.Location = new System.Drawing.Point(398, 238);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(110, 40);
+            this.pictureBox2.TabIndex = 45;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(398, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 156);
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,10 +325,10 @@ namespace PRESENTACION
             this.Resize += new System.EventHandler(this.FormAgregarMedicamento_Resize);
             this.gpbAgregar_Producto.ResumeLayout(false);
             this.gpbAgregar_Producto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_Agregar_Lab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

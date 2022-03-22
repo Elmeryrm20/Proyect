@@ -82,8 +82,8 @@ namespace PRESENTACION
             {
                 this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
                 this.WindowState = FormWindowState.Maximized;
-                btn_Maximizar.Visible = false;
-                Btn_Normal.Visible = true;
+                Pib_Maximizar.Visible = false;
+                Pib_Restaurar.Visible = true;
             }
         }
 
@@ -92,8 +92,8 @@ namespace PRESENTACION
             if (WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                btn_Maximizar.Visible = true;
-                Btn_Normal.Visible = false;
+                Pib_Maximizar.Visible = true;
+                Pib_Restaurar.Visible = false;
             }
             n = 1;
             mx = e.X;
@@ -191,8 +191,8 @@ namespace PRESENTACION
             {
                 this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
                 this.WindowState = FormWindowState.Maximized;
-                btn_Maximizar.Visible = false;
-                Btn_Normal.Visible = true;
+                Pib_Maximizar.Visible = false;
+                Pib_Restaurar.Visible = true;
             }
         }
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -257,8 +257,8 @@ namespace PRESENTACION
             
                 this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
                 this.WindowState = FormWindowState.Maximized;
-                btn_Maximizar.Visible = false;
-                Btn_Normal.Visible = true;
+                Pib_Maximizar.Visible = false;
+                Pib_Restaurar.Visible = true;
             
            
         }
@@ -267,8 +267,8 @@ namespace PRESENTACION
         {
            
                 this.WindowState = FormWindowState.Normal;
-                btn_Maximizar.Visible = true;
-                Btn_Normal.Visible = false;
+                Pib_Maximizar.Visible = true;
+                Pib_Restaurar.Visible = false;
 
             
         }
@@ -312,6 +312,65 @@ namespace PRESENTACION
         private void Btn_Acerca_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(8);
+        }
+
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            PibMinimizar.Image = Properties.Resources.BotonVentanaMinimizar06;
+        }
+
+        private void PibMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            PibMinimizar.Image = Properties.Resources.BotonVentanaMinimizar05;
+
+        }
+
+        private void Pib_Restaurar_MouseEnter(object sender, EventArgs e)
+        {
+            Pib_Restaurar.Image = Properties.Resources.BotonVentanaRestaurar02;
+
+        }
+
+        private void Pib_Restaurar_MouseLeave(object sender, EventArgs e)
+        {
+            Pib_Restaurar.Image = Properties.Resources.BotonVentanaRestaurar01;
+
+        }
+
+        private void PibCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            PibCerrar.Image = Properties.Resources.BotonVentanaCerrar06;
+
+        }
+
+        private void PibCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            PibCerrar.Image = Properties.Resources.BotonVentanaCerrar05;
+
+        }
+
+        private void Pib_Maximizar_MouseEnter(object sender, EventArgs e)
+        {
+            Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar02;
+
+        }
+
+        private void Pib_Maximizar_MouseLeave(object sender, EventArgs e)
+        {
+            Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar01;
+
+        }
+
+        private void PibContraer_MouseEnter(object sender, EventArgs e)
+        {
+            PibContraer.Image = Properties.Resources.BotonVentanaContraer02;
+
+        }
+
+        private void PibContraer_MouseLeave(object sender, EventArgs e)
+        {
+            PibContraer.Image = Properties.Resources.BotonVentanaContraer01;
+
         }
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)
