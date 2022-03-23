@@ -94,28 +94,37 @@ namespace PRESENTACION
         //Botón Filtrar
         private void btn_Filtrar_Click(object sender, EventArgs e)
         {
-            string Tipo = cmbTipo.SelectedValue.ToString();
-            string Almacen = cmb_Almacen.SelectedValue.ToString();
+            try
+            {
+                string Tipo = cmbTipo.SelectedValue.ToString();
+                string Almacen = cmb_Almacen.SelectedValue.ToString();
 
-            if (cmbTipo.Text!= "Seleccione Tipo" && cmb_Almacen.Text!= "Seleccione Caja")
-            {
-                label4.Text = Tipo + " " + Almacen;
-                dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(Tipo,Almacen);
+                if (cmbTipo.Text != "Seleccione Tipo" && cmb_Almacen.Text != "Seleccione Caja")
+                {
+                    label4.Text = Tipo + " " + Almacen;
+                    dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(Tipo, Almacen);
+                }
+                else if (cmbTipo.Text != "Seleccione Tipo" && cmb_Almacen.Text == "Seleccione Caja")
+                {
+                    label4.Text = Tipo;
+                    dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(Tipo);
+                }
+                else if (cmbTipo.Text == "Seleccione Tipo" && cmb_Almacen.Text != "Seleccione Caja")
+                {
+                    label4.Text = Almacen;
+                    dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(Almacen);
+                }
+                else
+                {
+                    label4.Text = "NADA";
+                    limpiar();
+                }
             }
-            else if (cmbTipo.Text != "Seleccione Tipo" && cmb_Almacen.Text == "Seleccione Caja")
-            {
-                label4.Text = Tipo;
-               dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(Tipo); 
-            }
-            else if (cmbTipo.Text == "Seleccione Tipo" && cmb_Almacen.Text != "Seleccione Caja")
-            {
-                label4.Text = Almacen;
-                dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(Almacen);
-            }
-            else
+            catch (Exception)
             {
                 label4.Text = "error";
                 limpiar();
+
             }
         }
         #endregion
@@ -149,7 +158,9 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             FormEditarProducto frm4 = new FormEditarProducto(valor_ID);
+            AddOwnedForm(frm4);
             frm4.ShowDialog();
+
 
         }
         #endregion
