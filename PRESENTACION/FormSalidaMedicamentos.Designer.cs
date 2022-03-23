@@ -39,16 +39,18 @@ namespace PRESENTACION
             this.PibAgregarMed = new System.Windows.Forms.PictureBox();
             this.PibEliminarMed = new System.Windows.Forms.PictureBox();
             this.PibLimpiar = new System.Windows.Forms.PictureBox();
+            this.PibGuardarImprimir = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvSalida
             // 
             this.DgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvSalida.Location = new System.Drawing.Point(60, 114);
+            this.DgvSalida.Location = new System.Drawing.Point(24, 114);
             this.DgvSalida.Name = "DgvSalida";
             this.DgvSalida.Size = new System.Drawing.Size(509, 228);
             this.DgvSalida.TabIndex = 0;
@@ -79,7 +81,7 @@ namespace PRESENTACION
             // 
             // TxtTrabajador
             // 
-            this.TxtTrabajador.Location = new System.Drawing.Point(99, 52);
+            this.TxtTrabajador.Location = new System.Drawing.Point(99, 66);
             this.TxtTrabajador.Name = "TxtTrabajador";
             this.TxtTrabajador.ReadOnly = true;
             this.TxtTrabajador.Size = new System.Drawing.Size(192, 20);
@@ -88,7 +90,7 @@ namespace PRESENTACION
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 55);
+            this.label2.Location = new System.Drawing.Point(32, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 2;
@@ -106,7 +108,7 @@ namespace PRESENTACION
             // PibAgregarMed
             // 
             this.PibAgregarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
-            this.PibAgregarMed.Location = new System.Drawing.Point(617, 141);
+            this.PibAgregarMed.Location = new System.Drawing.Point(550, 126);
             this.PibAgregarMed.Name = "PibAgregarMed";
             this.PibAgregarMed.Size = new System.Drawing.Size(110, 40);
             this.PibAgregarMed.TabIndex = 4;
@@ -115,7 +117,7 @@ namespace PRESENTACION
             // PibEliminarMed
             // 
             this.PibEliminarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormeEliminar01;
-            this.PibEliminarMed.Location = new System.Drawing.Point(617, 197);
+            this.PibEliminarMed.Location = new System.Drawing.Point(550, 182);
             this.PibEliminarMed.Name = "PibEliminarMed";
             this.PibEliminarMed.Size = new System.Drawing.Size(110, 40);
             this.PibEliminarMed.TabIndex = 5;
@@ -124,17 +126,27 @@ namespace PRESENTACION
             // PibLimpiar
             // 
             this.PibLimpiar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibLimpiar.Location = new System.Drawing.Point(617, 252);
+            this.PibLimpiar.Location = new System.Drawing.Point(550, 237);
             this.PibLimpiar.Name = "PibLimpiar";
             this.PibLimpiar.Size = new System.Drawing.Size(110, 40);
             this.PibLimpiar.TabIndex = 6;
             this.PibLimpiar.TabStop = false;
+            // 
+            // PibGuardarImprimir
+            // 
+            this.PibGuardarImprimir.Image = global::PRESENTACION.Properties.Resources.BotonFormImprimir01;
+            this.PibGuardarImprimir.Location = new System.Drawing.Point(550, 293);
+            this.PibGuardarImprimir.Name = "PibGuardarImprimir";
+            this.PibGuardarImprimir.Size = new System.Drawing.Size(110, 40);
+            this.PibGuardarImprimir.TabIndex = 7;
+            this.PibGuardarImprimir.TabStop = false;
             // 
             // FormSalidaMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.PibGuardarImprimir);
             this.Controls.Add(this.PibLimpiar);
             this.Controls.Add(this.PibEliminarMed);
             this.Controls.Add(this.PibAgregarMed);
@@ -152,6 +164,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +181,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox PibEliminarMed;
         private System.Windows.Forms.PictureBox PibLimpiar;
         public System.Windows.Forms.DataGridView DgvSalida;
+        private System.Windows.Forms.PictureBox PibGuardarImprimir;
     }
 }

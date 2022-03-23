@@ -49,6 +49,7 @@ namespace PRESENTACION
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.LblResultados = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).BeginInit();
@@ -97,6 +98,7 @@ namespace PRESENTACION
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.LblResultados);
             this.panel1.Controls.Add(this.cmb_Almacen);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
@@ -290,6 +292,17 @@ namespace PRESENTACION
             this.panel5.Size = new System.Drawing.Size(628, 283);
             this.panel5.TabIndex = 12;
             // 
+            // LblResultados
+            // 
+            this.LblResultados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblResultados.AutoSize = true;
+            this.LblResultados.ForeColor = System.Drawing.Color.Red;
+            this.LblResultados.Location = new System.Drawing.Point(583, 57);
+            this.LblResultados.Name = "LblResultados";
+            this.LblResultados.Size = new System.Drawing.Size(90, 13);
+            this.LblResultados.TabIndex = 13;
+            this.LblResultados.Text = "N° de Resultados";
+            // 
             // FormMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,5 +354,6 @@ namespace PRESENTACION
         public System.Windows.Forms.DataGridView dgb_Medicamentos;
         private System.Windows.Forms.ComboBox cmb_Almacen;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LblResultados;
     }
 }
