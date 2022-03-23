@@ -97,10 +97,10 @@ namespace PRESENTACION
             if (WindowState == FormWindowState.Maximized)
             {
                 int anchomax = this.Width;
-                int porc_anchomax = (int)Math.Round(((double)mx / (double)anchomax) * 100);
+                int porc_anchomax = (int)Math.Round(((double)mx / (double)(anchomax-panel2.Width)) * 100);
                 this.WindowState = FormWindowState.Normal;
                 int anchonormal = this.Width;
-                mx = (int)Math.Round(((double)porc_anchomax / 100) * anchonormal);
+                mx = (int)Math.Round(((double)porc_anchomax / 100) * (anchonormal-panel2.Width));
                 Pib_Maximizar.Visible = true;
                 Pib_Restaurar.Visible = false;
             }
