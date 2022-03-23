@@ -46,6 +46,7 @@ namespace PRESENTACION
             this.Pib_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pib_Restaurar = new System.Windows.Forms.PictureBox();
             this.PnlCuerpo = new System.Windows.Forms.Panel();
+            this.Btn_Salida = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).BeginInit();
@@ -62,11 +63,13 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.panel2.Controls.Add(this.Btn_Salida);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.Btn_Acerca);
             this.panel2.Controls.Add(this.Btn_Config);
@@ -98,7 +101,7 @@ namespace PRESENTACION
             this.Btn_Acerca.BackColor = System.Drawing.Color.White;
             this.Btn_Acerca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Acerca.Image = global::PRESENTACION.Properties.Resources.MenuAcercaDe01;
-            this.Btn_Acerca.Location = new System.Drawing.Point(0, 405);
+            this.Btn_Acerca.Location = new System.Drawing.Point(0, 450);
             this.Btn_Acerca.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Acerca.Name = "Btn_Acerca";
             this.Btn_Acerca.Size = new System.Drawing.Size(160, 45);
@@ -113,7 +116,7 @@ namespace PRESENTACION
             this.Btn_Config.BackColor = System.Drawing.Color.White;
             this.Btn_Config.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Config.Image = global::PRESENTACION.Properties.Resources.MenuConfiguracion01;
-            this.Btn_Config.Location = new System.Drawing.Point(0, 360);
+            this.Btn_Config.Location = new System.Drawing.Point(0, 405);
             this.Btn_Config.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Config.Name = "Btn_Config";
             this.Btn_Config.Size = new System.Drawing.Size(160, 45);
@@ -128,7 +131,7 @@ namespace PRESENTACION
             this.Btn_Historial.BackColor = System.Drawing.Color.White;
             this.Btn_Historial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Historial.Image = global::PRESENTACION.Properties.Resources.MenuHistorial01;
-            this.Btn_Historial.Location = new System.Drawing.Point(0, 315);
+            this.Btn_Historial.Location = new System.Drawing.Point(0, 360);
             this.Btn_Historial.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Historial.Name = "Btn_Historial";
             this.Btn_Historial.Size = new System.Drawing.Size(160, 45);
@@ -143,7 +146,7 @@ namespace PRESENTACION
             this.Btn_AgregarUsuario.BackColor = System.Drawing.Color.White;
             this.Btn_AgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_AgregarUsuario.Image = global::PRESENTACION.Properties.Resources.MenuAgregarUsuario01;
-            this.Btn_AgregarUsuario.Location = new System.Drawing.Point(0, 270);
+            this.Btn_AgregarUsuario.Location = new System.Drawing.Point(0, 315);
             this.Btn_AgregarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_AgregarUsuario.Name = "Btn_AgregarUsuario";
             this.Btn_AgregarUsuario.Size = new System.Drawing.Size(160, 45);
@@ -158,7 +161,7 @@ namespace PRESENTACION
             this.Btn_Usuarios.BackColor = System.Drawing.Color.White;
             this.Btn_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Usuarios.Image = global::PRESENTACION.Properties.Resources.MenuUsuarios01;
-            this.Btn_Usuarios.Location = new System.Drawing.Point(0, 225);
+            this.Btn_Usuarios.Location = new System.Drawing.Point(0, 270);
             this.Btn_Usuarios.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Usuarios.Name = "Btn_Usuarios";
             this.Btn_Usuarios.Size = new System.Drawing.Size(160, 45);
@@ -319,6 +322,21 @@ namespace PRESENTACION
             this.PnlCuerpo.Size = new System.Drawing.Size(721, 502);
             this.PnlCuerpo.TabIndex = 5;
             // 
+            // Btn_Salida
+            // 
+            this.Btn_Salida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Salida.BackColor = System.Drawing.Color.White;
+            this.Btn_Salida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Salida.Image = global::PRESENTACION.Properties.Resources.MenuSalida01;
+            this.Btn_Salida.Location = new System.Drawing.Point(0, 225);
+            this.Btn_Salida.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Salida.Name = "Btn_Salida";
+            this.Btn_Salida.Size = new System.Drawing.Size(160, 45);
+            this.Btn_Salida.TabIndex = 9;
+            this.Btn_Salida.TabStop = false;
+            this.Btn_Salida.Click += new System.EventHandler(this.Btn_Salida_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +365,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +388,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox Btn_Acerca;
         private System.Windows.Forms.PictureBox Btn_Config;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox Btn_Salida;
     }
 }

@@ -31,36 +31,36 @@ namespace PRESENTACION
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgb_Usuario = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Restablecer = new System.Windows.Forms.PictureBox();
             this.bt_EliminarU = new System.Windows.Forms.PictureBox();
             this.bt_ActualizarU = new System.Windows.Forms.PictureBox();
             this.bt_EditarU = new System.Windows.Forms.PictureBox();
             this.bt_AgregarU = new System.Windows.Forms.PictureBox();
-            this.dgb_Usuario = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Restablecer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EliminarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_ActualizarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EditarU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_AgregarU)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).BeginInit();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuarios";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -72,16 +72,8 @@ namespace PRESENTACION
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 59);
+            this.panel1.Size = new System.Drawing.Size(733, 59);
             this.panel1.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(527, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 33);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -93,58 +85,8 @@ namespace PRESENTACION
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 352);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(592, 54);
+            this.panel2.Size = new System.Drawing.Size(733, 54);
             this.panel2.TabIndex = 4;
-            // 
-            // btn_Restablecer
-            // 
-            this.btn_Restablecer.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btn_Restablecer.Location = new System.Drawing.Point(426, 6);
-            this.btn_Restablecer.Name = "btn_Restablecer";
-            this.btn_Restablecer.Size = new System.Drawing.Size(90, 36);
-            this.btn_Restablecer.TabIndex = 4;
-            this.btn_Restablecer.TabStop = false;
-            this.btn_Restablecer.Click += new System.EventHandler(this.btn_Restablecer_Click);
-            // 
-            // bt_EliminarU
-            // 
-            this.bt_EliminarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bt_EliminarU.Location = new System.Drawing.Point(218, 6);
-            this.bt_EliminarU.Name = "bt_EliminarU";
-            this.bt_EliminarU.Size = new System.Drawing.Size(90, 36);
-            this.bt_EliminarU.TabIndex = 3;
-            this.bt_EliminarU.TabStop = false;
-            this.bt_EliminarU.Click += new System.EventHandler(this.bt_EliminarU_Click);
-            // 
-            // bt_ActualizarU
-            // 
-            this.bt_ActualizarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bt_ActualizarU.Location = new System.Drawing.Point(320, 6);
-            this.bt_ActualizarU.Name = "bt_ActualizarU";
-            this.bt_ActualizarU.Size = new System.Drawing.Size(90, 36);
-            this.bt_ActualizarU.TabIndex = 2;
-            this.bt_ActualizarU.TabStop = false;
-            this.bt_ActualizarU.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // bt_EditarU
-            // 
-            this.bt_EditarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bt_EditarU.Location = new System.Drawing.Point(116, 6);
-            this.bt_EditarU.Name = "bt_EditarU";
-            this.bt_EditarU.Size = new System.Drawing.Size(90, 36);
-            this.bt_EditarU.TabIndex = 1;
-            this.bt_EditarU.TabStop = false;
-            this.bt_EditarU.Click += new System.EventHandler(this.bt_EditarU_Click);
-            // 
-            // bt_AgregarU
-            // 
-            this.bt_AgregarU.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bt_AgregarU.Location = new System.Drawing.Point(14, 6);
-            this.bt_AgregarU.Name = "bt_AgregarU";
-            this.bt_AgregarU.Size = new System.Drawing.Size(90, 36);
-            this.bt_AgregarU.TabIndex = 0;
-            this.bt_AgregarU.TabStop = false;
-            this.bt_AgregarU.Click += new System.EventHandler(this.pb_Click);
             // 
             // dgb_Usuario
             // 
@@ -156,7 +98,7 @@ namespace PRESENTACION
             this.dgb_Usuario.Name = "dgb_Usuario";
             this.dgb_Usuario.ReadOnly = true;
             this.dgb_Usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgb_Usuario.Size = new System.Drawing.Size(528, 293);
+            this.dgb_Usuario.Size = new System.Drawing.Size(669, 293);
             this.dgb_Usuario.TabIndex = 1;
             this.dgb_Usuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Usuario_CellContentClick);
             // 
@@ -171,7 +113,7 @@ namespace PRESENTACION
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(560, 59);
+            this.panel5.Location = new System.Drawing.Point(701, 59);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(32, 293);
             this.panel5.TabIndex = 3;
@@ -182,14 +124,77 @@ namespace PRESENTACION
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(32, 59);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(528, 293);
+            this.panel3.Size = new System.Drawing.Size(669, 293);
             this.panel3.TabIndex = 5;
+            // 
+            // btn_Restablecer
+            // 
+            this.btn_Restablecer.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Restablecer.Image = global::PRESENTACION.Properties.Resources.BotonFormDetalles01;
+            this.btn_Restablecer.Location = new System.Drawing.Point(498, 6);
+            this.btn_Restablecer.Name = "btn_Restablecer";
+            this.btn_Restablecer.Size = new System.Drawing.Size(110, 40);
+            this.btn_Restablecer.TabIndex = 4;
+            this.btn_Restablecer.TabStop = false;
+            this.btn_Restablecer.Click += new System.EventHandler(this.btn_Restablecer_Click);
+            // 
+            // bt_EliminarU
+            // 
+            this.bt_EliminarU.BackColor = System.Drawing.Color.Transparent;
+            this.bt_EliminarU.Image = global::PRESENTACION.Properties.Resources.BotonFormQuitarUsuario01;
+            this.bt_EliminarU.Location = new System.Drawing.Point(256, 6);
+            this.bt_EliminarU.Name = "bt_EliminarU";
+            this.bt_EliminarU.Size = new System.Drawing.Size(110, 40);
+            this.bt_EliminarU.TabIndex = 3;
+            this.bt_EliminarU.TabStop = false;
+            this.bt_EliminarU.Click += new System.EventHandler(this.bt_EliminarU_Click);
+            // 
+            // bt_ActualizarU
+            // 
+            this.bt_ActualizarU.BackColor = System.Drawing.Color.Transparent;
+            this.bt_ActualizarU.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
+            this.bt_ActualizarU.Location = new System.Drawing.Point(377, 6);
+            this.bt_ActualizarU.Name = "bt_ActualizarU";
+            this.bt_ActualizarU.Size = new System.Drawing.Size(110, 40);
+            this.bt_ActualizarU.TabIndex = 2;
+            this.bt_ActualizarU.TabStop = false;
+            this.bt_ActualizarU.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // bt_EditarU
+            // 
+            this.bt_EditarU.BackColor = System.Drawing.Color.Transparent;
+            this.bt_EditarU.Image = global::PRESENTACION.Properties.Resources.BotonFormEditar01;
+            this.bt_EditarU.Location = new System.Drawing.Point(135, 6);
+            this.bt_EditarU.Name = "bt_EditarU";
+            this.bt_EditarU.Size = new System.Drawing.Size(110, 40);
+            this.bt_EditarU.TabIndex = 1;
+            this.bt_EditarU.TabStop = false;
+            this.bt_EditarU.Click += new System.EventHandler(this.bt_EditarU_Click);
+            // 
+            // bt_AgregarU
+            // 
+            this.bt_AgregarU.BackColor = System.Drawing.Color.Transparent;
+            this.bt_AgregarU.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarUsuario01;
+            this.bt_AgregarU.Location = new System.Drawing.Point(14, 6);
+            this.bt_AgregarU.Name = "bt_AgregarU";
+            this.bt_AgregarU.Size = new System.Drawing.Size(110, 40);
+            this.bt_AgregarU.TabIndex = 0;
+            this.bt_AgregarU.TabStop = false;
+            this.bt_AgregarU.Click += new System.EventHandler(this.pb_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(527, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 33);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 406);
+            this.ClientSize = new System.Drawing.Size(733, 406);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
@@ -200,15 +205,15 @@ namespace PRESENTACION
             this.Text = "FormUsuarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).EndInit();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Restablecer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EliminarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_ActualizarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_EditarU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_AgregarU)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Usuario)).EndInit();
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

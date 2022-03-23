@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using DATOS;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DATOS;
 
 namespace PRESENTACION
 {
@@ -18,7 +12,7 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormPrincipal(string DNI,String Tipo, string Nombre)
+        public FormPrincipal(string DNI, String Tipo, string Nombre)
         {
             InitializeComponent();
             this.DNI = DNI;
@@ -42,7 +36,7 @@ namespace PRESENTACION
             Formulario = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
             {
-                Formulario = new FormInicio(DNI,Nombre);
+                Formulario = new FormInicio(DNI, Nombre);
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;
@@ -95,10 +89,10 @@ namespace PRESENTACION
             if (WindowState == FormWindowState.Maximized)
             {
                 int anchomax = this.Width;
-                int porc_anchomax = (int)Math.Round(((double)mx / (double)(anchomax-panel2.Width)) * 100);
+                int porc_anchomax = (int)Math.Round(((double)mx / (double)(anchomax - panel2.Width)) * 100);
                 this.WindowState = FormWindowState.Normal;
                 int anchonormal = this.Width;
-                mx = (int)Math.Round(((double)porc_anchomax / 100) * (anchonormal-panel2.Width));
+                mx = (int)Math.Round(((double)porc_anchomax / 100) * (anchonormal - panel2.Width));
                 Pib_Maximizar.Visible = true;
                 Pib_Restaurar.Visible = false;
             }
@@ -134,6 +128,9 @@ namespace PRESENTACION
                 case 8:
                     Btn_Acerca.Image = Properties.Resources.MenuAcercaDe02;
                     break;
+                case 9:
+                    Btn_Salida.Image = Properties.Resources.MenuSalida02;
+                    break;
                 default:
                     break;
             }
@@ -143,7 +140,7 @@ namespace PRESENTACION
                 DeseleccionarBoton(Ultimo);
                 Ultimo = x;
             }
-            
+
         }
 
         private void DeseleccionarBoton(sbyte y)
@@ -173,6 +170,9 @@ namespace PRESENTACION
                     break;
                 case 8:
                     Btn_Acerca.Image = Properties.Resources.MenuAcercaDe01;
+                    break;
+                case 9:
+                    Btn_Salida.Image = Properties.Resources.MenuSalida01;
                     break;
                 default:
                     break;
@@ -246,7 +246,7 @@ namespace PRESENTACION
                 PnlCuerpo.Controls.Add(Formulario);
                 PnlCuerpo.Tag = Formulario;
                 Formulario.Show();
-                Formulario.BringToFront();           
+                Formulario.BringToFront();
             }
             else
             {
@@ -257,23 +257,23 @@ namespace PRESENTACION
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
-            
-                this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
-                this.WindowState = FormWindowState.Maximized;
-                Pib_Maximizar.Visible = false;
-                Pib_Restaurar.Visible = true;
-            
-           
+
+            this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
+            Pib_Maximizar.Visible = false;
+            Pib_Restaurar.Visible = true;
+
+
         }
 
         private void Btn_Normal_Click(object sender, EventArgs e)
         {
-           
-                this.WindowState = FormWindowState.Normal;
-                Pib_Maximizar.Visible = true;
-                Pib_Restaurar.Visible = false;
 
-            
+            this.WindowState = FormWindowState.Normal;
+            Pib_Maximizar.Visible = true;
+            Pib_Restaurar.Visible = false;
+
+
         }
 
         private void Btn_Historial_Click(object sender, EventArgs e)
@@ -386,6 +386,31 @@ namespace PRESENTACION
             if (Formulario == null)
             {
                 Formulario = new FormUsuarios();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
+        private void Btn_Salida_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(9);
+
+
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                Formulario = new FormSalidaMedicamentos(DNI, Nombre);
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;
