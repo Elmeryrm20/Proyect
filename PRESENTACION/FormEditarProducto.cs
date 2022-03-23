@@ -60,6 +60,8 @@ namespace PRESENTACION
         }
         private void btnSerrar_Click(object sender, EventArgs e)
         {
+            FormMedicamentos fr = Owner as FormMedicamentos;
+            fr.Rellenartabla();
             this.Close();
         }
 

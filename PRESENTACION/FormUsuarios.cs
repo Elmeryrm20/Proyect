@@ -34,7 +34,8 @@ namespace PRESENTACION
 
         private void pb_Click(object sender, EventArgs e)
         {
-            
+            FormPrincipal fr=Owner as FormPrincipal;
+            fr.FormularioAgregarUsuario();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
