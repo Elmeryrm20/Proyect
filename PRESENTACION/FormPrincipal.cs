@@ -18,7 +18,6 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-
         public FormPrincipal(string DNI,String Tipo, string Nombre)
         {
             InitializeComponent();
@@ -34,6 +33,8 @@ namespace PRESENTACION
         readonly string DNI;
         readonly string Tipo;
         readonly string Nombre;
+
+        Consultas consultas = new Consultas();
 
         public void LlamarInicio()
         {
