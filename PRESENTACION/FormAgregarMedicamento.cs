@@ -135,7 +135,8 @@ namespace PRESENTACION
                 else img = null;
 
                 consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
-                consultas.SP_Agregar_Detalle_Ingreso(0, int.Parse(textCantidad.Text), DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), Tra_DNI, DateTime.Now.ToString("yyyy-MM-dd"));
+                int UltimoId = consultas.D_UltimoIdIngresado();
+                consultas.SP_Agregar_Detalle_Ingreso(UltimoId, int.Parse(textCantidad.Text), DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), Tra_DNI, DateTime.Now.ToString("yyyy-MM-dd"));
 
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 Limpiar();
