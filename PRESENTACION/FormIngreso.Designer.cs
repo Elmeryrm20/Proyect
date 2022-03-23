@@ -30,16 +30,16 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtp_FechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,15 +63,27 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "INGRESO";
             // 
+            // btnSerrar
+            // 
+            this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
+            this.btnSerrar.Location = new System.Drawing.Point(318, 3);
+            this.btnSerrar.Name = "btnSerrar";
+            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnSerrar.TabIndex = 3;
+            this.btnSerrar.TabStop = false;
+            this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
+            // 
             // lbl_Nombre
             // 
             this.lbl_Nombre.AutoSize = true;
             this.lbl_Nombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nombre.Location = new System.Drawing.Point(43, 56);
             this.lbl_Nombre.Name = "lbl_Nombre";
-            this.lbl_Nombre.Size = new System.Drawing.Size(50, 18);
+            this.lbl_Nombre.Size = new System.Drawing.Size(64, 18);
             this.lbl_Nombre.TabIndex = 1;
-            this.lbl_Nombre.Text = "label1";
+            this.lbl_Nombre.Text = "Nombre";
             // 
             // label2
             // 
@@ -118,18 +130,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnSerrar
-            // 
-            this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
-            this.btnSerrar.Location = new System.Drawing.Point(318, 3);
-            this.btnSerrar.Name = "btnSerrar";
-            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
-            this.btnSerrar.TabIndex = 3;
-            this.btnSerrar.TabStop = false;
-            this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
-            // 
             // FormIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,8 +148,8 @@
             this.Text = "FormIngreso";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

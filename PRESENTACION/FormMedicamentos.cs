@@ -100,7 +100,7 @@ namespace PRESENTACION
             if (cmbTipo.Text!= "Seleccione Tipo" && cmb_Almacen.Text!= "Seleccione Caja")
             {
                 label4.Text = Tipo + " " + Almacen;
-                dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(Tipo,Almacen);
+                dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(Almacen,Tipo);
             }
             else if (cmbTipo.Text != "Seleccione Tipo" && cmb_Almacen.Text == "Seleccione Caja")
             {
@@ -149,6 +149,7 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             FormEditarProducto frm4 = new FormEditarProducto(valor_ID);
+            AddOwnedForm(frm4);
             frm4.ShowDialog();
 
         }

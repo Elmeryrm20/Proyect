@@ -19,6 +19,7 @@ namespace PRESENTACION
             this.DNI = DNI;
             this.valor = valor;
             Ingreso();
+
         }
         #endregion
 

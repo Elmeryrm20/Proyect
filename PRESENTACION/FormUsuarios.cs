@@ -34,6 +34,8 @@ namespace PRESENTACION
 
         private void pb_Click(object sender, EventArgs e)
         {
+            FormPrincipal fr = Owner as FormPrincipal;
+            fr.LlamarFormularioA_U();
             
         }
 

@@ -229,7 +229,7 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
 
-        } 
+        }
         #endregion
 
         #region Rellenar DatagridView
@@ -582,6 +582,27 @@ namespace DATOS
         }
         #endregion
 
+        public int D_UltimoIdIngresado()
+        {
+            Conexion.connection.Open();
+            MySqlCommand comando = new MySqlCommand("SP_UltimoIdInsertado", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return Convert.ToInt32(tabla.Rows[0][0]);
+        }
+
         public DataTable D_Consulta_Dinamica(string Busqueda)
         {
             Conexion.connection.Open();
@@ -643,7 +664,7 @@ namespace DATOS
             Conexion.connection.Close();
 
             return dt;
-        } 
+        }
 
         public DataTable SP_ListaU_Para_Edit(string Med_Codigo)
         {
@@ -672,36 +693,7 @@ namespace DATOS
             return dt;
 
         }
-        public DataTable SP_Medicamento_Filtrado_Almacen(string Almacen)
-        {
-            Conexion.connection.Open();
-
-            MySqlCommand comando = new MySqlCommand("SP_Medicamento_Filtrado_Almacen", Conexion.connection);
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("Almacen", Almacen);
-            MySqlDataAdapter da = new MySqlDataAdapter(comando);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            Conexion.connection.Close();
-            return dt;
-
-        }
-        public DataTable SP_Medicamento_Filtrado_Ambos(string tipo,string Almacen)
-        {
-            Conexion.connection.Open();
-
-            MySqlCommand comando = new MySqlCommand("SP_Medicamento_Filtrado_Ambos", Conexion.connection);
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("Almacen",Almacen);
-            comando.Parameters.AddWithValue("tipo", tipo);
-            MySqlDataAdapter da = new MySqlDataAdapter(comando);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            Conexion.connection.Close();
-            return dt;
-
-        }
-        public void SP_Eliminar_U(String DNI,int Estado)
+        public void SP_Eliminar_U(String DNI, int Estado)
         {
             Conexion.connection.Open();
 
@@ -744,6 +736,33 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
+        public DataTable SP_Medicamento_Filtrado_Almacen(string Almacen)
+        {
+            Conexion.connection.Open();
 
+            MySqlCommand comando = new MySqlCommand("SP_Medicamento_Filtrado_Almacen", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Almacen", Almacen);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+        public DataTable SP_Medicamento_Filtrado_Ambos(string Almacen,string tipo)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_Medicamento_Filtrado_Ambos", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Almacen", Almacen);
+            comando.Parameters.AddWithValue("tipo", tipo);
+
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
     }
 }

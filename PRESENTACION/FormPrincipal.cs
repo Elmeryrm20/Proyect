@@ -215,7 +215,7 @@ namespace PRESENTACION
             Formulario = PnlCuerpo.Controls.OfType<FormAgregarMedicamento>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
             {
-                Formulario = new FormAgregarMedicamento();
+                Formulario = new FormAgregarMedicamento(DNI);
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;
@@ -404,6 +404,10 @@ namespace PRESENTACION
         }
 
         private void Btn_Salidas_Click(object sender, EventArgs e)
+        {
+            LlamarFormularioA_U();
+        }
+        public void LlamarFormularioA_U()
         {
             SeleccionarBoton(5);
 
