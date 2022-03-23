@@ -52,14 +52,14 @@ namespace PRESENTACION
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.bnt_Agregar_Lab = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Pib_Agregar_Lab = new System.Windows.Forms.PictureBox();
+            this.PibAgregarMedicamento = new System.Windows.Forms.PictureBox();
+            this.PibImagen = new System.Windows.Forms.PictureBox();
             this.gpbAgregar_Producto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnt_Agregar_Lab)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Agregar_Lab)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMedicamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -90,7 +90,7 @@ namespace PRESENTACION
             // 
             // gpbAgregar_Producto
             // 
-            this.gpbAgregar_Producto.Controls.Add(this.bnt_Agregar_Lab);
+            this.gpbAgregar_Producto.Controls.Add(this.Pib_Agregar_Lab);
             this.gpbAgregar_Producto.Controls.Add(this.cmbLab);
             this.gpbAgregar_Producto.Controls.Add(this.CmbPresentacion);
             this.gpbAgregar_Producto.Controls.Add(this.dtFecha_Vencimiento);
@@ -100,8 +100,8 @@ namespace PRESENTACION
             this.gpbAgregar_Producto.Controls.Add(this.textCantidad);
             this.gpbAgregar_Producto.Controls.Add(this.textNombre);
             this.gpbAgregar_Producto.Controls.Add(this.label12);
-            this.gpbAgregar_Producto.Controls.Add(this.pictureBox2);
-            this.gpbAgregar_Producto.Controls.Add(this.pictureBox1);
+            this.gpbAgregar_Producto.Controls.Add(this.PibAgregarMedicamento);
+            this.gpbAgregar_Producto.Controls.Add(this.PibImagen);
             this.gpbAgregar_Producto.Controls.Add(this.label11);
             this.gpbAgregar_Producto.Controls.Add(this.label9);
             this.gpbAgregar_Producto.Controls.Add(this.label8);
@@ -203,9 +203,9 @@ namespace PRESENTACION
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(76, 244);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 13);
+            this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 43;
-            this.label11.Text = "Almacen";
+            this.label11.Text = "Almacén:";
             // 
             // label9
             // 
@@ -275,38 +275,38 @@ namespace PRESENTACION
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
-            // bnt_Agregar_Lab
+            // Pib_Agregar_Lab
             // 
-            this.bnt_Agregar_Lab.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bnt_Agregar_Lab.Location = new System.Drawing.Point(345, 78);
-            this.bnt_Agregar_Lab.Name = "bnt_Agregar_Lab";
-            this.bnt_Agregar_Lab.Size = new System.Drawing.Size(47, 21);
-            this.bnt_Agregar_Lab.TabIndex = 48;
-            this.bnt_Agregar_Lab.TabStop = false;
-            this.bnt_Agregar_Lab.Click += new System.EventHandler(this.bnt_Agregar_Lab_Click);
+            this.Pib_Agregar_Lab.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Pib_Agregar_Lab.Location = new System.Drawing.Point(345, 78);
+            this.Pib_Agregar_Lab.Name = "Pib_Agregar_Lab";
+            this.Pib_Agregar_Lab.Size = new System.Drawing.Size(47, 21);
+            this.Pib_Agregar_Lab.TabIndex = 48;
+            this.Pib_Agregar_Lab.TabStop = false;
+            this.Pib_Agregar_Lab.Click += new System.EventHandler(this.bnt_Agregar_Lab_Click);
             // 
-            // pictureBox2
+            // PibAgregarMedicamento
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
-            this.pictureBox2.Location = new System.Drawing.Point(398, 238);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(110, 40);
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.PibAgregarMedicamento.BackColor = System.Drawing.Color.Transparent;
+            this.PibAgregarMedicamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibAgregarMedicamento.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
+            this.PibAgregarMedicamento.Location = new System.Drawing.Point(398, 238);
+            this.PibAgregarMedicamento.Name = "PibAgregarMedicamento";
+            this.PibAgregarMedicamento.Size = new System.Drawing.Size(110, 40);
+            this.PibAgregarMedicamento.TabIndex = 45;
+            this.PibAgregarMedicamento.TabStop = false;
+            this.PibAgregarMedicamento.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox1
+            // PibImagen
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(398, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 156);
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PibImagen.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PibImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibImagen.Location = new System.Drawing.Point(398, 10);
+            this.PibImagen.Name = "PibImagen";
+            this.PibImagen.Size = new System.Drawing.Size(150, 156);
+            this.PibImagen.TabIndex = 44;
+            this.PibImagen.TabStop = false;
+            this.PibImagen.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormAgregarMedicamento
             // 
@@ -326,9 +326,9 @@ namespace PRESENTACION
             this.gpbAgregar_Producto.ResumeLayout(false);
             this.gpbAgregar_Producto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnt_Agregar_Lab)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Agregar_Lab)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMedicamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,7 +340,7 @@ namespace PRESENTACION
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label LblMuestra1;
         private System.Windows.Forms.GroupBox gpbAgregar_Producto;
-        private System.Windows.Forms.PictureBox bnt_Agregar_Lab;
+        private System.Windows.Forms.PictureBox Pib_Agregar_Lab;
         private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.ComboBox CmbPresentacion;
         private System.Windows.Forms.DateTimePicker dtFecha_Vencimiento;
@@ -350,8 +350,8 @@ namespace PRESENTACION
         private System.Windows.Forms.TextBox textCantidad;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PibAgregarMedicamento;
+        private System.Windows.Forms.PictureBox PibImagen;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;

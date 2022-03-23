@@ -1,16 +1,23 @@
 ﻿using DATOS;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace PRESENTACION
 {
     public partial class FormAgregarMedicamento : Form
     {
         Consultas consultas = new Consultas();
+
         public FormAgregarMedicamento()
         {
+            InitializeComponent();
+
+        }
+        public FormAgregarMedicamento(string Tra_DNI)
+        {
+            this.Tra_DNI = Tra_DNI;
             InitializeComponent();
             ObtenerTipo();
             ObtenerCaja();
@@ -18,6 +25,9 @@ namespace PRESENTACION
             ObtenerLaboratorio();
 
         }
+
+        string Tra_DNI;
+
         validar validacion = new validar();
         void ObtenerTipo()
         {
@@ -110,34 +120,39 @@ namespace PRESENTACION
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Validaciones();
+            //Validaciones();
+
             if (Validaciones() == true)
             {
+                byte[] img;
 
-                if (pictureBox1.Image!=null)
+                if (PibImagen.Image != null)
                 {
                     MemoryStream ms = new MemoryStream();
-                    pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    byte[] img = ms.ToArray();
-                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
+                    PibImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    img = ms.ToArray();
                 }
-                else
-                {
-                    byte[] img = null;
-                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
-                }
+                else img = null;
+
+                consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
+                consultas.SP_Agregar_Detalle_Ingreso(0, int.Parse(textCantidad.Text), DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), Tra_DNI, DateTime.Now.ToString("yyyy-MM-dd"));
 
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                textNombre.Text = "";
-                textCantidad.Text = "";
-                textGramaje.Text = "";
-                cmbCaja.Text = "Seleccione Caja";
-                cmbLab.Text = "Seleccione Laboratorio";
-                cmbTipo.Text = "Seleccione Tipo";
-                CmbPresentacion.Text = "Seleccione Presentacion";
-                dtFecha_Vencimiento.Value = DateTime.Now;
-                pictureBox1.Image = null;
+                Limpiar();
             }
+        }
+
+        private void Limpiar()
+        {
+            textNombre.Text = "";
+            textCantidad.Text = "";
+            textGramaje.Text = "";
+            cmbCaja.Text = "Seleccione Caja";
+            cmbLab.Text = "Seleccione Laboratorio";
+            cmbTipo.Text = "Seleccione Tipo";
+            CmbPresentacion.Text = "Seleccione Presentacion";
+            dtFecha_Vencimiento.Value = DateTime.Now;
+            PibImagen.Image = null;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -154,9 +169,9 @@ namespace PRESENTACION
                 string nombre = openFileDialog1.SafeFileName;
 
                 this.Text = nombre;
-                pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-                pictureBox1.Load(Imagen);
+                PibImagen.SizeMode = PictureBoxSizeMode.CenterImage;
+                PibImagen.SizeMode = PictureBoxSizeMode.Zoom;
+                PibImagen.Load(Imagen);
             }
         }
 
@@ -193,7 +208,7 @@ namespace PRESENTACION
 
         private void FormAgregarMedicamento_Resize(object sender, EventArgs e)
         {
-            
+
         }
 
         private void FormAgregarMedicamento_SizeChanged(object sender, EventArgs e)
@@ -207,7 +222,7 @@ namespace PRESENTACION
                 int y = (int)Math.Round(yval);
                 gpbAgregar_Producto.Location = new Point(x, y);
             }
-            
+
         }
 
         private void cmbLab_MouseDown(object sender, MouseEventArgs e)
