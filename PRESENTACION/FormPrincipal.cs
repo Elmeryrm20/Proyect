@@ -400,11 +400,6 @@ namespace PRESENTACION
 
         private void Btn_Salidas_Click(object sender, EventArgs e)
         {
-            FormularioAgregarUsuario();
-        }
-        public void FormularioAgregarUsuario()
-        {
-
             SeleccionarBoton(5);
 
 
