@@ -89,16 +89,21 @@ namespace PRESENTACION
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                Pib_Maximizar.Visible = true;
-                Pib_Restaurar.Visible = false;
-            }
+
             n = 1;
             mx = e.X;
             my = e.Y;
 
+            if (WindowState == FormWindowState.Maximized)
+            {
+                int anchomax = this.Width;
+                int porc_anchomax = (int)Math.Round(((double)mx / (double)anchomax) * 100);
+                this.WindowState = FormWindowState.Normal;
+                int anchonormal = this.Width;
+                mx = (int)Math.Round(((double)porc_anchomax / 100) * anchonormal);
+                Pib_Maximizar.Visible = true;
+                Pib_Restaurar.Visible = false;
+            }
         }
 
         //Metodos de Selección de Menú Principal
