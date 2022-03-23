@@ -149,6 +149,7 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             FormEditarProducto frm4 = new FormEditarProducto(valor_ID);
+            AddOwnedForm(frm4);
             frm4.ShowDialog();
 
         }
