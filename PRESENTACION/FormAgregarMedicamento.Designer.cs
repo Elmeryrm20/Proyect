@@ -34,6 +34,7 @@ namespace PRESENTACION
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.LblMuestra1 = new System.Windows.Forms.Label();
             this.gpbAgregar_Producto = new System.Windows.Forms.GroupBox();
+            this.Pib_Agregar_Lab = new System.Windows.Forms.PictureBox();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.CmbPresentacion = new System.Windows.Forms.ComboBox();
             this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +44,8 @@ namespace PRESENTACION
             this.textCantidad = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.PibAgregarMedicamento = new System.Windows.Forms.PictureBox();
+            this.PibImagen = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,14 +55,11 @@ namespace PRESENTACION
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Pib_Agregar_Lab = new System.Windows.Forms.PictureBox();
-            this.PibAgregarMedicamento = new System.Windows.Forms.PictureBox();
-            this.PibImagen = new System.Windows.Forms.PictureBox();
             this.gpbAgregar_Producto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Agregar_Lab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMedicamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,11 +110,21 @@ namespace PRESENTACION
             this.gpbAgregar_Producto.Controls.Add(this.label5);
             this.gpbAgregar_Producto.Controls.Add(this.label4);
             this.gpbAgregar_Producto.Controls.Add(this.label3);
-            this.gpbAgregar_Producto.Location = new System.Drawing.Point(26, 86);
+            this.gpbAgregar_Producto.Location = new System.Drawing.Point(87, 100);
             this.gpbAgregar_Producto.Name = "gpbAgregar_Producto";
             this.gpbAgregar_Producto.Size = new System.Drawing.Size(554, 291);
             this.gpbAgregar_Producto.TabIndex = 29;
             this.gpbAgregar_Producto.TabStop = false;
+            // 
+            // Pib_Agregar_Lab
+            // 
+            this.Pib_Agregar_Lab.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Pib_Agregar_Lab.Location = new System.Drawing.Point(345, 78);
+            this.Pib_Agregar_Lab.Name = "Pib_Agregar_Lab";
+            this.Pib_Agregar_Lab.Size = new System.Drawing.Size(47, 21);
+            this.Pib_Agregar_Lab.TabIndex = 48;
+            this.Pib_Agregar_Lab.TabStop = false;
+            this.Pib_Agregar_Lab.Click += new System.EventHandler(this.bnt_Agregar_Lab_Click);
             // 
             // cmbLab
             // 
@@ -198,6 +208,29 @@ namespace PRESENTACION
             this.label12.TabIndex = 46;
             this.label12.Text = "Suba una imagen";
             // 
+            // PibAgregarMedicamento
+            // 
+            this.PibAgregarMedicamento.BackColor = System.Drawing.Color.Transparent;
+            this.PibAgregarMedicamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibAgregarMedicamento.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
+            this.PibAgregarMedicamento.Location = new System.Drawing.Point(398, 238);
+            this.PibAgregarMedicamento.Name = "PibAgregarMedicamento";
+            this.PibAgregarMedicamento.Size = new System.Drawing.Size(110, 40);
+            this.PibAgregarMedicamento.TabIndex = 45;
+            this.PibAgregarMedicamento.TabStop = false;
+            this.PibAgregarMedicamento.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // PibImagen
+            // 
+            this.PibImagen.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PibImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibImagen.Location = new System.Drawing.Point(398, 10);
+            this.PibImagen.Name = "PibImagen";
+            this.PibImagen.Size = new System.Drawing.Size(150, 156);
+            this.PibImagen.TabIndex = 44;
+            this.PibImagen.TabStop = false;
+            this.PibImagen.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -275,45 +308,12 @@ namespace PRESENTACION
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
-            // Pib_Agregar_Lab
-            // 
-            this.Pib_Agregar_Lab.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Pib_Agregar_Lab.Location = new System.Drawing.Point(345, 78);
-            this.Pib_Agregar_Lab.Name = "Pib_Agregar_Lab";
-            this.Pib_Agregar_Lab.Size = new System.Drawing.Size(47, 21);
-            this.Pib_Agregar_Lab.TabIndex = 48;
-            this.Pib_Agregar_Lab.TabStop = false;
-            this.Pib_Agregar_Lab.Click += new System.EventHandler(this.bnt_Agregar_Lab_Click);
-            // 
-            // PibAgregarMedicamento
-            // 
-            this.PibAgregarMedicamento.BackColor = System.Drawing.Color.Transparent;
-            this.PibAgregarMedicamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibAgregarMedicamento.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
-            this.PibAgregarMedicamento.Location = new System.Drawing.Point(398, 238);
-            this.PibAgregarMedicamento.Name = "PibAgregarMedicamento";
-            this.PibAgregarMedicamento.Size = new System.Drawing.Size(110, 40);
-            this.PibAgregarMedicamento.TabIndex = 45;
-            this.PibAgregarMedicamento.TabStop = false;
-            this.PibAgregarMedicamento.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // PibImagen
-            // 
-            this.PibImagen.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PibImagen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibImagen.Location = new System.Drawing.Point(398, 10);
-            this.PibImagen.Name = "PibImagen";
-            this.PibImagen.Size = new System.Drawing.Size(150, 156);
-            this.PibImagen.TabIndex = 44;
-            this.PibImagen.TabStop = false;
-            this.PibImagen.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(592, 406);
+            this.ClientSize = new System.Drawing.Size(721, 502);
             this.Controls.Add(this.LblMuestra1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gpbAgregar_Producto);
@@ -325,10 +325,10 @@ namespace PRESENTACION
             this.Resize += new System.EventHandler(this.FormAgregarMedicamento_Resize);
             this.gpbAgregar_Producto.ResumeLayout(false);
             this.gpbAgregar_Producto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Agregar_Lab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMedicamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
