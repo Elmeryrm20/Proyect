@@ -267,6 +267,10 @@ namespace PRESENTACION
                 int y = (int)Math.Round(yval);
                 gpbAgregar_Producto.Location = new Point(x, y);
             }
+            else
+            {
+                gpbAgregar_Producto.Location = new Point(87, 100);
+            }
 
         }
 

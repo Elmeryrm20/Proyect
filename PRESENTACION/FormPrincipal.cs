@@ -16,11 +16,8 @@ namespace PRESENTACION
         public FormPrincipal()
         {
             InitializeComponent();
-            
-
         }
 
-        Consultas consultas = new Consultas();
 
         public FormPrincipal(string DNI,String Tipo, string Nombre)
         {
