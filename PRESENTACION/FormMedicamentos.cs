@@ -46,7 +46,7 @@ namespace PRESENTACION
             cmb_Almacen.ValueMember = "Alm_Descripcion";
             cmb_Almacen.DataSource = consultas.P_AlmMedicamento();
         }
-        void limpiar()
+        void Actualizar()
         {
             Rellenartabla();
             txb_Buscar.Clear();
@@ -63,10 +63,7 @@ namespace PRESENTACION
             cmb_Almacen.Text = "Seleccione Caja";
 
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
         #endregion
 
         #region Búsqueda,Filtro y obtener ID
@@ -75,13 +72,14 @@ namespace PRESENTACION
         {
             DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text);
             dgb_Medicamentos.DataSource = dt;
-
+            cmbTipo.Text = "Seleccione Tipo";
+            cmb_Almacen.Text = "Seleccione Caja";
         }
 
         //Botón Actualizar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            limpiar();
+            Actualizar();
         }
 
         int valor_ID = 1;
@@ -94,28 +92,36 @@ namespace PRESENTACION
         //Botón Filtrar
         private void btn_Filtrar_Click(object sender, EventArgs e)
         {
-            string Tipo = cmbTipo.SelectedValue.ToString();
-            string Almacen = cmb_Almacen.SelectedValue.ToString();
+            try
+            {
+                string Tipo = cmbTipo.SelectedValue.ToString();
+                string Almacen = cmb_Almacen.SelectedValue.ToString();
 
-            if (cmbTipo.Text!= "Seleccione Tipo" && cmb_Almacen.Text!= "Seleccione Caja")
-            {
-                label4.Text = Tipo + " " + Almacen;
-                dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(Almacen,Tipo);
+                if (cmbTipo.Text != "Seleccione Tipo" && cmb_Almacen.Text != "Seleccione Caja")
+                {
+                    label4.Text = Tipo + " " + Almacen;
+                    dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(Almacen, Tipo);
+                }
+                else if (cmbTipo.Text != "Seleccione Tipo" && cmb_Almacen.Text == "Seleccione Caja")
+                {
+                    label4.Text = Tipo;
+                    dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(Tipo);
+                }
+                else if (cmbTipo.Text == "Seleccione Tipo" && cmb_Almacen.Text != "Seleccione Caja")
+                {
+                    label4.Text = Almacen;
+                    dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(Almacen);
+                }
+                else
+                {
+                    label4.Text = "NADA";
+                }
+                txb_Buscar.Clear();
             }
-            else if (cmbTipo.Text != "Seleccione Tipo" && cmb_Almacen.Text == "Seleccione Caja")
+            catch (Exception)
             {
-                label4.Text = Tipo;
-               dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(Tipo); 
-            }
-            else if (cmbTipo.Text == "Seleccione Tipo" && cmb_Almacen.Text != "Seleccione Caja")
-            {
-                label4.Text = Almacen;
-                dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(Almacen);
-            }
-            else
-            {
-                label4.Text = "error";
-                limpiar();
+
+                label4.Text = "Error";
             }
         }
         #endregion
@@ -231,6 +237,11 @@ namespace PRESENTACION
         {
             Pib_Filtrar.Image = Properties.Resources.BotonFormBusqueda01;
 
+        }
+
+        private void cmb_Almacen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
