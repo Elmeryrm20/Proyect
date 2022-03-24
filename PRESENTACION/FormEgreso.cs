@@ -12,10 +12,11 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormEgreso(int Med_Codigo, string DNI)
+        public FormEgreso(int Med_Codigo,string MedNombre,string DNI)
         {
             InitializeComponent();
             this.Med_Codigo = Med_Codigo;
+            this.MedNombre = MedNombre;
             this.DNI = DNI;
             ObtenerIngresoEgreso();
         }
@@ -23,6 +24,7 @@ namespace PRESENTACION
         Consultas consultas = new Consultas();
 
         int Med_Codigo;
+        string MedNombre;
         readonly string DNI;
 
         private void btnSerrar_Click(object sender, EventArgs e)
@@ -46,27 +48,15 @@ namespace PRESENTACION
             LblStock.Text = (Ingreso - Egreso).ToString();
         }
 
+        //Boton Confirmar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (txtCantidad.Text.Length != 0)
             {
-                //FormPrincipal Principal = (FormPrincipal)Owner;
 
-                FormPrincipal Principal = Owner as FormPrincipal;
-
-                //FormMedicamentos Secundario = (FormMedicamentos)Owner;
-                //Secundario
-
-                //FormPrincipal Principal = (FormPrincipal)Owner;
-
-                Principal.SeleccionarBoton(9);
-                Principal.AparecerFormulario<FormSalidaMedicamentos>();
-
-                FormSalidaMedicamentos fr = new FormSalidaMedicamentos();
-                int n = fr.DgvSalida.Rows.Add();
-
-                //Colocamos la información
-                fr.DgvSalida.Rows[n].Cells[0].Value = Med_Codigo;
+                FormMedicamentos FrmMedicamentos = Owner as FormMedicamentos;
+                FrmMedicamentos.EnviarEgreso(Med_Codigo,MedNombre, int.Parse(txtCantidad.Text));
+                Close();
 
 
                 //int Existencias = Ingreso - Egreso;

@@ -326,6 +326,27 @@ namespace PRESENTACION
             AparecerFormulario<FormUsuarios>();
         }
 
+        public void EnviarEgreso(int Codigo,string MedNombre, int cantidad)
+        {
+            FormSalidaMedicamentos FrmSalida = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();
+
+            //Adicionamos nuevo renglon
+            int n = FrmSalida.DgvSalida.Rows.Add();
+
+            //Colocamos la información
+            FrmSalida.DgvSalida.Rows[n].Cells[0].Value = Codigo.ToString();
+            FrmSalida.DgvSalida.Rows[n].Cells[1].Value = MedNombre;
+            FrmSalida.DgvSalida.Rows[n].Cells[2].Value = cantidad.ToString();
+
+            FrmSalida.Show(); //Agregado
+            FrmSalida.BringToFront(); //Agregado
+
+            //SeleccionarBoton(2);
+            //AparecerFormulario<FormMedicamentos>();
+
+
+        }
+
         private void Btn_Salida_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(9);

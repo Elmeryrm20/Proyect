@@ -146,9 +146,18 @@ namespace PRESENTACION
         //Abrir Formulario de Egreso
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            FormEgreso frm3 = new FormEgreso(valor_ID, DNI);
+            string MedNombre = "";
+            MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
+            FormEgreso frm3 = new FormEgreso(valor_ID, MedNombre, DNI);
             AddOwnedForm(frm3);
             frm3.ShowDialog();
+        }
+
+        public void EnviarEgreso(int codigo, string MedNombre, int cantidad)
+        {
+            FormPrincipal Principal = (FormPrincipal)Owner;
+            Principal.EnviarEgreso(codigo, MedNombre, cantidad);
+
         }
 
         //Abrir Formulario de Editar

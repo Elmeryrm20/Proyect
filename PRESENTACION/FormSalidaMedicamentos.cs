@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace PRESENTACION
 {
@@ -21,14 +20,23 @@ namespace PRESENTACION
 
         readonly string DNI;
 
+        public void AgregarMedicamentoDgv(string Med_Codigo,int cantidad)
+        {
+            //Adicionamos nuevo renglon
+            int n = DgvSalida.Rows.Add();
+
+            //Colocamos la información
+            DgvSalida.Rows[n].Cells[0].Value = Med_Codigo;
+            DgvSalida.Rows[n].Cells[1].Value = cantidad.ToString();
+        }
+
         private void PibAgregarMed_Click(object sender, System.EventArgs e)
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
-            //Form Formulario;
 
             Principal.SeleccionarBoton(2);
-
             Principal.AparecerFormulario<FormMedicamentos>();
+
             //Formulario = Principal.PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
             //Formulario.BringToFront();
 
