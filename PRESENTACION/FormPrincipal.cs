@@ -7,6 +7,7 @@ namespace PRESENTACION
 {
     public partial class FormPrincipal : Form
     {
+        #region Constructores
         public FormPrincipal()
         {
             InitializeComponent();
@@ -19,24 +20,69 @@ namespace PRESENTACION
             this.Tipo = Tipo;
             this.Nombre = Nombre;
 
+            CargarFormulario();
             SeleccionarBoton(1);
 
-            LlamarInicio();
+            AparecerFormulario<FormInicio>();
 
         }
+        #endregion
+
+        #region Inicializar Variables de Formularios
         readonly string DNI;
         readonly string Tipo;
         readonly string Nombre;
 
         Consultas consultas = new Consultas();
+        #endregion
 
-        public void LlamarInicio()
+        #region Método para Formulario
+        void CargarFormulario()
+        {
+
+            for (int i = 1; i <= 7; i++)
+            {
+                Form Formulario = null;
+
+                switch (i)
+                {
+                    case 1:
+                        //Formulario = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault(); //Busca en la colección el formulario
+                        Formulario = new FormInicio(DNI, Nombre);
+                        break;
+                    case 2:
+                        //Formulario = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
+                        Formulario = new FormMedicamentos(DNI);
+                        break;
+                    case 3: Formulario = new FormAgregarMedicamento(DNI); break;
+                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre); break;
+                    case 5: Formulario = new FormUsuarios(DNI); break;
+                    case 6: Formulario = new FormAgregarUsuario(DNI); break;
+                    case 7: Formulario = new FormHistorial(DNI); break;
+                    //case 8: Formulario = new FormInicio(DNI, Nombre); break;
+                    //case 9: Formulario = new FormInicio(DNI, Nombre); break;
+                    default:
+                        break;
+                }
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                //Formulario.Show();
+                //Formulario.BringToFront();
+
+            }
+        }
+
+        //METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form Formulario;
-            Formulario = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault(); //Busca en la colección el formulario
+            Formulario = PnlCuerpo.Controls.OfType<MiForm>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
             {
-                Formulario = new FormInicio(DNI, Nombre);
+                Formulario = new MiForm();
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;
@@ -50,13 +96,22 @@ namespace PRESENTACION
             {
                 Formulario.BringToFront();
             }
-
         }
-        void centrar()
+
+        public void AparecerFormulario<MiForm>() where MiForm : Form, new()
         {
+            Form Formulario;
 
+            Formulario = PnlCuerpo.Controls.OfType<MiForm>().FirstOrDefault(); //Busca en la colección el formulario
+
+            Formulario.Show(); //Agregado
+            Formulario.BringToFront(); //Agregado
         }
+        #endregion
+
+        #region Métodos del Panel
         int n, mx, my;
+
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             if (n == 1)
@@ -97,7 +152,9 @@ namespace PRESENTACION
                 Pib_Restaurar.Visible = false;
             }
         }
+        #endregion
 
+        #region Seleccionar Botón de Menú
         //Metodos de Selección de Menú Principal
         private sbyte Ultimo = 0;
         private void SeleccionarBoton(sbyte x)
@@ -179,6 +236,26 @@ namespace PRESENTACION
             }
         }
 
+        #endregion
+
+        #region Botones de Ventana
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+
+            this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
+            Pib_Maximizar.Visible = false;
+            Pib_Restaurar.Visible = true;
+
+        }
+
+        private void Btn_Normal_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Normal;
+            Pib_Maximizar.Visible = true;
+            Pib_Restaurar.Visible = false;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -188,6 +265,7 @@ namespace PRESENTACION
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
         private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
@@ -198,124 +276,63 @@ namespace PRESENTACION
                 Pib_Restaurar.Visible = true;
             }
         }
+        #endregion
+
+        #region Botones Menú
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(1);
-            LlamarInicio();
-
+            AparecerFormulario<FormInicio>();
         }
 
         private void Btn_Agregar_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(3);
-
-            Form Formulario;
-            Formulario = PnlCuerpo.Controls.OfType<FormAgregarMedicamento>().FirstOrDefault(); //Busca en la colección el formulario
-            if (Formulario == null)
-            {
-                Formulario = new FormAgregarMedicamento(DNI);
-                AddOwnedForm(Formulario);
-                Formulario.TopLevel = false;
-                //Formulario.FormBorderStyle = FormBorderStyle.None;
-                Formulario.Dock = DockStyle.Fill;
-                PnlCuerpo.Controls.Add(Formulario);
-                PnlCuerpo.Tag = Formulario;
-                Formulario.Show();
-                Formulario.BringToFront();
-            }
-            else
-            {
-                Formulario.BringToFront();
-            }
+            AparecerFormulario<FormAgregarMedicamento>();
         }
 
-        private void Btn_Cajas_Click(object sender, EventArgs e)
+        public void Btn_Cajas_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(2);
-
-            consultas.ConsultaMed();
-            Form Formulario;
-            Formulario = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
-            if (Formulario == null)
-            {
-                Formulario = new FormMedicamentos(DNI);
-                AddOwnedForm(Formulario);
-                Formulario.TopLevel = false;
-                //Formulario.FormBorderStyle = FormBorderStyle.None;
-                Formulario.Dock = DockStyle.Fill;
-                PnlCuerpo.Controls.Add(Formulario);
-                PnlCuerpo.Tag = Formulario;
-                Formulario.Show();
-                Formulario.BringToFront();
-            }
-            else
-            {
-                Formulario.BringToFront();
-            }
-        }
-
-
-        private void pictureBox4_Click_1(object sender, EventArgs e)
-        {
-
-            this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
-            this.WindowState = FormWindowState.Maximized;
-            Pib_Maximizar.Visible = false;
-            Pib_Restaurar.Visible = true;
-
-
-        }
-
-        private void Btn_Normal_Click(object sender, EventArgs e)
-        {
-
-            this.WindowState = FormWindowState.Normal;
-            Pib_Maximizar.Visible = true;
-            Pib_Restaurar.Visible = false;
-
-
+            AparecerFormulario<FormMedicamentos>();
         }
 
         private void Btn_Historial_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(6);
-
-
-            Form Formulario;
-            Formulario = PnlCuerpo.Controls.OfType<FormHistorial>().FirstOrDefault(); //Busca en la colección el formulario
-            if (Formulario == null)
-            {
-                Formulario = new FormHistorial();
-                AddOwnedForm(Formulario);
-                Formulario.TopLevel = false;
-                //Formulario.FormBorderStyle = FormBorderStyle.None;
-                Formulario.Dock = DockStyle.Fill;
-                PnlCuerpo.Controls.Add(Formulario);
-                PnlCuerpo.Tag = Formulario;
-                Formulario.Show();
-                Formulario.BringToFront();
-            }
-            else
-            {
-                Formulario.BringToFront();
-            }
+            AparecerFormulario<FormHistorial>();
         }
 
         private void Btn_Config_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(7);
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Btn_Acerca_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(8);
         }
+
+        private void Btn_Usuarios_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(4);
+            AparecerFormulario<FormUsuarios>();
+        }
+
+        private void Btn_Salida_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(9);
+            AparecerFormulario<FormSalidaMedicamentos>();
+        }
+
+        private void Btn_Salidas_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(5);
+            AparecerFormulario<FormAgregarUsuario>();
+        }
+        #endregion
+
+        #region Botones de Formulario
 
         private void pictureBox3_MouseEnter(object sender, EventArgs e)
         {
@@ -325,134 +342,48 @@ namespace PRESENTACION
         private void PibMinimizar_MouseLeave(object sender, EventArgs e)
         {
             PibMinimizar.Image = Properties.Resources.BotonVentanaMinimizar05;
-
         }
 
         private void Pib_Restaurar_MouseEnter(object sender, EventArgs e)
         {
             Pib_Restaurar.Image = Properties.Resources.BotonVentanaRestaurar02;
-
         }
 
         private void Pib_Restaurar_MouseLeave(object sender, EventArgs e)
         {
             Pib_Restaurar.Image = Properties.Resources.BotonVentanaRestaurar01;
-
         }
 
         private void PibCerrar_MouseEnter(object sender, EventArgs e)
         {
             PibCerrar.Image = Properties.Resources.BotonVentanaCerrar06;
-
         }
 
         private void PibCerrar_MouseLeave(object sender, EventArgs e)
         {
             PibCerrar.Image = Properties.Resources.BotonVentanaCerrar05;
-
         }
 
         private void Pib_Maximizar_MouseEnter(object sender, EventArgs e)
         {
             Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar02;
-
         }
 
         private void Pib_Maximizar_MouseLeave(object sender, EventArgs e)
         {
             Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar01;
-
         }
 
         private void PibContraer_MouseEnter(object sender, EventArgs e)
         {
             PibContraer.Image = Properties.Resources.BotonVentanaContraer02;
-
         }
 
         private void PibContraer_MouseLeave(object sender, EventArgs e)
         {
             PibContraer.Image = Properties.Resources.BotonVentanaContraer01;
-
         }
+        #endregion
 
-        private void Btn_Usuarios_Click(object sender, EventArgs e)
-        {
-            SeleccionarBoton(4);
-
-
-            Form Formulario;
-            Formulario = PnlCuerpo.Controls.OfType<FormUsuarios>().FirstOrDefault(); //Busca en la colección el formulario
-            if (Formulario == null)
-            {
-                Formulario = new FormUsuarios();
-                AddOwnedForm(Formulario);
-                Formulario.TopLevel = false;
-                //Formulario.FormBorderStyle = FormBorderStyle.None;
-                Formulario.Dock = DockStyle.Fill;
-                PnlCuerpo.Controls.Add(Formulario);
-                PnlCuerpo.Tag = Formulario;
-                Formulario.Show();
-                Formulario.BringToFront();
-            }
-            else
-            {
-                Formulario.BringToFront();
-            }
-        }
-
-        private void Btn_Salida_Click(object sender, EventArgs e)
-        {
-            SeleccionarBoton(9);
-
-
-            Form Formulario;
-            Formulario = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
-            if (Formulario == null)
-            {
-                Formulario = new FormSalidaMedicamentos(DNI, Nombre);
-                AddOwnedForm(Formulario);
-                Formulario.TopLevel = false;
-                //Formulario.FormBorderStyle = FormBorderStyle.None;
-                Formulario.Dock = DockStyle.Fill;
-                PnlCuerpo.Controls.Add(Formulario);
-                PnlCuerpo.Tag = Formulario;
-                Formulario.Show();
-                Formulario.BringToFront();
-            }
-            else
-            {
-                Formulario.BringToFront();
-            }
-        }
-
-        private void Btn_Salidas_Click(object sender, EventArgs e)
-        {
-            LlamarFormularioA_U();
-        }
-        public void LlamarFormularioA_U()
-        {
-            SeleccionarBoton(5);
-
-
-            Form Formulario;
-            Formulario = PnlCuerpo.Controls.OfType<FormAgregarUsuario>().FirstOrDefault(); //Busca en la colección el formulario
-            if (Formulario == null)
-            {
-                Formulario = new FormAgregarUsuario();
-                AddOwnedForm(Formulario);
-                Formulario.TopLevel = false;
-                //Formulario.FormBorderStyle = FormBorderStyle.None;
-                Formulario.Dock = DockStyle.Fill;
-                PnlCuerpo.Controls.Add(Formulario);
-                PnlCuerpo.Tag = Formulario;
-                Formulario.Show();
-                Formulario.BringToFront();
-            }
-            else
-            {
-                Formulario.BringToFront();
-            }
-        }
     }
 }

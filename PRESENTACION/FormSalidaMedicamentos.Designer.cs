@@ -113,6 +113,7 @@ namespace PRESENTACION
             this.PibAgregarMed.Size = new System.Drawing.Size(110, 40);
             this.PibAgregarMed.TabIndex = 4;
             this.PibAgregarMed.TabStop = false;
+            this.PibAgregarMed.Click += new System.EventHandler(this.PibAgregarMed_Click);
             // 
             // PibEliminarMed
             // 

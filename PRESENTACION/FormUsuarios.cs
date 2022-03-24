@@ -1,24 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DATOS;
+using System;
 using System.Windows.Forms;
-using DATOS;
 
 namespace PRESENTACION
 {
     public partial class FormUsuarios : Form
     {
         Consultas consultas = new Consultas();
+
         public FormUsuarios()
         {
             InitializeComponent();
+        }
+
+        public FormUsuarios(string DNI)
+        {
+            InitializeComponent();
+            this.DNI = DNI;
             mostrarUsuario();
         }
+        string DNI;
         string valor_ID = "";
         string NOMBRE = "";
         public void mostrarUsuario()
@@ -35,8 +36,9 @@ namespace PRESENTACION
         private void pb_Click(object sender, EventArgs e)
         {
             FormPrincipal fr = Owner as FormPrincipal;
-            fr.LlamarFormularioA_U();
-            
+            //fr.LlamarFormularioA_U();
+            fr.AparecerFormulario<FormAgregarUsuario>();
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -47,10 +49,10 @@ namespace PRESENTACION
 
         private void bt_EditarU_Click(object sender, EventArgs e)
         {
-            if (valor_ID !="")
+            if (valor_ID != "")
             {
                 FormEditarUsuario frm = new FormEditarUsuario(valor_ID);
-                frm.ShowDialog(); 
+                frm.ShowDialog();
             }
             else
             {
@@ -63,14 +65,14 @@ namespace PRESENTACION
         {
             valor_ID = dgb_Usuario.CurrentRow.Cells[0].Value.ToString();
             NOMBRE = dgb_Usuario.CurrentRow.Cells[1].Value.ToString();
-            label1.Text = valor_ID.ToString()+" "+NOMBRE;
+            label1.Text = valor_ID.ToString() + " " + NOMBRE;
         }
 
         private void btn_Restablecer_Click(object sender, EventArgs e)
         {
             if (valor_ID != "")
             {
-                DialogResult result = MessageBox.Show("Seguro que desea restablecer la contraseña de " +NOMBRE , "Excelente!", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Seguro que desea restablecer la contraseña de " + NOMBRE, "Excelente!", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     consultas.SP_Restablecer_C(valor_ID);
@@ -86,7 +88,7 @@ namespace PRESENTACION
                 MessageBox.Show("Seleccione Usuario", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
-          
+
         }
 
         private void bt_EliminarU_Click(object sender, EventArgs e)
@@ -96,9 +98,9 @@ namespace PRESENTACION
                 DialogResult result = MessageBox.Show("Seguro que desea eliminar a " + NOMBRE, "Excelente!", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    consultas.SP_Eliminar_U(valor_ID,3);
+                    consultas.SP_Eliminar_U(valor_ID, 3);
                     MessageBox.Show("Usuario Eliminado", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    mostrarUsuario(); 
+                    mostrarUsuario();
                 }
                 else
                 {

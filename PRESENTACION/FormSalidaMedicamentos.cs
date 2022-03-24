@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Linq;
+using System.Windows.Forms;
 
 namespace PRESENTACION
 {
@@ -19,6 +20,21 @@ namespace PRESENTACION
         }
 
         readonly string DNI;
+
+        private void PibAgregarMed_Click(object sender, System.EventArgs e)
+        {
+            FormPrincipal Principal = (FormPrincipal)Owner;
+            //Form Formulario;
+
+
+            Principal.AparecerFormulario<FormMedicamentos>();
+            //Formulario = Principal.PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
+            //Formulario.BringToFront();
+
+            //Principal.Btn_Cajas_Click(new object(), new EventArgs());
+
+
+        }
         //readonly string Nombre;
 
     }

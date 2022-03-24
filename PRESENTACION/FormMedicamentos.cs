@@ -1,6 +1,7 @@
 ﻿using DATOS;
 using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PRESENTACION
@@ -146,9 +147,36 @@ namespace PRESENTACION
         //Abrir Formulario de Egreso
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            FormEgreso frm3 = new FormEgreso(valor_ID, DNI);
-            AddOwnedForm(frm3);
-            frm3.ShowDialog();
+            //FormEgreso frm3 = new FormEgreso(valor_ID, DNI);
+            //AddOwnedForm(frm3);
+            //frm3.ShowDialog();
+
+            //Form Formulario;
+            //Formulario = FormPrincipal.PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
+            //if (Formulario == null)
+            //{
+            //    Formulario = new FormSalidaMedicamentos(DNI, Nombre);
+            //    AddOwnedForm(Formulario);
+            //    Formulario.TopLevel = false;
+            //    //Formulario.FormBorderStyle = FormBorderStyle.None;
+            //    Formulario.Dock = DockStyle.Fill;
+            //    PnlCuerpo.Controls.Add(Formulario);
+            //    PnlCuerpo.Tag = Formulario;
+            //    Formulario.Show();
+            //    Formulario.BringToFront();
+            //}
+            //else
+            //{
+            //    Formulario.BringToFront();
+            //}
+
+            FormPrincipal Principal = (FormPrincipal)Owner;
+            Form Formulario;
+
+            
+            Formulario = Principal.PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();
+            Formulario.BringToFront();
+
         }
 
         //Abrir Formulario de Editar

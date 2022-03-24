@@ -15,12 +15,21 @@ namespace PRESENTACION
     public partial class FormAgregarUsuario : Form
     {
         Consultas consultas = new Consultas();
+
         public FormAgregarUsuario()
         {
             InitializeComponent();
+
+        }
+        public FormAgregarUsuario(string DNI)
+        {
+            InitializeComponent();
+            this.DNI = DNI;
             ObtenerCaja();
             ObtenerCargoTra();
         }
+
+        string DNI;
         void ObtenerCaja()
         {
             cmbTipoDocumento.DisplayMember = "Tid_Descripcion";

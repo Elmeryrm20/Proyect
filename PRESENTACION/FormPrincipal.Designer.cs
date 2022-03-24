@@ -30,6 +30,7 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Btn_Salida = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Btn_Acerca = new System.Windows.Forms.PictureBox();
             this.Btn_Config = new System.Windows.Forms.PictureBox();
@@ -46,8 +47,8 @@ namespace PRESENTACION
             this.Pib_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pib_Restaurar = new System.Windows.Forms.PictureBox();
             this.PnlCuerpo = new System.Windows.Forms.Panel();
-            this.Btn_Salida = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Config)).BeginInit();
@@ -63,7 +64,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -84,6 +84,21 @@ namespace PRESENTACION
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 534);
             this.panel2.TabIndex = 1;
+            // 
+            // Btn_Salida
+            // 
+            this.Btn_Salida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Salida.BackColor = System.Drawing.Color.White;
+            this.Btn_Salida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Salida.Image = global::PRESENTACION.Properties.Resources.MenuSalida01;
+            this.Btn_Salida.Location = new System.Drawing.Point(0, 225);
+            this.Btn_Salida.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Salida.Name = "Btn_Salida";
+            this.Btn_Salida.Size = new System.Drawing.Size(160, 45);
+            this.Btn_Salida.TabIndex = 9;
+            this.Btn_Salida.TabStop = false;
+            this.Btn_Salida.Click += new System.EventHandler(this.Btn_Salida_Click);
             // 
             // pictureBox4
             // 
@@ -243,7 +258,7 @@ namespace PRESENTACION
             this.PibContraer.Size = new System.Drawing.Size(24, 24);
             this.PibContraer.TabIndex = 4;
             this.PibContraer.TabStop = false;
-            this.PibContraer.Click += new System.EventHandler(this.pictureBox2_Click);
+            //this.PibContraer.Click += new System.EventHandler(this.pictureBox2_Click);
             this.PibContraer.MouseEnter += new System.EventHandler(this.PibContraer_MouseEnter);
             this.PibContraer.MouseLeave += new System.EventHandler(this.PibContraer_MouseLeave);
             // 
@@ -322,21 +337,6 @@ namespace PRESENTACION
             this.PnlCuerpo.Size = new System.Drawing.Size(721, 502);
             this.PnlCuerpo.TabIndex = 5;
             // 
-            // Btn_Salida
-            // 
-            this.Btn_Salida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Salida.BackColor = System.Drawing.Color.White;
-            this.Btn_Salida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Salida.Image = global::PRESENTACION.Properties.Resources.MenuSalida01;
-            this.Btn_Salida.Location = new System.Drawing.Point(0, 225);
-            this.Btn_Salida.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Salida.Name = "Btn_Salida";
-            this.Btn_Salida.Size = new System.Drawing.Size(160, 45);
-            this.Btn_Salida.TabIndex = 9;
-            this.Btn_Salida.TabStop = false;
-            this.Btn_Salida.Click += new System.EventHandler(this.Btn_Salida_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,6 +350,7 @@ namespace PRESENTACION
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Config)).EndInit();
@@ -365,7 +366,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,10 +384,10 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox Btn_Historial;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PibContraer;
-        private System.Windows.Forms.Panel PnlCuerpo;
         private System.Windows.Forms.PictureBox Btn_Acerca;
         private System.Windows.Forms.PictureBox Btn_Config;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox Btn_Salida;
+        public System.Windows.Forms.Panel PnlCuerpo;
     }
 }

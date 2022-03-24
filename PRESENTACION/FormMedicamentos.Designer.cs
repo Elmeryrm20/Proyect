@@ -33,6 +33,7 @@ namespace PRESENTACION
             this.txb_Buscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LblResultados = new System.Windows.Forms.Label();
             this.cmb_Almacen = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@ namespace PRESENTACION
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.LblResultados = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).BeginInit();
@@ -112,6 +112,17 @@ namespace PRESENTACION
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(708, 73);
             this.panel1.TabIndex = 7;
+            // 
+            // LblResultados
+            // 
+            this.LblResultados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblResultados.AutoSize = true;
+            this.LblResultados.ForeColor = System.Drawing.Color.Red;
+            this.LblResultados.Location = new System.Drawing.Point(583, 57);
+            this.LblResultados.Name = "LblResultados";
+            this.LblResultados.Size = new System.Drawing.Size(90, 13);
+            this.LblResultados.TabIndex = 13;
+            this.LblResultados.Text = "N° de Resultados";
             // 
             // cmb_Almacen
             // 
@@ -182,7 +193,7 @@ namespace PRESENTACION
             // 
             this.LblIndice.AutoSize = true;
             this.LblIndice.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIndice.Location = new System.Drawing.Point(616, 0);
+            this.LblIndice.Location = new System.Drawing.Point(643, 22);
             this.LblIndice.Name = "LblIndice";
             this.LblIndice.Size = new System.Drawing.Size(53, 18);
             this.LblIndice.TabIndex = 6;
@@ -291,17 +302,6 @@ namespace PRESENTACION
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(628, 283);
             this.panel5.TabIndex = 12;
-            // 
-            // LblResultados
-            // 
-            this.LblResultados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblResultados.AutoSize = true;
-            this.LblResultados.ForeColor = System.Drawing.Color.Red;
-            this.LblResultados.Location = new System.Drawing.Point(583, 57);
-            this.LblResultados.Name = "LblResultados";
-            this.LblResultados.Size = new System.Drawing.Size(90, 13);
-            this.LblResultados.TabIndex = 13;
-            this.LblResultados.Text = "N° de Resultados";
             // 
             // FormMedicamentos
             // 
