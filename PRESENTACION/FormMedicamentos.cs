@@ -146,10 +146,9 @@ namespace PRESENTACION
         //Abrir Formulario de Egreso
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            FormPrincipal Principal = (FormPrincipal)Owner;
-            Principal.SeleccionarBoton(9);
-            Principal.AparecerFormulario<FormSalidaMedicamentos>();
-
+            FormEgreso frm3 = new FormEgreso(valor_ID, DNI);
+            AddOwnedForm(frm3);
+            frm3.ShowDialog();
         }
 
         //Abrir Formulario de Editar
