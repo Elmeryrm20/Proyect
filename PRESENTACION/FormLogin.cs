@@ -76,14 +76,14 @@ namespace PRESENTACION
 
             if (txtusuario.Text == "" || txtusuario.Text == "DNI")
             {
-                MessageBox.Show("No hay ingresado el N° de su Documento de Identidad.");
+                MessageBox.Show("No ha ingresado el N° de su Documento de Identidad.");
                 PibIngresar.Image = Properties.Resources.BotonIngresar01;
                 txtusuario.Focus();
 
             }
             else if (TxtPass.Text == "" || TxtPass.Text == "Contraseña")
             {
-                MessageBox.Show("No hay ingresado su contraseña .");
+                MessageBox.Show("No ha ingresado su contraseña.");
                 PibIngresar.Image = Properties.Resources.BotonIngresar01;
 
                 TxtPass.Focus();
@@ -101,8 +101,6 @@ namespace PRESENTACION
             PibCheckUsu.Visible = true;
             //PibCheckUsu.BackColor = Color.Green;
             PibCheckUsu.Image = Properties.Resources.BotonValidarCheck02;
-
-
 
             if (TxtPass.Text == ud.Pass)
             {

@@ -1,5 +1,6 @@
 ﻿using DATOS;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,14 +14,15 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormPrincipal(string DNI, String Tipo, string Nombre)
+        public FormPrincipal(string DNI, string Tipo, string Nombre)
         {
             InitializeComponent();
             this.DNI = DNI;
-            this.Tipo = Tipo;
             this.Nombre = Nombre;
 
-            CargarFormulario();
+            if (Tipo == "1") VistaTrabajador(); //Método de Vista de Formularios para Trabajador
+            else CargarFormularios(9); //Rango Admin de Formularios
+
             SeleccionarBoton(1);
 
             AparecerFormulario<FormInicio>();
@@ -30,37 +32,41 @@ namespace PRESENTACION
 
         #region Inicializar Variables de Formularios
         readonly string DNI;
-        readonly string Tipo;
         readonly string Nombre;
 
         Consultas consultas = new Consultas();
         #endregion
 
         #region Método para Formulario
-        void CargarFormulario()
+
+        void VistaTrabajador()
+        {
+            Btn_Usuarios.Visible = false;
+            Btn_AgregarUsuario.Visible = false;
+            Btn_Historial.Location = new Point(0, 270);
+            Btn_Config.Location = new Point(0, 315);
+            Btn_Acerca.Location = new Point(0, 360);
+            CargarFormularios(7);
+        }
+
+        void CargarFormularios(byte rango)
         {
 
-            for (int i = 1; i <= 7; i++)
+            for (byte i = 1; i <= rango; i++)
             {
                 Form Formulario = null;
 
                 switch (i)
                 {
-                    case 1:
-                        //Formulario = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault(); //Busca en la colección el formulario
-                        Formulario = new FormInicio(DNI, Nombre);
-                        break;
-                    case 2:
-                        //Formulario = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault(); //Busca en la colección el formulario
-                        Formulario = new FormMedicamentos(DNI);
-                        break;
+                    case 1: Formulario = new FormInicio(DNI, Nombre); break;
+                    case 2: Formulario = new FormMedicamentos(DNI); break;
                     case 3: Formulario = new FormAgregarMedicamento(DNI); break;
                     case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre); break;
-                    case 5: Formulario = new FormUsuarios(DNI); break;
-                    case 6: Formulario = new FormAgregarUsuario(DNI); break;
-                    case 7: Formulario = new FormHistorial(DNI); break;
-                    //case 8: Formulario = new FormInicio(DNI, Nombre); break;
-                    //case 9: Formulario = new FormInicio(DNI, Nombre); break;
+                    case 5: Formulario = new FormHistorial(DNI); break;
+                    case 6: Formulario = new FormConfiguracion(DNI); break;
+                    case 7: Formulario = new FormAcercaDe(); break;
+                    case 8: Formulario = new FormUsuarios(DNI); break;
+                    case 9: Formulario = new FormAgregarUsuario(DNI); break;
                     default:
                         break;
                 }
@@ -103,7 +109,6 @@ namespace PRESENTACION
             Form Formulario;
 
             Formulario = PnlCuerpo.Controls.OfType<MiForm>().FirstOrDefault(); //Busca en la colección el formulario
-
             Formulario.Show(); //Agregado
             Formulario.BringToFront(); //Agregado
         }
@@ -157,7 +162,7 @@ namespace PRESENTACION
         #region Seleccionar Botón de Menú
         //Metodos de Selección de Menú Principal
         private sbyte Ultimo = 0;
-        private void SeleccionarBoton(sbyte x)
+        public void SeleccionarBoton(sbyte x)
         {
             switch (x)
             {
@@ -306,11 +311,13 @@ namespace PRESENTACION
         private void Btn_Config_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(7);
+            AparecerFormulario<FormConfiguracion>();
         }
 
         private void Btn_Acerca_Click(object sender, EventArgs e)
         {
             SeleccionarBoton(8);
+            AparecerFormulario<FormAcercaDe>();
         }
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)

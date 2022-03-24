@@ -26,6 +26,7 @@ namespace PRESENTACION
             FormPrincipal Principal = (FormPrincipal)Owner;
             //Form Formulario;
 
+            Principal.SeleccionarBoton(2);
 
             Principal.AparecerFormulario<FormMedicamentos>();
             //Formulario = Principal.PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
