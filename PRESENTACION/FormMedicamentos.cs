@@ -116,6 +116,7 @@ namespace PRESENTACION
                 {
                     label4.Text = "NADA";
                 }
+                LblResultados.Text = "Se encontró " + dgb_Medicamentos.RowCount.ToString() + " resultados";
                 txb_Buscar.Clear();
             }
             catch (Exception)

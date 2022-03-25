@@ -263,7 +263,8 @@ namespace PRESENTACION
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea salir?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.Yes) Application.Exit();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

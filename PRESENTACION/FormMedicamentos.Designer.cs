@@ -73,14 +73,14 @@ namespace PRESENTACION
             this.dgb_Medicamentos.Name = "dgb_Medicamentos";
             this.dgb_Medicamentos.ReadOnly = true;
             this.dgb_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgb_Medicamentos.Size = new System.Drawing.Size(628, 283);
+            this.dgb_Medicamentos.Size = new System.Drawing.Size(628, 242);
             this.dgb_Medicamentos.TabIndex = 0;
             this.dgb_Medicamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellClick);
             this.dgb_Medicamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellContentClick);
             // 
             // txb_Buscar
             // 
-            this.txb_Buscar.Location = new System.Drawing.Point(40, 35);
+            this.txb_Buscar.Location = new System.Drawing.Point(15, 61);
             this.txb_Buscar.Name = "txb_Buscar";
             this.txb_Buscar.Size = new System.Drawing.Size(296, 20);
             this.txb_Buscar.TabIndex = 1;
@@ -90,7 +90,7 @@ namespace PRESENTACION
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 13);
             this.label1.TabIndex = 6;
@@ -110,7 +110,7 @@ namespace PRESENTACION
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(708, 73);
+            this.panel1.Size = new System.Drawing.Size(708, 114);
             this.panel1.TabIndex = 7;
             // 
             // LblResultados
@@ -118,7 +118,7 @@ namespace PRESENTACION
             this.LblResultados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblResultados.AutoSize = true;
             this.LblResultados.ForeColor = System.Drawing.Color.Red;
-            this.LblResultados.Location = new System.Drawing.Point(583, 57);
+            this.LblResultados.Location = new System.Drawing.Point(447, 88);
             this.LblResultados.Name = "LblResultados";
             this.LblResultados.Size = new System.Drawing.Size(90, 13);
             this.LblResultados.TabIndex = 13;
@@ -127,19 +127,21 @@ namespace PRESENTACION
             // cmb_Almacen
             // 
             this.cmb_Almacen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Almacen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmb_Almacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_Almacen.FormattingEnabled = true;
-            this.cmb_Almacen.Location = new System.Drawing.Point(450, 36);
+            this.cmb_Almacen.Location = new System.Drawing.Point(450, 53);
             this.cmb_Almacen.Name = "cmb_Almacen";
             this.cmb_Almacen.Size = new System.Drawing.Size(130, 21);
             this.cmb_Almacen.TabIndex = 12;
-            this.cmb_Almacen.Text = "Filtrar por...";
+            this.cmb_Almacen.Text = "Caja";
             this.cmb_Almacen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_Almacen_KeyPress);
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(416, 39);
+            this.label2.Location = new System.Drawing.Point(416, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 11;
@@ -159,7 +161,7 @@ namespace PRESENTACION
             this.Pib_Filtrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pib_Filtrar.BackColor = System.Drawing.Color.Transparent;
             this.Pib_Filtrar.Image = global::PRESENTACION.Properties.Resources.BotonFormBusqueda01;
-            this.Pib_Filtrar.Location = new System.Drawing.Point(586, 15);
+            this.Pib_Filtrar.Location = new System.Drawing.Point(586, 29);
             this.Pib_Filtrar.Name = "Pib_Filtrar";
             this.Pib_Filtrar.Size = new System.Drawing.Size(110, 40);
             this.Pib_Filtrar.TabIndex = 9;
@@ -171,19 +173,21 @@ namespace PRESENTACION
             // cmbTipo
             // 
             this.cmbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTipo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(450, 9);
+            this.cmbTipo.Location = new System.Drawing.Point(450, 26);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(130, 21);
             this.cmbTipo.TabIndex = 8;
-            this.cmbTipo.Text = "Filtrar por...";
+            this.cmbTipo.Text = "Composición";
             this.cmbTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_Almacen_KeyPress);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(377, 12);
+            this.label3.Location = new System.Drawing.Point(377, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 7;
@@ -281,26 +285,26 @@ namespace PRESENTACION
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 73);
+            this.panel2.Location = new System.Drawing.Point(0, 114);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(40, 283);
+            this.panel2.Size = new System.Drawing.Size(40, 242);
             this.panel2.TabIndex = 10;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(668, 73);
+            this.panel4.Location = new System.Drawing.Point(668, 114);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(40, 283);
+            this.panel4.Size = new System.Drawing.Size(40, 242);
             this.panel4.TabIndex = 11;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dgb_Medicamentos);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(40, 73);
+            this.panel5.Location = new System.Drawing.Point(40, 114);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(628, 283);
+            this.panel5.Size = new System.Drawing.Size(628, 242);
             this.panel5.TabIndex = 12;
             // 
             // FormMedicamentos
