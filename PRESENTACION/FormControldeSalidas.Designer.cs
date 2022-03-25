@@ -43,6 +43,7 @@ namespace PRESENTACION
             this.dtp_FechaI = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -58,7 +59,7 @@ namespace PRESENTACION
             this.DgvHistorialEgreso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvHistorialEgreso.Location = new System.Drawing.Point(0, 0);
             this.DgvHistorialEgreso.Name = "DgvHistorialEgreso";
-            this.DgvHistorialEgreso.Size = new System.Drawing.Size(557, 305);
+            this.DgvHistorialEgreso.Size = new System.Drawing.Size(557, 295);
             this.DgvHistorialEgreso.TabIndex = 2;
             // 
             // PibActualizar
@@ -84,19 +85,20 @@ namespace PRESENTACION
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txt_Texto);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(707, 40);
+            this.panel2.Size = new System.Drawing.Size(707, 50);
             this.panel2.TabIndex = 6;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 40);
+            this.panel3.Location = new System.Drawing.Point(0, 50);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(20, 305);
+            this.panel3.Size = new System.Drawing.Size(20, 295);
             this.panel3.TabIndex = 7;
             // 
             // panel4
@@ -108,23 +110,23 @@ namespace PRESENTACION
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(577, 40);
+            this.panel4.Location = new System.Drawing.Point(577, 50);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(130, 305);
+            this.panel4.Size = new System.Drawing.Size(130, 295);
             this.panel4.TabIndex = 8;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.DgvHistorialEgreso);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(20, 40);
+            this.panel5.Location = new System.Drawing.Point(20, 50);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(557, 305);
+            this.panel5.Size = new System.Drawing.Size(557, 295);
             this.panel5.TabIndex = 9;
             // 
             // txt_Texto
             // 
-            this.txt_Texto.Location = new System.Drawing.Point(20, 12);
+            this.txt_Texto.Location = new System.Drawing.Point(20, 24);
             this.txt_Texto.Name = "txt_Texto";
             this.txt_Texto.Size = new System.Drawing.Size(305, 20);
             this.txt_Texto.TabIndex = 0;
@@ -135,9 +137,9 @@ namespace PRESENTACION
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(8, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Menor que:";
+            this.label3.Text = "Hasta";
             // 
             // pictureBox1
             // 
@@ -170,9 +172,9 @@ namespace PRESENTACION
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Mayor que:";
+            this.label2.Text = "Desde:";
             // 
             // label1
             // 
@@ -182,6 +184,15 @@ namespace PRESENTACION
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "FILTRAR POR FECHA";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(244, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "BUSCAR POR COMPOSICION O TRABAJADOR ";
             // 
             // FormControldeSalidas
             // 
@@ -224,5 +235,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }
