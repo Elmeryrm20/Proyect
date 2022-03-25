@@ -764,5 +764,35 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
+        public DataTable Sp_Filtro_Fecha_HI(string Fecha1, string fecha2)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Fecha_HI", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Fecha1", Fecha1);
+            comando.Parameters.AddWithValue("fecha2", fecha2);
+
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+        public DataTable Sp_Filtro_Fecha_HE(string Fecha1, string fecha2)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Fecha_HE", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Fecha1", Fecha1);
+            comando.Parameters.AddWithValue("fecha2", fecha2);
+
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
     }
 }

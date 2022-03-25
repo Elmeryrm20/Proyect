@@ -24,7 +24,7 @@ namespace PRESENTACION
         private void RellenarDataGridView()
         {
             DgvHistorialIngreso.DataSource = du.D_HistorialIngreso();
-            dgb_Control_Entradas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvHistorialIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
 
@@ -32,6 +32,12 @@ namespace PRESENTACION
         {
             RellenarDataGridView();
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DgvHistorialIngreso.DataSource=du.Sp_Filtro_Fecha_HI(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
+            DgvHistorialIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

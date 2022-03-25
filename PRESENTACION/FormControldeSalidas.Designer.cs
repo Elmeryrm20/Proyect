@@ -29,65 +29,199 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgb_Contral_Salida = new System.Windows.Forms.DataGridView();
             this.DgvHistorialEgreso = new System.Windows.Forms.DataGridView();
             this.PibActualizar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Contral_Salida)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtp_FechaF = new System.Windows.Forms.DateTimePicker();
+            this.dtp_FechaI = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgb_Contral_Salida
-            // 
-            this.dgb_Contral_Salida.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgb_Contral_Salida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgb_Contral_Salida.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgb_Contral_Salida.Location = new System.Drawing.Point(0, 0);
-            this.dgb_Contral_Salida.Name = "dgb_Contral_Salida";
-            this.dgb_Contral_Salida.Size = new System.Drawing.Size(639, 349);
-            this.dgb_Contral_Salida.TabIndex = 0;
             // 
             // DgvHistorialEgreso
             // 
             this.DgvHistorialEgreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvHistorialEgreso.Location = new System.Drawing.Point(38, 12);
+            this.DgvHistorialEgreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvHistorialEgreso.Location = new System.Drawing.Point(0, 0);
             this.DgvHistorialEgreso.Name = "DgvHistorialEgreso";
-            this.DgvHistorialEgreso.Size = new System.Drawing.Size(553, 287);
+            this.DgvHistorialEgreso.Size = new System.Drawing.Size(557, 305);
             this.DgvHistorialEgreso.TabIndex = 2;
             // 
             // PibActualizar
             // 
+            this.PibActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
             this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibActualizar.Location = new System.Drawing.Point(238, 305);
+            this.PibActualizar.Location = new System.Drawing.Point(12, 8);
             this.PibActualizar.Name = "PibActualizar";
             this.PibActualizar.Size = new System.Drawing.Size(110, 40);
             this.PibActualizar.TabIndex = 4;
             this.PibActualizar.TabStop = false;
             this.PibActualizar.Click += new System.EventHandler(this.PibActualizar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.PibActualizar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 345);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(707, 60);
+            this.panel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(707, 40);
+            this.panel2.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 40);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(20, 305);
+            this.panel3.TabIndex = 7;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.dtp_FechaF);
+            this.panel4.Controls.Add(this.dtp_FechaI);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(577, 40);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(130, 305);
+            this.panel4.TabIndex = 8;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.DgvHistorialEgreso);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(20, 40);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(557, 305);
+            this.panel5.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(20, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(305, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Menor que:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 24);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // dtp_FechaF
+            // 
+            this.dtp_FechaF.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_FechaF.Location = new System.Drawing.Point(9, 93);
+            this.dtp_FechaF.Name = "dtp_FechaF";
+            this.dtp_FechaF.Size = new System.Drawing.Size(100, 20);
+            this.dtp_FechaF.TabIndex = 12;
+            // 
+            // dtp_FechaI
+            // 
+            this.dtp_FechaI.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_FechaI.Location = new System.Drawing.Point(9, 49);
+            this.dtp_FechaI.Name = "dtp_FechaI";
+            this.dtp_FechaI.Size = new System.Drawing.Size(100, 20);
+            this.dtp_FechaI.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Mayor que:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(2, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "FILTRAR POR FECHA";
+            // 
             // FormControldeSalidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 349);
-            this.Controls.Add(this.PibActualizar);
-            this.Controls.Add(this.DgvHistorialEgreso);
-            this.Controls.Add(this.dgb_Contral_Salida);
+            this.ClientSize = new System.Drawing.Size(707, 405);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormControldeSalidas";
             this.Text = "FormControldeSalidas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Contral_Salida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgb_Contral_Salida;
         private System.Windows.Forms.DataGridView DgvHistorialEgreso;
         private System.Windows.Forms.PictureBox PibActualizar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtp_FechaF;
+        private System.Windows.Forms.DateTimePicker dtp_FechaI;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
