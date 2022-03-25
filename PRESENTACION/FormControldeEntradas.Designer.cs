@@ -44,6 +44,7 @@ namespace PRESENTACION
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txt_Error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Control_Entradas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialIngreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
@@ -112,6 +113,7 @@ namespace PRESENTACION
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txt_Error);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.dtp_FechaF);
@@ -195,6 +197,17 @@ namespace PRESENTACION
             this.label4.TabIndex = 1;
             this.label4.Text = "BUSCAR POR COMPOSICION O TRABAJADOR ";
             // 
+            // txt_Error
+            // 
+            this.txt_Error.AutoSize = true;
+            this.txt_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_Error.Location = new System.Drawing.Point(6, 159);
+            this.txt_Error.Name = "txt_Error";
+            this.txt_Error.Size = new System.Drawing.Size(103, 13);
+            this.txt_Error.TabIndex = 8;
+            this.txt_Error.Text = "Ingrese rango valido";
+            this.txt_Error.Visible = false;
+            // 
             // FormControldeEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,5 +252,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label txt_Error;
     }
 }
