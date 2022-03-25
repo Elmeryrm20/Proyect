@@ -105,6 +105,7 @@ namespace PRESENTACION
             // 
             // PibAgregarMed
             // 
+            this.PibAgregarMed.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PibAgregarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
             this.PibAgregarMed.Location = new System.Drawing.Point(492, 118);
             this.PibAgregarMed.Name = "PibAgregarMed";
@@ -115,6 +116,7 @@ namespace PRESENTACION
             // 
             // PibEliminarMed
             // 
+            this.PibEliminarMed.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PibEliminarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormeEliminar01;
             this.PibEliminarMed.Location = new System.Drawing.Point(492, 174);
             this.PibEliminarMed.Name = "PibEliminarMed";
@@ -124,6 +126,7 @@ namespace PRESENTACION
             // 
             // PibLimpiar
             // 
+            this.PibLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PibLimpiar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
             this.PibLimpiar.Location = new System.Drawing.Point(492, 229);
             this.PibLimpiar.Name = "PibLimpiar";
@@ -133,6 +136,7 @@ namespace PRESENTACION
             // 
             // PibGuardarImprimir
             // 
+            this.PibGuardarImprimir.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PibGuardarImprimir.Image = global::PRESENTACION.Properties.Resources.BotonFormImprimir01;
             this.PibGuardarImprimir.Location = new System.Drawing.Point(492, 285);
             this.PibGuardarImprimir.Name = "PibGuardarImprimir";
@@ -189,7 +193,7 @@ namespace PRESENTACION
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvSalida.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvSalida.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.DgvSalida.Size = new System.Drawing.Size(419, 215);
+            this.DgvSalida.Size = new System.Drawing.Size(418, 215);
             this.DgvSalida.TabIndex = 9;
             // 
             // Column1
@@ -219,7 +223,7 @@ namespace PRESENTACION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(632, 450);
             this.Controls.Add(this.DgvSalida);
             this.Controls.Add(this.PibGuardarImprimir);
             this.Controls.Add(this.PibLimpiar);
