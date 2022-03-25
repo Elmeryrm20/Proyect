@@ -36,7 +36,7 @@ namespace PRESENTACION
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Texto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtp_FechaF = new System.Windows.Forms.DateTimePicker();
@@ -66,7 +66,7 @@ namespace PRESENTACION
             this.PibActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
             this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibActualizar.Location = new System.Drawing.Point(12, 8);
+            this.PibActualizar.Location = new System.Drawing.Point(20, 8);
             this.PibActualizar.Name = "PibActualizar";
             this.PibActualizar.Size = new System.Drawing.Size(110, 40);
             this.PibActualizar.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace PRESENTACION
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_Texto);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -122,12 +122,13 @@ namespace PRESENTACION
             this.panel5.Size = new System.Drawing.Size(557, 305);
             this.panel5.TabIndex = 9;
             // 
-            // textBox1
+            // txt_Texto
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 20);
-            this.textBox1.TabIndex = 0;
+            this.txt_Texto.Location = new System.Drawing.Point(20, 12);
+            this.txt_Texto.Name = "txt_Texto";
+            this.txt_Texto.Size = new System.Drawing.Size(305, 20);
+            this.txt_Texto.TabIndex = 0;
+            this.txt_Texto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Texto_KeyUp);
             // 
             // label3
             // 
@@ -216,7 +217,7 @@ namespace PRESENTACION
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Texto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtp_FechaF;
         private System.Windows.Forms.DateTimePicker dtp_FechaI;

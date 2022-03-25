@@ -32,6 +32,7 @@ namespace PRESENTACION
         private void PibActualizar_Click(object sender, EventArgs e)
         {
             RellenarDataGridView();
+            txt_Texto.Clear();
 
         }
 
@@ -39,6 +40,13 @@ namespace PRESENTACION
         {
             DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
             DgvHistorialEgreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            txt_Texto.Clear();
+        }
+
+        private void txt_Texto_KeyUp(object sender, KeyEventArgs e)
+        {
+            DgvHistorialEgreso.DataSource = du.Sp_Filtro_Dinamico_HE(txt_Texto.Text);
+
         }
     }
 }

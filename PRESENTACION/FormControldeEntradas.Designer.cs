@@ -33,7 +33,7 @@ namespace PRESENTACION
             this.DgvHistorialIngreso = new System.Windows.Forms.DataGridView();
             this.PibActualizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Texto = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,7 +76,7 @@ namespace PRESENTACION
             this.PibActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
             this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibActualizar.Location = new System.Drawing.Point(23, 353);
+            this.PibActualizar.Location = new System.Drawing.Point(20, 353);
             this.PibActualizar.Name = "PibActualizar";
             this.PibActualizar.Size = new System.Drawing.Size(110, 40);
             this.PibActualizar.TabIndex = 3;
@@ -85,19 +85,20 @@ namespace PRESENTACION
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_Texto);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(707, 40);
             this.panel2.TabIndex = 5;
             // 
-            // textBox1
+            // txt_Texto
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 20);
-            this.textBox1.TabIndex = 0;
+            this.txt_Texto.Location = new System.Drawing.Point(23, 12);
+            this.txt_Texto.Name = "txt_Texto";
+            this.txt_Texto.Size = new System.Drawing.Size(305, 20);
+            this.txt_Texto.TabIndex = 0;
+            this.txt_Texto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // panel1
             // 
@@ -216,7 +217,7 @@ namespace PRESENTACION
         private System.Windows.Forms.DataGridView DgvHistorialIngreso;
         private System.Windows.Forms.PictureBox PibActualizar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Texto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;

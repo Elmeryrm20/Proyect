@@ -794,5 +794,31 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
+        public DataTable Sp_Filtro_Dinamico_HI(string texto)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Dinamico_HI", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("texto", texto);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+        public DataTable Sp_Filtro_Dinamico_HE(string texto)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Dinamico_HE", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("texto", texto);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
     }
 }
