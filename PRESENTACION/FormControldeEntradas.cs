@@ -36,9 +36,19 @@ namespace PRESENTACION
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            DgvHistorialIngreso.DataSource=du.Sp_Filtro_Fecha_HI(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
-            DgvHistorialIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            txt_Texto.Clear();
+
+            if (dtp_FechaI.Value.Date<=dtp_FechaF.Value.Date)
+            {
+                DgvHistorialIngreso.DataSource = du.Sp_Filtro_Fecha_HI(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
+                DgvHistorialIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                txt_Texto.Clear();
+                txt_Error.Visible = false;
+            }
+            else
+            {
+                txt_Error.Visible = true;
+            }
+            
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
