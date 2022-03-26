@@ -44,23 +44,20 @@ namespace PRESENTACION
         }
         private void FormAgregarUsuario_Load(object sender, EventArgs e)
         {
+            cmbTipoDocumento.Text = "Seleccione Documento ..";
+            cmb_Cargo.Text = "Selecione Cargo..";
             dtpFecha_Nacimiento.MaxDate = DateTime.Now.Date;
             dtpFecha_Nacimiento.Value = DateTime.Now.Date;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            string Existencia = consultas.SP_Existencia_T(txtDocumento.Text).Rows[0]["Tra_DNI"].ToString();
             BorrarMss();
-            if (ValidarDoc())
+            try
             {
-                if (Existencia ==null)
-                {
-                    consultas.D_Insertar_Trabajador(txtDocumento.Text, (txtNombre.Text).ToUpper(), (txtApellido.Text).ToUpper(), dtpFecha_Nacimiento.Value.ToString("yyyy-MM-dd"), txtCorreo.Text, txtTelefono.Text, cmbTipoDocumento.SelectedIndex + 1, cmb_Cargo.SelectedIndex + 1);
-                    MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                   
-                }
-                else
+                //En Caso no Devuelva nada se pasara al catch
+                string Existencia = consultas.SP_Existencia_T(txtDocumento.Text).Rows[0]["Tra_DNI"].ToString();
+                if (ValidarDoc())
                 {
                     DialogResult result = MessageBox.Show("El usuario " + Existencia + " estubo registrado desea activarle la cuenta", "Excelente!", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
@@ -71,8 +68,16 @@ namespace PRESENTACION
                     }
                     else
                     {
-                       
+
                     }
+                }
+            }
+            catch (Exception)
+            {
+                if (ValidarDoc())
+                {
+                    consultas.D_Insertar_Trabajador(txtDocumento.Text, (txtNombre.Text).ToUpper(), (txtApellido.Text).ToUpper(), dtpFecha_Nacimiento.Value.ToString("yyyy-MM-dd"), txtCorreo.Text, txtTelefono.Text, cmbTipoDocumento.SelectedIndex + 1, cmb_Cargo.SelectedIndex + 1);
+                    MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
         }
@@ -97,13 +102,13 @@ namespace PRESENTACION
                 doc = false;
                 errorProvider1.SetError(txtApellido, "Ingresar Apellido");
             }
-            if (cmb_Cargo.Text == "")
+            if (cmb_Cargo.Text == "Selecione Cargo..")
             {
                 doc = false;
                 errorProvider1.SetError(cmb_Cargo, "Datos correctos");
             }
             
-            if (cmbTipoDocumento.Text == "")
+            if (cmbTipoDocumento.Text == "Seleccione Documento ..")
             {
                 doc = false;
                 errorProvider1.SetError(cmbTipoDocumento, "Ingresar Datos correctos");
