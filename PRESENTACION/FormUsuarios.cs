@@ -52,6 +52,7 @@ namespace PRESENTACION
             if (valor_ID != "")
             {
                 FormEditarUsuario frm = new FormEditarUsuario(valor_ID);
+                AddOwnedForm(frm);
                 frm.ShowDialog();
             }
             else
