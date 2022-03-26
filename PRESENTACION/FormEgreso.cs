@@ -12,7 +12,7 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormEgreso(int Med_Codigo,string MedNombre,string DNI)
+        public FormEgreso(int Med_Codigo, string MedNombre, string DNI)
         {
             InitializeComponent();
             this.Med_Codigo = Med_Codigo;
@@ -54,27 +54,34 @@ namespace PRESENTACION
             if (txtCantidad.Text.Length != 0)
             {
 
-                FormMedicamentos FrmMedicamentos = Owner as FormMedicamentos;
-                FrmMedicamentos.EnviarEgreso(Med_Codigo,MedNombre, int.Parse(txtCantidad.Text));
-                Close();
 
 
-                //int Existencias = Ingreso - Egreso;
-                //int cantidad = Convert.ToInt32(txtCantidad.Text);
-                //if (cantidad <= Existencias)
-                //{
-                //    //consultas.SP_Agregar_Egreso_Medicamento(Med_Codigo, cantidad);
-                //    consultas.D_ActualizarEgreso(Med_Codigo, cantidad);
 
-                //    consultas.SP_Agregar_Detalle_Egreso(Med_Codigo, cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, 4);
-                //    MessageBox.Show("Actualización Exitosa");
-                //    Ingreso = 0;
-                //    Egreso = 0;
-                //    FormMedicamentos FrmMed = Owner as FormMedicamentos;
-                //    FrmMed.Rellenartabla();
-                //    FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[Med_Codigo - 1].Cells[0];
-                //    Close();
-                //}
+                int Existencias = Ingreso - Egreso;
+                int cantidad = Convert.ToInt32(txtCantidad.Text);
+                if (cantidad <= Existencias)
+                {
+                    Ingreso = 0;
+                    Egreso = 0;
+                    FormMedicamentos FrmMedicamentos = Owner as FormMedicamentos;
+                    FrmMedicamentos.EnviarEgreso(Med_Codigo, MedNombre, int.Parse(txtCantidad.Text));
+                    Close();
+
+                    //    //consultas.SP_Agregar_Egreso_Medicamento(Med_Codigo, cantidad);
+                    //    consultas.D_ActualizarEgreso(Med_Codigo, cantidad);
+
+                    //    consultas.SP_Agregar_Detalle_Egreso(Med_Codigo, cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, 4);
+                    //    MessageBox.Show("Actualización Exitosa");
+
+                    //    FormMedicamentos FrmMed = Owner as FormMedicamentos;
+                    //    FrmMed.Rellenartabla();
+                    //    FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[Med_Codigo - 1].Cells[0];
+                    //    Close();
+                }
+                else
+                {
+                    MessageBox.Show("La cantidad supera el Stock.", "Advertencia");
+                }
 
             }
             else

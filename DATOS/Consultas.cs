@@ -181,6 +181,29 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
+        public DataTable D_MostrarColaboradores(string DNI)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_MostrarColaboradores", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("DNI", DNI);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return tabla;
+        }
+
         #endregion
 
         #region Login
