@@ -49,18 +49,19 @@ namespace PRESENTACION
             this.LblColaborador = new System.Windows.Forms.Label();
             this.CmbTipoDNI = new System.Windows.Forms.ComboBox();
             this.GrbDestino = new System.Windows.Forms.GroupBox();
-            this.GrbPersonal = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtNombres = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtApellidos = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtNacionalidad = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtNacionalidad = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtApellidos = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtNombres = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.GrbPersonal = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.CmbColaborador = new System.Windows.Forms.ComboBox();
             this.Pnl01 = new System.Windows.Forms.Panel();
+            this.PibConfirmar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).BeginInit();
@@ -69,6 +70,7 @@ namespace PRESENTACION
             this.GrbDestino.SuspendLayout();
             this.GrbPersonal.SuspendLayout();
             this.Pnl01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtNumDNI
@@ -93,7 +95,7 @@ namespace PRESENTACION
             this.CmbEncargado.FormattingEnabled = true;
             this.CmbEncargado.Location = new System.Drawing.Point(81, 116);
             this.CmbEncargado.Name = "CmbEncargado";
-            this.CmbEncargado.Size = new System.Drawing.Size(192, 21);
+            this.CmbEncargado.Size = new System.Drawing.Size(212, 21);
             this.CmbEncargado.TabIndex = 3;
             // 
             // TxtTrabajador
@@ -138,7 +140,7 @@ namespace PRESENTACION
             // 
             this.PibEliminarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibEliminarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormeEliminar01;
-            this.PibEliminarMed.Location = new System.Drawing.Point(583, 279);
+            this.PibEliminarMed.Location = new System.Drawing.Point(583, 313);
             this.PibEliminarMed.Name = "PibEliminarMed";
             this.PibEliminarMed.Size = new System.Drawing.Size(110, 40);
             this.PibEliminarMed.TabIndex = 5;
@@ -148,7 +150,7 @@ namespace PRESENTACION
             // 
             this.PibLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibLimpiar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibLimpiar.Location = new System.Drawing.Point(583, 334);
+            this.PibLimpiar.Location = new System.Drawing.Point(583, 358);
             this.PibLimpiar.Name = "PibLimpiar";
             this.PibLimpiar.Size = new System.Drawing.Size(110, 40);
             this.PibLimpiar.TabIndex = 6;
@@ -158,7 +160,7 @@ namespace PRESENTACION
             // 
             this.PibGuardarImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibGuardarImprimir.Image = global::PRESENTACION.Properties.Resources.BotonFormImprimir01;
-            this.PibGuardarImprimir.Location = new System.Drawing.Point(583, 390);
+            this.PibGuardarImprimir.Location = new System.Drawing.Point(583, 403);
             this.PibGuardarImprimir.Name = "PibGuardarImprimir";
             this.PibGuardarImprimir.Size = new System.Drawing.Size(110, 40);
             this.PibGuardarImprimir.TabIndex = 7;
@@ -226,6 +228,7 @@ namespace PRESENTACION
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Visible = false;
+            this.Column1.Width = 77;
             // 
             // Column2
             // 
@@ -282,72 +285,13 @@ namespace PRESENTACION
             this.GrbDestino.TabStop = false;
             this.GrbDestino.Text = "DESTINO";
             // 
-            // GrbPersonal
+            // TxtTelefono
             // 
-            this.GrbPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GrbPersonal.Controls.Add(this.TxtTrabajador);
-            this.GrbPersonal.Controls.Add(this.label5);
-            this.GrbPersonal.Controls.Add(this.LblEncargado);
-            this.GrbPersonal.Controls.Add(this.LblTrabajador);
-            this.GrbPersonal.Controls.Add(this.CmbEncargado);
-            this.GrbPersonal.Controls.Add(this.comboBox1);
-            this.GrbPersonal.Location = new System.Drawing.Point(348, 27);
-            this.GrbPersonal.Name = "GrbPersonal";
-            this.GrbPersonal.Size = new System.Drawing.Size(309, 151);
-            this.GrbPersonal.TabIndex = 10;
-            this.GrbPersonal.TabStop = false;
-            this.GrbPersonal.Text = "PERSONAL";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nombres:";
-            // 
-            // TxtNombres
-            // 
-            this.TxtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtNombres.Location = new System.Drawing.Point(109, 80);
-            this.TxtNombres.Name = "TxtNombres";
-            this.TxtNombres.Size = new System.Drawing.Size(168, 20);
-            this.TxtNombres.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Apellidos:";
-            // 
-            // TxtApellidos
-            // 
-            this.TxtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtApellidos.Location = new System.Drawing.Point(109, 106);
-            this.TxtApellidos.Name = "TxtApellidos";
-            this.TxtApellidos.Size = new System.Drawing.Size(168, 20);
-            this.TxtApellidos.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nacionalidad:";
-            // 
-            // TxtNacionalidad
-            // 
-            this.TxtNacionalidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtNacionalidad.Location = new System.Drawing.Point(109, 132);
-            this.TxtNacionalidad.Name = "TxtNacionalidad";
-            this.TxtNacionalidad.Size = new System.Drawing.Size(168, 20);
-            this.TxtNacionalidad.TabIndex = 1;
+            this.TxtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtTelefono.Location = new System.Drawing.Point(109, 158);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(168, 20);
+            this.TxtTelefono.TabIndex = 1;
             // 
             // label4
             // 
@@ -358,21 +302,72 @@ namespace PRESENTACION
             this.label4.TabIndex = 2;
             this.label4.Text = "Teléfono:";
             // 
-            // TxtTelefono
+            // TxtNacionalidad
             // 
-            this.TxtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtTelefono.Location = new System.Drawing.Point(109, 158);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(168, 20);
-            this.TxtTelefono.TabIndex = 1;
+            this.TxtNacionalidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtNacionalidad.Location = new System.Drawing.Point(109, 132);
+            this.TxtNacionalidad.Name = "TxtNacionalidad";
+            this.TxtNacionalidad.Size = new System.Drawing.Size(168, 20);
+            this.TxtNacionalidad.TabIndex = 1;
             // 
-            // comboBox1
+            // label3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 62);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 21);
-            this.comboBox1.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nacionalidad:";
+            // 
+            // TxtApellidos
+            // 
+            this.TxtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtApellidos.Location = new System.Drawing.Point(109, 106);
+            this.TxtApellidos.Name = "TxtApellidos";
+            this.TxtApellidos.Size = new System.Drawing.Size(168, 20);
+            this.TxtApellidos.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(51, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Apellidos:";
+            // 
+            // TxtNombres
+            // 
+            this.TxtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtNombres.Location = new System.Drawing.Point(109, 80);
+            this.TxtNombres.Name = "TxtNombres";
+            this.TxtNombres.Size = new System.Drawing.Size(168, 20);
+            this.TxtNombres.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(51, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Nombres:";
+            // 
+            // GrbPersonal
+            // 
+            this.GrbPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrbPersonal.Controls.Add(this.TxtTrabajador);
+            this.GrbPersonal.Controls.Add(this.label5);
+            this.GrbPersonal.Controls.Add(this.LblEncargado);
+            this.GrbPersonal.Controls.Add(this.LblTrabajador);
+            this.GrbPersonal.Controls.Add(this.CmbEncargado);
+            this.GrbPersonal.Controls.Add(this.CmbColaborador);
+            this.GrbPersonal.Location = new System.Drawing.Point(348, 27);
+            this.GrbPersonal.Name = "GrbPersonal";
+            this.GrbPersonal.Size = new System.Drawing.Size(309, 151);
+            this.GrbPersonal.TabIndex = 10;
+            this.GrbPersonal.TabStop = false;
+            this.GrbPersonal.Text = "PERSONAL";
             // 
             // label5
             // 
@@ -382,6 +377,14 @@ namespace PRESENTACION
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Colaborador:";
+            // 
+            // CmbColaborador
+            // 
+            this.CmbColaborador.FormattingEnabled = true;
+            this.CmbColaborador.Location = new System.Drawing.Point(81, 62);
+            this.CmbColaborador.Name = "CmbColaborador";
+            this.CmbColaborador.Size = new System.Drawing.Size(212, 21);
+            this.CmbColaborador.TabIndex = 3;
             // 
             // Pnl01
             // 
@@ -394,6 +397,17 @@ namespace PRESENTACION
             this.Pnl01.Size = new System.Drawing.Size(699, 209);
             this.Pnl01.TabIndex = 4;
             // 
+            // PibConfirmar
+            // 
+            this.PibConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibConfirmar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
+            this.PibConfirmar.Location = new System.Drawing.Point(583, 268);
+            this.PibConfirmar.Name = "PibConfirmar";
+            this.PibConfirmar.Size = new System.Drawing.Size(110, 40);
+            this.PibConfirmar.TabIndex = 4;
+            this.PibConfirmar.TabStop = false;
+            this.PibConfirmar.Click += new System.EventHandler(this.PibConfirmar_Click);
+            // 
             // FormSalidaMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,10 +418,12 @@ namespace PRESENTACION
             this.Controls.Add(this.PibGuardarImprimir);
             this.Controls.Add(this.PibLimpiar);
             this.Controls.Add(this.PibEliminarMed);
+            this.Controls.Add(this.PibConfirmar);
             this.Controls.Add(this.PibAgregarMed);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSalidaMedicamentos";
             this.Text = "FormSalidaMedicamentos";
+            this.Load += new System.EventHandler(this.FormSalidaMedicamentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).EndInit();
@@ -418,6 +434,7 @@ namespace PRESENTACION
             this.GrbPersonal.ResumeLayout(false);
             this.GrbPersonal.PerformLayout();
             this.Pnl01.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -450,7 +467,8 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GrbPersonal;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbColaborador;
         private System.Windows.Forms.Panel Pnl01;
+        private System.Windows.Forms.PictureBox PibConfirmar;
     }
 }

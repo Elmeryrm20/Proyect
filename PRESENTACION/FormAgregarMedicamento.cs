@@ -19,10 +19,7 @@ namespace PRESENTACION
         {
             this.Tra_DNI = Tra_DNI;
             InitializeComponent();
-            ObtenerTipo();
-            ObtenerCaja();
-            ObtenerPresentacion();
-            ObtenerLaboratorio();
+
 
         }
 
@@ -58,6 +55,11 @@ namespace PRESENTACION
 
         private void FormAgregarMedicamento_Load(object sender, EventArgs e)
         {
+            ObtenerTipo();
+            ObtenerCaja();
+            ObtenerPresentacion();
+            ObtenerLaboratorio();
+
             fecha = DateTime.Now.ToString("d");
             dtFecha_Vencimiento.MinDate = DateTime.Now;
             dtFecha_Vencimiento.Value = DateTime.Now;
