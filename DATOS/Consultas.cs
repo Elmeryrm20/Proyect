@@ -9,6 +9,16 @@ namespace DATOS
     {
         D_Empleado Conexion = new D_Empleado();
 
+        public void AbrirConexion()
+        {
+            Conexion.connection.Open();
+
+        }
+        public void CerrarConexion()
+        {
+            Conexion.connection.Close();
+        }
+
         #region Rellenar ComboBox
         public DataTable D_TipoDNI()
         {
@@ -346,6 +356,31 @@ namespace DATOS
         #endregion
 
         #region Insertar o Actualizar Base de Datos
+
+        public void D_AgregarDestino(string DNI, string Nombres, string Apellidos, string Nacionalidad, string Telefono, int TipoDNI)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("Sp_AgregarDestino", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("DNI", DNI);
+            cmd.Parameters.AddWithValue("Nombres", Nombres);
+            cmd.Parameters.AddWithValue("Apellidos", Apellidos);
+            cmd.Parameters.AddWithValue("Nacionalidad", Nacionalidad);
+            cmd.Parameters.AddWithValue("Telefono", Telefono);
+            cmd.Parameters.AddWithValue("Tipo_DNI", TipoDNI);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+        }
+
         public void SP_Editar_Usuario(string DNI, string Nombre, string Apellido, string fecha_N, string Correo, string Telefono, int Tipo, int Cargo, int Estado)
         {
             Conexion.connection.Open();
@@ -512,25 +547,6 @@ namespace DATOS
             Conexion.connection.Close();
 
         }
-        public void D_ActualizarEgreso(int Med_id, int CantidadEgresada)
-        {
-            Conexion.connection.Open();
-            MySqlCommand cmd = new MySqlCommand("Sp_ActualizarEgreso", Conexion.connection);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Med_id", Med_id);
-            cmd.Parameters.AddWithValue("Cantidad", CantidadEgresada);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
-            Conexion.connection.Close();
-        }
 
         public void SP_Agregar_Detalle_Ingreso(int Med_Codigo, int Cantidad, string Ing_Fecha, string Tra_DNI, string Dei_Fecha_V)
         {
@@ -555,17 +571,38 @@ namespace DATOS
 
         }
 
-        public void SP_Agregar_Detalle_Egreso(int Med_Codigo, int Cantidad, string Egr_Fecha, string Tra_DNI, int Dee_N_Semana)
+        public string D_ActualizarEgreso(string Fecha, string Tra_DNI, string Per_DNI)
         {
             Conexion.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("Sp_AgregarEgreso", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Egreso_Fecha", Fecha);
+            cmd.Parameters.AddWithValue("Trabajador_DNI", Tra_DNI);
+            cmd.Parameters.AddWithValue("Persona_DNI", Per_DNI);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return tabla.Rows[0][0].ToString();
+        }
+        public void SP_Agregar_Detalle_Egreso(int Egr_Codigo, int Med_Codigo, int Cantidad, int Semana)
+        {
+            //Conexion.connection.Open();
 
             MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Egreso", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
+            cmd.Parameters.AddWithValue("Egreso_Codigo", Egr_Codigo);
+            cmd.Parameters.AddWithValue("Medicamento_Codigo", Med_Codigo);
             cmd.Parameters.AddWithValue("Cantidad", Cantidad);
-            cmd.Parameters.AddWithValue("Egr_Fecha", Egr_Fecha);
-            cmd.Parameters.AddWithValue("Tra_DNI", Tra_DNI);
-            cmd.Parameters.AddWithValue("Dee_N_Semana", Dee_N_Semana);
+            cmd.Parameters.AddWithValue("Numero_Semana", Semana);
             try
             {
                 cmd.ExecuteNonQuery();
@@ -575,7 +612,7 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            //Conexion.connection.Close();
 
         }
         public void SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm, byte[] imagen)
@@ -604,6 +641,29 @@ namespace DATOS
             Conexion.connection.Close();
         }
         #endregion
+
+        #region Consultas
+        public bool D_VerificarPersona(string DNI)
+        {
+            Conexion.connection.Open();
+            MySqlCommand comando = new MySqlCommand("SP_VerificarPersona", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("DNI", DNI);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return Convert.ToBoolean(tabla.Rows[0][0]);
+        }
 
         public int D_UltimoIdIngresado()
         {
@@ -672,6 +732,7 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
+        #endregion
 
         public DataTable D_Validacion_Contraseña(string DNI)
         {
@@ -772,7 +833,7 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable SP_Medicamento_Filtrado_Ambos(string Almacen,string tipo)
+        public DataTable SP_Medicamento_Filtrado_Ambos(string Almacen, string tipo)
         {
             Conexion.connection.Open();
 

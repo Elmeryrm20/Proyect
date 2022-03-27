@@ -62,6 +62,14 @@ namespace PRESENTACION
             this.CmbColaborador = new System.Windows.Forms.ComboBox();
             this.Pnl01 = new System.Windows.Forms.Panel();
             this.PibConfirmar = new System.Windows.Forms.PictureBox();
+            this.PibTipoDNI = new System.Windows.Forms.PictureBox();
+            this.PibNumerDNI = new System.Windows.Forms.PictureBox();
+            this.PibNombres = new System.Windows.Forms.PictureBox();
+            this.PibApellidos = new System.Windows.Forms.PictureBox();
+            this.PibNacionalidad = new System.Windows.Forms.PictureBox();
+            this.PibTelefono = new System.Windows.Forms.PictureBox();
+            this.PibColaborador = new System.Windows.Forms.PictureBox();
+            this.PibEncargado = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).BeginInit();
@@ -71,6 +79,14 @@ namespace PRESENTACION
             this.GrbPersonal.SuspendLayout();
             this.Pnl01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibTipoDNI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNumerDNI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNombres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibApellidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNacionalidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibEncargado)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtNumDNI
@@ -78,13 +94,13 @@ namespace PRESENTACION
             this.TxtNumDNI.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.TxtNumDNI.Location = new System.Drawing.Point(109, 54);
             this.TxtNumDNI.Name = "TxtNumDNI";
-            this.TxtNumDNI.Size = new System.Drawing.Size(192, 20);
+            this.TxtNumDNI.Size = new System.Drawing.Size(168, 20);
             this.TxtNumDNI.TabIndex = 1;
             // 
             // LblDestino
             // 
             this.LblDestino.AutoSize = true;
-            this.LblDestino.Location = new System.Drawing.Point(81, 57);
+            this.LblDestino.Location = new System.Drawing.Point(81, 58);
             this.LblDestino.Name = "LblDestino";
             this.LblDestino.Size = new System.Drawing.Size(22, 13);
             this.LblDestino.TabIndex = 2;
@@ -249,7 +265,7 @@ namespace PRESENTACION
             // LblColaborador
             // 
             this.LblColaborador.AutoSize = true;
-            this.LblColaborador.Location = new System.Drawing.Point(8, 30);
+            this.LblColaborador.Location = new System.Drawing.Point(8, 29);
             this.LblColaborador.Name = "LblColaborador";
             this.LblColaborador.Size = new System.Drawing.Size(95, 13);
             this.LblColaborador.TabIndex = 2;
@@ -258,14 +274,19 @@ namespace PRESENTACION
             // CmbTipoDNI
             // 
             this.CmbTipoDNI.FormattingEnabled = true;
-            this.CmbTipoDNI.Location = new System.Drawing.Point(109, 27);
+            this.CmbTipoDNI.Location = new System.Drawing.Point(109, 25);
             this.CmbTipoDNI.Name = "CmbTipoDNI";
-            this.CmbTipoDNI.Size = new System.Drawing.Size(192, 21);
+            this.CmbTipoDNI.Size = new System.Drawing.Size(168, 21);
             this.CmbTipoDNI.TabIndex = 3;
             // 
             // GrbDestino
             // 
-            this.GrbDestino.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrbDestino.Controls.Add(this.PibTelefono);
+            this.GrbDestino.Controls.Add(this.PibNombres);
+            this.GrbDestino.Controls.Add(this.PibNacionalidad);
+            this.GrbDestino.Controls.Add(this.PibNumerDNI);
+            this.GrbDestino.Controls.Add(this.PibApellidos);
+            this.GrbDestino.Controls.Add(this.PibTipoDNI);
             this.GrbDestino.Controls.Add(this.TxtTelefono);
             this.GrbDestino.Controls.Add(this.LblColaborador);
             this.GrbDestino.Controls.Add(this.label4);
@@ -288,7 +309,7 @@ namespace PRESENTACION
             // TxtTelefono
             // 
             this.TxtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtTelefono.Location = new System.Drawing.Point(109, 158);
+            this.TxtTelefono.Location = new System.Drawing.Point(109, 166);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(168, 20);
             this.TxtTelefono.TabIndex = 1;
@@ -296,7 +317,7 @@ namespace PRESENTACION
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 161);
+            this.label4.Location = new System.Drawing.Point(51, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 2;
@@ -305,7 +326,7 @@ namespace PRESENTACION
             // TxtNacionalidad
             // 
             this.TxtNacionalidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtNacionalidad.Location = new System.Drawing.Point(109, 132);
+            this.TxtNacionalidad.Location = new System.Drawing.Point(109, 138);
             this.TxtNacionalidad.Name = "TxtNacionalidad";
             this.TxtNacionalidad.Size = new System.Drawing.Size(168, 20);
             this.TxtNacionalidad.TabIndex = 1;
@@ -313,7 +334,7 @@ namespace PRESENTACION
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 135);
+            this.label3.Location = new System.Drawing.Point(31, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 2;
@@ -322,7 +343,7 @@ namespace PRESENTACION
             // TxtApellidos
             // 
             this.TxtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtApellidos.Location = new System.Drawing.Point(109, 106);
+            this.TxtApellidos.Location = new System.Drawing.Point(109, 110);
             this.TxtApellidos.Name = "TxtApellidos";
             this.TxtApellidos.Size = new System.Drawing.Size(168, 20);
             this.TxtApellidos.TabIndex = 1;
@@ -330,7 +351,7 @@ namespace PRESENTACION
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 109);
+            this.label2.Location = new System.Drawing.Point(51, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 2;
@@ -339,7 +360,7 @@ namespace PRESENTACION
             // TxtNombres
             // 
             this.TxtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtNombres.Location = new System.Drawing.Point(109, 80);
+            this.TxtNombres.Location = new System.Drawing.Point(109, 82);
             this.TxtNombres.Name = "TxtNombres";
             this.TxtNombres.Size = new System.Drawing.Size(168, 20);
             this.TxtNombres.TabIndex = 1;
@@ -347,7 +368,7 @@ namespace PRESENTACION
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 83);
+            this.label1.Location = new System.Drawing.Point(51, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 2;
@@ -355,16 +376,17 @@ namespace PRESENTACION
             // 
             // GrbPersonal
             // 
-            this.GrbPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GrbPersonal.Controls.Add(this.TxtTrabajador);
             this.GrbPersonal.Controls.Add(this.label5);
             this.GrbPersonal.Controls.Add(this.LblEncargado);
+            this.GrbPersonal.Controls.Add(this.PibEncargado);
             this.GrbPersonal.Controls.Add(this.LblTrabajador);
             this.GrbPersonal.Controls.Add(this.CmbEncargado);
+            this.GrbPersonal.Controls.Add(this.PibColaborador);
             this.GrbPersonal.Controls.Add(this.CmbColaborador);
             this.GrbPersonal.Location = new System.Drawing.Point(348, 27);
             this.GrbPersonal.Name = "GrbPersonal";
-            this.GrbPersonal.Size = new System.Drawing.Size(309, 151);
+            this.GrbPersonal.Size = new System.Drawing.Size(333, 151);
             this.GrbPersonal.TabIndex = 10;
             this.GrbPersonal.TabStop = false;
             this.GrbPersonal.Text = "PERSONAL";
@@ -408,6 +430,70 @@ namespace PRESENTACION
             this.PibConfirmar.TabStop = false;
             this.PibConfirmar.Click += new System.EventHandler(this.PibConfirmar_Click);
             // 
+            // PibTipoDNI
+            // 
+            this.PibTipoDNI.Location = new System.Drawing.Point(283, 23);
+            this.PibTipoDNI.Name = "PibTipoDNI";
+            this.PibTipoDNI.Size = new System.Drawing.Size(24, 24);
+            this.PibTipoDNI.TabIndex = 4;
+            this.PibTipoDNI.TabStop = false;
+            // 
+            // PibNumerDNI
+            // 
+            this.PibNumerDNI.Location = new System.Drawing.Point(283, 52);
+            this.PibNumerDNI.Name = "PibNumerDNI";
+            this.PibNumerDNI.Size = new System.Drawing.Size(24, 24);
+            this.PibNumerDNI.TabIndex = 4;
+            this.PibNumerDNI.TabStop = false;
+            // 
+            // PibNombres
+            // 
+            this.PibNombres.Location = new System.Drawing.Point(283, 80);
+            this.PibNombres.Name = "PibNombres";
+            this.PibNombres.Size = new System.Drawing.Size(24, 24);
+            this.PibNombres.TabIndex = 4;
+            this.PibNombres.TabStop = false;
+            // 
+            // PibApellidos
+            // 
+            this.PibApellidos.Location = new System.Drawing.Point(283, 108);
+            this.PibApellidos.Name = "PibApellidos";
+            this.PibApellidos.Size = new System.Drawing.Size(24, 24);
+            this.PibApellidos.TabIndex = 4;
+            this.PibApellidos.TabStop = false;
+            // 
+            // PibNacionalidad
+            // 
+            this.PibNacionalidad.Location = new System.Drawing.Point(283, 136);
+            this.PibNacionalidad.Name = "PibNacionalidad";
+            this.PibNacionalidad.Size = new System.Drawing.Size(24, 24);
+            this.PibNacionalidad.TabIndex = 4;
+            this.PibNacionalidad.TabStop = false;
+            // 
+            // PibTelefono
+            // 
+            this.PibTelefono.Location = new System.Drawing.Point(283, 164);
+            this.PibTelefono.Name = "PibTelefono";
+            this.PibTelefono.Size = new System.Drawing.Size(24, 24);
+            this.PibTelefono.TabIndex = 4;
+            this.PibTelefono.TabStop = false;
+            // 
+            // PibColaborador
+            // 
+            this.PibColaborador.Location = new System.Drawing.Point(299, 62);
+            this.PibColaborador.Name = "PibColaborador";
+            this.PibColaborador.Size = new System.Drawing.Size(24, 24);
+            this.PibColaborador.TabIndex = 4;
+            this.PibColaborador.TabStop = false;
+            // 
+            // PibEncargado
+            // 
+            this.PibEncargado.Location = new System.Drawing.Point(299, 113);
+            this.PibEncargado.Name = "PibEncargado";
+            this.PibEncargado.Size = new System.Drawing.Size(24, 24);
+            this.PibEncargado.TabIndex = 4;
+            this.PibEncargado.TabStop = false;
+            // 
             // FormSalidaMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +521,14 @@ namespace PRESENTACION
             this.GrbPersonal.PerformLayout();
             this.Pnl01.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibTipoDNI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNumerDNI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNombres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibApellidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNacionalidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibEncargado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -470,5 +564,13 @@ namespace PRESENTACION
         private System.Windows.Forms.ComboBox CmbColaborador;
         private System.Windows.Forms.Panel Pnl01;
         private System.Windows.Forms.PictureBox PibConfirmar;
+        private System.Windows.Forms.PictureBox PibTelefono;
+        private System.Windows.Forms.PictureBox PibNombres;
+        private System.Windows.Forms.PictureBox PibNacionalidad;
+        private System.Windows.Forms.PictureBox PibNumerDNI;
+        private System.Windows.Forms.PictureBox PibApellidos;
+        private System.Windows.Forms.PictureBox PibTipoDNI;
+        private System.Windows.Forms.PictureBox PibEncargado;
+        private System.Windows.Forms.PictureBox PibColaborador;
     }
 }
