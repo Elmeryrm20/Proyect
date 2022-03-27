@@ -155,20 +155,20 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             //Validaciones();
-
-            try
+            if (Validaciones() == true)
             {
-                string texto = textNombre.Text + " " + textGramaje.Text;
-                string  dt = consultas.D_Consulta_Dinamica(texto).Rows[0]["COMPOSICIÒN"].ToString();
-                if (dt== texto)
+                try
                 {
-                    MessageBox.Show("El Medicamento Ya existe", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    string texto = textNombre.Text + " " + textGramaje.Text;
+                    string dt = consultas.D_Consulta_Dinamica(texto).Rows[0]["COMPOSICIÒN"].ToString();
+                    if (dt == texto)
+                    {
+                        MessageBox.Show("El Medicamento Ya existe", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
                 }
-            }
-            catch (Exception)
-            {
-                if (Validaciones() == true)
+                catch (Exception)
                 {
+
                     byte[] img;
 
                     if (PibImagen.Image != null)
@@ -185,6 +185,7 @@ namespace PRESENTACION
 
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Limpiar();
+
                 }
             }
         }
