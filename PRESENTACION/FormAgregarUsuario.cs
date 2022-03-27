@@ -135,5 +135,16 @@ namespace PRESENTACION
         {
 
         }
+
+        private void PibAgregarUsuario_MouseEnter(object sender, EventArgs e)
+        {
+            PibAgregarUsuario.Image = Properties.Resources.BotonFormConfirmarNuevoUsu02;
+        }
+
+        private void PibAgregarUsuario_MouseLeave(object sender, EventArgs e)
+        {
+            PibAgregarUsuario.Image = Properties.Resources.BotonFormConfirmarNuevoUsu01;
+
+        }
     }
 }

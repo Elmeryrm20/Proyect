@@ -29,19 +29,15 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TxtNumDNI = new System.Windows.Forms.TextBox();
             this.LblDestino = new System.Windows.Forms.Label();
             this.CmbEncargado = new System.Windows.Forms.ComboBox();
             this.TxtTrabajador = new System.Windows.Forms.TextBox();
             this.LblTrabajador = new System.Windows.Forms.Label();
             this.LblEncargado = new System.Windows.Forms.Label();
-            this.PibAgregarMed = new System.Windows.Forms.PictureBox();
-            this.PibEliminarMed = new System.Windows.Forms.PictureBox();
-            this.PibLimpiar = new System.Windows.Forms.PictureBox();
-            this.PibGuardarImprimir = new System.Windows.Forms.PictureBox();
             this.DgvSalida = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,32 +57,36 @@ namespace PRESENTACION
             this.label5 = new System.Windows.Forms.Label();
             this.CmbColaborador = new System.Windows.Forms.ComboBox();
             this.Pnl01 = new System.Windows.Forms.Panel();
-            this.PibConfirmar = new System.Windows.Forms.PictureBox();
-            this.PibTipoDNI = new System.Windows.Forms.PictureBox();
-            this.PibNumerDNI = new System.Windows.Forms.PictureBox();
-            this.PibNombres = new System.Windows.Forms.PictureBox();
-            this.PibApellidos = new System.Windows.Forms.PictureBox();
-            this.PibNacionalidad = new System.Windows.Forms.PictureBox();
             this.PibTelefono = new System.Windows.Forms.PictureBox();
-            this.PibColaborador = new System.Windows.Forms.PictureBox();
+            this.PibNombres = new System.Windows.Forms.PictureBox();
+            this.PibNacionalidad = new System.Windows.Forms.PictureBox();
+            this.PibNumerDNI = new System.Windows.Forms.PictureBox();
+            this.PibApellidos = new System.Windows.Forms.PictureBox();
+            this.PibTipoDNI = new System.Windows.Forms.PictureBox();
             this.PibEncargado = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).BeginInit();
+            this.PibColaborador = new System.Windows.Forms.PictureBox();
+            this.PibGuardarImprimir = new System.Windows.Forms.PictureBox();
+            this.PibLimpiar = new System.Windows.Forms.PictureBox();
+            this.PibEliminarMed = new System.Windows.Forms.PictureBox();
+            this.PibConfirmar = new System.Windows.Forms.PictureBox();
+            this.PibAgregarMed = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSalida)).BeginInit();
             this.GrbDestino.SuspendLayout();
             this.GrbPersonal.SuspendLayout();
             this.Pnl01.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibTipoDNI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibNumerDNI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibNombres)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibApellidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibNacionalidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibTelefono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNombres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNacionalidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNumerDNI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibApellidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibTipoDNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEncargado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtNumDNI
@@ -141,47 +141,6 @@ namespace PRESENTACION
             this.LblEncargado.TabIndex = 2;
             this.LblEncargado.Text = "Encargado:";
             // 
-            // PibAgregarMed
-            // 
-            this.PibAgregarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibAgregarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
-            this.PibAgregarMed.Location = new System.Drawing.Point(583, 223);
-            this.PibAgregarMed.Name = "PibAgregarMed";
-            this.PibAgregarMed.Size = new System.Drawing.Size(110, 40);
-            this.PibAgregarMed.TabIndex = 4;
-            this.PibAgregarMed.TabStop = false;
-            this.PibAgregarMed.Click += new System.EventHandler(this.PibAgregarMed_Click);
-            // 
-            // PibEliminarMed
-            // 
-            this.PibEliminarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibEliminarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormeEliminar01;
-            this.PibEliminarMed.Location = new System.Drawing.Point(583, 313);
-            this.PibEliminarMed.Name = "PibEliminarMed";
-            this.PibEliminarMed.Size = new System.Drawing.Size(110, 40);
-            this.PibEliminarMed.TabIndex = 5;
-            this.PibEliminarMed.TabStop = false;
-            // 
-            // PibLimpiar
-            // 
-            this.PibLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibLimpiar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibLimpiar.Location = new System.Drawing.Point(583, 358);
-            this.PibLimpiar.Name = "PibLimpiar";
-            this.PibLimpiar.Size = new System.Drawing.Size(110, 40);
-            this.PibLimpiar.TabIndex = 6;
-            this.PibLimpiar.TabStop = false;
-            // 
-            // PibGuardarImprimir
-            // 
-            this.PibGuardarImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibGuardarImprimir.Image = global::PRESENTACION.Properties.Resources.BotonFormImprimir01;
-            this.PibGuardarImprimir.Location = new System.Drawing.Point(583, 403);
-            this.PibGuardarImprimir.Name = "PibGuardarImprimir";
-            this.PibGuardarImprimir.Size = new System.Drawing.Size(110, 40);
-            this.PibGuardarImprimir.TabIndex = 7;
-            this.PibGuardarImprimir.TabStop = false;
-            // 
             // DgvSalida
             // 
             this.DgvSalida.AllowUserToAddRows = false;
@@ -196,28 +155,28 @@ namespace PRESENTACION
             this.DgvSalida.BackgroundColor = System.Drawing.Color.White;
             this.DgvSalida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvSalida.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvSalida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvSalida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.DgvSalida.ColumnHeadersHeight = 30;
             this.DgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DgvSalida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvSalida.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvSalida.DefaultCellStyle = dataGridViewCellStyle32;
             this.DgvSalida.EnableHeadersVisualStyles = false;
             this.DgvSalida.GridColor = System.Drawing.Color.Tomato;
             this.DgvSalida.Location = new System.Drawing.Point(22, 223);
@@ -225,16 +184,16 @@ namespace PRESENTACION
             this.DgvSalida.Name = "DgvSalida";
             this.DgvSalida.ReadOnly = true;
             this.DgvSalida.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvSalida.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvSalida.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.DgvSalida.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.DgvSalida.Size = new System.Drawing.Size(536, 215);
+            this.DgvSalida.Size = new System.Drawing.Size(536, 267);
             this.DgvSalida.TabIndex = 9;
             // 
             // Column1
@@ -244,7 +203,7 @@ namespace PRESENTACION
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Visible = false;
-            this.Column1.Width = 77;
+            this.Column1.Width = 76;
             // 
             // Column2
             // 
@@ -419,32 +378,13 @@ namespace PRESENTACION
             this.Pnl01.Size = new System.Drawing.Size(699, 209);
             this.Pnl01.TabIndex = 4;
             // 
-            // PibConfirmar
+            // PibTelefono
             // 
-            this.PibConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibConfirmar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
-            this.PibConfirmar.Location = new System.Drawing.Point(583, 268);
-            this.PibConfirmar.Name = "PibConfirmar";
-            this.PibConfirmar.Size = new System.Drawing.Size(110, 40);
-            this.PibConfirmar.TabIndex = 4;
-            this.PibConfirmar.TabStop = false;
-            this.PibConfirmar.Click += new System.EventHandler(this.PibConfirmar_Click);
-            // 
-            // PibTipoDNI
-            // 
-            this.PibTipoDNI.Location = new System.Drawing.Point(283, 23);
-            this.PibTipoDNI.Name = "PibTipoDNI";
-            this.PibTipoDNI.Size = new System.Drawing.Size(24, 24);
-            this.PibTipoDNI.TabIndex = 4;
-            this.PibTipoDNI.TabStop = false;
-            // 
-            // PibNumerDNI
-            // 
-            this.PibNumerDNI.Location = new System.Drawing.Point(283, 52);
-            this.PibNumerDNI.Name = "PibNumerDNI";
-            this.PibNumerDNI.Size = new System.Drawing.Size(24, 24);
-            this.PibNumerDNI.TabIndex = 4;
-            this.PibNumerDNI.TabStop = false;
+            this.PibTelefono.Location = new System.Drawing.Point(283, 164);
+            this.PibTelefono.Name = "PibTelefono";
+            this.PibTelefono.Size = new System.Drawing.Size(24, 24);
+            this.PibTelefono.TabIndex = 4;
+            this.PibTelefono.TabStop = false;
             // 
             // PibNombres
             // 
@@ -454,14 +394,6 @@ namespace PRESENTACION
             this.PibNombres.TabIndex = 4;
             this.PibNombres.TabStop = false;
             // 
-            // PibApellidos
-            // 
-            this.PibApellidos.Location = new System.Drawing.Point(283, 108);
-            this.PibApellidos.Name = "PibApellidos";
-            this.PibApellidos.Size = new System.Drawing.Size(24, 24);
-            this.PibApellidos.TabIndex = 4;
-            this.PibApellidos.TabStop = false;
-            // 
             // PibNacionalidad
             // 
             this.PibNacionalidad.Location = new System.Drawing.Point(283, 136);
@@ -470,21 +402,29 @@ namespace PRESENTACION
             this.PibNacionalidad.TabIndex = 4;
             this.PibNacionalidad.TabStop = false;
             // 
-            // PibTelefono
+            // PibNumerDNI
             // 
-            this.PibTelefono.Location = new System.Drawing.Point(283, 164);
-            this.PibTelefono.Name = "PibTelefono";
-            this.PibTelefono.Size = new System.Drawing.Size(24, 24);
-            this.PibTelefono.TabIndex = 4;
-            this.PibTelefono.TabStop = false;
+            this.PibNumerDNI.Location = new System.Drawing.Point(283, 52);
+            this.PibNumerDNI.Name = "PibNumerDNI";
+            this.PibNumerDNI.Size = new System.Drawing.Size(24, 24);
+            this.PibNumerDNI.TabIndex = 4;
+            this.PibNumerDNI.TabStop = false;
             // 
-            // PibColaborador
+            // PibApellidos
             // 
-            this.PibColaborador.Location = new System.Drawing.Point(299, 62);
-            this.PibColaborador.Name = "PibColaborador";
-            this.PibColaborador.Size = new System.Drawing.Size(24, 24);
-            this.PibColaborador.TabIndex = 4;
-            this.PibColaborador.TabStop = false;
+            this.PibApellidos.Location = new System.Drawing.Point(283, 108);
+            this.PibApellidos.Name = "PibApellidos";
+            this.PibApellidos.Size = new System.Drawing.Size(24, 24);
+            this.PibApellidos.TabIndex = 4;
+            this.PibApellidos.TabStop = false;
+            // 
+            // PibTipoDNI
+            // 
+            this.PibTipoDNI.Location = new System.Drawing.Point(283, 23);
+            this.PibTipoDNI.Name = "PibTipoDNI";
+            this.PibTipoDNI.Size = new System.Drawing.Size(24, 24);
+            this.PibTipoDNI.TabIndex = 4;
+            this.PibTipoDNI.TabStop = false;
             // 
             // PibEncargado
             // 
@@ -494,11 +434,81 @@ namespace PRESENTACION
             this.PibEncargado.TabIndex = 4;
             this.PibEncargado.TabStop = false;
             // 
+            // PibColaborador
+            // 
+            this.PibColaborador.Location = new System.Drawing.Point(299, 62);
+            this.PibColaborador.Name = "PibColaborador";
+            this.PibColaborador.Size = new System.Drawing.Size(24, 24);
+            this.PibColaborador.TabIndex = 4;
+            this.PibColaborador.TabStop = false;
+            // 
+            // PibGuardarImprimir
+            // 
+            this.PibGuardarImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibGuardarImprimir.Image = global::PRESENTACION.Properties.Resources.BotonFormImprimir01;
+            this.PibGuardarImprimir.Location = new System.Drawing.Point(583, 448);
+            this.PibGuardarImprimir.Name = "PibGuardarImprimir";
+            this.PibGuardarImprimir.Size = new System.Drawing.Size(110, 40);
+            this.PibGuardarImprimir.TabIndex = 7;
+            this.PibGuardarImprimir.TabStop = false;
+            this.PibGuardarImprimir.MouseEnter += new System.EventHandler(this.PibGuardarImprimir_MouseEnter);
+            this.PibGuardarImprimir.MouseLeave += new System.EventHandler(this.PibGuardarImprimir_MouseLeave);
+            // 
+            // PibLimpiar
+            // 
+            this.PibLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibLimpiar.Image = global::PRESENTACION.Properties.Resources.BotonFormLimpiar01;
+            this.PibLimpiar.Location = new System.Drawing.Point(583, 403);
+            this.PibLimpiar.Name = "PibLimpiar";
+            this.PibLimpiar.Size = new System.Drawing.Size(110, 40);
+            this.PibLimpiar.TabIndex = 6;
+            this.PibLimpiar.TabStop = false;
+            this.PibLimpiar.MouseEnter += new System.EventHandler(this.PibLimpiar_MouseEnter);
+            this.PibLimpiar.MouseLeave += new System.EventHandler(this.PibLimpiar_MouseLeave);
+            // 
+            // PibEliminarMed
+            // 
+            this.PibEliminarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibEliminarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarQuitar01;
+            this.PibEliminarMed.Location = new System.Drawing.Point(583, 358);
+            this.PibEliminarMed.Name = "PibEliminarMed";
+            this.PibEliminarMed.Size = new System.Drawing.Size(110, 40);
+            this.PibEliminarMed.TabIndex = 5;
+            this.PibEliminarMed.TabStop = false;
+            this.PibEliminarMed.MouseEnter += new System.EventHandler(this.PibEliminarMed_MouseEnter);
+            this.PibEliminarMed.MouseLeave += new System.EventHandler(this.PibEliminarMed_MouseLeave);
+            // 
+            // PibConfirmar
+            // 
+            this.PibConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibConfirmar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmarSalida03;
+            this.PibConfirmar.Location = new System.Drawing.Point(583, 279);
+            this.PibConfirmar.Name = "PibConfirmar";
+            this.PibConfirmar.Size = new System.Drawing.Size(110, 60);
+            this.PibConfirmar.TabIndex = 4;
+            this.PibConfirmar.TabStop = false;
+            this.PibConfirmar.Click += new System.EventHandler(this.PibConfirmar_Click);
+            this.PibConfirmar.MouseEnter += new System.EventHandler(this.PibConfirmar_MouseEnter);
+            this.PibConfirmar.MouseLeave += new System.EventHandler(this.PibConfirmar_MouseLeave);
+            // 
+            // PibAgregarMed
+            // 
+            this.PibAgregarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibAgregarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormSeleccionarMed01;
+            this.PibAgregarMed.Location = new System.Drawing.Point(583, 223);
+            this.PibAgregarMed.Name = "PibAgregarMed";
+            this.PibAgregarMed.Size = new System.Drawing.Size(110, 40);
+            this.PibAgregarMed.TabIndex = 4;
+            this.PibAgregarMed.TabStop = false;
+            this.PibAgregarMed.Click += new System.EventHandler(this.PibAgregarMed_Click);
+            this.PibAgregarMed.MouseEnter += new System.EventHandler(this.PibAgregarMed_MouseEnter);
+            this.PibAgregarMed.MouseLeave += new System.EventHandler(this.PibAgregarMed_MouseLeave);
+            // 
             // FormSalidaMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 450);
+            this.ClientSize = new System.Drawing.Size(723, 502);
             this.Controls.Add(this.Pnl01);
             this.Controls.Add(this.DgvSalida);
             this.Controls.Add(this.PibGuardarImprimir);
@@ -510,25 +520,25 @@ namespace PRESENTACION
             this.Name = "FormSalidaMedicamentos";
             this.Text = "FormSalidaMedicamentos";
             this.Load += new System.EventHandler(this.FormSalidaMedicamentos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSalida)).EndInit();
             this.GrbDestino.ResumeLayout(false);
             this.GrbDestino.PerformLayout();
             this.GrbPersonal.ResumeLayout(false);
             this.GrbPersonal.PerformLayout();
             this.Pnl01.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibTipoDNI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibNumerDNI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibNombres)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibApellidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibNacionalidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibTelefono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNombres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNacionalidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibNumerDNI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibApellidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibTipoDNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEncargado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).EndInit();
             this.ResumeLayout(false);
 
         }

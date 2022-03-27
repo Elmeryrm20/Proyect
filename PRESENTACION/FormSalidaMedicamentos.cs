@@ -157,5 +157,65 @@ namespace PRESENTACION
             CmbTipoDNI.DataSource = consultas.D_TipoDNI();
 
         }
+
+        private void PibAgregarMed_MouseEnter(object sender, EventArgs e)
+        {
+            PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed02;
+
+        }
+
+        private void PibAgregarMed_MouseLeave(object sender, EventArgs e)
+        {
+            PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed01;
+
+        }
+
+        private void PibConfirmar_MouseEnter(object sender, EventArgs e)
+        {
+            PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida04;
+
+        }
+
+        private void PibConfirmar_MouseLeave(object sender, EventArgs e)
+        {
+            PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida03;
+
+        }
+
+        private void PibEliminarMed_MouseEnter(object sender, EventArgs e)
+        {
+            PibEliminarMed.Image = Properties.Resources.BotonFormAgregarQuitar02;
+
+        }
+
+        private void PibEliminarMed_MouseLeave(object sender, EventArgs e)
+        {
+            PibEliminarMed.Image = Properties.Resources.BotonFormAgregarQuitar01;
+
+        }
+
+        private void PibLimpiar_MouseEnter(object sender, EventArgs e)
+        {
+            PibLimpiar.Image = Properties.Resources.BotonFormLimpiar02;
+
+        }
+
+        private void PibLimpiar_MouseLeave(object sender, EventArgs e)
+        {
+            PibLimpiar.Image = Properties.Resources.BotonFormLimpiar01;
+
+        }
+
+        private void PibGuardarImprimir_MouseEnter(object sender, EventArgs e)
+        {
+            PibGuardarImprimir.Image = Properties.Resources.BotonFormImprimir02;
+
+        }
+
+        private void PibGuardarImprimir_MouseLeave(object sender, EventArgs e)
+        {
+            PibGuardarImprimir.Image = Properties.Resources.BotonFormImprimir01;
+
+        }
     }
 }

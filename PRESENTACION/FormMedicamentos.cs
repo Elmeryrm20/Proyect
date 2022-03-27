@@ -253,5 +253,13 @@ namespace PRESENTACION
         {
             e.Handled = true;
         }
+
+        private void dgb_Medicamentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
+            LblIndice.Text = valor_ID.ToString();
+            FormDetallesMedicamento frm1 = new FormDetallesMedicamento(valor_ID);
+            frm1.ShowDialog();
+        }
     }
 }

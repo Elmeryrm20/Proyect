@@ -293,5 +293,15 @@ namespace PRESENTACION
         {
             ObtenerLaboratorio();
         }
+
+        private void PibAgregarMedicamento_MouseEnter(object sender, EventArgs e)
+        {
+            PibAgregarMedicamento.Image = Properties.Resources.BotonFormNuevoMedicamentos04;
+        }
+
+        private void PibAgregarMedicamento_MouseLeave(object sender, EventArgs e)
+        {
+            PibAgregarMedicamento.Image = Properties.Resources.BotonFormNuevoMedicamentos03;
+        }
     }
 }

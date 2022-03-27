@@ -64,9 +64,7 @@ namespace PRESENTACION
 
         private void dgb_Usuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            valor_ID = dgb_Usuario.CurrentRow.Cells[0].Value.ToString();
-            NOMBRE = dgb_Usuario.CurrentRow.Cells[1].Value.ToString();
-            label1.Text = valor_ID.ToString() + " " + NOMBRE;
+
         }
 
         private void btn_Restablecer_Click(object sender, EventArgs e)
@@ -113,6 +111,24 @@ namespace PRESENTACION
                 MessageBox.Show("Seleccione Usuario", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
+        }
+
+        private void dgb_Usuario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            valor_ID = dgb_Usuario.CurrentRow.Cells[0].Value.ToString();
+            NOMBRE = dgb_Usuario.CurrentRow.Cells[1].Value.ToString();
+            label1.Text = valor_ID.ToString() + " " + NOMBRE;
+        }
+
+        private void btn_Restablecer_MouseEnter(object sender, EventArgs e)
+        {
+            btn_Restablecer.Image = Properties.Resources.BotonFormElimiarPass02;
+        }
+
+        private void btn_Restablecer_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Restablecer.Image = Properties.Resources.BotonFormElimiarPass01;
+
         }
     }
 }

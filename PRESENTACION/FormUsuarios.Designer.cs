@@ -100,6 +100,7 @@ namespace PRESENTACION
             this.dgb_Usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgb_Usuario.Size = new System.Drawing.Size(669, 293);
             this.dgb_Usuario.TabIndex = 1;
+            this.dgb_Usuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Usuario_CellClick);
             this.dgb_Usuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Usuario_CellContentClick);
             // 
             // panel4
@@ -130,13 +131,15 @@ namespace PRESENTACION
             // btn_Restablecer
             // 
             this.btn_Restablecer.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Restablecer.Image = global::PRESENTACION.Properties.Resources.BotonFormDetalles01;
+            this.btn_Restablecer.Image = global::PRESENTACION.Properties.Resources.BotonFormElimiarPass01;
             this.btn_Restablecer.Location = new System.Drawing.Point(498, 6);
             this.btn_Restablecer.Name = "btn_Restablecer";
             this.btn_Restablecer.Size = new System.Drawing.Size(110, 40);
             this.btn_Restablecer.TabIndex = 4;
             this.btn_Restablecer.TabStop = false;
             this.btn_Restablecer.Click += new System.EventHandler(this.btn_Restablecer_Click);
+            this.btn_Restablecer.MouseEnter += new System.EventHandler(this.btn_Restablecer_MouseEnter);
+            this.btn_Restablecer.MouseLeave += new System.EventHandler(this.btn_Restablecer_MouseLeave);
             // 
             // bt_EliminarU
             // 

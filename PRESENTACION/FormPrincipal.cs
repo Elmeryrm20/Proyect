@@ -375,12 +375,12 @@ namespace PRESENTACION
 
         private void Pib_Restaurar_MouseEnter(object sender, EventArgs e)
         {
-            Pib_Restaurar.Image = Properties.Resources.BotonVentanaRestaurar02;
+            Pib_Restaurar.Image = Properties.Resources.BotonVentanaRestaurar04;
         }
 
         private void Pib_Restaurar_MouseLeave(object sender, EventArgs e)
         {
-            Pib_Restaurar.Image = Properties.Resources.BotonVentanaRestaurar01;
+            Pib_Restaurar.Image = Properties.Resources.BotonVentanaRestaurar03;
         }
 
         private void PibCerrar_MouseEnter(object sender, EventArgs e)
@@ -395,12 +395,12 @@ namespace PRESENTACION
 
         private void Pib_Maximizar_MouseEnter(object sender, EventArgs e)
         {
-            Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar02;
+            Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar04;
         }
 
         private void Pib_Maximizar_MouseLeave(object sender, EventArgs e)
         {
-            Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar01;
+            Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar03;
         }
 
         private void PibContraer_MouseEnter(object sender, EventArgs e)

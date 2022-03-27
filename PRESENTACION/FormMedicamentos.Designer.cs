@@ -29,7 +29,11 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgb_Medicamentos = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txb_Buscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,46 +41,31 @@ namespace PRESENTACION
             this.cmb_Almacen = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Pib_Filtrar = new System.Windows.Forms.PictureBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LblIndice = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.PibEditar = new System.Windows.Forms.PictureBox();
             this.PibSalida = new System.Windows.Forms.PictureBox();
             this.PibIngreso = new System.Windows.Forms.PictureBox();
             this.PibActualizar = new System.Windows.Forms.PictureBox();
             this.PibDetalles = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
+            this.Pib_Filtrar = new System.Windows.Forms.PictureBox();
+            this.dgb_Medicamentos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibDetalles)).BeginInit();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgb_Medicamentos
-            // 
-            this.dgb_Medicamentos.AllowUserToAddRows = false;
-            this.dgb_Medicamentos.AllowUserToDeleteRows = false;
-            this.dgb_Medicamentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgb_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgb_Medicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgb_Medicamentos.Location = new System.Drawing.Point(0, 0);
-            this.dgb_Medicamentos.Name = "dgb_Medicamentos";
-            this.dgb_Medicamentos.ReadOnly = true;
-            this.dgb_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgb_Medicamentos.Size = new System.Drawing.Size(628, 242);
-            this.dgb_Medicamentos.TabIndex = 0;
-            this.dgb_Medicamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellClick);
-            this.dgb_Medicamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellContentClick);
             // 
             // txb_Buscar
             // 
@@ -156,20 +145,6 @@ namespace PRESENTACION
             this.label4.TabIndex = 10;
             this.label4.Text = "label4";
             // 
-            // Pib_Filtrar
-            // 
-            this.Pib_Filtrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pib_Filtrar.BackColor = System.Drawing.Color.Transparent;
-            this.Pib_Filtrar.Image = global::PRESENTACION.Properties.Resources.BotonFormBusqueda01;
-            this.Pib_Filtrar.Location = new System.Drawing.Point(586, 29);
-            this.Pib_Filtrar.Name = "Pib_Filtrar";
-            this.Pib_Filtrar.Size = new System.Drawing.Size(110, 40);
-            this.Pib_Filtrar.TabIndex = 9;
-            this.Pib_Filtrar.TabStop = false;
-            this.Pib_Filtrar.Click += new System.EventHandler(this.btn_Filtrar_Click);
-            this.Pib_Filtrar.MouseEnter += new System.EventHandler(this.Pib_Filtrar_MouseEnter);
-            this.Pib_Filtrar.MouseLeave += new System.EventHandler(this.Pib_Filtrar_MouseLeave);
-            // 
             // cmbTipo
             // 
             this.cmbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -216,6 +191,31 @@ namespace PRESENTACION
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(708, 63);
             this.panel3.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 114);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(40, 242);
+            this.panel2.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(668, 114);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(40, 242);
+            this.panel4.TabIndex = 11;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dgb_Medicamentos);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(40, 114);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(628, 242);
+            this.panel5.TabIndex = 12;
             // 
             // PibEditar
             // 
@@ -282,30 +282,73 @@ namespace PRESENTACION
             this.PibDetalles.MouseEnter += new System.EventHandler(this.PibDetalles_MouseEnter);
             this.PibDetalles.MouseLeave += new System.EventHandler(this.PibDetalles_MouseLeave);
             // 
-            // panel2
+            // Pib_Filtrar
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 114);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(40, 242);
-            this.panel2.TabIndex = 10;
+            this.Pib_Filtrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pib_Filtrar.BackColor = System.Drawing.Color.Transparent;
+            this.Pib_Filtrar.Image = global::PRESENTACION.Properties.Resources.BotonFormFiltrar01;
+            this.Pib_Filtrar.Location = new System.Drawing.Point(586, 29);
+            this.Pib_Filtrar.Name = "Pib_Filtrar";
+            this.Pib_Filtrar.Size = new System.Drawing.Size(110, 40);
+            this.Pib_Filtrar.TabIndex = 9;
+            this.Pib_Filtrar.TabStop = false;
+            this.Pib_Filtrar.Click += new System.EventHandler(this.btn_Filtrar_Click);
+            this.Pib_Filtrar.MouseEnter += new System.EventHandler(this.Pib_Filtrar_MouseEnter);
+            this.Pib_Filtrar.MouseLeave += new System.EventHandler(this.Pib_Filtrar_MouseLeave);
             // 
-            // panel4
+            // dgb_Medicamentos
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(668, 114);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(40, 242);
-            this.panel4.TabIndex = 11;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.dgb_Medicamentos);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(40, 114);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(628, 242);
-            this.panel5.TabIndex = 12;
+            this.dgb_Medicamentos.AllowUserToAddRows = false;
+            this.dgb_Medicamentos.AllowUserToDeleteRows = false;
+            this.dgb_Medicamentos.AllowUserToOrderColumns = true;
+            this.dgb_Medicamentos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgb_Medicamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgb_Medicamentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgb_Medicamentos.BackgroundColor = System.Drawing.Color.White;
+            this.dgb_Medicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgb_Medicamentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgb_Medicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgb_Medicamentos.ColumnHeadersHeight = 25;
+            this.dgb_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgb_Medicamentos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgb_Medicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgb_Medicamentos.EnableHeadersVisualStyles = false;
+            this.dgb_Medicamentos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.dgb_Medicamentos.Location = new System.Drawing.Point(0, 0);
+            this.dgb_Medicamentos.MultiSelect = false;
+            this.dgb_Medicamentos.Name = "dgb_Medicamentos";
+            this.dgb_Medicamentos.ReadOnly = true;
+            this.dgb_Medicamentos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgb_Medicamentos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.dgb_Medicamentos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgb_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgb_Medicamentos.Size = new System.Drawing.Size(628, 242);
+            this.dgb_Medicamentos.TabIndex = 2;
+            this.dgb_Medicamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellClick);
+            this.dgb_Medicamentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellDoubleClick);
             // 
             // FormMedicamentos
             // 
@@ -321,18 +364,18 @@ namespace PRESENTACION
             this.Name = "FormMedicamentos";
             this.Text = "FormMedicamentos";
             this.Load += new System.EventHandler(this.FormMedicamentos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PibEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibDetalles)).EndInit();
-            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,9 +398,9 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox Pib_Filtrar;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.DataGridView dgb_Medicamentos;
         private System.Windows.Forms.ComboBox cmb_Almacen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LblResultados;
+        public System.Windows.Forms.DataGridView dgb_Medicamentos;
     }
 }
