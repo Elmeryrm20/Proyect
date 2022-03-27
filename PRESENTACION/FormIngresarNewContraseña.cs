@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using DATOS;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DATOS;
 
 namespace PRESENTACION
 {
@@ -35,38 +29,47 @@ namespace PRESENTACION
 
         }
 
+
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           
-                if (txtusuario.Text=="")
-                {
-                    MessageBox.Show("Ingrese su DNI O Pasaporte", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else if (txtcontraseña.Text=="")
-                {
-                    MessageBox.Show("Ingrese Contraseña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                }
-                else if (txtContraseña2.Text == "")
-                {
-                    MessageBox.Show("Ingrese Contraseña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            if (txtusuario.Text == "")
+            {
+                MessageBox.Show("Ingrese su N° de Identificación", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtusuario.Focus();
+            }
+            else if (TxtPass1.Text == "")
+            {
+                MessageBox.Show("Ingrese una Nueva Contraseña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                TxtPass1.Focus();
 
-                }
-                else
-                {
+            }
+            else if (TxtPass2.Text == "")
+            {
+                MessageBox.Show("Vuelva a escribir su Nueva Contraseña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                TxtPass2.Focus();
+            }
+            else
+            {
                 try
                 {
                     DataTable data = consultas.D_Validacion_Contraseña(txtusuario.Text);
 
                     string DNI = data.Rows[0]["Tra_DNI"].ToString();
-                    String Contraseña = data.Rows[0]["Usu_Pass"].ToString();
+                    string Pass = data.Rows[0]["Usu_Pass"].ToString();
                     DNI = txtusuario.Text;
-                    if (txtcontraseña.Text == txtContraseña2.Text)
+                    if (TxtPass1.Text == TxtPass2.Text)
                     {
-                        if (Contraseña == "")
+                        if (Pass == "")
                         {
-                            consultas.D_Agregar_Contraseña(txtusuario.Text, txtcontraseña.Text);
+                            consultas.D_Agregar_Contraseña(txtusuario.Text, TxtPass1.Text);
                             MessageBox.Show("Registro de Contraseña Exitoso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            FormLogin hg = ((FormLogin)Owner);
+                            hg.ReestablecerPass(TxtPass1.Text);
+                            hg.Show();
+                            this.Close();
 
                         }
                         else
@@ -85,8 +88,8 @@ namespace PRESENTACION
                     MessageBox.Show("Usuario Incorrecto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }
-                   
-                }
+
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -180,6 +183,13 @@ namespace PRESENTACION
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
+            else if (char.IsControl(e.KeyChar)) e.Handled = false;
+            else e.Handled = true;
         }
     }
 }

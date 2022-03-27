@@ -33,10 +33,10 @@
             this.PibMinimizar = new System.Windows.Forms.PictureBox();
             this.PibCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtContraseña2 = new System.Windows.Forms.TextBox();
+            this.TxtPass2 = new System.Windows.Forms.TextBox();
             this.PibIngresar = new System.Windows.Forms.PictureBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.txtcontraseña = new System.Windows.Forms.TextBox();
+            this.TxtPass1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibVolver)).BeginInit();
@@ -106,10 +106,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.txtContraseña2);
+            this.panel2.Controls.Add(this.TxtPass2);
             this.panel2.Controls.Add(this.PibIngresar);
             this.panel2.Controls.Add(this.txtusuario);
-            this.panel2.Controls.Add(this.txtcontraseña);
+            this.panel2.Controls.Add(this.TxtPass1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -118,21 +118,22 @@
             this.panel2.Size = new System.Drawing.Size(660, 360);
             this.panel2.TabIndex = 15;
             // 
-            // txtContraseña2
+            // TxtPass2
             // 
-            this.txtContraseña2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(123)))));
-            this.txtContraseña2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña2.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña2.Location = new System.Drawing.Point(410, 222);
-            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña2.MaxLength = 20;
-            this.txtContraseña2.Name = "txtContraseña2";
-            this.txtContraseña2.PasswordChar = '•';
-            this.txtContraseña2.Size = new System.Drawing.Size(183, 19);
-            this.txtContraseña2.TabIndex = 17;
-            this.txtContraseña2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtContraseña2.TextChanged += new System.EventHandler(this.txtContraseña2_TextChanged);
+            this.TxtPass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(123)))));
+            this.TxtPass2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPass2.ForeColor = System.Drawing.Color.White;
+            this.TxtPass2.Location = new System.Drawing.Point(410, 229);
+            this.TxtPass2.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtPass2.MaxLength = 20;
+            this.TxtPass2.Name = "TxtPass2";
+            this.TxtPass2.PasswordChar = '•';
+            this.TxtPass2.Size = new System.Drawing.Size(183, 19);
+            this.TxtPass2.TabIndex = 17;
+            this.TxtPass2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtPass2.TextChanged += new System.EventHandler(this.txtContraseña2_TextChanged);
+            this.TxtPass2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // PibIngresar
             // 
@@ -154,29 +155,31 @@
             this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.ForeColor = System.Drawing.Color.White;
-            this.txtusuario.Location = new System.Drawing.Point(410, 76);
+            this.txtusuario.Location = new System.Drawing.Point(410, 81);
             this.txtusuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(183, 19);
             this.txtusuario.TabIndex = 4;
             this.txtusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
-            // txtcontraseña
+            // TxtPass1
             // 
-            this.txtcontraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(123)))));
-            this.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontraseña.ForeColor = System.Drawing.Color.White;
-            this.txtcontraseña.Location = new System.Drawing.Point(410, 148);
-            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2);
-            this.txtcontraseña.MaxLength = 20;
-            this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.PasswordChar = '•';
-            this.txtcontraseña.Size = new System.Drawing.Size(183, 19);
-            this.txtcontraseña.TabIndex = 11;
-            this.txtcontraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtcontraseña.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
+            this.TxtPass1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(123)))));
+            this.TxtPass1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPass1.ForeColor = System.Drawing.Color.White;
+            this.TxtPass1.Location = new System.Drawing.Point(410, 156);
+            this.TxtPass1.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtPass1.MaxLength = 20;
+            this.TxtPass1.Name = "TxtPass1";
+            this.TxtPass1.PasswordChar = '•';
+            this.TxtPass1.Size = new System.Drawing.Size(183, 19);
+            this.TxtPass1.TabIndex = 11;
+            this.TxtPass1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtPass1.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
+            this.TxtPass1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // pictureBox1
             // 
@@ -219,9 +222,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox PibIngresar;
         private System.Windows.Forms.TextBox txtusuario;
-        private System.Windows.Forms.TextBox txtcontraseña;
+        private System.Windows.Forms.TextBox TxtPass1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtContraseña2;
+        private System.Windows.Forms.TextBox TxtPass2;
         private System.Windows.Forms.PictureBox PibVolver;
     }
 }
