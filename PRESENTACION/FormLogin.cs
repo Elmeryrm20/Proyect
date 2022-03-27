@@ -257,7 +257,7 @@ namespace PRESENTACION
         {
             if (txtusuario.Text == "DNI")
             {
-                txtusuario.SelectAll();
+                txtusuario.Clear();
             }
             //if (txtusuario.Text == "DNI")
             //{
@@ -273,7 +273,7 @@ namespace PRESENTACION
         {
             if (TxtPass.Text == "Contraseña")
             {
-                TxtPass.SelectAll();
+                TxtPass.Clear();
             }
             //ActivarTextbox = true;
             //if (TxtPass.Text == "Contraseña")

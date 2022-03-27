@@ -41,6 +41,7 @@
             this.DtgPrueba = new System.Windows.Forms.DataGridView();
             this.PibIngresar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtApoyo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
@@ -134,6 +135,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.txtApoyo);
             this.panel2.Controls.Add(this.PibCheckPass);
             this.panel2.Controls.Add(this.PibCheckUsu);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -229,6 +231,14 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // txtApoyo
+            // 
+            this.txtApoyo.Location = new System.Drawing.Point(28, 330);
+            this.txtApoyo.Name = "txtApoyo";
+            this.txtApoyo.Size = new System.Drawing.Size(100, 20);
+            this.txtApoyo.TabIndex = 19;
+            this.txtApoyo.Visible = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,5 +281,6 @@
         private System.Windows.Forms.PictureBox PibCheckPass;
         private System.Windows.Forms.PictureBox PibCheckUsu;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtApoyo;
     }
 }
