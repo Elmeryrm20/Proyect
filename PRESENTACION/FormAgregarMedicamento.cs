@@ -155,25 +155,38 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             //Validaciones();
-
             if (Validaciones() == true)
             {
-                byte[] img;
-
-                if (PibImagen.Image != null)
+                try
                 {
-                    MemoryStream ms = new MemoryStream();
-                    PibImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    img = ms.ToArray();
+                    string texto = textNombre.Text + " " + textGramaje.Text;
+                    string dt = consultas.D_Consulta_Dinamica(texto).Rows[0]["COMPOSICIÒN"].ToString();
+                    if (dt == texto)
+                    {
+                        MessageBox.Show("El Medicamento Ya existe", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
                 }
-                else img = null;
+                catch (Exception)
+                {
 
-                consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
-                int UltimoId = consultas.D_UltimoIdIngresado();
-                consultas.SP_Agregar_Detalle_Ingreso(UltimoId, int.Parse(textCantidad.Text), DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), Tra_DNI, DateTime.Now.ToString("yyyy-MM-dd"));
+                    byte[] img;
 
-                MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Limpiar();
+                    if (PibImagen.Image != null)
+                    {
+                        MemoryStream ms = new MemoryStream();
+                        PibImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        img = ms.ToArray();
+                    }
+                    else img = null;
+
+                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
+                    int UltimoId = consultas.D_UltimoIdIngresado();
+                    consultas.SP_Agregar_Detalle_Ingreso(UltimoId, int.Parse(textCantidad.Text), DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), Tra_DNI, DateTime.Now.ToString("yyyy-MM-dd"));
+
+                    MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Limpiar();
+
+                }
             }
         }
 
