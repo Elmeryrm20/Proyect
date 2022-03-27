@@ -512,5 +512,101 @@
   <ItemGroup>
     <None Include="Resources\FondoReestablecer02.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormOn02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormOn01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormOff01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormInfo02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormInfo01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormElimiarPass02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormElimiarPass01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarNuevoUsu02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarNuevoUsu01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormAgregarQuitar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormLimpiar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormLimpiar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormAgregarQuitar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormAgregarNuevo01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarSalida03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormSeleccionarMed01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormNuevoMedicamentos01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormNuevoMedicamentos03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormSalida03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormFiltrar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormNuevoMedicamentos04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarSalida04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarSalida02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarSalida01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormSeleccionarMed02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormNuevoMedicamentos02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormAgregarNuevo02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormFiltrar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMaximizar04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaMaximizar03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaRestaurar04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonVentanaRestaurar03.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
