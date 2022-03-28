@@ -30,13 +30,6 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.PnlCuerpo = new System.Windows.Forms.Panel();
-            this.PibContraer = new System.Windows.Forms.PictureBox();
-            this.PibMinimizar = new System.Windows.Forms.PictureBox();
-            this.PibCerrar = new System.Windows.Forms.PictureBox();
-            this.Pib_Maximizar = new System.Windows.Forms.PictureBox();
-            this.Pib_Restaurar = new System.Windows.Forms.PictureBox();
             this.Btn_Salida = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Btn_Acerca = new System.Windows.Forms.PictureBox();
@@ -47,13 +40,14 @@ namespace PRESENTACION
             this.Btn_Medicamentos = new System.Windows.Forms.PictureBox();
             this.Btn_Agregar = new System.Windows.Forms.PictureBox();
             this.Btn_Inicio = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PibContraer = new System.Windows.Forms.PictureBox();
+            this.PibMinimizar = new System.Windows.Forms.PictureBox();
+            this.PibCerrar = new System.Windows.Forms.PictureBox();
+            this.Pib_Maximizar = new System.Windows.Forms.PictureBox();
+            this.Pib_Restaurar = new System.Windows.Forms.PictureBox();
+            this.PnlCuerpo = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PibContraer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).BeginInit();
@@ -64,6 +58,12 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Medicamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PibContraer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -84,113 +84,6 @@ namespace PRESENTACION
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 534);
             this.panel2.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.PibContraer);
-            this.panel1.Controls.Add(this.PibMinimizar);
-            this.panel1.Controls.Add(this.PibCerrar);
-            this.panel1.Controls.Add(this.Pib_Maximizar);
-            this.panel1.Controls.Add(this.Pib_Restaurar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(160, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(721, 32);
-            this.panel1.TabIndex = 4;
-            this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // PnlCuerpo
-            // 
-            this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
-            this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlCuerpo.Location = new System.Drawing.Point(160, 32);
-            this.PnlCuerpo.Margin = new System.Windows.Forms.Padding(2);
-            this.PnlCuerpo.Name = "PnlCuerpo";
-            this.PnlCuerpo.Size = new System.Drawing.Size(721, 502);
-            this.PnlCuerpo.TabIndex = 5;
-            // 
-            // PibContraer
-            // 
-            this.PibContraer.BackColor = System.Drawing.Color.Transparent;
-            this.PibContraer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibContraer.Image = global::PRESENTACION.Properties.Resources.BotonVentanaContraer01;
-            this.PibContraer.Location = new System.Drawing.Point(21, 6);
-            this.PibContraer.Name = "PibContraer";
-            this.PibContraer.Size = new System.Drawing.Size(24, 24);
-            this.PibContraer.TabIndex = 4;
-            this.PibContraer.TabStop = false;
-            this.PibContraer.MouseEnter += new System.EventHandler(this.PibContraer_MouseEnter);
-            this.PibContraer.MouseLeave += new System.EventHandler(this.PibContraer_MouseLeave);
-            // 
-            // PibMinimizar
-            // 
-            this.PibMinimizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PibMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.PibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibMinimizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar05;
-            this.PibMinimizar.Location = new System.Drawing.Point(642, 5);
-            this.PibMinimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.PibMinimizar.Name = "PibMinimizar";
-            this.PibMinimizar.Size = new System.Drawing.Size(24, 24);
-            this.PibMinimizar.TabIndex = 2;
-            this.PibMinimizar.TabStop = false;
-            this.PibMinimizar.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.PibMinimizar.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
-            this.PibMinimizar.MouseLeave += new System.EventHandler(this.PibMinimizar_MouseLeave);
-            // 
-            // PibCerrar
-            // 
-            this.PibCerrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PibCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.PibCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibCerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar05;
-            this.PibCerrar.Location = new System.Drawing.Point(692, 5);
-            this.PibCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.PibCerrar.Name = "PibCerrar";
-            this.PibCerrar.Size = new System.Drawing.Size(24, 24);
-            this.PibCerrar.TabIndex = 1;
-            this.PibCerrar.TabStop = false;
-            this.PibCerrar.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.PibCerrar.MouseEnter += new System.EventHandler(this.PibCerrar_MouseEnter);
-            this.PibCerrar.MouseLeave += new System.EventHandler(this.PibCerrar_MouseLeave);
-            // 
-            // Pib_Maximizar
-            // 
-            this.Pib_Maximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Pib_Maximizar.BackColor = System.Drawing.Color.Transparent;
-            this.Pib_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Pib_Maximizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMaximizar03;
-            this.Pib_Maximizar.Location = new System.Drawing.Point(667, 5);
-            this.Pib_Maximizar.Margin = new System.Windows.Forms.Padding(2);
-            this.Pib_Maximizar.Name = "Pib_Maximizar";
-            this.Pib_Maximizar.Size = new System.Drawing.Size(24, 24);
-            this.Pib_Maximizar.TabIndex = 3;
-            this.Pib_Maximizar.TabStop = false;
-            this.Pib_Maximizar.Click += new System.EventHandler(this.pictureBox4_Click_1);
-            this.Pib_Maximizar.MouseEnter += new System.EventHandler(this.Pib_Maximizar_MouseEnter);
-            this.Pib_Maximizar.MouseLeave += new System.EventHandler(this.Pib_Maximizar_MouseLeave);
-            // 
-            // Pib_Restaurar
-            // 
-            this.Pib_Restaurar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Pib_Restaurar.BackColor = System.Drawing.Color.Transparent;
-            this.Pib_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Pib_Restaurar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaRestaurar03;
-            this.Pib_Restaurar.Location = new System.Drawing.Point(667, 5);
-            this.Pib_Restaurar.Margin = new System.Windows.Forms.Padding(2);
-            this.Pib_Restaurar.Name = "Pib_Restaurar";
-            this.Pib_Restaurar.Size = new System.Drawing.Size(24, 24);
-            this.Pib_Restaurar.TabIndex = 2;
-            this.Pib_Restaurar.TabStop = false;
-            this.Pib_Restaurar.Visible = false;
-            this.Pib_Restaurar.Click += new System.EventHandler(this.Btn_Normal_Click);
-            this.Pib_Restaurar.MouseEnter += new System.EventHandler(this.Pib_Restaurar_MouseEnter);
-            this.Pib_Restaurar.MouseLeave += new System.EventHandler(this.Pib_Restaurar_MouseLeave);
             // 
             // Btn_Salida
             // 
@@ -336,6 +229,113 @@ namespace PRESENTACION
             this.Btn_Inicio.TabStop = false;
             this.Btn_Inicio.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.PibContraer);
+            this.panel1.Controls.Add(this.PibMinimizar);
+            this.panel1.Controls.Add(this.PibCerrar);
+            this.panel1.Controls.Add(this.Pib_Maximizar);
+            this.panel1.Controls.Add(this.Pib_Restaurar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(160, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(721, 32);
+            this.panel1.TabIndex = 4;
+            this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // PibContraer
+            // 
+            this.PibContraer.BackColor = System.Drawing.Color.Transparent;
+            this.PibContraer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibContraer.Image = global::PRESENTACION.Properties.Resources.BotonVentanaContraer01;
+            this.PibContraer.Location = new System.Drawing.Point(21, 6);
+            this.PibContraer.Name = "PibContraer";
+            this.PibContraer.Size = new System.Drawing.Size(24, 24);
+            this.PibContraer.TabIndex = 4;
+            this.PibContraer.TabStop = false;
+            this.PibContraer.MouseEnter += new System.EventHandler(this.PibContraer_MouseEnter);
+            this.PibContraer.MouseLeave += new System.EventHandler(this.PibContraer_MouseLeave);
+            // 
+            // PibMinimizar
+            // 
+            this.PibMinimizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PibMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.PibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibMinimizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar05;
+            this.PibMinimizar.Location = new System.Drawing.Point(642, 5);
+            this.PibMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.PibMinimizar.Name = "PibMinimizar";
+            this.PibMinimizar.Size = new System.Drawing.Size(24, 24);
+            this.PibMinimizar.TabIndex = 2;
+            this.PibMinimizar.TabStop = false;
+            this.PibMinimizar.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.PibMinimizar.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
+            this.PibMinimizar.MouseLeave += new System.EventHandler(this.PibMinimizar_MouseLeave);
+            // 
+            // PibCerrar
+            // 
+            this.PibCerrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PibCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.PibCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibCerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar05;
+            this.PibCerrar.Location = new System.Drawing.Point(692, 5);
+            this.PibCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.PibCerrar.Name = "PibCerrar";
+            this.PibCerrar.Size = new System.Drawing.Size(24, 24);
+            this.PibCerrar.TabIndex = 1;
+            this.PibCerrar.TabStop = false;
+            this.PibCerrar.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PibCerrar.MouseEnter += new System.EventHandler(this.PibCerrar_MouseEnter);
+            this.PibCerrar.MouseLeave += new System.EventHandler(this.PibCerrar_MouseLeave);
+            // 
+            // Pib_Maximizar
+            // 
+            this.Pib_Maximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Pib_Maximizar.BackColor = System.Drawing.Color.Transparent;
+            this.Pib_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Pib_Maximizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMaximizar03;
+            this.Pib_Maximizar.Location = new System.Drawing.Point(667, 5);
+            this.Pib_Maximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Pib_Maximizar.Name = "Pib_Maximizar";
+            this.Pib_Maximizar.Size = new System.Drawing.Size(24, 24);
+            this.Pib_Maximizar.TabIndex = 3;
+            this.Pib_Maximizar.TabStop = false;
+            this.Pib_Maximizar.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            this.Pib_Maximizar.MouseEnter += new System.EventHandler(this.Pib_Maximizar_MouseEnter);
+            this.Pib_Maximizar.MouseLeave += new System.EventHandler(this.Pib_Maximizar_MouseLeave);
+            // 
+            // Pib_Restaurar
+            // 
+            this.Pib_Restaurar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Pib_Restaurar.BackColor = System.Drawing.Color.Transparent;
+            this.Pib_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Pib_Restaurar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaRestaurar03;
+            this.Pib_Restaurar.Location = new System.Drawing.Point(667, 5);
+            this.Pib_Restaurar.Margin = new System.Windows.Forms.Padding(2);
+            this.Pib_Restaurar.Name = "Pib_Restaurar";
+            this.Pib_Restaurar.Size = new System.Drawing.Size(24, 24);
+            this.Pib_Restaurar.TabIndex = 2;
+            this.Pib_Restaurar.TabStop = false;
+            this.Pib_Restaurar.Visible = false;
+            this.Pib_Restaurar.Click += new System.EventHandler(this.Btn_Normal_Click);
+            this.Pib_Restaurar.MouseEnter += new System.EventHandler(this.Pib_Restaurar_MouseEnter);
+            this.Pib_Restaurar.MouseLeave += new System.EventHandler(this.Pib_Restaurar_MouseLeave);
+            // 
+            // PnlCuerpo
+            // 
+            this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
+            this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlCuerpo.Location = new System.Drawing.Point(160, 32);
+            this.PnlCuerpo.Margin = new System.Windows.Forms.Padding(2);
+            this.PnlCuerpo.Name = "PnlCuerpo";
+            this.PnlCuerpo.Size = new System.Drawing.Size(721, 502);
+            this.PnlCuerpo.TabIndex = 5;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,12 +349,6 @@ namespace PRESENTACION
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PibContraer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).EndInit();
@@ -365,6 +359,12 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Medicamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PibContraer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).EndInit();
             this.ResumeLayout(false);
 
         }

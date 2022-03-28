@@ -291,7 +291,17 @@ namespace PRESENTACION
 
         private void cmbLab_MouseDown(object sender, MouseEventArgs e)
         {
-            ObtenerLaboratorio();
+            if (cmbLab.SelectedIndex == -1)
+            {
+                ObtenerLaboratorio();
+            }
+            else
+            {
+                int numero = Convert.ToInt32(cmbLab.SelectedIndex.ToString());
+                ObtenerLaboratorio();
+                cmbLab.SelectedIndex = numero;
+            }
+            
         }
 
         private void PibAgregarMedicamento_MouseEnter(object sender, EventArgs e)

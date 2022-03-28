@@ -34,6 +34,7 @@ namespace PRESENTACION
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.LblMuestra1 = new System.Windows.Forms.Label();
             this.gpbAgregar_Producto = new System.Windows.Forms.GroupBox();
+            this.PibAgregarAlmacen = new System.Windows.Forms.PictureBox();
             this.Pib_Agregar_Lab = new System.Windows.Forms.PictureBox();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.CmbPresentacion = new System.Windows.Forms.ComboBox();
@@ -55,13 +56,12 @@ namespace PRESENTACION
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.PibAgregarAlmacen = new System.Windows.Forms.PictureBox();
             this.gpbAgregar_Producto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Agregar_Lab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMedicamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarAlmacen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,6 +118,15 @@ namespace PRESENTACION
             this.gpbAgregar_Producto.Size = new System.Drawing.Size(554, 291);
             this.gpbAgregar_Producto.TabIndex = 29;
             this.gpbAgregar_Producto.TabStop = false;
+            // 
+            // PibAgregarAlmacen
+            // 
+            this.PibAgregarAlmacen.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
+            this.PibAgregarAlmacen.Location = new System.Drawing.Point(331, 239);
+            this.PibAgregarAlmacen.Name = "PibAgregarAlmacen";
+            this.PibAgregarAlmacen.Size = new System.Drawing.Size(24, 24);
+            this.PibAgregarAlmacen.TabIndex = 49;
+            this.PibAgregarAlmacen.TabStop = false;
             // 
             // Pib_Agregar_Lab
             // 
@@ -314,15 +323,6 @@ namespace PRESENTACION
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
-            // PibAgregarAlmacen
-            // 
-            this.PibAgregarAlmacen.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
-            this.PibAgregarAlmacen.Location = new System.Drawing.Point(331, 239);
-            this.PibAgregarAlmacen.Name = "PibAgregarAlmacen";
-            this.PibAgregarAlmacen.Size = new System.Drawing.Size(24, 24);
-            this.PibAgregarAlmacen.TabIndex = 49;
-            this.PibAgregarAlmacen.TabStop = false;
-            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,11 +340,11 @@ namespace PRESENTACION
             this.Resize += new System.EventHandler(this.FormAgregarMedicamento_Resize);
             this.gpbAgregar_Producto.ResumeLayout(false);
             this.gpbAgregar_Producto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarAlmacen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Agregar_Lab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMedicamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarAlmacen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
