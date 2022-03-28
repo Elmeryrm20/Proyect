@@ -263,11 +263,11 @@ namespace PRESENTACION
                 int x = (int)Math.Round(xval);
                 double yval = bounds.Height / 8;
                 int y = (int)Math.Round(yval);
-                gpbAgregar_Producto.Location = new Point(x, y);
+                //gpbAgregar_Producto.Location = new Point(x, y);
             }
             else
             {
-                gpbAgregar_Producto.Location = new Point(87, 100);
+                //gpbAgregar_Producto.Location = new Point(87, 100);
             }
         }
 
@@ -280,11 +280,11 @@ namespace PRESENTACION
                 int x = (int)Math.Round(xval);
                 double yval = bounds.Height / 8;
                 int y = (int)Math.Round(yval);
-                gpbAgregar_Producto.Location = new Point(x, y);
+                //gpbAgregar_Producto.Location = new Point(x, y);
             }
             else
             {
-                gpbAgregar_Producto.Location = new Point(87, 100);
+                //gpbAgregar_Producto.Location = new Point(87, 100);
             }
 
         }
@@ -306,12 +306,12 @@ namespace PRESENTACION
 
         private void PibAgregarMedicamento_MouseEnter(object sender, EventArgs e)
         {
-            PibAgregarMedicamento.Image = Properties.Resources.BotonFormNuevoMedicamentos04;
+            PibAgregarMedicamento.Image = Properties.Resources.BotonFormNuevoMedicamentos06;
         }
 
         private void PibAgregarMedicamento_MouseLeave(object sender, EventArgs e)
         {
-            PibAgregarMedicamento.Image = Properties.Resources.BotonFormNuevoMedicamentos03;
+            PibAgregarMedicamento.Image = Properties.Resources.BotonFormNuevoMedicamentos05;
         }
     }
 }

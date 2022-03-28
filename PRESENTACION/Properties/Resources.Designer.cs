@@ -93,6 +93,16 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonFormActualizar04 {
+            get {
+                object obj = ResourceManager.GetObject("BotonFormActualizar04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonFormAgregarNuevo01 {
             get {
                 object obj = ResourceManager.GetObject("BotonFormAgregarNuevo01", resourceCulture);
@@ -226,6 +236,26 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap BotonFormConfirmarNuevoUsu02 {
             get {
                 object obj = ResourceManager.GetObject("BotonFormConfirmarNuevoUsu02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonFormConfirmarNuevoUsu03 {
+            get {
+                object obj = ResourceManager.GetObject("BotonFormConfirmarNuevoUsu03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonFormConfirmarNuevoUsu04 {
+            get {
+                object obj = ResourceManager.GetObject("BotonFormConfirmarNuevoUsu04", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -513,6 +543,26 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonFormNuevoMedicamentos05 {
+            get {
+                object obj = ResourceManager.GetObject("BotonFormNuevoMedicamentos05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonFormNuevoMedicamentos06 {
+            get {
+                object obj = ResourceManager.GetObject("BotonFormNuevoMedicamentos06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonFormOff01 {
             get {
                 object obj = ResourceManager.GetObject("BotonFormOff01", resourceCulture);
@@ -586,6 +636,16 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap BotonFormSalida03 {
             get {
                 object obj = ResourceManager.GetObject("BotonFormSalida03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonFormSalida04 {
+            get {
+                object obj = ResourceManager.GetObject("BotonFormSalida04", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -963,6 +1023,36 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ComboBox02 {
+            get {
+                object obj = ResourceManager.GetObject("ComboBox02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ComboBox03 {
+            get {
+                object obj = ResourceManager.GetObject("ComboBox03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ComboBox04 {
+            get {
+                object obj = ResourceManager.GetObject("ComboBox04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FondoLogin01 {
             get {
                 object obj = ResourceManager.GetObject("FondoLogin01", resourceCulture);
@@ -1256,6 +1346,46 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap TextBox01 {
             get {
                 object obj = ResourceManager.GetObject("TextBox01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextBox02 {
+            get {
+                object obj = ResourceManager.GetObject("TextBox02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextBox03 {
+            get {
+                object obj = ResourceManager.GetObject("TextBox03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TimePicker01 {
+            get {
+                object obj = ResourceManager.GetObject("TimePicker01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TimePicker02 {
+            get {
+                object obj = ResourceManager.GetObject("TimePicker02", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

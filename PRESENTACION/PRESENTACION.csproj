@@ -617,5 +617,44 @@
   <ItemGroup>
     <None Include="Resources\BotonFormActualizar03.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormActualizar04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormSalida04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBox02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarNuevoUsu04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarNuevoUsu03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TimePicker01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBox03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextBox02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormNuevoMedicamentos06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormNuevoMedicamentos05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextBox03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBox04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TimePicker02.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
