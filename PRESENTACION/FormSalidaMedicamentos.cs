@@ -240,5 +240,48 @@ namespace PRESENTACION
         {
             DesignDataGridView();
         }
+
+        private void TxtNumDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToChar("-") == e.KeyChar)
+            {
+                e.Handled = false;
+            }
+            else if(char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace PRESENTACION
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             mostrarUsuario();
+            DesignDataGridView();
 
         }
 
@@ -140,6 +141,22 @@ namespace PRESENTACION
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void DesignDataGridView()
+        {
+            dgb_Usuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgb_Usuario.Columns[0].Visible = false;
+            //dgb_Medicamentos.Columns[0].Width = 25;
+            //dgb_Medicamentos.Columns[0].MinimumWidth = 25;
+            //dgb_Medicamentos.Columns[1].Width = 250;
+            dgb_Usuario.ColumnHeadersHeight = 35;
+            dgb_Usuario.Columns[0].MinimumWidth = 90;
+            dgb_Usuario.Columns[1].MinimumWidth = 150;
+            dgb_Usuario.Columns[3].MinimumWidth = 90;
+        }
+        private void FormUsuarios_Load(object sender, EventArgs e)
+        {
+            DesignDataGridView();
         }
     }
 }
