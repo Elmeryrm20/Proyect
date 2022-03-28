@@ -124,6 +124,9 @@
   <data name="BotonFormActualizar02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormActualizar02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonFormActualizar03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormActualizar03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BotonFormAgregarNuevo01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormAgregarNuevo01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -382,6 +385,9 @@
   <data name="BotonVentanaRestaurar04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonVentanaRestaurar04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ComboBox01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ComboBox01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FondoLogin01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoLogin01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -468,5 +474,8 @@
   </data>
   <data name="MenuUsuarios02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuUsuarios02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TextBox01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextBox01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

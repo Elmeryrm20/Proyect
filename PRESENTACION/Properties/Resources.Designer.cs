@@ -83,6 +83,16 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonFormActualizar03 {
+            get {
+                object obj = ResourceManager.GetObject("BotonFormActualizar03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonFormAgregarNuevo01 {
             get {
                 object obj = ResourceManager.GetObject("BotonFormAgregarNuevo01", resourceCulture);
@@ -943,6 +953,16 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ComboBox01 {
+            get {
+                object obj = ResourceManager.GetObject("ComboBox01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FondoLogin01 {
             get {
                 object obj = ResourceManager.GetObject("FondoLogin01", resourceCulture);
@@ -1226,6 +1246,16 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap MenuUsuarios02 {
             get {
                 object obj = ResourceManager.GetObject("MenuUsuarios02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextBox01 {
+            get {
+                object obj = ResourceManager.GetObject("TextBox01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

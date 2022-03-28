@@ -91,7 +91,7 @@ namespace PRESENTACION
             // btn_cerrarsesion
             // 
             this.btn_cerrarsesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_cerrarsesion.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_cerrarsesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
             this.btn_cerrarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cerrarsesion.Location = new System.Drawing.Point(0, 511);
             this.btn_cerrarsesion.Margin = new System.Windows.Forms.Padding(2);

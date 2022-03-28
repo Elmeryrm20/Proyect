@@ -49,10 +49,13 @@ namespace PRESENTACION
         void Actualizar()
         {
             Rellenartabla();
-            txb_Buscar.Clear();
+            txb_Buscar.Text = "Buscar Medicamento";
             valor_ID = 1;
             cmbTipo.Text = "Seleccione Tipo";
             cmb_Almacen.Text = "Seleccione Caja";
+            LblIndice.Visible = false;
+            txb_Buscar.SelectAll();
+            txb_Buscar.Focus();
         }
         #endregion
 
@@ -70,10 +73,11 @@ namespace PRESENTACION
         //Búsqueda Dinámica
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text);
-            dgb_Medicamentos.DataSource = dt;
+            PibActualizar.Image = Properties.Resources.BotonFormActualizar03;
             cmbTipo.Text = "Seleccione Tipo";
             cmb_Almacen.Text = "Seleccione Caja";
+            DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text);
+            dgb_Medicamentos.DataSource = dt;
         }
 
         //Botón Actualizar
@@ -116,8 +120,10 @@ namespace PRESENTACION
                 {
                     label4.Text = "NADA";
                 }
-                LblResultados.Text = "Se encontró " + dgb_Medicamentos.RowCount.ToString() + " resultados";
-                txb_Buscar.Clear();
+                LblResultados.Visible = true;
+                LblResultados.Text = "Se encontró " + "\n" + dgb_Medicamentos.RowCount.ToString() + " resultados";
+                txb_Buscar.Text = "Buscar Medicamento";
+                PibActualizar.Image = Properties.Resources.BotonFormActualizar03;
             }
             catch (Exception)
             {
@@ -239,13 +245,13 @@ namespace PRESENTACION
 
         private void Pib_Filtrar_MouseEnter(object sender, EventArgs e)
         {
-            Pib_Filtrar.Image = Properties.Resources.BotonFormBusqueda02;
+            Pib_Filtrar.Image = Properties.Resources.BotonFormFiltrar02;
 
         }
 
         private void Pib_Filtrar_MouseLeave(object sender, EventArgs e)
         {
-            Pib_Filtrar.Image = Properties.Resources.BotonFormBusqueda01;
+            Pib_Filtrar.Image = Properties.Resources.BotonFormFiltrar01;
 
         }
 
@@ -271,6 +277,40 @@ namespace PRESENTACION
         private void cmb_Almacen_MouseDown(object sender, MouseEventArgs e)
         {
             Almacen_Filtrar();
+        }
+
+        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cmb_Almacen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbTipo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbTipo_Enter(object sender, EventArgs e)
+        {
+            //cmbTipo.DroppedDown = true;
+
+        }
+
+        private void cmb_Almacen_Enter(object sender, EventArgs e)
+        {
+            //cmb_Almacen.DroppedDown = true;
+
+        }
+
+        private void txb_Buscar_Click(object sender, EventArgs e)
+        {
+            if (txb_Buscar.Text == "Buscar Medicamento")
+            {
+                txb_Buscar.Text = "";
+            }
         }
     }
 }

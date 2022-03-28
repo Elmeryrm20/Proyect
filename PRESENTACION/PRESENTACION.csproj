@@ -608,5 +608,14 @@
   <ItemGroup>
     <None Include="Resources\BotonVentanaRestaurar03.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextBox01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBox01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormActualizar03.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
