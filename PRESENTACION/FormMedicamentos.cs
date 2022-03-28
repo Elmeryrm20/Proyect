@@ -261,5 +261,16 @@ namespace PRESENTACION
             FormDetallesMedicamento frm1 = new FormDetallesMedicamento(valor_ID);
             frm1.ShowDialog();
         }
+
+        private void cmbTipo_MouseDown(object sender, MouseEventArgs e)
+        {
+            Elementos_Filtrar();
+
+        }
+
+        private void cmb_Almacen_MouseDown(object sender, MouseEventArgs e)
+        {
+            Almacen_Filtrar();
+        }
     }
 }
