@@ -127,11 +127,11 @@ namespace PRESENTACION
             //2 Tipo
             //3 Nombre
 
-            if (txtusuario.Text != ud.DNI)
+            if (txtusuario.Text != ud.DNI) //Es diferente al DNI en el Caché
             {
                 DataTable dt = du.D_Login(txtusuario.Text);
 
-                if (dt.Rows.Count >= 1)
+                if (dt.Rows.Count >= 1) //Si encuentra el usuario, guarda sus datos en el caché
                 {
                     ud.DNI = dt.Rows[0][0].ToString();
                     ud.Pass = dt.Rows[0][1].ToString();
@@ -144,7 +144,6 @@ namespace PRESENTACION
                 {
                     //MessageBox.Show("Usuario Incorrecto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     PibCheckUsu.Visible = true;
-                    //PibCheckUsu.BackColor = Color.Red;
                     PibCheckUsu.Image = Properties.Resources.BotonValidarCheck01;
                     PibIngresar.Image = Properties.Resources.BotonIngresar01;
 
@@ -162,7 +161,10 @@ namespace PRESENTACION
             }
 
         }
-
+        public void ReestablecerPass(string NuevaPass)
+        {
+            ud.Pass = NuevaPass;
+        }
         //Boton principal
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -307,12 +309,11 @@ namespace PRESENTACION
         {
             //ActivarTextbox = true;
             PibCheckUsu.Visible = false;
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                ValidacionTextbox();
-            }
 
-
+            if ((char)Keys.Enter == e.KeyChar) ValidacionTextbox();
+            else if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
+            else if (char.IsControl(e.KeyChar)) e.Handled = false;
+            else e.Handled = true;
         }
 
         private void txtcontraseña_KeyPress(object sender, KeyPressEventArgs e)
@@ -320,12 +321,10 @@ namespace PRESENTACION
 
             PibCheckPass.Visible = false;
 
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                ValidacionTextbox();
-
-            }
-
+            if ((char)Keys.Enter == e.KeyChar) ValidacionTextbox();
+            else if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
+            else if (char.IsControl(e.KeyChar)) e.Handled = false;
+            else e.Handled = true;
         }
 
         #endregion

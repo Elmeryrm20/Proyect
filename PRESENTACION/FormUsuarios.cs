@@ -18,9 +18,10 @@ namespace PRESENTACION
             InitializeComponent();
             this.DNI = DNI;
             mostrarUsuario();
+            NOMBRE = "\"" + dgb_Usuario.Rows[0].Cells[1].Value.ToString() + "\"";
         }
         string DNI;
-        string valor_ID = "";
+        string valor_ID = "1";
         string NOMBRE = "";
         public void mostrarUsuario()
         {
@@ -71,11 +72,11 @@ namespace PRESENTACION
         {
             if (valor_ID != "")
             {
-                DialogResult result = MessageBox.Show("Seguro que desea restablecer la contraseña de " + NOMBRE, "Excelente!", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Seguro que desea Reestablecer la contraseña de " + NOMBRE, "Excelente!", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     consultas.SP_Restablecer_C(valor_ID);
-                    MessageBox.Show("Se a Restablecido la contraseña", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Se a Reestablecido la contraseña de "+ NOMBRE, "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 else
                 {
