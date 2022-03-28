@@ -174,12 +174,13 @@ namespace PRESENTACION
         private void label2_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+            
             FormIngresarNewContraseña frm = new FormIngresarNewContraseña();
 
             frm.Show();
 
             AddOwnedForm(frm);
+            this.Hide();
         }
         #endregion
 
