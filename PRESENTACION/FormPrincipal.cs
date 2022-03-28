@@ -327,7 +327,13 @@ namespace PRESENTACION
             AparecerFormulario<FormUsuarios>();
         }
 
-        public void EnviarEgreso(int Codigo,string MedNombre, int cantidad)
+        public void ResaltarBotonEgreso()
+        {
+            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
+            FrmMedicamentos.PibSalida.Image = Properties.Resources.BotonFormSalida04;
+        }
+
+        public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
         {
             FormSalidaMedicamentos FrmSalida = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();
 
@@ -338,6 +344,9 @@ namespace PRESENTACION
             FrmSalida.DgvSalida.Rows[n].Cells[0].Value = Codigo.ToString();
             FrmSalida.DgvSalida.Rows[n].Cells[1].Value = MedNombre;
             FrmSalida.DgvSalida.Rows[n].Cells[2].Value = cantidad.ToString();
+            FrmSalida.DgvSalida.Rows[n].Cells[3].Value = Almacen;
+            FrmSalida.DgvSalida.Rows[n].Cells[4].Value = Tipo;
+            FrmSalida.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida05;
 
             FrmSalida.Show(); //Agregado
             FrmSalida.BringToFront(); //Agregado

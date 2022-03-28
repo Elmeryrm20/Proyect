@@ -26,7 +26,7 @@ namespace PRESENTACION
         private void PibAgregarMed_Click(object sender, System.EventArgs e)
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
-
+            Principal.ResaltarBotonEgreso();
             Principal.SeleccionarBoton(2);
             Principal.AparecerFormulario<FormMedicamentos>();
         }
@@ -156,6 +156,8 @@ namespace PRESENTACION
             CmbTipoDNI.DisplayMember = "Tid_Descripcion";
             CmbTipoDNI.DataSource = consultas.D_TipoDNI();
 
+            DesignDataGridView();
+
         }
 
         private void PibAgregarMed_MouseEnter(object sender, EventArgs e)
@@ -216,6 +218,27 @@ namespace PRESENTACION
         {
             PibGuardarImprimir.Image = Properties.Resources.BotonFormImprimir01;
 
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DesignDataGridView()
+        {
+            DgvSalida.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvSalida.Columns[0].Visible = false;
+            //dgb_Medicamentos.Columns[0].Width = 25;
+            //dgb_Medicamentos.Columns[0].MinimumWidth = 25;
+            //dgb_Medicamentos.Columns[1].Width = 250;
+            DgvSalida.ColumnHeadersHeight = 35;
+            DgvSalida.Columns[1].MinimumWidth = 250;
+            DgvSalida.Columns[3].MinimumWidth = 90;
+        }
+
+        private void PibLimpiar_Click(object sender, EventArgs e)
+        {
+            DesignDataGridView();
         }
     }
 }

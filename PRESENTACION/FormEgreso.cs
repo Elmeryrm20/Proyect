@@ -12,11 +12,13 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormEgreso(int Med_Codigo, string MedNombre, string DNI)
+        public FormEgreso(int Med_Codigo, string MedNombre, string DNI, string Almacen, string Tipo)
         {
             InitializeComponent();
             this.Med_Codigo = Med_Codigo;
             this.MedNombre = MedNombre;
+            this.Almacen = Almacen;
+            this.Tipo = Tipo;
             this.DNI = DNI;
             ObtenerIngresoEgreso();
         }
@@ -25,6 +27,8 @@ namespace PRESENTACION
 
         int Med_Codigo;
         string MedNombre;
+        string Almacen;
+        string Tipo;
         readonly string DNI;
 
         private void btnSerrar_Click(object sender, EventArgs e)
@@ -53,10 +57,6 @@ namespace PRESENTACION
         {
             if (txtCantidad.Text.Length != 0)
             {
-
-
-
-
                 int Existencias = Ingreso - Egreso;
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
                 if (cantidad <= Existencias)
@@ -64,7 +64,8 @@ namespace PRESENTACION
                     Ingreso = 0;
                     Egreso = 0;
                     FormMedicamentos FrmMedicamentos = Owner as FormMedicamentos;
-                    FrmMedicamentos.EnviarEgreso(Med_Codigo, MedNombre, int.Parse(txtCantidad.Text));
+                    FrmMedicamentos.EnviarEgreso(Med_Codigo, MedNombre, int.Parse(txtCantidad.Text),Almacen,Tipo);
+
                     Close();
 
                     //    //consultas.SP_Agregar_Egreso_Medicamento(Med_Codigo, cantidad);

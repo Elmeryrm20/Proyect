@@ -208,16 +208,22 @@ namespace PRESENTACION
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             string MedNombre = "";
+            string Almacen = "";
+            string Tipo = "";
             MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
-            FormEgreso frm3 = new FormEgreso(valor_ID, MedNombre, DNI);
+            Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
+            Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
+            FormEgreso frm3 = new FormEgreso(valor_ID, MedNombre, DNI, Almacen, Tipo);
             AddOwnedForm(frm3);
             frm3.ShowDialog();
         }
 
-        public void EnviarEgreso(int codigo, string MedNombre, int cantidad)
+        public void EnviarEgreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
-            Principal.EnviarEgreso(codigo, MedNombre, cantidad);
+            Principal.EnviarEgreso(codigo, MedNombre, cantidad, Almacen, Tipo);
+            Principal.SeleccionarBoton(9);
+            Principal.AparecerFormulario<FormSalidaMedicamentos>();
 
         }
 

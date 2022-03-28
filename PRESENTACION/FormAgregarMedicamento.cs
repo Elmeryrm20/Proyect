@@ -71,9 +71,11 @@ namespace PRESENTACION
         private bool Validaciones()
         {
             bool valor = true;
-            if (textNombre.Text == "")
+            if (textNombre.Text == "" || textNombre.Text == "Nombre")
             {
                 errorProvider1.SetError(textNombre, "Por favor, ingrese un nombre");
+                textNombre.SelectAll();
+                textNombre.Focus();
                 valor = false;
             }
             else
@@ -81,7 +83,7 @@ namespace PRESENTACION
                 errorProvider1.SetError(textNombre, "");
             }
 
-            if (textCantidad.Text == "")
+            if (textCantidad.Text == "" || textCantidad.Text == "Cantidad")
             {
                 errorProvider1.SetError(textCantidad, "Por favor, ingrese una cantidad");
                 valor = false;
@@ -111,7 +113,7 @@ namespace PRESENTACION
                 errorProvider1.SetError(dtFecha_Vencimiento, "");
             }
 
-            if (textGramaje.Text == "")
+            if (textGramaje.Text == "" || textGramaje.Text == "Gramaje")
             {
                 errorProvider1.SetError(textGramaje, "Por favor, ingrese un valor para gramaje.");
                 valor = false;
@@ -192,15 +194,15 @@ namespace PRESENTACION
 
         private void Limpiar()
         {
-            textNombre.Text = "";
-            textCantidad.Text = "";
-            textGramaje.Text = "";
-            cmbCaja.Text = "Seleccione Caja";
-            cmbLab.Text = "Seleccione Laboratorio";
-            cmbTipo.Text = "Seleccione Tipo";
-            CmbPresentacion.Text = "Seleccione Presentacion";
+            textNombre.Text = "Nombre";
+            textCantidad.Text = "Cantidad";
+            textGramaje.Text = "Gramaje";
+            cmbCaja.Text = "Seleccionar";
+            cmbLab.Text = "Seleccionar";
+            cmbTipo.Text = "Seleccionar";
+            CmbPresentacion.Text = "Seleccionar";
             dtFecha_Vencimiento.Value = DateTime.Now;
-            PibImagen.Image = null;
+            PibImagen.Image = Properties.Resources.Imagen01;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -312,6 +314,71 @@ namespace PRESENTACION
         private void PibAgregarMedicamento_MouseLeave(object sender, EventArgs e)
         {
             PibAgregarMedicamento.Image = Properties.Resources.BotonFormNuevoMedicamentos05;
+        }
+
+        private void textNombre_Click(object sender, EventArgs e)
+        {
+            if (textNombre.Text == "Nombre")
+            {
+                textNombre.Text = "";
+            }
+        }
+
+        private void textCantidad_Click(object sender, EventArgs e)
+        {
+            if (textCantidad.Text == "Cantidad")
+            {
+                textCantidad.Text = "";
+            }
+        }
+
+        private void textGramaje_Click(object sender, EventArgs e)
+        {
+            if (textGramaje.Text == "Gramaje")
+            {
+                textGramaje.Text = "";
+            }
+        }
+
+        private void textNombre_Leave(object sender, EventArgs e)
+        {
+            if (textNombre.Text == "")
+            {
+                textNombre.Text = "Nombre";
+            }
+        }
+
+        private void textCantidad_Leave(object sender, EventArgs e)
+        {
+            if (textCantidad.Text == "")
+            {
+                textCantidad.Text = "Cantidad";
+            }
+        }
+
+        private void textGramaje_Leave(object sender, EventArgs e)
+        {
+            if (textGramaje.Text == "")
+            {
+                textGramaje.Text = "Gramaje";
+            }
+        }
+
+        private void textCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }
