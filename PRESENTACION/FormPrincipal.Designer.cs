@@ -30,6 +30,7 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_cerrarsesion = new System.Windows.Forms.PictureBox();
             this.Btn_Salida = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Btn_Acerca = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,7 @@ namespace PRESENTACION
             this.Pib_Restaurar = new System.Windows.Forms.PictureBox();
             this.PnlCuerpo = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrarsesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).BeginInit();
@@ -69,6 +71,7 @@ namespace PRESENTACION
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.panel2.Controls.Add(this.btn_cerrarsesion);
             this.panel2.Controls.Add(this.Btn_Salida);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.Btn_Acerca);
@@ -84,6 +87,19 @@ namespace PRESENTACION
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 534);
             this.panel2.TabIndex = 1;
+            // 
+            // btn_cerrarsesion
+            // 
+            this.btn_cerrarsesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_cerrarsesion.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_cerrarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cerrarsesion.Location = new System.Drawing.Point(0, 511);
+            this.btn_cerrarsesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cerrarsesion.Name = "btn_cerrarsesion";
+            this.btn_cerrarsesion.Size = new System.Drawing.Size(160, 23);
+            this.btn_cerrarsesion.TabIndex = 10;
+            this.btn_cerrarsesion.TabStop = false;
+            this.btn_cerrarsesion.Click += new System.EventHandler(this.btn_cerrarsesion_Click);
             // 
             // Btn_Salida
             // 
@@ -349,6 +365,7 @@ namespace PRESENTACION
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrarsesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Acerca)).EndInit();
@@ -388,5 +405,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox Btn_Salida;
         public System.Windows.Forms.Panel PnlCuerpo;
+        private System.Windows.Forms.PictureBox btn_cerrarsesion;
     }
 }

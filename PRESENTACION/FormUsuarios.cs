@@ -21,7 +21,7 @@ namespace PRESENTACION
             NOMBRE = "\"" + dgb_Usuario.Rows[0].Cells[1].Value.ToString() + "\"";
         }
         string DNI;
-        string valor_ID = "1";
+        string valor_ID = "";
         string NOMBRE = "";
         public void mostrarUsuario()
         {
@@ -129,6 +129,16 @@ namespace PRESENTACION
         private void btn_Restablecer_MouseLeave(object sender, EventArgs e)
         {
             btn_Restablecer.Image = Properties.Resources.BotonFormElimiarPass01;
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
