@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DATOS;
+using System;
 using System.Windows.Forms;
-using DATOS;
 
 
 namespace PRESENTACION
@@ -82,7 +75,7 @@ namespace PRESENTACION
             }
         }
 
-        
+
 
         private bool ValidarDoc()
         {
@@ -107,7 +100,7 @@ namespace PRESENTACION
                 doc = false;
                 errorProvider1.SetError(cmb_Cargo, "Datos correctos");
             }
-            
+
             if (cmbTipoDocumento.Text == "Seleccione Documento ..")
             {
                 doc = false;
@@ -145,6 +138,25 @@ namespace PRESENTACION
         {
             PibAgregarUsuario.Image = Properties.Resources.BotonFormConfirmarNuevoUsu01;
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
+            else if (char.IsControl(e.KeyChar)) e.Handled = false;
+            else e.Handled = true;
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==Convert.ToChar("@"))e.Handled = false;
+            else if (e.KeyChar == Convert.ToChar(".")) e.Handled = false;
+            else if (e.KeyChar == Convert.ToChar("_")) e.Handled = false;
+            else if (e.KeyChar == Convert.ToChar("-")) e.Handled = false;
+            else if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
+            else if (char.IsControl(e.KeyChar)) e.Handled = false;
+            else e.Handled = true;
         }
     }
 }
