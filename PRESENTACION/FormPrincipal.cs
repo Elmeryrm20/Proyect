@@ -23,6 +23,8 @@ namespace PRESENTACION
             if (Tipo == "1") VistaTrabajador(); //Método de Vista de Formularios para Trabajador
             else CargarFormularios(9); //Rango Admin de Formularios
 
+            Btn_Acerca.Visible = false;
+            Btn_Config.Visible = false;
             SeleccionarBoton(1);
 
             AparecerFormulario<FormInicio>();

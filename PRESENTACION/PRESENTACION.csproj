@@ -680,5 +680,26 @@
   <ItemGroup>
     <None Include="Resources\TextBox06.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IndicadorTotalInventario01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IndicadorNumEgresos01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IndicadorNumUsuarios01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IndicadorNumMedicamentos01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salud03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salud02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salud01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1143,6 +1143,46 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IndicadorNumEgresos01 {
+            get {
+                object obj = ResourceManager.GetObject("IndicadorNumEgresos01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IndicadorNumMedicamentos01 {
+            get {
+                object obj = ResourceManager.GetObject("IndicadorNumMedicamentos01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IndicadorNumUsuarios01 {
+            get {
+                object obj = ResourceManager.GetObject("IndicadorNumUsuarios01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IndicadorTotalInventario01 {
+            get {
+                object obj = ResourceManager.GetObject("IndicadorTotalInventario01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo01 {
             get {
                 object obj = ResourceManager.GetObject("Logo01", resourceCulture);
@@ -1386,6 +1426,36 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap MenuUsuarios02 {
             get {
                 object obj = ResourceManager.GetObject("MenuUsuarios02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Salud01 {
+            get {
+                object obj = ResourceManager.GetObject("Salud01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Salud02 {
+            get {
+                object obj = ResourceManager.GetObject("Salud02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Salud03 {
+            get {
+                object obj = ResourceManager.GetObject("Salud03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
