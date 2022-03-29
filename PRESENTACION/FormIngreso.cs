@@ -37,7 +37,7 @@ namespace PRESENTACION
         }
         void Ingreso()
         {
-            lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
+            lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÓN"].ToString();
         }
 
         //Botone de Ingresar
