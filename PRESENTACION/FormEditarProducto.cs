@@ -99,11 +99,11 @@ namespace PRESENTACION
 
             try
             {
-                txtNombre.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÒN"].ToString();
-                txt_fecha.Text = ((DateTime)consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["FEC.VENCIMIENTO"]).ToString("D");
+                txtNombre.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
+                txt_fecha.Text = ((DateTime)consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["FEC. VENCIMIENTO"]).ToString("D");
                 cmbTipo.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["TIPO"].ToString();
-                cmbCaja.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["ALMACEN"].ToString();
-                CmbPresentacion.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["PRESENTACIÒN"].ToString();
+                cmbCaja.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["ALMACÉN"].ToString();
+                CmbPresentacion.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["PRESENTACIÓN"].ToString();
                 cmbLab.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["LABORATORIO"].ToString();
                 try
                 {
@@ -116,7 +116,7 @@ namespace PRESENTACION
                 }
                 catch (Exception)
                 {
-                    string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÒN"].ToString();
+                    string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
                     string str = Convert.ToString(Directory.GetCurrentDirectory());
                     str = str.Replace(@"\bin\Debug", "");
                     ptb_Imagen.Image = Image.FromFile(str + @"\Resources\Error.jpg");
@@ -127,7 +127,7 @@ namespace PRESENTACION
             }
             catch (Exception)
             {
-                MessageBox.Show("Selecione un producto Valido", "erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selecione un producto Válido.", "error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
