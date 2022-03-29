@@ -43,6 +43,7 @@ namespace PRESENTACION
                 DgvHistorialIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 txt_Texto.Clear();
                 txt_Error.Visible = false;
+                DesignDataGridView();
             }
             else
             {
@@ -54,6 +55,26 @@ namespace PRESENTACION
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
             DgvHistorialIngreso.DataSource = du.Sp_Filtro_Dinamico_HI(txt_Texto.Text);
+        }
+        private void DesignDataGridView()
+        {
+            DgvHistorialIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvHistorialIngreso.Columns[0].Visible = false;
+            DgvHistorialIngreso.Columns[2].Width = 40;
+            //dgb_Medicamentos.Columns[0].MinimumWidth = 25;
+            //dgb_Medicamentos.Columns[1].Width = 250;
+            DgvHistorialIngreso.ColumnHeadersHeight = 35;
+            DgvHistorialIngreso.Columns[0].MinimumWidth = 90;
+            DgvHistorialIngreso.Columns[1].MinimumWidth = 150;
+            DgvHistorialIngreso.Columns[2].MinimumWidth = 40;
+            DgvHistorialIngreso.Columns[3].MinimumWidth = 80;
+            DgvHistorialIngreso.Columns[5].MinimumWidth = 80;
+            DgvHistorialIngreso.Columns[2].HeaderText = "CANT.";
+            DgvHistorialIngreso.RowHeadersWidth = 35;
+        }
+        private void FormControldeEntradas_Load(object sender, EventArgs e)
+        {
+            DesignDataGridView();
         }
     }
 }

@@ -56,5 +56,25 @@ namespace PRESENTACION
             DgvHistorialEgreso.DataSource = du.Sp_Filtro_Dinamico_HE(txt_Texto.Text);
 
         }
+        private void DesignDataGridView()
+        {
+            DgvHistorialEgreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvHistorialEgreso.Columns[0].Visible = false;
+            DgvHistorialEgreso.Columns[2].Width = 40;
+            DgvHistorialEgreso.Columns[5].Width = 40;
+            DgvHistorialEgreso.ColumnHeadersHeight = 35;
+            DgvHistorialEgreso.Columns[0].MinimumWidth = 90;
+            DgvHistorialEgreso.Columns[1].MinimumWidth = 150;
+            DgvHistorialEgreso.Columns[2].MinimumWidth = 40;
+            DgvHistorialEgreso.Columns[3].MinimumWidth = 80;
+            DgvHistorialEgreso.Columns[4].MinimumWidth = 80;
+            DgvHistorialEgreso.Columns[5].MinimumWidth = 40;
+            DgvHistorialEgreso.Columns[2].HeaderText = "CANT.";
+            DgvHistorialEgreso.RowHeadersWidth = 35;
+        }
+        private void FormControldeSalidas_Load(object sender, EventArgs e)
+        {
+            DesignDataGridView();
+        }
     }
 }

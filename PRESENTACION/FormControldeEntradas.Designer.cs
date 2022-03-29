@@ -29,90 +29,82 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgb_Control_Entradas = new System.Windows.Forms.DataGridView();
-            this.DgvHistorialIngreso = new System.Windows.Forms.DataGridView();
-            this.PibActualizar = new System.Windows.Forms.PictureBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.txt_Texto = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_Error = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dtp_FechaF = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaI = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_Error = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Control_Entradas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialIngreso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PibActualizar = new System.Windows.Forms.PictureBox();
+            this.DgvHistorialIngreso = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialIngreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgb_Control_Entradas
-            // 
-            this.dgb_Control_Entradas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.dgb_Control_Entradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgb_Control_Entradas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgb_Control_Entradas.Location = new System.Drawing.Point(0, 345);
-            this.dgb_Control_Entradas.Name = "dgb_Control_Entradas";
-            this.dgb_Control_Entradas.Size = new System.Drawing.Size(707, 60);
-            this.dgb_Control_Entradas.TabIndex = 0;
-            // 
-            // DgvHistorialIngreso
-            // 
-            this.DgvHistorialIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvHistorialIngreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvHistorialIngreso.Location = new System.Drawing.Point(0, 0);
-            this.DgvHistorialIngreso.Name = "DgvHistorialIngreso";
-            this.DgvHistorialIngreso.Size = new System.Drawing.Size(557, 295);
-            this.DgvHistorialIngreso.TabIndex = 1;
-            // 
-            // PibActualizar
-            // 
-            this.PibActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
-            this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibActualizar.Location = new System.Drawing.Point(20, 353);
-            this.PibActualizar.Name = "PibActualizar";
-            this.PibActualizar.Size = new System.Drawing.Size(110, 40);
-            this.PibActualizar.TabIndex = 3;
-            this.PibActualizar.TabStop = false;
-            this.PibActualizar.Click += new System.EventHandler(this.PibActualizar_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.panel2.Controls.Add(this.txt_Texto);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(707, 50);
+            this.panel2.Size = new System.Drawing.Size(707, 72);
             this.panel2.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.label4.Location = new System.Drawing.Point(42, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(248, 15);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "BUSCAR POR COMPOSICION O TRABAJADOR ";
             // 
             // txt_Texto
             // 
-            this.txt_Texto.Location = new System.Drawing.Point(20, 24);
+            this.txt_Texto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Texto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_Texto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.txt_Texto.Location = new System.Drawing.Point(55, 32);
             this.txt_Texto.Name = "txt_Texto";
-            this.txt_Texto.Size = new System.Drawing.Size(305, 20);
+            this.txt_Texto.Size = new System.Drawing.Size(253, 16);
             this.txt_Texto.TabIndex = 0;
             this.txt_Texto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Location = new System.Drawing.Point(0, 72);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(20, 295);
+            this.panel1.Size = new System.Drawing.Size(20, 275);
             this.panel1.TabIndex = 6;
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.panel3.Controls.Add(this.txt_Error);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -121,20 +113,30 @@ namespace PRESENTACION
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(577, 50);
+            this.panel3.Location = new System.Drawing.Point(577, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(130, 295);
+            this.panel3.Size = new System.Drawing.Size(130, 275);
             this.panel3.TabIndex = 7;
             // 
-            // pictureBox1
+            // txt_Error
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 132);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 24);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.txt_Error.AutoSize = true;
+            this.txt_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_Error.Location = new System.Drawing.Point(6, 159);
+            this.txt_Error.Name = "txt_Error";
+            this.txt_Error.Size = new System.Drawing.Size(103, 13);
+            this.txt_Error.TabIndex = 8;
+            this.txt_Error.Text = "Ingrese rango valido";
+            this.txt_Error.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Hasta";
             // 
             // dtp_FechaF
             // 
@@ -172,73 +174,127 @@ namespace PRESENTACION
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.DgvHistorialIngreso);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(20, 50);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.panel4.Controls.Add(this.PibActualizar);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 347);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(557, 295);
+            this.panel4.Size = new System.Drawing.Size(707, 58);
             this.panel4.TabIndex = 8;
             // 
-            // label3
+            // pictureBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Hasta";
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 24);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label4
+            // PibActualizar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "BUSCAR POR COMPOSICION O TRABAJADOR ";
+            this.PibActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
+            this.PibActualizar.Location = new System.Drawing.Point(45, 6);
+            this.PibActualizar.Name = "PibActualizar";
+            this.PibActualizar.Size = new System.Drawing.Size(110, 40);
+            this.PibActualizar.TabIndex = 3;
+            this.PibActualizar.TabStop = false;
+            this.PibActualizar.Click += new System.EventHandler(this.PibActualizar_Click);
             // 
-            // txt_Error
+            // DgvHistorialIngreso
             // 
-            this.txt_Error.AutoSize = true;
-            this.txt_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_Error.Location = new System.Drawing.Point(6, 159);
-            this.txt_Error.Name = "txt_Error";
-            this.txt_Error.Size = new System.Drawing.Size(103, 13);
-            this.txt_Error.TabIndex = 8;
-            this.txt_Error.Text = "Ingrese rango valido";
-            this.txt_Error.Visible = false;
+            this.DgvHistorialIngreso.AllowUserToAddRows = false;
+            this.DgvHistorialIngreso.AllowUserToDeleteRows = false;
+            this.DgvHistorialIngreso.AllowUserToResizeRows = false;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvHistorialIngreso.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.DgvHistorialIngreso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.DgvHistorialIngreso.BackgroundColor = System.Drawing.Color.PeachPuff;
+            this.DgvHistorialIngreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgvHistorialIngreso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvHistorialIngreso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            this.DgvHistorialIngreso.ColumnHeadersHeight = 25;
+            this.DgvHistorialIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvHistorialIngreso.DefaultCellStyle = dataGridViewCellStyle23;
+            this.DgvHistorialIngreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvHistorialIngreso.EnableHeadersVisualStyles = false;
+            this.DgvHistorialIngreso.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.DgvHistorialIngreso.Location = new System.Drawing.Point(20, 72);
+            this.DgvHistorialIngreso.MultiSelect = false;
+            this.DgvHistorialIngreso.Name = "DgvHistorialIngreso";
+            this.DgvHistorialIngreso.ReadOnly = true;
+            this.DgvHistorialIngreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvHistorialIngreso.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            this.DgvHistorialIngreso.RowHeadersWidth = 51;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Humnst777 BT", 9F);
+            this.DgvHistorialIngreso.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            this.DgvHistorialIngreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvHistorialIngreso.Size = new System.Drawing.Size(557, 275);
+            this.DgvHistorialIngreso.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.TextBox01;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
             // 
             // FormControldeEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(707, 405);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.DgvHistorialIngreso);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.PibActualizar);
-            this.Controls.Add(this.dgb_Control_Entradas);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormControldeEntradas";
             this.Text = "FormControldeEntradas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Control_Entradas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialIngreso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
+            this.Load += new System.EventHandler(this.FormControldeEntradas_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialIngreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgb_Control_Entradas;
-        private System.Windows.Forms.DataGridView DgvHistorialIngreso;
         private System.Windows.Forms.PictureBox PibActualizar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_Texto;
@@ -253,5 +309,7 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label txt_Error;
+        public System.Windows.Forms.DataGridView DgvHistorialIngreso;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
