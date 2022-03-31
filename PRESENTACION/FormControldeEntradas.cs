@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DATOS;
+using SpreadsheetLight;
 
 namespace PRESENTACION
 {
@@ -75,6 +76,37 @@ namespace PRESENTACION
         private void FormControldeEntradas_Load(object sender, EventArgs e)
         {
             DesignDataGridView();
+        }
+
+        private void btn_Informe_Click(object sender, EventArgs e)
+        {
+            SLDocument documento = new SLDocument();
+            int Cantidad = int.Parse(DgvHistorialIngreso.RowCount.ToString());
+            documento.SetCellValue("A1","ID");
+            documento.SetCellValue("B1", "MEDICAMENTO");
+            documento.SetCellValue("C1", "CANTIDAD");
+            documento.SetCellValue("D1", "FECHA DE INGRESO");
+            documento.SetCellValue("E1", "HORA DE INGRESO");
+            documento.SetCellValue("F1", "FECHA VENCIMIENTO");
+            documento.SetCellValue("G1", "TRABAJADOR");
+
+            for (int i = 0; i <Cantidad; i++)
+            {
+                int j = i + 2;
+                documento.SetCellValue(j, 1, DgvHistorialIngreso.Rows[i].Cells[0].Value.ToString());
+                documento.SetCellValue(j, 2, DgvHistorialIngreso.Rows[i].Cells[1].Value.ToString());
+                documento.SetCellValue(j, 3, DgvHistorialIngreso.Rows[i].Cells[2].Value.ToString());
+                documento.SetCellValue(j, 4, Convert.ToDateTime(DgvHistorialIngreso.Rows[i].Cells[3].Value.ToString()).ToString("yyyy/MM/dd"));
+                documento.SetCellValue(j, 5, DgvHistorialIngreso.Rows[i].Cells[4].Value.ToString());
+                documento.SetCellValue(j, 6, Convert.ToDateTime(DgvHistorialIngreso.Rows[i].Cells[5].Value.ToString()).ToString("yyyy/MM/dd"));
+                documento.SetCellValue(j, 7, DgvHistorialIngreso.Rows[i].Cells[6].Value.ToString());
+            }
+            
+            string direccion = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            direccion = direccion + "\\" + "Informe_Ingreso_"+ DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
+            documento.SaveAs(direccion);
+            label5.Text = Cantidad.ToString();
+            MessageBox.Show("Exito", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }
