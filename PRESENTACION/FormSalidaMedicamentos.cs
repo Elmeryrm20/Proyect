@@ -40,6 +40,7 @@ namespace PRESENTACION
             }
             else if (CmbEncargado.SelectedIndex == -1)
             {
+                errorProvider1.SetError(CmbEncargado, "Seleccione un coordinador");
                 return false;
             }
             else
@@ -57,29 +58,22 @@ namespace PRESENTACION
                 {
                     string fecha = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
 
-                    if (CmbColaborador.SelectedIndex >= 0)
+                    string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, null);
+
+                    consultas.AbrirConexion();
+                    for (int i = 0; i < DgvSalida.Rows.Count; i++)
                     {
-                        //if (consultas.D_VerificarPersona(TxtNumDNI.Text) == false) //Verificar Destino
-                        //{
-                        //    consultas.D_AgregarDestino(TxtNumDNI.Text, TxtNombres.Text, TxtApellidos.Text, TxtNacionalidad.Text, TxtTelefono.Text, CmbTipoDNI.SelectedIndex + 1);
-                        //}
-
-                        string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, null);
-
-                        consultas.AbrirConexion();
-                        for (int i = 0; i < DgvSalida.Rows.Count; i++)
-                        {
-                            //codigo
-                            //nombre
-                            //cantidad
-                            consultas.SP_Agregar_Detalle_Egreso(int.Parse(CodigoEgreso), int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()), 4); ;
-                        }
-                        consultas.CerrarConexion();
-
-                        MessageBox.Show("Actualización Exitosa");
-
-                        Limpiar();
+                        //codigo
+                        //nombre
+                        //cantidad
+                        consultas.SP_Agregar_Detalle_Egreso(int.Parse(CodigoEgreso), int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()), 4); ;
                     }
+                    consultas.CerrarConexion();
+
+                    MessageBox.Show("Actualización Exitosa");
+
+                    Limpiar();
+
 
 
                     //    FormMedicamentos FrmMed = Owner as FormMedicamentos;
@@ -89,7 +83,7 @@ namespace PRESENTACION
                 }
                 else
                 {
-                    MessageBox.Show("La lista de medicamentos para el egreso está vacía.", "Información");
+                    MessageBox.Show("Agregue al menos un medicamento en la tabla.", "Información");
                     DgvSalida.Focus();
                 }
             }
@@ -101,10 +95,11 @@ namespace PRESENTACION
         private void Limpiar()
         {
             CmbColaborador.SelectedIndex = -1;
-            CmbColaborador.Text = "Seleccione un Colaborador";
+            CmbColaborador.Text = "Seleccionar";
             CmbEncargado.SelectedIndex = -1;
-            CmbEncargado.Text = "Seleccione un Encargado";
-            PibAgregarMed.Image = Properties.Resources.BotonFormNuevoMedicamentos06;
+            CmbEncargado.Text = "Seleccionar";
+            DgvSalida.Rows.Clear();
+            PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed05;
 
         }
 
@@ -113,11 +108,12 @@ namespace PRESENTACION
             CmbColaborador.DisplayMember = "Trabajador";
             CmbColaborador.DataSource = consultas.D_MostrarColaboradores(DNI);
             //CmbColaborador.ValueMember = "Colaborador_Desc";
-
+            CmbColaborador.Text = "Seleccionar";
 
             CmbEncargado.DisplayMember = "Trabajador";
             CmbEncargado.DataSource = consultas.D_MostrarColaboradores(DNI);
             //CmbEncargado.ValueMember = "Encargado_Desc";
+            CmbEncargado.Text = "Seleccionar";
 
             DesignDataGridView();
 
@@ -125,61 +121,61 @@ namespace PRESENTACION
 
         private void PibAgregarMed_MouseEnter(object sender, EventArgs e)
         {
-            PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed02;
+            PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed04;
 
         }
 
         private void PibAgregarMed_MouseLeave(object sender, EventArgs e)
         {
-            PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed01;
+            PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed03;
 
         }
 
         private void PibConfirmar_MouseEnter(object sender, EventArgs e)
         {
-            PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida04;
+            PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida09;
 
         }
 
         private void PibConfirmar_MouseLeave(object sender, EventArgs e)
         {
-            PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida03;
+            PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida08;
 
         }
 
         private void PibEliminarMed_MouseEnter(object sender, EventArgs e)
         {
-            PibEliminarMed.Image = Properties.Resources.BotonFormAgregarQuitar02;
+            PibEliminarMed.Image = Properties.Resources.BotonFormAgregarQuitar04;
 
         }
 
         private void PibEliminarMed_MouseLeave(object sender, EventArgs e)
         {
-            PibEliminarMed.Image = Properties.Resources.BotonFormAgregarQuitar01;
+            PibEliminarMed.Image = Properties.Resources.BotonFormAgregarQuitar03;
 
         }
 
         private void PibLimpiar_MouseEnter(object sender, EventArgs e)
         {
-            PibLimpiar.Image = Properties.Resources.BotonFormLimpiar02;
+            PibLimpiar.Image = Properties.Resources.BotonFormLimpiar04;
 
         }
 
         private void PibLimpiar_MouseLeave(object sender, EventArgs e)
         {
-            PibLimpiar.Image = Properties.Resources.BotonFormLimpiar01;
+            PibLimpiar.Image = Properties.Resources.BotonFormLimpiar03;
 
         }
 
         private void PibGuardarImprimir_MouseEnter(object sender, EventArgs e)
         {
-            PibGuardarImprimir.Image = Properties.Resources.BotonFormImprimir02;
+            PibGuardarImprimir.Image = Properties.Resources.BotonFormConfirmarImprimir02;
 
         }
 
         private void PibGuardarImprimir_MouseLeave(object sender, EventArgs e)
         {
-            PibGuardarImprimir.Image = Properties.Resources.BotonFormImprimir01;
+            PibGuardarImprimir.Image = Properties.Resources.BotonFormConfirmarImprimir01;
 
         }
 
@@ -202,6 +198,7 @@ namespace PRESENTACION
         private void PibLimpiar_Click(object sender, EventArgs e)
         {
             DesignDataGridView();
+            Limpiar();
         }
 
         private void TxtNumDNI_KeyPress(object sender, KeyPressEventArgs e)
@@ -227,7 +224,7 @@ namespace PRESENTACION
             {
                 e.Handled = false;
             }
-            else if(char.IsSeparator(e.KeyChar))
+            else if (char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
 
