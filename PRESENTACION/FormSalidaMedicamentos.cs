@@ -31,42 +31,15 @@ namespace PRESENTACION
             Principal.AparecerFormulario<FormMedicamentos>();
         }
 
+
         private bool Validacion()
         {
-            if (CmbTipoDNI.SelectedIndex == -1)
+            if (CmbColaborador.SelectedIndex == -1)
             {
-                MessageBox.Show("Seleccione un Documento de Identificación", "Información");
-                CmbTipoDNI.Focus();
-                return false;
-            }
-            else if (TxtNumDNI.Text == "")
-            {
-                MessageBox.Show("Ingrese un Número de Identificación", "Información");
-                TxtNumDNI.Focus();
-                return false;
-            }
-            else if (TxtNombres.Text == "")
-            {
-                MessageBox.Show("Ingrese el Nombre", "Información");
-                TxtNombres.Focus();
-                return false;
-            }
-            else if (TxtApellidos.Text == "")
-            {
-                MessageBox.Show("Ingrese los apellidos", "Información");
-                TxtApellidos.Focus();
-                return false;
-            }
-            else if (TxtNacionalidad.Text == "")
-            {
-                MessageBox.Show("Ingrese la nacionalidad", "Información");
-                TxtNacionalidad.Focus();
                 return false;
             }
             else if (CmbEncargado.SelectedIndex == -1)
             {
-                MessageBox.Show("Seleccione un Encargado", "Información");
-                CmbEncargado.Focus();
                 return false;
             }
             else
@@ -86,12 +59,12 @@ namespace PRESENTACION
 
                     if (CmbColaborador.SelectedIndex >= 0)
                     {
-                        if (consultas.D_VerificarPersona(TxtNumDNI.Text) == false)
-                        {
-                            consultas.D_AgregarDestino(TxtNumDNI.Text, TxtNombres.Text, TxtApellidos.Text, TxtNacionalidad.Text, TxtTelefono.Text, CmbTipoDNI.SelectedIndex + 1);
-                        }
+                        //if (consultas.D_VerificarPersona(TxtNumDNI.Text) == false) //Verificar Destino
+                        //{
+                        //    consultas.D_AgregarDestino(TxtNumDNI.Text, TxtNombres.Text, TxtApellidos.Text, TxtNacionalidad.Text, TxtTelefono.Text, CmbTipoDNI.SelectedIndex + 1);
+                        //}
 
-                        string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, TxtNumDNI.Text);
+                        string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, null);
 
                         consultas.AbrirConexion();
                         for (int i = 0; i < DgvSalida.Rows.Count; i++)
@@ -127,18 +100,11 @@ namespace PRESENTACION
 
         private void Limpiar()
         {
-            CmbTipoDNI.SelectedIndex = -1;
-            CmbTipoDNI.Text = "Seleccione un tipo de Identificación";
-            TxtNumDNI.Text = "";
-            TxtNombres.Text = "";
-            PibApellidos.Text = "";
-            PibNacionalidad.Text = "";
-            PibTelefono.Text = "";
             CmbColaborador.SelectedIndex = -1;
             CmbColaborador.Text = "Seleccione un Colaborador";
             CmbEncargado.SelectedIndex = -1;
             CmbEncargado.Text = "Seleccione un Encargado";
-            CmbTipoDNI.Focus();
+            PibAgregarMed.Image = Properties.Resources.BotonFormNuevoMedicamentos06;
 
         }
 
@@ -152,9 +118,6 @@ namespace PRESENTACION
             CmbEncargado.DisplayMember = "Trabajador";
             CmbEncargado.DataSource = consultas.D_MostrarColaboradores(DNI);
             //CmbEncargado.ValueMember = "Encargado_Desc";
-
-            CmbTipoDNI.DisplayMember = "Tid_Descripcion";
-            CmbTipoDNI.DataSource = consultas.D_TipoDNI();
 
             DesignDataGridView();
 
