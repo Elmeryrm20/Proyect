@@ -98,14 +98,14 @@ namespace PRESENTACION
                 documento.SetCellValue(j, 3, DgvHistorialEgreso.Rows[i].Cells[2].Value.ToString());
                 documento.SetCellValue(j, 4, Convert.ToDateTime(DgvHistorialEgreso.Rows[i].Cells[3].Value.ToString()).ToString("yyyy/MM/dd"));
                 documento.SetCellValue(j, 5, DgvHistorialEgreso.Rows[i].Cells[4].Value.ToString());
-                documento.SetCellValue(j, 6, Convert.ToDateTime(DgvHistorialEgreso.Rows[i].Cells[5].Value.ToString()).ToString("yyyy/MM/dd"));
+                documento.SetCellValue(j, 6, DgvHistorialEgreso.Rows[i].Cells[5].Value.ToString());
                 documento.SetCellValue(j, 7, DgvHistorialEgreso.Rows[i].Cells[6].Value.ToString());
             }
 
             string direccion = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             direccion = direccion + "\\" + "Informe_Egreso_" + DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
             documento.SaveAs(direccion);
-            MessageBox.Show("Exito", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Exportacion exitosa archivo guardado en Documentos", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }

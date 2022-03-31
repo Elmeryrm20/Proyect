@@ -106,7 +106,7 @@ namespace PRESENTACION
             direccion = direccion + "\\" + "Informe_Ingreso_"+ DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
             documento.SaveAs(direccion);
             label5.Text = Cantidad.ToString();
-            MessageBox.Show("Exito", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Exportacion exitosa archivo guardado en Documentos", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }
