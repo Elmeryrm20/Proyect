@@ -108,5 +108,28 @@ namespace PRESENTACION
             label5.Text = Cantidad.ToString();
             MessageBox.Show("Exportacion exitosa archivo guardado en Documentos", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+
+        private void btn_Informe_MouseEnter(object sender, EventArgs e)
+        {
+            btn_Informe.Image = Properties.Resources.BotonFormInforme02;
+        }
+
+        private void btn_Informe_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Informe.Image = Properties.Resources.BotonFormInforme01;
+
+        }
+
+        private void PibActualizar_MouseEnter(object sender, EventArgs e)
+        {
+            PibActualizar.Image = Properties.Resources.BotonFormActualizar02;
+
+        }
+
+        private void PibActualizar_MouseLeave(object sender, EventArgs e)
+        {
+            PibActualizar.Image = Properties.Resources.BotonFormActualizar01;
+
+        }
     }
 }

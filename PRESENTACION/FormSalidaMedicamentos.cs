@@ -1,5 +1,7 @@
 ﻿using DATOS;
 using System;
+using System.Drawing;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace PRESENTACION
@@ -16,10 +18,9 @@ namespace PRESENTACION
             this.DNI = DNI;
             InitializeComponent();
             //this.Nombre = Nombre;
-            TxtTrabajador.Text = Nombre;
+            LblVoluntario.Text = Nombre;
 
         }
-
         readonly string DNI;
         Consultas consultas = new Consultas();
 
@@ -34,11 +35,7 @@ namespace PRESENTACION
 
         private bool Validacion()
         {
-            if (CmbColaborador.SelectedIndex == -1)
-            {
-                return false;
-            }
-            else if (CmbEncargado.SelectedIndex == -1)
+            if (CmbEncargado.SelectedIndex == -1 || CmbEncargado.Text == "Seleccionar")
             {
                 errorProvider1.SetError(CmbEncargado, "Seleccione un coordinador");
                 return false;
@@ -49,9 +46,60 @@ namespace PRESENTACION
             }
         }
 
-        private void PibConfirmar_Click(object sender, System.EventArgs e)
+        private void Imprimir(object sender, PrintPageEventArgs e)
         {
+            Font font1 = new Font("Arial", 10);
+            Font font2 = new Font("Arial", 7);
+            int ancho = 450;
+            int y = 20;
 
+            //VOUCHER
+            e.Graphics.DrawString("  ---Informe Egreso---", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("  RUC: " + "10427462264", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  --- CRUZ ROJA - FILIAL ICA ---", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  Dirección", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  ICA - ICA - ICA", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            //e.Graphics.DrawString("", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("-------------------------------------", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("  FECHA DE EMISIÓN: " + DateTime.Now.ToShortDateString(), font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            //e.Graphics.DrawString("", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  Coordinador: " + CmbEncargado.Text, font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  Voluntario: " + LblVoluntario.Text, font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("-------------------------------------", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  ---Medicamentos---", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("  Código    Can.  Descripción   Pre. Uni.   Importe Total", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            //e.Graphics.DrawString("", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            int fila = DgvSalida.RowCount;
+            string texto = "";
+            for (int i = 0; i < fila; i++)
+            {
+                texto = DgvSalida.Rows[i].Cells[0].Value.ToString() + "   " + DgvSalida.Rows[i].Cells[1].Value.ToString() + "   ";
+                e.Graphics.DrawString(texto, font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            }
+            e.Graphics.DrawString("------------------------------------", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("  Gracias por su compra. Vuelva Pronto.", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+
+        }
+
+        private void ImprimirEgreso()
+        {
+            printDocument1 = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            printDocument1.PrinterSettings = ps;
+            printDocument1.PrintPage += Imprimir;
+            printDocument1.Print();
+        }
+
+        private void ConfirmarEgreso(bool BoolImprimir)
+        {
             if (Validacion() == true)
             {
                 if (DgvSalida.Rows.Count > 0)
@@ -70,6 +118,11 @@ namespace PRESENTACION
                     }
                     consultas.CerrarConexion();
 
+                    if (BoolImprimir == true)
+                    {
+                        ImprimirEgreso();
+                    }
+
                     MessageBox.Show("Actualización Exitosa");
 
                     Limpiar();
@@ -83,13 +136,15 @@ namespace PRESENTACION
                 }
                 else
                 {
-                    MessageBox.Show("Agregue al menos un medicamento en la tabla.", "Información");
+                    MessageBox.Show("Agregue al menos un medicamento en la tabla.", "Información",MessageBoxButtons.OK);
+                    PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed05;
                     DgvSalida.Focus();
                 }
             }
-
-            //MessageBox.Show("Por el momento no están habilitados los egresos.");
-
+        }
+        private void PibConfirmar_Click(object sender, System.EventArgs e)
+        {
+            ConfirmarEgreso(false);
         }
 
         private void Limpiar()
@@ -100,6 +155,9 @@ namespace PRESENTACION
             CmbEncargado.Text = "Seleccionar";
             DgvSalida.Rows.Clear();
             PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed05;
+            errorProvider1.Clear();
+            fila = -1;
+
 
         }
 
@@ -242,6 +300,37 @@ namespace PRESENTACION
             {
                 e.Handled = true;
             }
+        }
+
+        public short fila = -1;
+        private void DgvSalida_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fila = (short)e.RowIndex;
+
+        }
+
+        private void PibEliminarMed_Click(object sender, EventArgs e)
+        {
+            if (fila >= 0)
+            {
+                DgvSalida.Rows.RemoveAt(fila);
+                fila = -1;
+            }
+        }
+
+        private void CmbEncargado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void CmbColaborador_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void PibGuardarImprimir_Click(object sender, EventArgs e)
+        {
+            ConfirmarEgreso(true);
         }
     }
 }

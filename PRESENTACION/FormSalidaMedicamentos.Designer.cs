@@ -42,33 +42,35 @@ namespace PRESENTACION
             this.label5 = new System.Windows.Forms.Label();
             this.CmbColaborador = new System.Windows.Forms.ComboBox();
             this.Pnl01 = new System.Windows.Forms.Panel();
+            this.LblVoluntario = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.PibEncargado = new System.Windows.Forms.PictureBox();
+            this.PibColaborador = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.DgvSalida = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.PibEncargado = new System.Windows.Forms.PictureBox();
-            this.PibColaborador = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.PibGuardarImprimir = new System.Windows.Forms.PictureBox();
             this.PibLimpiar = new System.Windows.Forms.PictureBox();
             this.PibConfirmar = new System.Windows.Forms.PictureBox();
             this.PibEliminarMed = new System.Windows.Forms.PictureBox();
             this.PibAgregarMed = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.Pnl01.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEncargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).BeginInit();
@@ -88,6 +90,8 @@ namespace PRESENTACION
             this.CmbEncargado.Size = new System.Drawing.Size(192, 23);
             this.CmbEncargado.TabIndex = 8;
             this.CmbEncargado.Text = "Seleccionar:";
+            this.CmbEncargado.SelectedIndexChanged += new System.EventHandler(this.CmbEncargado_SelectedIndexChanged);
+            this.CmbEncargado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbColaborador_KeyPress);
             // 
             // TxtTrabajador
             // 
@@ -95,12 +99,13 @@ namespace PRESENTACION
             this.TxtTrabajador.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTrabajador.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.TxtTrabajador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            this.TxtTrabajador.Location = new System.Drawing.Point(121, 58);
+            this.TxtTrabajador.Location = new System.Drawing.Point(333, 58);
             this.TxtTrabajador.Name = "TxtTrabajador";
             this.TxtTrabajador.ReadOnly = true;
             this.TxtTrabajador.Size = new System.Drawing.Size(192, 14);
             this.TxtTrabajador.TabIndex = 1;
             this.TxtTrabajador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtTrabajador.Visible = false;
             // 
             // LblTrabajador
             // 
@@ -148,10 +153,11 @@ namespace PRESENTACION
             this.CmbColaborador.Name = "CmbColaborador";
             this.CmbColaborador.Size = new System.Drawing.Size(192, 23);
             this.CmbColaborador.TabIndex = 7;
-            this.CmbColaborador.Text = "Seleccionar:";
+            this.CmbColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbColaborador_KeyPress);
             // 
             // Pnl01
             // 
+            this.Pnl01.Controls.Add(this.LblVoluntario);
             this.Pnl01.Controls.Add(this.label5);
             this.Pnl01.Controls.Add(this.LblEncargado);
             this.Pnl01.Controls.Add(this.LblTrabajador);
@@ -170,6 +176,66 @@ namespace PRESENTACION
             this.Pnl01.Size = new System.Drawing.Size(700, 194);
             this.Pnl01.TabIndex = 4;
             // 
+            // LblVoluntario
+            // 
+            this.LblVoluntario.AutoSize = true;
+            this.LblVoluntario.BackColor = System.Drawing.Color.White;
+            this.LblVoluntario.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.LblVoluntario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.LblVoluntario.Location = new System.Drawing.Point(118, 58);
+            this.LblVoluntario.Name = "LblVoluntario";
+            this.LblVoluntario.Size = new System.Drawing.Size(40, 15);
+            this.LblVoluntario.TabIndex = 13;
+            this.LblVoluntario.Text = "label1";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = global::PRESENTACION.Properties.Resources.ComboBox05;
+            this.pictureBox11.Location = new System.Drawing.Point(17, 145);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox11.TabIndex = 11;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = global::PRESENTACION.Properties.Resources.ComboBox05;
+            this.pictureBox10.Location = new System.Drawing.Point(18, 87);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox10.TabIndex = 11;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = global::PRESENTACION.Properties.Resources.ComboBox06;
+            this.pictureBox9.Location = new System.Drawing.Point(17, 50);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox9.TabIndex = 11;
+            this.pictureBox9.TabStop = false;
+            // 
+            // PibEncargado
+            // 
+            this.PibEncargado.BackColor = System.Drawing.Color.Transparent;
+            this.PibEncargado.Location = new System.Drawing.Point(521, 159);
+            this.PibEncargado.Name = "PibEncargado";
+            this.PibEncargado.Size = new System.Drawing.Size(24, 24);
+            this.PibEncargado.TabIndex = 4;
+            this.PibEncargado.TabStop = false;
+            // 
+            // PibColaborador
+            // 
+            this.PibColaborador.BackColor = System.Drawing.Color.Transparent;
+            this.PibColaborador.Location = new System.Drawing.Point(522, 98);
+            this.PibColaborador.Name = "PibColaborador";
+            this.PibColaborador.Size = new System.Drawing.Size(24, 24);
+            this.PibColaborador.TabIndex = 4;
+            this.PibColaborador.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -181,6 +247,18 @@ namespace PRESENTACION
             this.label7.Size = new System.Drawing.Size(186, 18);
             this.label7.TabIndex = 2;
             this.label7.Text = "PERSONAL ENCARGADO";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = global::PRESENTACION.Properties.Resources.Forma02;
+            this.pictureBox8.Location = new System.Drawing.Point(570, 7);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(340, 176);
+            this.pictureBox8.TabIndex = 12;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Visible = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // DgvSalida
             // 
@@ -241,6 +319,7 @@ namespace PRESENTACION
             this.DgvSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvSalida.Size = new System.Drawing.Size(529, 283);
             this.DgvSalida.TabIndex = 9;
+            this.DgvSalida.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSalida_CellClick);
             // 
             // Column4
             // 
@@ -248,7 +327,7 @@ namespace PRESENTACION
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Visible = false;
-            this.Column4.Width = 69;
+            this.Column4.Width = 71;
             // 
             // Column5
             // 
@@ -278,66 +357,6 @@ namespace PRESENTACION
             this.Column2.ReadOnly = true;
             this.Column2.Width = 52;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = global::PRESENTACION.Properties.Resources.ComboBox05;
-            this.pictureBox11.Location = new System.Drawing.Point(17, 145);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(310, 30);
-            this.pictureBox11.TabIndex = 11;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = global::PRESENTACION.Properties.Resources.ComboBox05;
-            this.pictureBox10.Location = new System.Drawing.Point(18, 87);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(310, 30);
-            this.pictureBox10.TabIndex = 11;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = global::PRESENTACION.Properties.Resources.ComboBox06;
-            this.pictureBox9.Location = new System.Drawing.Point(17, 50);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(310, 30);
-            this.pictureBox9.TabIndex = 11;
-            this.pictureBox9.TabStop = false;
-            // 
-            // PibEncargado
-            // 
-            this.PibEncargado.BackColor = System.Drawing.Color.Transparent;
-            this.PibEncargado.Location = new System.Drawing.Point(521, 159);
-            this.PibEncargado.Name = "PibEncargado";
-            this.PibEncargado.Size = new System.Drawing.Size(24, 24);
-            this.PibEncargado.TabIndex = 4;
-            this.PibEncargado.TabStop = false;
-            // 
-            // PibColaborador
-            // 
-            this.PibColaborador.BackColor = System.Drawing.Color.Transparent;
-            this.PibColaborador.Location = new System.Drawing.Point(522, 98);
-            this.PibColaborador.Name = "PibColaborador";
-            this.PibColaborador.Size = new System.Drawing.Size(24, 24);
-            this.PibColaborador.TabIndex = 4;
-            this.PibColaborador.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = global::PRESENTACION.Properties.Resources.Forma02;
-            this.pictureBox8.Location = new System.Drawing.Point(570, 7);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(340, 176);
-            this.pictureBox8.TabIndex = 12;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Visible = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
             // PibGuardarImprimir
             // 
             this.PibGuardarImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -347,6 +366,7 @@ namespace PRESENTACION
             this.PibGuardarImprimir.Size = new System.Drawing.Size(110, 40);
             this.PibGuardarImprimir.TabIndex = 7;
             this.PibGuardarImprimir.TabStop = false;
+            this.PibGuardarImprimir.Click += new System.EventHandler(this.PibGuardarImprimir_Click);
             this.PibGuardarImprimir.MouseEnter += new System.EventHandler(this.PibGuardarImprimir_MouseEnter);
             this.PibGuardarImprimir.MouseLeave += new System.EventHandler(this.PibGuardarImprimir_MouseLeave);
             // 
@@ -385,6 +405,7 @@ namespace PRESENTACION
             this.PibEliminarMed.Size = new System.Drawing.Size(110, 40);
             this.PibEliminarMed.TabIndex = 5;
             this.PibEliminarMed.TabStop = false;
+            this.PibEliminarMed.Click += new System.EventHandler(this.PibEliminarMed_Click);
             this.PibEliminarMed.MouseEnter += new System.EventHandler(this.PibEliminarMed_MouseEnter);
             this.PibEliminarMed.MouseLeave += new System.EventHandler(this.PibEliminarMed_MouseLeave);
             // 
@@ -424,13 +445,13 @@ namespace PRESENTACION
             this.Load += new System.EventHandler(this.FormSalidaMedicamentos_Load);
             this.Pnl01.ResumeLayout(false);
             this.Pnl01.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvSalida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEncargado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvSalida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).EndInit();
@@ -468,5 +489,7 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label LblVoluntario;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

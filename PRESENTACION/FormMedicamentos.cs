@@ -222,9 +222,6 @@ namespace PRESENTACION
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
             Principal.EnviarEgreso(codigo, MedNombre, cantidad, Almacen, Tipo);
-            Principal.SeleccionarBoton(9);
-            Principal.AparecerFormulario<FormSalidaMedicamentos>();
-
         }
 
         //Abrir Formulario de Editar

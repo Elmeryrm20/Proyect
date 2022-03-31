@@ -35,10 +35,8 @@ namespace PRESENTACION
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Btn_Informe = new System.Windows.Forms.Panel();
-            this.PibActualizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_Texto = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -47,20 +45,22 @@ namespace PRESENTACION
             this.dtp_FechaF = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaI = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.DgvHistorialEgreso = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PibActualizar = new System.Windows.Forms.PictureBox();
             this.Btn_Informe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_Informe
@@ -73,18 +73,6 @@ namespace PRESENTACION
             this.Btn_Informe.Name = "Btn_Informe";
             this.Btn_Informe.Size = new System.Drawing.Size(707, 58);
             this.Btn_Informe.TabIndex = 5;
-            // 
-            // PibActualizar
-            // 
-            this.PibActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
-            this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibActualizar.Location = new System.Drawing.Point(20, 6);
-            this.PibActualizar.Name = "PibActualizar";
-            this.PibActualizar.Size = new System.Drawing.Size(110, 40);
-            this.PibActualizar.TabIndex = 4;
-            this.PibActualizar.TabStop = false;
-            this.PibActualizar.Click += new System.EventHandler(this.PibActualizar_Click);
             // 
             // panel2
             // 
@@ -108,16 +96,6 @@ namespace PRESENTACION
             this.txt_Texto.Size = new System.Drawing.Size(243, 16);
             this.txt_Texto.TabIndex = 0;
             this.txt_Texto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Texto_KeyUp);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.TextBox01;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(310, 30);
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -200,16 +178,6 @@ namespace PRESENTACION
             this.label2.TabIndex = 9;
             this.label2.Text = "Desde:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 132);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 24);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -276,21 +244,58 @@ namespace PRESENTACION
             this.DgvHistorialEgreso.RowHeadersWidth = 51;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.DgvHistorialEgreso.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.DgvHistorialEgreso.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DgvHistorialEgreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvHistorialEgreso.Size = new System.Drawing.Size(557, 275);
             this.DgvHistorialEgreso.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 24);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.TextBox01;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.pictureBox3.Location = new System.Drawing.Point(136, 6);
+            this.pictureBox3.Image = global::PRESENTACION.Properties.Resources.BotonFormInforme01;
+            this.pictureBox3.Location = new System.Drawing.Point(161, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(110, 40);
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            // 
+            // PibActualizar
+            // 
+            this.PibActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
+            this.PibActualizar.Location = new System.Drawing.Point(45, 6);
+            this.PibActualizar.Name = "PibActualizar";
+            this.PibActualizar.Size = new System.Drawing.Size(110, 40);
+            this.PibActualizar.TabIndex = 4;
+            this.PibActualizar.TabStop = false;
+            this.PibActualizar.Click += new System.EventHandler(this.PibActualizar_Click);
+            this.PibActualizar.MouseEnter += new System.EventHandler(this.PibActualizar_MouseEnter);
+            this.PibActualizar.MouseLeave += new System.EventHandler(this.PibActualizar_MouseLeave);
             // 
             // FormControldeSalidas
             // 
@@ -307,16 +312,16 @@ namespace PRESENTACION
             this.Text = "FormControldeSalidas";
             this.Load += new System.EventHandler(this.FormControldeSalidas_Load);
             this.Btn_Informe.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
             this.ResumeLayout(false);
 
         }

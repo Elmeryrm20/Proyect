@@ -52,14 +52,14 @@ namespace PRESENTACION
 
                 FormMedicamentos FrmMed = Owner as FormMedicamentos;
                 FrmMed.Rellenartabla();
-                FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[valor-1].Cells[0];
+                FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[valor-1].Cells[1];
                 Close();
-            }
+        }
             catch (Exception)
             {
                 MessageBox.Show("Error", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
+}
 
         private void Txt_Cantidad_KeyPress(object sender, KeyPressEventArgs e)
         {

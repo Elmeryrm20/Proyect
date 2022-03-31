@@ -23,8 +23,8 @@ namespace PRESENTACION
             if (Tipo == "1") VistaTrabajador(); //Método de Vista de Formularios para Trabajador
             else CargarFormularios(9); //Rango Admin de Formularios
 
-            Btn_Acerca.Visible = false;
-            Btn_Config.Visible = false;
+            //Btn_Acerca.Visible = false;
+            //Btn_Config.Visible = false;
             SeleccionarBoton(1);
 
             AparecerFormulario<FormInicio>();
@@ -335,27 +335,48 @@ namespace PRESENTACION
             FrmMedicamentos.PibSalida.Image = Properties.Resources.BotonFormSalida04;
         }
 
+        private bool SeleccionRepetida(DataGridView d, int Codigo)
+        {
+            if (d.Rows.Count > 0)
+            {
+                for (int i = 0; i < d.Rows.Count; i++)
+                {
+                    if (Convert.ToInt32(d.Rows[i].Cells[0].Value) == Codigo)
+                    {
+                        MessageBox.Show("Ya seleccionó ese medicamento.");
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
         public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
         {
             FormSalidaMedicamentos FrmSalida = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();
 
-            //Adicionamos nuevo renglon
-            int n = FrmSalida.DgvSalida.Rows.Add();
+            if (SeleccionRepetida(FrmSalida.DgvSalida, Codigo))
+            {
+                //Adicionamos nuevo renglon
+                int n = FrmSalida.DgvSalida.Rows.Add();
 
-            //Colocamos la información
-            FrmSalida.DgvSalida.Rows[n].Cells[0].Value = Codigo.ToString();
-            FrmSalida.DgvSalida.Rows[n].Cells[1].Value = MedNombre;
-            FrmSalida.DgvSalida.Rows[n].Cells[2].Value = cantidad.ToString();
-            FrmSalida.DgvSalida.Rows[n].Cells[3].Value = Almacen;
-            FrmSalida.DgvSalida.Rows[n].Cells[4].Value = Tipo;
-            FrmSalida.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida05;
+                //Colocamos la información
+                FrmSalida.DgvSalida.Rows[n].Cells[0].Value = Codigo.ToString();
+                FrmSalida.DgvSalida.Rows[n].Cells[1].Value = MedNombre;
+                FrmSalida.DgvSalida.Rows[n].Cells[2].Value = cantidad.ToString();
+                FrmSalida.DgvSalida.Rows[n].Cells[3].Value = Almacen;
+                FrmSalida.DgvSalida.Rows[n].Cells[4].Value = Tipo;
+                FrmSalida.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida05;
+                short fila = (short)(FrmSalida.DgvSalida.Rows.Count - 1);
+                FrmSalida.DgvSalida.CurrentCell = FrmSalida.DgvSalida.Rows[fila].Cells[1];
+                FrmSalida.fila = fila;
 
-            FrmSalida.Show(); //Agregado
-            FrmSalida.BringToFront(); //Agregado
+                FrmSalida.Show(); //Agregado
+                FrmSalida.BringToFront(); //Agregado
 
-            //SeleccionarBoton(2);
-            //AparecerFormulario<FormMedicamentos>();
 
+                SeleccionarBoton(9);
+                //AparecerFormulario<FormSalidaMedicamentos>();
+            }
 
         }
 

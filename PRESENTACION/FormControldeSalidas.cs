@@ -107,5 +107,28 @@ namespace PRESENTACION
             documento.SaveAs(direccion);
             MessageBox.Show("Exportacion exitosa archivo guardado en Documentos", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox3.Image = Properties.Resources.BotonFormInforme02;
+
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox3.Image = Properties.Resources.BotonFormInforme01;
+
+        }
+
+        private void PibActualizar_MouseEnter(object sender, EventArgs e)
+        {
+            PibActualizar.Image = Properties.Resources.BotonFormActualizar02;
+        }
+
+        private void PibActualizar_MouseLeave(object sender, EventArgs e)
+        {
+            PibActualizar.Image = Properties.Resources.BotonFormActualizar01;
+
+        }
     }
 }
