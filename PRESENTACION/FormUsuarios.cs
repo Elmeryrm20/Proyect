@@ -38,7 +38,9 @@ namespace PRESENTACION
         {
             FormPrincipal fr = Owner as FormPrincipal;
             //fr.LlamarFormularioA_U();
-            fr.AparecerFormulario<FormAgregarUsuario>();
+
+            //fr.AparecerFormulario<FormAgregarUsuario>();
+            fr.EscogerFormulario<FormAgregarUsuario>(9);
 
         }
 

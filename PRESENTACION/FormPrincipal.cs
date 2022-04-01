@@ -20,14 +20,15 @@ namespace PRESENTACION
             this.DNI = DNI;
             this.Nombre = Nombre;
 
-            if (Tipo == "1") VistaTrabajador(); //Método de Vista de Formularios para Trabajador
-            else CargarFormularios(9); //Rango Admin de Formularios
+            OrdenarBotonesMenu(Tipo);
+
 
             //Btn_Acerca.Visible = false;
             //Btn_Config.Visible = false;
             SeleccionarBoton(1);
 
-            AparecerFormulario<FormInicio>();
+            //AparecerFormulario<FormInicio>();
+            EscogerFormulario<FormInicio>(1);
 
         }
         #endregion
@@ -40,17 +41,36 @@ namespace PRESENTACION
         #endregion
 
         #region Método para Formulario
+        private void OrdenarBotonesMenu(string Tipo)
+        {
 
-        void VistaTrabajador()
+            BtnEntrada.Location = new Point(0, 180);
+            Btn_Salida.Location = new Point(0, 225);
+            Btn_Agregar.Location = new Point(0, 270);
+
+            if (Tipo == "1") VistaVoluntario(); //Método de Vista de Formularios para Voluntario
+            else VistaCoordinador(); //Rango Admin de Coordinador
+        }
+
+        void VistaVoluntario()
         {
             Btn_Usuarios.Visible = false;
             Btn_AgregarUsuario.Visible = false;
-            Btn_Historial.Location = new Point(0, 270);
-            Btn_Config.Location = new Point(0, 315);
-            Btn_Acerca.Location = new Point(0, 360);
-            CargarFormularios(7);
+            Btn_Historial.Location = new Point(0, 315);
+            Btn_Config.Location = new Point(0, 360);
+            Btn_Acerca.Location = new Point(0, 405);
+            //CargarFormularios(7);
         }
+        void VistaCoordinador()
+        {
+            Btn_Usuarios.Location = new Point(0, 315);
+            Btn_AgregarUsuario.Location = new Point(0, 360);
+            Btn_Historial.Location = new Point(0, 405);
+            Btn_Config.Location = new Point(0, 450);
+            Btn_Acerca.Location = new Point(0, 495);
+            //CargarFormularios(9);
 
+        }
         void CargarFormularios(byte rango)
         {
 
@@ -91,6 +111,45 @@ namespace PRESENTACION
             if (Formulario == null)
             {
                 Formulario = new MiForm();
+                AddOwnedForm(Formulario);
+                Formulario.TopLevel = false;
+                //Formulario.FormBorderStyle = FormBorderStyle.None;
+                Formulario.Dock = DockStyle.Fill;
+                PnlCuerpo.Controls.Add(Formulario);
+                PnlCuerpo.Tag = Formulario;
+                Formulario.Show();
+                Formulario.BringToFront();
+            }
+            else
+            {
+                Formulario.BringToFront();
+            }
+        }
+
+        //METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
+        public void EscogerFormulario<MiForm>(byte indice) where MiForm : Form, new()
+        {
+            Form Formulario;
+            Formulario = PnlCuerpo.Controls.OfType<MiForm>().FirstOrDefault(); //Busca en la colección el formulario
+            if (Formulario == null)
+            {
+                //Formulario = new MiForm();
+                switch (indice)
+                {
+                    case 1: Formulario = new FormInicio(DNI, Nombre); break;
+                    case 2: Formulario = new FormMedicamentos(DNI); break;
+                    case 3: Formulario = new FormAgregarMedicamento(DNI); break;
+                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre); break;
+                    case 5: Formulario = new FormHistorial(DNI); break;
+                    case 6: Formulario = new FormConfiguracion(DNI); break;
+                    case 7: Formulario = new FormAcercaDe(); break;
+                    case 8: Formulario = new FormUsuarios(DNI); break;
+                    case 9: Formulario = new FormAgregarUsuario(DNI); break;
+                    case 10: Formulario = new FormEntradaMedicamento(DNI); break;
+                    default:
+                        break;
+                }
+
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;
@@ -195,6 +254,9 @@ namespace PRESENTACION
                 case 9:
                     Btn_Salida.Image = Properties.Resources.MenuSalida02;
                     break;
+                case 10:
+                    BtnEntrada.Image = Properties.Resources.MenuEstadistica02;
+                    break;
                 default:
                     break;
             }
@@ -237,6 +299,9 @@ namespace PRESENTACION
                     break;
                 case 9:
                     Btn_Salida.Image = Properties.Resources.MenuSalida01;
+                    break;
+                case 10:
+                    BtnEntrada.Image = Properties.Resources.MenuEstadistica01;
                     break;
                 default:
                     break;
@@ -289,107 +354,70 @@ namespace PRESENTACION
         #region Botones Menú
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(1);
-            AparecerFormulario<FormInicio>();
-        }
-
-        private void Btn_Agregar_Click(object sender, EventArgs e)
-        {
-            SeleccionarBoton(3);
-            AparecerFormulario<FormAgregarMedicamento>();
+            SeleccionarBoton(1); //INICIO
+            //AparecerFormulario<FormInicio>();
+            EscogerFormulario<FormInicio>(1);
         }
 
         public void Btn_Cajas_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(2);
-            AparecerFormulario<FormMedicamentos>();
+            SeleccionarBoton(2); //MEDICAMENTOS
+            //AparecerFormulario<FormMedicamentos>();
+            EscogerFormulario<FormMedicamentos>(2);
+
+        }
+        private void BtnEntrada_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(10); //ENTRADA
+            EscogerFormulario<FormEntradaMedicamento>(10);
+
         }
 
+        private void Btn_Agregar_Click(object sender, EventArgs e)
+        {
+            SeleccionarBoton(3); //AGREGAR MEDICAMENTO
+            //AparecerFormulario<FormAgregarMedicamento>();
+            EscogerFormulario<FormAgregarMedicamento>(3);
+        }
         private void Btn_Historial_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(6);
-            AparecerFormulario<FormHistorial>();
+            SeleccionarBoton(6); //HISTORIAL
+            //AparecerFormulario<FormHistorial>();
+            EscogerFormulario<FormHistorial>(5);
         }
 
         private void Btn_Config_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(7);
-            AparecerFormulario<FormConfiguracion>();
+            SeleccionarBoton(7); //CONFIGURACIÓN
+            //AparecerFormulario<FormConfiguracion>();
+            EscogerFormulario<FormConfiguracion>(6);
         }
 
         private void Btn_Acerca_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(8);
-            AparecerFormulario<FormAcercaDe>();
+            SeleccionarBoton(8); //ACERCA DE
+            //AparecerFormulario<FormAcercaDe>();
+            EscogerFormulario<FormAcercaDe>(7);
         }
 
         private void Btn_Usuarios_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(4);
-            AparecerFormulario<FormUsuarios>();
-        }
-
-        public void ResaltarBotonEgreso()
-        {
-            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
-            FrmMedicamentos.PibSalida.Image = Properties.Resources.BotonFormSalida04;
-        }
-
-        private bool SeleccionRepetida(DataGridView d, int Codigo)
-        {
-            if (d.Rows.Count > 0)
-            {
-                for (int i = 0; i < d.Rows.Count; i++)
-                {
-                    if (Convert.ToInt32(d.Rows[i].Cells[0].Value) == Codigo)
-                    {
-                        MessageBox.Show("Ya seleccionó ese medicamento.");
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-        public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
-        {
-            FormSalidaMedicamentos FrmSalida = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();
-
-            if (SeleccionRepetida(FrmSalida.DgvSalida, Codigo))
-            {
-                //Adicionamos nuevo renglon
-                int n = FrmSalida.DgvSalida.Rows.Add();
-
-                //Colocamos la información
-                FrmSalida.DgvSalida.Rows[n].Cells[0].Value = Codigo.ToString();
-                FrmSalida.DgvSalida.Rows[n].Cells[1].Value = MedNombre;
-                FrmSalida.DgvSalida.Rows[n].Cells[2].Value = cantidad.ToString();
-                FrmSalida.DgvSalida.Rows[n].Cells[3].Value = Almacen;
-                FrmSalida.DgvSalida.Rows[n].Cells[4].Value = Tipo;
-                FrmSalida.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida05;
-                short fila = (short)(FrmSalida.DgvSalida.Rows.Count - 1);
-                FrmSalida.DgvSalida.CurrentCell = FrmSalida.DgvSalida.Rows[fila].Cells[1];
-                FrmSalida.fila = fila;
-
-                FrmSalida.Show(); //Agregado
-                FrmSalida.BringToFront(); //Agregado
-
-
-                SeleccionarBoton(9);
-                //AparecerFormulario<FormSalidaMedicamentos>();
-            }
-
+            SeleccionarBoton(4); //USUARIOS
+            //AparecerFormulario<FormUsuarios>();
+            EscogerFormulario<FormUsuarios>(8);
         }
 
         private void Btn_Salida_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(9);
-            AparecerFormulario<FormSalidaMedicamentos>();
+            SeleccionarBoton(9); //SALIDA
+            //AparecerFormulario<FormSalidaMedicamentos>();
+            EscogerFormulario<FormSalidaMedicamentos>(4);
         }
 
         private void Btn_Salidas_Click(object sender, EventArgs e)
         {
-            SeleccionarBoton(5);
-            AparecerFormulario<FormAgregarUsuario>();
+            SeleccionarBoton(5); //AGREGAR USUARIO
+            EscogerFormulario<FormAgregarUsuario>(9);
         }
         #endregion
 
@@ -450,6 +478,59 @@ namespace PRESENTACION
         private void PibContraer_MouseLeave(object sender, EventArgs e)
         {
             PibContraer.Image = Properties.Resources.BotonVentanaContraer01;
+        }
+        #endregion
+
+        #region Métodos Heredados
+        public void ResaltarBotonEgreso()
+        {
+            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
+            FrmMedicamentos.PibSalida.Image = Properties.Resources.BotonFormSalida04;
+        }
+
+        private bool SeleccionRepetida(DataGridView d, int Codigo)
+        {
+            if (d.Rows.Count > 0)
+            {
+                for (int i = 0; i < d.Rows.Count; i++)
+                {
+                    if (Convert.ToInt32(d.Rows[i].Cells[0].Value) == Codigo)
+                    {
+                        MessageBox.Show("Ya seleccionó ese medicamento.");
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
+        {
+            FormSalidaMedicamentos FrmSalida = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();
+
+            if (SeleccionRepetida(FrmSalida.DgvSalida, Codigo))
+            {
+                //Adicionamos nuevo renglon
+                int n = FrmSalida.DgvSalida.Rows.Add();
+
+                //Colocamos la información
+                FrmSalida.DgvSalida.Rows[n].Cells[0].Value = Codigo.ToString();
+                FrmSalida.DgvSalida.Rows[n].Cells[1].Value = MedNombre;
+                FrmSalida.DgvSalida.Rows[n].Cells[2].Value = cantidad.ToString();
+                FrmSalida.DgvSalida.Rows[n].Cells[3].Value = Almacen;
+                FrmSalida.DgvSalida.Rows[n].Cells[4].Value = Tipo;
+                FrmSalida.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida05;
+                short fila = (short)(FrmSalida.DgvSalida.Rows.Count - 1);
+                FrmSalida.DgvSalida.CurrentCell = FrmSalida.DgvSalida.Rows[fila].Cells[1];
+                FrmSalida.fila = fila;
+
+                FrmSalida.Show(); //Agregado
+                FrmSalida.BringToFront(); //Agregado
+
+
+                SeleccionarBoton(9);
+                //AparecerFormulario<FormSalidaMedicamentos>();
+            }
+
         }
         #endregion
 

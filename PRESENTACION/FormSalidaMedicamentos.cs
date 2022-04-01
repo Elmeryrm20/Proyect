@@ -29,7 +29,8 @@ namespace PRESENTACION
             FormPrincipal Principal = (FormPrincipal)Owner;
             Principal.ResaltarBotonEgreso();
             Principal.SeleccionarBoton(2);
-            Principal.AparecerFormulario<FormMedicamentos>();
+            //Principal.AparecerFormulario<FormMedicamentos>();
+            Principal.EscogerFormulario<FormMedicamentos>(2);
         }
 
 

@@ -16,5 +16,12 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
+        public FormEntradaMedicamento(string DNI)
+        {
+            InitializeComponent();
+            this.DNI = DNI;
+        }
+
+        string DNI;
     }
 }
