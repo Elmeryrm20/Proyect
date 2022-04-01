@@ -774,5 +774,53 @@
   <ItemGroup>
     <None Include="Resources\BotonFormConfirmarSalida08.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormAgregarQuitar06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormAgregarQuitar05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormSeleccionarMed07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormSeleccionarMed06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarImprimir04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarImprimir03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarEntrada02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarEntrada01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormConfirmarEntrada03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuEntrada02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuEntrada01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBox08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBox07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormIngreso03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormLimpiar06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonFormLimpiar05.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

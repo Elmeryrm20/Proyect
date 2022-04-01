@@ -180,10 +180,11 @@ namespace PRESENTACION
                         img = ms.ToArray();
                     }
                     else img = null;
-
-                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss"), 0, CmbPresentacion.SelectedIndex + 1, img);
-                    int UltimoId = consultas.D_UltimoIdIngresado();
-                    consultas.SP_Agregar_Detalle_Ingreso(UltimoId, int.Parse(textCantidad.Text), DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), Tra_DNI, DateTime.Now.ToString("yyyy-MM-dd"));
+                    string FechaActual = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
+                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, CmbPresentacion.SelectedIndex + 1, img);
+                    int CodigoMedicamento = consultas.D_UltimoIdIngresado();
+                    string CodigoIngreso = consultas.D_ActualizarIngreso(Tra_DNI, FechaActual, 1);
+                    consultas.SP_Agregar_Detalle_Ingreso(int.Parse(CodigoIngreso),CodigoMedicamento,int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"));
 
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Limpiar();

@@ -359,7 +359,7 @@ namespace PRESENTACION
             // 
             // PibGuardarImprimir
             // 
-            this.PibGuardarImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibGuardarImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibGuardarImprimir.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmarImprimir01;
             this.PibGuardarImprimir.Location = new System.Drawing.Point(587, 337);
             this.PibGuardarImprimir.Name = "PibGuardarImprimir";
@@ -372,7 +372,7 @@ namespace PRESENTACION
             // 
             // PibLimpiar
             // 
-            this.PibLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibLimpiar.Image = global::PRESENTACION.Properties.Resources.BotonFormLimpiar03;
             this.PibLimpiar.Location = new System.Drawing.Point(587, 428);
             this.PibLimpiar.Name = "PibLimpiar";
@@ -385,7 +385,7 @@ namespace PRESENTACION
             // 
             // PibConfirmar
             // 
-            this.PibConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibConfirmar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmarSalida08;
             this.PibConfirmar.Location = new System.Drawing.Point(587, 262);
             this.PibConfirmar.Name = "PibConfirmar";
@@ -398,7 +398,7 @@ namespace PRESENTACION
             // 
             // PibEliminarMed
             // 
-            this.PibEliminarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibEliminarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibEliminarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarQuitar03;
             this.PibEliminarMed.Location = new System.Drawing.Point(587, 383);
             this.PibEliminarMed.Name = "PibEliminarMed";
@@ -411,7 +411,7 @@ namespace PRESENTACION
             // 
             // PibAgregarMed
             // 
-            this.PibAgregarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PibAgregarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibAgregarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormSeleccionarMed03;
             this.PibAgregarMed.Location = new System.Drawing.Point(587, 209);
             this.PibAgregarMed.Name = "PibAgregarMed";

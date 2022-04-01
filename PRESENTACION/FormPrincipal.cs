@@ -145,7 +145,7 @@ namespace PRESENTACION
                     case 7: Formulario = new FormAcercaDe(); break;
                     case 8: Formulario = new FormUsuarios(DNI); break;
                     case 9: Formulario = new FormAgregarUsuario(DNI); break;
-                    case 10: Formulario = new FormEntradaMedicamento(DNI); break;
+                    case 10: Formulario = new FormEntradaMedicamento(DNI, Nombre); break;
                     default:
                         break;
                 }
@@ -255,7 +255,7 @@ namespace PRESENTACION
                     Btn_Salida.Image = Properties.Resources.MenuSalida02;
                     break;
                 case 10:
-                    BtnEntrada.Image = Properties.Resources.MenuEstadistica02;
+                    BtnEntrada.Image = Properties.Resources.MenuEntrada02;
                     break;
                 default:
                     break;
@@ -301,7 +301,7 @@ namespace PRESENTACION
                     Btn_Salida.Image = Properties.Resources.MenuSalida01;
                     break;
                 case 10:
-                    BtnEntrada.Image = Properties.Resources.MenuEstadistica01;
+                    BtnEntrada.Image = Properties.Resources.MenuEntrada01;
                     break;
                 default:
                     break;
@@ -487,6 +487,12 @@ namespace PRESENTACION
             FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
             FrmMedicamentos.PibSalida.Image = Properties.Resources.BotonFormSalida04;
         }
+        public void ResaltarBotonIngreso()
+        {
+            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
+
+            FrmMedicamentos.PibIngreso.Image = Properties.Resources.BotonFormIngreso03;
+        }
 
         private bool SeleccionRepetida(DataGridView d, int Codigo)
         {
@@ -528,6 +534,37 @@ namespace PRESENTACION
 
 
                 SeleccionarBoton(9);
+                //AparecerFormulario<FormSalidaMedicamentos>();
+            }
+
+        }
+
+        public void EnviarIngreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo, string FechaVencimiento)
+        {
+            FormEntradaMedicamento FrmEntrada = PnlCuerpo.Controls.OfType<FormEntradaMedicamento>().FirstOrDefault();
+
+            if (SeleccionRepetida(FrmEntrada.DgvEntrada, Codigo))
+            {
+                //Adicionamos nuevo renglon
+                int n = FrmEntrada.DgvEntrada.Rows.Add();
+
+                //Colocamos la información
+                FrmEntrada.DgvEntrada.Rows[n].Cells[0].Value = Codigo.ToString();
+                FrmEntrada.DgvEntrada.Rows[n].Cells[1].Value = MedNombre;
+                FrmEntrada.DgvEntrada.Rows[n].Cells[2].Value = cantidad.ToString();
+                FrmEntrada.DgvEntrada.Rows[n].Cells[3].Value = Almacen;
+                FrmEntrada.DgvEntrada.Rows[n].Cells[4].Value = Tipo;
+                FrmEntrada.DgvEntrada.Rows[n].Cells[5].Value = FechaVencimiento;
+                FrmEntrada.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarEntrada03;
+                short fila = (short)(FrmEntrada.DgvEntrada.Rows.Count - 1);
+                FrmEntrada.DgvEntrada.CurrentCell = FrmEntrada.DgvEntrada.Rows[fila].Cells[1];
+                FrmEntrada.fila = fila;
+
+                FrmEntrada.Show(); //Agregado
+                FrmEntrada.BringToFront(); //Agregado
+
+
+                SeleccionarBoton(10);
                 //AparecerFormulario<FormSalidaMedicamentos>();
             }
 

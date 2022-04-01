@@ -27,10 +27,10 @@ namespace PRESENTACION
         private void PibAgregarMed_Click(object sender, System.EventArgs e)
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
-            Principal.ResaltarBotonEgreso();
             Principal.SeleccionarBoton(2);
             //Principal.AparecerFormulario<FormMedicamentos>();
             Principal.EscogerFormulario<FormMedicamentos>(2);
+            Principal.ResaltarBotonEgreso();
         }
 
 
@@ -143,6 +143,7 @@ namespace PRESENTACION
                 }
             }
         }
+
         private void PibConfirmar_Click(object sender, System.EventArgs e)
         {
             ConfirmarEgreso(false);
@@ -156,6 +157,7 @@ namespace PRESENTACION
             CmbEncargado.Text = "Seleccionar";
             DgvSalida.Rows.Clear();
             PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed05;
+            PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida06;
             errorProvider1.Clear();
             fila = -1;
 
@@ -252,6 +254,8 @@ namespace PRESENTACION
             DgvSalida.ColumnHeadersHeight = 35;
             DgvSalida.Columns[1].MinimumWidth = 250;
             DgvSalida.Columns[3].MinimumWidth = 90;
+            DgvSalida.RowHeadersWidth = 35;
+
         }
 
         private void PibLimpiar_Click(object sender, EventArgs e)

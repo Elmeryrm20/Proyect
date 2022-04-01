@@ -148,6 +148,12 @@
   <data name="BotonFormAgregarQuitar04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormAgregarQuitar04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonFormAgregarQuitar05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormAgregarQuitar05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormAgregarQuitar06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormAgregarQuitar06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BotonFormAgregarUsuario01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormAgregarUsuario01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,11 +178,26 @@
   <data name="BotonFormConfirmar02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormConfirmar02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonFormConfirmarEntrada01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmarEntrada01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmarEntrada02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmarEntrada02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmarEntrada03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmarEntrada03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BotonFormConfirmarImprimir01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormConfirmarImprimir01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonFormConfirmarImprimir02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormConfirmarImprimir02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmarImprimir03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmarImprimir03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmarImprimir04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmarImprimir04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonFormConfirmarNuevoUsu01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormConfirmarNuevoUsu01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,6 +292,9 @@
   <data name="BotonFormIngreso02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormIngreso02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonFormIngreso03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormIngreso03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BotonFormLimpiar01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormLimpiar01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -282,6 +306,12 @@
   </data>
   <data name="BotonFormLimpiar04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormLimpiar04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormLimpiar05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormLimpiar05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormLimpiar06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormLimpiar06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonFormNuevoMedicamentos01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormNuevoMedicamentos01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -342,6 +372,12 @@
   </data>
   <data name="BotonFormSeleccionarMed05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormSeleccionarMed05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormSeleccionarMed06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormSeleccionarMed06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormSeleccionarMed07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormSeleccionarMed07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonGuardar01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonGuardar01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -463,6 +499,12 @@
   <data name="ComboBox06" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ComboBox06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ComboBox07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ComboBox07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ComboBox08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ComboBox08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FondoLogin01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoLogin01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -531,6 +573,12 @@
   </data>
   <data name="MenuEgreso02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuEgreso02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuEntrada01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuEntrada01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuEntrada02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuEntrada02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuEstadistica01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuEstadistica01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

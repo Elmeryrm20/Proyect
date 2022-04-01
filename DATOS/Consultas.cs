@@ -524,40 +524,40 @@ namespace DATOS
             Conexion.connection.Close();
 
         }
-        public void SP_Agregar_Ingreso_Medicamento(int Cod_Medicamento, int Cantidad, string Fecha_Actual)
+        public string D_ActualizarIngreso(string DNI, string Fecha, int Procedencia)
         {
             Conexion.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Ingreso_Medicamento", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("Sp_AgregarIngreso", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Cod_Medicamento", Cod_Medicamento);
-            cmd.Parameters.AddWithValue("Cantidad", Cantidad);
-            cmd.Parameters.AddWithValue("Fecha_Actual", Fecha_Actual);
-
+            cmd.Parameters.AddWithValue("Ingreso_Fecha", Fecha);
+            cmd.Parameters.AddWithValue("Trabajador_DNI", DNI);
+            cmd.Parameters.AddWithValue("Procedencia_Codigo", Procedencia);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
             try
             {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
-
             Conexion.connection.Close();
+            return tabla.Rows[0][0].ToString();
 
         }
 
-        public void SP_Agregar_Detalle_Ingreso(int Med_Codigo, int Cantidad, string Ing_Fecha, string Tra_DNI, string Dei_Fecha_V)
+        public void SP_Agregar_Detalle_Ingreso(int Ing_Codigo, int Med_Codigo, int Cantidad, string FechaVencimiento)
         {
-            Conexion.connection.Open();
+            //Conexion.connection.Open();
             MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Ingreso", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Med_Codigo", Med_Codigo);
+            cmd.Parameters.AddWithValue("Ingreso_Codigo", Ing_Codigo);
+            cmd.Parameters.AddWithValue("Medicamento_Codigo", Med_Codigo);
             cmd.Parameters.AddWithValue("Cantidad", Cantidad);
-            cmd.Parameters.AddWithValue("Ing_Fecha", Ing_Fecha);
-            cmd.Parameters.AddWithValue("Tra_DNI", Tra_DNI);
-            cmd.Parameters.AddWithValue("Dei_Fecha_V", Dei_Fecha_V);
+            cmd.Parameters.AddWithValue("Fecha_Vencimiento", FechaVencimiento);
             try
             {
                 cmd.ExecuteNonQuery();
@@ -567,8 +567,7 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
-
+            //Conexion.connection.Close();
         }
 
         public string D_ActualizarEgreso(string Fecha, string Tra_DNI, string Per_DNI)

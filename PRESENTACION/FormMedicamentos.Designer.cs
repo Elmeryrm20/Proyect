@@ -461,7 +461,6 @@ namespace PRESENTACION
         private System.Windows.Forms.TextBox txb_Buscar;
         private System.Windows.Forms.PictureBox PibActualizar;
         private System.Windows.Forms.PictureBox PibDetalles;
-        private System.Windows.Forms.PictureBox PibIngreso;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
@@ -482,5 +481,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox PibSalida;
+        public System.Windows.Forms.PictureBox PibIngreso;
     }
 }

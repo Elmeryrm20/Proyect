@@ -30,6 +30,7 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnEntrada = new System.Windows.Forms.PictureBox();
             this.btn_cerrarsesion = new System.Windows.Forms.PictureBox();
             this.Btn_Salida = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -48,8 +49,8 @@ namespace PRESENTACION
             this.Pib_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pib_Restaurar = new System.Windows.Forms.PictureBox();
             this.PnlCuerpo = new System.Windows.Forms.Panel();
-            this.BtnEntrada = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnEntrada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_cerrarsesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,7 +68,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnEntrada)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -90,6 +90,21 @@ namespace PRESENTACION
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 550);
             this.panel2.TabIndex = 1;
+            // 
+            // BtnEntrada
+            // 
+            this.BtnEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEntrada.BackColor = System.Drawing.Color.White;
+            this.BtnEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEntrada.Image = global::PRESENTACION.Properties.Resources.MenuEntrada01;
+            this.BtnEntrada.Location = new System.Drawing.Point(0, 181);
+            this.BtnEntrada.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnEntrada.Name = "BtnEntrada";
+            this.BtnEntrada.Size = new System.Drawing.Size(160, 45);
+            this.BtnEntrada.TabIndex = 11;
+            this.BtnEntrada.TabStop = false;
+            this.BtnEntrada.Click += new System.EventHandler(this.BtnEntrada_Click);
             // 
             // btn_cerrarsesion
             // 
@@ -356,21 +371,6 @@ namespace PRESENTACION
             this.PnlCuerpo.Size = new System.Drawing.Size(740, 518);
             this.PnlCuerpo.TabIndex = 5;
             // 
-            // BtnEntrada
-            // 
-            this.BtnEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEntrada.BackColor = System.Drawing.Color.White;
-            this.BtnEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnEntrada.Image = global::PRESENTACION.Properties.Resources.MenuEstadistica01;
-            this.BtnEntrada.Location = new System.Drawing.Point(0, 181);
-            this.BtnEntrada.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnEntrada.Name = "BtnEntrada";
-            this.BtnEntrada.Size = new System.Drawing.Size(160, 45);
-            this.BtnEntrada.TabIndex = 11;
-            this.BtnEntrada.TabStop = false;
-            this.BtnEntrada.Click += new System.EventHandler(this.BtnEntrada_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +384,7 @@ namespace PRESENTACION
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BtnEntrada)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_cerrarsesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Salida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -401,7 +402,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnEntrada)).EndInit();
             this.ResumeLayout(false);
 
         }

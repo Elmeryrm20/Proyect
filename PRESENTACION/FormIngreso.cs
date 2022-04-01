@@ -13,17 +13,23 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
-        public FormIngreso(int valor, string DNI)
+        public FormIngreso(int Med_Codigo, string MedNombre, string DNI, string Almacen, string Tipo)
         {
             InitializeComponent();
+            this.Med_Codigo = Med_Codigo;
+            this.MedNombre = MedNombre;
+            this.Almacen = Almacen;
+            this.Tipo = Tipo;
             this.DNI = DNI;
-            this.valor = valor;
             Ingreso();
 
         }
         #endregion
 
-        int valor;
+        int Med_Codigo;
+        string MedNombre;
+        string Almacen;
+        string Tipo;
         readonly string DNI;
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -37,29 +43,46 @@ namespace PRESENTACION
         }
         void Ingreso()
         {
-            lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÓN"].ToString();
+            lbl_Nombre.Text = consultas.D_Medicamento_Detallado(Med_Codigo).Rows[0]["COMPOSICIÓN"].ToString();
         }
 
         //Botone de Ingresar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            int cantidad = Convert.ToInt32(Txt_Cantidad.Text);
-            try
-            {
-                consultas.SP_Agregar_Ingreso_Medicamento(valor, cantidad, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
-                consultas.SP_Agregar_Detalle_Ingreso(valor, cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
-                MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //int cantidad = Convert.ToInt32(Txt_Cantidad.Text);
+            //try
+            //{
+            //    consultas.SP_Agregar_Ingreso_Medicamento(Med_Codigo, cantidad, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+            //    consultas.SP_Agregar_Detalle_Ingreso(Med_Codigo, cantidad, DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss"), DNI, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+            //    MessageBox.Show("Actualizacion Exitosa", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                FormMedicamentos FrmMed = Owner as FormMedicamentos;
-                FrmMed.Rellenartabla();
-                FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[valor-1].Cells[1];
-                Close();
-        }
-            catch (Exception)
+            //    FormMedicamentos FrmMed = Owner as FormMedicamentos;
+            //    FrmMed.Rellenartabla();
+            //    FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[Med_Codigo - 1].Cells[1];
+            //    Close();
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Error", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
+
+
+            if (Txt_Cantidad.Text != "")
             {
-                MessageBox.Show("Error", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                if (int.Parse(Txt_Cantidad.Text) > 0)
+                {
+                    FormMedicamentos FrmMedicamentos = Owner as FormMedicamentos;
+                    FrmMedicamentos.EnviarIngreso(Med_Codigo, MedNombre, int.Parse(Txt_Cantidad.Text), Almacen, Tipo, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+                    Close();
+                }
             }
-}
+            else
+            {
+                MessageBox.Show("Ingrese una cantidad.", "Información", MessageBoxButtons.OK);
+            }
+        }
+
 
         private void Txt_Cantidad_KeyPress(object sender, KeyPressEventArgs e)
         {

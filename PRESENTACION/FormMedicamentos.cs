@@ -198,8 +198,11 @@ namespace PRESENTACION
         //Abrir Formulario de Ingreso
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
-            FormIngreso frm2 = new FormIngreso(valor_ID, DNI);
+            string MedNombre, Almacen, Tipo;
+            MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
+            Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
+            Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
+            FormIngreso frm2 = new FormIngreso(valor_ID, MedNombre, DNI, Almacen, Tipo);
             AddOwnedForm(frm2);
             frm2.ShowDialog();
         }
@@ -207,9 +210,7 @@ namespace PRESENTACION
         //Abrir Formulario de Egreso
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            string MedNombre = "";
-            string Almacen = "";
-            string Tipo = "";
+            string MedNombre, Almacen, Tipo;
             MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
             Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
             Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
@@ -221,7 +222,14 @@ namespace PRESENTACION
         public void EnviarEgreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
+            Principal.EscogerFormulario<FormSalidaMedicamentos>(4);
             Principal.EnviarEgreso(codigo, MedNombre, cantidad, Almacen, Tipo);
+        }
+        public void EnviarIngreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo, string FechaVencimiento)
+        {
+            FormPrincipal Principal = (FormPrincipal)Owner;
+            Principal.EscogerFormulario<FormEntradaMedicamento>(10);
+            Principal.EnviarIngreso(codigo, MedNombre, cantidad, Almacen, Tipo, FechaVencimiento);
         }
 
         //Abrir Formulario de Editar
