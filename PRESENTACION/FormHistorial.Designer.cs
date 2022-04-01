@@ -30,11 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnl_Contenedor_Entradas = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.PibSalidas = new System.Windows.Forms.PictureBox();
             this.PibEntradas = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pnl_Contenedor_Entradas = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEntradas)).BeginInit();
@@ -66,14 +66,33 @@
             this.panel1.Size = new System.Drawing.Size(724, 47);
             this.panel1.TabIndex = 1;
             // 
-            // pnl_Contenedor_Entradas
+            // button2
             // 
-            this.pnl_Contenedor_Entradas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.pnl_Contenedor_Entradas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Contenedor_Entradas.Location = new System.Drawing.Point(0, 47);
-            this.pnl_Contenedor_Entradas.Name = "pnl_Contenedor_Entradas";
-            this.pnl_Contenedor_Entradas.Size = new System.Drawing.Size(724, 365);
-            this.pnl_Contenedor_Entradas.TabIndex = 3;
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(232, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 30);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "SALIDAS";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Tomato;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(106, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 30);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "ENTRADAS";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // PibSalidas
             // 
@@ -97,33 +116,14 @@
             this.PibEntradas.Visible = false;
             this.PibEntradas.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // pnl_Contenedor_Entradas
             // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(106, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ENTRADAS";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(232, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "SALIDAS";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pnl_Contenedor_Entradas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.pnl_Contenedor_Entradas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Contenedor_Entradas.Location = new System.Drawing.Point(0, 47);
+            this.pnl_Contenedor_Entradas.Name = "pnl_Contenedor_Entradas";
+            this.pnl_Contenedor_Entradas.Size = new System.Drawing.Size(724, 365);
+            this.pnl_Contenedor_Entradas.TabIndex = 3;
             // 
             // FormHistorial
             // 

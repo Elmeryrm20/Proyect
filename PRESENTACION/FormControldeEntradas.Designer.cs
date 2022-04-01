@@ -48,7 +48,6 @@ namespace PRESENTACION
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.btn_Informe = new System.Windows.Forms.PictureBox();
             this.PibActualizar = new System.Windows.Forms.PictureBox();
             this.DgvHistorialIngreso = new System.Windows.Forms.DataGridView();
@@ -198,7 +197,6 @@ namespace PRESENTACION
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.btn_Informe);
             this.panel4.Controls.Add(this.PibActualizar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -206,15 +204,6 @@ namespace PRESENTACION
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(707, 65);
             this.panel4.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(290, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
             // 
             // btn_Informe
             // 
@@ -318,7 +307,6 @@ namespace PRESENTACION
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Informe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialIngreso)).EndInit();
@@ -344,6 +332,5 @@ namespace PRESENTACION
         public System.Windows.Forms.DataGridView DgvHistorialIngreso;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox btn_Informe;
-        private System.Windows.Forms.Label label5;
     }
 }

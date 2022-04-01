@@ -89,6 +89,17 @@ namespace PRESENTACION
             documento.SetCellValue("E1", "HORA DE INGRESO");
             documento.SetCellValue("F1", "Nº SEMANA");
             documento.SetCellValue("G1", "TRABAJADOR");
+            SLStyle style = new SLStyle();
+            style.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.TopBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.RightBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.BottomBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Fill.SetPattern(DocumentFormat.OpenXml.Spreadsheet.PatternValues.Solid, System.Drawing.Color.FromArgb(225, 99, 71), System.Drawing.Color.Red);
+            style.Font.FontSize = 10;
+            style.Font.FontName = "Book Antique";
+            style.Font.Bold = true;
+            documento.SetCellStyle("A1", "G1", style);
+            documento.AutoFitColumn("A", "G");
 
             for (int i = 0; i < Cantidad; i++)
             {
@@ -101,6 +112,15 @@ namespace PRESENTACION
                 documento.SetCellValue(j, 6, DgvHistorialEgreso.Rows[i].Cells[5].Value.ToString());
                 documento.SetCellValue(j, 7, DgvHistorialEgreso.Rows[i].Cells[6].Value.ToString());
             }
+            SLStyle estilos = new SLStyle();
+            estilos.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.TopBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.RightBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.BottomBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Font.FontSize = 10;
+            estilos.Font.FontName = "Book Antique";
+            documento.SetCellStyle("A2", "G" + (Cantidad + 1), estilos);
+            documento.AutoFitColumn("A", "G");
 
             string direccion = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             direccion = direccion + "\\" + "Informe_Egreso_" + DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";

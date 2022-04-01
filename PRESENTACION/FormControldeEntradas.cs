@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DATOS;
+﻿using DATOS;
 using SpreadsheetLight;
+using System;
+using System.Windows.Forms;
 
 namespace PRESENTACION
 {
@@ -38,7 +31,7 @@ namespace PRESENTACION
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            if (dtp_FechaI.Value.Date<=dtp_FechaF.Value.Date)
+            if (dtp_FechaI.Value.Date <= dtp_FechaF.Value.Date)
             {
                 DgvHistorialIngreso.DataSource = du.Sp_Filtro_Fecha_HI(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
                 DgvHistorialIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -50,7 +43,7 @@ namespace PRESENTACION
             {
                 txt_Error.Visible = true;
             }
-            
+
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -82,7 +75,7 @@ namespace PRESENTACION
         {
             SLDocument documento = new SLDocument();
             int Cantidad = int.Parse(DgvHistorialIngreso.RowCount.ToString());
-            documento.SetCellValue("A1","ID");
+            documento.SetCellValue("A1", "ID");
             documento.SetCellValue("B1", "MEDICAMENTO");
             documento.SetCellValue("C1", "CANTIDAD");
             documento.SetCellValue("D1", "FECHA DE INGRESO");
@@ -90,7 +83,19 @@ namespace PRESENTACION
             documento.SetCellValue("F1", "FECHA VENCIMIENTO");
             documento.SetCellValue("G1", "TRABAJADOR");
 
-            for (int i = 0; i <Cantidad; i++)
+            SLStyle style = new SLStyle();
+            style.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.TopBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.RightBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.BottomBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Fill.SetPattern(DocumentFormat.OpenXml.Spreadsheet.PatternValues.Solid, System.Drawing.Color.FromArgb(225, 99, 71), System.Drawing.Color.Red);
+            style.Font.FontSize = 10;
+            style.Font.FontName = "Book Antique";
+            style.Font.Bold = true;
+            documento.SetCellStyle("A1", "G1", style);
+            documento.AutoFitColumn("A", "G");
+
+            for (int i = 0; i < Cantidad; i++)
             {
                 int j = i + 2;
                 documento.SetCellValue(j, 1, DgvHistorialIngreso.Rows[i].Cells[0].Value.ToString());
@@ -101,11 +106,18 @@ namespace PRESENTACION
                 documento.SetCellValue(j, 6, Convert.ToDateTime(DgvHistorialIngreso.Rows[i].Cells[5].Value.ToString()).ToString("yyyy/MM/dd"));
                 documento.SetCellValue(j, 7, DgvHistorialIngreso.Rows[i].Cells[6].Value.ToString());
             }
-            
+            SLStyle estilos = new SLStyle();
+            estilos.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.TopBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.RightBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.BottomBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Font.FontSize = 10;
+            estilos.Font.FontName = "Book Antique";
+            documento.SetCellStyle("A2", "G" + (Cantidad + 1), estilos);
+            documento.AutoFitColumn("A", "G");
             string direccion = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            direccion = direccion + "\\" + "Informe_Ingreso_"+ DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
+            direccion = direccion + "\\" + "Informe_Ingreso_" + DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
             documento.SaveAs(direccion);
-            label5.Text = Cantidad.ToString();
             MessageBox.Show("Exportacion exitosa archivo guardado en Documentos", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
@@ -131,5 +143,6 @@ namespace PRESENTACION
             PibActualizar.Image = Properties.Resources.BotonFormActualizar01;
 
         }
+
     }
 }
