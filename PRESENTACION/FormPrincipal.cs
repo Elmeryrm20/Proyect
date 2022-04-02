@@ -509,6 +509,49 @@ namespace PRESENTACION
             }
             return true;
         }
+
+        void ActivarTootip()
+        {
+
+            ToolTip toolTip2 = new ToolTip();
+            toolTip2.SetToolTip(PibCerrar, "Cerrar");
+            toolTip2.SetToolTip(Pib_Restaurar, "Restaurar");
+            toolTip2.SetToolTip(Pib_Maximizar, "Maximizar");
+            toolTip2.SetToolTip(PibMinimizar, "Minimizar");
+
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.UseAnimation = true;
+            toolTip1.UseFading = true;
+            //toolTip1.BackColor = Color.FromArgb(241, 241, 252);
+            //toolTip1.ForeColor = Color.FromArgb(230, 50, 10);
+            toolTip1.IsBalloon = true;
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+
+            toolTip1.SetToolTip(Btn_Inicio, "Ventana de Inicio.");
+            toolTip1.SetToolTip(Btn_Medicamentos, "Muestra el inventario de medicamentos.");
+            toolTip1.SetToolTip(BtnEntrada, "Aquí podrás registrar las entradas de medicamentos.");
+            toolTip1.SetToolTip(Btn_Salida, "Aquí podrás registrar las salidas de medicamentos.");
+            toolTip1.SetToolTip(Btn_Agregar, "Agrega un nuevo medicamento al inventario.");
+            toolTip1.SetToolTip(Btn_Usuarios, "Muestra la lista de usuarios registrados.");
+            toolTip1.SetToolTip(Btn_AgregarUsuario, "Registra un nuevo usuario a la aplicación.");
+            toolTip1.SetToolTip(Btn_Historial, "Aquí puedes revisar el historial \nde todas las entradas y salidas \nde los medicamentos.");
+            toolTip1.SetToolTip(Btn_Config, "Configura las opciones de la aplicación.");
+            toolTip1.SetToolTip(Btn_Acerca, "Muestra datos acerca de la aplicación.");
+
+            //using (StringFormat sf = new StringFormat())
+            //{
+            //    sf.Alignment = StringAlignment.Center;
+            //}
+
+
+        }
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            ActivarTootip();
+        }
+
         public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
         {
             FormSalidaMedicamentos FrmSalida = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();

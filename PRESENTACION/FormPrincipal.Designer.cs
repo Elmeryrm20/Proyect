@@ -363,7 +363,7 @@ namespace PRESENTACION
             // 
             // PnlCuerpo
             // 
-            this.PnlCuerpo.BackColor = System.Drawing.SystemColors.Control;
+            this.PnlCuerpo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.PnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnlCuerpo.Location = new System.Drawing.Point(160, 32);
             this.PnlCuerpo.Margin = new System.Windows.Forms.Padding(2);
@@ -375,6 +375,7 @@ namespace PRESENTACION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(900, 550);
             this.Controls.Add(this.PnlCuerpo);
             this.Controls.Add(this.panel1);
@@ -383,6 +384,7 @@ namespace PRESENTACION
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnEntrada)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_cerrarsesion)).EndInit();
