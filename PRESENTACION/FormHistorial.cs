@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -53,21 +54,21 @@ namespace PRESENTACION
                 Formulario.BringToFront();
             }
         }
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            LlamarEntrada();
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        public void EscogerFormulario<MiForm>(byte indice) where MiForm : Form, new()
         {
             Form Formulario;
-            Formulario = pnl_Contenedor_Entradas.Controls.OfType<FormControldeSalidas>().FirstOrDefault(); //Busca en la colección el formulario
+            Formulario = pnl_Contenedor_Entradas.Controls.OfType<MiForm>().FirstOrDefault(); //Busca en la colección el formulario
             if (Formulario == null)
             {
-                Formulario = new FormControldeSalidas();
+                //Formulario = new MiForm();
+                switch (indice)
+                {
+                    case 1: Formulario = new FormControldeEntradas(); break;
+                    case 2: Formulario = new FormControldeSalidas(); break;
+                    default:
+                        break;
+                }
+
                 AddOwnedForm(Formulario);
                 Formulario.TopLevel = false;
                 //Formulario.FormBorderStyle = FormBorderStyle.None;
@@ -81,6 +82,38 @@ namespace PRESENTACION
             {
                 Formulario.BringToFront();
             }
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //LlamarEntrada();
+            EscogerFormulario<FormControldeEntradas>(1);
+
+
+            BtnSalidas.BackColor = Color.FromArgb(241, 241, 252);
+            BtnSalidas.ForeColor = Color.CornflowerBlue;
+            BtnSalidas.FlatAppearance.BorderSize = 2;
+
+            BtnEntradas.BackColor = Color.CornflowerBlue;
+            BtnEntradas.ForeColor = Color.FromArgb(241, 241, 252);
+            BtnEntradas.FlatAppearance.BorderSize = 0;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnSalidas_Click(object sender, EventArgs e)
+        {
+            EscogerFormulario<FormControldeSalidas>(2);
+
+            BtnEntradas.BackColor = Color.FromArgb(241, 241, 252);
+            BtnEntradas.ForeColor = Color.CornflowerBlue;
+            BtnEntradas.FlatAppearance.BorderSize = 2;
+
+            BtnSalidas.BackColor = Color.CornflowerBlue;
+            BtnSalidas.ForeColor = Color.FromArgb(241, 241, 252);
+            BtnSalidas.FlatAppearance.BorderSize = 0;
         }
     }
 }

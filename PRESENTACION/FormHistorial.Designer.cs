@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PnlEncabezado = new System.Windows.Forms.Panel();
+            this.BtnSalidas = new System.Windows.Forms.Button();
+            this.BtnEntradas = new System.Windows.Forms.Button();
             this.PibSalidas = new System.Windows.Forms.PictureBox();
             this.PibEntradas = new System.Windows.Forms.PictureBox();
             this.pnl_Contenedor_Entradas = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.PnlEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEntradas)).BeginInit();
             this.SuspendLayout();
@@ -52,51 +52,55 @@
             this.label1.Text = "HISTORIAL";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel1
+            // PnlEncabezado
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.PibSalidas);
-            this.panel1.Controls.Add(this.PibEntradas);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(724, 47);
-            this.panel1.TabIndex = 1;
+            this.PnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.PnlEncabezado.Controls.Add(this.BtnSalidas);
+            this.PnlEncabezado.Controls.Add(this.BtnEntradas);
+            this.PnlEncabezado.Controls.Add(this.PibSalidas);
+            this.PnlEncabezado.Controls.Add(this.PibEntradas);
+            this.PnlEncabezado.Controls.Add(this.label1);
+            this.PnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlEncabezado.Location = new System.Drawing.Point(0, 0);
+            this.PnlEncabezado.Name = "PnlEncabezado";
+            this.PnlEncabezado.Size = new System.Drawing.Size(724, 47);
+            this.PnlEncabezado.TabIndex = 1;
             // 
-            // button2
+            // BtnSalidas
             // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(232, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "SALIDAS";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.BtnSalidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.BtnSalidas.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnSalidas.FlatAppearance.BorderSize = 2;
+            this.BtnSalidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalidas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalidas.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnSalidas.Location = new System.Drawing.Point(260, 7);
+            this.BtnSalidas.Name = "BtnSalidas";
+            this.BtnSalidas.Size = new System.Drawing.Size(140, 40);
+            this.BtnSalidas.TabIndex = 3;
+            this.BtnSalidas.Text = "SALIDAS";
+            this.BtnSalidas.UseVisualStyleBackColor = false;
+            this.BtnSalidas.Click += new System.EventHandler(this.BtnSalidas_Click);
             // 
-            // button1
+            // BtnEntradas
             // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(106, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ENTRADAS";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.BtnEntradas.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEntradas.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEntradas.FlatAppearance.BorderSize = 0;
+            this.BtnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEntradas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEntradas.ForeColor = System.Drawing.Color.White;
+            this.BtnEntradas.Location = new System.Drawing.Point(120, 7);
+            this.BtnEntradas.Name = "BtnEntradas";
+            this.BtnEntradas.Size = new System.Drawing.Size(140, 40);
+            this.BtnEntradas.TabIndex = 3;
+            this.BtnEntradas.Text = "ENTRADAS";
+            this.BtnEntradas.UseVisualStyleBackColor = false;
+            this.BtnEntradas.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // PibSalidas
             // 
-            this.PibSalidas.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.PibSalidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(80)))));
             this.PibSalidas.Location = new System.Drawing.Point(579, 9);
             this.PibSalidas.Name = "PibSalidas";
             this.PibSalidas.Size = new System.Drawing.Size(99, 30);
@@ -132,12 +136,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(724, 412);
             this.Controls.Add(this.pnl_Contenedor_Entradas);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PnlEncabezado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHistorial";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.PnlEncabezado.ResumeLayout(false);
+            this.PnlEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEntradas)).EndInit();
             this.ResumeLayout(false);
@@ -147,11 +151,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PnlEncabezado;
         private System.Windows.Forms.Panel pnl_Contenedor_Entradas;
         private System.Windows.Forms.PictureBox PibSalidas;
         private System.Windows.Forms.PictureBox PibEntradas;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnSalidas;
+        private System.Windows.Forms.Button BtnEntradas;
     }
 }
