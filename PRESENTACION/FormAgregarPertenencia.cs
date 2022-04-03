@@ -11,30 +11,30 @@ using DATOS;
 
 namespace PRESENTACION
 {
-    public partial class FormAgregarAlmacen : Form
+    public partial class FormAgregarPertenencia : Form
     {
-        public FormAgregarAlmacen()
+        public FormAgregarPertenencia()
         {
             InitializeComponent();
         }
         Consultas consultas = new Consultas();
-        private void btnSerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (Txt_Nombre.Text.Length==0)
+            if (Txt_Nombre.Text.Length == 0)
             {
-                MessageBox.Show("Ingrese Almacen", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Ingrese Nombre", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
-                consultas.SP_Agregar_Almacen(Txt_Nombre.Text);
+                consultas.SP_Agregar_Pertenencia(Txt_Nombre.Text,txt_Telefono.Text);
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                this.Close(); 
+                this.Close();
             }
+        }
+
+        private void btnSerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
