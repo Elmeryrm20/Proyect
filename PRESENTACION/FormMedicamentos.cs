@@ -32,12 +32,16 @@ namespace PRESENTACION
         {
             dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgb_Medicamentos.Columns[0].Visible = false;
+            dgb_Medicamentos.Columns[6].Visible = false;
             //dgb_Medicamentos.Columns[0].Width = 25;
             //dgb_Medicamentos.Columns[0].MinimumWidth = 25;
             //dgb_Medicamentos.Columns[1].Width = 250;
             dgb_Medicamentos.ColumnHeadersHeight = 35;
             dgb_Medicamentos.Columns[1].MinimumWidth = 250;
+            dgb_Medicamentos.Columns[2].MinimumWidth = 75;
             dgb_Medicamentos.Columns[3].MinimumWidth = 90;
+            dgb_Medicamentos.RowHeadersWidth = 35;
+
         }
 
         public void Rellenartabla()
