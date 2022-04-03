@@ -448,5 +448,28 @@ namespace PRESENTACION
                 e.Handled = true;
             }
         }
+
+        private void PibAgregarAlmacen_Click(object sender, EventArgs e)
+        {
+            FormAgregarAlmacen frm = new FormAgregarAlmacen();
+            frm.ShowDialog();
+        }
+
+        private void cmbCaja_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (cmbCaja.SelectedIndex == -1)
+            {
+                ObtenerCaja();
+            }
+            else
+            {
+                int numero = Convert.ToInt32(cmbCaja.SelectedIndex.ToString());
+                ObtenerCaja();
+                cmbCaja.SelectedIndex = numero;
+            }
+
+        }
+
+
     }
 }
