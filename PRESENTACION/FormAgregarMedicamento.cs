@@ -63,10 +63,10 @@ namespace PRESENTACION
             fecha = DateTime.Now.ToString("d");
             dtFecha_Vencimiento.MinDate = DateTime.Now;
             dtFecha_Vencimiento.Value = DateTime.Now;
-            cmbLab.Text = "Seleccione Laboratorio";
-            cmbTipo.Text = "Seleccione Tipo";
-            CmbPresentacion.Text = "Seleccione Presentacion";
-            cmbCaja.Text = "Seleccione Caja";
+            cmbLab.Text = "Seleccionar";
+            cmbTipo.Text = "Seleccionar";
+            CmbPresentacion.Text = "Seleccionar";
+            cmbCaja.Text = "Seleccionar";
         }
         private bool Validaciones()
         {
@@ -93,7 +93,7 @@ namespace PRESENTACION
                 errorProvider1.SetError(textCantidad, "");
             }
 
-            if (cmbLab.Text == "Seleccione Laboratorio")
+            if (cmbLab.Text == "Seleccionar")
             {
                 errorProvider1.SetError(cmbLab, "Por favor, seleccione o ingrese un laboratorio.");
                 valor = false;
@@ -123,7 +123,7 @@ namespace PRESENTACION
                 errorProvider1.SetError(textGramaje, "");
             }
 
-            if (cmbTipo.Text == "Seleccione Tipo")
+            if (cmbTipo.Text == "Seleccionar")
             {
                 errorProvider1.SetError(cmbTipo, "Por favor, seleccione un tipo.");
                 valor = false;
@@ -133,7 +133,7 @@ namespace PRESENTACION
                 errorProvider1.SetError(cmbTipo, "");
             }
 
-            if (CmbPresentacion.Text == "Seleccione Presentacion")
+            if (CmbPresentacion.Text == "Seleccionar")
             {
                 errorProvider1.SetError(CmbPresentacion, "Por favor, seleccione una presentacion.");
                 valor = false;
@@ -143,7 +143,7 @@ namespace PRESENTACION
                 errorProvider1.SetError(CmbPresentacion, "");
             }
 
-            if (cmbCaja.Text == "Seleccione Caja")
+            if (cmbCaja.Text == "Seleccionar")
             {
                 errorProvider1.SetError(cmbCaja, "Por favor, seleccione una caja.");
                 valor = false;
@@ -162,7 +162,7 @@ namespace PRESENTACION
                 try
                 {
                     string texto = textNombre.Text + " " + textGramaje.Text;
-                    string dt = consultas.D_Consulta_Dinamica(texto).Rows[0]["COMPOSICIÒN"].ToString();
+                    string dt = consultas.D_Consulta_Dinamica(texto).Rows[0]["COMPOSICIÓN"].ToString();
                     if (dt == texto)
                     {
                         MessageBox.Show("El Medicamento Ya existe", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
