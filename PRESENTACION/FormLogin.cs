@@ -176,7 +176,7 @@ namespace PRESENTACION
         private void label2_Click(object sender, EventArgs e)
         {
 
-            
+
             FormIngresarNewContraseña frm = new FormIngresarNewContraseña();
 
             frm.Show();
@@ -277,6 +277,7 @@ namespace PRESENTACION
             if (TxtPass.Text == "Contraseña")
             {
                 TxtPass.Clear();
+                TxtPass.UseSystemPasswordChar = true;
             }
             //ActivarTextbox = true;
             //if (TxtPass.Text == "Contraseña")
@@ -302,6 +303,7 @@ namespace PRESENTACION
             {
                 //TxtPass.UseSystemPasswordChar = false;
                 TxtPass.Text = "Contraseña";
+                TxtPass.UseSystemPasswordChar = false;
             }
         }
 
@@ -311,6 +313,7 @@ namespace PRESENTACION
             PibCheckUsu.Visible = false;
 
             if ((char)Keys.Enter == e.KeyChar) ValidacionTextbox();
+            else if ((char)Keys.Tab == e.KeyChar) e.Handled = false;
             else if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
             else if (char.IsControl(e.KeyChar)) e.Handled = false;
             else e.Handled = true;
@@ -322,6 +325,7 @@ namespace PRESENTACION
             PibCheckPass.Visible = false;
 
             if ((char)Keys.Enter == e.KeyChar) ValidacionTextbox();
+            else if ((char)Keys.Tab == e.KeyChar) e.Handled = false;
             else if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
             else if (char.IsControl(e.KeyChar)) e.Handled = false;
             else e.Handled = true;
@@ -361,5 +365,25 @@ namespace PRESENTACION
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtPass_Click(object sender, EventArgs e)
+        {
+            TxtPass.UseSystemPasswordChar = true;
+        }
+
+        private void txtusuario_Click(object sender, EventArgs e)
+        {
+            if (TxtPass.Text == "")
+            {
+                TxtPass.Text = "Contraseña";
+                TxtPass.UseSystemPasswordChar = false;
+
+            }
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.PibMinimizar = new System.Windows.Forms.PictureBox();
             this.PibCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtApoyo = new System.Windows.Forms.TextBox();
             this.PibCheckPass = new System.Windows.Forms.PictureBox();
             this.PibCheckUsu = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,6 @@
             this.DtgPrueba = new System.Windows.Forms.DataGridView();
             this.PibIngresar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtApoyo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
@@ -66,6 +66,7 @@
             this.txtusuario.Size = new System.Drawing.Size(175, 15);
             this.txtusuario.TabIndex = 2;
             this.txtusuario.Text = "DNI";
+            this.txtusuario.Click += new System.EventHandler(this.txtusuario_Click);
             this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             this.txtusuario.Enter += new System.EventHandler(this.Txtusuario_Enter);
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
@@ -84,6 +85,7 @@
             this.TxtPass.Size = new System.Drawing.Size(175, 15);
             this.TxtPass.TabIndex = 3;
             this.TxtPass.Text = "Contraseña";
+            this.TxtPass.Click += new System.EventHandler(this.TxtPass_Click);
             this.TxtPass.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
             this.TxtPass.Enter += new System.EventHandler(this.txtcontraseña_Enter);
             this.TxtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
@@ -153,6 +155,14 @@
             this.panel2.TabIndex = 1;
             this.panel2.TabStop = true;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtApoyo
+            // 
+            this.txtApoyo.Location = new System.Drawing.Point(28, 330);
+            this.txtApoyo.Name = "txtApoyo";
+            this.txtApoyo.Size = new System.Drawing.Size(100, 20);
+            this.txtApoyo.TabIndex = 19;
+            this.txtApoyo.Visible = false;
             // 
             // PibCheckPass
             // 
@@ -231,14 +241,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txtApoyo
-            // 
-            this.txtApoyo.Location = new System.Drawing.Point(28, 330);
-            this.txtApoyo.Name = "txtApoyo";
-            this.txtApoyo.Size = new System.Drawing.Size(100, 20);
-            this.txtApoyo.TabIndex = 19;
-            this.txtApoyo.Visible = false;
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,6 +254,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
