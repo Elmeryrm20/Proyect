@@ -25,9 +25,16 @@ namespace PRESENTACION
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            consultas.SP_Agregar_Almacen(Txt_Nombre.Text);
-            MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            this.Close();
+            if (Txt_Nombre.Text.Length==0)
+            {
+                MessageBox.Show("Ingrese Almacen", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                consultas.SP_Agregar_Almacen(Txt_Nombre.Text);
+                MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                this.Close(); 
+            }
         }
     }
 }
