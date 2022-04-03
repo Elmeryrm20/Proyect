@@ -77,6 +77,12 @@
     <Compile Include="FormAgregarAlmacen.Designer.cs">
       <DependentUpon>FormAgregarAlmacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarPertenencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarPertenencia.Designer.cs">
+      <DependentUpon>FormAgregarPertenencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarAlmacen.resx">
       <DependentUpon>FormAgregarAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarPertenencia.resx">
+      <DependentUpon>FormAgregarPertenencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConfiguracion.resx">
       <DependentUpon>FormConfiguracion.cs</DependentUpon>

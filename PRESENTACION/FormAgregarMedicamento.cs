@@ -470,6 +470,24 @@ namespace PRESENTACION
 
         }
 
+        private void PibAgregarPertenencia_Click(object sender, EventArgs e)
+        {
+            FormAgregarPertenencia frm = new FormAgregarPertenencia();
+            frm.ShowDialog();
+        }
 
+        private void CmbPertenencia_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (CmbPertenencia.SelectedIndex == -1)
+            {
+                ObtenerPertenencia();
+            }
+            else
+            {
+                int numero = Convert.ToInt32(CmbPertenencia.SelectedIndex.ToString());
+                ObtenerPertenencia();
+                CmbPertenencia.SelectedIndex = numero;
+            }
+        }
     }
 }

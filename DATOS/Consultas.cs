@@ -970,5 +970,24 @@ namespace DATOS
             }
             Conexion.connection.Close();
         }
+        public void SP_Agregar_Pertenencia(String Descripcion,string Telefono)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Pertenencia", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Descripcion", Descripcion);
+            cmd.Parameters.AddWithValue("Telefono", Telefono);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+        }
     }
 }

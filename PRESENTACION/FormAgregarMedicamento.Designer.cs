@@ -324,6 +324,7 @@ namespace PRESENTACION
             this.CmbPertenencia.Size = new System.Drawing.Size(130, 21);
             this.CmbPertenencia.TabIndex = 52;
             this.CmbPertenencia.Text = "Seleccionar";
+            this.CmbPertenencia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CmbPertenencia_MouseDown);
             // 
             // label2
             // 
@@ -423,7 +424,7 @@ namespace PRESENTACION
             this.PibAgregarPertenencia.Size = new System.Drawing.Size(24, 24);
             this.PibAgregarPertenencia.TabIndex = 54;
             this.PibAgregarPertenencia.TabStop = false;
-            this.PibAgregarPertenencia.Visible = false;
+            this.PibAgregarPertenencia.Click += new System.EventHandler(this.PibAgregarPertenencia_Click);
             // 
             // PibImagen
             // 
