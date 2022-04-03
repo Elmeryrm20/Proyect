@@ -1,5 +1,6 @@
 ﻿using DATOS;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
@@ -107,7 +108,19 @@ namespace PRESENTACION
                 {
                     string fecha = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
 
-                    string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, null);
+                    string nacionalidad;
+                    if (CmbNacionalidad.SelectedIndex < 0) nacionalidad = CmbNacionalidad.Text;
+                    else nacionalidad = "Peruano";
+                    string Colaborador;
+                    if (CmbColaborador.SelectedIndex < 0)
+                    {
+                        Colaborador = "t1Mtbf8p";
+                    }
+                    else
+                    {
+                        Colaborador = Colaboradores[CmbColaborador.SelectedIndex,0];
+                    }
+                    string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, nacionalidad, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
 
                     consultas.AbrirConexion();
                     for (int i = 0; i < DgvSalida.Rows.Count; i++)
@@ -137,7 +150,7 @@ namespace PRESENTACION
                 }
                 else
                 {
-                    MessageBox.Show("Agregue al menos un medicamento en la tabla.", "Información",MessageBoxButtons.OK);
+                    MessageBox.Show("Agregue al menos un medicamento en la tabla.", "Información", MessageBoxButtons.OK);
                     PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed05;
                     DgvSalida.Focus();
                 }
@@ -164,16 +177,45 @@ namespace PRESENTACION
 
         }
 
+        private string[,] Colaboradores;
+        private string[,] Coordinadores;
+
+        void RellenarPersonal()
+        {
+            DataTable dt_Colaborador = consultas.D_MostrarColaboradores(DNI);
+            Colaboradores = new string[dt_Colaborador.Rows.Count, 2];
+            for (int i = 0; i < dt_Colaborador.Rows.Count; i++)
+            {
+                Colaboradores[i, 0] = dt_Colaborador.Rows[i][0].ToString();
+                Colaboradores[i, 1] = dt_Colaborador.Rows[i][1].ToString();
+                CmbColaborador.Items.Add(Colaboradores[i, 1]);
+            }
+
+            DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(DNI);
+            Coordinadores = new string[dt_Coordinador.Rows.Count, 2];
+
+            for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
+            {
+                Coordinadores[i, 0] = dt_Coordinador.Rows[i][0].ToString();
+                Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
+                CmbEncargado.Items.Add(Coordinadores[i, 1]);
+            }
+        }
         private void FormSalidaMedicamentos_Load(object sender, System.EventArgs e)
         {
-            CmbColaborador.DisplayMember = "Trabajador";
-            CmbColaborador.DataSource = consultas.D_MostrarColaboradores(DNI);
-            //CmbColaborador.ValueMember = "Colaborador_Desc";
+            RellenarPersonal();
+            //CmbColaborador.DisplayMember = "Trabajador";
+            //CmbColaborador.DataSource = consultas.D_MostrarColaboradores(DNI);
+            ////CmbColaborador.ValueMember = "Colaborador_Desc";
             CmbColaborador.Text = "Seleccionar";
 
-            CmbEncargado.DisplayMember = "Trabajador";
-            CmbEncargado.DataSource = consultas.D_MostrarColaboradores(DNI);
-            //CmbEncargado.ValueMember = "Encargado_Desc";
+            CmbNacionalidad.Items.Add("Peruano");
+            CmbNacionalidad.Items.Add("Extranjero");
+
+
+            //CmbEncargado.DisplayMember = "Trabajador";
+            //CmbEncargado.DataSource = consultas.D_MostrarColaboradores(DNI);
+            ////CmbEncargado.ValueMember = "Encargado_Desc";
             CmbEncargado.Text = "Seleccionar";
 
             DesignDataGridView();

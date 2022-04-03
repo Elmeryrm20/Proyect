@@ -30,6 +30,7 @@ namespace PRESENTACION
             ObtenerCaja();
             ObtenerPresentacion();
             ObtenerLaboratorio();
+            ObtenerPertenencia();
             Consulta_Editar_Medicamento();
 
         }
@@ -58,6 +59,11 @@ namespace PRESENTACION
             cmbLab.DisplayMember = "Lab_Descripcion";
             cmbLab.DataSource = consultas.D_Laboratorio();
         }
+        void ObtenerPertenencia()
+        {
+            CmbPertenencia.DisplayMember = "Per_Desc";
+            CmbPertenencia.DataSource = consultas.D_Pertenencia();
+        }
         private void btnSerrar_Click(object sender, EventArgs e)
         {
             FormMedicamentos fr =Owner as FormMedicamentos;
@@ -76,12 +82,12 @@ namespace PRESENTACION
                     ptb_Imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     byte[] img = ms.ToArray();
 
-                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img);
+                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex +1);
                 }
                 else
                 {
                     byte[] img = null;
-                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img);
+                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
                 }
                 MessageBox.Show("Los cambios Guardados", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 Consulta_Editar_Medicamento();
@@ -99,12 +105,21 @@ namespace PRESENTACION
 
             try
             {
-                txtNombre.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
-                txt_fecha.Text = ((DateTime)consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["FEC. VENCIMIENTO"]).ToString("D");
-                cmbTipo.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["TIPO"].ToString();
-                cmbCaja.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["ALMACÉN"].ToString();
-                CmbPresentacion.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["PRESENTACIÓN"].ToString();
-                cmbLab.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["LABORATORIO"].ToString();
+                DataTable dt = consultas.D_Medicamento_Detallado(id_Medicamento);
+                txtNombre.Text = dt.Rows[0][0].ToString();
+                txt_fecha.Text = ((DateTime)dt.Rows[0][4]).ToString("D");
+                cmbTipo.Text = dt.Rows[0][5].ToString();
+                cmbCaja.Text = dt.Rows[0][3].ToString();
+                CmbPresentacion.Text = dt.Rows[0][7].ToString();
+                cmbLab.Text = dt.Rows[0][6].ToString();
+                CmbPertenencia.Text = dt.Rows[0][8].ToString();
+
+                //txtNombre.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
+                //txt_fecha.Text = ((DateTime)consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["FEC. VENCIMIENTO"]).ToString("D");
+                //cmbTipo.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["TIPO"].ToString();
+                //cmbCaja.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["ALMACÉN"].ToString();
+                //CmbPresentacion.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["PRESENTACIÓN"].ToString();
+                //cmbLab.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["LABORATORIO"].ToString();
                 try
                 {
                     MemoryStream img = new MemoryStream((byte[])consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["imagen"]);

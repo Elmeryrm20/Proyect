@@ -1,6 +1,6 @@
 ﻿using DATOS;
 using System;
-using System.Drawing;
+using System.Data;
 using System.IO;
 using System.Windows.Forms;
 
@@ -50,6 +50,11 @@ namespace PRESENTACION
             cmbLab.DisplayMember = "Lab_Descripcion";
             cmbLab.DataSource = consultas.D_Laboratorio();
         }
+        void ObtenerPertenencia()
+        {
+            CmbPertenencia.DisplayMember = "Per_Desc";
+            CmbPertenencia.DataSource = consultas.D_Pertenencia();
+        }
 
         public string fecha;
 
@@ -59,6 +64,8 @@ namespace PRESENTACION
             ObtenerCaja();
             ObtenerPresentacion();
             ObtenerLaboratorio();
+            ObtenerPertenencia();
+            RellenarPersonal();
 
             fecha = DateTime.Now.ToString("d");
             dtFecha_Vencimiento.MinDate = DateTime.Now;
@@ -67,7 +74,34 @@ namespace PRESENTACION
             cmbTipo.Text = "Seleccionar";
             CmbPresentacion.Text = "Seleccionar";
             cmbCaja.Text = "Seleccionar";
+            CmbPertenencia.Text = "Seleccionar";
         }
+
+        private string[,] Colaboradores;
+        private string[,] Coordinadores;
+
+        void RellenarPersonal()
+        {
+            DataTable dt_Colaborador = consultas.D_MostrarColaboradores(Tra_DNI);
+            Colaboradores = new string[dt_Colaborador.Rows.Count, 2];
+            for (int i = 0; i < dt_Colaborador.Rows.Count; i++)
+            {
+                Colaboradores[i, 0] = dt_Colaborador.Rows[i][0].ToString();
+                Colaboradores[i, 1] = dt_Colaborador.Rows[i][1].ToString();
+                CmbColaborador.Items.Add(Colaboradores[i, 1]);
+            }
+
+            DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(Tra_DNI);
+            Coordinadores = new string[dt_Coordinador.Rows.Count, 2];
+
+            for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
+            {
+                Coordinadores[i, 0] = dt_Coordinador.Rows[i][0].ToString();
+                Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
+                CmbEncargado.Items.Add(Coordinadores[i, 1]);
+            }
+        }
+
         private bool Validaciones()
         {
             bool valor = true;
@@ -152,6 +186,24 @@ namespace PRESENTACION
             {
                 errorProvider1.SetError(cmbCaja, "");
             }
+            if (CmbPertenencia.Text == "Seleccionar")
+            {
+                errorProvider1.SetError(CmbPertenencia, "Por favor, seleccione una Filial o Proyecto.");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(CmbPertenencia, "");
+            }
+            if (CmbEncargado.Text == "Seleccionar")
+            {
+                errorProvider1.SetError(CmbEncargado, "Por favor, seleccione Coordinador.");
+                valor = false;
+            }
+            else
+            {
+                errorProvider1.SetError(CmbEncargado, "");
+            }
             return valor;
         }
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -165,7 +217,7 @@ namespace PRESENTACION
                     string dt = consultas.D_Consulta_Dinamica(texto).Rows[0]["COMPOSICIÓN"].ToString();
                     if (dt == texto)
                     {
-                        MessageBox.Show("El Medicamento Ya existe", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("El Medicamento Ya existe", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                 }
                 catch (Exception)
@@ -181,10 +233,21 @@ namespace PRESENTACION
                     }
                     else img = null;
                     string FechaActual = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
-                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, CmbPresentacion.SelectedIndex + 1, img);
+                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, CmbPresentacion.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
                     int CodigoMedicamento = consultas.D_UltimoIdIngresado();
-                    string CodigoIngreso = consultas.D_ActualizarIngreso(Tra_DNI, FechaActual, 1);
-                    consultas.SP_Agregar_Detalle_Ingreso(int.Parse(CodigoIngreso),CodigoMedicamento,int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"));
+
+                    string Colaborador;
+                    if (CmbColaborador.SelectedIndex < 0)
+                    {
+                        Colaborador = "t1Mtbf8p";
+                    }
+                    else
+                    {
+                        Colaborador = Colaboradores[CmbColaborador.SelectedIndex,0];
+                    }
+
+                    string CodigoIngreso = consultas.D_ActualizarIngreso(Tra_DNI, FechaActual, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    consultas.SP_Agregar_Detalle_Ingreso(int.Parse(CodigoIngreso), CodigoMedicamento, int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"));
 
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Limpiar();
@@ -204,6 +267,10 @@ namespace PRESENTACION
             CmbPresentacion.Text = "Seleccionar";
             dtFecha_Vencimiento.Value = DateTime.Now;
             PibImagen.Image = Properties.Resources.Imagen01;
+            CmbPertenencia.Text = "Seleccionar";
+            CmbColaborador.Text = "Seleccionar";
+            CmbEncargado.Text = "Seleccionar";
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -304,7 +371,7 @@ namespace PRESENTACION
                 ObtenerLaboratorio();
                 cmbLab.SelectedIndex = numero;
             }
-            
+
         }
 
         private void PibAgregarMedicamento_MouseEnter(object sender, EventArgs e)

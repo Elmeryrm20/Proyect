@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_Porcentage = new System.Windows.Forms.Label();
@@ -47,14 +48,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ptb_Imagen = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ptb_Imagen = new System.Windows.Forms.PictureBox();
-            this.btnSerrar = new System.Windows.Forms.PictureBox();
+            this.LblPertenencia = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Imagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +68,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 42);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSerrar
+            // 
+            this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
+            this.btnSerrar.Location = new System.Drawing.Point(392, 9);
+            this.btnSerrar.Name = "btnSerrar";
+            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnSerrar.TabIndex = 2;
+            this.btnSerrar.TabStop = false;
+            this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
             // 
             // lbl_Nombre
             // 
@@ -79,6 +93,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.LblPertenencia);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.lbl_Porcentage);
             this.panel2.Controls.Add(this.lbl_Nombre);
             this.panel2.Controls.Add(this.label9);
@@ -108,7 +124,7 @@
             // lbl_Porcentage
             // 
             this.lbl_Porcentage.AutoSize = true;
-            this.lbl_Porcentage.Location = new System.Drawing.Point(210, 262);
+            this.lbl_Porcentage.Location = new System.Drawing.Point(208, 286);
             this.lbl_Porcentage.Name = "lbl_Porcentage";
             this.lbl_Porcentage.Size = new System.Drawing.Size(35, 13);
             this.lbl_Porcentage.TabIndex = 19;
@@ -117,7 +133,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(36, 262);
+            this.label9.Location = new System.Drawing.Point(34, 286);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(168, 13);
             this.label9.TabIndex = 18;
@@ -189,7 +205,7 @@
             // lbl_F_Vencimiento
             // 
             this.lbl_F_Vencimiento.AutoSize = true;
-            this.lbl_F_Vencimiento.Location = new System.Drawing.Point(149, 173);
+            this.lbl_F_Vencimiento.Location = new System.Drawing.Point(149, 208);
             this.lbl_F_Vencimiento.Name = "lbl_F_Vencimiento";
             this.lbl_F_Vencimiento.Size = new System.Drawing.Size(35, 13);
             this.lbl_F_Vencimiento.TabIndex = 10;
@@ -207,7 +223,7 @@
             // lbl_Egreso
             // 
             this.lbl_Egreso.AutoSize = true;
-            this.lbl_Egreso.Location = new System.Drawing.Point(149, 221);
+            this.lbl_Egreso.Location = new System.Drawing.Point(149, 256);
             this.lbl_Egreso.Name = "lbl_Egreso";
             this.lbl_Egreso.Size = new System.Drawing.Size(35, 13);
             this.lbl_Egreso.TabIndex = 8;
@@ -216,7 +232,7 @@
             // lbl_Ingeso
             // 
             this.lbl_Ingeso.AutoSize = true;
-            this.lbl_Ingeso.Location = new System.Drawing.Point(149, 197);
+            this.lbl_Ingeso.Location = new System.Drawing.Point(149, 232);
             this.lbl_Ingeso.Name = "lbl_Ingeso";
             this.lbl_Ingeso.Size = new System.Drawing.Size(35, 13);
             this.lbl_Ingeso.TabIndex = 7;
@@ -234,7 +250,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 173);
+            this.label4.Location = new System.Drawing.Point(36, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 5;
@@ -249,24 +265,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "ALMACEN:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 221);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "TOTAL EGRESADO:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 197);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "TOTAL INGRESADO:";
-            // 
             // ptb_Imagen
             // 
             this.ptb_Imagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -277,17 +275,41 @@
             this.ptb_Imagen.TabStop = false;
             this.ptb_Imagen.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnSerrar
+            // label3
             // 
-            this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
-            this.btnSerrar.Location = new System.Drawing.Point(392, 9);
-            this.btnSerrar.Name = "btnSerrar";
-            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
-            this.btnSerrar.TabIndex = 2;
-            this.btnSerrar.TabStop = false;
-            this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 256);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "TOTAL EGRESADO:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 232);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "TOTAL INGRESADO:";
+            // 
+            // LblPertenencia
+            // 
+            this.LblPertenencia.AutoSize = true;
+            this.LblPertenencia.Location = new System.Drawing.Point(149, 175);
+            this.LblPertenencia.Name = "LblPertenencia";
+            this.LblPertenencia.Size = new System.Drawing.Size(35, 13);
+            this.LblPertenencia.TabIndex = 21;
+            this.LblPertenencia.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(56, 175);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "PERTENENCIA:";
             // 
             // FormDetallesMedicamento
             // 
@@ -301,10 +323,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FoomDetallesMedicamento";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Imagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +356,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbl_Existencia;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LblPertenencia;
+        private System.Windows.Forms.Label label8;
     }
 }

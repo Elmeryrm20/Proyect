@@ -261,7 +261,6 @@ namespace PRESENTACION
             this.LblIndice.Size = new System.Drawing.Size(53, 18);
             this.LblIndice.TabIndex = 6;
             this.LblIndice.Text = "Indice";
-            this.LblIndice.Visible = false;
             // 
             // panel3
             // 

@@ -170,6 +170,27 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
+        public DataTable D_Pertenencia()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_Pertenencia", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return tabla;
+        }
         public DataTable D_Laboratorio()
         {
             Conexion.connection.Open();
@@ -196,6 +217,28 @@ namespace DATOS
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("SP_MostrarColaboradores", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("DNI", DNI);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return tabla;
+        }
+        public DataTable D_MostrarCoordinadores(string DNI)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("SP_MostrarCoordinadores", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("DNI", DNI);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -425,7 +468,7 @@ namespace DATOS
             }
             Conexion.connection.Close();
         }
-        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C, byte[] imagen)
+        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C, byte[] imagen,int Pertenencia)
         {
 
             Conexion.connection.Open();
@@ -441,6 +484,7 @@ namespace DATOS
             cmd.Parameters.AddWithValue("tipo", Tipo);
             cmd.Parameters.AddWithValue("alm", caja);
             cmd.Parameters.AddWithValue("imagen", imagen);
+            cmd.Parameters.AddWithValue("per", Pertenencia);
             try
             {
                 cmd.ExecuteNonQuery();
@@ -524,7 +568,7 @@ namespace DATOS
             Conexion.connection.Close();
 
         }
-        public string D_ActualizarIngreso(string DNI, string Fecha, int Procedencia)
+        public string D_ActualizarIngreso(string DNI, string Fecha, string Colaborador, string Coordinador)
         {
             Conexion.connection.Open();
 
@@ -532,7 +576,8 @@ namespace DATOS
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Ingreso_Fecha", Fecha);
             cmd.Parameters.AddWithValue("Trabajador_DNI", DNI);
-            cmd.Parameters.AddWithValue("Procedencia_Codigo", Procedencia);
+            cmd.Parameters.AddWithValue("Colaborador_DNI", Colaborador);
+            cmd.Parameters.AddWithValue("Coordinador_DNI", Coordinador);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
@@ -570,14 +615,16 @@ namespace DATOS
             //Conexion.connection.Close();
         }
 
-        public string D_ActualizarEgreso(string Fecha, string Tra_DNI, string Per_DNI)
+        public string D_ActualizarEgreso(string Fecha, string Tra_DNI, string Nacionalidad, string Colaborador, string Coordinador)
         {
             Conexion.connection.Open();
             MySqlCommand cmd = new MySqlCommand("Sp_AgregarEgreso", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Egreso_Fecha", Fecha);
             cmd.Parameters.AddWithValue("Trabajador_DNI", Tra_DNI);
-            cmd.Parameters.AddWithValue("Persona_DNI", Per_DNI);
+            cmd.Parameters.AddWithValue("Egreso_Nacionalidad", Nacionalidad);
+            cmd.Parameters.AddWithValue("Colaborador_DNI", Colaborador);
+            cmd.Parameters.AddWithValue("Coordinador_DNI", Coordinador);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
@@ -614,7 +661,7 @@ namespace DATOS
             //Conexion.connection.Close();
 
         }
-        public void SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm, byte[] imagen)
+        public void SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm, byte[] imagen, int per)
         {
             Conexion.connection.Open();
 
@@ -628,6 +675,7 @@ namespace DATOS
             cmd.Parameters.AddWithValue("tip", tip);
             cmd.Parameters.AddWithValue("alm", alm);
             cmd.Parameters.AddWithValue("imagen", imagen);
+            cmd.Parameters.AddWithValue("per", per);
             try
             {
                 cmd.ExecuteNonQuery();

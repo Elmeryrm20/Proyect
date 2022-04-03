@@ -27,7 +27,7 @@ namespace PRESENTACION
             this.valor = valor;
             Medicamentos_Detallados();
         }
-        readonly int valor;
+        int valor;
 
         private void btnSerrar_Click(object sender, EventArgs e)
         {
@@ -36,17 +36,32 @@ namespace PRESENTACION
 
         void Medicamentos_Detallados()
         {
-            
-            lbl_Nombre.Text=consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÓN"].ToString();
-            lbl_Ingeso.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"].ToString();
-            lbl_Egreso.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"].ToString();
-            lbl_Almacen.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["ALMACÉN"].ToString();
-            lbl_F_Vencimiento.Text = ((DateTime)consultas.D_Medicamento_Detallado(valor).Rows[0]["FEC. VENCIMIENTO"]).ToString("D");
-            lbl_Tipo.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TIPO"].ToString();
-            lbl_Laboratorio.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["LABORATORIO"].ToString();
-            lbl_Presentacion.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["PRESENTACIÓN"].ToString();
-            int Ingreso =(int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
-            int Egreso= (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
+
+            //lbl_Nombre.Text=consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÓN"].ToString();
+            //lbl_Ingeso.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"].ToString();
+            //lbl_Egreso.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"].ToString();
+            //lbl_Almacen.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["ALMACÉN"].ToString();
+            //lbl_F_Vencimiento.Text = ((DateTime)consultas.D_Medicamento_Detallado(valor).Rows[0]["FEC. VENCIMIENTO"]).ToString("D");
+            //lbl_Tipo.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["TIPO"].ToString();
+            //lbl_Laboratorio.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["LABORATORIO"].ToString();
+            //lbl_Presentacion.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["PRESENTACIÓN"].ToString();
+            //int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
+            //int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
+
+            DataTable dt = consultas.D_Medicamento_Detallado(valor);
+            lbl_Nombre.Text = dt.Rows[0][0].ToString();
+            lbl_Ingeso.Text = dt.Rows[0][1].ToString();
+            int Ingreso = int.Parse(dt.Rows[0][1].ToString());
+            lbl_Egreso.Text = dt.Rows[0][2].ToString();
+            int Egreso = int.Parse(dt.Rows[0][2].ToString());
+            lbl_Almacen.Text = dt.Rows[0][3].ToString();
+            lbl_F_Vencimiento.Text = dt.Rows[0][4].ToString();
+            lbl_Tipo.Text = dt.Rows[0][5].ToString();
+            lbl_Laboratorio.Text = dt.Rows[0][6].ToString();
+            lbl_Presentacion.Text = dt.Rows[0][7].ToString();
+            LblPertenencia.Text = dt.Rows[0][8].ToString();
+
+
             lbl_Existencia.Text = (Ingreso - Egreso).ToString();
             double Porcentaje=Convert.ToDouble((Ingreso - Egreso)*100/ Ingreso);
             lbl_Porcentage.Text = Math.Round(Porcentaje).ToString() + " %";

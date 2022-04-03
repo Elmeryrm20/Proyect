@@ -61,6 +61,16 @@ namespace PRESENTACION
             this.Pib_Agregar_Lab = new System.Windows.Forms.PictureBox();
             this.PibAgregarMedicamento = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.CmbPertenencia = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.PibAgregarPertenencia = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LblEncargado = new System.Windows.Forms.Label();
+            this.CmbEncargado = new System.Windows.Forms.ComboBox();
+            this.CmbColaborador = new System.Windows.Forms.ComboBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -75,6 +85,10 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Agregar_Lab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMedicamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarPertenencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -227,7 +241,7 @@ namespace PRESENTACION
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(450, 145);
+            this.label12.Location = new System.Drawing.Point(571, 217);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(128, 16);
             this.label12.TabIndex = 46;
@@ -303,7 +317,7 @@ namespace PRESENTACION
             this.PibImagen.BackColor = System.Drawing.Color.White;
             this.PibImagen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibImagen.Image = global::PRESENTACION.Properties.Resources.Imagen01;
-            this.PibImagen.Location = new System.Drawing.Point(437, 176);
+            this.PibImagen.Location = new System.Drawing.Point(558, 248);
             this.PibImagen.Name = "PibImagen";
             this.PibImagen.Size = new System.Drawing.Size(150, 150);
             this.PibImagen.TabIndex = 44;
@@ -314,7 +328,7 @@ namespace PRESENTACION
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::PRESENTACION.Properties.Resources.ImagenMarco01;
-            this.pictureBox9.Location = new System.Drawing.Point(434, 129);
+            this.pictureBox9.Location = new System.Drawing.Point(555, 201);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(156, 200);
             this.pictureBox9.TabIndex = 51;
@@ -398,7 +412,6 @@ namespace PRESENTACION
             this.PibAgregarAlmacen.Size = new System.Drawing.Size(24, 24);
             this.PibAgregarAlmacen.TabIndex = 49;
             this.PibAgregarAlmacen.TabStop = false;
-            this.PibAgregarAlmacen.Visible = false;
             // 
             // Pib_Agregar_Lab
             // 
@@ -416,7 +429,7 @@ namespace PRESENTACION
             this.PibAgregarMedicamento.BackColor = System.Drawing.Color.Transparent;
             this.PibAgregarMedicamento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibAgregarMedicamento.Image = global::PRESENTACION.Properties.Resources.BotonFormNuevoMedicamentos05;
-            this.PibAgregarMedicamento.Location = new System.Drawing.Point(457, 351);
+            this.PibAgregarMedicamento.Location = new System.Drawing.Point(578, 423);
             this.PibAgregarMedicamento.Name = "PibAgregarMedicamento";
             this.PibAgregarMedicamento.Size = new System.Drawing.Size(110, 60);
             this.PibAgregarMedicamento.TabIndex = 45;
@@ -435,6 +448,118 @@ namespace PRESENTACION
             this.pictureBox5.TabIndex = 50;
             this.pictureBox5.TabStop = false;
             // 
+            // CmbPertenencia
+            // 
+            this.CmbPertenencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmbPertenencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.CmbPertenencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.CmbPertenencia.FormattingEnabled = true;
+            this.CmbPertenencia.Location = new System.Drawing.Point(193, 469);
+            this.CmbPertenencia.Name = "CmbPertenencia";
+            this.CmbPertenencia.Size = new System.Drawing.Size(130, 21);
+            this.CmbPertenencia.TabIndex = 52;
+            this.CmbPertenencia.Text = "Seleccionar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(103, 471);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 16);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Pertenencia:";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = global::PRESENTACION.Properties.Resources.ComboBox04;
+            this.pictureBox10.Location = new System.Drawing.Point(98, 464);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(230, 30);
+            this.pictureBox10.TabIndex = 55;
+            this.pictureBox10.TabStop = false;
+            // 
+            // PibAgregarPertenencia
+            // 
+            this.PibAgregarPertenencia.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
+            this.PibAgregarPertenencia.Location = new System.Drawing.Point(341, 467);
+            this.PibAgregarPertenencia.Name = "PibAgregarPertenencia";
+            this.PibAgregarPertenencia.Size = new System.Drawing.Size(24, 24);
+            this.PibAgregarPertenencia.TabIndex = 54;
+            this.PibAgregarPertenencia.TabStop = false;
+            this.PibAgregarPertenencia.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(385, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 16);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Colaborador:";
+            // 
+            // LblEncargado
+            // 
+            this.LblEncargado.AutoSize = true;
+            this.LblEncargado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.LblEncargado.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEncargado.ForeColor = System.Drawing.Color.White;
+            this.LblEncargado.Location = new System.Drawing.Point(386, 126);
+            this.LblEncargado.Name = "LblEncargado";
+            this.LblEncargado.Size = new System.Drawing.Size(86, 16);
+            this.LblEncargado.TabIndex = 57;
+            this.LblEncargado.Text = "Coordinador:";
+            // 
+            // CmbEncargado
+            // 
+            this.CmbEncargado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmbEncargado.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.CmbEncargado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.CmbEncargado.FormattingEnabled = true;
+            this.CmbEncargado.Location = new System.Drawing.Point(484, 122);
+            this.CmbEncargado.Name = "CmbEncargado";
+            this.CmbEncargado.Size = new System.Drawing.Size(192, 23);
+            this.CmbEncargado.TabIndex = 59;
+            this.CmbEncargado.Text = "Seleccionar:";
+            // 
+            // CmbColaborador
+            // 
+            this.CmbColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmbColaborador.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.CmbColaborador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.CmbColaborador.FormattingEnabled = true;
+            this.CmbColaborador.Location = new System.Drawing.Point(484, 88);
+            this.CmbColaborador.Name = "CmbColaborador";
+            this.CmbColaborador.Size = new System.Drawing.Size(192, 23);
+            this.CmbColaborador.TabIndex = 58;
+            this.CmbColaborador.Text = "Seleccionar";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = global::PRESENTACION.Properties.Resources.ComboBox07;
+            this.pictureBox11.Location = new System.Drawing.Point(380, 120);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox11.TabIndex = 60;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Image = global::PRESENTACION.Properties.Resources.ComboBox07;
+            this.pictureBox12.Location = new System.Drawing.Point(381, 86);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox12.TabIndex = 61;
+            this.pictureBox12.TabStop = false;
+            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,6 +567,16 @@ namespace PRESENTACION
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(720, 502);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.LblEncargado);
+            this.Controls.Add(this.CmbEncargado);
+            this.Controls.Add(this.CmbColaborador);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.CmbPertenencia);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.PibAgregarPertenencia);
             this.Controls.Add(this.PibImagen);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox9);
@@ -491,6 +626,10 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Agregar_Lab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMedicamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibAgregarPertenencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,5 +668,15 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.ComboBox CmbPertenencia;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox PibAgregarPertenencia;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblEncargado;
+        private System.Windows.Forms.ComboBox CmbEncargado;
+        private System.Windows.Forms.ComboBox CmbColaborador;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

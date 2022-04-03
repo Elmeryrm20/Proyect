@@ -65,8 +65,8 @@ namespace PRESENTACION
             valor_ID = 1;
             cmbTipo.SelectedIndex = -1;
             cmb_Almacen.SelectedIndex = -1;
-            cmbTipo.Text = "Seleccione Tipo";
-            cmb_Almacen.Text = "Seleccione Almacén";
+            cmbTipo.Text = "Seleccionar";
+            cmb_Almacen.Text = "Seleccionar";
             LblIndice.Visible = false;
             txb_Buscar.SelectAll();
             txb_Buscar.Focus();
@@ -78,8 +78,8 @@ namespace PRESENTACION
         {
             cmbTipo.SelectedIndex = -1;
             cmb_Almacen.SelectedIndex = -1;
-            cmbTipo.Text = "Seleccione Tipo";
-            cmb_Almacen.Text = "Seleccione Almacén";
+            cmbTipo.Text = "Seleccionar";
+            cmb_Almacen.Text = "Seleccionar";
 
         }
 
@@ -90,8 +90,8 @@ namespace PRESENTACION
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
             PibActualizar.Image = Properties.Resources.BotonFormActualizar04;
-            cmbTipo.Text = "Seleccione Tipo";
-            cmb_Almacen.Text = "Seleccione Almacén";
+            cmbTipo.Text = "Seleccionar";
+            cmb_Almacen.Text = "Seleccionar";
             DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text);
             dgb_Medicamentos.DataSource = dt;
         }
@@ -191,7 +191,7 @@ namespace PRESENTACION
         //Abrir Formulario de Detalles
         private void btn_Detalles_Click(object sender, EventArgs e)
         {
-            FormDetallesMedicamento frm1 = new FormDetallesMedicamento(valor_ID);
+            FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
             frm1.ShowDialog();
         }
 
@@ -202,7 +202,7 @@ namespace PRESENTACION
             MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
             Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
             Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
-            FormIngreso frm2 = new FormIngreso(valor_ID, MedNombre, DNI, Almacen, Tipo);
+            FormIngreso frm2 = new FormIngreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo);
             AddOwnedForm(frm2);
             frm2.ShowDialog();
         }
@@ -214,7 +214,7 @@ namespace PRESENTACION
             MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
             Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
             Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
-            FormEgreso frm3 = new FormEgreso(valor_ID, MedNombre, DNI, Almacen, Tipo);
+            FormEgreso frm3 = new FormEgreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo);
             AddOwnedForm(frm3);
             frm3.ShowDialog();
         }
@@ -235,18 +235,20 @@ namespace PRESENTACION
         //Abrir Formulario de Editar
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FormEditarProducto frm4 = new FormEditarProducto(valor_ID);
+            FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
             AddOwnedForm(frm4);
             frm4.ShowDialog();
 
         }
         #endregion
 
+        int fila = 1;
         //Obtener Id del Medicamento
         private void dgb_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
-            LblIndice.Text = valor_ID.ToString();
+            fila = e.RowIndex;
+            //valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
+            LblIndice.Text = dgb_Medicamentos.Rows[fila].Cells[0].Value.ToString();
         }
 
         private void PibDetalles_MouseEnter(object sender, EventArgs e)

@@ -63,6 +63,9 @@ namespace PRESENTACION
             this.PibAgregarMed = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CmbNacionalidad = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Pnl01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -77,6 +80,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CmbEncargado
@@ -157,6 +161,9 @@ namespace PRESENTACION
             // 
             // Pnl01
             // 
+            this.Pnl01.Controls.Add(this.label1);
+            this.Pnl01.Controls.Add(this.CmbNacionalidad);
+            this.Pnl01.Controls.Add(this.pictureBox1);
             this.Pnl01.Controls.Add(this.LblVoluntario);
             this.Pnl01.Controls.Add(this.label5);
             this.Pnl01.Controls.Add(this.LblEncargado);
@@ -426,6 +433,40 @@ namespace PRESENTACION
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Tomato;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(345, 149);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Nacionalidad:";
+            // 
+            // CmbNacionalidad
+            // 
+            this.CmbNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmbNacionalidad.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.CmbNacionalidad.ForeColor = System.Drawing.Color.Tomato;
+            this.CmbNacionalidad.FormattingEnabled = true;
+            this.CmbNacionalidad.Location = new System.Drawing.Point(445, 145);
+            this.CmbNacionalidad.Name = "CmbNacionalidad";
+            this.CmbNacionalidad.Size = new System.Drawing.Size(192, 23);
+            this.CmbNacionalidad.TabIndex = 15;
+            this.CmbNacionalidad.Text = "Seleccionar:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.ComboBox05;
+            this.pictureBox1.Location = new System.Drawing.Point(341, 143);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormSalidaMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,6 +499,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibEliminarMed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarMed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,5 +533,8 @@ namespace PRESENTACION
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label LblVoluntario;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CmbNacionalidad;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
