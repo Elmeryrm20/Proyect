@@ -46,7 +46,7 @@ namespace PRESENTACION
 
         private void btnSerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

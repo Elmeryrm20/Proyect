@@ -951,5 +951,24 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
+
+        public void SP_Agregar_Almacen(String Almacen)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Almacen", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Nombre", Almacen);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+        }
     }
 }
