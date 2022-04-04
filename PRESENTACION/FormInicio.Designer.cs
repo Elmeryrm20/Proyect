@@ -111,6 +111,8 @@ namespace PRESENTACION
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictureBox15);
+            this.panel3.Controls.Add(this.pictureBox14);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.comboBox1);
@@ -135,8 +137,6 @@ namespace PRESENTACION
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.LblNumMedicamentos);
             this.panel3.Controls.Add(this.pictureBox16);
-            this.panel3.Controls.Add(this.pictureBox15);
-            this.panel3.Controls.Add(this.pictureBox14);
             this.panel3.Controls.Add(this.pictureBox13);
             this.panel3.Controls.Add(this.pictureBox11);
             this.panel3.Controls.Add(this.pictureBox6);
@@ -201,7 +201,7 @@ namespace PRESENTACION
             // pictureBox15
             // 
             this.pictureBox15.Image = global::PRESENTACION.Properties.Resources.DashBoardIcono04;
-            this.pictureBox15.Location = new System.Drawing.Point(169, 220);
+            this.pictureBox15.Location = new System.Drawing.Point(169, 222);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(43, 43);
             this.pictureBox15.TabIndex = 1;
@@ -210,7 +210,7 @@ namespace PRESENTACION
             // pictureBox14
             // 
             this.pictureBox14.Image = global::PRESENTACION.Properties.Resources.DashBoardIcono03;
-            this.pictureBox14.Location = new System.Drawing.Point(49, 220);
+            this.pictureBox14.Location = new System.Drawing.Point(49, 222);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(43, 43);
             this.pictureBox14.TabIndex = 1;
@@ -295,7 +295,7 @@ namespace PRESENTACION
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PRESENTACION.Properties.Resources.DashBoard07;
-            this.pictureBox5.Location = new System.Drawing.Point(274, 107);
+            this.pictureBox5.Location = new System.Drawing.Point(289, 107);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(83, 78);
             this.pictureBox5.TabIndex = 0;
@@ -327,7 +327,7 @@ namespace PRESENTACION
             this.LblNumMedicamentos.BackColor = System.Drawing.Color.White;
             this.LblNumMedicamentos.Font = new System.Drawing.Font("Sakkal Majalla", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumMedicamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            this.LblNumMedicamentos.Location = new System.Drawing.Point(111, 49);
+            this.LblNumMedicamentos.Location = new System.Drawing.Point(111, 57);
             this.LblNumMedicamentos.Margin = new System.Windows.Forms.Padding(0);
             this.LblNumMedicamentos.Name = "LblNumMedicamentos";
             this.LblNumMedicamentos.Size = new System.Drawing.Size(119, 52);
@@ -377,7 +377,7 @@ namespace PRESENTACION
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label5.Location = new System.Drawing.Point(38, 159);
+            this.label5.Location = new System.Drawing.Point(38, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 2;
@@ -389,7 +389,7 @@ namespace PRESENTACION
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label3.Location = new System.Drawing.Point(163, 159);
+            this.label3.Location = new System.Drawing.Point(163, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 2;
@@ -400,7 +400,7 @@ namespace PRESENTACION
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Sakkal Majalla", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label4.Location = new System.Drawing.Point(21, 165);
+            this.label4.Location = new System.Drawing.Point(21, 179);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 52);
@@ -413,7 +413,7 @@ namespace PRESENTACION
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Sakkal Majalla", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Tomato;
-            this.label6.Location = new System.Drawing.Point(141, 165);
+            this.label6.Location = new System.Drawing.Point(141, 179);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 52);
@@ -438,7 +438,7 @@ namespace PRESENTACION
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Sakkal Majalla", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label7.Location = new System.Drawing.Point(266, 198);
+            this.label7.Location = new System.Drawing.Point(266, 200);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 34);
@@ -502,7 +502,7 @@ namespace PRESENTACION
             this.label8.Location = new System.Drawing.Point(266, 274);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 34);
+            this.label8.Size = new System.Drawing.Size(94, 40);
             this.label8.TabIndex = 2;
             this.label8.Text = "43%";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -513,7 +513,7 @@ namespace PRESENTACION
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label13.Location = new System.Drawing.Point(271, 235);
+            this.label13.Location = new System.Drawing.Point(271, 231);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 16);
             this.label13.TabIndex = 2;
@@ -525,7 +525,7 @@ namespace PRESENTACION
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label14.Location = new System.Drawing.Point(270, 308);
+            this.label14.Location = new System.Drawing.Point(270, 305);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(70, 16);
             this.label14.TabIndex = 2;
@@ -536,7 +536,7 @@ namespace PRESENTACION
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label15.Location = new System.Drawing.Point(290, 135);
+            this.label15.Location = new System.Drawing.Point(305, 135);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(47, 23);
@@ -550,7 +550,7 @@ namespace PRESENTACION
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.label16.Font = new System.Drawing.Font("Sakkal Majalla", 25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label16.Location = new System.Drawing.Point(353, 109);
+            this.label16.Location = new System.Drawing.Point(368, 109);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 43);
             this.label16.TabIndex = 2;
@@ -562,7 +562,7 @@ namespace PRESENTACION
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label17.Location = new System.Drawing.Point(363, 142);
+            this.label17.Location = new System.Drawing.Point(378, 142);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(78, 16);
             this.label17.TabIndex = 2;
@@ -574,7 +574,7 @@ namespace PRESENTACION
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label18.Location = new System.Drawing.Point(363, 159);
+            this.label18.Location = new System.Drawing.Point(378, 159);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(52, 17);
             this.label18.TabIndex = 2;
