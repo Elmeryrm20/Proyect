@@ -849,5 +849,32 @@
   <ItemGroup>
     <None Include="Resources\calendarDark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoCruzRoja02.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

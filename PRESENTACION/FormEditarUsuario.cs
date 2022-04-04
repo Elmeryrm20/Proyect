@@ -64,7 +64,7 @@ namespace PRESENTACION
             }
             catch (Exception)
             {
-                MessageBox.Show("Error", "erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error", "error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -81,7 +81,7 @@ namespace PRESENTACION
             fr.mostrarUsuario();
             this.Close();
         }
-
+        
         private void btn_Editar_Click(object sender, EventArgs e)
         {
             try

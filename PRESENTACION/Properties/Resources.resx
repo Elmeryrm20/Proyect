@@ -511,6 +511,30 @@
   <data name="ComboBox08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ComboBox08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DashBoard01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashBoard01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DashBoard02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashBoard02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DashBoard03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashBoard03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DashBoard04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashBoard04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DashBoard05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashBoard05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DashBoard06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashBoard06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DashBoard07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashBoard07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DashBoard08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashBoard08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FondoLogin01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoLogin01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -549,6 +573,9 @@
   </data>
   <data name="Logo01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoCruzRoja02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoCruzRoja02.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuAcercaDe01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuAcercaDe01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

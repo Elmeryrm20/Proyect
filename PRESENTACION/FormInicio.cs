@@ -22,7 +22,7 @@ namespace PRESENTACION
             InitializeComponent();
             this.DNI = DNI;
             this.Nombre = Nombre;
-            LblNombre.Text = Nombre;
+            //LblNombre.Text = Nombre;
             saludo();
 
         }
@@ -34,19 +34,19 @@ namespace PRESENTACION
 
             if (hora>=6 && hora<=12)
             {
-                LblMensajeBienvenida.Text = "Que tengas un excelente día de trabajo."; 
+                //LblMensajeBienvenida.Text = "Que tengas un excelente día de trabajo."; 
             }
             else if (hora<=18 && hora>=13)
             {
-                LblMensajeBienvenida.Text = "Que tengas una excelente tarde de trabajo.";
+                //LblMensajeBienvenida.Text = "Que tengas una excelente tarde de trabajo.";
             }
             else if (hora <= 24 && hora >= 19)
             {
-                LblMensajeBienvenida.Text = "Que tengas una excelente noche de trabajo.";
+                //LblMensajeBienvenida.Text = "Que tengas una excelente noche de trabajo.";
             }
             else
             {
-                LblMensajeBienvenida.Text = "Que tengas una excelente madrugada de trabajo.";
+                //LblMensajeBienvenida.Text = "Que tengas una excelente madrugada de trabajo.";
             }
         }
 
