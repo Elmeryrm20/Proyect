@@ -551,6 +551,7 @@ namespace PRESENTACION
         {
             ActivarTootip();
             ShowInTaskbar = true;
+            LblNombre.Text = Nombre;
 
         }
 

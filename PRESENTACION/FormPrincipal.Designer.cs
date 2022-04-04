@@ -49,6 +49,8 @@ namespace PRESENTACION
             this.Btn_Medicamentos = new System.Windows.Forms.PictureBox();
             this.Btn_Agregar = new System.Windows.Forms.PictureBox();
             this.Btn_Inicio = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LblNombre = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibContraer)).BeginInit();
@@ -74,6 +76,7 @@ namespace PRESENTACION
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
             this.panel2.Controls.Add(this.BtnEntrada);
+            this.panel2.Controls.Add(this.PibContraer);
             this.panel2.Controls.Add(this.btn_cerrarsesion);
             this.panel2.Controls.Add(this.Btn_Salida);
             this.panel2.Controls.Add(this.pictureBox4);
@@ -94,7 +97,8 @@ namespace PRESENTACION
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.PibContraer);
+            this.panel1.Controls.Add(this.LblNombre);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.PibMinimizar);
             this.panel1.Controls.Add(this.PibCerrar);
             this.panel1.Controls.Add(this.Pib_Maximizar);
@@ -125,11 +129,12 @@ namespace PRESENTACION
             this.PibContraer.BackColor = System.Drawing.Color.Transparent;
             this.PibContraer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibContraer.Image = global::PRESENTACION.Properties.Resources.BotonVentanaContraer01;
-            this.PibContraer.Location = new System.Drawing.Point(21, 6);
+            this.PibContraer.Location = new System.Drawing.Point(131, 5);
             this.PibContraer.Name = "PibContraer";
             this.PibContraer.Size = new System.Drawing.Size(24, 24);
             this.PibContraer.TabIndex = 4;
             this.PibContraer.TabStop = false;
+            this.PibContraer.Visible = false;
             this.PibContraer.MouseEnter += new System.EventHandler(this.PibContraer_MouseEnter);
             this.PibContraer.MouseLeave += new System.EventHandler(this.PibContraer_MouseLeave);
             // 
@@ -371,6 +376,30 @@ namespace PRESENTACION
             this.Btn_Inicio.TabStop = false;
             this.Btn_Inicio.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 18);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Bienvenido";
+            // 
+            // LblNombre
+            // 
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.BackColor = System.Drawing.Color.White;
+            this.LblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.LblNombre.Location = new System.Drawing.Point(103, 9);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(69, 18);
+            this.LblNombre.TabIndex = 3;
+            this.LblNombre.Text = "Nombre";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +416,7 @@ namespace PRESENTACION
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibContraer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
@@ -429,5 +459,7 @@ namespace PRESENTACION
         public System.Windows.Forms.Panel PnlCuerpo;
         private System.Windows.Forms.PictureBox btn_cerrarsesion;
         private System.Windows.Forms.PictureBox BtnEntrada;
+        private System.Windows.Forms.Label LblNombre;
+        private System.Windows.Forms.Label label1;
     }
 }

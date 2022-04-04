@@ -70,6 +70,10 @@ namespace PRESENTACION
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -92,6 +96,9 @@ namespace PRESENTACION
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.pictureBox10);
             this.panel2.Controls.Add(this.pictureBox12);
             this.panel2.Controls.Add(this.pictureBox9);
@@ -111,6 +118,7 @@ namespace PRESENTACION
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.pictureBox15);
             this.panel3.Controls.Add(this.pictureBox14);
             this.panel3.Controls.Add(this.label15);
@@ -580,6 +588,54 @@ namespace PRESENTACION
             this.label18.TabIndex = 2;
             this.label18.Text = "Salidas";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.White;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.label19.Location = new System.Drawing.Point(80, 61);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(64, 48);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Entradas\r\núltimo\r\nAño";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.White;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.label20.Location = new System.Drawing.Point(80, 231);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(55, 48);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Salidas\r\núltimo\r\nAño";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.White;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.label21.Location = new System.Drawing.Point(108, 418);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(256, 16);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "5 Medicamentos con mayores egresos";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.White;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.label22.Location = new System.Drawing.Point(67, 418);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(111, 16);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Último 5 Egresos";
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,6 +651,7 @@ namespace PRESENTACION
             this.Text = "FormInicio";
             this.Load += new System.EventHandler(this.FormInicio_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -659,5 +716,9 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label21;
     }
 }
