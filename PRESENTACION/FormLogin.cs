@@ -169,6 +169,7 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             ValidacionTextbox();
+            ShowInTaskbar = false;
 
         }
 
@@ -182,6 +183,7 @@ namespace PRESENTACION
             frm.Show();
 
             AddOwnedForm(frm);
+            ShowInTaskbar = false;
             this.Hide();
         }
         #endregion
@@ -368,7 +370,7 @@ namespace PRESENTACION
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            this.ShowInTaskbar = true;
         }
 
         private void TxtPass_Click(object sender, EventArgs e)

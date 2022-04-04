@@ -35,7 +35,6 @@ namespace PRESENTACION
             this.LblMuestra1 = new System.Windows.Forms.Label();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.CmbPresentacion = new System.Windows.Forms.ComboBox();
-            this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
             this.cmbCaja = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.textGramaje = new System.Windows.Forms.TextBox();
@@ -71,6 +70,7 @@ namespace PRESENTACION
             this.Pib_Agregar_Lab = new System.Windows.Forms.PictureBox();
             this.PibAgregarMedicamento = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.dtFecha_Vencimiento = new PRESENTACION.SelectorDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -144,23 +144,6 @@ namespace PRESENTACION
             this.CmbPresentacion.TabIndex = 9;
             this.CmbPresentacion.Text = "Seleccionar";
             this.CmbPresentacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbPresentacion_KeyPress);
-            // 
-            // dtFecha_Vencimiento
-            // 
-            this.dtFecha_Vencimiento.CalendarFont = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFecha_Vencimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            this.dtFecha_Vencimiento.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dtFecha_Vencimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
-            this.dtFecha_Vencimiento.CalendarTitleForeColor = System.Drawing.Color.White;
-            this.dtFecha_Vencimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtFecha_Vencimiento.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFecha_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(156, 254);
-            this.dtFecha_Vencimiento.MinDate = new System.DateTime(2022, 3, 9, 0, 0, 0, 0);
-            this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
-            this.dtFecha_Vencimiento.Size = new System.Drawing.Size(121, 22);
-            this.dtFecha_Vencimiento.TabIndex = 4;
-            this.dtFecha_Vencimiento.Value = new System.DateTime(2022, 3, 9, 0, 0, 0, 0);
             // 
             // cmbCaja
             // 
@@ -244,7 +227,7 @@ namespace PRESENTACION
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(571, 217);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 16);
+            this.label12.Size = new System.Drawing.Size(128, 16);
             this.label12.TabIndex = 46;
             this.label12.Text = "Subir una Imagen:";
             // 
@@ -256,7 +239,7 @@ namespace PRESENTACION
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(113, 426);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 16);
+            this.label11.Size = new System.Drawing.Size(65, 16);
             this.label11.TabIndex = 43;
             this.label11.Text = "Almacén:";
             // 
@@ -268,7 +251,7 @@ namespace PRESENTACION
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(140, 383);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 16);
+            this.label9.Size = new System.Drawing.Size(38, 16);
             this.label9.TabIndex = 42;
             this.label9.Text = "Para:";
             // 
@@ -280,7 +263,7 @@ namespace PRESENTACION
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(142, 340);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 16);
+            this.label8.Size = new System.Drawing.Size(36, 16);
             this.label8.TabIndex = 39;
             this.label8.Text = "Tipo:";
             // 
@@ -292,7 +275,7 @@ namespace PRESENTACION
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(142, 234);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 16);
+            this.label6.Size = new System.Drawing.Size(140, 16);
             this.label6.TabIndex = 36;
             this.label6.Text = "Fecha de vencimiento";
             // 
@@ -304,7 +287,7 @@ namespace PRESENTACION
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(105, 195);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.Size = new System.Drawing.Size(78, 16);
             this.label5.TabIndex = 34;
             this.label5.Text = "Laboratorio:";
             // 
@@ -334,7 +317,7 @@ namespace PRESENTACION
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(103, 471);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 53;
             this.label2.Text = "Pertenencia:";
             // 
@@ -346,7 +329,7 @@ namespace PRESENTACION
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(385, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 56;
             this.label3.Text = "Colaborador:";
             // 
@@ -358,7 +341,7 @@ namespace PRESENTACION
             this.LblEncargado.ForeColor = System.Drawing.Color.White;
             this.LblEncargado.Location = new System.Drawing.Point(386, 126);
             this.LblEncargado.Name = "LblEncargado";
-            this.LblEncargado.Size = new System.Drawing.Size(85, 16);
+            this.LblEncargado.Size = new System.Drawing.Size(86, 16);
             this.LblEncargado.TabIndex = 57;
             this.LblEncargado.Text = "Coordinador:";
             // 
@@ -563,6 +546,24 @@ namespace PRESENTACION
             this.pictureBox5.TabIndex = 50;
             this.pictureBox5.TabStop = false;
             // 
+            // dtFecha_Vencimiento
+            // 
+            this.dtFecha_Vencimiento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
+            this.dtFecha_Vencimiento.BorderSize = 0;
+            this.dtFecha_Vencimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.dtFecha_Vencimiento.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtFecha_Vencimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
+            this.dtFecha_Vencimiento.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtFecha_Vencimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFecha_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(140, 253);
+            this.dtFecha_Vencimiento.MinimumSize = new System.Drawing.Size(0, 20);
+            this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
+            this.dtFecha_Vencimiento.Size = new System.Drawing.Size(147, 23);
+            this.dtFecha_Vencimiento.SkinColor = System.Drawing.Color.White;
+            this.dtFecha_Vencimiento.TabIndex = 62;
+            this.dtFecha_Vencimiento.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            // 
             // FormAgregarMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,6 +571,7 @@ namespace PRESENTACION
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(720, 502);
+            this.Controls.Add(this.dtFecha_Vencimiento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LblEncargado);
             this.Controls.Add(this.CmbEncargado);
@@ -589,7 +591,6 @@ namespace PRESENTACION
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dtFecha_Vencimiento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textCantidad);
@@ -646,7 +647,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox Pib_Agregar_Lab;
         private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.ComboBox CmbPresentacion;
-        private System.Windows.Forms.DateTimePicker dtFecha_Vencimiento;
         private System.Windows.Forms.ComboBox cmbCaja;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.TextBox textGramaje;
@@ -681,5 +681,6 @@ namespace PRESENTACION
         private System.Windows.Forms.ComboBox CmbColaborador;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private SelectorDatePicker dtFecha_Vencimiento;
     }
 }

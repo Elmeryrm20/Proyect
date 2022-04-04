@@ -52,7 +52,7 @@ namespace PRESENTACION
 
         private void FormInicio_Load(object sender, EventArgs e)
         {
-
+            ShowInTaskbar = true;
         }
     }
 }

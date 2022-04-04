@@ -113,6 +113,7 @@ namespace PRESENTACION
 
             FormLogin hg = ((FormLogin)Owner);
             hg.Show();
+            hg.ShowInTaskbar = true;
             this.Close();
         }
 
@@ -190,6 +191,12 @@ namespace PRESENTACION
             if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
             else if (char.IsControl(e.KeyChar)) e.Handled = false;
             else e.Handled = true;
+        }
+
+        private void FormIngresarNewContraseña_Load(object sender, EventArgs e)
+        {
+            this.ShowInTaskbar = true;
+
         }
     }
 }

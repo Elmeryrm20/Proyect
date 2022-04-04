@@ -231,6 +231,7 @@ namespace PRESENTACION
             // 
             this.Pib_Filtrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pib_Filtrar.BackColor = System.Drawing.Color.Transparent;
+            this.Pib_Filtrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pib_Filtrar.Image = global::PRESENTACION.Properties.Resources.BotonFormFiltrar01;
             this.Pib_Filtrar.Location = new System.Drawing.Point(603, 26);
             this.Pib_Filtrar.Name = "Pib_Filtrar";
@@ -261,6 +262,7 @@ namespace PRESENTACION
             this.LblIndice.Size = new System.Drawing.Size(53, 18);
             this.LblIndice.TabIndex = 6;
             this.LblIndice.Text = "Indice";
+            this.LblIndice.Visible = false;
             // 
             // panel3
             // 
@@ -280,6 +282,7 @@ namespace PRESENTACION
             // PibEditar
             // 
             this.PibEditar.BackColor = System.Drawing.Color.Transparent;
+            this.PibEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibEditar.Image = global::PRESENTACION.Properties.Resources.BotonFormEditar01;
             this.PibEditar.Location = new System.Drawing.Point(391, 11);
             this.PibEditar.Name = "PibEditar";
@@ -293,6 +296,7 @@ namespace PRESENTACION
             // PibSalida
             // 
             this.PibSalida.BackColor = System.Drawing.Color.Transparent;
+            this.PibSalida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibSalida.Image = global::PRESENTACION.Properties.Resources.BotonFormSalida01;
             this.PibSalida.Location = new System.Drawing.Point(275, 11);
             this.PibSalida.Name = "PibSalida";
@@ -306,6 +310,7 @@ namespace PRESENTACION
             // PibIngreso
             // 
             this.PibIngreso.BackColor = System.Drawing.Color.Transparent;
+            this.PibIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibIngreso.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
             this.PibIngreso.Location = new System.Drawing.Point(159, 11);
             this.PibIngreso.Name = "PibIngreso";
@@ -319,6 +324,7 @@ namespace PRESENTACION
             // PibActualizar
             // 
             this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.PibActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
             this.PibActualizar.Location = new System.Drawing.Point(507, 11);
             this.PibActualizar.Name = "PibActualizar";
@@ -332,6 +338,7 @@ namespace PRESENTACION
             // PibDetalles
             // 
             this.PibDetalles.BackColor = System.Drawing.Color.Transparent;
+            this.PibDetalles.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibDetalles.Image = global::PRESENTACION.Properties.Resources.BotonFormDetalles01;
             this.PibDetalles.Location = new System.Drawing.Point(43, 11);
             this.PibDetalles.Name = "PibDetalles";
@@ -390,6 +397,7 @@ namespace PRESENTACION
             this.dgb_Medicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgb_Medicamentos.ColumnHeadersHeight = 25;
             this.dgb_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgb_Medicamentos.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

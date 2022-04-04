@@ -550,6 +550,8 @@ namespace PRESENTACION
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             ActivarTootip();
+            ShowInTaskbar = true;
+
         }
 
         public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)

@@ -34,7 +34,6 @@ namespace PRESENTACION
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtpFecha_Nacimiento = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@ namespace PRESENTACION
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.dtpFecha_Nacimiento = new PRESENTACION.SelectorDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,16 +122,6 @@ namespace PRESENTACION
             this.label5.Size = new System.Drawing.Size(123, 15);
             this.label5.TabIndex = 50;
             this.label5.Text = "Fecha de Nacimiento";
-            // 
-            // dtpFecha_Nacimiento
-            // 
-            this.dtpFecha_Nacimiento.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
-            this.dtpFecha_Nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha_Nacimiento.Location = new System.Drawing.Point(345, 152);
-            this.dtpFecha_Nacimiento.Name = "dtpFecha_Nacimiento";
-            this.dtpFecha_Nacimiento.Size = new System.Drawing.Size(154, 22);
-            this.dtpFecha_Nacimiento.TabIndex = 5;
-            this.dtpFecha_Nacimiento.ValueChanged += new System.EventHandler(this.dtpFecha_Nacimiento_ValueChanged);
             // 
             // label8
             // 
@@ -319,18 +309,36 @@ namespace PRESENTACION
             this.pictureBox8.TabIndex = 72;
             this.pictureBox8.TabStop = false;
             // 
+            // dtpFecha_Nacimiento
+            // 
+            this.dtpFecha_Nacimiento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
+            this.dtpFecha_Nacimiento.BorderSize = 0;
+            this.dtpFecha_Nacimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.dtpFecha_Nacimiento.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtpFecha_Nacimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
+            this.dtpFecha_Nacimiento.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtpFecha_Nacimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha_Nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha_Nacimiento.Location = new System.Drawing.Point(351, 151);
+            this.dtpFecha_Nacimiento.MinimumSize = new System.Drawing.Size(0, 20);
+            this.dtpFecha_Nacimiento.Name = "dtpFecha_Nacimiento";
+            this.dtpFecha_Nacimiento.Size = new System.Drawing.Size(147, 23);
+            this.dtpFecha_Nacimiento.SkinColor = System.Drawing.Color.White;
+            this.dtpFecha_Nacimiento.TabIndex = 75;
+            this.dtpFecha_Nacimiento.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            // 
             // FormAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(707, 406);
+            this.Controls.Add(this.dtpFecha_Nacimiento);
             this.Controls.Add(this.cmb_Cargo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.cmbTipoDocumento);
-            this.Controls.Add(this.dtpFecha_Nacimiento);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
@@ -370,7 +378,6 @@ namespace PRESENTACION
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpFecha_Nacimiento;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbTipoDocumento;
         private System.Windows.Forms.TextBox txtCorreo;
@@ -388,5 +395,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private SelectorDatePicker dtpFecha_Nacimiento;
     }
 }

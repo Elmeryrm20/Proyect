@@ -88,5 +88,12 @@ namespace PRESENTACION
         {
             validar.soloNumeros(e);
         }
+
+        private void FormIngreso_Load(object sender, EventArgs e)
+        {
+            dtp_FechaVencimiento.MinDate = DateTime.Now;
+            dtp_FechaVencimiento.Value = DateTime.Now;
+
+        }
     }
 }

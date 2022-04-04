@@ -35,8 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtp_FechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtp_FechaVencimiento = new PRESENTACION.SelectorDatePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,14 +111,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "F.Vencimiento:";
             // 
-            // dtp_FechaVencimiento
-            // 
-            this.dtp_FechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_FechaVencimiento.Location = new System.Drawing.Point(150, 159);
-            this.dtp_FechaVencimiento.Name = "dtp_FechaVencimiento";
-            this.dtp_FechaVencimiento.Size = new System.Drawing.Size(158, 20);
-            this.dtp_FechaVencimiento.TabIndex = 6;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -129,6 +121,27 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // dtp_FechaVencimiento
+            // 
+            this.dtp_FechaVencimiento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
+            this.dtp_FechaVencimiento.BorderSize = 0;
+            this.dtp_FechaVencimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.dtp_FechaVencimiento.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtp_FechaVencimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
+            this.dtp_FechaVencimiento.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtp_FechaVencimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_FechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_FechaVencimiento.Location = new System.Drawing.Point(150, 159);
+            this.dtp_FechaVencimiento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtp_FechaVencimiento.MinDate = new System.DateTime(2022, 4, 4, 0, 0, 0, 0);
+            this.dtp_FechaVencimiento.MinimumSize = new System.Drawing.Size(0, 20);
+            this.dtp_FechaVencimiento.Name = "dtp_FechaVencimiento";
+            this.dtp_FechaVencimiento.Size = new System.Drawing.Size(147, 23);
+            this.dtp_FechaVencimiento.SkinColor = System.Drawing.Color.White;
+            this.dtp_FechaVencimiento.TabIndex = 63;
+            this.dtp_FechaVencimiento.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.dtp_FechaVencimiento.Value = new System.DateTime(2022, 4, 4, 1, 35, 32, 0);
             // 
             // FormIngreso
             // 
@@ -146,6 +159,7 @@
             this.Name = "FormIngreso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormIngreso";
+            this.Load += new System.EventHandler(this.FormIngreso_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
@@ -165,6 +179,6 @@
         private System.Windows.Forms.TextBox Txt_Cantidad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtp_FechaVencimiento;
+        private SelectorDatePicker dtp_FechaVencimiento;
     }
 }

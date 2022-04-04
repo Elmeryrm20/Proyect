@@ -252,15 +252,10 @@ namespace PRESENTACION
                     string fecha = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
 
                     string Colaborador;
-                    if (CmbColaborador.SelectedIndex < 0)
-                    {
-                        Colaborador = "t1Mtbf8p";
-                    }
-                    else
-                    {
-                        Colaborador = Colaboradores[CmbColaborador.SelectedIndex,0];
-                    }
-                    string CodigoIngreso = consultas.D_ActualizarIngreso(DNI, fecha, Colaborador, Coordinadores[CmbEncargado.SelectedIndex,0]);
+                    if (CmbColaborador.SelectedIndex < 0) Colaborador = "t1Mtbf8p";
+                    else Colaborador = Colaboradores[CmbColaborador.SelectedIndex, 0];
+
+                    string CodigoIngreso = consultas.D_ActualizarIngreso(DNI, fecha, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
 
                     consultas.AbrirConexion();
                     for (int i = 0; i < DgvEntrada.Rows.Count; i++)

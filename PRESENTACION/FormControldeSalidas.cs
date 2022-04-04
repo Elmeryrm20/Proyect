@@ -34,6 +34,10 @@ namespace PRESENTACION
         {
             RellenarDataGridView();
             txt_Texto.Clear();
+            LblDesde.Visible = false;
+            dtp_FechaI.Visible = false;
+            LblHasta.Visible = false;
+            dtp_FechaF.Visible = false;
 
         }
 
@@ -41,7 +45,27 @@ namespace PRESENTACION
         {
             if (dtp_FechaI.Value.Date <= dtp_FechaF.Value.Date)
             {
-                DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
+                switch (CmbFiltro.SelectedIndex)
+                {
+                    case 0:
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.AddDays(1).ToString("yyyy-MM-dd"));
+                        break;
+                    case 1:
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(DateTime.Today.AddDays(-7).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
+                        break;
+                    case 2:
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(DateTime.Today.AddDays(-30).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
+
+                        break;
+                    case 3:
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.AddDays(1).ToString("yyyy-MM-dd"));
+                        break;
+                    case 4:
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
+                        break;
+                    default:
+                        break;
+                }
                 DgvHistorialEgreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 txt_Texto.Clear();
                 txt_Error.Visible = false;
@@ -149,6 +173,53 @@ namespace PRESENTACION
         {
             PibActualizar.Image = Properties.Resources.BotonFormActualizar01;
 
+        }
+
+        private void CmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Hoy
+            //Últimos 7 días
+            //Últimos 30 días
+            //Elegir Fecha
+            //Elegir Rango de Fecha
+
+            switch (CmbFiltro.SelectedIndex)
+            {
+                case 0:
+                    LblDesde.Visible = false;
+                    dtp_FechaI.Visible = false;
+                    LblHasta.Visible = false;
+                    dtp_FechaF.Visible = false;
+                    break;
+                case 1:
+                    LblDesde.Visible = false;
+                    dtp_FechaI.Visible = false;
+                    LblHasta.Visible = false;
+                    dtp_FechaF.Visible = false;
+                    break;
+                case 2:
+                    LblDesde.Visible = false;
+                    dtp_FechaI.Visible = false;
+                    LblHasta.Visible = false;
+                    dtp_FechaF.Visible = false;
+                    break;
+                case 3:
+                    LblDesde.Visible = true;
+                    LblDesde.Text = "Elegir Fecha";
+                    dtp_FechaI.Visible = true;
+                    LblHasta.Visible = false;
+                    dtp_FechaF.Visible = false;
+                    break;
+                case 4:
+                    LblDesde.Visible = true;
+                    LblDesde.Text = "Desde:";
+                    dtp_FechaI.Visible = true;
+                    LblHasta.Visible = true;
+                    dtp_FechaF.Visible = true;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

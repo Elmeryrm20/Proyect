@@ -237,17 +237,14 @@ namespace PRESENTACION
                     int CodigoMedicamento = consultas.D_UltimoIdIngresado();
 
                     string Colaborador;
-                    if (CmbColaborador.SelectedIndex < 0)
-                    {
-                        Colaborador = "t1Mtbf8p";
-                    }
-                    else
-                    {
-                        Colaborador = Colaboradores[CmbColaborador.SelectedIndex,0];
-                    }
+                    if (CmbColaborador.SelectedIndex < 0) Colaborador = "t1Mtbf8p";
+                    else Colaborador = Colaboradores[CmbColaborador.SelectedIndex, 0];
+
 
                     string CodigoIngreso = consultas.D_ActualizarIngreso(Tra_DNI, FechaActual, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    consultas.AbrirConexion();
                     consultas.SP_Agregar_Detalle_Ingreso(int.Parse(CodigoIngreso), CodigoMedicamento, int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"));
+                    consultas.CerrarConexion();
 
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Limpiar();

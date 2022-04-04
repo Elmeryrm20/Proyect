@@ -202,6 +202,7 @@
             this.Name = "FormIngresarNewContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormIngresarNewContraseña";
+            this.Load += new System.EventHandler(this.FormIngresarNewContraseña_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PibVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();

@@ -84,7 +84,6 @@ namespace PRESENTACION
             cmb_Almacen.SelectedIndex = -1;
             cmbTipo.Text = "Seleccionar";
             cmb_Almacen.Text = "Seleccionar";
-
         }
 
         #endregion

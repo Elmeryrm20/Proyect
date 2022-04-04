@@ -69,6 +69,7 @@
             // BtnSalidas
             // 
             this.BtnSalidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.BtnSalidas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSalidas.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.BtnSalidas.FlatAppearance.BorderSize = 2;
             this.BtnSalidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -85,6 +86,7 @@
             // BtnEntradas
             // 
             this.BtnEntradas.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEntradas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEntradas.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.BtnEntradas.FlatAppearance.BorderSize = 0;
             this.BtnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -209,6 +209,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SelectorDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="validar.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -839,6 +842,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BotonFormLimpiar05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
