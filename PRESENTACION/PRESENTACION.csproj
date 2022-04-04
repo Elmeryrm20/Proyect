@@ -876,5 +876,17 @@
   <ItemGroup>
     <None Include="Resources\DashBoard01.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoardIcono04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoardIcono03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoardIcono02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoardIcono01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
