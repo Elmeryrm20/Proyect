@@ -214,5 +214,17 @@ namespace PRESENTACION
                     break;
             }
         }
+
+        private void PibImprimir_MouseLeave(object sender, EventArgs e)
+        {
+            PibImprimir.Image = Properties.Resources.BotonFormImprimir01;
+
+        }
+
+        private void PibImprimir_MouseEnter_1(object sender, EventArgs e)
+        {
+            PibImprimir.Image = Properties.Resources.BotonFormImprimir02;
+
+        }
     }
 }
