@@ -66,7 +66,6 @@ namespace PRESENTACION
         {
             Rellenartabla();
             txb_Buscar.Text = "Buscar Medicamento";
-            valor_ID = 1;
             cmbTipo.SelectedIndex = -1;
             cmb_Almacen.SelectedIndex = -1;
             cmbTipo.Text = "Seleccionar";
@@ -222,6 +221,17 @@ namespace PRESENTACION
             frm3.ShowDialog();
         }
 
+        //Abrir Formulario de Editar
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
+            AddOwnedForm(frm4);
+            frm4.ShowDialog();
+
+        }
+        #endregion
+
+        #region Métodos Heredados
         public void EnviarEgreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
@@ -233,19 +243,10 @@ namespace PRESENTACION
             FormPrincipal Principal = (FormPrincipal)Owner;
             Principal.EscogerFormulario<FormEntradaMedicamento>(10);
             Principal.EnviarIngreso(codigo, MedNombre, cantidad, Almacen, Tipo, FechaVencimiento);
-        }
-
-        //Abrir Formulario de Editar
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
-            AddOwnedForm(frm4);
-            frm4.ShowDialog();
-
-        }
+        } 
         #endregion
 
-        int fila = 1;
+        int fila = 0;
         //Obtener Id del Medicamento
         private void dgb_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -332,9 +333,9 @@ namespace PRESENTACION
 
         private void dgb_Medicamentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
-            LblIndice.Text = valor_ID.ToString();
-            FormDetallesMedicamento frm1 = new FormDetallesMedicamento(valor_ID);
+            //valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
+            //LblIndice.Text = valor_ID.ToString();
+            FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
             frm1.ShowDialog();
         }
 

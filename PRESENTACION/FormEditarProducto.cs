@@ -106,12 +106,12 @@ namespace PRESENTACION
             try
             {
                 DataTable dt = consultas.D_Medicamento_Detallado(id_Medicamento);
-                txtNombre.Text = dt.Rows[0][0].ToString();
-                txt_fecha.Text = ((DateTime)dt.Rows[0][4]).ToString("D");
-                cmbTipo.Text = dt.Rows[0][5].ToString();
-                cmbCaja.Text = dt.Rows[0][3].ToString();
-                CmbPresentacion.Text = dt.Rows[0][7].ToString();
-                cmbLab.Text = dt.Rows[0][6].ToString();
+                txtNombre.Text = dt.Rows[0][0].ToString(); //Composición
+                cmbCaja.Text = dt.Rows[0][3].ToString(); //Almacén
+                txt_fecha.Text = ((DateTime)dt.Rows[0][4]).ToString("D"); //Fecha Vencimiento
+                cmbTipo.Text = dt.Rows[0][5].ToString(); //Tipo
+                cmbLab.Text = dt.Rows[0][6].ToString();  //Laboratorio
+                CmbPresentacion.Text = dt.Rows[0][7].ToString(); //Presentación
                 CmbPertenencia.Text = dt.Rows[0][8].ToString();
 
                 //txtNombre.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
@@ -120,29 +120,42 @@ namespace PRESENTACION
                 //cmbCaja.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["ALMACÉN"].ToString();
                 //CmbPresentacion.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["PRESENTACIÓN"].ToString();
                 //cmbLab.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["LABORATORIO"].ToString();
+
+                //-----------------Imagen--------------------------
                 try
                 {
-                    MemoryStream img = new MemoryStream((byte[])consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["imagen"]);
+                    //MemoryStream img = new MemoryStream((byte[])consultas.D_Medicamento_Detallado(valor).Rows[0]["imagen"]);
+                    MemoryStream img = new MemoryStream((byte[])dt.Rows[0][9]);
                     Bitmap imagen = new Bitmap(img);
                     ptb_Imagen.Image = imagen;
                     ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
                     ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
-
                 }
                 catch (Exception)
                 {
-                    string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
-                    string str = Convert.ToString(Directory.GetCurrentDirectory());
-                    str = str.Replace(@"\bin\Debug", "");
-                    ptb_Imagen.Image = Image.FromFile(str + @"\Resources\Error.jpg");
-                    ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
-                    ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
+                    if (dt.Rows[0][9] == null)
+                    {
+                        ptb_Imagen.Image = Properties.Resources.Imagen01;
+                    }
+                    else
+                    {
+                        string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
+                        string str = Convert.ToString(Directory.GetCurrentDirectory());
+                        str = str.Replace(@"\bin\Debug", "");
+                        ptb_Imagen.Image = Image.FromFile(str + @"\Resources\Error.jpg");
+                        ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
+                        ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    }
+
                 }
+                //-----------------------------------------------
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Selecione un producto Válido.", "error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Selecione un producto Válido.", "error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString());
 
             }
 

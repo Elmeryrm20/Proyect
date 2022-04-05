@@ -31,6 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CmbPertenencia = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.CmbPresentacion = new System.Windows.Forms.ComboBox();
             this.txt_fecha = new System.Windows.Forms.DateTimePicker();
@@ -47,8 +49,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.CmbPertenencia = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,6 +103,24 @@
             this.panel2.Size = new System.Drawing.Size(502, 311);
             this.panel2.TabIndex = 2;
             // 
+            // CmbPertenencia
+            // 
+            this.CmbPertenencia.FormattingEnabled = true;
+            this.CmbPertenencia.Location = new System.Drawing.Point(135, 205);
+            this.CmbPertenencia.Name = "CmbPertenencia";
+            this.CmbPertenencia.Size = new System.Drawing.Size(195, 21);
+            this.CmbPertenencia.TabIndex = 68;
+            this.CmbPertenencia.Text = "Selecciona Pertenencia";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(61, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 69;
+            this.label1.Text = "Pertenencia";
+            // 
             // cmbLab
             // 
             this.cmbLab.FormattingEnabled = true;
@@ -125,7 +143,7 @@
             // 
             this.txt_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txt_fecha.Location = new System.Drawing.Point(135, 59);
-            this.txt_fecha.MinDate = new System.DateTime(2022, 3, 9, 0, 0, 0, 0);
+            this.txt_fecha.MinDate = new System.DateTime(2000, 3, 9, 0, 0, 0, 0);
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.Size = new System.Drawing.Size(195, 20);
             this.txt_fecha.TabIndex = 52;
@@ -247,24 +265,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // CmbPertenencia
-            // 
-            this.CmbPertenencia.FormattingEnabled = true;
-            this.CmbPertenencia.Location = new System.Drawing.Point(135, 205);
-            this.CmbPertenencia.Name = "CmbPertenencia";
-            this.CmbPertenencia.Size = new System.Drawing.Size(195, 21);
-            this.CmbPertenencia.TabIndex = 68;
-            this.CmbPertenencia.Text = "Selecciona Pertenencia";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 210);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Pertenencia";
             // 
             // FormEditarProducto
             // 
