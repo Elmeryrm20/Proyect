@@ -555,6 +555,18 @@ namespace PRESENTACION
 
         }
 
+        private void Btn_Cerrar_Sesion_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cerrar sesion?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                FormLogin sp = new FormLogin();
+                sp.Show();
+            }
+            
+        }
+
         public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
         {
             FormSalidaMedicamentos FrmSalida = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();
