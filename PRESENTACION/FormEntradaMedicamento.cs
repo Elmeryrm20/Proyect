@@ -236,11 +236,16 @@ namespace PRESENTACION
         }
         private void ImprimirEgreso()
         {
-            printDocument1 = new PrintDocument();
-            PrinterSettings ps = new PrinterSettings();
-            printDocument1.PrinterSettings = ps;
-            printDocument1.PrintPage += Imprimir;
-            printDocument1.Print();
+            PrintDocument doc = new PrintDocument();
+            doc.DefaultPageSettings.Landscape = true;
+            doc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+           
+            PrintPreviewDialog ppd = new PrintPreviewDialog { Document = doc };
+            ((Form)ppd).WindowState = FormWindowState.Maximized;
+
+            doc.PrintPage += Imprimir;
+            ppd.ShowDialog();
+
         }
 
         private void ConfirmarIngreso(bool BoolImprimir)

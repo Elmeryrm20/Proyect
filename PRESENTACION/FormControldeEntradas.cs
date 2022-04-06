@@ -231,6 +231,8 @@ namespace PRESENTACION
 
         private void PibImprimir_Click(object sender, EventArgs e)
         {
+            FormHistorial sp = Owner as FormHistorial;
+            sp.maximizar_Pantalla();
             imprimir();
         }
         public void imprimir()

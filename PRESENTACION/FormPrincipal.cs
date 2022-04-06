@@ -314,11 +314,15 @@ namespace PRESENTACION
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
 
+            maximizar_Pantalla();
+
+        }
+        public void maximizar_Pantalla()
+        {
             this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
             this.WindowState = FormWindowState.Maximized;
             Pib_Maximizar.Visible = false;
             Pib_Restaurar.Visible = true;
-
         }
 
         private void Btn_Normal_Click(object sender, EventArgs e)

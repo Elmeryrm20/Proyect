@@ -97,6 +97,11 @@ namespace PRESENTACION
             BtnEntradas.ForeColor = Color.FromArgb(241, 241, 252);
             BtnEntradas.FlatAppearance.BorderSize = 0;
         }
+        public void maximizar_Pantalla()
+        {
+            FormPrincipal sp = Owner as FormPrincipal;
+            sp.maximizar_Pantalla();
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
