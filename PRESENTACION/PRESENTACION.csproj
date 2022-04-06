@@ -59,7 +59,13 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
@@ -336,6 +342,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="PRESENTACION_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Resources\Logo01.png" />
   </ItemGroup>
   <ItemGroup>
