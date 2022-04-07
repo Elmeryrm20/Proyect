@@ -195,6 +195,7 @@ namespace PRESENTACION
         {
             FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
             frm1.ShowDialog();
+
         }
 
         //Abrir Formulario de Ingreso
@@ -243,16 +244,20 @@ namespace PRESENTACION
             FormPrincipal Principal = (FormPrincipal)Owner;
             Principal.EscogerFormulario<FormEntradaMedicamento>(10);
             Principal.EnviarIngreso(codigo, MedNombre, cantidad, Almacen, Tipo, FechaVencimiento);
-        } 
+        }
         #endregion
 
         int fila = 0;
         //Obtener Id del Medicamento
         private void dgb_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            fila = e.RowIndex;
+            if (e.RowIndex >= 0)
+            {
+                fila = e.RowIndex;
+
+            }
             //valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
-            LblIndice.Text = dgb_Medicamentos.Rows[fila].Cells[0].Value.ToString();
+            //LblIndice.Text = dgb_Medicamentos.Rows[fila].Cells[0].Value.ToString();
         }
 
         private void PibDetalles_MouseEnter(object sender, EventArgs e)
@@ -337,6 +342,7 @@ namespace PRESENTACION
             //LblIndice.Text = valor_ID.ToString();
             FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
             frm1.ShowDialog();
+
         }
 
         private void cmbTipo_MouseDown(object sender, MouseEventArgs e)
