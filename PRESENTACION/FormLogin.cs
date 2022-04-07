@@ -108,6 +108,7 @@ namespace PRESENTACION
                 FormPrincipal A = new FormPrincipal(ud.DNI, ud.Tipo, ud.Nombre);
                 A.Show();
                 AddOwnedForm(A);
+                //A.ShowInTaskbar = true;
             }
             else
             {
@@ -169,7 +170,7 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             ValidacionTextbox();
-            ShowInTaskbar = false;
+            //ShowInTaskbar = false;
 
         }
 

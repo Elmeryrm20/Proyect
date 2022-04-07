@@ -44,6 +44,7 @@ namespace PRESENTACION
             this.Btn_Agregar = new System.Windows.Forms.PictureBox();
             this.Btn_Inicio = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_Cerrar_Sesion = new System.Windows.Forms.PictureBox();
             this.LblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PibMinimizar = new System.Windows.Forms.PictureBox();
@@ -51,7 +52,6 @@ namespace PRESENTACION
             this.Pib_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pib_Restaurar = new System.Windows.Forms.PictureBox();
             this.PnlCuerpo = new System.Windows.Forms.Panel();
-            this.Btn_Cerrar_Sesion = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnEntrada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibContraer)).BeginInit();
@@ -67,11 +67,11 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Agregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar_Sesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar_Sesion)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -304,6 +304,20 @@ namespace PRESENTACION
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // Btn_Cerrar_Sesion
+            // 
+            this.Btn_Cerrar_Sesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_Cerrar_Sesion.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Cerrar_Sesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Cerrar_Sesion.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar05;
+            this.Btn_Cerrar_Sesion.Location = new System.Drawing.Point(633, 5);
+            this.Btn_Cerrar_Sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Cerrar_Sesion.Name = "Btn_Cerrar_Sesion";
+            this.Btn_Cerrar_Sesion.Size = new System.Drawing.Size(24, 24);
+            this.Btn_Cerrar_Sesion.TabIndex = 4;
+            this.Btn_Cerrar_Sesion.TabStop = false;
+            this.Btn_Cerrar_Sesion.Click += new System.EventHandler(this.Btn_Cerrar_Sesion_Click);
+            // 
             // LblNombre
             // 
             this.LblNombre.AutoSize = true;
@@ -403,20 +417,6 @@ namespace PRESENTACION
             this.PnlCuerpo.Size = new System.Drawing.Size(740, 518);
             this.PnlCuerpo.TabIndex = 5;
             // 
-            // Btn_Cerrar_Sesion
-            // 
-            this.Btn_Cerrar_Sesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Btn_Cerrar_Sesion.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Cerrar_Sesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Cerrar_Sesion.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar05;
-            this.Btn_Cerrar_Sesion.Location = new System.Drawing.Point(633, 5);
-            this.Btn_Cerrar_Sesion.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Cerrar_Sesion.Name = "Btn_Cerrar_Sesion";
-            this.Btn_Cerrar_Sesion.Size = new System.Drawing.Size(24, 24);
-            this.Btn_Cerrar_Sesion.TabIndex = 4;
-            this.Btn_Cerrar_Sesion.TabStop = false;
-            this.Btn_Cerrar_Sesion.Click += new System.EventHandler(this.Btn_Cerrar_Sesion_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,6 +430,7 @@ namespace PRESENTACION
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnEntrada)).EndInit();
@@ -447,11 +448,11 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Inicio)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar_Sesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Restaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar_Sesion)).EndInit();
             this.ResumeLayout(false);
 
         }

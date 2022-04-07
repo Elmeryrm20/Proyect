@@ -554,7 +554,7 @@ namespace PRESENTACION
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             ActivarTootip();
-            ShowInTaskbar = true;
+            //ShowInTaskbar = true;
             LblNombre.Text = Nombre;
 
         }

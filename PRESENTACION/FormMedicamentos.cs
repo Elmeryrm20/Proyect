@@ -104,7 +104,7 @@ namespace PRESENTACION
             Actualizar();
         }
 
-        int valor_ID = 1;
+        //int valor_ID = 1;
 
         private void dgb_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
