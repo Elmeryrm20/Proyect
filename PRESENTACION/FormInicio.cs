@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DATOS;
 
 namespace PRESENTACION
 {
@@ -30,13 +22,13 @@ namespace PRESENTACION
         readonly string Nombre;
         void saludo()
         {
-            int hora=(int)DateTime.Now.Hour;
+            int hora = (int)DateTime.Now.Hour;
 
-            if (hora>=6 && hora<=12)
+            if (hora >= 6 && hora <= 12)
             {
                 //LblMensajeBienvenida.Text = "Que tengas un excelente día de trabajo."; 
             }
-            else if (hora<=18 && hora>=13)
+            else if (hora <= 18 && hora >= 13)
             {
                 //LblMensajeBienvenida.Text = "Que tengas una excelente tarde de trabajo.";
             }
@@ -53,6 +45,31 @@ namespace PRESENTACION
         private void FormInicio_Load(object sender, EventArgs e)
         {
             ShowInTaskbar = true;
+            int n;
+            dgb_Medicamentos.Columns.Add("Column1", "Descripcion");
+            dgb_Medicamentos.Columns.Add("Column2", "Cantidad");
+            n = dgb_Medicamentos.Rows.Add();
+            dgb_Medicamentos.Rows[n].Cells[0].Value = "Acetil";
+            dgb_Medicamentos.Rows[n].Cells[1].Value = "34";
+            dgb_Medicamentos.Rows[n].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            n = dgb_Medicamentos.Rows.Add();
+            dgb_Medicamentos.Rows[n].Cells[0].Value = "Acohol";
+            dgb_Medicamentos.Rows[n].Cells[1].Value = "56";
+
+            n = dgb_Medicamentos.Rows.Add();
+            dgb_Medicamentos.Rows[n].Cells[0].Value = "Panadol";
+            dgb_Medicamentos.Rows[n].Cells[1].Value = "5";    
+            
+            n = dgb_Medicamentos.Rows.Add();
+            dgb_Medicamentos.Rows[n].Cells[0].Value = "Pastilla";
+            dgb_Medicamentos.Rows[n].Cells[1].Value = "21";     
+            
+            n = dgb_Medicamentos.Rows.Add();
+            dgb_Medicamentos.Rows[n].Cells[0].Value = "Algodon";
+            dgb_Medicamentos.Rows[n].Cells[1].Value = "2";
+
+            dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }
