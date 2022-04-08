@@ -42,9 +42,17 @@ namespace PRESENTACION
             }
         }
 
+        void CargarDashBoard()
+        {
+
+        }
         private void FormInicio_Load(object sender, EventArgs e)
         {
             ShowInTaskbar = true;
+            CmbFiltroFecha.SelectedIndex = 4;
+            CargarDashBoard();
+
+            //Prueba1
             int n;
             dgb_Medicamentos.Columns.Add("Column1", "Descripcion");
             dgb_Medicamentos.Columns.Add("Column2", "Cantidad");
@@ -70,6 +78,8 @@ namespace PRESENTACION
             dgb_Medicamentos.Rows[n].Cells[1].Value = "2";
 
             dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
         }
     }
 }

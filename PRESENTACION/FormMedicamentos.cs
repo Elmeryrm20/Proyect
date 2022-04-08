@@ -17,9 +17,6 @@ namespace PRESENTACION
         {
             InitializeComponent();
             this.DNI = DNI;
-            Rellenartabla();
-            Elementos_Filtrar();
-            Almacen_Filtrar();
 
         }
         #endregion
@@ -79,6 +76,9 @@ namespace PRESENTACION
         #region Sin Usar
         private void FormMedicamentos_Load(object sender, EventArgs e)
         {
+            Rellenartabla();
+            Elementos_Filtrar();
+            Almacen_Filtrar();
             cmbTipo.SelectedIndex = -1;
             cmb_Almacen.SelectedIndex = -1;
             cmbTipo.Text = "Seleccionar";

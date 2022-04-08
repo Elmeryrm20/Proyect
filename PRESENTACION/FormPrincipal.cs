@@ -41,6 +41,49 @@ namespace PRESENTACION
         #endregion
 
         #region Método para Formulario
+        void ActivarTootip()
+        {
+            ToolTip toolTip2 = new ToolTip();
+            toolTip2.SetToolTip(PibCerrar, "Cerrar");
+            toolTip2.SetToolTip(Pib_Restaurar, "Restaurar");
+            toolTip2.SetToolTip(Pib_Maximizar, "Maximizar");
+            toolTip2.SetToolTip(PibMinimizar, "Minimizar");
+
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.UseAnimation = true;
+            toolTip1.UseFading = true;
+            //toolTip1.BackColor = Color.FromArgb(241, 241, 252);
+            //toolTip1.ForeColor = Color.FromArgb(230, 50, 10);
+            toolTip1.IsBalloon = true;
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+
+            toolTip1.SetToolTip(Btn_Inicio, "Ventana de Inicio.");
+            toolTip1.SetToolTip(Btn_Medicamentos, "Muestra el inventario de medicamentos.");
+            toolTip1.SetToolTip(BtnEntrada, "Aquí podrás registrar las entradas de medicamentos.");
+            toolTip1.SetToolTip(Btn_Salida, "Aquí podrás registrar las salidas de medicamentos.");
+            toolTip1.SetToolTip(Btn_Agregar, "Agrega un nuevo medicamento al inventario.");
+            toolTip1.SetToolTip(Btn_Usuarios, "Muestra la lista de usuarios registrados.");
+            toolTip1.SetToolTip(Btn_AgregarUsuario, "Registra un nuevo usuario a la aplicación.");
+            toolTip1.SetToolTip(Btn_Historial, "Aquí puedes revisar el historial \nde todas las entradas y salidas \nde los medicamentos.");
+            toolTip1.SetToolTip(Btn_Config, "Configura las opciones de la aplicación.");
+            toolTip1.SetToolTip(Btn_Acerca, "Muestra datos acerca de la aplicación.");
+
+            //using (StringFormat sf = new StringFormat())
+            //{
+            //    sf.Alignment = StringAlignment.Center;
+            //}
+
+
+        }
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            ActivarTootip();
+            //ShowInTaskbar = true;
+            LblNombre.Text = Nombre;
+
+        }
         private void OrdenarBotonesMenu(string Tipo)
         {
 
@@ -353,6 +396,28 @@ namespace PRESENTACION
                 Pib_Restaurar.Visible = true;
             }
         }
+
+        private void Btn_Cerrar_Sesion_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cerrar sesion?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                FormLogin sp = new FormLogin();
+                sp.Show();
+            }
+
+        }
+
+        private void Btn_Cerrar_Sesion_MouseEnter(object sender, EventArgs e)
+        {
+            btn_cerrarsesion.Image = Properties.Resources.BotonVentanaCerrarSesion02;
+        }
+
+        private void Btn_Cerrar_Sesion_MouseLeave(object sender, EventArgs e)
+        {
+            btn_cerrarsesion.Image = Properties.Resources.BotonVentanaCerrarSesion01;
+        }
         #endregion
 
         #region Botones Menú
@@ -486,6 +551,11 @@ namespace PRESENTACION
         #endregion
 
         #region Métodos Heredados
+        public void RellenarTablaMedicamentos()
+        {
+            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
+            FrmMedicamentos.Rellenartabla();
+        }
         public void ResaltarBotonEgreso()
         {
             FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
@@ -497,7 +567,6 @@ namespace PRESENTACION
 
             FrmMedicamentos.PibIngreso.Image = Properties.Resources.BotonFormIngreso03;
         }
-
         private bool SeleccionRepetida(DataGridView d, int Codigo)
         {
             if (d.Rows.Count > 0)
@@ -512,63 +581,6 @@ namespace PRESENTACION
                 }
             }
             return true;
-        }
-
-        void ActivarTootip()
-        {
-
-            ToolTip toolTip2 = new ToolTip();
-            toolTip2.SetToolTip(PibCerrar, "Cerrar");
-            toolTip2.SetToolTip(Pib_Restaurar, "Restaurar");
-            toolTip2.SetToolTip(Pib_Maximizar, "Maximizar");
-            toolTip2.SetToolTip(PibMinimizar, "Minimizar");
-
-            ToolTip toolTip1 = new ToolTip();
-            toolTip1.UseAnimation = true;
-            toolTip1.UseFading = true;
-            //toolTip1.BackColor = Color.FromArgb(241, 241, 252);
-            //toolTip1.ForeColor = Color.FromArgb(230, 50, 10);
-            toolTip1.IsBalloon = true;
-            toolTip1.AutoPopDelay = 5000;
-            toolTip1.InitialDelay = 1000;
-            toolTip1.ReshowDelay = 500;
-
-            toolTip1.SetToolTip(Btn_Inicio, "Ventana de Inicio.");
-            toolTip1.SetToolTip(Btn_Medicamentos, "Muestra el inventario de medicamentos.");
-            toolTip1.SetToolTip(BtnEntrada, "Aquí podrás registrar las entradas de medicamentos.");
-            toolTip1.SetToolTip(Btn_Salida, "Aquí podrás registrar las salidas de medicamentos.");
-            toolTip1.SetToolTip(Btn_Agregar, "Agrega un nuevo medicamento al inventario.");
-            toolTip1.SetToolTip(Btn_Usuarios, "Muestra la lista de usuarios registrados.");
-            toolTip1.SetToolTip(Btn_AgregarUsuario, "Registra un nuevo usuario a la aplicación.");
-            toolTip1.SetToolTip(Btn_Historial, "Aquí puedes revisar el historial \nde todas las entradas y salidas \nde los medicamentos.");
-            toolTip1.SetToolTip(Btn_Config, "Configura las opciones de la aplicación.");
-            toolTip1.SetToolTip(Btn_Acerca, "Muestra datos acerca de la aplicación.");
-
-            //using (StringFormat sf = new StringFormat())
-            //{
-            //    sf.Alignment = StringAlignment.Center;
-            //}
-
-
-        }
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-            ActivarTootip();
-            //ShowInTaskbar = true;
-            LblNombre.Text = Nombre;
-
-        }
-
-        private void Btn_Cerrar_Sesion_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cerrar sesion?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-                FormLogin sp = new FormLogin();
-                sp.Show();
-            }
-            
         }
 
         public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
@@ -600,7 +612,6 @@ namespace PRESENTACION
             }
 
         }
-
         public void EnviarIngreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo, string FechaVencimiento)
         {
             FormEntradaMedicamento FrmEntrada = PnlCuerpo.Controls.OfType<FormEntradaMedicamento>().FirstOrDefault();

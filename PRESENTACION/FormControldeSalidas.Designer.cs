@@ -29,11 +29,12 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Btn_Informe = new System.Windows.Forms.Panel();
             this.PibImprimir = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -51,9 +52,10 @@ namespace PRESENTACION
             this.dtp_FechaF = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaI = new System.Windows.Forms.DateTimePicker();
             this.LblDesde = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PibFiltrar = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.DgvHistorialEgreso = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Btn_Informe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibImprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,9 +63,10 @@ namespace PRESENTACION
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibFiltrar)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_Informe
@@ -184,7 +187,7 @@ namespace PRESENTACION
             this.panel4.Controls.Add(this.dtp_FechaF);
             this.panel4.Controls.Add(this.dtp_FechaI);
             this.panel4.Controls.Add(this.LblDesde);
-            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.PibFiltrar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(577, 72);
             this.panel4.Name = "panel4";
@@ -208,6 +211,7 @@ namespace PRESENTACION
             this.CmbFiltro.Size = new System.Drawing.Size(121, 21);
             this.CmbFiltro.TabIndex = 17;
             this.CmbFiltro.SelectedIndexChanged += new System.EventHandler(this.CmbFiltro_SelectedIndexChanged);
+            this.CmbFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbFiltro_KeyPress);
             // 
             // label1
             // 
@@ -224,7 +228,7 @@ namespace PRESENTACION
             // 
             this.txt_Error.AutoSize = true;
             this.txt_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_Error.Location = new System.Drawing.Point(3, 200);
+            this.txt_Error.Location = new System.Drawing.Point(6, 225);
             this.txt_Error.Name = "txt_Error";
             this.txt_Error.Size = new System.Drawing.Size(103, 13);
             this.txt_Error.TabIndex = 15;
@@ -269,15 +273,18 @@ namespace PRESENTACION
             this.LblDesde.Text = "Desde:";
             this.LblDesde.Visible = false;
             // 
-            // pictureBox1
+            // PibFiltrar
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 173);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 24);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PibFiltrar.BackColor = System.Drawing.Color.Transparent;
+            this.PibFiltrar.Image = global::PRESENTACION.Properties.Resources.BotonFormFiltrar01;
+            this.PibFiltrar.Location = new System.Drawing.Point(6, 173);
+            this.PibFiltrar.Name = "PibFiltrar";
+            this.PibFiltrar.Size = new System.Drawing.Size(110, 40);
+            this.PibFiltrar.TabIndex = 13;
+            this.PibFiltrar.TabStop = false;
+            this.PibFiltrar.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PibFiltrar.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.PibFiltrar.MouseLeave += new System.EventHandler(this.PibFiltrar_MouseLeave);
             // 
             // panel5
             // 
@@ -293,30 +300,30 @@ namespace PRESENTACION
             this.DgvHistorialEgreso.AllowUserToAddRows = false;
             this.DgvHistorialEgreso.AllowUserToDeleteRows = false;
             this.DgvHistorialEgreso.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.DgvHistorialEgreso.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvHistorialEgreso.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.DgvHistorialEgreso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.DgvHistorialEgreso.BackgroundColor = System.Drawing.Color.PeachPuff;
             this.DgvHistorialEgreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvHistorialEgreso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvHistorialEgreso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvHistorialEgreso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.DgvHistorialEgreso.ColumnHeadersHeight = 25;
             this.DgvHistorialEgreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvHistorialEgreso.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvHistorialEgreso.DefaultCellStyle = dataGridViewCellStyle18;
             this.DgvHistorialEgreso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvHistorialEgreso.EnableHeadersVisualStyles = false;
             this.DgvHistorialEgreso.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
@@ -325,21 +332,25 @@ namespace PRESENTACION
             this.DgvHistorialEgreso.Name = "DgvHistorialEgreso";
             this.DgvHistorialEgreso.ReadOnly = true;
             this.DgvHistorialEgreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvHistorialEgreso.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvHistorialEgreso.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.DgvHistorialEgreso.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.DgvHistorialEgreso.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.DgvHistorialEgreso.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.DgvHistorialEgreso.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DgvHistorialEgreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvHistorialEgreso.Size = new System.Drawing.Size(557, 268);
             this.DgvHistorialEgreso.TabIndex = 4;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FormControldeSalidas
             // 
@@ -365,9 +376,10 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibFiltrar)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvHistorialEgreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,7 +396,7 @@ namespace PRESENTACION
         private System.Windows.Forms.DateTimePicker dtp_FechaF;
         private System.Windows.Forms.DateTimePicker dtp_FechaI;
         private System.Windows.Forms.Label LblDesde;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PibFiltrar;
         private System.Windows.Forms.Label txt_Error;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
@@ -393,5 +405,6 @@ namespace PRESENTACION
         private System.Windows.Forms.ComboBox CmbFiltro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox PibImprimir;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

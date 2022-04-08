@@ -52,10 +52,13 @@ namespace PRESENTACION
         public short fila = -1;
         private void Limpiar()
         {
-            CmbColaborador.SelectedIndex = -1;
-            CmbColaborador.Text = "Seleccionar";
-            CmbEncargado.SelectedIndex = -1;
-            CmbEncargado.Text = "Seleccionar";
+            //CmbColaborador.SelectedIndex = -1;
+            //CmbColaborador.Text = "Seleccionar";
+            //CmbEncargado.SelectedIndex = -1;
+            //CmbEncargado.Text = "Seleccionar";
+
+            CmbColaborador.SelectedIndex = 0;
+            CmbEncargado.SelectedIndex = 0;
             DgvEntrada.Rows.Clear();
             PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed05;
             PibConfirmar.Image = Properties.Resources.BotonFormConfirmarEntrada01;
@@ -102,21 +105,17 @@ namespace PRESENTACION
                 Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
                 CmbEncargado.Items.Add(Coordinadores[i, 1]);
             }
+
+            //CmbColaborador.Text = "Seleccionar";
+            CmbColaborador.SelectedIndex = 0;
+            //CmbEncargado.Text = "Seleccionar";
+            CmbEncargado.SelectedIndex = 0;
         }
 
         private void FormEntradaMedicamento_Load(object sender, EventArgs e)
         {
 
             RellenarPersonal();
-            //CmbColaborador.DisplayMember = "Colaborador";
-            //CmbColaborador.DataSource = consultas.D_MostrarColaboradores(DNI);
-            ////CmbColaborador.ValueMember = "Colaborador_Desc";
-            CmbColaborador.Text = "Seleccionar";
-
-            //CmbEncargado.DisplayMember = "Coordinador";
-            //CmbEncargado.DataSource = consultas.D_MostrarCoordinadores(DNI);
-            ////CmbEncargado.ValueMember = "Encargado_Desc";
-            CmbEncargado.Text = "Seleccionar";
 
             DesignDataGridView();
         }
@@ -281,10 +280,9 @@ namespace PRESENTACION
 
                     Limpiar();
 
-                    //    FormMedicamentos FrmMed = Owner as FormMedicamentos;
-                    //    FrmMed.Rellenartabla();
-                    //    FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[Med_Codigo - 1].Cells[0];
-                    //    Close();
+                    FormPrincipal FrmPrincipal = (FormPrincipal)Owner;
+                    FrmPrincipal.RellenarTablaMedicamentos();
+                    //FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[Med_Codigo - 1].Cells[0];
                 }
                 else
                 {

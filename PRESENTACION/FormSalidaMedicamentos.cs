@@ -145,12 +145,9 @@ namespace PRESENTACION
 
                     Limpiar();
 
+                    FormPrincipal FrmPrincipal = (FormPrincipal)Owner;
+                    FrmPrincipal.RellenarTablaMedicamentos();
 
-
-                    //    FormMedicamentos FrmMed = Owner as FormMedicamentos;
-                    //    FrmMed.Rellenartabla();
-                    //    FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[Med_Codigo - 1].Cells[0];
-                    //    Close();
                 }
                 else
                 {
@@ -168,10 +165,15 @@ namespace PRESENTACION
 
         private void Limpiar()
         {
-            CmbColaborador.SelectedIndex = -1;
-            CmbColaborador.Text = "Seleccionar";
-            CmbEncargado.SelectedIndex = -1;
-            CmbEncargado.Text = "Seleccionar";
+            //CmbColaborador.SelectedIndex = -1;
+            //CmbColaborador.Text = "Seleccionar";
+            //CmbEncargado.SelectedIndex = -1;
+            //CmbEncargado.Text = "Seleccionar";
+
+            CmbColaborador.SelectedIndex = 0;
+            CmbEncargado.SelectedIndex = 0;
+            CmbNacionalidad.SelectedIndex = 0;
+
             DgvSalida.Rows.Clear();
             PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed05;
             PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida06;
@@ -204,23 +206,19 @@ namespace PRESENTACION
                 Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
                 CmbEncargado.Items.Add(Coordinadores[i, 1]);
             }
+
+            //CmbColaborador.Text = "Seleccionar";
+            CmbColaborador.SelectedIndex = 0;
+            //CmbEncargado.Text = "Seleccionar";
+            CmbEncargado.SelectedIndex = 0;
         }
         private void FormSalidaMedicamentos_Load(object sender, System.EventArgs e)
         {
             RellenarPersonal();
-            //CmbColaborador.DisplayMember = "Trabajador";
-            //CmbColaborador.DataSource = consultas.D_MostrarColaboradores(DNI);
-            ////CmbColaborador.ValueMember = "Colaborador_Desc";
-            CmbColaborador.Text = "Seleccionar";
 
             CmbNacionalidad.Items.Add("Peruano");
             CmbNacionalidad.Items.Add("Extranjero");
-
-
-            //CmbEncargado.DisplayMember = "Trabajador";
-            //CmbEncargado.DataSource = consultas.D_MostrarColaboradores(DNI);
-            ////CmbEncargado.ValueMember = "Encargado_Desc";
-            CmbEncargado.Text = "Seleccionar";
+            CmbNacionalidad.SelectedIndex = 0;
 
             DesignDataGridView();
 

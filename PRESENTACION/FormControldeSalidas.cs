@@ -35,34 +35,50 @@ namespace PRESENTACION
         {
             RellenarDataGridView();
             txt_Texto.Clear();
+            CmbFiltro.SelectedIndex = -1;
+            CmbFiltro.Text = "Seleccionar";
             LblDesde.Visible = false;
             dtp_FechaI.Visible = false;
             LblHasta.Visible = false;
             dtp_FechaF.Visible = false;
 
         }
+        bool ValidarFiltro()
+        {
+            if (CmbFiltro.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(CmbFiltro, "Seleccione un filtro");
+                return false;
+            }
+            else if (dtp_FechaI.Value.Date > dtp_FechaF.Value.Date)
+            {
+                txt_Error.Visible = true;
+                return false;
+            }
+            else return true;
 
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (dtp_FechaI.Value.Date <= dtp_FechaF.Value.Date)
+            if (ValidarFiltro())
             {
                 switch (CmbFiltro.SelectedIndex)
                 {
                     case 0:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.AddDays(1).ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.AddDays(1).ToString("yyyy-MM-dd"));
                         break;
                     case 1:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(DateTime.Today.AddDays(-7).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.AddDays(-7).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
                         break;
                     case 2:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(DateTime.Today.AddDays(-30).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.AddDays(-30).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
 
                         break;
                     case 3:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.AddDays(1).ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.AddDays(1).ToString("yyyy-MM-dd"));
                         break;
                     case 4:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HI(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
                         break;
                     default:
                         break;
@@ -70,10 +86,6 @@ namespace PRESENTACION
                 DgvHistorialEgreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 txt_Texto.Clear();
                 txt_Error.Visible = false;
-            }
-            else
-            {
-                txt_Error.Visible = true;
             }
         }
 
@@ -101,6 +113,8 @@ namespace PRESENTACION
         private void FormControldeSalidas_Load(object sender, EventArgs e)
         {
             DesignDataGridView();
+            CmbFiltro.SelectedIndex = -1;
+            CmbFiltro.Text = "Seleccionar";
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -291,6 +305,23 @@ namespace PRESENTACION
                 }
             };
             ppd.ShowDialog();
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            PibFiltrar.Image = Properties.Resources.BotonFormFiltrar02;
+
+        }
+
+        private void PibFiltrar_MouseLeave(object sender, EventArgs e)
+        {
+            PibFiltrar.Image = Properties.Resources.BotonFormFiltrar01;
+
+        }
+
+        private void CmbFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

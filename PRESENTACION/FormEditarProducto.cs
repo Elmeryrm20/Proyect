@@ -70,7 +70,14 @@ namespace PRESENTACION
             fr.Rellenartabla();
             this.Close();
         }
-
+        void SeleccionarFila()
+        {
+            //MessageBox.Show("Datos actualizados correctamente");
+            FormMedicamentos FrmMed = Owner as FormMedicamentos;
+            FrmMed.Rellenartabla();
+            FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[id_Medicamento - 1].Cells[1];
+            Close();
+        }
         private void Btn_Editar_Click(object sender, EventArgs e)
         {
 
@@ -90,7 +97,7 @@ namespace PRESENTACION
                     consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
                 }
                 MessageBox.Show("Los cambios Guardados", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Consulta_Editar_Medicamento();
+                SeleccionarFila();
 
             }
             catch (Exception)
@@ -180,12 +187,9 @@ namespace PRESENTACION
             }
         }
 
-        private void FormEditarProducto_Load(object sender, EventArgs e)
+        private void FormEditarProducto_Load_1(object sender, EventArgs e)
         {
-           
+
         }
-
-
-     
     }
 }

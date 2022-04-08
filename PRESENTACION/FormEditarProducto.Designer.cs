@@ -277,6 +277,7 @@
             this.Name = "FormEditarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarProducto";
+            this.Load += new System.EventHandler(this.FormEditarProducto_Load_1);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             this.panel2.ResumeLayout(false);

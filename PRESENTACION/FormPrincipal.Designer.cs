@@ -309,7 +309,7 @@ namespace PRESENTACION
             this.Btn_Cerrar_Sesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Btn_Cerrar_Sesion.BackColor = System.Drawing.Color.Transparent;
             this.Btn_Cerrar_Sesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Cerrar_Sesion.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar05;
+            this.Btn_Cerrar_Sesion.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrarSesion01;
             this.Btn_Cerrar_Sesion.Location = new System.Drawing.Point(633, 5);
             this.Btn_Cerrar_Sesion.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Cerrar_Sesion.Name = "Btn_Cerrar_Sesion";
@@ -317,11 +317,14 @@ namespace PRESENTACION
             this.Btn_Cerrar_Sesion.TabIndex = 4;
             this.Btn_Cerrar_Sesion.TabStop = false;
             this.Btn_Cerrar_Sesion.Click += new System.EventHandler(this.Btn_Cerrar_Sesion_Click);
+            this.Btn_Cerrar_Sesion.MouseEnter += new System.EventHandler(this.Btn_Cerrar_Sesion_MouseEnter);
+            this.Btn_Cerrar_Sesion.MouseLeave += new System.EventHandler(this.Btn_Cerrar_Sesion_MouseLeave);
             // 
             // LblNombre
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.BackColor = System.Drawing.Color.White;
+            this.LblNombre.Enabled = false;
             this.LblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
             this.LblNombre.Location = new System.Drawing.Point(110, 9);
@@ -334,6 +337,7 @@ namespace PRESENTACION
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
             this.label1.Location = new System.Drawing.Point(19, 9);
@@ -430,7 +434,6 @@ namespace PRESENTACION
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnEntrada)).EndInit();

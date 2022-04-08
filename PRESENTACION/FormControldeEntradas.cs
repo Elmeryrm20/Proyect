@@ -1,9 +1,9 @@
 ﻿using DATOS;
 using SpreadsheetLight;
 using System;
-using System.Windows.Forms;
-using System.Drawing.Printing;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.Windows.Forms;
 
 namespace PRESENTACION
 {
@@ -28,16 +28,33 @@ namespace PRESENTACION
         {
             RellenarDataGridView();
             txt_Texto.Clear();
+            CmbFiltro.SelectedIndex = -1;
+            CmbFiltro.Text = "Seleccionar";
             LblDesde.Visible = false;
             dtp_FechaI.Visible = false;
             LblHasta.Visible = false;
             dtp_FechaF.Visible = false;
         }
 
+        bool ValidarFiltro()
+        {
+            if (CmbFiltro.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(CmbFiltro, "Seleccione un filtro");
+                return false;
+            }
+            else if (dtp_FechaI.Value.Date > dtp_FechaF.Value.Date)
+            {
+                txt_Error.Visible = true;
+                return false;
+            }
+            else return true;
+
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            if (dtp_FechaI.Value.Date <= dtp_FechaF.Value.Date)
+            if (ValidarFiltro())
             {
                 switch (CmbFiltro.SelectedIndex)
                 {
@@ -65,11 +82,6 @@ namespace PRESENTACION
                 txt_Error.Visible = false;
                 DesignDataGridView();
             }
-            else
-            {
-                txt_Error.Visible = true;
-            }
-
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -95,6 +107,8 @@ namespace PRESENTACION
         private void FormControldeEntradas_Load(object sender, EventArgs e)
         {
             DesignDataGridView();
+            CmbFiltro.SelectedIndex = -1;
+            CmbFiltro.Text = "Seleccionar";
         }
 
         private void btn_Informe_Click(object sender, EventArgs e)
@@ -279,6 +293,21 @@ namespace PRESENTACION
                 }
             };
             ppd.ShowDialog();
+        }
+
+        private void PibFiltrar_MouseEnter(object sender, EventArgs e)
+        {
+            PibFiltrar.Image = Properties.Resources.BotonFormFiltrar02;
+        }
+
+        private void PibFiltrar_MouseLeave(object sender, EventArgs e)
+        {
+            PibFiltrar.Image = Properties.Resources.BotonFormFiltrar01;
+        }
+
+        private void CmbFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

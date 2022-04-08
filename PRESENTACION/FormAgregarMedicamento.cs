@@ -17,8 +17,8 @@ namespace PRESENTACION
         }
         public FormAgregarMedicamento(string Tra_DNI)
         {
-            this.Tra_DNI = Tra_DNI;
             InitializeComponent();
+            this.Tra_DNI = Tra_DNI;
 
 
         }
@@ -100,6 +100,11 @@ namespace PRESENTACION
                 Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
                 CmbEncargado.Items.Add(Coordinadores[i, 1]);
             }
+
+            //CmbColaborador.Text = "Seleccionar";
+            CmbColaborador.SelectedIndex = 0;
+            //CmbEncargado.Text = "Seleccionar";
+            CmbEncargado.SelectedIndex = 0;
         }
 
         private bool Validaciones()
@@ -248,7 +253,8 @@ namespace PRESENTACION
 
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Limpiar();
-
+                    FormPrincipal FrmPrincipal = (FormPrincipal)Owner;
+                    FrmPrincipal.RellenarTablaMedicamentos();
                 }
             }
         }
@@ -265,8 +271,11 @@ namespace PRESENTACION
             dtFecha_Vencimiento.Value = DateTime.Now;
             PibImagen.Image = Properties.Resources.Imagen01;
             CmbPertenencia.Text = "Seleccionar";
-            CmbColaborador.Text = "Seleccionar";
-            CmbEncargado.Text = "Seleccionar";
+
+            //CmbColaborador.Text = "Seleccionar";
+            CmbColaborador.SelectedIndex = 0;
+            //CmbEncargado.Text = "Seleccionar";
+            CmbEncargado.SelectedIndex = 0;
 
         }
 
