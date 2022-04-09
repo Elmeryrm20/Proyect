@@ -332,6 +332,7 @@ namespace PRESENTACION
             this.LblNombre.Size = new System.Drawing.Size(69, 18);
             this.LblNombre.TabIndex = 3;
             this.LblNombre.Text = "Nombre";
+            this.LblNombre.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // label1
             // 
@@ -345,6 +346,7 @@ namespace PRESENTACION
             this.label1.Size = new System.Drawing.Size(91, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Bienvenido";
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // PibMinimizar
             // 

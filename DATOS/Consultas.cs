@@ -306,6 +306,21 @@ namespace DATOS
             return dt;
 
         }
+        public DataTable D_Validacion_Contraseña(string DNI)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SP_Viricar_Contraseña", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("texto", DNI);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            Conexion.connection.Close();
+
+            return dt;
+        }
         #endregion
 
         #region Rellenar DatagridView
@@ -399,7 +414,6 @@ namespace DATOS
         #endregion
 
         #region Insertar o Actualizar Base de Datos
-
         public void D_AgregarDestino(string DNI, string Nombres, string Apellidos, string Nacionalidad, string Telefono, int TipoDNI)
         {
             Conexion.connection.Open();
@@ -779,23 +793,6 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        #endregion
-
-        public DataTable D_Validacion_Contraseña(string DNI)
-        {
-            Conexion.connection.Open();
-
-            MySqlCommand cmd = new MySqlCommand("SP_Viricar_Contraseña", Conexion.connection);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("texto", DNI);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            Conexion.connection.Close();
-
-            return dt;
-        }
 
         public DataTable SP_ListaU_Para_Edit(string Med_Codigo)
         {
@@ -809,7 +806,6 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-
         public DataTable SP_Consulta_Medicamento_Filtrado(string Tipo)
         {
             Conexion.connection.Open();
@@ -824,6 +820,23 @@ namespace DATOS
             return dt;
 
         }
+        public DataTable D_DashBoard_Indicadores(string fecha1,string fecha2)
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("Sp_DashBoard_Indicadores", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("fecha1", fecha1);
+            comando.Parameters.AddWithValue("fecha2", fecha2);
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+        #endregion
+
+
         public void SP_Eliminar_U(String DNI, int Estado)
         {
             Conexion.connection.Open();
