@@ -9,8 +9,8 @@ namespace PRESENTACION
     {
 
 
-            #region Constructores
-            public FormInicio()
+        #region Constructores
+        public FormInicio()
         {
             InitializeComponent();
         }
@@ -66,7 +66,7 @@ namespace PRESENTACION
             }
         }
         void Indicadores()
-        {        
+        {
             DataTable dt = DU.D_DashBoard_Indicadores(Fecha1(), DateTime.Today.ToString("yyyy-MM-dd"));
             //0 Cantidad de Medicamentos
             //1 Suma de Ingresos
@@ -98,6 +98,9 @@ namespace PRESENTACION
         }
         void UltimosEgresos()
         {
+
+            dgb_Medicamentos.DataSource = DU.D_UltimosEgresos();
+
             //Prueba1
             //dgb_Medicamentos.Rows.Clear();
             //int n;
@@ -127,10 +130,19 @@ namespace PRESENTACION
             //dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
+        void Graficos()
+        {
+            //DataTable dt = DU.D_MayoresEgresos();
+            ChartMayoresEgresos.DataSource = DU.D_CategoriasMedicamentos();
+            ChartMayoresEgresos.Series[0].XValueMember = "TIPO";
+            ChartMayoresEgresos.Series[0].YValueMembers = "CANTIDAD";
+            ChartMayoresEgresos.DataBind();
+        }
         public void CargarDashBoard()
         {
             Indicadores();
             UltimosEgresos();
+            Graficos();
         }
         private void FormInicio_Load(object sender, EventArgs e)
         {
@@ -141,7 +153,7 @@ namespace PRESENTACION
 
         private void CmbFiltroFecha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarDashBoard(); 
+            CargarDashBoard();
         }
     }
 }
