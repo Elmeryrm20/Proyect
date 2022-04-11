@@ -254,6 +254,7 @@ namespace PRESENTACION
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Limpiar();
                     FormPrincipal FrmPrincipal = (FormPrincipal)Owner;
+                    FrmPrincipal.CargarDashBoard();
                     FrmPrincipal.RellenarTablaMedicamentos();
                 }
             }

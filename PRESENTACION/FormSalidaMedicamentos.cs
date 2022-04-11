@@ -146,6 +146,7 @@ namespace PRESENTACION
                     Limpiar();
 
                     FormPrincipal FrmPrincipal = (FormPrincipal)Owner;
+                    FrmPrincipal.CargarDashBoard();
                     FrmPrincipal.RellenarTablaMedicamentos();
 
                 }

@@ -6,8 +6,12 @@ using System.Windows.Forms;
 
 namespace PRESENTACION
 {
+
     public partial class FormPrincipal : Form
     {
+
+
+
         #region Constructores
         public FormPrincipal()
         {
@@ -17,6 +21,7 @@ namespace PRESENTACION
         public FormPrincipal(string DNI, string Tipo, string Nombre)
         {
             InitializeComponent();
+
             this.DNI = DNI;
             this.Nombre = Nombre;
 
@@ -551,6 +556,11 @@ namespace PRESENTACION
         #endregion
 
         #region Métodos Heredados
+        public void CargarDashBoard()
+        {
+            FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
+            FrmInicio.CargarDashBoard();
+        }
         public void RellenarTablaMedicamentos()
         {
             FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();

@@ -7,8 +7,10 @@ namespace PRESENTACION
 {
     public partial class FormInicio : Form
     {
-        #region Constructores
-        public FormInicio()
+
+
+            #region Constructores
+            public FormInicio()
         {
             InitializeComponent();
         }
@@ -82,11 +84,15 @@ namespace PRESENTACION
             LblNumEntradas.Text = dt.Rows[0][1].ToString();
             LblNumSalidas.Text = dt.Rows[0][2].ToString();
             LblNumExtranjeros.Text = dt.Rows[0][3].ToString();
-            LblPorcExtranjeros.Text = dt.Rows[0][4].ToString();
+            CpbPorcExtranjeros.Text = dt.Rows[0][4].ToString();
+            CpbPorcExtranjeros.Value = int.Parse(dt.Rows[0][4].ToString().Replace("%", String.Empty));
+            LblPorcExtranjeros.Text = dt.Rows[0][4].ToString().Replace("%", String.Empty);
             LblNumVencidos.Text = dt.Rows[0][5].ToString();
             LblPorcVencidos.Text = dt.Rows[0][6].ToString();
+            PrbVencidos.Value = int.Parse(dt.Rows[0][6].ToString().Replace("%", String.Empty));
             LblNumAgotados.Text = dt.Rows[0][7].ToString();
             LblPorcAgotados.Text = dt.Rows[0][8].ToString();
+            PrbAgotados.Value = int.Parse(dt.Rows[0][8].ToString().Replace("%", String.Empty));
             LblProximoVencimiento.Text = dt.Rows[0][9].ToString();
             LblFechaProxVenci.Text = dt.Rows[0][10].ToString();
         }
@@ -121,7 +127,7 @@ namespace PRESENTACION
             //dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
-        void CargarDashBoard()
+        public void CargarDashBoard()
         {
             Indicadores();
             UltimosEgresos();

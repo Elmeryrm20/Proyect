@@ -281,6 +281,7 @@ namespace PRESENTACION
                     Limpiar();
 
                     FormPrincipal FrmPrincipal = (FormPrincipal)Owner;
+                    FrmPrincipal.CargarDashBoard();
                     FrmPrincipal.RellenarTablaMedicamentos();
                     //FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[Med_Codigo - 1].Cells[0];
                 }

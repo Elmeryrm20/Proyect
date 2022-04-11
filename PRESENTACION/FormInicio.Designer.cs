@@ -29,10 +29,10 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -80,6 +80,8 @@ namespace PRESENTACION
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.CpbPorcExtranjeros = new CircularProgressBar.CircularProgressBar();
+            this.PrbVencidos = new System.Windows.Forms.ProgressBar();
+            this.PrbAgotados = new System.Windows.Forms.ProgressBar();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -152,26 +154,26 @@ namespace PRESENTACION
             this.dgb_Medicamentos.BackgroundColor = System.Drawing.Color.White;
             this.dgb_Medicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgb_Medicamentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(125)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgb_Medicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(125)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgb_Medicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgb_Medicamentos.ColumnHeadersHeight = 25;
             this.dgb_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgb_Medicamentos.ColumnHeadersVisible = false;
             this.dgb_Medicamentos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgb_Medicamentos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgb_Medicamentos.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgb_Medicamentos.EnableHeadersVisualStyles = false;
             this.dgb_Medicamentos.GridColor = System.Drawing.Color.White;
             this.dgb_Medicamentos.Location = new System.Drawing.Point(20, 375);
@@ -179,18 +181,18 @@ namespace PRESENTACION
             this.dgb_Medicamentos.Name = "dgb_Medicamentos";
             this.dgb_Medicamentos.ReadOnly = true;
             this.dgb_Medicamentos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgb_Medicamentos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgb_Medicamentos.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgb_Medicamentos.RowHeadersVisible = false;
             this.dgb_Medicamentos.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Humnst777 BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgb_Medicamentos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Humnst777 BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgb_Medicamentos.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgb_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgb_Medicamentos.Size = new System.Drawing.Size(194, 119);
             this.dgb_Medicamentos.TabIndex = 5;
@@ -254,6 +256,8 @@ namespace PRESENTACION
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.PrbAgotados);
+            this.panel3.Controls.Add(this.PrbVencidos);
             this.panel3.Controls.Add(this.LblPorcExtranjeros);
             this.panel3.Controls.Add(this.CpbPorcExtranjeros);
             this.panel3.Controls.Add(this.label21);
@@ -339,6 +343,7 @@ namespace PRESENTACION
             this.LblPorcExtranjeros.TabIndex = 2;
             this.LblPorcExtranjeros.Text = "43%";
             this.LblPorcExtranjeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblPorcExtranjeros.Visible = false;
             // 
             // pictureBox5
             // 
@@ -353,7 +358,7 @@ namespace PRESENTACION
             // 
             this.CmbFiltroFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbFiltroFecha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.CmbFiltroFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.CmbFiltroFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.CmbFiltroFecha.FormattingEnabled = true;
             this.CmbFiltroFecha.Items.AddRange(new object[] {
             "Hoy",
@@ -447,7 +452,7 @@ namespace PRESENTACION
             this.LblNumAgotados.BackColor = System.Drawing.Color.White;
             this.LblNumAgotados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumAgotados.ForeColor = System.Drawing.Color.Tomato;
-            this.LblNumAgotados.Location = new System.Drawing.Point(398, 303);
+            this.LblNumAgotados.Location = new System.Drawing.Point(409, 303);
             this.LblNumAgotados.Name = "LblNumAgotados";
             this.LblNumAgotados.Size = new System.Drawing.Size(35, 16);
             this.LblNumAgotados.TabIndex = 2;
@@ -459,7 +464,7 @@ namespace PRESENTACION
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Tomato;
-            this.label11.Location = new System.Drawing.Point(358, 303);
+            this.label11.Location = new System.Drawing.Point(369, 303);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 16);
             this.label11.TabIndex = 2;
@@ -471,7 +476,7 @@ namespace PRESENTACION
             this.LblNumVencidos.BackColor = System.Drawing.Color.White;
             this.LblNumVencidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.LblNumVencidos.Location = new System.Drawing.Point(398, 230);
+            this.LblNumVencidos.Location = new System.Drawing.Point(409, 230);
             this.LblNumVencidos.Name = "LblNumVencidos";
             this.LblNumVencidos.Size = new System.Drawing.Size(35, 16);
             this.LblNumVencidos.TabIndex = 2;
@@ -483,7 +488,7 @@ namespace PRESENTACION
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label9.Location = new System.Drawing.Point(358, 230);
+            this.label9.Location = new System.Drawing.Point(369, 230);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 16);
             this.label9.TabIndex = 2;
@@ -495,7 +500,7 @@ namespace PRESENTACION
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label14.Location = new System.Drawing.Point(270, 305);
+            this.label14.Location = new System.Drawing.Point(273, 305);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(70, 16);
             this.label14.TabIndex = 2;
@@ -507,7 +512,7 @@ namespace PRESENTACION
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label13.Location = new System.Drawing.Point(271, 231);
+            this.label13.Location = new System.Drawing.Point(274, 231);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 16);
             this.label13.TabIndex = 2;
@@ -712,7 +717,7 @@ namespace PRESENTACION
             // 
             this.CpbPorcExtranjeros.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.CpbPorcExtranjeros.AnimationSpeed = 500;
-            this.CpbPorcExtranjeros.BackColor = System.Drawing.Color.Transparent;
+            this.CpbPorcExtranjeros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.CpbPorcExtranjeros.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
             this.CpbPorcExtranjeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
             this.CpbPorcExtranjeros.InnerColor = System.Drawing.Color.White;
@@ -729,6 +734,7 @@ namespace PRESENTACION
             this.CpbPorcExtranjeros.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.CpbPorcExtranjeros.Size = new System.Drawing.Size(65, 65);
             this.CpbPorcExtranjeros.StartAngle = 270;
+            this.CpbPorcExtranjeros.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.CpbPorcExtranjeros.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.CpbPorcExtranjeros.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
             this.CpbPorcExtranjeros.SubscriptText = "";
@@ -739,6 +745,28 @@ namespace PRESENTACION
             this.CpbPorcExtranjeros.Text = "34%";
             this.CpbPorcExtranjeros.TextMargin = new System.Windows.Forms.Padding(2, 4, 0, 0);
             this.CpbPorcExtranjeros.Value = 50;
+            // 
+            // PrbVencidos
+            // 
+            this.PrbVencidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.PrbVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.PrbVencidos.Location = new System.Drawing.Point(357, 211);
+            this.PrbVencidos.Name = "PrbVencidos";
+            this.PrbVencidos.Size = new System.Drawing.Size(100, 15);
+            this.PrbVencidos.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.PrbVencidos.TabIndex = 5;
+            this.PrbVencidos.Value = 50;
+            // 
+            // PrbAgotados
+            // 
+            this.PrbAgotados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(199)))));
+            this.PrbAgotados.ForeColor = System.Drawing.Color.Tomato;
+            this.PrbAgotados.Location = new System.Drawing.Point(357, 285);
+            this.PrbAgotados.Name = "PrbAgotados";
+            this.PrbAgotados.Size = new System.Drawing.Size(100, 15);
+            this.PrbAgotados.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.PrbAgotados.TabIndex = 6;
+            this.PrbAgotados.Value = 50;
             // 
             // FormInicio
             // 
@@ -827,5 +855,7 @@ namespace PRESENTACION
         public System.Windows.Forms.DataGridView dgb_Medicamentos;
         public System.Windows.Forms.ComboBox CmbFiltroFecha;
         private CircularProgressBar.CircularProgressBar CpbPorcExtranjeros;
+        private System.Windows.Forms.ProgressBar PrbVencidos;
+        private System.Windows.Forms.ProgressBar PrbAgotados;
     }
 }
