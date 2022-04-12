@@ -96,70 +96,71 @@ namespace PRESENTACION
             LblProximoVencimiento.Text = dt.Rows[0][9].ToString();
             LblFechaProxVenci.Text = dt.Rows[0][10].ToString();
         }
-        void UltimosEgresos()
+        void Tablas()
         {
-
-            dgb_Medicamentos.DataSource = DU.D_UltimosEgresos();
-
-            //Prueba1
-            //dgb_Medicamentos.Rows.Clear();
-            //int n;
-            //dgb_Medicamentos.Columns.Add("Column1", "Descripcion");
-            //dgb_Medicamentos.Columns.Add("Column2", "Cantidad");
-            //n = dgb_Medicamentos.Rows.Add();
-            //dgb_Medicamentos.Rows[n].Cells[0].Value = "Acetil";
-            //dgb_Medicamentos.Rows[n].Cells[1].Value = "34";
-            //dgb_Medicamentos.Rows[n].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            //n = dgb_Medicamentos.Rows.Add();
-            //dgb_Medicamentos.Rows[n].Cells[0].Value = "Acohol";
-            //dgb_Medicamentos.Rows[n].Cells[1].Value = "56";
-
-            //n = dgb_Medicamentos.Rows.Add();
-            //dgb_Medicamentos.Rows[n].Cells[0].Value = "Panadol";
-            //dgb_Medicamentos.Rows[n].Cells[1].Value = "5";
-
-            //n = dgb_Medicamentos.Rows.Add();
-            //dgb_Medicamentos.Rows[n].Cells[0].Value = "Pastilla";
-            //dgb_Medicamentos.Rows[n].Cells[1].Value = "21";
-
-            //n = dgb_Medicamentos.Rows.Add();
-            //dgb_Medicamentos.Rows[n].Cells[0].Value = "Algodon";
-            //dgb_Medicamentos.Rows[n].Cells[1].Value = "2";
-
-            //dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvUltimasSalidas.DataSource = DU.D_UltimosEgresos();
+            DgvAgotados.DataSource = DU.D_UltimosAgotados();
+            DesignDataGridView();
 
         }
         #region DashBoard
 
-        private bool maximizar = false;
+        public bool maximizar = false;
 
-        void MaximizarDataGridView()
+        public void MaximizarDataGridView()
         {
             maximizar = true;
-            dgb_Medicamentos.Columns[1].Visible = true;
-            dgb_Medicamentos.Columns[3].Visible = true;
-            dgb_Medicamentos.Columns[4].Visible = true;
-            dgb_Medicamentos.Columns[0].MinimumWidth = 70;
-            dgb_Medicamentos.Columns[1].MinimumWidth = 40;
-            dgb_Medicamentos.Columns[2].MinimumWidth = 35;
-            dgb_Medicamentos.Columns[3].MinimumWidth = 35;
-            dgb_Medicamentos.Columns[4].MinimumWidth = 35;
+            DgvUltimasSalidas.Columns[1].Visible = true;
+            DgvUltimasSalidas.Columns[3].Visible = true;
+            DgvUltimasSalidas.Columns[4].Visible = true;
+            DgvUltimasSalidas.Columns[0].MinimumWidth = 300;
+            DgvUltimasSalidas.Columns[1].MinimumWidth = 40;
+            DgvUltimasSalidas.Columns[2].MinimumWidth = 65;
+            DgvUltimasSalidas.Columns[3].MinimumWidth = 35;
+            DgvUltimasSalidas.Columns[4].MinimumWidth = 35;
+            DgvUltimasSalidas.Columns[2].HeaderText = "Cantidad";
+
+            DgvAgotados.Columns[1].Visible = true;
+            DgvAgotados.Columns[3].Visible = true;
+            DgvAgotados.Columns[4].Visible = true;
+            DgvAgotados.Columns[0].MinimumWidth = 300;
+            DgvAgotados.Columns[1].MinimumWidth = 40;
+            DgvAgotados.Columns[2].MinimumWidth = 65;
+            DgvAgotados.Columns[3].MinimumWidth = 35;
+            DgvAgotados.Columns[4].MinimumWidth = 35;
+            DgvAgotados.Columns[2].HeaderText = "Existencia";
+
+            //dgb_Medicamentos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dgb_Medicamentos.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dgb_Medicamentos.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dgb_Medicamentos.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgb_Medicamentos.MaximumSize.Width = 23;
         }
-        void MinimizarDataGridview()
+        public void MinimizarDataGridview()
         {
             maximizar = false;
-            dgb_Medicamentos.Columns[1].Visible = false;
-            dgb_Medicamentos.Columns[3].Visible = false;
-            //dgb_Medicamentos.Columns[4].Visible = false;
-            dgb_Medicamentos.Columns[0].MinimumWidth = 50;
-            dgb_Medicamentos.Columns[2].MinimumWidth = 30;
-        }
-        void DesignDataGridView()
-        {
-            dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvUltimasSalidas.Columns[2].HeaderText = "Cant.";
+            DgvUltimasSalidas.Columns[1].Visible = false;
+            DgvUltimasSalidas.Columns[3].Visible = false;
+            DgvUltimasSalidas.Columns[4].Visible = false;
+            DgvUltimasSalidas.Columns[0].MinimumWidth =150;
+            DgvUltimasSalidas.Columns[2].MinimumWidth = 30;
+            //dgb_Medicamentos.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
+            DgvAgotados.Columns[2].HeaderText = "Exis.";
+            DgvAgotados.Columns[1].Visible = false;
+            DgvAgotados.Columns[3].Visible = false;
+            DgvAgotados.Columns[4].Visible = false;
+            DgvAgotados.Columns[0].MinimumWidth = 150;
+            DgvAgotados.Columns[2].MinimumWidth = 30;
+
+        }
+        public void DesignDataGridView()
+        {
+            DgvUltimasSalidas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvAgotados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvUltimasSalidas.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            DgvAgotados.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             if (maximizar == false) MinimizarDataGridview();
             else MaximizarDataGridView();
         }
@@ -170,14 +171,19 @@ namespace PRESENTACION
             ChartMayoresEgresos.Series[0].XValueMember = "Medicamento";
             ChartMayoresEgresos.Series[0].YValueMembers = "Cantidad";
             ChartMayoresEgresos.DataBind();
-            DesignDataGridView();
+            //ChartCategorias.
+
+            ChartCategorias.DataSource = DU.D_CategoriasMedicamentos();
+            ChartCategorias.Series[0].XValueMember = "Tipo";
+            ChartCategorias.Series[0].YValueMembers = "Cantidad";
+            ChartCategorias.DataBind();
         }
         public void CargarDashBoard()
         {
             Indicadores();
-            UltimosEgresos();
+            Tablas();
             Graficos();
-        } 
+        }
         #endregion
         private void FormInicio_Load(object sender, EventArgs e)
         {

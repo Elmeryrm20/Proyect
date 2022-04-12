@@ -32,8 +32,6 @@
             this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.LblPertenencia = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.lbl_Porcentage = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_Existencia = new System.Windows.Forms.Label();
@@ -53,6 +51,8 @@
             this.ptb_Imagen = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.LblPertenencia = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -73,7 +73,6 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
             this.btnSerrar.Location = new System.Drawing.Point(392, 9);
             this.btnSerrar.Name = "btnSerrar";
@@ -121,24 +120,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(431, 322);
             this.panel2.TabIndex = 1;
-            // 
-            // LblPertenencia
-            // 
-            this.LblPertenencia.AutoSize = true;
-            this.LblPertenencia.Location = new System.Drawing.Point(149, 175);
-            this.LblPertenencia.Name = "LblPertenencia";
-            this.LblPertenencia.Size = new System.Drawing.Size(35, 13);
-            this.LblPertenencia.TabIndex = 21;
-            this.LblPertenencia.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 175);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "PERTENENCIA:";
             // 
             // lbl_Porcentage
             // 
@@ -311,6 +292,24 @@
             this.label2.Size = new System.Drawing.Size(112, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "TOTAL INGRESADO:";
+            // 
+            // LblPertenencia
+            // 
+            this.LblPertenencia.AutoSize = true;
+            this.LblPertenencia.Location = new System.Drawing.Point(149, 175);
+            this.LblPertenencia.Name = "LblPertenencia";
+            this.LblPertenencia.Size = new System.Drawing.Size(35, 13);
+            this.LblPertenencia.TabIndex = 21;
+            this.LblPertenencia.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(56, 175);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "PERTENENCIA:";
             // 
             // FormDetallesMedicamento
             // 

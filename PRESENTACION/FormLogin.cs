@@ -171,7 +171,7 @@ namespace PRESENTACION
         {
             ValidacionTextbox();
             //ShowInTaskbar = false;
-            
+
         }
 
         //Nueva Contraseña

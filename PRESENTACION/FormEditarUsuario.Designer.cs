@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_DNI = new System.Windows.Forms.Label();
             this.txt_Fecha = new System.Windows.Forms.DateTimePicker();
             this.btn_Editar = new System.Windows.Forms.PictureBox();
             this.cmb_Estado = new System.Windows.Forms.ComboBox();
@@ -50,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_DNI = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,7 +70,6 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Black;
-            this.btnSerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSerrar.Location = new System.Drawing.Point(338, 3);
             this.btnSerrar.Name = "btnSerrar";
             this.btnSerrar.Size = new System.Drawing.Size(27, 27);
@@ -105,15 +104,6 @@
             this.panel2.Size = new System.Drawing.Size(368, 349);
             this.panel2.TabIndex = 1;
             // 
-            // txt_DNI
-            // 
-            this.txt_DNI.AutoSize = true;
-            this.txt_DNI.Location = new System.Drawing.Point(123, 24);
-            this.txt_DNI.Name = "txt_DNI";
-            this.txt_DNI.Size = new System.Drawing.Size(24, 13);
-            this.txt_DNI.TabIndex = 19;
-            this.txt_DNI.Text = "text";
-            // 
             // txt_Fecha
             // 
             this.txt_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -125,7 +115,6 @@
             // btn_Editar
             // 
             this.btn_Editar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Editar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Editar.Location = new System.Drawing.Point(89, 295);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(213, 32);
@@ -266,6 +255,15 @@
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI";
+            // 
+            // txt_DNI
+            // 
+            this.txt_DNI.AutoSize = true;
+            this.txt_DNI.Location = new System.Drawing.Point(123, 24);
+            this.txt_DNI.Name = "txt_DNI";
+            this.txt_DNI.Size = new System.Drawing.Size(24, 13);
+            this.txt_DNI.TabIndex = 19;
+            this.txt_DNI.Text = "text";
             // 
             // FormEditarUsuario
             // 

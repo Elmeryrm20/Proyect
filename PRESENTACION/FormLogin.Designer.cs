@@ -110,7 +110,6 @@
             // 
             this.PibMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.PibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibMinimizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar03;
             this.PibMinimizar.Location = new System.Drawing.Point(596, 6);
             this.PibMinimizar.Name = "PibMinimizar";
@@ -125,7 +124,6 @@
             // 
             this.PibCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.PibCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibCerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar03;
             this.PibCerrar.Location = new System.Drawing.Point(626, 6);
             this.PibCerrar.Name = "PibCerrar";
@@ -199,7 +197,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(432, 338);

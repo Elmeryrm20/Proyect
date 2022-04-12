@@ -65,7 +65,6 @@
             // 
             this.PibVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibVolver.BackColor = System.Drawing.Color.Transparent;
-            this.PibVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibVolver.Image = global::PRESENTACION.Properties.Resources.BotonVentanaAtras01;
             this.PibVolver.Location = new System.Drawing.Point(10, 4);
             this.PibVolver.Name = "PibVolver";
@@ -80,7 +79,6 @@
             // 
             this.PibMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.PibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibMinimizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar01;
             this.PibMinimizar.Location = new System.Drawing.Point(595, 4);
             this.PibMinimizar.Name = "PibMinimizar";
@@ -95,7 +93,6 @@
             // 
             this.PibCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PibCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.PibCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibCerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
             this.PibCerrar.Location = new System.Drawing.Point(625, 4);
             this.PibCerrar.Name = "PibCerrar";
@@ -141,7 +138,6 @@
             // PibIngresar
             // 
             this.PibIngresar.BackColor = System.Drawing.Color.Transparent;
-            this.PibIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibIngresar.Image = global::PRESENTACION.Properties.Resources.BotonReestablecer01;
             this.PibIngresar.Location = new System.Drawing.Point(414, 276);
             this.PibIngresar.Margin = new System.Windows.Forms.Padding(2);

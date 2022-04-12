@@ -55,7 +55,6 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
             this.btnSerrar.Location = new System.Drawing.Point(312, 3);
             this.btnSerrar.Name = "btnSerrar";
@@ -97,7 +96,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
             this.pictureBox1.Location = new System.Drawing.Point(115, 181);
             this.pictureBox1.Name = "pictureBox1";

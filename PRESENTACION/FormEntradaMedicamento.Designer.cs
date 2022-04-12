@@ -30,18 +30,17 @@ namespace PRESENTACION
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvEntrada = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl01 = new System.Windows.Forms.Panel();
             this.LblVoluntario = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,29 +49,30 @@ namespace PRESENTACION
             this.TxtTrabajador = new System.Windows.Forms.TextBox();
             this.CmbEncargado = new System.Windows.Forms.ComboBox();
             this.CmbColaborador = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.PibEncargado = new System.Windows.Forms.PictureBox();
             this.PibColaborador = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.PibGuardarImprimir = new System.Windows.Forms.PictureBox();
             this.PibLimpiar = new System.Windows.Forms.PictureBox();
             this.PibConfirmar = new System.Windows.Forms.PictureBox();
             this.PibEliminarMed = new System.Windows.Forms.PictureBox();
             this.PibAgregarMed = new System.Windows.Forms.PictureBox();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEntrada)).BeginInit();
             this.Pnl01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEncargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).BeginInit();
@@ -85,8 +85,8 @@ namespace PRESENTACION
             this.DgvEntrada.AllowUserToAddRows = false;
             this.DgvEntrada.AllowUserToDeleteRows = false;
             this.DgvEntrada.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.DgvEntrada.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvEntrada.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.DgvEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -94,14 +94,14 @@ namespace PRESENTACION
             this.DgvEntrada.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(238)))));
             this.DgvEntrada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvEntrada.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(50)))), ((int)(((byte)(10)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEntrada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(50)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEntrada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.DgvEntrada.ColumnHeadersHeight = 25;
             this.DgvEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DgvEntrada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -111,14 +111,14 @@ namespace PRESENTACION
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(177)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(177)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvEntrada.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(177)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(177)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvEntrada.DefaultCellStyle = dataGridViewCellStyle13;
             this.DgvEntrada.EnableHeadersVisualStyles = false;
             this.DgvEntrada.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
             this.DgvEntrada.Location = new System.Drawing.Point(34, 198);
@@ -126,17 +126,17 @@ namespace PRESENTACION
             this.DgvEntrada.Name = "DgvEntrada";
             this.DgvEntrada.ReadOnly = true;
             this.DgvEntrada.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEntrada.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEntrada.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.DgvEntrada.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgvEntrada.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Humnst777 BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvEntrada.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.DgvEntrada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvEntrada.Size = new System.Drawing.Size(529, 283);
             this.DgvEntrada.TabIndex = 16;
@@ -147,7 +147,7 @@ namespace PRESENTACION
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Visible = false;
-            this.Column4.Width = 71;
+            this.Column4.Width = 69;
             // 
             // Column5
             // 
@@ -176,13 +176,6 @@ namespace PRESENTACION
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 52;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Fec. Vencimiento";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 124;
             // 
             // Pnl01
             // 
@@ -292,6 +285,22 @@ namespace PRESENTACION
             this.CmbColaborador.TabIndex = 7;
             this.CmbColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbColaborador_KeyPress);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(187)))));
+            this.label7.Location = new System.Drawing.Point(72, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(186, 18);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "PERSONAL ENCARGADO";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
@@ -340,18 +349,6 @@ namespace PRESENTACION
             this.PibColaborador.TabIndex = 4;
             this.PibColaborador.TabStop = false;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(187)))));
-            this.label7.Location = new System.Drawing.Point(72, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(186, 18);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "PERSONAL ENCARGADO";
-            // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
@@ -363,14 +360,9 @@ namespace PRESENTACION
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Visible = false;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // PibGuardarImprimir
             // 
             this.PibGuardarImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibGuardarImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibGuardarImprimir.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmarImprimir03;
             this.PibGuardarImprimir.Location = new System.Drawing.Point(587, 337);
             this.PibGuardarImprimir.Name = "PibGuardarImprimir";
@@ -384,7 +376,6 @@ namespace PRESENTACION
             // PibLimpiar
             // 
             this.PibLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibLimpiar.Image = global::PRESENTACION.Properties.Resources.BotonFormLimpiar05;
             this.PibLimpiar.Location = new System.Drawing.Point(587, 428);
             this.PibLimpiar.Name = "PibLimpiar";
@@ -398,7 +389,6 @@ namespace PRESENTACION
             // PibConfirmar
             // 
             this.PibConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibConfirmar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmarEntrada01;
             this.PibConfirmar.Location = new System.Drawing.Point(587, 262);
             this.PibConfirmar.Name = "PibConfirmar";
@@ -412,7 +402,6 @@ namespace PRESENTACION
             // PibEliminarMed
             // 
             this.PibEliminarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibEliminarMed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibEliminarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarQuitar05;
             this.PibEliminarMed.Location = new System.Drawing.Point(587, 383);
             this.PibEliminarMed.Name = "PibEliminarMed";
@@ -426,7 +415,6 @@ namespace PRESENTACION
             // PibAgregarMed
             // 
             this.PibAgregarMed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PibAgregarMed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibAgregarMed.Image = global::PRESENTACION.Properties.Resources.BotonFormSeleccionarMed06;
             this.PibAgregarMed.Location = new System.Drawing.Point(587, 209);
             this.PibAgregarMed.Name = "PibAgregarMed";
@@ -436,6 +424,13 @@ namespace PRESENTACION
             this.PibAgregarMed.Click += new System.EventHandler(this.PibAgregarMed_Click);
             this.PibAgregarMed.MouseEnter += new System.EventHandler(this.PibAgregarMed_MouseEnter);
             this.PibAgregarMed.MouseLeave += new System.EventHandler(this.PibAgregarMed_MouseLeave);
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Fec. Vencimiento";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 124;
             // 
             // FormEntradaMedicamento
             // 
@@ -457,13 +452,13 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.DgvEntrada)).EndInit();
             this.Pnl01.ResumeLayout(false);
             this.Pnl01.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEncargado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibColaborador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibGuardarImprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibLimpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibConfirmar)).EndInit();

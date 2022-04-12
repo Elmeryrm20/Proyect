@@ -67,7 +67,6 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
             this.btnSerrar.Location = new System.Drawing.Point(318, 3);
             this.btnSerrar.Name = "btnSerrar";
@@ -115,7 +114,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
             this.pictureBox1.Location = new System.Drawing.Point(130, 228);
             this.pictureBox1.Name = "pictureBox1";
@@ -137,7 +135,7 @@
             this.dtp_FechaVencimiento.Location = new System.Drawing.Point(150, 159);
             this.dtp_FechaVencimiento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtp_FechaVencimiento.MinDate = new System.DateTime(2022, 4, 4, 0, 0, 0, 0);
-            this.dtp_FechaVencimiento.MinimumSize = new System.Drawing.Size(4, 20);
+            this.dtp_FechaVencimiento.MinimumSize = new System.Drawing.Size(0, 20);
             this.dtp_FechaVencimiento.Name = "dtp_FechaVencimiento";
             this.dtp_FechaVencimiento.Size = new System.Drawing.Size(147, 23);
             this.dtp_FechaVencimiento.SkinColor = System.Drawing.Color.White;

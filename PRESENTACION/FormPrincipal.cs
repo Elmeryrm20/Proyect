@@ -363,6 +363,8 @@ namespace PRESENTACION
         {
 
             maximizar_Pantalla();
+            FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
+            FrmInicio.MaximizarDataGridView();
 
         }
         public void maximizar_Pantalla()
@@ -379,6 +381,8 @@ namespace PRESENTACION
             this.WindowState = FormWindowState.Normal;
             Pib_Maximizar.Visible = true;
             Pib_Restaurar.Visible = false;
+            FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
+            FrmInicio.MinimizarDataGridview();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -535,6 +539,13 @@ namespace PRESENTACION
         private void Pib_Maximizar_MouseLeave(object sender, EventArgs e)
         {
             Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar03;
+        }
+
+        private void btn_cerrarsesion_Click(object sender, EventArgs e)
+        {
+            FormLogin cerrar = new FormLogin();
+            cerrar.Show();
+            this.Close();
         }
 
         private void PibContraer_MouseEnter(object sender, EventArgs e)

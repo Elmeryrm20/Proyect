@@ -367,6 +367,28 @@ namespace DATOS
             return tabla;
         }
 
+        public DataTable D_UltimosAgotados()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand comando = new MySqlCommand("Sp_UltimosAgotados", Conexion.connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            Conexion.connection.Close();
+            return tabla;
+        }
+
         public DataTable D_UltimosEgresos()
         {
             Conexion.connection.Open();

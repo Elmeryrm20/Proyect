@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LblStock = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,19 +50,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(348, 37);
             this.panel1.TabIndex = 0;
-            // 
-            // btnSerrar
-            // 
-            this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
-            this.btnSerrar.Location = new System.Drawing.Point(309, 3);
-            this.btnSerrar.Name = "btnSerrar";
-            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
-            this.btnSerrar.TabIndex = 3;
-            this.btnSerrar.TabStop = false;
-            this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
             // 
             // lbl_Nombre
             // 
@@ -112,7 +99,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
             this.pictureBox1.Location = new System.Drawing.Point(115, 217);
             this.pictureBox1.Name = "pictureBox1";
@@ -120,6 +106,18 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnSerrar
+            // 
+            this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
+            this.btnSerrar.Location = new System.Drawing.Point(309, 3);
+            this.btnSerrar.Name = "btnSerrar";
+            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnSerrar.TabIndex = 3;
+            this.btnSerrar.TabStop = false;
+            this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
             // 
             // FormEgreso
             // 
@@ -138,8 +136,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEgreso";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
