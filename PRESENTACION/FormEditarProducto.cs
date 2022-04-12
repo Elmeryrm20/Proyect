@@ -66,15 +66,13 @@ namespace PRESENTACION
         }
         private void btnSerrar_Click(object sender, EventArgs e)
         {
-            FormMedicamentos fr =Owner as FormMedicamentos;
-            fr.Rellenartabla();
             this.Close();
         }
         void SeleccionarFila()
         {
             //MessageBox.Show("Datos actualizados correctamente");
             FormMedicamentos FrmMed = Owner as FormMedicamentos;
-            FrmMed.Rellenartabla();
+            FrmMed.Actualizar();
             FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[id_Medicamento - 1].Cells[1];
             Close();
         }

@@ -59,7 +59,7 @@ namespace PRESENTACION
             cmb_Almacen.ValueMember = "Alm_Descripcion";
             cmb_Almacen.DataSource = consultas.P_AlmMedicamento();
         }
-        void Actualizar()
+        public void Actualizar()
         {
             Rellenartabla();
             txb_Buscar.Text = "Buscar Medicamento";
