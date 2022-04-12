@@ -347,13 +347,31 @@ namespace PRESENTACION
 
         private void cmbTipo_MouseDown(object sender, MouseEventArgs e)
         {
-            Elementos_Filtrar();
-
+            
+            if (cmbTipo.SelectedIndex == -1)
+            {
+                Elementos_Filtrar();
+            }
+            else
+            {
+                int numero = Convert.ToInt32(cmbTipo.SelectedIndex.ToString());
+                Elementos_Filtrar();
+                cmbTipo.SelectedIndex = numero;
+            }
         }
 
         private void cmb_Almacen_MouseDown(object sender, MouseEventArgs e)
         {
-            Almacen_Filtrar();
+            if (cmb_Almacen.SelectedIndex == -1)
+            {
+                Almacen_Filtrar();
+            }
+            else
+            {
+                int numero = Convert.ToInt32(cmb_Almacen.SelectedIndex.ToString());
+                Almacen_Filtrar();
+                cmbTipo.SelectedIndex = numero;
+            }
         }
 
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)

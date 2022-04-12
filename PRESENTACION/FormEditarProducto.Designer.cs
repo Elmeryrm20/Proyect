@@ -70,6 +70,7 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
             this.btnSerrar.Location = new System.Drawing.Point(463, 9);
             this.btnSerrar.Name = "btnSerrar";

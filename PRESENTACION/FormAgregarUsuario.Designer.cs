@@ -208,6 +208,7 @@ namespace PRESENTACION
             // PibAgregarUsuario
             // 
             this.PibAgregarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.PibAgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibAgregarUsuario.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmarNuevoUsu03;
             this.PibAgregarUsuario.Location = new System.Drawing.Point(565, 174);
             this.PibAgregarUsuario.Name = "PibAgregarUsuario";
@@ -320,7 +321,7 @@ namespace PRESENTACION
             this.dtpFecha_Nacimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha_Nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha_Nacimiento.Location = new System.Drawing.Point(351, 151);
-            this.dtpFecha_Nacimiento.MinimumSize = new System.Drawing.Size(0, 20);
+            this.dtpFecha_Nacimiento.MinimumSize = new System.Drawing.Size(4, 20);
             this.dtpFecha_Nacimiento.Name = "dtpFecha_Nacimiento";
             this.dtpFecha_Nacimiento.Size = new System.Drawing.Size(147, 23);
             this.dtpFecha_Nacimiento.SkinColor = System.Drawing.Color.White;

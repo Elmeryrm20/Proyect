@@ -401,6 +401,7 @@ namespace PRESENTACION
             // 
             // PibAgregarPertenencia
             // 
+            this.PibAgregarPertenencia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibAgregarPertenencia.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
             this.PibAgregarPertenencia.Location = new System.Drawing.Point(341, 467);
             this.PibAgregarPertenencia.Name = "PibAgregarPertenencia";
@@ -503,6 +504,7 @@ namespace PRESENTACION
             // 
             // PibAgregarAlmacen
             // 
+            this.PibAgregarAlmacen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibAgregarAlmacen.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
             this.PibAgregarAlmacen.Location = new System.Drawing.Point(342, 422);
             this.PibAgregarAlmacen.Name = "PibAgregarAlmacen";
@@ -514,6 +516,7 @@ namespace PRESENTACION
             // Pib_Agregar_Lab
             // 
             this.Pib_Agregar_Lab.BackColor = System.Drawing.Color.Transparent;
+            this.Pib_Agregar_Lab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pib_Agregar_Lab.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
             this.Pib_Agregar_Lab.Location = new System.Drawing.Point(342, 191);
             this.Pib_Agregar_Lab.Name = "Pib_Agregar_Lab";
@@ -557,7 +560,7 @@ namespace PRESENTACION
             this.dtFecha_Vencimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFecha_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFecha_Vencimiento.Location = new System.Drawing.Point(140, 253);
-            this.dtFecha_Vencimiento.MinimumSize = new System.Drawing.Size(0, 20);
+            this.dtFecha_Vencimiento.MinimumSize = new System.Drawing.Size(4, 20);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
             this.dtFecha_Vencimiento.Size = new System.Drawing.Size(147, 23);
             this.dtFecha_Vencimiento.SkinColor = System.Drawing.Color.White;

@@ -75,7 +75,7 @@ namespace PRESENTACION
 
                         break;
                     case 3:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.AddDays(1).ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaI.Value.ToString("yyyy-MM-dd"));
                         break;
                     case 4:
                         DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));

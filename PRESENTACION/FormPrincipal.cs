@@ -537,13 +537,6 @@ namespace PRESENTACION
             Pib_Maximizar.Image = Properties.Resources.BotonVentanaMaximizar03;
         }
 
-        private void btn_cerrarsesion_Click(object sender, EventArgs e)
-        {
-            FormLogin cerrar = new FormLogin();
-            cerrar.Show();
-            this.Close();
-        }
-
         private void PibContraer_MouseEnter(object sender, EventArgs e)
         {
             PibContraer.Image = Properties.Resources.BotonVentanaContraer02;

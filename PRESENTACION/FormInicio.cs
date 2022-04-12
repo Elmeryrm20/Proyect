@@ -152,7 +152,7 @@ namespace PRESENTACION
             maximizar = false;
             dgb_Medicamentos.Columns[1].Visible = false;
             dgb_Medicamentos.Columns[3].Visible = false;
-            dgb_Medicamentos.Columns[4].Visible = false;
+            //dgb_Medicamentos.Columns[4].Visible = false;
             dgb_Medicamentos.Columns[0].MinimumWidth = 50;
             dgb_Medicamentos.Columns[2].MinimumWidth = 30;
         }
