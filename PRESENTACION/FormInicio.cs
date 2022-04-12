@@ -130,6 +130,9 @@ namespace PRESENTACION
             DgvAgotados.Columns[4].MinimumWidth = 35;
             DgvAgotados.Columns[2].HeaderText = "Existencia";
 
+            LblUltimasSalidas.Text = "últimas 5 Salidas de Medicamentos";
+            LblUltimosAgotados.Text = "últimos 5 Medicamentos agotados o próximos a agotarse";
+
             //dgb_Medicamentos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgb_Medicamentos.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgb_Medicamentos.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -139,6 +142,8 @@ namespace PRESENTACION
         public void MinimizarDataGridview()
         {
             maximizar = false;
+            LblUltimasSalidas.Text = "últimas 5 Salidas";
+            LblUltimosAgotados.Text = "últimos 5 agotados";
             DgvUltimasSalidas.Columns[2].HeaderText = "Cant.";
             DgvUltimasSalidas.Columns[1].Visible = false;
             DgvUltimasSalidas.Columns[3].Visible = false;
@@ -194,7 +199,7 @@ namespace PRESENTACION
 
         private void CmbFiltroFecha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarDashBoard();
+            Indicadores();
         }
     }
 }

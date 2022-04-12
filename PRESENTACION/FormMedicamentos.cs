@@ -225,9 +225,15 @@ namespace PRESENTACION
         //Abrir Formulario de Editar
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
-            AddOwnedForm(frm4);
-            frm4.ShowDialog();
+
+            if (dgb_Medicamentos.Rows.Count >0)
+            {
+                //FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
+                FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
+                AddOwnedForm(frm4);
+                frm4.ShowDialog();
+            }
+            
 
         }
         #endregion

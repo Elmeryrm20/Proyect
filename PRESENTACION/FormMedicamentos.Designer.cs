@@ -58,6 +58,7 @@ namespace PRESENTACION
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgb_Medicamentos = new System.Windows.Forms.DataGridView();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -100,6 +101,7 @@ namespace PRESENTACION
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmbTipo);
@@ -127,7 +129,7 @@ namespace PRESENTACION
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(400, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 16);
+            this.label3.Size = new System.Drawing.Size(35, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tipo:";
             // 
@@ -140,7 +142,7 @@ namespace PRESENTACION
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(384, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Almacén:";
             // 
@@ -192,7 +194,7 @@ namespace PRESENTACION
             this.LblResultados.ForeColor = System.Drawing.Color.Red;
             this.LblResultados.Location = new System.Drawing.Point(599, 69);
             this.LblResultados.Name = "LblResultados";
-            this.LblResultados.Size = new System.Drawing.Size(127, 16);
+            this.LblResultados.Size = new System.Drawing.Size(126, 16);
             this.LblResultados.TabIndex = 13;
             this.LblResultados.Text = "No ha seleccionado";
             this.LblResultados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -431,6 +433,19 @@ namespace PRESENTACION
             this.dgb_Medicamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellClick);
             this.dgb_Medicamentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellDoubleClick);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.checkBox1.Location = new System.Drawing.Point(413, 90);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(162, 17);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Mostrar Colores en Existencia";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
             // FormMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,5 +505,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox PibSalida;
         public System.Windows.Forms.PictureBox PibIngreso;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

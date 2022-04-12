@@ -28,8 +28,8 @@ namespace PRESENTACION
             OrdenarBotonesMenu(Tipo);
 
 
-            //Btn_Acerca.Visible = false;
-            //Btn_Config.Visible = false;
+            Btn_Acerca.Visible = false;
+            Btn_Config.Visible = false;
             SeleccionarBoton(1);
 
             //AparecerFormulario<FormInicio>();
