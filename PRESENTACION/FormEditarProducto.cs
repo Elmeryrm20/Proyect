@@ -140,20 +140,21 @@ namespace PRESENTACION
                 }
                 catch (Exception)
                 {
-                    if (dt.Rows[0][9] == null)
-                    {
-                        ptb_Imagen.Image = Properties.Resources.Imagen01;
-                    }
-                    else
-                    {
-                        string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
-                        string str = Convert.ToString(Directory.GetCurrentDirectory());
-                        str = str.Replace(@"\bin\Debug", "");
-                        ptb_Imagen.Image = Image.FromFile(str + @"\Resources\Error.jpg");
-                        ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
-                        ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
+                    ptb_Imagen.Image = Properties.Resources.Imagen01;
+                    //if (dt.Rows[0][9] == null)
+                    //{
+                    //    ptb_Imagen.Image = Properties.Resources.Imagen01;
+                    //}
+                    //else
+                    //{
+                    //    string Nombre_Imagen = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
+                    //    string str = Convert.ToString(Directory.GetCurrentDirectory());
+                    //    str = str.Replace(@"\bin\Debug", "");
+                    //    ptb_Imagen.Image = Image.FromFile(str + @"\Resources\Error.jpg");
+                    //    ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
+                    //    ptb_Imagen.SizeMode = PictureBoxSizeMode.Zoom;
 
-                    }
+                    //}
 
                 }
                 //-----------------------------------------------

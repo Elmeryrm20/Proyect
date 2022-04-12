@@ -1,7 +1,6 @@
 ﻿using DATOS;
 using System;
 using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace PRESENTACION
@@ -416,29 +415,30 @@ namespace PRESENTACION
         {
             //if (this.dgb_Medicamentos.Columns[e.ColumnIndex].Name == "EXISTENCIA")
 
-        //    if (Colores)
-        //    {
-        //        e.CellStyle.ForeColor = Color.Black;
-        //        //e.CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //    if (Colores)
+            //    {
+            //        e.CellStyle.ForeColor = Color.Black;
+            //        //e.CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-        //        if (e.Value.ToString() == "0")
-        //        {
-        //            e.CellStyle.BackColor = Color.Red;
-        //            e.CellStyle.ForeColor = Color.Red;
-        //            //DgvVentas.Rows[e.RowIndex].Cells[9].Value = "Anulado";
+            //        if (e.Value.ToString() == "0")
+            //        {
+            //            e.CellStyle.BackColor = Color.Red;
+            //            e.CellStyle.ForeColor = Color.Red;
+            //            //DgvVentas.Rows[e.RowIndex].Cells[9].Value = "Anulado";
 
-        //        }
-        //        else if (e.Value.ToString() == "1")
-        //        {
-        //            e.CellStyle.BackColor = Color.LightGreen;
-        //            e.CellStyle.ForeColor = Color.LightGreen;
-        //            //DgvVentas.Rows[e.RowIndex].Cells[9].Value = "No Anulado";
-        //        }
-        //    }
-        //    else
-        //    {
-        //        e.CellStyle.ForeColor = Color.White;
-        //    }
-        //}
+            //        }
+            //        else if (e.Value.ToString() == "1")
+            //        {
+            //            e.CellStyle.BackColor = Color.LightGreen;
+            //            e.CellStyle.ForeColor = Color.LightGreen;
+            //            //DgvVentas.Rows[e.RowIndex].Cells[9].Value = "No Anulado";
+            //        }
+            //    }
+            //    else
+            //    {
+            //        e.CellStyle.ForeColor = Color.White;
+            //    }
+            //}
+        }
     }
 }
