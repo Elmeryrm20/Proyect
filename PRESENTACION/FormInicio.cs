@@ -130,20 +130,55 @@ namespace PRESENTACION
             //dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
+        #region DashBoard
+
+        private bool maximizar = false;
+
+        void MaximizarDataGridView()
+        {
+            maximizar = true;
+            dgb_Medicamentos.Columns[1].Visible = true;
+            dgb_Medicamentos.Columns[3].Visible = true;
+            dgb_Medicamentos.Columns[4].Visible = true;
+            dgb_Medicamentos.Columns[0].MinimumWidth = 70;
+            dgb_Medicamentos.Columns[1].MinimumWidth = 40;
+            dgb_Medicamentos.Columns[2].MinimumWidth = 35;
+            dgb_Medicamentos.Columns[3].MinimumWidth = 35;
+            dgb_Medicamentos.Columns[4].MinimumWidth = 35;
+            //dgb_Medicamentos.MaximumSize.Width = 23;
+        }
+        void MinimizarDataGridview()
+        {
+            maximizar = false;
+            dgb_Medicamentos.Columns[1].Visible = false;
+            dgb_Medicamentos.Columns[3].Visible = false;
+            dgb_Medicamentos.Columns[4].Visible = false;
+            dgb_Medicamentos.Columns[0].MinimumWidth = 50;
+            dgb_Medicamentos.Columns[2].MinimumWidth = 30;
+        }
+        void DesignDataGridView()
+        {
+            dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            if (maximizar == false) MinimizarDataGridview();
+            else MaximizarDataGridView();
+        }
         void Graficos()
         {
             //DataTable dt = DU.D_MayoresEgresos();
-            ChartMayoresEgresos.DataSource = DU.D_CategoriasMedicamentos();
-            ChartMayoresEgresos.Series[0].XValueMember = "TIPO";
-            ChartMayoresEgresos.Series[0].YValueMembers = "CANTIDAD";
+            ChartMayoresEgresos.DataSource = DU.D_MayoresEgresos();
+            ChartMayoresEgresos.Series[0].XValueMember = "Medicamento";
+            ChartMayoresEgresos.Series[0].YValueMembers = "Cantidad";
             ChartMayoresEgresos.DataBind();
+            DesignDataGridView();
         }
         public void CargarDashBoard()
         {
             Indicadores();
             UltimosEgresos();
             Graficos();
-        }
+        } 
+        #endregion
         private void FormInicio_Load(object sender, EventArgs e)
         {
             ShowInTaskbar = true;

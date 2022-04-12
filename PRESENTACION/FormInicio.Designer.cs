@@ -29,6 +29,9 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,22 +40,22 @@ namespace PRESENTACION
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label22 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.dgb_Medicamentos = new System.Windows.Forms.DataGridView();
-            this.label19 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ChartMayoresEgresos = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.PrbAgotados = new System.Windows.Forms.ProgressBar();
+            this.PrbVencidos = new System.Windows.Forms.ProgressBar();
+            this.LblPorcExtranjeros = new System.Windows.Forms.Label();
+            this.CpbPorcExtranjeros = new CircularProgressBar.CircularProgressBar();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.LblPorcExtranjeros = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.CmbFiltroFecha = new System.Windows.Forms.ComboBox();
             this.LblFechaProxVenci = new System.Windows.Forms.Label();
@@ -85,18 +88,14 @@ namespace PRESENTACION
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.CpbPorcExtranjeros = new CircularProgressBar.CircularProgressBar();
-            this.PrbVencidos = new System.Windows.Forms.ProgressBar();
-            this.PrbAgotados = new System.Windows.Forms.ProgressBar();
-            this.ChartMayoresEgresos = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartMayoresEgresos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -110,14 +109,10 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartMayoresEgresos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.chart2);
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.dgb_Medicamentos);
@@ -129,6 +124,24 @@ namespace PRESENTACION
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(246, 508);
             this.panel2.TabIndex = 2;
+            // 
+            // chart2
+            // 
+            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(20, 31);
+            this.chart2.Name = "chart2";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(202, 119);
+            this.chart2.TabIndex = 8;
+            this.chart2.Text = "chart2";
             // 
             // label22
             // 
@@ -144,18 +157,6 @@ namespace PRESENTACION
             this.label22.TabIndex = 2;
             this.label22.Text = "Último 5 Egresos";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.White;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label20.Location = new System.Drawing.Point(17, 186);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(55, 48);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "Salidas\r\núltimo\r\nAño";
             // 
             // dgb_Medicamentos
             // 
@@ -178,8 +179,6 @@ namespace PRESENTACION
             this.dgb_Medicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgb_Medicamentos.ColumnHeadersHeight = 25;
             this.dgb_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgb_Medicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.dgb_Medicamentos.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -211,18 +210,6 @@ namespace PRESENTACION
             this.dgb_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgb_Medicamentos.Size = new System.Drawing.Size(194, 119);
             this.dgb_Medicamentos.TabIndex = 5;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.White;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label19.Location = new System.Drawing.Point(8, 23);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(64, 48);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Entradas\r\núltimo\r\nAño";
             // 
             // pictureBox10
             // 
@@ -316,6 +303,119 @@ namespace PRESENTACION
             this.panel3.Size = new System.Drawing.Size(494, 508);
             this.panel3.TabIndex = 3;
             // 
+            // ChartMayoresEgresos
+            // 
+            this.ChartMayoresEgresos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.ChartMayoresEgresos.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.White;
+            legend2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.ChartMayoresEgresos.Legends.Add(legend2);
+            this.ChartMayoresEgresos.Location = new System.Drawing.Point(26, 352);
+            this.ChartMayoresEgresos.Name = "ChartMayoresEgresos";
+            this.ChartMayoresEgresos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.ChartMayoresEgresos.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216))))),
+        System.Drawing.Color.Tomato,
+        System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))))};
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            series2.BorderColor = System.Drawing.Color.White;
+            series2.BorderWidth = 5;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Color = System.Drawing.Color.Black;
+            series2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.IsValueShownAsLabel = true;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.ChartMayoresEgresos.Series.Add(series2);
+            this.ChartMayoresEgresos.Size = new System.Drawing.Size(443, 142);
+            this.ChartMayoresEgresos.TabIndex = 7;
+            this.ChartMayoresEgresos.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            title1.Name = "Title1";
+            title1.Text = "Los 5 Medicamentos con más Salidas";
+            title1.ToolTip = "Gráfico que muestra los medicamentos con mayores salidas";
+            this.ChartMayoresEgresos.Titles.Add(title1);
+            // 
+            // PrbAgotados
+            // 
+            this.PrbAgotados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(199)))));
+            this.PrbAgotados.ForeColor = System.Drawing.Color.Tomato;
+            this.PrbAgotados.Location = new System.Drawing.Point(357, 285);
+            this.PrbAgotados.Name = "PrbAgotados";
+            this.PrbAgotados.Size = new System.Drawing.Size(100, 15);
+            this.PrbAgotados.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.PrbAgotados.TabIndex = 6;
+            this.PrbAgotados.Value = 50;
+            // 
+            // PrbVencidos
+            // 
+            this.PrbVencidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.PrbVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.PrbVencidos.Location = new System.Drawing.Point(357, 211);
+            this.PrbVencidos.Name = "PrbVencidos";
+            this.PrbVencidos.Size = new System.Drawing.Size(100, 15);
+            this.PrbVencidos.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.PrbVencidos.TabIndex = 5;
+            this.PrbVencidos.Value = 50;
+            // 
+            // LblPorcExtranjeros
+            // 
+            this.LblPorcExtranjeros.BackColor = System.Drawing.Color.White;
+            this.LblPorcExtranjeros.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.LblPorcExtranjeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.LblPorcExtranjeros.Location = new System.Drawing.Point(427, 157);
+            this.LblPorcExtranjeros.Margin = new System.Windows.Forms.Padding(0);
+            this.LblPorcExtranjeros.Name = "LblPorcExtranjeros";
+            this.LblPorcExtranjeros.Size = new System.Drawing.Size(47, 23);
+            this.LblPorcExtranjeros.TabIndex = 2;
+            this.LblPorcExtranjeros.Text = "43%";
+            this.LblPorcExtranjeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblPorcExtranjeros.Visible = false;
+            // 
+            // CpbPorcExtranjeros
+            // 
+            this.CpbPorcExtranjeros.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.CpbPorcExtranjeros.AnimationSpeed = 500;
+            this.CpbPorcExtranjeros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.CpbPorcExtranjeros.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.CpbPorcExtranjeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.CpbPorcExtranjeros.InnerColor = System.Drawing.Color.White;
+            this.CpbPorcExtranjeros.InnerMargin = 2;
+            this.CpbPorcExtranjeros.InnerWidth = -1;
+            this.CpbPorcExtranjeros.Location = new System.Drawing.Point(291, 111);
+            this.CpbPorcExtranjeros.MarqueeAnimationSpeed = 2000;
+            this.CpbPorcExtranjeros.Name = "CpbPorcExtranjeros";
+            this.CpbPorcExtranjeros.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.CpbPorcExtranjeros.OuterMargin = -25;
+            this.CpbPorcExtranjeros.OuterWidth = 26;
+            this.CpbPorcExtranjeros.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.CpbPorcExtranjeros.ProgressWidth = 52;
+            this.CpbPorcExtranjeros.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.CpbPorcExtranjeros.Size = new System.Drawing.Size(65, 65);
+            this.CpbPorcExtranjeros.StartAngle = 270;
+            this.CpbPorcExtranjeros.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.CpbPorcExtranjeros.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.CpbPorcExtranjeros.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.CpbPorcExtranjeros.SubscriptText = "";
+            this.CpbPorcExtranjeros.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.CpbPorcExtranjeros.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.CpbPorcExtranjeros.SuperscriptText = "";
+            this.CpbPorcExtranjeros.TabIndex = 4;
+            this.CpbPorcExtranjeros.Text = "34%";
+            this.CpbPorcExtranjeros.TextMargin = new System.Windows.Forms.Padding(2, 4, 0, 0);
+            this.CpbPorcExtranjeros.Value = 50;
+            // 
             // pictureBox15
             // 
             this.pictureBox15.Image = global::PRESENTACION.Properties.Resources.DashBoardIcono04;
@@ -333,20 +433,6 @@ namespace PRESENTACION
             this.pictureBox14.Size = new System.Drawing.Size(43, 43);
             this.pictureBox14.TabIndex = 1;
             this.pictureBox14.TabStop = false;
-            // 
-            // LblPorcExtranjeros
-            // 
-            this.LblPorcExtranjeros.BackColor = System.Drawing.Color.White;
-            this.LblPorcExtranjeros.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.LblPorcExtranjeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.LblPorcExtranjeros.Location = new System.Drawing.Point(427, 157);
-            this.LblPorcExtranjeros.Margin = new System.Windows.Forms.Padding(0);
-            this.LblPorcExtranjeros.Name = "LblPorcExtranjeros";
-            this.LblPorcExtranjeros.Size = new System.Drawing.Size(47, 23);
-            this.LblPorcExtranjeros.TabIndex = 2;
-            this.LblPorcExtranjeros.Text = "43%";
-            this.LblPorcExtranjeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblPorcExtranjeros.Visible = false;
             // 
             // pictureBox5
             // 
@@ -716,129 +802,6 @@ namespace PRESENTACION
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // CpbPorcExtranjeros
-            // 
-            this.CpbPorcExtranjeros.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.CpbPorcExtranjeros.AnimationSpeed = 500;
-            this.CpbPorcExtranjeros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.CpbPorcExtranjeros.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.CpbPorcExtranjeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.CpbPorcExtranjeros.InnerColor = System.Drawing.Color.White;
-            this.CpbPorcExtranjeros.InnerMargin = 2;
-            this.CpbPorcExtranjeros.InnerWidth = -1;
-            this.CpbPorcExtranjeros.Location = new System.Drawing.Point(291, 111);
-            this.CpbPorcExtranjeros.MarqueeAnimationSpeed = 2000;
-            this.CpbPorcExtranjeros.Name = "CpbPorcExtranjeros";
-            this.CpbPorcExtranjeros.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.CpbPorcExtranjeros.OuterMargin = -25;
-            this.CpbPorcExtranjeros.OuterWidth = 26;
-            this.CpbPorcExtranjeros.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            this.CpbPorcExtranjeros.ProgressWidth = 52;
-            this.CpbPorcExtranjeros.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.CpbPorcExtranjeros.Size = new System.Drawing.Size(65, 65);
-            this.CpbPorcExtranjeros.StartAngle = 270;
-            this.CpbPorcExtranjeros.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.CpbPorcExtranjeros.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.CpbPorcExtranjeros.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.CpbPorcExtranjeros.SubscriptText = "";
-            this.CpbPorcExtranjeros.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.CpbPorcExtranjeros.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.CpbPorcExtranjeros.SuperscriptText = "";
-            this.CpbPorcExtranjeros.TabIndex = 4;
-            this.CpbPorcExtranjeros.Text = "34%";
-            this.CpbPorcExtranjeros.TextMargin = new System.Windows.Forms.Padding(2, 4, 0, 0);
-            this.CpbPorcExtranjeros.Value = 50;
-            // 
-            // PrbVencidos
-            // 
-            this.PrbVencidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.PrbVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.PrbVencidos.Location = new System.Drawing.Point(357, 211);
-            this.PrbVencidos.Name = "PrbVencidos";
-            this.PrbVencidos.Size = new System.Drawing.Size(100, 15);
-            this.PrbVencidos.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.PrbVencidos.TabIndex = 5;
-            this.PrbVencidos.Value = 50;
-            // 
-            // PrbAgotados
-            // 
-            this.PrbAgotados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(199)))));
-            this.PrbAgotados.ForeColor = System.Drawing.Color.Tomato;
-            this.PrbAgotados.Location = new System.Drawing.Point(357, 285);
-            this.PrbAgotados.Name = "PrbAgotados";
-            this.PrbAgotados.Size = new System.Drawing.Size(100, 15);
-            this.PrbAgotados.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.PrbAgotados.TabIndex = 6;
-            this.PrbAgotados.Value = 50;
-            // 
-            // ChartMayoresEgresos
-            // 
-            this.ChartMayoresEgresos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.ChartMayoresEgresos.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.White;
-            legend2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
-            legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.ChartMayoresEgresos.Legends.Add(legend2);
-            this.ChartMayoresEgresos.Location = new System.Drawing.Point(26, 352);
-            this.ChartMayoresEgresos.Name = "ChartMayoresEgresos";
-            this.ChartMayoresEgresos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.ChartMayoresEgresos.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216))))),
-        System.Drawing.Color.Tomato,
-        System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))))};
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            series2.BorderColor = System.Drawing.Color.White;
-            series2.BorderWidth = 5;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Color = System.Drawing.Color.Black;
-            series2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsValueShownAsLabel = true;
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.ChartMayoresEgresos.Series.Add(series2);
-            this.ChartMayoresEgresos.Size = new System.Drawing.Size(443, 142);
-            this.ChartMayoresEgresos.TabIndex = 7;
-            this.ChartMayoresEgresos.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            title1.Name = "Title1";
-            title1.Text = "Medicamentos por Tipo";
-            title1.ToolTip = "Gráfico que muestra los medicamentos agrupados por su Tipo";
-            this.ChartMayoresEgresos.Titles.Add(title1);
-            // 
-            // chart2
-            // 
-            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(20, 31);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(202, 119);
-            this.chart2.TabIndex = 8;
-            this.chart2.Text = "chart2";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -855,12 +818,14 @@ namespace PRESENTACION
             this.Load += new System.EventHandler(this.FormInicio_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartMayoresEgresos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -874,8 +839,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartMayoresEgresos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -922,8 +885,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label LblNumExtranjeros;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
         public System.Windows.Forms.DataGridView dgb_Medicamentos;
         public System.Windows.Forms.ComboBox CmbFiltroFecha;
         private CircularProgressBar.CircularProgressBar CpbPorcExtranjeros;
@@ -931,6 +892,5 @@ namespace PRESENTACION
         private System.Windows.Forms.ProgressBar PrbAgotados;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartMayoresEgresos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
