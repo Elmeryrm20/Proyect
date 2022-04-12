@@ -13,6 +13,7 @@ namespace PRESENTACION
         {
             InitializeComponent();
             Utilidades();
+            //Icon = Properties.Resources.Logo011;
         }
 
         Consultas du = new Consultas();

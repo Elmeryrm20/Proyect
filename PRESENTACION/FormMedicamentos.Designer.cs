@@ -40,38 +40,38 @@ namespace PRESENTACION
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblResultados = new System.Windows.Forms.Label();
             this.cmb_Almacen = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Pib_Filtrar = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.LblIndice = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dgb_Medicamentos = new System.Windows.Forms.DataGridView();
+            this.ChbColores = new System.Windows.Forms.CheckBox();
             this.PibEditar = new System.Windows.Forms.PictureBox();
             this.PibSalida = new System.Windows.Forms.PictureBox();
             this.PibIngreso = new System.Windows.Forms.PictureBox();
             this.PibActualizar = new System.Windows.Forms.PictureBox();
             this.PibDetalles = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dgb_Medicamentos = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Pib_Filtrar = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibDetalles)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // txb_Buscar
@@ -101,7 +101,7 @@ namespace PRESENTACION
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.ChbColores);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmbTipo);
@@ -165,27 +165,6 @@ namespace PRESENTACION
             this.cmbTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_Almacen_KeyPress);
             this.cmbTipo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbTipo_MouseDown);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.ComboBox02;
-            this.pictureBox2.Location = new System.Drawing.Point(383, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(210, 30);
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.TextBox01;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(310, 30);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // LblResultados
             // 
             this.LblResultados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -229,32 +208,6 @@ namespace PRESENTACION
             this.label4.Text = "label4";
             this.label4.Visible = false;
             // 
-            // Pib_Filtrar
-            // 
-            this.Pib_Filtrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pib_Filtrar.BackColor = System.Drawing.Color.Transparent;
-            this.Pib_Filtrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Pib_Filtrar.Image = global::PRESENTACION.Properties.Resources.BotonFormFiltrar01;
-            this.Pib_Filtrar.Location = new System.Drawing.Point(603, 26);
-            this.Pib_Filtrar.Name = "Pib_Filtrar";
-            this.Pib_Filtrar.Size = new System.Drawing.Size(110, 40);
-            this.Pib_Filtrar.TabIndex = 9;
-            this.Pib_Filtrar.TabStop = false;
-            this.Pib_Filtrar.Click += new System.EventHandler(this.btn_Filtrar_Click);
-            this.Pib_Filtrar.MouseEnter += new System.EventHandler(this.Pib_Filtrar_MouseEnter);
-            this.Pib_Filtrar.MouseLeave += new System.EventHandler(this.Pib_Filtrar_MouseLeave);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::PRESENTACION.Properties.Resources.ComboBox02;
-            this.pictureBox3.Location = new System.Drawing.Point(383, 54);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(210, 30);
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
             // LblIndice
             // 
             this.LblIndice.AutoSize = true;
@@ -280,76 +233,6 @@ namespace PRESENTACION
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(728, 63);
             this.panel3.TabIndex = 9;
-            // 
-            // PibEditar
-            // 
-            this.PibEditar.BackColor = System.Drawing.Color.Transparent;
-            this.PibEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibEditar.Image = global::PRESENTACION.Properties.Resources.BotonFormEditar01;
-            this.PibEditar.Location = new System.Drawing.Point(391, 11);
-            this.PibEditar.Name = "PibEditar";
-            this.PibEditar.Size = new System.Drawing.Size(110, 40);
-            this.PibEditar.TabIndex = 7;
-            this.PibEditar.TabStop = false;
-            this.PibEditar.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.PibEditar.MouseEnter += new System.EventHandler(this.PibEditar_MouseEnter);
-            this.PibEditar.MouseLeave += new System.EventHandler(this.PibEditar_MouseLeave);
-            // 
-            // PibSalida
-            // 
-            this.PibSalida.BackColor = System.Drawing.Color.Transparent;
-            this.PibSalida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibSalida.Image = global::PRESENTACION.Properties.Resources.BotonFormSalida01;
-            this.PibSalida.Location = new System.Drawing.Point(275, 11);
-            this.PibSalida.Name = "PibSalida";
-            this.PibSalida.Size = new System.Drawing.Size(110, 40);
-            this.PibSalida.TabIndex = 5;
-            this.PibSalida.TabStop = false;
-            this.PibSalida.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.PibSalida.MouseEnter += new System.EventHandler(this.PibSalida_MouseEnter);
-            this.PibSalida.MouseLeave += new System.EventHandler(this.PibSalida_MouseLeave);
-            // 
-            // PibIngreso
-            // 
-            this.PibIngreso.BackColor = System.Drawing.Color.Transparent;
-            this.PibIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibIngreso.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
-            this.PibIngreso.Location = new System.Drawing.Point(159, 11);
-            this.PibIngreso.Name = "PibIngreso";
-            this.PibIngreso.Size = new System.Drawing.Size(110, 40);
-            this.PibIngreso.TabIndex = 4;
-            this.PibIngreso.TabStop = false;
-            this.PibIngreso.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.PibIngreso.MouseEnter += new System.EventHandler(this.PibIngreso_MouseEnter);
-            this.PibIngreso.MouseLeave += new System.EventHandler(this.PibIngreso_MouseLeave);
-            // 
-            // PibActualizar
-            // 
-            this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
-            this.PibActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibActualizar.Location = new System.Drawing.Point(507, 11);
-            this.PibActualizar.Name = "PibActualizar";
-            this.PibActualizar.Size = new System.Drawing.Size(110, 40);
-            this.PibActualizar.TabIndex = 2;
-            this.PibActualizar.TabStop = false;
-            this.PibActualizar.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.PibActualizar.MouseEnter += new System.EventHandler(this.PibActualizar_MouseEnter);
-            this.PibActualizar.MouseLeave += new System.EventHandler(this.PibActualizar_MouseLeave);
-            // 
-            // PibDetalles
-            // 
-            this.PibDetalles.BackColor = System.Drawing.Color.Transparent;
-            this.PibDetalles.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PibDetalles.Image = global::PRESENTACION.Properties.Resources.BotonFormDetalles01;
-            this.PibDetalles.Location = new System.Drawing.Point(43, 11);
-            this.PibDetalles.Name = "PibDetalles";
-            this.PibDetalles.Size = new System.Drawing.Size(110, 40);
-            this.PibDetalles.TabIndex = 3;
-            this.PibDetalles.TabStop = false;
-            this.PibDetalles.Click += new System.EventHandler(this.btn_Detalles_Click);
-            this.PibDetalles.MouseEnter += new System.EventHandler(this.PibDetalles_MouseEnter);
-            this.PibDetalles.MouseLeave += new System.EventHandler(this.PibDetalles_MouseLeave);
             // 
             // panel2
             // 
@@ -432,19 +315,139 @@ namespace PRESENTACION
             this.dgb_Medicamentos.TabIndex = 2;
             this.dgb_Medicamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellClick);
             this.dgb_Medicamentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellDoubleClick);
+            this.dgb_Medicamentos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgb_Medicamentos_CellFormatting);
             // 
-            // checkBox1
+            // ChbColores
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            this.checkBox1.Location = new System.Drawing.Point(413, 90);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(162, 17);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Mostrar Colores en Existencia";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.ChbColores.AutoSize = true;
+            this.ChbColores.BackColor = System.Drawing.Color.Transparent;
+            this.ChbColores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChbColores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.ChbColores.Location = new System.Drawing.Point(413, 90);
+            this.ChbColores.Name = "ChbColores";
+            this.ChbColores.Size = new System.Drawing.Size(162, 17);
+            this.ChbColores.TabIndex = 16;
+            this.ChbColores.Text = "Mostrar Colores en Existencia";
+            this.ChbColores.UseVisualStyleBackColor = false;
+            this.ChbColores.Visible = false;
+            this.ChbColores.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // PibEditar
+            // 
+            this.PibEditar.BackColor = System.Drawing.Color.Transparent;
+            this.PibEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibEditar.Image = global::PRESENTACION.Properties.Resources.BotonFormEditar01;
+            this.PibEditar.Location = new System.Drawing.Point(391, 11);
+            this.PibEditar.Name = "PibEditar";
+            this.PibEditar.Size = new System.Drawing.Size(110, 40);
+            this.PibEditar.TabIndex = 7;
+            this.PibEditar.TabStop = false;
+            this.PibEditar.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.PibEditar.MouseEnter += new System.EventHandler(this.PibEditar_MouseEnter);
+            this.PibEditar.MouseLeave += new System.EventHandler(this.PibEditar_MouseLeave);
+            // 
+            // PibSalida
+            // 
+            this.PibSalida.BackColor = System.Drawing.Color.Transparent;
+            this.PibSalida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibSalida.Image = global::PRESENTACION.Properties.Resources.BotonFormSalida01;
+            this.PibSalida.Location = new System.Drawing.Point(275, 11);
+            this.PibSalida.Name = "PibSalida";
+            this.PibSalida.Size = new System.Drawing.Size(110, 40);
+            this.PibSalida.TabIndex = 5;
+            this.PibSalida.TabStop = false;
+            this.PibSalida.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.PibSalida.MouseEnter += new System.EventHandler(this.PibSalida_MouseEnter);
+            this.PibSalida.MouseLeave += new System.EventHandler(this.PibSalida_MouseLeave);
+            // 
+            // PibIngreso
+            // 
+            this.PibIngreso.BackColor = System.Drawing.Color.Transparent;
+            this.PibIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibIngreso.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
+            this.PibIngreso.Location = new System.Drawing.Point(159, 11);
+            this.PibIngreso.Name = "PibIngreso";
+            this.PibIngreso.Size = new System.Drawing.Size(110, 40);
+            this.PibIngreso.TabIndex = 4;
+            this.PibIngreso.TabStop = false;
+            this.PibIngreso.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.PibIngreso.MouseEnter += new System.EventHandler(this.PibIngreso_MouseEnter);
+            this.PibIngreso.MouseLeave += new System.EventHandler(this.PibIngreso_MouseLeave);
+            // 
+            // PibActualizar
+            // 
+            this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.PibActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
+            this.PibActualizar.Location = new System.Drawing.Point(507, 11);
+            this.PibActualizar.Name = "PibActualizar";
+            this.PibActualizar.Size = new System.Drawing.Size(110, 40);
+            this.PibActualizar.TabIndex = 2;
+            this.PibActualizar.TabStop = false;
+            this.PibActualizar.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PibActualizar.MouseEnter += new System.EventHandler(this.PibActualizar_MouseEnter);
+            this.PibActualizar.MouseLeave += new System.EventHandler(this.PibActualizar_MouseLeave);
+            // 
+            // PibDetalles
+            // 
+            this.PibDetalles.BackColor = System.Drawing.Color.Transparent;
+            this.PibDetalles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibDetalles.Image = global::PRESENTACION.Properties.Resources.BotonFormDetalles01;
+            this.PibDetalles.Location = new System.Drawing.Point(43, 11);
+            this.PibDetalles.Name = "PibDetalles";
+            this.PibDetalles.Size = new System.Drawing.Size(110, 40);
+            this.PibDetalles.TabIndex = 3;
+            this.PibDetalles.TabStop = false;
+            this.PibDetalles.Click += new System.EventHandler(this.btn_Detalles_Click);
+            this.PibDetalles.MouseEnter += new System.EventHandler(this.PibDetalles_MouseEnter);
+            this.PibDetalles.MouseLeave += new System.EventHandler(this.PibDetalles_MouseLeave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.ComboBox02;
+            this.pictureBox2.Location = new System.Drawing.Point(383, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(210, 30);
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.TextBox01;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(310, 30);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Pib_Filtrar
+            // 
+            this.Pib_Filtrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pib_Filtrar.BackColor = System.Drawing.Color.Transparent;
+            this.Pib_Filtrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Pib_Filtrar.Image = global::PRESENTACION.Properties.Resources.BotonFormFiltrar01;
+            this.Pib_Filtrar.Location = new System.Drawing.Point(603, 26);
+            this.Pib_Filtrar.Name = "Pib_Filtrar";
+            this.Pib_Filtrar.Size = new System.Drawing.Size(110, 40);
+            this.Pib_Filtrar.TabIndex = 9;
+            this.Pib_Filtrar.TabStop = false;
+            this.Pib_Filtrar.Click += new System.EventHandler(this.btn_Filtrar_Click);
+            this.Pib_Filtrar.MouseEnter += new System.EventHandler(this.Pib_Filtrar_MouseEnter);
+            this.Pib_Filtrar.MouseLeave += new System.EventHandler(this.Pib_Filtrar_MouseLeave);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::PRESENTACION.Properties.Resources.ComboBox02;
+            this.pictureBox3.Location = new System.Drawing.Point(383, 54);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(210, 30);
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
             // 
             // FormMedicamentos
             // 
@@ -463,19 +466,19 @@ namespace PRESENTACION
             this.Load += new System.EventHandler(this.FormMedicamentos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibDetalles)).EndInit();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -505,6 +508,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox PibSalida;
         public System.Windows.Forms.PictureBox PibIngreso;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ChbColores;
     }
 }

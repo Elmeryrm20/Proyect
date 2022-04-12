@@ -1,6 +1,7 @@
 ﻿using DATOS;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PRESENTACION
@@ -226,14 +227,14 @@ namespace PRESENTACION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-            if (dgb_Medicamentos.Rows.Count >0)
+            if (dgb_Medicamentos.Rows.Count > 0)
             {
                 //FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
                 FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
                 AddOwnedForm(frm4);
                 frm4.ShowDialog();
             }
-            
+
 
         }
         #endregion
@@ -396,5 +397,48 @@ namespace PRESENTACION
                 txb_Buscar.Text = "";
             }
         }
+
+        private bool Colores = false;
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChbColores.Checked == true)
+            {
+                Colores = true;
+            }
+            else
+            {
+                Colores = false;
+            }
+
+        }
+
+        private void dgb_Medicamentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            //if (this.dgb_Medicamentos.Columns[e.ColumnIndex].Name == "EXISTENCIA")
+
+        //    if (Colores)
+        //    {
+        //        e.CellStyle.ForeColor = Color.Black;
+        //        //e.CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+        //        if (e.Value.ToString() == "0")
+        //        {
+        //            e.CellStyle.BackColor = Color.Red;
+        //            e.CellStyle.ForeColor = Color.Red;
+        //            //DgvVentas.Rows[e.RowIndex].Cells[9].Value = "Anulado";
+
+        //        }
+        //        else if (e.Value.ToString() == "1")
+        //        {
+        //            e.CellStyle.BackColor = Color.LightGreen;
+        //            e.CellStyle.ForeColor = Color.LightGreen;
+        //            //DgvVentas.Rows[e.RowIndex].Cells[9].Value = "No Anulado";
+        //        }
+        //    }
+        //    else
+        //    {
+        //        e.CellStyle.ForeColor = Color.White;
+        //    }
+        //}
     }
 }
