@@ -113,7 +113,7 @@ namespace PRESENTACION
 
             FormLogin hg = ((FormLogin)Owner);
             hg.Show();
-            hg.ShowInTaskbar = true;
+            //hg.ShowInTaskbar = true;
             this.Close();
         }
 

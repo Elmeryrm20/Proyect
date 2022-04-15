@@ -10,8 +10,6 @@ namespace PRESENTACION
     public partial class FormPrincipal : Form
     {
 
-
-
         #region Constructores
         public FormPrincipal()
         {
@@ -46,6 +44,27 @@ namespace PRESENTACION
         #endregion
 
         #region Método para Formulario
+        string saludo()
+        {
+            int hora = (int)DateTime.Now.Hour;
+
+            if (hora >= 6 && hora <= 12)
+            {
+                return "Que tengas un excelente día de trabajo."; 
+            }
+            else if (hora <= 18 && hora >= 13)
+            {
+                return "Que tengas una excelente tarde de trabajo.";
+            }
+            else if (hora <= 24 && hora >= 19)
+            {
+                return "Que tengas una excelente noche de trabajo.";
+            }
+            else
+            {
+                return "Que tengas una excelente madrugada de trabajo.";
+            }
+        }
         void ActivarTootip()
         {
             ToolTip toolTip2 = new ToolTip();
@@ -53,6 +72,8 @@ namespace PRESENTACION
             toolTip2.SetToolTip(Pib_Restaurar, "Restaurar");
             toolTip2.SetToolTip(Pib_Maximizar, "Maximizar");
             toolTip2.SetToolTip(PibMinimizar, "Minimizar");
+
+            toolTip2.SetToolTip(LblNombre, saludo());
 
             ToolTip toolTip1 = new ToolTip();
             toolTip1.UseAnimation = true;
@@ -365,7 +386,18 @@ namespace PRESENTACION
             maximizar_Pantalla();
             FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
             FrmInicio.MaximizarDataGridView();
+            FrmInicio.MaximizarGraficos();
 
+        }
+        private void Btn_Normal_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Normal;
+            Pib_Maximizar.Visible = true;
+            Pib_Restaurar.Visible = false;
+            FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
+            FrmInicio.MinimizarDataGridview();
+            FrmInicio.MinimizarGraficos();
         }
         public void maximizar_Pantalla()
         {
@@ -375,15 +407,7 @@ namespace PRESENTACION
             Pib_Restaurar.Visible = true;
         }
 
-        private void Btn_Normal_Click(object sender, EventArgs e)
-        {
 
-            this.WindowState = FormWindowState.Normal;
-            Pib_Maximizar.Visible = true;
-            Pib_Restaurar.Visible = false;
-            FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
-            FrmInicio.MinimizarDataGridview();
-        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea salir?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -411,9 +435,10 @@ namespace PRESENTACION
             DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cerrar sesion?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dialogResult == DialogResult.Yes)
             {
+                FormLogin hg = ((FormLogin)Owner);
+                hg.Show();
+                //hg.ShowInTaskbar = true;
                 this.Close();
-                FormLogin sp = new FormLogin();
-                sp.Show();
             }
 
         }

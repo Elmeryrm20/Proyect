@@ -136,11 +136,10 @@ namespace PRESENTACION
             // 
             this.LblUltimosAgotados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblUltimosAgotados.AutoSize = true;
             this.LblUltimosAgotados.BackColor = System.Drawing.Color.White;
             this.LblUltimosAgotados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUltimosAgotados.ForeColor = System.Drawing.Color.Tomato;
-            this.LblUltimosAgotados.Location = new System.Drawing.Point(17, 17);
+            this.LblUltimosAgotados.Location = new System.Drawing.Point(55, 16);
             this.LblUltimosAgotados.Name = "LblUltimosAgotados";
             this.LblUltimosAgotados.Size = new System.Drawing.Size(131, 16);
             this.LblUltimosAgotados.TabIndex = 10;
@@ -151,6 +150,7 @@ namespace PRESENTACION
             // 
             this.DgvAgotados.AllowUserToAddRows = false;
             this.DgvAgotados.AllowUserToDeleteRows = false;
+            this.DgvAgotados.AllowUserToResizeColumns = false;
             this.DgvAgotados.AllowUserToResizeRows = false;
             this.DgvAgotados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -218,7 +218,7 @@ namespace PRESENTACION
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ChartCategorias.BorderlineWidth = 0;
-            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.Position;
             chartArea1.AxisX.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
@@ -248,7 +248,7 @@ namespace PRESENTACION
             chartArea1.Name = "ChartArea2";
             chartArea1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.ChartCategorias.ChartAreas.Add(chartArea1);
-            this.ChartCategorias.Location = new System.Drawing.Point(8, 186);
+            this.ChartCategorias.Location = new System.Drawing.Point(11, 186);
             this.ChartCategorias.Name = "ChartCategorias";
             this.ChartCategorias.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.ChartCategorias.PaletteCustomColors = new System.Drawing.Color[] {
@@ -265,29 +265,29 @@ namespace PRESENTACION
             series1.Font = new System.Drawing.Font("Humnst777 BT", 8F);
             series1.IsValueShownAsLabel = true;
             series1.IsVisibleInLegend = false;
+            series1.IsXValueIndexed = true;
             series1.LabelBorderWidth = 0;
             series1.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             series1.Name = "Series1";
             series1.YValuesPerPoint = 2;
             this.ChartCategorias.Series.Add(series1);
-            this.ChartCategorias.Size = new System.Drawing.Size(215, 140);
+            this.ChartCategorias.Size = new System.Drawing.Size(210, 140);
             this.ChartCategorias.TabIndex = 8;
             this.ChartCategorias.Text = "chart2";
             title1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             title1.Name = "Title1";
-            title1.Text = "Las 5 Categorías con mayor cantidad";
+            title1.Text = "Las 5 Presentaciones con más Medicamentos";
             this.ChartCategorias.Titles.Add(title1);
             // 
             // LblUltimasSalidas
             // 
             this.LblUltimasSalidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblUltimasSalidas.AutoSize = true;
             this.LblUltimasSalidas.BackColor = System.Drawing.Color.White;
             this.LblUltimasSalidas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUltimasSalidas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.LblUltimasSalidas.Location = new System.Drawing.Point(15, 352);
+            this.LblUltimasSalidas.Location = new System.Drawing.Point(60, 351);
             this.LblUltimasSalidas.Name = "LblUltimasSalidas";
             this.LblUltimasSalidas.Size = new System.Drawing.Size(117, 16);
             this.LblUltimasSalidas.TabIndex = 2;
@@ -298,6 +298,7 @@ namespace PRESENTACION
             // 
             this.DgvUltimasSalidas.AllowUserToAddRows = false;
             this.DgvUltimasSalidas.AllowUserToDeleteRows = false;
+            this.DgvUltimasSalidas.AllowUserToResizeColumns = false;
             this.DgvUltimasSalidas.AllowUserToResizeRows = false;
             this.DgvUltimasSalidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -305,6 +306,7 @@ namespace PRESENTACION
             this.DgvUltimasSalidas.BackgroundColor = System.Drawing.Color.White;
             this.DgvUltimasSalidas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvUltimasSalidas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DgvUltimasSalidas.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DgvUltimasSalidas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -434,6 +436,7 @@ namespace PRESENTACION
             | System.Windows.Forms.AnchorStyles.Right)));
             chartArea2.Name = "ChartArea1";
             this.ChartMayoresEgresos.ChartAreas.Add(chartArea2);
+            this.ChartMayoresEgresos.Cursor = System.Windows.Forms.Cursors.Hand;
             legend1.BackColor = System.Drawing.Color.White;
             legend1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
@@ -456,11 +459,15 @@ namespace PRESENTACION
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series2.Color = System.Drawing.Color.Black;
-            series2.Font = new System.Drawing.Font("Humnst777 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Font = new System.Drawing.Font("Humnst777 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series2.IsValueShownAsLabel = true;
+            series2.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            series2.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series2.LabelBorderWidth = 0;
             series2.LabelForeColor = System.Drawing.Color.White;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
+            series2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.ChartMayoresEgresos.Series.Add(series2);
             this.ChartMayoresEgresos.Size = new System.Drawing.Size(443, 142);
             this.ChartMayoresEgresos.TabIndex = 7;
@@ -942,7 +949,6 @@ namespace PRESENTACION
             this.Text = "FormInicio";
             this.Load += new System.EventHandler(this.FormInicio_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAgotados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartCategorias)).EndInit();

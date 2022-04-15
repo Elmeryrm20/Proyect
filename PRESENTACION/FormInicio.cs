@@ -1,6 +1,7 @@
 ﻿using DATOS;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PRESENTACION
@@ -28,31 +29,19 @@ namespace PRESENTACION
         #region Inicializar Variables
         readonly string DNI;
         readonly string Nombre;
+        ToolTip toolTip1 = new ToolTip();
         Consultas DU = new Consultas();
         #endregion
 
-        void saludo()
+        #region DashBoard
+        public void CargarDashBoard()
         {
-            int hora = (int)DateTime.Now.Hour;
+            Indicadores();
+            Tablas();
+            Graficos();
 
-            if (hora >= 6 && hora <= 12)
-            {
-                //LblMensajeBienvenida.Text = "Que tengas un excelente día de trabajo."; 
-            }
-            else if (hora <= 18 && hora >= 13)
-            {
-                //LblMensajeBienvenida.Text = "Que tengas una excelente tarde de trabajo.";
-            }
-            else if (hora <= 24 && hora >= 19)
-            {
-                //LblMensajeBienvenida.Text = "Que tengas una excelente noche de trabajo.";
-            }
-            else
-            {
-                //LblMensajeBienvenida.Text = "Que tengas una excelente madrugada de trabajo.";
-            }
+            toolTip1.IsBalloon = true;
         }
-
         string Fecha1()
         {
             switch (CmbFiltroFecha.SelectedIndex)
@@ -65,6 +54,7 @@ namespace PRESENTACION
                 default: return "2000-01-01";
             }
         }
+        DateTime dtime = DateTime.Now;
         void Indicadores()
         {
             DataTable dt = DU.D_DashBoard_Indicadores(Fecha1(), DateTime.Today.ToString("yyyy-MM-dd"));
@@ -94,7 +84,9 @@ namespace PRESENTACION
             LblPorcAgotados.Text = dt.Rows[0][8].ToString();
             PrbAgotados.Value = int.Parse(dt.Rows[0][8].ToString().Replace("%", String.Empty));
             LblProximoVencimiento.Text = dt.Rows[0][9].ToString();
-            LblFechaProxVenci.Text = dt.Rows[0][10].ToString();
+            //LblFechaProxVenci.Text =dt.Rows[0][10].ToString();
+            LblFechaProxVenci.Text = DateTime.Parse(dt.Rows[0][10].ToString()).ToString("dd-MM-yyyy");
+            toolTip1.SetToolTip(LblFechaProxVenci, "Vence el " + (DateTime.Parse(dt.Rows[0][10].ToString()).ToLongDateString()));
         }
         void Tablas()
         {
@@ -103,7 +95,6 @@ namespace PRESENTACION
             DesignDataGridView();
 
         }
-        #region DashBoard
 
         public bool maximizar = false;
 
@@ -130,8 +121,8 @@ namespace PRESENTACION
             DgvAgotados.Columns[4].MinimumWidth = 35;
             DgvAgotados.Columns[2].HeaderText = "Existencia";
 
-            LblUltimasSalidas.Text = "últimas 5 Salidas de Medicamentos";
-            LblUltimosAgotados.Text = "últimos 5 Medicamentos agotados o próximos a agotarse";
+            LblUltimasSalidas.Text = "Últimas 5 Salidas de Medicamentos";
+            LblUltimosAgotados.Text = "Últimos 5 Medicamentos agotados o próximos a agotarse";
 
             //dgb_Medicamentos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgb_Medicamentos.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -142,13 +133,13 @@ namespace PRESENTACION
         public void MinimizarDataGridview()
         {
             maximizar = false;
-            LblUltimasSalidas.Text = "últimas 5 Salidas";
-            LblUltimosAgotados.Text = "últimos 5 agotados";
+            LblUltimasSalidas.Text = "Últimas 5 Salidas";
+            LblUltimosAgotados.Text = "Últimos 5 agotados";
             DgvUltimasSalidas.Columns[2].HeaderText = "Cant.";
             DgvUltimasSalidas.Columns[1].Visible = false;
             DgvUltimasSalidas.Columns[3].Visible = false;
             DgvUltimasSalidas.Columns[4].Visible = false;
-            DgvUltimasSalidas.Columns[0].MinimumWidth =150;
+            DgvUltimasSalidas.Columns[0].MinimumWidth = 150;
             DgvUltimasSalidas.Columns[2].MinimumWidth = 30;
             //dgb_Medicamentos.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
@@ -166,8 +157,27 @@ namespace PRESENTACION
             DgvAgotados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvUltimasSalidas.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             DgvAgotados.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            DgvUltimasSalidas.Columns[1].HeaderText = "Presentación";
+            DgvAgotados.Columns[1].HeaderText = "Presentación";
+            DgvUltimasSalidas.Columns[2].DefaultCellStyle.ForeColor = Color.FromArgb(255, 71, 71);
+            DgvAgotados.Columns[2].DefaultCellStyle.ForeColor = Color.Tomato;
+
             if (maximizar == false) MinimizarDataGridview();
             else MaximizarDataGridView();
+        }
+
+        public void MaximizarGraficos()
+        {
+            ChartCategorias.ChartAreas["ChartArea2"].AxisX.Title = "PRESENTACIÓN";
+            ChartCategorias.ChartAreas["ChartArea2"].AxisY.Title = "CANTIDAD";
+            ChartMayoresEgresos.Legends["Legend1"].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+        }
+        public void MinimizarGraficos()
+        {
+            ChartCategorias.ChartAreas["ChartArea2"].AxisX.Title = "";
+            ChartCategorias.ChartAreas["ChartArea2"].AxisY.Title = "";
+            ChartMayoresEgresos.Legends["Legend1"].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Right;
+
         }
         void Graficos()
         {
@@ -182,12 +192,9 @@ namespace PRESENTACION
             ChartCategorias.Series[0].XValueMember = "Tipo";
             ChartCategorias.Series[0].YValueMembers = "Cantidad";
             ChartCategorias.DataBind();
-        }
-        public void CargarDashBoard()
-        {
-            Indicadores();
-            Tablas();
-            Graficos();
+
+            if (maximizar == false) MinimizarGraficos();
+            else MaximizarGraficos();
         }
         #endregion
         private void FormInicio_Load(object sender, EventArgs e)
