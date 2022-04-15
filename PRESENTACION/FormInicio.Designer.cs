@@ -29,6 +29,9 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
@@ -39,10 +42,10 @@ namespace PRESENTACION
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LblUltimosAgotados = new System.Windows.Forms.Label();
+            this.DgvAgotados = new System.Windows.Forms.DataGridView();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.ChartCategorias = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.LblUltimasSalidas = new System.Windows.Forms.Label();
             this.DgvUltimasSalidas = new System.Windows.Forms.DataGridView();
@@ -89,10 +92,9 @@ namespace PRESENTACION
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.LblUltimosAgotados = new System.Windows.Forms.Label();
-            this.DgvAgotados = new System.Windows.Forms.DataGridView();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAgotados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUltimasSalidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -112,8 +114,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAgotados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -131,6 +131,86 @@ namespace PRESENTACION
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(246, 508);
             this.panel2.TabIndex = 2;
+            // 
+            // LblUltimosAgotados
+            // 
+            this.LblUltimosAgotados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblUltimosAgotados.AutoSize = true;
+            this.LblUltimosAgotados.BackColor = System.Drawing.Color.White;
+            this.LblUltimosAgotados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUltimosAgotados.ForeColor = System.Drawing.Color.Tomato;
+            this.LblUltimosAgotados.Location = new System.Drawing.Point(17, 17);
+            this.LblUltimosAgotados.Name = "LblUltimosAgotados";
+            this.LblUltimosAgotados.Size = new System.Drawing.Size(131, 16);
+            this.LblUltimosAgotados.TabIndex = 10;
+            this.LblUltimosAgotados.Text = "Últimos 5 Agotados";
+            this.LblUltimosAgotados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DgvAgotados
+            // 
+            this.DgvAgotados.AllowUserToAddRows = false;
+            this.DgvAgotados.AllowUserToDeleteRows = false;
+            this.DgvAgotados.AllowUserToResizeRows = false;
+            this.DgvAgotados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvAgotados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DgvAgotados.BackgroundColor = System.Drawing.Color.White;
+            this.DgvAgotados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgvAgotados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DgvAgotados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Humnst777 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAgotados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvAgotados.ColumnHeadersHeight = 25;
+            this.DgvAgotados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DgvAgotados.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvAgotados.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvAgotados.EnableHeadersVisualStyles = false;
+            this.DgvAgotados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.DgvAgotados.Location = new System.Drawing.Point(20, 34);
+            this.DgvAgotados.MultiSelect = false;
+            this.DgvAgotados.Name = "DgvAgotados";
+            this.DgvAgotados.ReadOnly = true;
+            this.DgvAgotados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAgotados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvAgotados.RowHeadersVisible = false;
+            this.DgvAgotados.RowHeadersWidth = 51;
+            this.DgvAgotados.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.DgvAgotados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvAgotados.Size = new System.Drawing.Size(200, 127);
+            this.DgvAgotados.TabIndex = 11;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox12.Image = global::PRESENTACION.Properties.Resources.DashBoard08;
+            this.pictureBox12.Location = new System.Drawing.Point(2, 7);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(234, 163);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 9;
+            this.pictureBox12.TabStop = false;
             // 
             // ChartCategorias
             // 
@@ -424,7 +504,7 @@ namespace PRESENTACION
             this.LblPorcExtranjeros.Name = "LblPorcExtranjeros";
             this.LblPorcExtranjeros.Size = new System.Drawing.Size(47, 23);
             this.LblPorcExtranjeros.TabIndex = 2;
-            this.LblPorcExtranjeros.Text = "43%";
+            this.LblPorcExtranjeros.Text = "0%";
             this.LblPorcExtranjeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LblPorcExtranjeros.Visible = false;
             // 
@@ -457,7 +537,7 @@ namespace PRESENTACION
             this.CpbPorcExtranjeros.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.CpbPorcExtranjeros.SuperscriptText = "";
             this.CpbPorcExtranjeros.TabIndex = 4;
-            this.CpbPorcExtranjeros.Text = "34%";
+            this.CpbPorcExtranjeros.Text = "0%";
             this.CpbPorcExtranjeros.TextMargin = new System.Windows.Forms.Padding(2, 4, 0, 0);
             this.CpbPorcExtranjeros.Value = 50;
             // 
@@ -563,9 +643,9 @@ namespace PRESENTACION
             this.LblNumExtranjeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
             this.LblNumExtranjeros.Location = new System.Drawing.Point(373, 109);
             this.LblNumExtranjeros.Name = "LblNumExtranjeros";
-            this.LblNumExtranjeros.Size = new System.Drawing.Size(75, 43);
+            this.LblNumExtranjeros.Size = new System.Drawing.Size(33, 43);
             this.LblNumExtranjeros.TabIndex = 2;
-            this.LblNumExtranjeros.Text = "1234";
+            this.LblNumExtranjeros.Text = "0";
             this.LblNumExtranjeros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -588,9 +668,9 @@ namespace PRESENTACION
             this.LblNumAgotados.ForeColor = System.Drawing.Color.Tomato;
             this.LblNumAgotados.Location = new System.Drawing.Point(409, 303);
             this.LblNumAgotados.Name = "LblNumAgotados";
-            this.LblNumAgotados.Size = new System.Drawing.Size(35, 16);
+            this.LblNumAgotados.Size = new System.Drawing.Size(14, 16);
             this.LblNumAgotados.TabIndex = 2;
-            this.LblNumAgotados.Text = "4444";
+            this.LblNumAgotados.Text = "0";
             // 
             // label11
             // 
@@ -612,9 +692,9 @@ namespace PRESENTACION
             this.LblNumVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
             this.LblNumVencidos.Location = new System.Drawing.Point(409, 230);
             this.LblNumVencidos.Name = "LblNumVencidos";
-            this.LblNumVencidos.Size = new System.Drawing.Size(35, 16);
+            this.LblNumVencidos.Size = new System.Drawing.Size(14, 16);
             this.LblNumVencidos.TabIndex = 2;
-            this.LblNumVencidos.Text = "4444";
+            this.LblNumVencidos.Text = "0";
             // 
             // label9
             // 
@@ -698,7 +778,7 @@ namespace PRESENTACION
             this.LblPorcAgotados.Name = "LblPorcAgotados";
             this.LblPorcAgotados.Size = new System.Drawing.Size(94, 40);
             this.LblPorcAgotados.TabIndex = 2;
-            this.LblPorcAgotados.Text = "43%";
+            this.LblPorcAgotados.Text = "0%";
             this.LblPorcAgotados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LblPorcVencidos
@@ -711,7 +791,7 @@ namespace PRESENTACION
             this.LblPorcVencidos.Name = "LblPorcVencidos";
             this.LblPorcVencidos.Size = new System.Drawing.Size(94, 34);
             this.LblPorcVencidos.TabIndex = 2;
-            this.LblPorcVencidos.Text = "43%";
+            this.LblPorcVencidos.Text = "0%";
             this.LblPorcVencidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LblNumSalidas
@@ -724,7 +804,7 @@ namespace PRESENTACION
             this.LblNumSalidas.Name = "LblNumSalidas";
             this.LblNumSalidas.Size = new System.Drawing.Size(98, 52);
             this.LblNumSalidas.TabIndex = 2;
-            this.LblNumSalidas.Text = "25";
+            this.LblNumSalidas.Text = "0";
             this.LblNumSalidas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblNumEntradas
@@ -737,7 +817,7 @@ namespace PRESENTACION
             this.LblNumEntradas.Name = "LblNumEntradas";
             this.LblNumEntradas.Size = new System.Drawing.Size(98, 52);
             this.LblNumEntradas.TabIndex = 2;
-            this.LblNumEntradas.Text = "78";
+            this.LblNumEntradas.Text = "0";
             this.LblNumEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblNumMedicamentos
@@ -847,86 +927,6 @@ namespace PRESENTACION
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // LblUltimosAgotados
-            // 
-            this.LblUltimosAgotados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblUltimosAgotados.AutoSize = true;
-            this.LblUltimosAgotados.BackColor = System.Drawing.Color.White;
-            this.LblUltimosAgotados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUltimosAgotados.ForeColor = System.Drawing.Color.Tomato;
-            this.LblUltimosAgotados.Location = new System.Drawing.Point(17, 17);
-            this.LblUltimosAgotados.Name = "LblUltimosAgotados";
-            this.LblUltimosAgotados.Size = new System.Drawing.Size(131, 16);
-            this.LblUltimosAgotados.TabIndex = 10;
-            this.LblUltimosAgotados.Text = "Últimos 5 Agotados";
-            this.LblUltimosAgotados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // DgvAgotados
-            // 
-            this.DgvAgotados.AllowUserToAddRows = false;
-            this.DgvAgotados.AllowUserToDeleteRows = false;
-            this.DgvAgotados.AllowUserToResizeRows = false;
-            this.DgvAgotados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgvAgotados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.DgvAgotados.BackgroundColor = System.Drawing.Color.White;
-            this.DgvAgotados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DgvAgotados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DgvAgotados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Humnst777 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvAgotados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DgvAgotados.ColumnHeadersHeight = 25;
-            this.DgvAgotados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DgvAgotados.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvAgotados.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvAgotados.EnableHeadersVisualStyles = false;
-            this.DgvAgotados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.DgvAgotados.Location = new System.Drawing.Point(20, 34);
-            this.DgvAgotados.MultiSelect = false;
-            this.DgvAgotados.Name = "DgvAgotados";
-            this.DgvAgotados.ReadOnly = true;
-            this.DgvAgotados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvAgotados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DgvAgotados.RowHeadersVisible = false;
-            this.DgvAgotados.RowHeadersWidth = 51;
-            this.DgvAgotados.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.DgvAgotados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvAgotados.Size = new System.Drawing.Size(200, 127);
-            this.DgvAgotados.TabIndex = 11;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox12.Image = global::PRESENTACION.Properties.Resources.DashBoard08;
-            this.pictureBox12.Location = new System.Drawing.Point(2, 7);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(234, 163);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 9;
-            this.pictureBox12.TabStop = false;
-            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -943,6 +943,8 @@ namespace PRESENTACION
             this.Load += new System.EventHandler(this.FormInicio_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAgotados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUltimasSalidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -963,8 +965,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAgotados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }

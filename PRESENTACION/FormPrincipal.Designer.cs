@@ -156,10 +156,11 @@ namespace PRESENTACION
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.Logo01;
+            this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.LogoCruzRoja02;
             this.pictureBox4.Location = new System.Drawing.Point(48, 11);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
             // 
