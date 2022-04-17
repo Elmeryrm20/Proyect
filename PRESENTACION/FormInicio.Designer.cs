@@ -139,7 +139,7 @@ namespace PRESENTACION
             this.LblUltimosAgotados.BackColor = System.Drawing.Color.White;
             this.LblUltimosAgotados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUltimosAgotados.ForeColor = System.Drawing.Color.Tomato;
-            this.LblUltimosAgotados.Location = new System.Drawing.Point(55, 16);
+            this.LblUltimosAgotados.Location = new System.Drawing.Point(55, 20);
             this.LblUltimosAgotados.Name = "LblUltimosAgotados";
             this.LblUltimosAgotados.Size = new System.Drawing.Size(131, 16);
             this.LblUltimosAgotados.TabIndex = 10;
@@ -180,7 +180,7 @@ namespace PRESENTACION
             this.DgvAgotados.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvAgotados.EnableHeadersVisualStyles = false;
             this.DgvAgotados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.DgvAgotados.Location = new System.Drawing.Point(20, 34);
+            this.DgvAgotados.Location = new System.Drawing.Point(20, 38);
             this.DgvAgotados.MultiSelect = false;
             this.DgvAgotados.Name = "DgvAgotados";
             this.DgvAgotados.ReadOnly = true;
@@ -205,7 +205,7 @@ namespace PRESENTACION
             this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox12.Image = global::PRESENTACION.Properties.Resources.DashBoard08;
-            this.pictureBox12.Location = new System.Drawing.Point(2, 7);
+            this.pictureBox12.Location = new System.Drawing.Point(2, 11);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(234, 163);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +248,7 @@ namespace PRESENTACION
             chartArea1.Name = "ChartArea2";
             chartArea1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.ChartCategorias.ChartAreas.Add(chartArea1);
-            this.ChartCategorias.Location = new System.Drawing.Point(11, 186);
+            this.ChartCategorias.Location = new System.Drawing.Point(11, 187);
             this.ChartCategorias.Name = "ChartCategorias";
             this.ChartCategorias.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.ChartCategorias.PaletteCustomColors = new System.Drawing.Color[] {
@@ -367,7 +367,7 @@ namespace PRESENTACION
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox9.Image = global::PRESENTACION.Properties.Resources.DashBoard08;
-            this.pictureBox9.Location = new System.Drawing.Point(-2, 181);
+            this.pictureBox9.Location = new System.Drawing.Point(-2, 182);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(234, 153);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -439,7 +439,7 @@ namespace PRESENTACION
             this.ChartMayoresEgresos.Cursor = System.Windows.Forms.Cursors.Hand;
             legend1.BackColor = System.Drawing.Color.White;
             legend1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
-            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.ChartMayoresEgresos.Legends.Add(legend1);

@@ -4,6 +4,7 @@ using System.Data;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using USUARIO;
+using System.Threading;
 
 namespace PRESENTACION
 {
@@ -106,9 +107,16 @@ namespace PRESENTACION
             if (TxtPass.Text == ud.Pass)
             {
                 this.Hide();
+                Thread.Sleep(1000);
+                FormEspera B = new FormEspera();
+                B.Show();
+                Thread.Sleep(1000);
                 FormPrincipal A = new FormPrincipal(ud.DNI, ud.Tipo, ud.Nombre);
+                Thread.Sleep(1000);
+                B.Close();
                 A.Show();
                 AddOwnedForm(A);
+
                 //A.ShowInTaskbar = true;
             }
             else

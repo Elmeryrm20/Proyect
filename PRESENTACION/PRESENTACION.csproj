@@ -175,6 +175,12 @@
     <Compile Include="FormEntradaMedicamento.Designer.cs">
       <DependentUpon>FormEntradaMedicamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEspera.Designer.cs">
+      <DependentUpon>FormEspera.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEntradaMedicamento.resx">
       <DependentUpon>FormEntradaMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEspera.resx">
+      <DependentUpon>FormEspera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHistorial.resx">
       <DependentUpon>FormHistorial.cs</DependentUpon>

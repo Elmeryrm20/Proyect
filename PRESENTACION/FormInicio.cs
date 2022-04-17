@@ -22,6 +22,11 @@ namespace PRESENTACION
             this.Nombre = Nombre;
             //LblNombre.Text = Nombre;
             //saludo();
+            toolTip1.BackColor = Color.White;
+            //toolTip1.ToolTipTitle = "hola";
+            toolTip1.ToolTipIcon = ToolTipIcon.Info;
+            toolTip1.ForeColor = Color.FromArgb(255, 71, 71);
+            toolTip1.SetToolTip(CmbFiltroFecha, "Selecciona un rango de fecha");
 
         }
         #endregion
