@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.CpbCarga = new CircularProgressBar.CircularProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -54,18 +58,65 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Cargando ventanas...";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // CpbCarga
+            // 
+            this.CpbCarga.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CpbCarga.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.CpbCarga.AnimationSpeed = 500;
+            this.CpbCarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.CpbCarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.CpbCarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CpbCarga.InnerColor = System.Drawing.Color.White;
+            this.CpbCarga.InnerMargin = 0;
+            this.CpbCarga.InnerWidth = -2;
+            this.CpbCarga.Location = new System.Drawing.Point(152, 208);
+            this.CpbCarga.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.CpbCarga.MarqueeAnimationSpeed = 2000;
+            this.CpbCarga.Name = "CpbCarga";
+            this.CpbCarga.OuterColor = System.Drawing.Color.Gray;
+            this.CpbCarga.OuterMargin = -20;
+            this.CpbCarga.OuterWidth = 20;
+            this.CpbCarga.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CpbCarga.ProgressWidth = 12;
+            this.CpbCarga.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.CpbCarga.Size = new System.Drawing.Size(80, 80);
+            this.CpbCarga.StartAngle = 270;
+            this.CpbCarga.Step = 100;
+            this.CpbCarga.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.CpbCarga.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.CpbCarga.SubscriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
+            this.CpbCarga.SubscriptText = "%";
+            this.CpbCarga.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.CpbCarga.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.CpbCarga.SuperscriptText = "";
+            this.CpbCarga.TabIndex = 1;
+            this.CpbCarga.Text = "0";
+            this.CpbCarga.TextMargin = new System.Windows.Forms.Padding(5, 4, 0, 0);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 50;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // FormEspera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(400, 300);
+            this.Controls.Add(this.CpbCarga);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEspera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEspera";
+            this.Load += new System.EventHandler(this.FormEspera_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,5 +126,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
+        private CircularProgressBar.CircularProgressBar CpbCarga;
+        private System.Windows.Forms.Timer timer2;
     }
 }
