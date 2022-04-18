@@ -94,10 +94,11 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.PibMinimizar);
             this.panel1.Controls.Add(this.PibCerrar);
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(662, 23);
+            this.panel1.Size = new System.Drawing.Size(662, 113);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -137,7 +138,6 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.txtApoyo);
             this.panel2.Controls.Add(this.PibCheckPass);
-            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.PibCheckUsu);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.DtgPrueba);
@@ -175,7 +175,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.LogoCruzRoja02;
-            this.pictureBox4.Location = new System.Drawing.Point(117, 24);
+            this.pictureBox4.Location = new System.Drawing.Point(115, 25);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(85, 85);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

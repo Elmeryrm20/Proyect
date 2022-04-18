@@ -78,6 +78,7 @@ namespace PRESENTACION
         }
         void Actualizar()
         {
+            ChbColores.Checked = false;
             Rellenartabla();
             txb_Buscar.Text = "Buscar Medicamento";
             cmbTipo.SelectedIndex = -1;
@@ -108,6 +109,7 @@ namespace PRESENTACION
         //Búsqueda Dinámica
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
+            ChbColores.Checked = false;
             PibActualizar.Image = Properties.Resources.BotonFormActualizar04;
             cmbTipo.Text = "Seleccionar";
             cmb_Almacen.Text = "Seleccionar";
@@ -140,6 +142,8 @@ namespace PRESENTACION
         //Botón Filtrar
         private void btn_Filtrar_Click(object sender, EventArgs e)
         {
+            ChbColores.Checked = false;
+
             try
             {
                 //string Tipo = cmbTipo.SelectedValue.ToString();
@@ -419,44 +423,89 @@ namespace PRESENTACION
         {
             if (ChbColores.Checked == true)
             {
-                Formato = true;
-                //dgb_Medicamentos_CellFormatting(sender, DataGridViewCellFormattingEventArgs asda);
+                FomarteandoDataGridView(true);
             }
             else
             {
-                Formato = false;
+                FomarteandoDataGridView(false);
             }
-
         }
-        bool Formato = false;
-        private void dgb_Medicamentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (Formato)
-            {
 
-                if (this.dgb_Medicamentos.Columns[e.ColumnIndex].Name == "EXISTENCIA")
+
+        void FomarteandoDataGridView(bool formato)
+        {
+
+            if (formato)
+            {
+                for (int i = 0; i < dgb_Medicamentos.Rows.Count; i++)
                 {
-                    if (Convert.ToInt32(e.Value) == 0)
+                    dgb_Medicamentos.Rows[i].Cells[2].Style.ForeColor = Color.White;
+                    if (Convert.ToInt32(dgb_Medicamentos.Rows[i].Cells[2].Value) == 0)
                     {
-                        e.CellStyle.BackColor = Color.Red;
-                        e.CellStyle.ForeColor = Color.White;
+                        dgb_Medicamentos.Rows[i].Cells[2].Style.BackColor = Color.Red;
                     }
-                    else if (Convert.ToInt32(e.Value) > 0 && Convert.ToInt32(e.Value) <= 10)
+                    else if (Convert.ToInt32(dgb_Medicamentos.Rows[i].Cells[2].Value) > 0 && Convert.ToInt32(dgb_Medicamentos.Rows[i].Cells[2].Value) <= 10)
                     {
-                        e.CellStyle.BackColor = Color.Orange;
-                        e.CellStyle.ForeColor = Color.White;
+                        dgb_Medicamentos.Rows[i].Cells[2].Style.BackColor = Color.Orange;
                     }
                     else
                     {
-                        e.CellStyle.BackColor = Color.FromArgb(41, 177, 101);
-                        e.CellStyle.ForeColor = Color.White;
+                        dgb_Medicamentos.Rows[i].Cells[2].Style.BackColor = Color.FromArgb(41, 177, 101);
                     }
                 }
             }
             else
             {
-                e.CellStyle.BackColor = Color.White;
-                e.CellStyle.ForeColor = Color.FromArgb(53,141,216);
+
+
+                for (int i = 0; i < dgb_Medicamentos.Rows.Count; i++)
+                {
+                    dgb_Medicamentos.Rows[i].Cells[2].Style.BackColor = Color.White;
+                    dgb_Medicamentos.Rows[i].Cells[2].Style.ForeColor = Color.FromArgb(53, 141, 216);
+                }
+
+                //    dgb_Medicamentos.Columns[2].DefaultCellStyle.BackColor = Color.White;
+                //dgb_Medicamentos.Columns[2].DefaultCellStyle.ForeColor = Color.FromArgb(53, 141, 216);
+            }
+        }
+        private void dgb_Medicamentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            //    if (Formato)
+            //    {
+
+            //        if (this.dgb_Medicamentos.Columns[e.ColumnIndex].Name == "EXISTENCIA")
+            //        {
+            //            if (Convert.ToInt32(e.Value) == 0)
+            //            {
+            //                e.CellStyle.BackColor = Color.Red;
+            //                e.CellStyle.ForeColor = Color.White;
+            //            }
+            //            else if (Convert.ToInt32(e.Value) > 0 && Convert.ToInt32(e.Value) <= 10)
+            //            {
+            //                e.CellStyle.BackColor = Color.Orange;
+            //                e.CellStyle.ForeColor = Color.White;
+            //            }
+            //            else
+            //            {
+            //                e.CellStyle.BackColor = Color.FromArgb(41, 177, 101);
+            //                e.CellStyle.ForeColor = Color.White;
+            //            }
+            //        }
+            //    }
+            //    else
+            //    {
+            //        e.CellStyle.BackColor = Color.White;
+            //        e.CellStyle.ForeColor = Color.FromArgb(53,141,216);
+            //    }
+        }
+
+        private void dgb_Medicamentos_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex==2)
+            {
+                if (ChbColores.Checked) FomarteandoDataGridView(true);
+                else FomarteandoDataGridView(false);
+
             }
         }
     }
