@@ -1,6 +1,7 @@
 ﻿using DATOS;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PRESENTACION
@@ -25,6 +26,17 @@ namespace PRESENTACION
         readonly string DNI;
 
         #region Métodos al cargar el formulario
+        public void MaximizarDataGridView()
+        {
+            dgb_Medicamentos.Columns[7].Visible = true;
+            Maximizar = true;
+        }
+        public void MinimizarDataGridView()
+        {
+            dgb_Medicamentos.Columns[7].Visible = false;
+            Maximizar = false;
+        }
+        bool Maximizar = false;
         private void DesignDataGridView()
         {
             dgb_Medicamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -38,6 +50,11 @@ namespace PRESENTACION
             dgb_Medicamentos.Columns[2].MinimumWidth = 75;
             dgb_Medicamentos.Columns[3].MinimumWidth = 90;
             dgb_Medicamentos.RowHeadersWidth = 35;
+            dgb_Medicamentos.Columns[5].HeaderText = "Presentación";
+            dgb_Medicamentos.Columns[7].HeaderText = "Tipo";
+
+            if (this.Maximizar) MaximizarDataGridView();
+            else MinimizarDataGridView();
 
         }
 
@@ -402,43 +419,45 @@ namespace PRESENTACION
         {
             if (ChbColores.Checked == true)
             {
-                Colores = true;
+                Formato = true;
+                //dgb_Medicamentos_CellFormatting(sender, DataGridViewCellFormattingEventArgs asda);
             }
             else
             {
-                Colores = false;
+                Formato = false;
             }
 
         }
-
+        bool Formato = false;
         private void dgb_Medicamentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            //if (this.dgb_Medicamentos.Columns[e.ColumnIndex].Name == "EXISTENCIA")
+            if (Formato)
+            {
 
-            //    if (Colores)
-            //    {
-            //        e.CellStyle.ForeColor = Color.Black;
-            //        //e.CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            //        if (e.Value.ToString() == "0")
-            //        {
-            //            e.CellStyle.BackColor = Color.Red;
-            //            e.CellStyle.ForeColor = Color.Red;
-            //            //DgvVentas.Rows[e.RowIndex].Cells[9].Value = "Anulado";
-
-            //        }
-            //        else if (e.Value.ToString() == "1")
-            //        {
-            //            e.CellStyle.BackColor = Color.LightGreen;
-            //            e.CellStyle.ForeColor = Color.LightGreen;
-            //            //DgvVentas.Rows[e.RowIndex].Cells[9].Value = "No Anulado";
-            //        }
-            //    }
-            //    else
-            //    {
-            //        e.CellStyle.ForeColor = Color.White;
-            //    }
-            //}
+                if (this.dgb_Medicamentos.Columns[e.ColumnIndex].Name == "EXISTENCIA")
+                {
+                    if (Convert.ToInt32(e.Value) == 0)
+                    {
+                        e.CellStyle.BackColor = Color.Red;
+                        e.CellStyle.ForeColor = Color.White;
+                    }
+                    else if (Convert.ToInt32(e.Value) > 0 && Convert.ToInt32(e.Value) <= 10)
+                    {
+                        e.CellStyle.BackColor = Color.Orange;
+                        e.CellStyle.ForeColor = Color.White;
+                    }
+                    else
+                    {
+                        e.CellStyle.BackColor = Color.FromArgb(41, 177, 101);
+                        e.CellStyle.ForeColor = Color.White;
+                    }
+                }
+            }
+            else
+            {
+                e.CellStyle.BackColor = Color.White;
+                e.CellStyle.ForeColor = Color.FromArgb(53,141,216);
+            }
         }
     }
 }

@@ -39,11 +39,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Winkle", 30F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Stabillo Medium", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(92, 120);
+            this.label1.Location = new System.Drawing.Point(107, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 31);
+            this.label1.Size = new System.Drawing.Size(178, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "BIENVENIDO";
             // 
@@ -52,11 +52,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(110, 170);
+            this.label2.Location = new System.Drawing.Point(110, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 21);
+            this.label2.Size = new System.Drawing.Size(166, 21);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Cargando ventanas...";
+            this.label2.Text = "Cargando controles...";
             // 
             // timer1
             // 
@@ -67,28 +67,28 @@
             // 
             this.CpbCarga.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CpbCarga.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.CpbCarga.AnimationSpeed = 500;
+            this.CpbCarga.AnimationSpeed = 100;
             this.CpbCarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
             this.CpbCarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.CpbCarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CpbCarga.InnerColor = System.Drawing.Color.White;
+            this.CpbCarga.ForeColor = System.Drawing.Color.White;
+            this.CpbCarga.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
             this.CpbCarga.InnerMargin = 0;
             this.CpbCarga.InnerWidth = -2;
-            this.CpbCarga.Location = new System.Drawing.Point(152, 208);
-            this.CpbCarga.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.CpbCarga.Location = new System.Drawing.Point(152, 172);
+            this.CpbCarga.Margin = new System.Windows.Forms.Padding(0);
             this.CpbCarga.MarqueeAnimationSpeed = 2000;
             this.CpbCarga.Name = "CpbCarga";
-            this.CpbCarga.OuterColor = System.Drawing.Color.Gray;
+            this.CpbCarga.OuterColor = System.Drawing.Color.Firebrick;
             this.CpbCarga.OuterMargin = -20;
             this.CpbCarga.OuterWidth = 20;
-            this.CpbCarga.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CpbCarga.ProgressColor = System.Drawing.Color.White;
             this.CpbCarga.ProgressWidth = 12;
             this.CpbCarga.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.CpbCarga.Size = new System.Drawing.Size(80, 80);
             this.CpbCarga.StartAngle = 270;
             this.CpbCarga.Step = 100;
             this.CpbCarga.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.CpbCarga.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.CpbCarga.SubscriptColor = System.Drawing.Color.White;
             this.CpbCarga.SubscriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
             this.CpbCarga.SubscriptText = "%";
             this.CpbCarga.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -97,6 +97,7 @@
             this.CpbCarga.TabIndex = 1;
             this.CpbCarga.Text = "0";
             this.CpbCarga.TextMargin = new System.Windows.Forms.Padding(5, 4, 0, 0);
+            this.CpbCarga.Value = 68;
             // 
             // timer2
             // 
@@ -127,7 +128,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
-        private CircularProgressBar.CircularProgressBar CpbCarga;
         private System.Windows.Forms.Timer timer2;
+        private CircularProgressBar.CircularProgressBar CpbCarga;
     }
 }

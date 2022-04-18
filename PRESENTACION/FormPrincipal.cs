@@ -386,6 +386,8 @@ namespace PRESENTACION
             FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
             FrmInicio.MaximizarDataGridView();
             FrmInicio.MaximizarGraficos();
+            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
+            FrmMedicamentos.MaximizarDataGridView();
 
         }
         private void Btn_Normal_Click(object sender, EventArgs e)
@@ -397,6 +399,8 @@ namespace PRESENTACION
             FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
             FrmInicio.MinimizarDataGridview();
             FrmInicio.MinimizarGraficos();
+            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
+            FrmMedicamentos.MinimizarDataGridView();
         }
         public void maximizar_Pantalla()
         {

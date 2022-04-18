@@ -160,5 +160,9 @@ namespace PRESENTACION
         {
             DesignDataGridView();
         }
+
+        private void dgb_Usuario_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+        }
     }
 }

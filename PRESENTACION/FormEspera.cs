@@ -67,6 +67,8 @@ namespace PRESENTACION
             CpbCarga.Value = 0;
             CpbCarga.Minimum = 0;
             CpbCarga.Maximum = 100;
+
+            //CpbCarga.SetBounds(152, 172, 78, 78);
             timer1.Start();
         }
     }
