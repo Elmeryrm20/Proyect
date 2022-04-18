@@ -382,7 +382,6 @@ namespace PRESENTACION
         #region Botones de Ventana
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
-
             maximizar_Pantalla();
             FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
             FrmInicio.MaximizarDataGridView();

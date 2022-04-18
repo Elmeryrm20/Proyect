@@ -29,38 +29,36 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LblUltimosAgotados = new System.Windows.Forms.Label();
             this.DgvAgotados = new System.Windows.Forms.DataGridView();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.PibUltimosAgotados = new System.Windows.Forms.PictureBox();
             this.ChartCategorias = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.LblUltimasSalidas = new System.Windows.Forms.Label();
             this.DgvUltimasSalidas = new System.Windows.Forms.DataGridView();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.PibUltimasSalidas = new System.Windows.Forms.PictureBox();
+            this.PibPresentaciones = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ChartMayoresEgresos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.PrbAgotados = new System.Windows.Forms.ProgressBar();
             this.PrbVencidos = new System.Windows.Forms.ProgressBar();
-            this.LblPorcExtranjeros = new System.Windows.Forms.Label();
             this.CpbPorcExtranjeros = new CircularProgressBar.CircularProgressBar();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.CmbFiltroFecha = new System.Windows.Forms.ComboBox();
             this.LblFechaProxVenci = new System.Windows.Forms.Label();
             this.LblProximoVencimiento = new System.Windows.Forms.Label();
@@ -84,7 +82,7 @@ namespace PRESENTACION
             this.LblNumMedicamentos = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.PibMayoresSalidas = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -94,19 +92,18 @@ namespace PRESENTACION
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAgotados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibUltimosAgotados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUltimasSalidas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibUltimasSalidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibPresentaciones)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartMayoresEgresos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibMayoresSalidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,16 +117,16 @@ namespace PRESENTACION
             // 
             this.panel2.Controls.Add(this.LblUltimosAgotados);
             this.panel2.Controls.Add(this.DgvAgotados);
-            this.panel2.Controls.Add(this.pictureBox12);
+            this.panel2.Controls.Add(this.PibUltimosAgotados);
             this.panel2.Controls.Add(this.ChartCategorias);
             this.panel2.Controls.Add(this.LblUltimasSalidas);
             this.panel2.Controls.Add(this.DgvUltimasSalidas);
-            this.panel2.Controls.Add(this.pictureBox10);
-            this.panel2.Controls.Add(this.pictureBox9);
+            this.panel2.Controls.Add(this.PibUltimasSalidas);
+            this.panel2.Controls.Add(this.PibPresentaciones);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(494, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 508);
+            this.panel2.Size = new System.Drawing.Size(246, 514);
             this.panel2.TabIndex = 2;
             // 
             // LblUltimosAgotados
@@ -139,7 +136,7 @@ namespace PRESENTACION
             this.LblUltimosAgotados.BackColor = System.Drawing.Color.White;
             this.LblUltimosAgotados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUltimosAgotados.ForeColor = System.Drawing.Color.Tomato;
-            this.LblUltimosAgotados.Location = new System.Drawing.Point(55, 20);
+            this.LblUltimosAgotados.Location = new System.Drawing.Point(55, 17);
             this.LblUltimosAgotados.Name = "LblUltimosAgotados";
             this.LblUltimosAgotados.Size = new System.Drawing.Size(131, 16);
             this.LblUltimosAgotados.TabIndex = 10;
@@ -159,40 +156,40 @@ namespace PRESENTACION
             this.DgvAgotados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvAgotados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvAgotados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Humnst777 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvAgotados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Humnst777 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAgotados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DgvAgotados.ColumnHeadersHeight = 25;
             this.DgvAgotados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DgvAgotados.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvAgotados.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvAgotados.DefaultCellStyle = dataGridViewCellStyle8;
             this.DgvAgotados.EnableHeadersVisualStyles = false;
             this.DgvAgotados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.DgvAgotados.Location = new System.Drawing.Point(20, 38);
+            this.DgvAgotados.Location = new System.Drawing.Point(20, 34);
             this.DgvAgotados.MultiSelect = false;
             this.DgvAgotados.Name = "DgvAgotados";
             this.DgvAgotados.ReadOnly = true;
             this.DgvAgotados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvAgotados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAgotados.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.DgvAgotados.RowHeadersVisible = false;
             this.DgvAgotados.RowHeadersWidth = 51;
             this.DgvAgotados.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -200,17 +197,17 @@ namespace PRESENTACION
             this.DgvAgotados.Size = new System.Drawing.Size(200, 127);
             this.DgvAgotados.TabIndex = 11;
             // 
-            // pictureBox12
+            // PibUltimosAgotados
             // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PibUltimosAgotados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox12.Image = global::PRESENTACION.Properties.Resources.DashBoard08;
-            this.pictureBox12.Location = new System.Drawing.Point(2, 11);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(234, 163);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 9;
-            this.pictureBox12.TabStop = false;
+            this.PibUltimosAgotados.Image = global::PRESENTACION.Properties.Resources.DashBoardForma01;
+            this.PibUltimosAgotados.Location = new System.Drawing.Point(2, 4);
+            this.PibUltimosAgotados.Name = "PibUltimosAgotados";
+            this.PibUltimosAgotados.Size = new System.Drawing.Size(239, 174);
+            this.PibUltimosAgotados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PibUltimosAgotados.TabIndex = 9;
+            this.PibUltimosAgotados.TabStop = false;
             // 
             // ChartCategorias
             // 
@@ -218,67 +215,67 @@ namespace PRESENTACION
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ChartCategorias.BorderlineWidth = 0;
-            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.Position;
-            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
+            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.Position;
+            chartArea3.AxisX.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            chartArea3.AxisX.IsLabelAutoFit = false;
+            chartArea3.AxisX.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Humnst777 BT", 8.25F);
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            chartArea1.AxisX.LabelStyle.Interval = 0D;
-            chartArea1.AxisX.LabelStyle.IntervalOffset = 0D;
-            chartArea1.AxisX.LabelStyle.IsEndLabelVisible = false;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            chartArea1.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea1.AxisX.LineWidth = 0;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            chartArea1.AxisX.MaximumAutoSize = 100F;
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Humnst777 BT", 8.25F);
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            chartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            chartArea1.BackColor = System.Drawing.Color.White;
-            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            chartArea1.BorderWidth = 0;
-            chartArea1.Name = "ChartArea2";
-            chartArea1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.ChartCategorias.ChartAreas.Add(chartArea1);
-            this.ChartCategorias.Location = new System.Drawing.Point(11, 187);
+            chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Humnst777 BT", 8.25F);
+            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            chartArea3.AxisX.LabelStyle.Interval = 0D;
+            chartArea3.AxisX.LabelStyle.IntervalOffset = 0D;
+            chartArea3.AxisX.LabelStyle.IsEndLabelVisible = false;
+            chartArea3.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            chartArea3.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea3.AxisX.LineWidth = 0;
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            chartArea3.AxisX.MaximumAutoSize = 100F;
+            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            chartArea3.AxisY.IsLabelAutoFit = false;
+            chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Humnst777 BT", 8.25F);
+            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            chartArea3.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            chartArea3.AxisY.MajorGrid.Enabled = false;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            chartArea3.BackColor = System.Drawing.Color.White;
+            chartArea3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            chartArea3.BorderWidth = 0;
+            chartArea3.Name = "ChartArea2";
+            chartArea3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.ChartCategorias.ChartAreas.Add(chartArea3);
+            this.ChartCategorias.Location = new System.Drawing.Point(22, 193);
             this.ChartCategorias.Name = "ChartCategorias";
             this.ChartCategorias.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.ChartCategorias.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216))))),
         System.Drawing.Color.Tomato};
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series1.BorderWidth = 0;
-            series1.ChartArea = "ChartArea2";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            series1.Font = new System.Drawing.Font("Humnst777 BT", 8F);
-            series1.IsValueShownAsLabel = true;
-            series1.IsVisibleInLegend = false;
-            series1.IsXValueIndexed = true;
-            series1.LabelBorderWidth = 0;
-            series1.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 2;
-            this.ChartCategorias.Series.Add(series1);
-            this.ChartCategorias.Size = new System.Drawing.Size(210, 140);
+            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            series3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            series3.BorderWidth = 0;
+            series3.ChartArea = "ChartArea2";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            series3.Font = new System.Drawing.Font("Humnst777 BT", 8F);
+            series3.IsValueShownAsLabel = true;
+            series3.IsVisibleInLegend = false;
+            series3.IsXValueIndexed = true;
+            series3.LabelBorderWidth = 0;
+            series3.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            series3.Name = "Series1";
+            series3.YValuesPerPoint = 2;
+            this.ChartCategorias.Series.Add(series3);
+            this.ChartCategorias.Size = new System.Drawing.Size(200, 127);
             this.ChartCategorias.TabIndex = 8;
             this.ChartCategorias.Text = "chart2";
-            title1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            title1.Name = "Title1";
-            title1.Text = "Las 5 Presentaciones con más Medicamentos";
-            this.ChartCategorias.Titles.Add(title1);
+            title3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            title3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            title3.Name = "Title1";
+            title3.Text = "Las 5 Presentaciones con más Medicamentos";
+            this.ChartCategorias.Titles.Add(title3);
             // 
             // LblUltimasSalidas
             // 
@@ -287,7 +284,7 @@ namespace PRESENTACION
             this.LblUltimasSalidas.BackColor = System.Drawing.Color.White;
             this.LblUltimasSalidas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUltimasSalidas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.LblUltimasSalidas.Location = new System.Drawing.Point(60, 351);
+            this.LblUltimasSalidas.Location = new System.Drawing.Point(60, 349);
             this.LblUltimasSalidas.Name = "LblUltimasSalidas";
             this.LblUltimasSalidas.Size = new System.Drawing.Size(117, 16);
             this.LblUltimasSalidas.TabIndex = 2;
@@ -308,40 +305,40 @@ namespace PRESENTACION
             this.DgvUltimasSalidas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvUltimasSalidas.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DgvUltimasSalidas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Humnst777 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvUltimasSalidas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Humnst777 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvUltimasSalidas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.DgvUltimasSalidas.ColumnHeadersHeight = 25;
             this.DgvUltimasSalidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DgvUltimasSalidas.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvUltimasSalidas.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvUltimasSalidas.DefaultCellStyle = dataGridViewCellStyle11;
             this.DgvUltimasSalidas.EnableHeadersVisualStyles = false;
             this.DgvUltimasSalidas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.DgvUltimasSalidas.Location = new System.Drawing.Point(18, 369);
+            this.DgvUltimasSalidas.Location = new System.Drawing.Point(18, 366);
             this.DgvUltimasSalidas.MultiSelect = false;
             this.DgvUltimasSalidas.Name = "DgvUltimasSalidas";
             this.DgvUltimasSalidas.ReadOnly = true;
             this.DgvUltimasSalidas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvUltimasSalidas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvUltimasSalidas.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.DgvUltimasSalidas.RowHeadersVisible = false;
             this.DgvUltimasSalidas.RowHeadersWidth = 51;
             this.DgvUltimasSalidas.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -349,37 +346,37 @@ namespace PRESENTACION
             this.DgvUltimasSalidas.Size = new System.Drawing.Size(200, 127);
             this.DgvUltimasSalidas.TabIndex = 5;
             // 
-            // pictureBox10
+            // PibUltimasSalidas
             // 
-            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.PibUltimasSalidas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox10.Image = global::PRESENTACION.Properties.Resources.DashBoard08;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 342);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(234, 163);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 0;
-            this.pictureBox10.TabStop = false;
+            this.PibUltimasSalidas.Image = global::PRESENTACION.Properties.Resources.DashBoardForma01;
+            this.PibUltimasSalidas.Location = new System.Drawing.Point(0, 337);
+            this.PibUltimasSalidas.Name = "PibUltimasSalidas";
+            this.PibUltimasSalidas.Size = new System.Drawing.Size(239, 174);
+            this.PibUltimasSalidas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PibUltimasSalidas.TabIndex = 0;
+            this.PibUltimasSalidas.TabStop = false;
             // 
-            // pictureBox9
+            // PibPresentaciones
             // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PibPresentaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = global::PRESENTACION.Properties.Resources.DashBoard08;
-            this.pictureBox9.Location = new System.Drawing.Point(-2, 182);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(234, 153);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
+            this.PibPresentaciones.Image = global::PRESENTACION.Properties.Resources.DashBoardForma02;
+            this.PibPresentaciones.Location = new System.Drawing.Point(2, 178);
+            this.PibPresentaciones.Name = "PibPresentaciones";
+            this.PibPresentaciones.Size = new System.Drawing.Size(239, 159);
+            this.PibPresentaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PibPresentaciones.TabIndex = 0;
+            this.PibPresentaciones.TabStop = false;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 508);
+            this.panel4.Location = new System.Drawing.Point(0, 514);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(740, 10);
+            this.panel4.Size = new System.Drawing.Size(740, 4);
             this.panel4.TabIndex = 4;
             // 
             // panel3
@@ -387,11 +384,9 @@ namespace PRESENTACION
             this.panel3.Controls.Add(this.ChartMayoresEgresos);
             this.panel3.Controls.Add(this.PrbAgotados);
             this.panel3.Controls.Add(this.PrbVencidos);
-            this.panel3.Controls.Add(this.LblPorcExtranjeros);
             this.panel3.Controls.Add(this.CpbPorcExtranjeros);
             this.panel3.Controls.Add(this.pictureBox15);
             this.panel3.Controls.Add(this.pictureBox14);
-            this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.CmbFiltroFecha);
             this.panel3.Controls.Add(this.LblFechaProxVenci);
             this.panel3.Controls.Add(this.LblProximoVencimiento);
@@ -415,7 +410,7 @@ namespace PRESENTACION
             this.panel3.Controls.Add(this.LblNumMedicamentos);
             this.panel3.Controls.Add(this.pictureBox16);
             this.panel3.Controls.Add(this.pictureBox13);
-            this.panel3.Controls.Add(this.pictureBox11);
+            this.panel3.Controls.Add(this.PibMayoresSalidas);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -426,7 +421,7 @@ namespace PRESENTACION
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(494, 508);
+            this.panel3.Size = new System.Drawing.Size(494, 514);
             this.panel3.TabIndex = 3;
             // 
             // ChartMayoresEgresos
@@ -434,16 +429,16 @@ namespace PRESENTACION
             this.ChartMayoresEgresos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.ChartMayoresEgresos.ChartAreas.Add(chartArea2);
+            chartArea4.Name = "ChartArea1";
+            this.ChartMayoresEgresos.ChartAreas.Add(chartArea4);
             this.ChartMayoresEgresos.Cursor = System.Windows.Forms.Cursors.Hand;
-            legend1.BackColor = System.Drawing.Color.White;
-            legend1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
-            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.ChartMayoresEgresos.Legends.Add(legend1);
-            this.ChartMayoresEgresos.Location = new System.Drawing.Point(26, 352);
+            legend2.BackColor = System.Drawing.Color.White;
+            legend2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(169)))));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.ChartMayoresEgresos.Legends.Add(legend2);
+            this.ChartMayoresEgresos.Location = new System.Drawing.Point(31, 346);
             this.ChartMayoresEgresos.Name = "ChartMayoresEgresos";
             this.ChartMayoresEgresos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.ChartMayoresEgresos.PaletteCustomColors = new System.Drawing.Color[] {
@@ -452,38 +447,38 @@ namespace PRESENTACION
         System.Drawing.Color.Tomato,
         System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))))};
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            series2.BorderColor = System.Drawing.Color.White;
-            series2.BorderWidth = 5;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Color = System.Drawing.Color.Black;
-            series2.Font = new System.Drawing.Font("Humnst777 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsValueShownAsLabel = true;
-            series2.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            series2.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series2.LabelBorderWidth = 0;
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.ChartMayoresEgresos.Series.Add(series2);
-            this.ChartMayoresEgresos.Size = new System.Drawing.Size(443, 142);
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series4.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            series4.BorderColor = System.Drawing.Color.White;
+            series4.BorderWidth = 5;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series4.Color = System.Drawing.Color.Black;
+            series4.Font = new System.Drawing.Font("Humnst777 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.IsValueShownAsLabel = true;
+            series4.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            series4.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series4.LabelBorderWidth = 0;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            series4.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.ChartMayoresEgresos.Series.Add(series4);
+            this.ChartMayoresEgresos.Size = new System.Drawing.Size(438, 148);
             this.ChartMayoresEgresos.TabIndex = 7;
             this.ChartMayoresEgresos.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            title2.Name = "Title1";
-            title2.Text = "Los 5 Medicamentos con más Salidas";
-            title2.ToolTip = "Gráfico que muestra los medicamentos con mayores salidas";
-            this.ChartMayoresEgresos.Titles.Add(title2);
+            title4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            title4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            title4.Name = "Title1";
+            title4.Text = "Los 5 Medicamentos con más Salidas";
+            title4.ToolTip = "Gráfico que muestra los medicamentos con mayores salidas";
+            this.ChartMayoresEgresos.Titles.Add(title4);
             // 
             // PrbAgotados
             // 
             this.PrbAgotados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(199)))));
             this.PrbAgotados.ForeColor = System.Drawing.Color.Tomato;
-            this.PrbAgotados.Location = new System.Drawing.Point(357, 285);
+            this.PrbAgotados.Location = new System.Drawing.Point(357, 274);
             this.PrbAgotados.Name = "PrbAgotados";
             this.PrbAgotados.Size = new System.Drawing.Size(100, 15);
             this.PrbAgotados.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -494,26 +489,12 @@ namespace PRESENTACION
             // 
             this.PrbVencidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.PrbVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.PrbVencidos.Location = new System.Drawing.Point(357, 211);
+            this.PrbVencidos.Location = new System.Drawing.Point(357, 200);
             this.PrbVencidos.Name = "PrbVencidos";
             this.PrbVencidos.Size = new System.Drawing.Size(100, 15);
             this.PrbVencidos.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PrbVencidos.TabIndex = 5;
             this.PrbVencidos.Value = 50;
-            // 
-            // LblPorcExtranjeros
-            // 
-            this.LblPorcExtranjeros.BackColor = System.Drawing.Color.White;
-            this.LblPorcExtranjeros.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.LblPorcExtranjeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.LblPorcExtranjeros.Location = new System.Drawing.Point(427, 157);
-            this.LblPorcExtranjeros.Margin = new System.Windows.Forms.Padding(0);
-            this.LblPorcExtranjeros.Name = "LblPorcExtranjeros";
-            this.LblPorcExtranjeros.Size = new System.Drawing.Size(47, 23);
-            this.LblPorcExtranjeros.TabIndex = 2;
-            this.LblPorcExtranjeros.Text = "0%";
-            this.LblPorcExtranjeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblPorcExtranjeros.Visible = false;
             // 
             // CpbPorcExtranjeros
             // 
@@ -525,7 +506,7 @@ namespace PRESENTACION
             this.CpbPorcExtranjeros.InnerColor = System.Drawing.Color.White;
             this.CpbPorcExtranjeros.InnerMargin = 2;
             this.CpbPorcExtranjeros.InnerWidth = -1;
-            this.CpbPorcExtranjeros.Location = new System.Drawing.Point(291, 111);
+            this.CpbPorcExtranjeros.Location = new System.Drawing.Point(296, 107);
             this.CpbPorcExtranjeros.MarqueeAnimationSpeed = 2000;
             this.CpbPorcExtranjeros.Name = "CpbPorcExtranjeros";
             this.CpbPorcExtranjeros.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
@@ -551,7 +532,7 @@ namespace PRESENTACION
             // pictureBox15
             // 
             this.pictureBox15.Image = global::PRESENTACION.Properties.Resources.DashBoardIcono04;
-            this.pictureBox15.Location = new System.Drawing.Point(166, 275);
+            this.pictureBox15.Location = new System.Drawing.Point(166, 264);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(43, 43);
             this.pictureBox15.TabIndex = 1;
@@ -560,20 +541,11 @@ namespace PRESENTACION
             // pictureBox14
             // 
             this.pictureBox14.Image = global::PRESENTACION.Properties.Resources.DashBoardIcono03;
-            this.pictureBox14.Location = new System.Drawing.Point(46, 275);
+            this.pictureBox14.Location = new System.Drawing.Point(46, 264);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(43, 43);
             this.pictureBox14.TabIndex = 1;
             this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::PRESENTACION.Properties.Resources.DashBoard07;
-            this.pictureBox5.Location = new System.Drawing.Point(287, 105);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(83, 78);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
             // 
             // CmbFiltroFecha
             // 
@@ -587,7 +559,7 @@ namespace PRESENTACION
             "Últimos 30 Días",
             "Último Año",
             "Siempre"});
-            this.CmbFiltroFecha.Location = new System.Drawing.Point(49, 145);
+            this.CmbFiltroFecha.Location = new System.Drawing.Point(49, 137);
             this.CmbFiltroFecha.Name = "CmbFiltroFecha";
             this.CmbFiltroFecha.Size = new System.Drawing.Size(163, 24);
             this.CmbFiltroFecha.TabIndex = 3;
@@ -599,7 +571,7 @@ namespace PRESENTACION
             this.LblFechaProxVenci.BackColor = System.Drawing.Color.White;
             this.LblFechaProxVenci.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFechaProxVenci.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.LblFechaProxVenci.Location = new System.Drawing.Point(346, 71);
+            this.LblFechaProxVenci.Location = new System.Drawing.Point(346, 70);
             this.LblFechaProxVenci.Name = "LblFechaProxVenci";
             this.LblFechaProxVenci.Size = new System.Drawing.Size(107, 21);
             this.LblFechaProxVenci.TabIndex = 2;
@@ -611,7 +583,7 @@ namespace PRESENTACION
             this.LblProximoVencimiento.BackColor = System.Drawing.Color.White;
             this.LblProximoVencimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProximoVencimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            this.LblProximoVencimiento.Location = new System.Drawing.Point(331, 50);
+            this.LblProximoVencimiento.Location = new System.Drawing.Point(331, 48);
             this.LblProximoVencimiento.Name = "LblProximoVencimiento";
             this.LblProximoVencimiento.Size = new System.Drawing.Size(143, 21);
             this.LblProximoVencimiento.TabIndex = 2;
@@ -624,7 +596,7 @@ namespace PRESENTACION
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label18.Location = new System.Drawing.Point(378, 159);
+            this.label18.Location = new System.Drawing.Point(378, 153);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(52, 17);
             this.label18.TabIndex = 2;
@@ -636,7 +608,7 @@ namespace PRESENTACION
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label17.Location = new System.Drawing.Point(378, 142);
+            this.label17.Location = new System.Drawing.Point(378, 136);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(78, 16);
             this.label17.TabIndex = 2;
@@ -648,7 +620,7 @@ namespace PRESENTACION
             this.LblNumExtranjeros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
             this.LblNumExtranjeros.Font = new System.Drawing.Font("Sakkal Majalla", 25F, System.Drawing.FontStyle.Bold);
             this.LblNumExtranjeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.LblNumExtranjeros.Location = new System.Drawing.Point(373, 109);
+            this.LblNumExtranjeros.Location = new System.Drawing.Point(373, 103);
             this.LblNumExtranjeros.Name = "LblNumExtranjeros";
             this.LblNumExtranjeros.Size = new System.Drawing.Size(33, 43);
             this.LblNumExtranjeros.TabIndex = 2;
@@ -673,7 +645,7 @@ namespace PRESENTACION
             this.LblNumAgotados.BackColor = System.Drawing.Color.White;
             this.LblNumAgotados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumAgotados.ForeColor = System.Drawing.Color.Tomato;
-            this.LblNumAgotados.Location = new System.Drawing.Point(409, 303);
+            this.LblNumAgotados.Location = new System.Drawing.Point(409, 292);
             this.LblNumAgotados.Name = "LblNumAgotados";
             this.LblNumAgotados.Size = new System.Drawing.Size(14, 16);
             this.LblNumAgotados.TabIndex = 2;
@@ -685,7 +657,7 @@ namespace PRESENTACION
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Tomato;
-            this.label11.Location = new System.Drawing.Point(369, 303);
+            this.label11.Location = new System.Drawing.Point(369, 292);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 16);
             this.label11.TabIndex = 2;
@@ -697,7 +669,7 @@ namespace PRESENTACION
             this.LblNumVencidos.BackColor = System.Drawing.Color.White;
             this.LblNumVencidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.LblNumVencidos.Location = new System.Drawing.Point(409, 230);
+            this.LblNumVencidos.Location = new System.Drawing.Point(409, 219);
             this.LblNumVencidos.Name = "LblNumVencidos";
             this.LblNumVencidos.Size = new System.Drawing.Size(14, 16);
             this.LblNumVencidos.TabIndex = 2;
@@ -709,7 +681,7 @@ namespace PRESENTACION
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label9.Location = new System.Drawing.Point(369, 230);
+            this.label9.Location = new System.Drawing.Point(369, 219);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 16);
             this.label9.TabIndex = 2;
@@ -721,7 +693,7 @@ namespace PRESENTACION
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label14.Location = new System.Drawing.Point(273, 305);
+            this.label14.Location = new System.Drawing.Point(273, 294);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(70, 16);
             this.label14.TabIndex = 2;
@@ -733,7 +705,7 @@ namespace PRESENTACION
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label13.Location = new System.Drawing.Point(274, 231);
+            this.label13.Location = new System.Drawing.Point(274, 220);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 16);
             this.label13.TabIndex = 2;
@@ -745,7 +717,7 @@ namespace PRESENTACION
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label3.Location = new System.Drawing.Point(160, 210);
+            this.label3.Location = new System.Drawing.Point(160, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 2;
@@ -757,7 +729,7 @@ namespace PRESENTACION
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label5.Location = new System.Drawing.Point(35, 210);
+            this.label5.Location = new System.Drawing.Point(35, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 2;
@@ -769,7 +741,7 @@ namespace PRESENTACION
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label1.Location = new System.Drawing.Point(108, 38);
+            this.label1.Location = new System.Drawing.Point(108, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 16);
             this.label1.TabIndex = 2;
@@ -780,7 +752,7 @@ namespace PRESENTACION
             this.LblPorcAgotados.BackColor = System.Drawing.Color.White;
             this.LblPorcAgotados.Font = new System.Drawing.Font("Sakkal Majalla", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPorcAgotados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.LblPorcAgotados.Location = new System.Drawing.Point(266, 274);
+            this.LblPorcAgotados.Location = new System.Drawing.Point(266, 262);
             this.LblPorcAgotados.Margin = new System.Windows.Forms.Padding(0);
             this.LblPorcAgotados.Name = "LblPorcAgotados";
             this.LblPorcAgotados.Size = new System.Drawing.Size(94, 40);
@@ -793,7 +765,7 @@ namespace PRESENTACION
             this.LblPorcVencidos.BackColor = System.Drawing.Color.White;
             this.LblPorcVencidos.Font = new System.Drawing.Font("Sakkal Majalla", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPorcVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.LblPorcVencidos.Location = new System.Drawing.Point(266, 200);
+            this.LblPorcVencidos.Location = new System.Drawing.Point(266, 188);
             this.LblPorcVencidos.Margin = new System.Windows.Forms.Padding(0);
             this.LblPorcVencidos.Name = "LblPorcVencidos";
             this.LblPorcVencidos.Size = new System.Drawing.Size(94, 34);
@@ -806,7 +778,7 @@ namespace PRESENTACION
             this.LblNumSalidas.BackColor = System.Drawing.Color.White;
             this.LblNumSalidas.Font = new System.Drawing.Font("Sakkal Majalla", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumSalidas.ForeColor = System.Drawing.Color.Tomato;
-            this.LblNumSalidas.Location = new System.Drawing.Point(138, 232);
+            this.LblNumSalidas.Location = new System.Drawing.Point(138, 221);
             this.LblNumSalidas.Margin = new System.Windows.Forms.Padding(0);
             this.LblNumSalidas.Name = "LblNumSalidas";
             this.LblNumSalidas.Size = new System.Drawing.Size(98, 52);
@@ -819,7 +791,7 @@ namespace PRESENTACION
             this.LblNumEntradas.BackColor = System.Drawing.Color.White;
             this.LblNumEntradas.Font = new System.Drawing.Font("Sakkal Majalla", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumEntradas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.LblNumEntradas.Location = new System.Drawing.Point(18, 232);
+            this.LblNumEntradas.Location = new System.Drawing.Point(18, 221);
             this.LblNumEntradas.Margin = new System.Windows.Forms.Padding(0);
             this.LblNumEntradas.Name = "LblNumEntradas";
             this.LblNumEntradas.Size = new System.Drawing.Size(98, 52);
@@ -832,7 +804,7 @@ namespace PRESENTACION
             this.LblNumMedicamentos.BackColor = System.Drawing.Color.White;
             this.LblNumMedicamentos.Font = new System.Drawing.Font("Sakkal Majalla", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumMedicamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            this.LblNumMedicamentos.Location = new System.Drawing.Point(111, 57);
+            this.LblNumMedicamentos.Location = new System.Drawing.Point(111, 55);
             this.LblNumMedicamentos.Margin = new System.Windows.Forms.Padding(0);
             this.LblNumMedicamentos.Name = "LblNumMedicamentos";
             this.LblNumMedicamentos.Size = new System.Drawing.Size(119, 52);
@@ -843,7 +815,7 @@ namespace PRESENTACION
             // pictureBox16
             // 
             this.pictureBox16.Image = global::PRESENTACION.Properties.Resources.DashBoardIcono02;
-            this.pictureBox16.Location = new System.Drawing.Point(273, 34);
+            this.pictureBox16.Location = new System.Drawing.Point(273, 32);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(53, 53);
             this.pictureBox16.TabIndex = 1;
@@ -852,29 +824,29 @@ namespace PRESENTACION
             // pictureBox13
             // 
             this.pictureBox13.Image = global::PRESENTACION.Properties.Resources.DashBoardIcono01;
-            this.pictureBox13.Location = new System.Drawing.Point(31, 38);
+            this.pictureBox13.Location = new System.Drawing.Point(31, 36);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(62, 62);
             this.pictureBox13.TabIndex = 1;
             this.pictureBox13.TabStop = false;
             // 
-            // pictureBox11
+            // PibMayoresSalidas
             // 
-            this.pictureBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PibMayoresSalidas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox11.Image = global::PRESENTACION.Properties.Resources.DashBoard08;
-            this.pictureBox11.Location = new System.Drawing.Point(12, 342);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(476, 163);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 0;
-            this.pictureBox11.TabStop = false;
+            this.PibMayoresSalidas.Image = global::PRESENTACION.Properties.Resources.DashBoardForma03;
+            this.PibMayoresSalidas.Location = new System.Drawing.Point(12, 323);
+            this.PibMayoresSalidas.Name = "PibMayoresSalidas";
+            this.PibMayoresSalidas.Size = new System.Drawing.Size(479, 192);
+            this.PibMayoresSalidas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PibMayoresSalidas.TabIndex = 0;
+            this.PibMayoresSalidas.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PRESENTACION.Properties.Resources.DashBoard06;
-            this.pictureBox6.Location = new System.Drawing.Point(250, 186);
+            this.pictureBox6.Location = new System.Drawing.Point(250, 175);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(242, 77);
             this.pictureBox6.TabIndex = 0;
@@ -883,7 +855,7 @@ namespace PRESENTACION
             // pictureBox8
             // 
             this.pictureBox8.Image = global::PRESENTACION.Properties.Resources.DashBoard05;
-            this.pictureBox8.Location = new System.Drawing.Point(26, 132);
+            this.pictureBox8.Location = new System.Drawing.Point(26, 124);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(208, 49);
             this.pictureBox8.TabIndex = 0;
@@ -892,7 +864,7 @@ namespace PRESENTACION
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.DashBoard03;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 186);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 175);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(122, 148);
             this.pictureBox1.TabIndex = 0;
@@ -901,7 +873,7 @@ namespace PRESENTACION
             // pictureBox7
             // 
             this.pictureBox7.Image = global::PRESENTACION.Properties.Resources.DashBoard06;
-            this.pictureBox7.Location = new System.Drawing.Point(250, 260);
+            this.pictureBox7.Location = new System.Drawing.Point(250, 248);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(242, 77);
             this.pictureBox7.TabIndex = 0;
@@ -910,7 +882,7 @@ namespace PRESENTACION
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.DashBoard04;
-            this.pictureBox2.Location = new System.Drawing.Point(126, 186);
+            this.pictureBox2.Location = new System.Drawing.Point(126, 175);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(122, 148);
             this.pictureBox2.TabIndex = 0;
@@ -919,7 +891,7 @@ namespace PRESENTACION
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PRESENTACION.Properties.Resources.DashBoard01;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 7);
+            this.pictureBox3.Location = new System.Drawing.Point(9, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(242, 119);
             this.pictureBox3.TabIndex = 0;
@@ -928,7 +900,7 @@ namespace PRESENTACION
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.DashBoard02;
-            this.pictureBox4.Location = new System.Drawing.Point(251, 7);
+            this.pictureBox4.Location = new System.Drawing.Point(251, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(241, 99);
             this.pictureBox4.TabIndex = 0;
@@ -950,20 +922,19 @@ namespace PRESENTACION
             this.Load += new System.EventHandler(this.FormInicio_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvAgotados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibUltimosAgotados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUltimasSalidas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibUltimasSalidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibPresentaciones)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartMayoresEgresos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibMayoresSalidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -976,12 +947,11 @@ namespace PRESENTACION
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox PibPresentaciones;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox PibUltimasSalidas;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -993,7 +963,7 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox PibMayoresSalidas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LblNumMedicamentos;
         private System.Windows.Forms.Label LblFechaProxVenci;
@@ -1011,7 +981,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label LblPorcAgotados;
         private System.Windows.Forms.Label LblPorcVencidos;
-        private System.Windows.Forms.Label LblPorcExtranjeros;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label LblNumExtranjeros;
@@ -1025,6 +994,6 @@ namespace PRESENTACION
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartMayoresEgresos;
         private System.Windows.Forms.Label LblUltimosAgotados;
         public System.Windows.Forms.DataGridView DgvAgotados;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox PibUltimosAgotados;
     }
 }

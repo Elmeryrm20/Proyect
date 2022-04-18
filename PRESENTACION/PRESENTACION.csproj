@@ -954,6 +954,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo01.ico" />
+    <None Include="Resources\DashBoardForma01.png" />
+    <None Include="Resources\DashBoardForma02.png" />
+    <None Include="Resources\DashBoardForma03.png" />
+    <None Include="Resources\DashBoardForma04.png" />
+    <None Include="Resources\DashBoardForma06.png" />
+    <None Include="Resources\DashBoardForma05.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

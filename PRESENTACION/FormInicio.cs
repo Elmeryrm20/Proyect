@@ -81,7 +81,6 @@ namespace PRESENTACION
             LblNumExtranjeros.Text = dt.Rows[0][3].ToString();
             CpbPorcExtranjeros.Text = dt.Rows[0][4].ToString();
             CpbPorcExtranjeros.Value = int.Parse(dt.Rows[0][4].ToString().Replace("%", String.Empty));
-            LblPorcExtranjeros.Text = dt.Rows[0][4].ToString().Replace("%", String.Empty);
             LblNumVencidos.Text = dt.Rows[0][5].ToString();
             LblPorcVencidos.Text = dt.Rows[0][6].ToString();
             PrbVencidos.Value = int.Parse(dt.Rows[0][6].ToString().Replace("%", String.Empty));
@@ -129,6 +128,8 @@ namespace PRESENTACION
             LblUltimasSalidas.Text = "Últimas 5 Salidas de Medicamentos";
             LblUltimosAgotados.Text = "Últimos 5 Medicamentos agotados o próximos a agotarse";
 
+            PibUltimosAgotados.Image = Properties.Resources.DashBoardForma04;
+            PibUltimasSalidas.Image = Properties.Resources.DashBoardForma04;
             //dgb_Medicamentos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgb_Medicamentos.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgb_Medicamentos.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -155,6 +156,9 @@ namespace PRESENTACION
             DgvAgotados.Columns[0].MinimumWidth = 150;
             DgvAgotados.Columns[2].MinimumWidth = 30;
 
+            PibUltimosAgotados.Image = Properties.Resources.DashBoardForma01;
+            PibUltimasSalidas.Image = Properties.Resources.DashBoardForma01;
+
         }
         public void DesignDataGridView()
         {
@@ -176,12 +180,17 @@ namespace PRESENTACION
             ChartCategorias.ChartAreas["ChartArea2"].AxisX.Title = "PRESENTACIÓN";
             ChartCategorias.ChartAreas["ChartArea2"].AxisY.Title = "CANTIDAD";
             ChartMayoresEgresos.Legends["Legend1"].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            PibPresentaciones.Image = Properties.Resources.DashBoardForma05;
+            PibMayoresSalidas.Image = Properties.Resources.DashBoardForma06;
+
         }
         public void MinimizarGraficos()
         {
             ChartCategorias.ChartAreas["ChartArea2"].AxisX.Title = "";
             ChartCategorias.ChartAreas["ChartArea2"].AxisY.Title = "";
             ChartMayoresEgresos.Legends["Legend1"].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Right;
+            PibPresentaciones.Image = Properties.Resources.DashBoardForma02;
+            PibMayoresSalidas.Image = Properties.Resources.DashBoardForma03;
 
         }
         void Graficos()
