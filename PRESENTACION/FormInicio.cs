@@ -27,6 +27,7 @@ namespace PRESENTACION
             toolTip1.ToolTipIcon = ToolTipIcon.Info;
             toolTip1.ForeColor = Color.FromArgb(255, 71, 71);
             toolTip1.SetToolTip(CmbFiltroFecha, "Selecciona un rango de fecha");
+            toolTip1.SetToolTip(LblTituloProximoVencimiento, "Muestra el próximo medicamento que\n se va a vencer en un rango de 30 días.");
 
         }
         #endregion
@@ -87,10 +88,22 @@ namespace PRESENTACION
             LblNumAgotados.Text = dt.Rows[0][7].ToString();
             LblPorcAgotados.Text = dt.Rows[0][8].ToString();
             PrbAgotados.Value = int.Parse(dt.Rows[0][8].ToString().Replace("%", String.Empty));
-            LblProximoVencimiento.Text = dt.Rows[0][9].ToString();
-            //LblFechaProxVenci.Text =dt.Rows[0][10].ToString();
-            LblFechaProxVenci.Text = DateTime.Parse(dt.Rows[0][10].ToString()).ToString("dd-MM-yyyy");
-            toolTip1.SetToolTip(LblFechaProxVenci, "Vence el " + (DateTime.Parse(dt.Rows[0][10].ToString()).ToLongDateString()));
+            Font font;
+            if (dt.Rows[0][9].ToString() == "")
+            {
+                font = new Font("Century Gothic", 8,FontStyle.Bold);                
+                LblProximoVencimiento.Text = "No hay Medicamentos";
+                LblFechaProxVenci.Text = "";
+            }
+            else
+            {
+                font = new Font("Century Gothic",9.75f, FontStyle.Bold);
+                LblProximoVencimiento.Text = dt.Rows[0][9].ToString();
+                LblFechaProxVenci.Text = DateTime.Parse(dt.Rows[0][10].ToString()).ToString("dd-MM-yyyy");
+                toolTip1.SetToolTip(LblFechaProxVenci, "Vence el " + (DateTime.Parse(dt.Rows[0][10].ToString()).ToLongDateString()));
+            }
+            LblProximoVencimiento.Font = font;
+
         }
         void Tablas()
         {

@@ -50,7 +50,7 @@ namespace PRESENTACION
 
             if (hora >= 6 && hora <= 12)
             {
-                return "Que tengas un excelente día de trabajo."; 
+                return "Que tengas un excelente día de trabajo.";
             }
             else if (hora <= 18 && hora >= 13)
             {
@@ -386,9 +386,9 @@ namespace PRESENTACION
             FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
             FrmInicio.MaximizarDataGridView();
             FrmInicio.MaximizarGraficos();
-            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
-            FrmMedicamentos.MaximizarDataGridView();
 
+            FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
+            if (FrmMedicamentos != null) FrmMedicamentos.MaximizarDataGridView();
         }
         private void Btn_Normal_Click(object sender, EventArgs e)
         {
@@ -399,8 +399,9 @@ namespace PRESENTACION
             FormInicio FrmInicio = PnlCuerpo.Controls.OfType<FormInicio>().FirstOrDefault();
             FrmInicio.MinimizarDataGridview();
             FrmInicio.MinimizarGraficos();
+
             FormMedicamentos FrmMedicamentos = PnlCuerpo.Controls.OfType<FormMedicamentos>().FirstOrDefault();
-            FrmMedicamentos.MinimizarDataGridView();
+            if (FrmMedicamentos != null) FrmMedicamentos.MinimizarDataGridView();
         }
         public void maximizar_Pantalla()
         {

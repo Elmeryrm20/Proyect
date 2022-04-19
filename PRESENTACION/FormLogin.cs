@@ -184,13 +184,9 @@ namespace PRESENTACION
         private void label2_Click(object sender, EventArgs e)
         {
 
-
             FormIngresarNewContraseña frm = new FormIngresarNewContraseña();
-
-            frm.Show();
-
             AddOwnedForm(frm);
-            ShowInTaskbar = false;
+            frm.Show();
             this.Hide();
         }
         #endregion

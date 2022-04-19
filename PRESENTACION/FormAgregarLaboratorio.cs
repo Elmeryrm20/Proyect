@@ -55,14 +55,14 @@ namespace PRESENTACION
             {
                 MessageBox.Show("Falta Ingresar Nombre.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (txt_Direccion.Text == "")
-            {
-                MessageBox.Show("Falta Ingresar Direccion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (txt_Telefono.Text == "")
-            {
-                MessageBox.Show("Falta Ingresar Telefono.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //else if (txt_Direccion.Text == "")
+            //{
+            //    MessageBox.Show("Falta Ingresar Direccion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //else if (txt_Telefono.Text == "")
+            //{
+            //    MessageBox.Show("Falta Ingresar Telefono.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
             else
             { 
                 consultas.D_Insertar_Laboratorio(Txt_Nombre.Text, txt_Direccion.Text, txt_Telefono.Text);

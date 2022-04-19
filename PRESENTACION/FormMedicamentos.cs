@@ -88,6 +88,7 @@ namespace PRESENTACION
             LblIndice.Visible = false;
             txb_Buscar.SelectAll();
             txb_Buscar.Focus();
+            LblResultados.Visible = false;
         }
         #endregion
 
@@ -214,33 +215,43 @@ namespace PRESENTACION
         //Abrir Formulario de Detalles
         private void btn_Detalles_Click(object sender, EventArgs e)
         {
-            FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
-            frm1.ShowDialog();
+            if (dgb_Medicamentos.Rows.Count > 0)
+            {
+                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
+                frm1.ShowDialog();
+            }
 
         }
 
         //Abrir Formulario de Ingreso
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            string MedNombre, Almacen, Tipo;
-            MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
-            Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
-            Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
-            FormIngreso frm2 = new FormIngreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo);
-            AddOwnedForm(frm2);
-            frm2.ShowDialog();
+            if (dgb_Medicamentos.Rows.Count > 0)
+            {
+                string MedNombre, Almacen, Tipo;
+                MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
+                Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
+                Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
+                FormIngreso frm2 = new FormIngreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo);
+                AddOwnedForm(frm2);
+                frm2.ShowDialog();
+            }
+
         }
 
         //Abrir Formulario de Egreso
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            string MedNombre, Almacen, Tipo;
-            MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
-            Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
-            Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
-            FormEgreso frm3 = new FormEgreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo);
-            AddOwnedForm(frm3);
-            frm3.ShowDialog();
+            if (dgb_Medicamentos.Rows.Count > 0)
+            {
+                string MedNombre, Almacen, Tipo;
+                MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
+                Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
+                Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
+                FormEgreso frm3 = new FormEgreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo);
+                AddOwnedForm(frm3);
+                frm3.ShowDialog();
+            }
         }
 
         //Abrir Formulario de Editar
@@ -501,7 +512,7 @@ namespace PRESENTACION
 
         private void dgb_Medicamentos_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex==2)
+            if (e.ColumnIndex == 2)
             {
                 if (ChbColores.Checked) FomarteandoDataGridView(true);
                 else FomarteandoDataGridView(false);

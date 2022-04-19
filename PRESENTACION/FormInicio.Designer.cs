@@ -65,7 +65,7 @@ namespace PRESENTACION
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.LblNumExtranjeros = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LblTituloProximoVencimiento = new System.Windows.Forms.Label();
             this.LblNumAgotados = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.LblNumVencidos = new System.Windows.Forms.Label();
@@ -393,7 +393,7 @@ namespace PRESENTACION
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.LblNumExtranjeros);
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.LblTituloProximoVencimiento);
             this.panel3.Controls.Add(this.LblNumAgotados);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.LblNumVencidos);
@@ -627,17 +627,17 @@ namespace PRESENTACION
             this.LblNumExtranjeros.Text = "0";
             this.LblNumExtranjeros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // LblTituloProximoVencimiento
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
-            this.label2.Location = new System.Drawing.Point(331, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Próximo Vencimiento";
+            this.LblTituloProximoVencimiento.AutoSize = true;
+            this.LblTituloProximoVencimiento.BackColor = System.Drawing.Color.White;
+            this.LblTituloProximoVencimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTituloProximoVencimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
+            this.LblTituloProximoVencimiento.Location = new System.Drawing.Point(331, 31);
+            this.LblTituloProximoVencimiento.Name = "LblTituloProximoVencimiento";
+            this.LblTituloProximoVencimiento.Size = new System.Drawing.Size(143, 16);
+            this.LblTituloProximoVencimiento.TabIndex = 2;
+            this.LblTituloProximoVencimiento.Text = "Próximo Vencimiento";
             // 
             // LblNumAgotados
             // 
@@ -969,7 +969,7 @@ namespace PRESENTACION
         private System.Windows.Forms.Label LblNumMedicamentos;
         private System.Windows.Forms.Label LblFechaProxVenci;
         private System.Windows.Forms.Label LblProximoVencimiento;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LblTituloProximoVencimiento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LblNumSalidas;

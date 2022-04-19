@@ -122,6 +122,7 @@ namespace PRESENTACION
             // 
             // ChbColores
             // 
+            this.ChbColores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ChbColores.AutoSize = true;
             this.ChbColores.BackColor = System.Drawing.Color.Transparent;
             this.ChbColores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -203,15 +204,15 @@ namespace PRESENTACION
             // LblResultados
             // 
             this.LblResultados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblResultados.AutoSize = true;
             this.LblResultados.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblResultados.ForeColor = System.Drawing.Color.Red;
+            this.LblResultados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblResultados.Location = new System.Drawing.Point(599, 69);
             this.LblResultados.Name = "LblResultados";
-            this.LblResultados.Size = new System.Drawing.Size(126, 16);
+            this.LblResultados.Size = new System.Drawing.Size(126, 38);
             this.LblResultados.TabIndex = 13;
             this.LblResultados.Text = "No ha seleccionado";
-            this.LblResultados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblResultados.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblResultados.Visible = false;
             // 
             // cmb_Almacen
