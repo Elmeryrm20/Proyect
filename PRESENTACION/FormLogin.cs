@@ -374,6 +374,8 @@ namespace PRESENTACION
         private void FormLogin_Load(object sender, EventArgs e)
         {
             this.ShowInTaskbar = true;
+            Icon = Properties.Resources.Logo011;
+
         }
 
         private void TxtPass_Click(object sender, EventArgs e)

@@ -196,6 +196,8 @@ namespace PRESENTACION
         private void FormIngresarNewContraseña_Load(object sender, EventArgs e)
         {
             this.ShowInTaskbar = true;
+            Icon = Properties.Resources.Logo011;
+
 
         }
     }

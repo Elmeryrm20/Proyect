@@ -108,6 +108,7 @@ namespace PRESENTACION
             ActivarTootip();
             //ShowInTaskbar = true;
             LblNombre.Text = Nombre;
+            Icon = Properties.Resources.Logo011;
 
         }
         private void OrdenarBotonesMenu(string Tipo)

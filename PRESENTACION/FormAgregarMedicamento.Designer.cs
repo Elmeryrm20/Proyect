@@ -225,9 +225,9 @@ namespace PRESENTACION
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(571, 217);
+            this.label12.Location = new System.Drawing.Point(476, 193);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 16);
+            this.label12.Size = new System.Drawing.Size(127, 16);
             this.label12.TabIndex = 46;
             this.label12.Text = "Subir una Imagen:";
             // 
@@ -239,7 +239,7 @@ namespace PRESENTACION
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(113, 426);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 16);
+            this.label11.Size = new System.Drawing.Size(64, 16);
             this.label11.TabIndex = 43;
             this.label11.Text = "Almacén:";
             // 
@@ -251,7 +251,7 @@ namespace PRESENTACION
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(140, 383);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 16);
+            this.label9.Size = new System.Drawing.Size(37, 16);
             this.label9.TabIndex = 42;
             this.label9.Text = "Para:";
             // 
@@ -263,7 +263,7 @@ namespace PRESENTACION
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(142, 340);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 16);
+            this.label8.Size = new System.Drawing.Size(35, 16);
             this.label8.TabIndex = 39;
             this.label8.Text = "Tipo:";
             // 
@@ -275,7 +275,7 @@ namespace PRESENTACION
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(142, 234);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 16);
+            this.label6.Size = new System.Drawing.Size(139, 16);
             this.label6.TabIndex = 36;
             this.label6.Text = "Fecha de vencimiento";
             // 
@@ -287,7 +287,7 @@ namespace PRESENTACION
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(105, 195);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 34;
             this.label5.Text = "Laboratorio:";
             // 
@@ -317,7 +317,7 @@ namespace PRESENTACION
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(103, 471);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 16);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 53;
             this.label2.Text = "Pertenencia:";
             // 
@@ -329,7 +329,7 @@ namespace PRESENTACION
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(385, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 16);
+            this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 56;
             this.label3.Text = "Colaborador:";
             // 
@@ -341,7 +341,7 @@ namespace PRESENTACION
             this.LblEncargado.ForeColor = System.Drawing.Color.White;
             this.LblEncargado.Location = new System.Drawing.Point(386, 126);
             this.LblEncargado.Name = "LblEncargado";
-            this.LblEncargado.Size = new System.Drawing.Size(86, 16);
+            this.LblEncargado.Size = new System.Drawing.Size(85, 16);
             this.LblEncargado.TabIndex = 57;
             this.LblEncargado.Text = "Coordinador:";
             // 
@@ -414,7 +414,7 @@ namespace PRESENTACION
             this.PibImagen.BackColor = System.Drawing.Color.White;
             this.PibImagen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibImagen.Image = global::PRESENTACION.Properties.Resources.Imagen01;
-            this.PibImagen.Location = new System.Drawing.Point(558, 248);
+            this.PibImagen.Location = new System.Drawing.Point(463, 224);
             this.PibImagen.Name = "PibImagen";
             this.PibImagen.Size = new System.Drawing.Size(150, 150);
             this.PibImagen.TabIndex = 44;
@@ -425,7 +425,7 @@ namespace PRESENTACION
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::PRESENTACION.Properties.Resources.ImagenMarco01;
-            this.pictureBox9.Location = new System.Drawing.Point(555, 201);
+            this.pictureBox9.Location = new System.Drawing.Point(460, 177);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(156, 200);
             this.pictureBox9.TabIndex = 51;
@@ -527,7 +527,7 @@ namespace PRESENTACION
             this.PibAgregarMedicamento.BackColor = System.Drawing.Color.Transparent;
             this.PibAgregarMedicamento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibAgregarMedicamento.Image = global::PRESENTACION.Properties.Resources.BotonFormNuevoMedicamentos05;
-            this.PibAgregarMedicamento.Location = new System.Drawing.Point(578, 423);
+            this.PibAgregarMedicamento.Location = new System.Drawing.Point(483, 399);
             this.PibAgregarMedicamento.Name = "PibAgregarMedicamento";
             this.PibAgregarMedicamento.Size = new System.Drawing.Size(110, 60);
             this.PibAgregarMedicamento.TabIndex = 45;
@@ -557,7 +557,7 @@ namespace PRESENTACION
             this.dtFecha_Vencimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFecha_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFecha_Vencimiento.Location = new System.Drawing.Point(140, 253);
-            this.dtFecha_Vencimiento.MinimumSize = new System.Drawing.Size(0, 20);
+            this.dtFecha_Vencimiento.MinimumSize = new System.Drawing.Size(4, 20);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
             this.dtFecha_Vencimiento.Size = new System.Drawing.Size(147, 23);
             this.dtFecha_Vencimiento.SkinColor = System.Drawing.Color.White;

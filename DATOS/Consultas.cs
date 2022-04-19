@@ -597,7 +597,7 @@ namespace DATOS
             Conexion.connection.Close();
 
         }
-        public void D_Insertar_Trabajador(string DNI, string Nombre, string Apellido, string Fecha_N, string Direccion, String Telefono, int Tipo, int Cargo)
+        public void D_Insertar_Trabajador(string DNI, string Nombre, string Apellido, string Fecha_N, string Direccion, string Telefono, int Tipo, int Cargo)
         {
             Conexion.connection.Open();
 

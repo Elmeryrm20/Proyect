@@ -52,7 +52,7 @@ namespace PRESENTACION
                 string Existencia = consultas.SP_Existencia_T(txtDocumento.Text).Rows[0]["Tra_DNI"].ToString();
                 if (ValidarDoc())
                 {
-                    DialogResult result = MessageBox.Show("El usuario " + Existencia + " estubo registrado desea activarle la cuenta", "Excelente!", MessageBoxButtons.YesNo);
+                    DialogResult result = MessageBox.Show("El usuario " + Existencia + " estubo registrado desea activarle la cuenta", "Información", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
                         consultas.SP_Eliminar_U(Existencia, 1);

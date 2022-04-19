@@ -62,6 +62,8 @@ namespace PRESENTACION
 
         private void FormEspera_Load(object sender, EventArgs e)
         {
+            Icon = Properties.Resources.Logo011;
+
             //Thread.Sleep(5000);
             this.Opacity = 0;
             CpbCarga.Value = 0;

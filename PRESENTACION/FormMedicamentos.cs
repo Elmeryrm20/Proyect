@@ -512,12 +512,14 @@ namespace PRESENTACION
 
         private void dgb_Medicamentos_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 2)
-            {
-                if (ChbColores.Checked) FomarteandoDataGridView(true);
-                else FomarteandoDataGridView(false);
+            if (ChbColores.Checked) FomarteandoDataGridView(true);
+            else FomarteandoDataGridView(false);
+            //if (e.ColumnIndex == 2)
+            //{
+            //    if (ChbColores.Checked) FomarteandoDataGridView(true);
+            //    else FomarteandoDataGridView(false);
 
-            }
+            //}
         }
     }
 }
