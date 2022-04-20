@@ -306,11 +306,11 @@ namespace DATOS
             return dt;
 
         }
-        public DataTable D_Validacion_Contraseña(string DNI)
+        public DataTable D_Validacion_Pass(string DNI)
         {
             Conexion.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Viricar_Contraseña", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Verificar_Pass", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("texto", DNI);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -568,7 +568,7 @@ namespace DATOS
             }
             Conexion.connection.Close();
         }
-        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C, byte[] imagen,int Pertenencia)
+        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C, byte[] imagen, int Pertenencia)
         {
 
             Conexion.connection.Open();
@@ -646,14 +646,14 @@ namespace DATOS
             Conexion.connection.Close();
 
         }
-        public void D_Agregar_Contraseña(string DNI, string password)
+        public void D_Agregar_Pass(string DNI, string password)
         {
             Conexion.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Contraseña", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Pass", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
-            cmd.Parameters.AddWithValue("Contraseña", password);
+            cmd.Parameters.AddWithValue("Pass", password);
 
             try
             {
@@ -906,7 +906,7 @@ namespace DATOS
             return dt;
 
         }
-        public DataTable D_DashBoard_Indicadores(string fecha1,string fecha2)
+        public DataTable D_DashBoard_Indicadores(string fecha1, string fecha2)
         {
             Conexion.connection.Open();
 
@@ -1069,7 +1069,7 @@ namespace DATOS
             }
             Conexion.connection.Close();
         }
-        public void SP_Agregar_Pertenencia(String Descripcion,string Telefono)
+        public void SP_Agregar_Pertenencia(String Descripcion, string Telefono)
         {
             Conexion.connection.Open();
 

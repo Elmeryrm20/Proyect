@@ -233,7 +233,7 @@ namespace PRESENTACION
 
 
         }
-        private void ImprimirEgreso()
+        private void ImprimirIngreso()
         {
             PrintDocument doc = new PrintDocument();
             doc.DefaultPageSettings.Landscape = true;
@@ -273,7 +273,7 @@ namespace PRESENTACION
 
                     if (BoolImprimir == true)
                     {
-                        ImprimirEgreso();
+                        ImprimirIngreso();
                     }
 
                     MessageBox.Show("Actualización Exitosa");

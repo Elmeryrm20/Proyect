@@ -54,7 +54,7 @@ namespace PRESENTACION
             {
                 try
                 {
-                    DataTable data = consultas.D_Validacion_Contraseña(txtusuario.Text);
+                    DataTable data = consultas.D_Validacion_Pass(txtusuario.Text);
 
                     string DNI = data.Rows[0]["Tra_DNI"].ToString();
                     string Pass = data.Rows[0]["Usu_Pass"].ToString();
@@ -63,7 +63,7 @@ namespace PRESENTACION
                     {
                         if (Pass == "")
                         {
-                            consultas.D_Agregar_Contraseña(txtusuario.Text, TxtPass1.Text);
+                            consultas.D_Agregar_Pass(txtusuario.Text, TxtPass1.Text);
                             MessageBox.Show("Registro de Contraseña Exitoso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                             FormLogin hg = ((FormLogin)Owner);

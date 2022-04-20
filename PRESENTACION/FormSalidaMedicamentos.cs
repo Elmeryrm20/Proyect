@@ -112,9 +112,6 @@ namespace PRESENTACION
                 {
                     string fecha = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
 
-                    string nacionalidad;
-                    if (CmbNacionalidad.SelectedIndex < 0) nacionalidad = CmbNacionalidad.Text;
-                    else nacionalidad = "Peruano";
                     string Colaborador;
                     if (CmbColaborador.SelectedIndex < 0)
                     {
@@ -124,7 +121,7 @@ namespace PRESENTACION
                     {
                         Colaborador = Colaboradores[CmbColaborador.SelectedIndex,0];
                     }
-                    string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, nacionalidad, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, CmbNacionalidad.Text, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
 
                     consultas.AbrirConexion();
                     for (int i = 0; i < DgvSalida.Rows.Count; i++)

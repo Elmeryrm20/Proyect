@@ -29,11 +29,16 @@ namespace PRESENTACION
         public void MaximizarDataGridView()
         {
             dgb_Medicamentos.Columns[7].Visible = true;
+            dgb_Medicamentos.Columns[8].Visible = true;
+            dgb_Medicamentos.Columns[5].HeaderText = "PRESENTACIÓN";
+
             Maximizar = true;
         }
         public void MinimizarDataGridView()
         {
             dgb_Medicamentos.Columns[7].Visible = false;
+            dgb_Medicamentos.Columns[8].Visible = false;
+            dgb_Medicamentos.Columns[5].HeaderText = "PRESENT.";
             Maximizar = false;
         }
         bool Maximizar = false;
@@ -50,10 +55,10 @@ namespace PRESENTACION
             dgb_Medicamentos.Columns[2].MinimumWidth = 75;
             dgb_Medicamentos.Columns[3].MinimumWidth = 90;
             dgb_Medicamentos.RowHeadersWidth = 35;
-            dgb_Medicamentos.Columns[5].HeaderText = "Presentación";
-            dgb_Medicamentos.Columns[7].HeaderText = "Tipo";
+            //dgb_Medicamentos.Columns[5].HeaderText = "PRESENTACIÓN";
+            dgb_Medicamentos.Columns[7].HeaderText = "TIPO";
 
-            if (this.Maximizar) MaximizarDataGridView();
+            if (Maximizar) MaximizarDataGridView();
             else MinimizarDataGridView();
 
         }
@@ -125,12 +130,6 @@ namespace PRESENTACION
         }
 
         //int valor_ID = 1;
-
-        private void dgb_Medicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
 
         private void FiltradoExitoso()
         {
@@ -217,7 +216,7 @@ namespace PRESENTACION
         {
             if (dgb_Medicamentos.Rows.Count > 0)
             {
-                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
+                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
                 frm1.ShowDialog();
             }
 
@@ -378,20 +377,21 @@ namespace PRESENTACION
         {
             //valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
             //LblIndice.Text = valor_ID.ToString();
-            FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
-            frm1.ShowDialog();
-
+            if (dgb_Medicamentos.Rows.Count > 0)
+            {
+                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
+                frm1.ShowDialog();
+            }
         }
 
         private void cmbTipo_MouseDown(object sender, MouseEventArgs e)
         {
-            Elementos_Filtrar();
-
+            //Elementos_Filtrar();
         }
 
         private void cmb_Almacen_MouseDown(object sender, MouseEventArgs e)
         {
-            Almacen_Filtrar();
+            //Almacen_Filtrar();
         }
 
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -429,17 +429,11 @@ namespace PRESENTACION
             }
         }
 
-        private bool Colores = false;
+        //private bool Colores = false;
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (ChbColores.Checked == true)
-            {
-                FomarteandoDataGridView(true);
-            }
-            else
-            {
-                FomarteandoDataGridView(false);
-            }
+            if (ChbColores.Checked == true) FomarteandoDataGridView(true);
+            else FomarteandoDataGridView(false);
         }
 
 
@@ -467,12 +461,17 @@ namespace PRESENTACION
             }
             else
             {
+                //dgb_Medicamentos.DefaultCellStyle.BackColor = Color.White;
+                //dgb_Medicamentos.DefaultCellStyle.ForeColor = Color.FromArgb(53, 141, 216);
+                //dgb_Medicamentos.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
 
-
-                for (int i = 0; i < dgb_Medicamentos.Rows.Count; i++)
+                for (ushort i = 0; i < dgb_Medicamentos.Rows.Count; i++)
                 {
-                    dgb_Medicamentos.Rows[i].Cells[2].Style.BackColor = Color.White;
+                    if (i % 2 == 0) dgb_Medicamentos.Rows[i].Cells[2].Style.BackColor = Color.White;
+                    else dgb_Medicamentos.Rows[i].Cells[2].Style.BackColor = Color.WhiteSmoke;
                     dgb_Medicamentos.Rows[i].Cells[2].Style.ForeColor = Color.FromArgb(53, 141, 216);
+
+                    //dgb_Medicamentos.Rows[]
                 }
 
                 //    dgb_Medicamentos.Columns[2].DefaultCellStyle.BackColor = Color.White;

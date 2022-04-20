@@ -260,7 +260,7 @@ namespace PRESENTACION
 
 
 
-        private bool ActivarTextbox = false;
+        //private bool ActivarTextbox = false;
         private void Txtusuario_Enter(object sender, EventArgs e)
         {
             if (txtusuario.Text == "DNI")

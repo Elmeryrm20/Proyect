@@ -153,7 +153,7 @@ namespace PRESENTACION
         {
             maximizar = false;
             LblUltimasSalidas.Text = "Últimas 5 Salidas";
-            LblUltimosAgotados.Text = "Últimos 5 agotados";
+            LblUltimosAgotados.Text = "Últimos 5 por agotarse";
             DgvUltimasSalidas.Columns[2].HeaderText = "Cant.";
             DgvUltimasSalidas.Columns[1].Visible = false;
             DgvUltimasSalidas.Columns[3].Visible = false;

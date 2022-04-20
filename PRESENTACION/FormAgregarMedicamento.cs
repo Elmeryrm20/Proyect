@@ -237,8 +237,9 @@ namespace PRESENTACION
                         img = ms.ToArray();
                     }
                     else img = null;
+
                     string FechaActual = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
-                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), int.Parse(textCantidad.Text), cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, CmbPresentacion.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
+                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), 0, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, CmbPresentacion.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
                     int CodigoMedicamento = consultas.D_UltimoIdIngresado();
 
                     string Colaborador;
