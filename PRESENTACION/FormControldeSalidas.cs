@@ -146,7 +146,7 @@ namespace PRESENTACION
                 documento.SetCellValue(j, 1, DgvHistorialEgreso.Rows[i].Cells[0].Value.ToString());
                 documento.SetCellValue(j, 2, DgvHistorialEgreso.Rows[i].Cells[1].Value.ToString());
                 documento.SetCellValue(j, 3, DgvHistorialEgreso.Rows[i].Cells[2].Value.ToString());
-                documento.SetCellValue(j, 4, Convert.ToDateTime(DgvHistorialEgreso.Rows[i].Cells[3].Value.ToString()).ToString("yyyy/MM/dd"));
+                documento.SetCellValue(j, 4, DgvHistorialEgreso.Rows[i].Cells[3].Value.ToString());
                 documento.SetCellValue(j, 5, DgvHistorialEgreso.Rows[i].Cells[4].Value.ToString());
                 documento.SetCellValue(j, 6, DgvHistorialEgreso.Rows[i].Cells[5].Value.ToString());
                 documento.SetCellValue(j, 7, DgvHistorialEgreso.Rows[i].Cells[6].Value.ToString());

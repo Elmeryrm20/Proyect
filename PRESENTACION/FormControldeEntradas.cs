@@ -141,9 +141,9 @@ namespace PRESENTACION
                 documento.SetCellValue(j, 1, DgvHistorialIngreso.Rows[i].Cells[0].Value.ToString());
                 documento.SetCellValue(j, 2, DgvHistorialIngreso.Rows[i].Cells[1].Value.ToString());
                 documento.SetCellValue(j, 3, DgvHistorialIngreso.Rows[i].Cells[2].Value.ToString());
-                documento.SetCellValue(j, 4, Convert.ToDateTime(DgvHistorialIngreso.Rows[i].Cells[3].Value.ToString()).ToString("yyyy/MM/dd"));
+                documento.SetCellValue(j, 4, DgvHistorialIngreso.Rows[i].Cells[3].Value.ToString());
                 documento.SetCellValue(j, 5, DgvHistorialIngreso.Rows[i].Cells[4].Value.ToString());
-                documento.SetCellValue(j, 6, Convert.ToDateTime(DgvHistorialIngreso.Rows[i].Cells[5].Value.ToString()).ToString("yyyy/MM/dd"));
+                documento.SetCellValue(j, 6, DgvHistorialIngreso.Rows[i].Cells[5].Value.ToString());
                 documento.SetCellValue(j, 7, DgvHistorialIngreso.Rows[i].Cells[6].Value.ToString());
             }
             SLStyle estilos = new SLStyle();
