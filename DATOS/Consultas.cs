@@ -668,7 +668,7 @@ namespace DATOS
             Conexion.connection.Close();
 
         }
-        public string D_ActualizarIngreso(string DNI, string Fecha, string Colaborador, string Coordinador)
+        public void D_ActualizarIngreso(string DNI, string Fecha, string Colaborador, string Coordinador)
         {
             Conexion.connection.Open();
 
@@ -678,9 +678,9 @@ namespace DATOS
             cmd.Parameters.AddWithValue("Trabajador_DNI", DNI);
             cmd.Parameters.AddWithValue("Colaborador_DNI", Colaborador);
             cmd.Parameters.AddWithValue("Coordinador_DNI", Coordinador);
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
-            DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
+            //MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd); 
+            //DataTable tabla = new DataTable();
+            //adaptador.Fill(tabla);
             try
             {
                 cmd.ExecuteNonQuery();
@@ -690,7 +690,7 @@ namespace DATOS
                 MessageBox.Show(ex.ToString());
             }
             Conexion.connection.Close();
-            return tabla.Rows[0][0].ToString();
+            //return tabla;
 
         }
 
@@ -715,7 +715,7 @@ namespace DATOS
             //Conexion.connection.Close();
         }
 
-        public string D_ActualizarEgreso(string Fecha, string Tra_DNI, string Nacionalidad, string Colaborador, string Coordinador)
+        public void D_ActualizarEgreso(string Fecha, string Tra_DNI, string Nacionalidad, string Colaborador, string Coordinador)
         {
             Conexion.connection.Open();
             MySqlCommand cmd = new MySqlCommand("Sp_AgregarEgreso", Conexion.connection);
@@ -725,9 +725,9 @@ namespace DATOS
             cmd.Parameters.AddWithValue("Egreso_Nacionalidad", Nacionalidad);
             cmd.Parameters.AddWithValue("Colaborador_DNI", Colaborador);
             cmd.Parameters.AddWithValue("Coordinador_DNI", Coordinador);
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
-            DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
+            //MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
+            //DataTable tabla = new DataTable();
+            //adaptador.Fill(tabla);
             try
             {
                 cmd.ExecuteNonQuery();
@@ -737,7 +737,7 @@ namespace DATOS
                 MessageBox.Show(ex.ToString());
             }
             Conexion.connection.Close();
-            return tabla.Rows[0][0].ToString();
+            //return Convert.ToInt32(tabla.Rows[0][0]);
         }
         public void SP_Agregar_Detalle_Egreso(int Egr_Codigo, int Med_Codigo, int Cantidad, int Semana)
         {

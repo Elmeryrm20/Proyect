@@ -253,13 +253,14 @@ namespace PRESENTACION
             {
                 if (DgvEntrada.Rows.Count > 0)
                 {
-                    string fecha = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
+                    string fecha = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss");
 
-                    string Colaborador;
-                    if (CmbColaborador.SelectedIndex < 0) Colaborador = "t1Mtbf8p";
-                    else Colaborador = Colaboradores[CmbColaborador.SelectedIndex, 0];
+                    //string Colaborador;
+                    //if (CmbColaborador.SelectedIndex < 0) Colaborador = "t1Mtbf8p";
+                    //else Colaborador = Colaboradores[CmbColaborador.SelectedIndex, 0];
 
-                    string CodigoIngreso = consultas.D_ActualizarIngreso(DNI, fecha, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    consultas.D_ActualizarIngreso(DNI, fecha, Colaboradores[CmbColaborador.SelectedIndex, 0], Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    int CodigoIngreso = consultas.D_UltimoIdIngresado();
 
                     consultas.AbrirConexion();
                     for (int i = 0; i < DgvEntrada.Rows.Count; i++)
@@ -267,7 +268,7 @@ namespace PRESENTACION
                         //codigo
                         //nombre
                         //cantidad
-                        consultas.SP_Agregar_Detalle_Ingreso(int.Parse(CodigoIngreso), int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[2].Value.ToString()), DgvEntrada.Rows[i].Cells[5].Value.ToString()); ;
+                        consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[2].Value.ToString()), DgvEntrada.Rows[i].Cells[5].Value.ToString()); ;
                     }
                     consultas.CerrarConexion();
 

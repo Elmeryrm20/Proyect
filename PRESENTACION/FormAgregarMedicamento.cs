@@ -238,18 +238,19 @@ namespace PRESENTACION
                     }
                     else img = null;
 
-                    string FechaActual = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
+                    string FechaActual = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss");
                     consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), 0, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, CmbPresentacion.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
                     int CodigoMedicamento = consultas.D_UltimoIdIngresado();
 
-                    string Colaborador;
-                    if (CmbColaborador.SelectedIndex < 0) Colaborador = "t1Mtbf8p";
-                    else Colaborador = Colaboradores[CmbColaborador.SelectedIndex, 0];
+                    //string Colaborador;
+                    //if (CmbColaborador.SelectedIndex < 0) Colaborador = "t1Mtbf8p";
+                    //else Colaborador = Colaboradores[CmbColaborador.SelectedIndex, 0];
+                    
+                    consultas.D_ActualizarIngreso(Tra_DNI, FechaActual, Colaboradores[CmbColaborador.SelectedIndex, 0], Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    int CodigoIngreso = consultas.D_UltimoIdIngresado();
 
-
-                    string CodigoIngreso = consultas.D_ActualizarIngreso(Tra_DNI, FechaActual, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
                     consultas.AbrirConexion();
-                    consultas.SP_Agregar_Detalle_Ingreso(int.Parse(CodigoIngreso), CodigoMedicamento, int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"));
+                    consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, CodigoMedicamento, int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"));
                     consultas.CerrarConexion();
 
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);

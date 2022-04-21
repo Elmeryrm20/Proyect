@@ -112,16 +112,17 @@ namespace PRESENTACION
                 {
                     string fecha = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
 
-                    string Colaborador;
-                    if (CmbColaborador.SelectedIndex < 0)
-                    {
-                        Colaborador = "t1Mtbf8p";
-                    }
-                    else
-                    {
-                        Colaborador = Colaboradores[CmbColaborador.SelectedIndex,0];
-                    }
-                    string CodigoEgreso = consultas.D_ActualizarEgreso(fecha, DNI, CmbNacionalidad.Text, Colaborador, Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    //string Colaborador;
+                    //if (CmbColaborador.SelectedIndex < 0)
+                    //{
+                    //    Colaborador = "t1Mtbf8p";
+                    //}
+                    //else
+                    //{
+                    //    Colaborador = Colaboradores[CmbColaborador.SelectedIndex,0];
+                    //}
+                   consultas.D_ActualizarEgreso(fecha, DNI, CmbNacionalidad.Text, Colaboradores[CmbColaborador.SelectedIndex, 0], Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    int CodigoEgreso = consultas.D_UltimoIdIngresado();
 
                     consultas.AbrirConexion();
                     for (int i = 0; i < DgvSalida.Rows.Count; i++)
@@ -129,7 +130,7 @@ namespace PRESENTACION
                         //codigo
                         //nombre
                         //cantidad
-                        consultas.SP_Agregar_Detalle_Egreso(int.Parse(CodigoEgreso), int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()), 4); ;
+                        consultas.SP_Agregar_Detalle_Egreso(CodigoEgreso, int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()), 4); ;
                     }
                     consultas.CerrarConexion();
 
