@@ -180,6 +180,7 @@ namespace PRESENTACION
             this.textGramaje.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.textGramaje.ForeColor = System.Drawing.Color.White;
             this.textGramaje.Location = new System.Drawing.Point(117, 297);
+            this.textGramaje.MaxLength = 20;
             this.textGramaje.Name = "textGramaje";
             this.textGramaje.Size = new System.Drawing.Size(194, 16);
             this.textGramaje.TabIndex = 7;
@@ -195,6 +196,7 @@ namespace PRESENTACION
             this.textCantidad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.textCantidad.ForeColor = System.Drawing.Color.White;
             this.textCantidad.Location = new System.Drawing.Point(117, 152);
+            this.textCantidad.MaxLength = 5;
             this.textCantidad.Name = "textCantidad";
             this.textCantidad.Size = new System.Drawing.Size(194, 16);
             this.textCantidad.TabIndex = 2;
@@ -211,6 +213,7 @@ namespace PRESENTACION
             this.textNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNombre.ForeColor = System.Drawing.Color.White;
             this.textNombre.Location = new System.Drawing.Point(117, 109);
+            this.textNombre.MaxLength = 75;
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(194, 16);
             this.textNombre.TabIndex = 1;

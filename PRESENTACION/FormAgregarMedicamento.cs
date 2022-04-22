@@ -209,6 +209,11 @@ namespace PRESENTACION
             {
                 errorProvider1.SetError(CmbEncargado, "");
             }
+            if ((textNombre.Text + textGramaje.Text).Length >80)
+            {
+                MessageBox.Show("La Composición ha superado el límite de caracteres");
+                valor = false;
+            }
             return valor;
         }
         private void pictureBox2_Click(object sender, EventArgs e)

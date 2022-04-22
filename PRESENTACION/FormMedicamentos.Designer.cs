@@ -80,6 +80,7 @@ namespace PRESENTACION
             this.txb_Buscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.txb_Buscar.Location = new System.Drawing.Point(73, 54);
+            this.txb_Buscar.MaxLength = 50;
             this.txb_Buscar.Name = "txb_Buscar";
             this.txb_Buscar.Size = new System.Drawing.Size(251, 16);
             this.txb_Buscar.TabIndex = 1;
