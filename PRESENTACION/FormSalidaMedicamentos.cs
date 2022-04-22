@@ -111,6 +111,12 @@ namespace PRESENTACION
                 if (DgvSalida.Rows.Count > 0)
                 {
                     string fecha = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH-mm-ss");
+                    byte semana = (byte)DateTime.Now.Day;
+                    if (semana >= 1 && semana <= 7) semana = 1;
+                    else if (semana > 7 && semana <= 14) semana = 2;
+                    else if (semana > 14 && semana <= 21) semana = 3;
+                    else if(semana > 21 && semana <=28) semana =4;
+                    else  semana =5;
 
                     //string Colaborador;
                     //if (CmbColaborador.SelectedIndex < 0)
@@ -130,7 +136,7 @@ namespace PRESENTACION
                         //codigo
                         //nombre
                         //cantidad
-                        consultas.SP_Agregar_Detalle_Egreso(CodigoEgreso, int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()), 4); ;
+                        consultas.SP_Agregar_Detalle_Egreso(CodigoEgreso, int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()), semana); ;
                     }
                     consultas.CerrarConexion();
 
