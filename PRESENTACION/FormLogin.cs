@@ -142,7 +142,7 @@ namespace PRESENTACION
                 {
                     ud.DNI = dt.Rows[0][0].ToString();
                     ud.Pass = dt.Rows[0][1].ToString();
-                    ud.Tipo = dt.Rows[0][2].ToString();
+                    ud.Tipo = Convert.ToByte(dt.Rows[0][2]);
                     ud.Nombre = dt.Rows[0][3].ToString();
                     AdmitirPass();
 

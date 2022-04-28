@@ -9,14 +9,15 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
-        public FormEspera(string DNI, string Tipo, string Nombre)
+        public FormEspera(string DNI, byte Tipo, string Nombre)
         {
             InitializeComponent();
             this.DNI = DNI;
             this.Tipo = Tipo;
             this.Nombre = Nombre;
         }
-        readonly string DNI, Tipo, Nombre;
+        readonly string DNI, Nombre;
+        readonly byte Tipo;
 
         //int cont = 0;
         private void timer1_Tick(object sender, EventArgs e)

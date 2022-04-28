@@ -191,38 +191,47 @@ namespace PRESENTACION
                 return true;
             }
         }
-        private void Imprimir(object sender, PrintPageEventArgs ep)
+        private void Imprimir(object sender, PrintPageEventArgs e)
         {
-            
-                const int DGV_ALTO = 30;
-                int left = ep.MarginBounds.Left, top = ep.MarginBounds.Top;
-                ep.Graphics.DrawString(" CRUZ ROJA - FILIAL ICA", new Font("Segoe UI", 12, FontStyle.Bold), Brushes.Red, left, top); top += 30;
-                ep.Graphics.DrawString("PERSONAL ENCARGADO: " + LblVoluntario.Text, new Font("Segoe UI", 12, FontStyle.Bold), Brushes.Red, left, top);
-            
-                top += 43;
-                foreach (DataGridViewColumn col in DgvEntrada.Columns)
-                {
-                    ep.Graphics.DrawString(col.HeaderText, new Font("Segoe UI", 12, FontStyle.Bold), Brushes.DeepSkyBlue, left, top);
-                    left +=col.Width;
+            Font font1 = new Font("Arial", 10);
+            Font font2 = new Font("Arial", 7);
+            int ancho = 450;
+            int y = 20;
 
-                    if (col.Index < DgvEntrada.ColumnCount - 1)
-                        ep.Graphics.DrawLine(Pens.Gray, left - 3, top, left - 3, top + 43 + (DgvEntrada.RowCount) * DGV_ALTO);
-                }
-                left = ep.MarginBounds.Left;
-                ep.Graphics.FillRectangle(Brushes.Black, left, top + 40, ep.MarginBounds.Right - left, 3);
-                top += 43;
+            //VOUCHER
+            e.Graphics.DrawString("  ---Informe Egreso---", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
 
-                foreach (DataGridViewRow row in DgvEntrada.Rows)
-                {
-                    left = ep.MarginBounds.Left;
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        ep.Graphics.DrawString(Convert.ToString(cell.Value), new Font("Segoe UI", 11), Brushes.Black, left, top + 4);
-                        left += cell.OwningColumn.Width;
-                    }
-                    top += DGV_ALTO;
-                    ep.Graphics.DrawLine(Pens.Gray, ep.MarginBounds.Left, top, ep.MarginBounds.Right, top);
-                }
+            e.Graphics.DrawString("  RUC: " + "10427462264", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  --- CRUZ ROJA - FILIAL ICA ---", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  Dirección", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  ICA - ICA - ICA", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            //e.Graphics.DrawString("", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("-------------------------------------", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("  FECHA DE EMISIÓN: " + DateTime.Now.ToShortDateString(), font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            //e.Graphics.DrawString("", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  Coordinador: " + CmbEncargado.Text, font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  Voluntario: " + LblVoluntario.Text, font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("-------------------------------------", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("  ---Medicamentos---", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("  Código    Can.  Descripción   Pre. Uni.   Importe Total", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            //e.Graphics.DrawString("", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            int fila = DgvEntrada.RowCount;
+            string texto = "";
+            for (int i = 0; i < fila; i++)
+            {
+                texto = DgvEntrada.Rows[i].Cells[0].Value.ToString() + "   " + DgvEntrada.Rows[i].Cells[1].Value.ToString() + "   ";
+                e.Graphics.DrawString(texto, font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            }
+            e.Graphics.DrawString("------------------------------------", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("  Gracias por su compra. Vuelva Pronto.", font2, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+
         }
         private void ImprimirIngreso()
         {
@@ -265,8 +274,6 @@ namespace PRESENTACION
 
                     if (BoolImprimir == true)
                     {
-                        FormPrincipal sp = Owner as FormPrincipal;
-                        sp.maximizar_Pantalla();
                         ImprimirIngreso();
                     }
 

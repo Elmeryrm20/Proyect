@@ -89,7 +89,7 @@ namespace PRESENTACION
             LblPorcAgotados.Text = dt.Rows[0][8].ToString();
             PrbAgotados.Value = int.Parse(dt.Rows[0][8].ToString().Replace("%", String.Empty));
             Font font;
-            if (dt.Rows[0][9].ToString() == "")
+            if (dt.Rows[0][9].ToString() == "" )
             {
                 font = new Font("Century Gothic", 8,FontStyle.Bold);                
                 LblProximoVencimiento.Text = "No hay Medicamentos";
@@ -97,7 +97,15 @@ namespace PRESENTACION
             }
             else
             {
-                font = new Font("Century Gothic",9.75f, FontStyle.Bold);
+                if (dt.Rows[0][9].ToString().Length >= 20)
+                {
+                    font = new Font("Century Gothic", 7.5f, FontStyle.Bold);
+                }
+                else
+                {
+                    font = new Font("Century Gothic", 9.75f, FontStyle.Bold);
+                }
+                
                 LblProximoVencimiento.Text = dt.Rows[0][9].ToString();
                 LblFechaProxVenci.Text = DateTime.Parse(dt.Rows[0][10].ToString()).ToString("dd-MM-yyyy");
                 toolTip1.SetToolTip(LblFechaProxVenci, "Vence el " + (DateTime.Parse(dt.Rows[0][10].ToString()).ToLongDateString()));

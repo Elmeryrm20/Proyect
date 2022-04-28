@@ -6,7 +6,6 @@ using System.Windows.Forms;
 
 namespace PRESENTACION
 {
-
     public partial class FormPrincipal : Form
     {
 
@@ -16,22 +15,15 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormPrincipal(string DNI, string Tipo, string Nombre)
+        public FormPrincipal(string DNI, byte Tipo, string Nombre)
         {
             InitializeComponent();
 
             this.DNI = DNI;
             this.Nombre = Nombre;
+            this.Tipo = Tipo;
 
-            OrdenarBotonesMenu(Tipo);
 
-
-            Btn_Acerca.Visible = false;
-            Btn_Config.Visible = false;
-            SeleccionarBoton(1);
-
-            //AparecerFormulario<FormInicio>();
-            EscogerFormulario<FormInicio>(1);
 
         }
         #endregion
@@ -39,6 +31,7 @@ namespace PRESENTACION
         #region Inicializar Variables de Formularios
         readonly string DNI;
         readonly string Nombre;
+        readonly byte Tipo;
 
         Consultas consultas = new Consultas();
         #endregion
@@ -105,21 +98,42 @@ namespace PRESENTACION
         }
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            OrdenarBotonesMenu(Tipo);
+
+            Btn_Acerca.Visible = false;
+            Btn_Config.Visible = false;
+            SeleccionarBoton(1);
+
+            //AparecerFormulario<FormInicio>();
+            EscogerFormulario<FormInicio>(1);
+
             ActivarTootip();
             //ShowInTaskbar = true;
             LblNombre.Text = Nombre;
             Icon = Properties.Resources.Logo011;
 
         }
-        private void OrdenarBotonesMenu(string Tipo)
+        private void OrdenarBotonesMenu(byte Tipo)
         {
 
             BtnEntrada.Location = new Point(0, 180);
             Btn_Salida.Location = new Point(0, 225);
             Btn_Agregar.Location = new Point(0, 270);
 
-            if (Tipo == "1") VistaVoluntario(); //Método de Vista de Formularios para Voluntario
-            else VistaCoordinador(); //Rango Admin de Coordinador
+            //if (Tipo == "1") VistaVoluntario(); //Método de Vista de Formularios para Voluntario
+            //else VistaCoordinador(); //Rango Admin de Coordinador
+
+            switch (Tipo)
+            {
+                case 1:
+                    VistaVoluntario();
+                    break;
+                case 2:
+                    VistaCoordinador();
+                    break;
+                default:
+                    break;
+            }
         }
 
         void VistaVoluntario()
