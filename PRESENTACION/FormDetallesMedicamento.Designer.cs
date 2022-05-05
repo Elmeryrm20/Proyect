@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
+            this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LblPertenencia = new System.Windows.Forms.Label();
             this.lbl_Porcentage = new System.Windows.Forms.Label();
@@ -59,6 +59,17 @@
             this.panel1.Size = new System.Drawing.Size(500, 42);
             this.panel1.TabIndex = 0;
             // 
+            // lbl_Nombre
+            // 
+            this.lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(159)))));
+            this.lbl_Nombre.Location = new System.Drawing.Point(12, 0);
+            this.lbl_Nombre.Name = "lbl_Nombre";
+            this.lbl_Nombre.Size = new System.Drawing.Size(454, 42);
+            this.lbl_Nombre.TabIndex = 0;
+            this.lbl_Nombre.Text = "label1";
+            this.lbl_Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnSerrar
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -70,17 +81,6 @@
             this.btnSerrar.TabIndex = 2;
             this.btnSerrar.TabStop = false;
             this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
-            // 
-            // lbl_Nombre
-            // 
-            this.lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(159)))));
-            this.lbl_Nombre.Location = new System.Drawing.Point(12, 0);
-            this.lbl_Nombre.Name = "lbl_Nombre";
-            this.lbl_Nombre.Size = new System.Drawing.Size(454, 42);
-            this.lbl_Nombre.TabIndex = 0;
-            this.lbl_Nombre.Text = "label1";
-            this.lbl_Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -118,9 +118,9 @@
             // 
             this.lbl_Porcentage.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Porcentage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
-            this.lbl_Porcentage.Location = new System.Drawing.Point(288, 255);
+            this.lbl_Porcentage.Location = new System.Drawing.Point(282, 255);
             this.lbl_Porcentage.Name = "lbl_Porcentage";
-            this.lbl_Porcentage.Size = new System.Drawing.Size(55, 35);
+            this.lbl_Porcentage.Size = new System.Drawing.Size(65, 35);
             this.lbl_Porcentage.TabIndex = 19;
             this.lbl_Porcentage.Text = "555";
             this.lbl_Porcentage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,7 +163,7 @@
             this.lbl_Tipo.AutoSize = true;
             this.lbl_Tipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Tipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
-            this.lbl_Tipo.Location = new System.Drawing.Point(136, 93);
+            this.lbl_Tipo.Location = new System.Drawing.Point(136, 90);
             this.lbl_Tipo.Name = "lbl_Tipo";
             this.lbl_Tipo.Size = new System.Drawing.Size(48, 16);
             this.lbl_Tipo.TabIndex = 13;
