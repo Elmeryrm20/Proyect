@@ -954,6 +954,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo01.ico" />
+    <None Include="Resources\FondoDetalles01.png" />
+    <None Include="Resources\FondoDetalles02.png" />
     <None Include="Resources\DashBoardForma01.png" />
     <None Include="Resources\DashBoardForma02.png" />
     <None Include="Resources\DashBoardForma03.png" />

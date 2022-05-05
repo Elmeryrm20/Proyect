@@ -32,27 +32,17 @@
             this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LblPertenencia = new System.Windows.Forms.Label();
             this.lbl_Porcentage = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.lbl_Existencia = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.lbl_Presentacion = new System.Windows.Forms.Label();
             this.lbl_Laboratorio = new System.Windows.Forms.Label();
             this.lbl_Tipo = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.lbl_F_Vencimiento = new System.Windows.Forms.Label();
             this.lbl_Almacen = new System.Windows.Forms.Label();
             this.lbl_Egreso = new System.Windows.Forms.Label();
             this.lbl_Ingeso = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ptb_Imagen = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LblPertenencia = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,12 +51,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
-            this.panel1.Controls.Add(this.btnSerrar);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.lbl_Nombre);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 42);
+            this.panel1.Size = new System.Drawing.Size(500, 42);
             this.panel1.TabIndex = 0;
             // 
             // btnSerrar
@@ -74,7 +64,7 @@
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
-            this.btnSerrar.Location = new System.Drawing.Point(392, 9);
+            this.btnSerrar.Location = new System.Drawing.Point(211, 347);
             this.btnSerrar.Name = "btnSerrar";
             this.btnSerrar.Size = new System.Drawing.Size(24, 24);
             this.btnSerrar.TabIndex = 2;
@@ -83,239 +73,162 @@
             // 
             // lbl_Nombre
             // 
-            this.lbl_Nombre.AutoSize = true;
-            this.lbl_Nombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre.Location = new System.Drawing.Point(8, 6);
+            this.lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(159)))));
+            this.lbl_Nombre.Location = new System.Drawing.Point(12, 0);
             this.lbl_Nombre.Name = "lbl_Nombre";
-            this.lbl_Nombre.Size = new System.Drawing.Size(50, 18);
+            this.lbl_Nombre.Size = new System.Drawing.Size(454, 42);
             this.lbl_Nombre.TabIndex = 0;
             this.lbl_Nombre.Text = "label1";
+            this.lbl_Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.btnSerrar);
             this.panel2.Controls.Add(this.LblPertenencia);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.lbl_Porcentage);
-            this.panel2.Controls.Add(this.lbl_Nombre);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.lbl_Existencia);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.lbl_Presentacion);
             this.panel2.Controls.Add(this.lbl_Laboratorio);
             this.panel2.Controls.Add(this.lbl_Tipo);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.lbl_F_Vencimiento);
             this.panel2.Controls.Add(this.lbl_Almacen);
             this.panel2.Controls.Add(this.lbl_Egreso);
             this.panel2.Controls.Add(this.lbl_Ingeso);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.ptb_Imagen);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(431, 322);
+            this.panel2.Size = new System.Drawing.Size(500, 383);
             this.panel2.TabIndex = 1;
+            // 
+            // LblPertenencia
+            // 
+            this.LblPertenencia.AutoSize = true;
+            this.LblPertenencia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPertenencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.LblPertenencia.Location = new System.Drawing.Point(136, 154);
+            this.LblPertenencia.Name = "LblPertenencia";
+            this.LblPertenencia.Size = new System.Drawing.Size(48, 16);
+            this.LblPertenencia.TabIndex = 21;
+            this.LblPertenencia.Text = "label7";
             // 
             // lbl_Porcentage
             // 
-            this.lbl_Porcentage.AutoSize = true;
-            this.lbl_Porcentage.Location = new System.Drawing.Point(208, 286);
+            this.lbl_Porcentage.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Porcentage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.lbl_Porcentage.Location = new System.Drawing.Point(288, 255);
             this.lbl_Porcentage.Name = "lbl_Porcentage";
-            this.lbl_Porcentage.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Porcentage.Size = new System.Drawing.Size(55, 35);
             this.lbl_Porcentage.TabIndex = 19;
-            this.lbl_Porcentage.Text = "label9";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(34, 286);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "PORCENTAGE EN EXISTENCIA:";
+            this.lbl_Porcentage.Text = "555";
+            this.lbl_Porcentage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Existencia
             // 
-            this.lbl_Existencia.AutoSize = true;
-            this.lbl_Existencia.Location = new System.Drawing.Point(149, 53);
+            this.lbl_Existencia.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Existencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.lbl_Existencia.Location = new System.Drawing.Point(37, 255);
             this.lbl_Existencia.Name = "lbl_Existencia";
-            this.lbl_Existencia.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Existencia.Size = new System.Drawing.Size(60, 35);
             this.lbl_Existencia.TabIndex = 17;
-            this.lbl_Existencia.Text = "label9";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(70, 53);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "EXISTENCIA:";
+            this.lbl_Existencia.Text = "555";
+            this.lbl_Existencia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Presentacion
             // 
             this.lbl_Presentacion.AutoSize = true;
-            this.lbl_Presentacion.Location = new System.Drawing.Point(149, 101);
+            this.lbl_Presentacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Presentacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.lbl_Presentacion.Location = new System.Drawing.Point(136, 68);
             this.lbl_Presentacion.Name = "lbl_Presentacion";
-            this.lbl_Presentacion.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Presentacion.Size = new System.Drawing.Size(48, 16);
             this.lbl_Presentacion.TabIndex = 15;
             this.lbl_Presentacion.Text = "label8";
             // 
             // lbl_Laboratorio
             // 
             this.lbl_Laboratorio.AutoSize = true;
-            this.lbl_Laboratorio.Location = new System.Drawing.Point(149, 149);
+            this.lbl_Laboratorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Laboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.lbl_Laboratorio.Location = new System.Drawing.Point(136, 131);
             this.lbl_Laboratorio.Name = "lbl_Laboratorio";
-            this.lbl_Laboratorio.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Laboratorio.Size = new System.Drawing.Size(48, 16);
             this.lbl_Laboratorio.TabIndex = 14;
             this.lbl_Laboratorio.Text = "label7";
             // 
             // lbl_Tipo
             // 
             this.lbl_Tipo.AutoSize = true;
-            this.lbl_Tipo.Location = new System.Drawing.Point(149, 125);
+            this.lbl_Tipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.lbl_Tipo.Location = new System.Drawing.Point(136, 93);
             this.lbl_Tipo.Name = "lbl_Tipo";
-            this.lbl_Tipo.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Tipo.Size = new System.Drawing.Size(48, 16);
             this.lbl_Tipo.TabIndex = 13;
             this.lbl_Tipo.Text = "label6";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(56, 149);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "LABORATORIO:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(49, 101);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "PRESENTACIÒN:";
-            // 
             // lbl_F_Vencimiento
             // 
-            this.lbl_F_Vencimiento.AutoSize = true;
-            this.lbl_F_Vencimiento.Location = new System.Drawing.Point(149, 208);
+            this.lbl_F_Vencimiento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_F_Vencimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.lbl_F_Vencimiento.Location = new System.Drawing.Point(384, 283);
             this.lbl_F_Vencimiento.Name = "lbl_F_Vencimiento";
-            this.lbl_F_Vencimiento.Size = new System.Drawing.Size(35, 13);
+            this.lbl_F_Vencimiento.Size = new System.Drawing.Size(91, 28);
             this.lbl_F_Vencimiento.TabIndex = 10;
             this.lbl_F_Vencimiento.Text = "label9";
+            this.lbl_F_Vencimiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Almacen
             // 
             this.lbl_Almacen.AutoSize = true;
-            this.lbl_Almacen.Location = new System.Drawing.Point(149, 77);
+            this.lbl_Almacen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Almacen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
+            this.lbl_Almacen.Location = new System.Drawing.Point(146, 23);
             this.lbl_Almacen.Name = "lbl_Almacen";
-            this.lbl_Almacen.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Almacen.Size = new System.Drawing.Size(48, 16);
             this.lbl_Almacen.TabIndex = 9;
             this.lbl_Almacen.Text = "label8";
             // 
             // lbl_Egreso
             // 
-            this.lbl_Egreso.AutoSize = true;
-            this.lbl_Egreso.Location = new System.Drawing.Point(149, 256);
+            this.lbl_Egreso.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Egreso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.lbl_Egreso.Location = new System.Drawing.Point(201, 255);
             this.lbl_Egreso.Name = "lbl_Egreso";
-            this.lbl_Egreso.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Egreso.Size = new System.Drawing.Size(60, 35);
             this.lbl_Egreso.TabIndex = 8;
-            this.lbl_Egreso.Text = "label7";
+            this.lbl_Egreso.Text = "555";
+            this.lbl_Egreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Ingeso
             // 
-            this.lbl_Ingeso.AutoSize = true;
-            this.lbl_Ingeso.Location = new System.Drawing.Point(149, 232);
+            this.lbl_Ingeso.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Ingeso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.lbl_Ingeso.Location = new System.Drawing.Point(119, 255);
             this.lbl_Ingeso.Name = "lbl_Ingeso";
-            this.lbl_Ingeso.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Ingeso.Size = new System.Drawing.Size(60, 35);
             this.lbl_Ingeso.TabIndex = 7;
-            this.lbl_Ingeso.Text = "label6";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(108, 125);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "TIPO:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "FEC.VENCIMIENTO:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "ALMACEN:";
+            this.lbl_Ingeso.Text = "555";
+            this.lbl_Ingeso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ptb_Imagen
             // 
             this.ptb_Imagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ptb_Imagen.Location = new System.Drawing.Point(267, 6);
+            this.ptb_Imagen.Location = new System.Drawing.Point(329, 26);
             this.ptb_Imagen.Name = "ptb_Imagen";
-            this.ptb_Imagen.Size = new System.Drawing.Size(140, 140);
+            this.ptb_Imagen.Size = new System.Drawing.Size(137, 137);
             this.ptb_Imagen.TabIndex = 3;
             this.ptb_Imagen.TabStop = false;
             this.ptb_Imagen.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 256);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "TOTAL EGRESADO:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 232);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "TOTAL INGRESADO:";
-            // 
-            // LblPertenencia
-            // 
-            this.LblPertenencia.AutoSize = true;
-            this.LblPertenencia.Location = new System.Drawing.Point(149, 175);
-            this.LblPertenencia.Name = "LblPertenencia";
-            this.LblPertenencia.Size = new System.Drawing.Size(35, 13);
-            this.LblPertenencia.TabIndex = 21;
-            this.LblPertenencia.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 175);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "PERTENENCIA:";
             // 
             // FormDetallesMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 364);
+            this.BackgroundImage = global::PRESENTACION.Properties.Resources.FondoDetalles02;
+            this.ClientSize = new System.Drawing.Size(500, 425);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -336,27 +249,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox btnSerrar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.Label lbl_Presentacion;
         private System.Windows.Forms.Label lbl_Laboratorio;
         private System.Windows.Forms.Label lbl_Tipo;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbl_F_Vencimiento;
         private System.Windows.Forms.Label lbl_Almacen;
         private System.Windows.Forms.Label lbl_Egreso;
         private System.Windows.Forms.Label lbl_Ingeso;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox ptb_Imagen;
         private System.Windows.Forms.Label lbl_Porcentage;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbl_Existencia;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LblPertenencia;
-        private System.Windows.Forms.Label label8;
     }
 }

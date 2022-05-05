@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using DATOS;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DATOS;
 using System.IO;
+using System.Windows.Forms;
 
 
 namespace PRESENTACION
@@ -19,7 +14,7 @@ namespace PRESENTACION
         public FormDetallesMedicamento()
         {
             InitializeComponent();
-           
+
         }
         public FormDetallesMedicamento(int valor)
         {
@@ -55,7 +50,7 @@ namespace PRESENTACION
             lbl_Egreso.Text = dt.Rows[0][2].ToString();
             int Egreso = int.Parse(dt.Rows[0][2].ToString());
             lbl_Almacen.Text = dt.Rows[0][3].ToString();
-            lbl_F_Vencimiento.Text = dt.Rows[0][4].ToString();
+            lbl_F_Vencimiento.Text = Convert.ToDateTime(dt.Rows[0][4]).ToShortDateString();
             lbl_Tipo.Text = dt.Rows[0][5].ToString();
             lbl_Laboratorio.Text = dt.Rows[0][6].ToString();
             lbl_Presentacion.Text = dt.Rows[0][7].ToString();
@@ -63,8 +58,8 @@ namespace PRESENTACION
 
 
             lbl_Existencia.Text = (Ingreso - Egreso).ToString();
-            double Porcentaje=Convert.ToDouble((Ingreso - Egreso)*100/ Ingreso);
-            lbl_Porcentage.Text = Math.Round(Porcentaje).ToString() + " %";
+            double Porcentaje = Convert.ToDouble((Ingreso - Egreso) * 100 / Ingreso);
+            lbl_Porcentage.Text = Math.Round(Porcentaje).ToString() + "%";
 
             //-----------------Imagen--------------------------
             try
