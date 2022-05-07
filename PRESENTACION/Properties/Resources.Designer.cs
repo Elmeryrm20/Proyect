@@ -1573,6 +1573,16 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FondoEditarMedicamento01 {
+            get {
+                object obj = ResourceManager.GetObject("FondoEditarMedicamento01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FondoEntrada01 {
             get {
                 object obj = ResourceManager.GetObject("FondoEntrada01", resourceCulture);
@@ -1616,6 +1626,16 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap FondoReestablecer02 {
             get {
                 object obj = ResourceManager.GetObject("FondoReestablecer02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoSalida01 {
+            get {
+                object obj = ResourceManager.GetObject("FondoSalida01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
