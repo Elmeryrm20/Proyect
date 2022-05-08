@@ -60,13 +60,15 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar01;
             this.btnSerrar.Location = new System.Drawing.Point(235, 331);
             this.btnSerrar.Name = "btnSerrar";
-            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnSerrar.Size = new System.Drawing.Size(110, 40);
             this.btnSerrar.TabIndex = 2;
             this.btnSerrar.TabStop = false;
             this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
+            this.btnSerrar.MouseEnter += new System.EventHandler(this.btnSerrar_MouseEnter);
+            this.btnSerrar.MouseLeave += new System.EventHandler(this.btnSerrar_MouseLeave);
             // 
             // panel2
             // 
@@ -95,7 +97,7 @@
             this.CmbPertenencia.FormattingEnabled = true;
             this.CmbPertenencia.Location = new System.Drawing.Point(120, 276);
             this.CmbPertenencia.Name = "CmbPertenencia";
-            this.CmbPertenencia.Size = new System.Drawing.Size(139, 23);
+            this.CmbPertenencia.Size = new System.Drawing.Size(135, 23);
             this.CmbPertenencia.TabIndex = 68;
             this.CmbPertenencia.Text = "Selecciona Pertenencia";
             // 
@@ -107,7 +109,7 @@
             this.cmbLab.FormattingEnabled = true;
             this.cmbLab.Location = new System.Drawing.Point(120, 237);
             this.cmbLab.Name = "cmbLab";
-            this.cmbLab.Size = new System.Drawing.Size(139, 23);
+            this.cmbLab.Size = new System.Drawing.Size(135, 23);
             this.cmbLab.TabIndex = 51;
             this.cmbLab.Text = "Selecciona Laboratorio";
             // 
@@ -117,9 +119,9 @@
             this.CmbPresentacion.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.CmbPresentacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.CmbPresentacion.FormattingEnabled = true;
-            this.CmbPresentacion.Location = new System.Drawing.Point(120, 122);
+            this.CmbPresentacion.Location = new System.Drawing.Point(120, 158);
             this.CmbPresentacion.Name = "CmbPresentacion";
-            this.CmbPresentacion.Size = new System.Drawing.Size(139, 23);
+            this.CmbPresentacion.Size = new System.Drawing.Size(135, 23);
             this.CmbPresentacion.TabIndex = 55;
             this.CmbPresentacion.Text = "Selecciona Presentación";
             // 
@@ -142,9 +144,9 @@
             this.cmbCaja.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.cmbCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.cmbCaja.FormattingEnabled = true;
-            this.cmbCaja.Location = new System.Drawing.Point(120, 199);
+            this.cmbCaja.Location = new System.Drawing.Point(120, 197);
             this.cmbCaja.Name = "cmbCaja";
-            this.cmbCaja.Size = new System.Drawing.Size(139, 23);
+            this.cmbCaja.Size = new System.Drawing.Size(135, 23);
             this.cmbCaja.TabIndex = 56;
             this.cmbCaja.Text = "Selecciona Almacen";
             // 
@@ -155,9 +157,9 @@
             this.cmbTipo.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.cmbTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(120, 158);
+            this.cmbTipo.Location = new System.Drawing.Point(120, 119);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(139, 23);
+            this.cmbTipo.Size = new System.Drawing.Size(135, 23);
             this.cmbTipo.TabIndex = 54;
             this.cmbTipo.Text = "Selecciona Tipo";
             // 
@@ -167,16 +169,16 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(84, 21);
+            this.txtNombre.Location = new System.Drawing.Point(68, 21);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(371, 16);
+            this.txtNombre.Size = new System.Drawing.Size(387, 16);
             this.txtNombre.TabIndex = 49;
             this.txtNombre.Text = "Medicamento";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Btn_Editar
             // 
-            this.Btn_Editar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Btn_Editar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_Editar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Editar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
             this.Btn_Editar.Location = new System.Drawing.Point(96, 331);
@@ -185,6 +187,8 @@
             this.Btn_Editar.TabIndex = 66;
             this.Btn_Editar.TabStop = false;
             this.Btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
+            this.Btn_Editar.MouseEnter += new System.EventHandler(this.Btn_Editar_MouseEnter);
+            this.Btn_Editar.MouseLeave += new System.EventHandler(this.Btn_Editar_MouseLeave);
             // 
             // ptb_Imagen
             // 

@@ -104,5 +104,27 @@ namespace PRESENTACION
         {
             validar.soloNumeros(e);
         }
+
+        private void btn_Editar_MouseEnter(object sender, EventArgs e)
+        {
+            btn_Editar.Image = Properties.Resources.BotonFormConfirmar02;
+        }
+
+        private void btn_Editar_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Editar.Image = Properties.Resources.BotonFormConfirmar01;
+
+        }
+
+        private void btnSerrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnSerrar.Image = Properties.Resources.BotonFormCancelar02;
+
+        }
+
+        private void btnSerrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnSerrar.Image = Properties.Resources.BotonFormCancelar02;
+        }
     }
 }

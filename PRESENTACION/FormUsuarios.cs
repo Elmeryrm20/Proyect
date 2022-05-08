@@ -164,5 +164,51 @@ namespace PRESENTACION
         private void dgb_Usuario_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
         }
+
+        private void bt_AgregarU_MouseEnter(object sender, EventArgs e)
+        {
+            bt_AgregarU.Image = Properties.Resources.BotonFormAgregarUsuario02;
+        }
+
+        private void bt_AgregarU_MouseLeave(object sender, EventArgs e)
+        {
+            bt_AgregarU.Image = Properties.Resources.BotonFormAgregarUsuario01 ;
+
+        }
+
+        private void bt_EditarU_MouseEnter(object sender, EventArgs e)
+        {
+            bt_EditarU.Image = Properties.Resources.BotonFormEditar02;
+
+        }
+
+        private void bt_EditarU_MouseLeave(object sender, EventArgs e)
+        {
+            bt_EditarU.Image = Properties.Resources.BotonFormEditar02;
+
+        }
+
+        private void bt_EliminarU_MouseEnter(object sender, EventArgs e)
+        {
+            bt_EliminarU.Image = Properties.Resources.BotonFormQuitarUsuario02;
+
+        }
+
+        private void bt_EliminarU_MouseLeave(object sender, EventArgs e)
+        {
+            bt_EliminarU.Image = Properties.Resources.BotonFormQuitarUsuario01;
+
+        }
+
+        private void bt_ActualizarU_MouseEnter(object sender, EventArgs e)
+        {
+            bt_ActualizarU.Image = Properties.Resources.BotonFormActualizar02;
+        }
+
+        private void bt_ActualizarU_MouseLeave(object sender, EventArgs e)
+        {
+            bt_ActualizarU.Image = Properties.Resources.BotonFormActualizar01;
+
+        }
     }
 }

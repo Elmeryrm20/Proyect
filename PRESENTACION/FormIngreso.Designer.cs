@@ -52,13 +52,15 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar01;
-            this.btnSerrar.Location = new System.Drawing.Point(305, 276);
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar01;
+            this.btnSerrar.Location = new System.Drawing.Point(286, 268);
             this.btnSerrar.Name = "btnSerrar";
-            this.btnSerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnSerrar.Size = new System.Drawing.Size(110, 40);
             this.btnSerrar.TabIndex = 3;
             this.btnSerrar.TabStop = false;
             this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
+            this.btnSerrar.MouseEnter += new System.EventHandler(this.btnSerrar_MouseEnter);
+            this.btnSerrar.MouseLeave += new System.EventHandler(this.btnSerrar_MouseLeave);
             // 
             // lbl_Nombre
             // 
@@ -94,6 +96,8 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
             // dtp_FechaVencimiento
             // 

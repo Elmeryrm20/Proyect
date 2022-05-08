@@ -96,6 +96,26 @@ namespace PRESENTACION
             validar.soloNumeros(e);
         }
 
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.BotonFormConfirmar02;
+        }
 
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.BotonFormConfirmar01;
+        }
+
+        private void btnSerrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnSerrar.Image = Properties.Resources.BotonFormCancelar02;
+
+        }
+
+        private void btnSerrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnSerrar.Image = Properties.Resources.BotonFormCancelar01;
+
+        }
     }
 }

@@ -98,5 +98,16 @@ namespace PRESENTACION
         {
 
         }
+
+        private void btnSerrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnSerrar.Image = Properties.Resources.BotonFormCancelar02;
+        }
+
+        private void btnSerrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnSerrar.Image = Properties.Resources.BotonFormCancelar01;
+
+        }
     }
 }

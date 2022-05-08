@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_DNI = new System.Windows.Forms.Label();
             this.txt_Fecha = new System.Windows.Forms.DateTimePicker();
             this.btn_Editar = new System.Windows.Forms.PictureBox();
             this.cmb_Estado = new System.Windows.Forms.ComboBox();
@@ -49,8 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_DNI = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).BeginInit();
@@ -59,7 +58,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
-            this.panel1.Controls.Add(this.btnSerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -69,16 +67,20 @@
             // btnSerrar
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSerrar.BackColor = System.Drawing.Color.Black;
-            this.btnSerrar.Location = new System.Drawing.Point(338, 3);
+            this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar01;
+            this.btnSerrar.Location = new System.Drawing.Point(192, 287);
             this.btnSerrar.Name = "btnSerrar";
-            this.btnSerrar.Size = new System.Drawing.Size(27, 27);
+            this.btnSerrar.Size = new System.Drawing.Size(110, 40);
             this.btnSerrar.TabIndex = 3;
             this.btnSerrar.TabStop = false;
             this.btnSerrar.Click += new System.EventHandler(this.btnSerrar_Click);
+            this.btnSerrar.MouseEnter += new System.EventHandler(this.btnSerrar_MouseEnter);
+            this.btnSerrar.MouseLeave += new System.EventHandler(this.btnSerrar_MouseLeave);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnSerrar);
             this.panel2.Controls.Add(this.txt_DNI);
             this.panel2.Controls.Add(this.txt_Fecha);
             this.panel2.Controls.Add(this.btn_Editar);
@@ -104,6 +106,15 @@
             this.panel2.Size = new System.Drawing.Size(368, 349);
             this.panel2.TabIndex = 1;
             // 
+            // txt_DNI
+            // 
+            this.txt_DNI.AutoSize = true;
+            this.txt_DNI.Location = new System.Drawing.Point(123, 24);
+            this.txt_DNI.Name = "txt_DNI";
+            this.txt_DNI.Size = new System.Drawing.Size(24, 13);
+            this.txt_DNI.TabIndex = 19;
+            this.txt_DNI.Text = "text";
+            // 
             // txt_Fecha
             // 
             this.txt_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -114,13 +125,16 @@
             // 
             // btn_Editar
             // 
-            this.btn_Editar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Editar.Location = new System.Drawing.Point(89, 295);
+            this.btn_Editar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Editar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
+            this.btn_Editar.Location = new System.Drawing.Point(65, 287);
             this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(213, 32);
+            this.btn_Editar.Size = new System.Drawing.Size(110, 40);
             this.btn_Editar.TabIndex = 17;
             this.btn_Editar.TabStop = false;
             this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
+            this.btn_Editar.MouseEnter += new System.EventHandler(this.btn_Editar_MouseEnter);
+            this.btn_Editar.MouseLeave += new System.EventHandler(this.btn_Editar_MouseLeave);
             // 
             // cmb_Estado
             // 
@@ -256,15 +270,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI";
             // 
-            // txt_DNI
-            // 
-            this.txt_DNI.AutoSize = true;
-            this.txt_DNI.Location = new System.Drawing.Point(123, 24);
-            this.txt_DNI.Name = "txt_DNI";
-            this.txt_DNI.Size = new System.Drawing.Size(24, 13);
-            this.txt_DNI.TabIndex = 19;
-            this.txt_DNI.Text = "text";
-            // 
             // FormEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,7 +282,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarUsuario";
             this.Load += new System.EventHandler(this.FormEditarUsuario_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
