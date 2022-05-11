@@ -33,7 +33,6 @@
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.LblStock = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,8 +51,8 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar01;
-            this.btnSerrar.Location = new System.Drawing.Point(284, 198);
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar05;
+            this.btnSerrar.Location = new System.Drawing.Point(287, 248);
             this.btnSerrar.Name = "btnSerrar";
             this.btnSerrar.Size = new System.Drawing.Size(110, 40);
             this.btnSerrar.TabIndex = 3;
@@ -83,33 +82,25 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(105, 51);
             this.txtCantidad.TabIndex = 6;
-            this.txtCantidad.Text = "555";
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // LblStock
             // 
-            this.LblStock.AutoSize = true;
-            this.LblStock.Location = new System.Drawing.Point(284, 163);
+            this.LblStock.BackColor = System.Drawing.Color.Transparent;
+            this.LblStock.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.LblStock.ForeColor = System.Drawing.Color.Tomato;
+            this.LblStock.Location = new System.Drawing.Point(227, 186);
             this.LblStock.Name = "LblStock";
-            this.LblStock.Size = new System.Drawing.Size(35, 13);
+            this.LblStock.Size = new System.Drawing.Size(105, 31);
             this.LblStock.TabIndex = 4;
-            this.LblStock.Text = "Stock";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(232, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "STOCK:";
+            this.LblStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
-            this.pictureBox1.Location = new System.Drawing.Point(159, 198);
+            this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar03;
+            this.pictureBox1.Location = new System.Drawing.Point(162, 248);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 40);
             this.pictureBox1.TabIndex = 7;
@@ -123,10 +114,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PRESENTACION.Properties.Resources.FondoSalida01;
-            this.ClientSize = new System.Drawing.Size(420, 250);
+            this.ClientSize = new System.Drawing.Size(420, 320);
             this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.btnSerrar);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.LblStock);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCantidad);
@@ -150,6 +140,5 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label LblStock;
-        private System.Windows.Forms.Label label3;
     }
 }

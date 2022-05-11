@@ -52,8 +52,8 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar01;
-            this.btnSerrar.Location = new System.Drawing.Point(286, 268);
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar03;
+            this.btnSerrar.Location = new System.Drawing.Point(289, 252);
             this.btnSerrar.Name = "btnSerrar";
             this.btnSerrar.Size = new System.Drawing.Size(110, 40);
             this.btnSerrar.TabIndex = 3;
@@ -64,6 +64,7 @@
             // 
             // lbl_Nombre
             // 
+            this.lbl_Nombre.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(178)))));
             this.lbl_Nombre.Location = new System.Drawing.Point(145, 30);
@@ -82,15 +83,14 @@
             this.Txt_Cantidad.Name = "Txt_Cantidad";
             this.Txt_Cantidad.Size = new System.Drawing.Size(99, 51);
             this.Txt_Cantidad.TabIndex = 4;
-            this.Txt_Cantidad.Text = "555";
             this.Txt_Cantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Txt_Cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Cantidad_KeyPress);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
-            this.pictureBox1.Location = new System.Drawing.Point(161, 268);
+            this.pictureBox1.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar05;
+            this.pictureBox1.Location = new System.Drawing.Point(164, 252);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 40);
             this.pictureBox1.TabIndex = 3;

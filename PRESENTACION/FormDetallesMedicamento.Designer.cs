@@ -74,8 +74,8 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar01;
-            this.btnSerrar.Location = new System.Drawing.Point(171, 331);
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormVolver01;
+            this.btnSerrar.Location = new System.Drawing.Point(190, 331);
             this.btnSerrar.Name = "btnSerrar";
             this.btnSerrar.Size = new System.Drawing.Size(110, 40);
             this.btnSerrar.TabIndex = 2;
@@ -110,7 +110,7 @@
             this.LblPertenencia.AutoSize = true;
             this.LblPertenencia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPertenencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
-            this.LblPertenencia.Location = new System.Drawing.Point(136, 154);
+            this.LblPertenencia.Location = new System.Drawing.Point(136, 136);
             this.LblPertenencia.Name = "LblPertenencia";
             this.LblPertenencia.Size = new System.Drawing.Size(48, 16);
             this.LblPertenencia.TabIndex = 21;
@@ -148,13 +148,14 @@
             this.lbl_Presentacion.Size = new System.Drawing.Size(48, 16);
             this.lbl_Presentacion.TabIndex = 15;
             this.lbl_Presentacion.Text = "label8";
+            this.lbl_Presentacion.Visible = false;
             // 
             // lbl_Laboratorio
             // 
             this.lbl_Laboratorio.AutoSize = true;
             this.lbl_Laboratorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Laboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
-            this.lbl_Laboratorio.Location = new System.Drawing.Point(136, 131);
+            this.lbl_Laboratorio.Location = new System.Drawing.Point(136, 111);
             this.lbl_Laboratorio.Name = "lbl_Laboratorio";
             this.lbl_Laboratorio.Size = new System.Drawing.Size(48, 16);
             this.lbl_Laboratorio.TabIndex = 14;
@@ -165,7 +166,7 @@
             this.lbl_Tipo.AutoSize = true;
             this.lbl_Tipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Tipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
-            this.lbl_Tipo.Location = new System.Drawing.Point(136, 90);
+            this.lbl_Tipo.Location = new System.Drawing.Point(136, 88);
             this.lbl_Tipo.Name = "lbl_Tipo";
             this.lbl_Tipo.Size = new System.Drawing.Size(48, 16);
             this.lbl_Tipo.TabIndex = 13;
@@ -187,7 +188,7 @@
             this.lbl_Almacen.AutoSize = true;
             this.lbl_Almacen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Almacen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
-            this.lbl_Almacen.Location = new System.Drawing.Point(146, 23);
+            this.lbl_Almacen.Location = new System.Drawing.Point(163, 32);
             this.lbl_Almacen.Name = "lbl_Almacen";
             this.lbl_Almacen.Size = new System.Drawing.Size(48, 16);
             this.lbl_Almacen.TabIndex = 9;

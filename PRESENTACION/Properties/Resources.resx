@@ -172,11 +172,50 @@
   <data name="BotonFormCancelar02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormCancelar02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonFormCancelar03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormCancelar03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormCancelar04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormCancelar04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormCancelar05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormCancelar05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormCancelar06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormCancelar06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormCancelar07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormCancelar07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormCancelar08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormCancelar08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BotonFormConfirmar01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormConfirmar01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonFormConfirmar02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormConfirmar02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmar03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmar03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmar04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmar04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmar05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmar05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmar06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmar06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmar07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmar07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmar08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmar08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormConfirmar09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormConfirmar09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonFormConfirmarEntrada01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormConfirmarEntrada01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -378,6 +417,12 @@
   </data>
   <data name="BotonFormSeleccionarMed07" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonFormSeleccionarMed07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormVolver01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormVolver01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonFormVolver02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonFormVolver02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonGuardar01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonGuardar01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

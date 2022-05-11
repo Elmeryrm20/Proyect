@@ -195,23 +195,23 @@ namespace PRESENTACION
 
         private void Btn_Editar_MouseEnter(object sender, EventArgs e)
         {
-            Btn_Editar.Image = Properties.Resources.BotonFormConfirmar02;
+            Btn_Editar.Image = Properties.Resources.BotonFormConfirmar08;
         }
 
         private void Btn_Editar_MouseLeave(object sender, EventArgs e)
         {
-            Btn_Editar.Image = Properties.Resources.BotonFormConfirmar01;
+            Btn_Editar.Image = Properties.Resources.BotonFormConfirmar07;
 
         }
 
         private void btnSerrar_MouseEnter(object sender, EventArgs e)
         {
-            btnSerrar.Image = Properties.Resources.BotonFormCancelar02;
+            btnSerrar.Image = Properties.Resources.BotonFormCancelar08;
         }
 
         private void btnSerrar_MouseLeave(object sender, EventArgs e)
         {
-            btnSerrar.Image = Properties.Resources.BotonFormCancelar01;
+            btnSerrar.Image = Properties.Resources.BotonFormCancelar07;
 
         }
     }

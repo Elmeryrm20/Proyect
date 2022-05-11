@@ -101,12 +101,12 @@ namespace PRESENTACION
 
         private void btnSerrar_MouseEnter(object sender, EventArgs e)
         {
-            btnSerrar.Image = Properties.Resources.BotonFormCancelar02;
+            btnSerrar.Image = Properties.Resources.BotonFormVolver02;
         }
 
         private void btnSerrar_MouseLeave(object sender, EventArgs e)
         {
-            btnSerrar.Image = Properties.Resources.BotonFormCancelar01;
+            btnSerrar.Image = Properties.Resources.BotonFormVolver01;
 
         }
     }

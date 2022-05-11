@@ -954,11 +954,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo01.ico" />
-    <None Include="Resources\FondoEditarMedicamento01.png" />
-    <None Include="Resources\FondoSalida01.png" />
     <None Include="Resources\FondoEntrada01.png" />
-    <None Include="Resources\FondoDetalles01.png" />
+    <None Include="Resources\FondoSalida01.png" />
+    <None Include="Resources\FondoEditarMedicamento01.png" />
+    <None Include="Resources\BotonFormConfirmar03.png" />
+    <None Include="Resources\BotonFormConfirmar04.png" />
+    <None Include="Resources\BotonFormConfirmar05.png" />
+    <None Include="Resources\BotonFormConfirmar06.png" />
+    <None Include="Resources\BotonFormConfirmar07.png" />
+    <None Include="Resources\BotonFormConfirmar08.png" />
+    <None Include="Resources\BotonFormConfirmar09.png" />
+    <None Include="Resources\BotonFormVolver01.png" />
+    <None Include="Resources\BotonFormVolver02.png" />
+    <None Include="Resources\BotonFormCancelar03.png" />
+    <None Include="Resources\BotonFormCancelar04.png" />
+    <None Include="Resources\BotonFormCancelar05.png" />
+    <None Include="Resources\BotonFormCancelar06.png" />
+    <None Include="Resources\BotonFormCancelar07.png" />
+    <None Include="Resources\BotonFormCancelar08.png" />
     <None Include="Resources\FondoDetalles02.png" />
+    <None Include="Resources\FondoDetalles01.png" />
     <None Include="Resources\DashBoardForma01.png" />
     <None Include="Resources\DashBoardForma02.png" />
     <None Include="Resources\DashBoardForma03.png" />

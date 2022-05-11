@@ -60,8 +60,8 @@
             // 
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar01;
-            this.btnSerrar.Location = new System.Drawing.Point(235, 331);
+            this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar07;
+            this.btnSerrar.Location = new System.Drawing.Point(247, 320);
             this.btnSerrar.Name = "btnSerrar";
             this.btnSerrar.Size = new System.Drawing.Size(110, 40);
             this.btnSerrar.TabIndex = 2;
@@ -95,7 +95,7 @@
             this.CmbPertenencia.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.CmbPertenencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.CmbPertenencia.FormattingEnabled = true;
-            this.CmbPertenencia.Location = new System.Drawing.Point(120, 276);
+            this.CmbPertenencia.Location = new System.Drawing.Point(120, 256);
             this.CmbPertenencia.Name = "CmbPertenencia";
             this.CmbPertenencia.Size = new System.Drawing.Size(135, 23);
             this.CmbPertenencia.TabIndex = 68;
@@ -107,7 +107,7 @@
             this.cmbLab.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.cmbLab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.cmbLab.FormattingEnabled = true;
-            this.cmbLab.Location = new System.Drawing.Point(120, 237);
+            this.cmbLab.Location = new System.Drawing.Point(120, 217);
             this.cmbLab.Name = "cmbLab";
             this.cmbLab.Size = new System.Drawing.Size(135, 23);
             this.cmbLab.TabIndex = 51;
@@ -119,11 +119,12 @@
             this.CmbPresentacion.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.CmbPresentacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.CmbPresentacion.FormattingEnabled = true;
-            this.CmbPresentacion.Location = new System.Drawing.Point(120, 158);
+            this.CmbPresentacion.Location = new System.Drawing.Point(-23, 155);
             this.CmbPresentacion.Name = "CmbPresentacion";
             this.CmbPresentacion.Size = new System.Drawing.Size(135, 23);
             this.CmbPresentacion.TabIndex = 55;
             this.CmbPresentacion.Text = "Selecciona Presentación";
+            this.CmbPresentacion.Visible = false;
             // 
             // txt_fecha
             // 
@@ -131,7 +132,7 @@
             this.txt_fecha.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.txt_fecha.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.txt_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_fecha.Location = new System.Drawing.Point(68, 83);
+            this.txt_fecha.Location = new System.Drawing.Point(68, 99);
             this.txt_fecha.MinDate = new System.DateTime(2000, 3, 9, 0, 0, 0, 0);
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.Size = new System.Drawing.Size(156, 21);
@@ -144,7 +145,7 @@
             this.cmbCaja.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.cmbCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.cmbCaja.FormattingEnabled = true;
-            this.cmbCaja.Location = new System.Drawing.Point(120, 197);
+            this.cmbCaja.Location = new System.Drawing.Point(120, 177);
             this.cmbCaja.Name = "cmbCaja";
             this.cmbCaja.Size = new System.Drawing.Size(135, 23);
             this.cmbCaja.TabIndex = 56;
@@ -157,7 +158,7 @@
             this.cmbTipo.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.cmbTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(120, 119);
+            this.cmbTipo.Location = new System.Drawing.Point(120, 136);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(135, 23);
             this.cmbTipo.TabIndex = 54;
@@ -169,7 +170,7 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(68, 21);
+            this.txtNombre.Location = new System.Drawing.Point(68, 36);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(387, 16);
             this.txtNombre.TabIndex = 49;
@@ -180,8 +181,8 @@
             // 
             this.Btn_Editar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_Editar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Editar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar01;
-            this.Btn_Editar.Location = new System.Drawing.Point(96, 331);
+            this.Btn_Editar.Image = global::PRESENTACION.Properties.Resources.BotonFormConfirmar07;
+            this.Btn_Editar.Location = new System.Drawing.Point(108, 320);
             this.Btn_Editar.Name = "Btn_Editar";
             this.Btn_Editar.Size = new System.Drawing.Size(110, 40);
             this.Btn_Editar.TabIndex = 66;
