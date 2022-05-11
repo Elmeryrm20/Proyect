@@ -56,7 +56,7 @@ namespace PRESENTACION
             dgb_Medicamentos.Columns[3].MinimumWidth = 90;
             dgb_Medicamentos.RowHeadersWidth = 35;
             //dgb_Medicamentos.Columns[5].HeaderText = "PRESENTACIÓN";
-            dgb_Medicamentos.Columns[7].HeaderText = "TIPO";
+            dgb_Medicamentos.Columns[7].HeaderText = "LABORATORIO";
 
             if (Maximizar) MaximizarDataGridView();
             else MinimizarDataGridView();
