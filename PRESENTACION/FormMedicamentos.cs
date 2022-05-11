@@ -29,7 +29,7 @@ namespace PRESENTACION
         public void MaximizarDataGridView()
         {
             dgb_Medicamentos.Columns[7].Visible = true;
-            dgb_Medicamentos.Columns[8].Visible = true;
+            //dgb_Medicamentos.Columns[8].Visible = true;
             dgb_Medicamentos.Columns[5].HeaderText = "PRESENTACIÓN";
 
             Maximizar = true;
@@ -37,7 +37,7 @@ namespace PRESENTACION
         public void MinimizarDataGridView()
         {
             dgb_Medicamentos.Columns[7].Visible = false;
-            dgb_Medicamentos.Columns[8].Visible = false;
+            //dgb_Medicamentos.Columns[8].Visible = false;
             dgb_Medicamentos.Columns[5].HeaderText = "PRESENT.";
             Maximizar = false;
         }
