@@ -29,11 +29,11 @@ namespace PRESENTACION
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txb_Buscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -59,6 +59,7 @@ namespace PRESENTACION
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgb_Medicamentos = new System.Windows.Forms.DataGridView();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +73,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibDetalles)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // txb_Buscar
@@ -106,6 +108,7 @@ namespace PRESENTACION
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmbTipo);
+            this.panel1.Controls.Add(this.LblIndice);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.txb_Buscar);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -275,7 +278,7 @@ namespace PRESENTACION
             // 
             this.LblIndice.AutoSize = true;
             this.LblIndice.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIndice.Location = new System.Drawing.Point(643, 22);
+            this.LblIndice.Location = new System.Drawing.Point(27, 80);
             this.LblIndice.Name = "LblIndice";
             this.LblIndice.Size = new System.Drawing.Size(53, 18);
             this.LblIndice.TabIndex = 6;
@@ -285,10 +288,10 @@ namespace PRESENTACION
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.PibEditar);
             this.panel3.Controls.Add(this.PibSalida);
             this.panel3.Controls.Add(this.PibIngreso);
-            this.panel3.Controls.Add(this.LblIndice);
             this.panel3.Controls.Add(this.PibActualizar);
             this.panel3.Controls.Add(this.PibDetalles);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -302,7 +305,7 @@ namespace PRESENTACION
             this.PibEditar.BackColor = System.Drawing.Color.Transparent;
             this.PibEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibEditar.Image = global::PRESENTACION.Properties.Resources.BotonFormEditar01;
-            this.PibEditar.Location = new System.Drawing.Point(391, 11);
+            this.PibEditar.Location = new System.Drawing.Point(360, 11);
             this.PibEditar.Name = "PibEditar";
             this.PibEditar.Size = new System.Drawing.Size(110, 40);
             this.PibEditar.TabIndex = 7;
@@ -316,7 +319,7 @@ namespace PRESENTACION
             this.PibSalida.BackColor = System.Drawing.Color.Transparent;
             this.PibSalida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibSalida.Image = global::PRESENTACION.Properties.Resources.BotonFormSalida01;
-            this.PibSalida.Location = new System.Drawing.Point(275, 11);
+            this.PibSalida.Location = new System.Drawing.Point(244, 11);
             this.PibSalida.Name = "PibSalida";
             this.PibSalida.Size = new System.Drawing.Size(110, 40);
             this.PibSalida.TabIndex = 5;
@@ -330,7 +333,7 @@ namespace PRESENTACION
             this.PibIngreso.BackColor = System.Drawing.Color.Transparent;
             this.PibIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibIngreso.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
-            this.PibIngreso.Location = new System.Drawing.Point(159, 11);
+            this.PibIngreso.Location = new System.Drawing.Point(128, 11);
             this.PibIngreso.Name = "PibIngreso";
             this.PibIngreso.Size = new System.Drawing.Size(110, 40);
             this.PibIngreso.TabIndex = 4;
@@ -344,7 +347,7 @@ namespace PRESENTACION
             this.PibActualizar.BackColor = System.Drawing.Color.Transparent;
             this.PibActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibActualizar.Image = global::PRESENTACION.Properties.Resources.BotonFormActualizar01;
-            this.PibActualizar.Location = new System.Drawing.Point(507, 11);
+            this.PibActualizar.Location = new System.Drawing.Point(476, 11);
             this.PibActualizar.Name = "PibActualizar";
             this.PibActualizar.Size = new System.Drawing.Size(110, 40);
             this.PibActualizar.TabIndex = 2;
@@ -358,7 +361,7 @@ namespace PRESENTACION
             this.PibDetalles.BackColor = System.Drawing.Color.Transparent;
             this.PibDetalles.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibDetalles.Image = global::PRESENTACION.Properties.Resources.BotonFormDetalles01;
-            this.PibDetalles.Location = new System.Drawing.Point(43, 11);
+            this.PibDetalles.Location = new System.Drawing.Point(12, 11);
             this.PibDetalles.Name = "PibDetalles";
             this.PibDetalles.Size = new System.Drawing.Size(110, 40);
             this.PibDetalles.TabIndex = 3;
@@ -399,31 +402,31 @@ namespace PRESENTACION
             this.dgb_Medicamentos.AllowUserToAddRows = false;
             this.dgb_Medicamentos.AllowUserToDeleteRows = false;
             this.dgb_Medicamentos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgb_Medicamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgb_Medicamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgb_Medicamentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgb_Medicamentos.BackgroundColor = System.Drawing.Color.PeachPuff;
             this.dgb_Medicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgb_Medicamentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(125)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgb_Medicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(125)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgb_Medicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgb_Medicamentos.ColumnHeadersHeight = 25;
             this.dgb_Medicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgb_Medicamentos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgb_Medicamentos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgb_Medicamentos.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgb_Medicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgb_Medicamentos.EnableHeadersVisualStyles = false;
             this.dgb_Medicamentos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
@@ -432,17 +435,17 @@ namespace PRESENTACION
             this.dgb_Medicamentos.Name = "dgb_Medicamentos";
             this.dgb_Medicamentos.ReadOnly = true;
             this.dgb_Medicamentos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgb_Medicamentos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgb_Medicamentos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgb_Medicamentos.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Humnst777 BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgb_Medicamentos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgb_Medicamentos.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgb_Medicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgb_Medicamentos.Size = new System.Drawing.Size(660, 242);
             this.dgb_Medicamentos.TabIndex = 2;
@@ -450,6 +453,18 @@ namespace PRESENTACION
             this.dgb_Medicamentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_Medicamentos_CellDoubleClick);
             this.dgb_Medicamentos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgb_Medicamentos_CellFormatting);
             this.dgb_Medicamentos.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgb_Medicamentos_ColumnHeaderMouseClick);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.BotonFormInforme01;
+            this.pictureBox4.Location = new System.Drawing.Point(592, 11);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(110, 40);
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
             // 
             // FormMedicamentos
             // 
@@ -473,7 +488,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.Pib_Filtrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).EndInit();
@@ -481,6 +495,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibDetalles)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgb_Medicamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -511,5 +526,6 @@ namespace PRESENTACION
         public System.Windows.Forms.PictureBox PibSalida;
         public System.Windows.Forms.PictureBox PibIngreso;
         private System.Windows.Forms.CheckBox ChbColores;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
