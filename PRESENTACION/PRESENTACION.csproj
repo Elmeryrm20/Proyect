@@ -127,6 +127,12 @@
     <Compile Include="FormConfiguracion.Designer.cs">
       <DependentUpon>FormConfiguracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormControldeInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControldeInventarios.Designer.cs">
+      <DependentUpon>FormControldeInventarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDetallesMedicamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConfiguracion.resx">
       <DependentUpon>FormConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControldeInventarios.resx">
+      <DependentUpon>FormControldeInventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallesMedicamento.resx">
       <DependentUpon>FormDetallesMedicamento.cs</DependentUpon>
