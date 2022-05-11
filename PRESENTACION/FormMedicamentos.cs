@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using SpreadsheetLight;
 
 namespace PRESENTACION
 {
@@ -519,6 +520,59 @@ namespace PRESENTACION
             //    else FomarteandoDataGridView(false);
 
             //}
+        }
+
+        private void btn_Informe_Click(object sender, EventArgs e)
+        {
+            SLDocument documento = new SLDocument();
+            int Cantidad = int.Parse(dgb_Medicamentos.RowCount.ToString());
+            documento.SetCellValue("A1", "ID");
+            documento.SetCellValue("B1", "MEDICAMENTO");
+            documento.SetCellValue("C1", "EXISTENCIA");
+            documento.SetCellValue("D1", "FEC. VENCIMIENTO");
+            documento.SetCellValue("E1", "ALMACEN");
+            documento.SetCellValue("F1", "PRESENTACION");
+            documento.SetCellValue("G1", "PERTENENCIA");
+            documento.SetCellValue("H1", "LABORATORIO");
+
+            SLStyle style = new SLStyle();
+            style.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.TopBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.RightBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Border.BottomBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            style.Fill.SetPattern(DocumentFormat.OpenXml.Spreadsheet.PatternValues.Solid, System.Drawing.Color.FromArgb(225, 99, 71), System.Drawing.Color.Red);
+            style.Font.FontSize = 10;
+            style.Font.FontName = "Book Antique";
+            style.Font.Bold = true;
+            documento.SetCellStyle("A1", "H1", style);
+            documento.AutoFitColumn("A", "H");
+
+            for (int i = 0; i < Cantidad; i++)
+            {
+                int j = i + 2;
+                documento.SetCellValue(j, 1, dgb_Medicamentos.Rows[i].Cells[0].Value.ToString());
+                documento.SetCellValue(j, 2, dgb_Medicamentos.Rows[i].Cells[1].Value.ToString());
+                documento.SetCellValue(j, 3, dgb_Medicamentos.Rows[i].Cells[2].Value.ToString());
+                documento.SetCellValue(j, 4, Convert.ToDateTime(dgb_Medicamentos.Rows[i].Cells[3].Value.ToString()).ToString("d"));
+                documento.SetCellValue(j, 5, dgb_Medicamentos.Rows[i].Cells[4].Value.ToString());
+                documento.SetCellValue(j, 6, dgb_Medicamentos.Rows[i].Cells[5].Value.ToString());
+                documento.SetCellValue(j, 7, dgb_Medicamentos.Rows[i].Cells[6].Value.ToString());
+                documento.SetCellValue(j, 8, dgb_Medicamentos.Rows[i].Cells[7].Value.ToString());
+
+            }
+            SLStyle estilos = new SLStyle();
+            estilos.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.TopBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.RightBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Border.BottomBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
+            estilos.Font.FontSize = 10;
+            estilos.Font.FontName = "Book Antique";
+            documento.SetCellStyle("A2", "H" + (Cantidad + 1), estilos);
+            documento.AutoFitColumn("A", "H");
+            string direccion = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            direccion = direccion + "\\" + "Informe_Medicamentos_" + DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
+            documento.SaveAs(direccion);
+            MessageBox.Show("Exportacion exitosa archivo guardado en Documentos", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }

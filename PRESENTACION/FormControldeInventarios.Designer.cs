@@ -37,16 +37,19 @@
             this.txb_Buscar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PibActualizar = new System.Windows.Forms.PictureBox();
+            this.PibIngreso = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.PibIngreso);
             this.panel1.Controls.Add(this.txb_Buscar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,9 +78,9 @@
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(646, 63);
+            this.panel4.Location = new System.Drawing.Point(669, 63);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(82, 285);
+            this.panel4.Size = new System.Drawing.Size(59, 285);
             this.panel4.TabIndex = 3;
             // 
             // panel5
@@ -86,7 +89,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(71, 63);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(575, 285);
+            this.panel5.Size = new System.Drawing.Size(598, 285);
             this.panel5.TabIndex = 4;
             // 
             // dataGridView1
@@ -95,7 +98,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(575, 285);
+            this.dataGridView1.Size = new System.Drawing.Size(598, 285);
             this.dataGridView1.TabIndex = 0;
             // 
             // txb_Buscar
@@ -131,6 +134,17 @@
             this.PibActualizar.TabIndex = 3;
             this.PibActualizar.TabStop = false;
             // 
+            // PibIngreso
+            // 
+            this.PibIngreso.BackColor = System.Drawing.Color.Transparent;
+            this.PibIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PibIngreso.Image = global::PRESENTACION.Properties.Resources.BotonFormIngreso01;
+            this.PibIngreso.Location = new System.Drawing.Point(559, 12);
+            this.PibIngreso.Name = "PibIngreso";
+            this.PibIngreso.Size = new System.Drawing.Size(110, 40);
+            this.PibIngreso.TabIndex = 17;
+            this.PibIngreso.TabStop = false;
+            // 
             // FormControldeInventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +165,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibActualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PibIngreso)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -166,5 +181,6 @@
         private System.Windows.Forms.TextBox txb_Buscar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox PibActualizar;
+        public System.Windows.Forms.PictureBox PibIngreso;
     }
 }
