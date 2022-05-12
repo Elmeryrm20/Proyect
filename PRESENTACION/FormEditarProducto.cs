@@ -28,7 +28,6 @@ namespace PRESENTACION
             this.id_Medicamento = id_Medicamento;
             ObtenerTipo();
             ObtenerCaja();
-            ObtenerPresentacion();
             ObtenerLaboratorio();
             ObtenerPertenencia();
             Consulta_Editar_Medicamento();
@@ -40,14 +39,6 @@ namespace PRESENTACION
             cmbTipo.DisplayMember = "tip_descripcion";
             cmbTipo.DataSource = consultas.tipo();
         }
-
-        void ObtenerPresentacion()
-        {
-            CmbPresentacion.DisplayMember = "pre_descripcion";
-            CmbPresentacion.DataSource = consultas.presentacion();
-
-        }
-
         void ObtenerCaja()
         {
             cmbCaja.DisplayMember = "Alm_Descripcion";
@@ -89,12 +80,12 @@ namespace PRESENTACION
                     ptb_Imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     byte[] img = ms.ToArray();
 
-                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex +1);
+                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex +1);
                 }
                 else
                 {
                     byte[] img = null;
-                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), CmbPresentacion.SelectedIndex + 1, cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
+                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
                 }
                 MessageBox.Show("Los cambios Guardados", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 SeleccionarFila();

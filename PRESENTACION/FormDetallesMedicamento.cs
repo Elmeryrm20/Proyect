@@ -53,8 +53,7 @@ namespace PRESENTACION
             lbl_F_Vencimiento.Text = Convert.ToDateTime(dt.Rows[0][4]).ToShortDateString();
             lbl_Tipo.Text = dt.Rows[0][5].ToString();
             lbl_Laboratorio.Text = dt.Rows[0][6].ToString();
-            lbl_Presentacion.Text = dt.Rows[0][7].ToString();
-            LblPertenencia.Text = dt.Rows[0][8].ToString();
+            LblPertenencia.Text = dt.Rows[0][7].ToString();
 
 
             lbl_Existencia.Text = (Ingreso - Egreso).ToString();

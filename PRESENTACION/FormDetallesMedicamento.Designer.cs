@@ -35,7 +35,6 @@
             this.LblPertenencia = new System.Windows.Forms.Label();
             this.lbl_Porcentage = new System.Windows.Forms.Label();
             this.lbl_Existencia = new System.Windows.Forms.Label();
-            this.lbl_Presentacion = new System.Windows.Forms.Label();
             this.lbl_Laboratorio = new System.Windows.Forms.Label();
             this.lbl_Tipo = new System.Windows.Forms.Label();
             this.lbl_F_Vencimiento = new System.Windows.Forms.Label();
@@ -91,7 +90,6 @@
             this.panel2.Controls.Add(this.LblPertenencia);
             this.panel2.Controls.Add(this.lbl_Porcentage);
             this.panel2.Controls.Add(this.lbl_Existencia);
-            this.panel2.Controls.Add(this.lbl_Presentacion);
             this.panel2.Controls.Add(this.lbl_Laboratorio);
             this.panel2.Controls.Add(this.lbl_Tipo);
             this.panel2.Controls.Add(this.lbl_F_Vencimiento);
@@ -137,18 +135,6 @@
             this.lbl_Existencia.TabIndex = 17;
             this.lbl_Existencia.Text = "555";
             this.lbl_Existencia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_Presentacion
-            // 
-            this.lbl_Presentacion.AutoSize = true;
-            this.lbl_Presentacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Presentacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(42)))));
-            this.lbl_Presentacion.Location = new System.Drawing.Point(136, 68);
-            this.lbl_Presentacion.Name = "lbl_Presentacion";
-            this.lbl_Presentacion.Size = new System.Drawing.Size(48, 16);
-            this.lbl_Presentacion.TabIndex = 15;
-            this.lbl_Presentacion.Text = "label8";
-            this.lbl_Presentacion.Visible = false;
             // 
             // lbl_Laboratorio
             // 
@@ -253,7 +239,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox btnSerrar;
         private System.Windows.Forms.Label lbl_Nombre;
-        private System.Windows.Forms.Label lbl_Presentacion;
         private System.Windows.Forms.Label lbl_Laboratorio;
         private System.Windows.Forms.Label lbl_Tipo;
         private System.Windows.Forms.Label lbl_F_Vencimiento;

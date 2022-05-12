@@ -127,28 +127,6 @@ namespace DATOS
             return tabla;
         }
 
-        public DataTable presentacion()
-        {
-            Conexion.connection.Open();
-
-            MySqlCommand comando = new MySqlCommand("SP_Presentacion", Conexion.connection);
-            comando.CommandType = CommandType.StoredProcedure;
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
-            DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
-            try
-            {
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
-            Conexion.connection.Close();
-            return tabla;
-        }
-
         public DataTable caja()
         {
             Conexion.connection.Open();
@@ -568,7 +546,7 @@ namespace DATOS
             }
             Conexion.connection.Close();
         }
-        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, int Pre_C, byte[] imagen, int Pertenencia)
+        public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, string Fecha_I, int Med_Total_E, byte[] imagen, int Pertenencia)
         {
 
             Conexion.connection.Open();
@@ -579,7 +557,6 @@ namespace DATOS
             cmd.Parameters.AddWithValue("cantidad_I", Med_Total_I);
             cmd.Parameters.AddWithValue("fecha_i", Fecha_I);
             cmd.Parameters.AddWithValue("cantidad_E", Med_Total_E);
-            cmd.Parameters.AddWithValue("pre", Pre_C);
             cmd.Parameters.AddWithValue("lab", Laboratorio);
             cmd.Parameters.AddWithValue("tipo", Tipo);
             cmd.Parameters.AddWithValue("alm", caja);
@@ -761,7 +738,7 @@ namespace DATOS
             //Conexion.connection.Close();
 
         }
-        public void SP_Editar_Producto(int codigo, string composicion, string fecha, int pre, int lab, int tip, int alm, byte[] imagen, int per)
+        public void SP_Editar_Producto(int codigo, string composicion, string fecha, int lab, int tip, int alm, byte[] imagen, int per)
         {
             Conexion.connection.Open();
 
@@ -770,7 +747,6 @@ namespace DATOS
             cmd.Parameters.AddWithValue("codigo", codigo);
             cmd.Parameters.AddWithValue("composicion", composicion);
             cmd.Parameters.AddWithValue("fecha", fecha);
-            cmd.Parameters.AddWithValue("pre", pre);
             cmd.Parameters.AddWithValue("lab", lab);
             cmd.Parameters.AddWithValue("tip", tip);
             cmd.Parameters.AddWithValue("alm", alm);

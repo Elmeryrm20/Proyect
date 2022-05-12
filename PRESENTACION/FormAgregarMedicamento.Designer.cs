@@ -34,7 +34,6 @@ namespace PRESENTACION
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.LblMuestra1 = new System.Windows.Forms.Label();
             this.cmbLab = new System.Windows.Forms.ComboBox();
-            this.CmbPresentacion = new System.Windows.Forms.ComboBox();
             this.cmbCaja = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.textGramaje = new System.Windows.Forms.TextBox();
@@ -42,7 +41,6 @@ namespace PRESENTACION
             this.textNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +58,6 @@ namespace PRESENTACION
             this.PibImagen = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -79,7 +76,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -124,7 +120,7 @@ namespace PRESENTACION
             this.cmbLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.cmbLab.FormattingEnabled = true;
-            this.cmbLab.Location = new System.Drawing.Point(193, 193);
+            this.cmbLab.Location = new System.Drawing.Point(191, 294);
             this.cmbLab.Name = "cmbLab";
             this.cmbLab.Size = new System.Drawing.Size(130, 21);
             this.cmbLab.TabIndex = 3;
@@ -132,26 +128,13 @@ namespace PRESENTACION
             this.cmbLab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbLab_KeyPress);
             this.cmbLab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbLab_MouseDown);
             // 
-            // CmbPresentacion
-            // 
-            this.CmbPresentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmbPresentacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.CmbPresentacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
-            this.CmbPresentacion.FormattingEnabled = true;
-            this.CmbPresentacion.Location = new System.Drawing.Point(195, 381);
-            this.CmbPresentacion.Name = "CmbPresentacion";
-            this.CmbPresentacion.Size = new System.Drawing.Size(130, 21);
-            this.CmbPresentacion.TabIndex = 9;
-            this.CmbPresentacion.Text = "Seleccionar";
-            this.CmbPresentacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbPresentacion_KeyPress);
-            // 
             // cmbCaja
             // 
             this.cmbCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.cmbCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.cmbCaja.FormattingEnabled = true;
-            this.cmbCaja.Location = new System.Drawing.Point(194, 424);
+            this.cmbCaja.Location = new System.Drawing.Point(193, 381);
             this.cmbCaja.Name = "cmbCaja";
             this.cmbCaja.Size = new System.Drawing.Size(130, 21);
             this.cmbCaja.TabIndex = 10;
@@ -179,7 +162,7 @@ namespace PRESENTACION
             this.textGramaje.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textGramaje.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.textGramaje.ForeColor = System.Drawing.Color.White;
-            this.textGramaje.Location = new System.Drawing.Point(117, 297);
+            this.textGramaje.Location = new System.Drawing.Point(117, 152);
             this.textGramaje.MaxLength = 20;
             this.textGramaje.Name = "textGramaje";
             this.textGramaje.Size = new System.Drawing.Size(194, 16);
@@ -195,7 +178,7 @@ namespace PRESENTACION
             this.textCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textCantidad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.textCantidad.ForeColor = System.Drawing.Color.White;
-            this.textCantidad.Location = new System.Drawing.Point(117, 152);
+            this.textCantidad.Location = new System.Drawing.Point(117, 195);
             this.textCantidad.MaxLength = 5;
             this.textCantidad.Name = "textCantidad";
             this.textCantidad.Size = new System.Drawing.Size(194, 16);
@@ -240,23 +223,11 @@ namespace PRESENTACION
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(113, 426);
+            this.label11.Location = new System.Drawing.Point(112, 383);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 16);
             this.label11.TabIndex = 43;
             this.label11.Text = "Almacén:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(140, 383);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 16);
-            this.label9.TabIndex = 42;
-            this.label9.Text = "Para:";
             // 
             // label8
             // 
@@ -264,11 +235,11 @@ namespace PRESENTACION
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(142, 340);
+            this.label8.Location = new System.Drawing.Point(101, 340);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 16);
+            this.label8.Size = new System.Drawing.Size(86, 16);
             this.label8.TabIndex = 39;
-            this.label8.Text = "Tipo:";
+            this.label8.Text = "Presentación:";
             // 
             // label6
             // 
@@ -288,7 +259,7 @@ namespace PRESENTACION
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(105, 195);
+            this.label5.Location = new System.Drawing.Point(103, 296);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 34;
@@ -305,7 +276,7 @@ namespace PRESENTACION
             this.CmbPertenencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.CmbPertenencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.CmbPertenencia.FormattingEnabled = true;
-            this.CmbPertenencia.Location = new System.Drawing.Point(193, 469);
+            this.CmbPertenencia.Location = new System.Drawing.Point(192, 426);
             this.CmbPertenencia.Name = "CmbPertenencia";
             this.CmbPertenencia.Size = new System.Drawing.Size(130, 21);
             this.CmbPertenencia.TabIndex = 52;
@@ -318,7 +289,7 @@ namespace PRESENTACION
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(103, 471);
+            this.label2.Location = new System.Drawing.Point(102, 428);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 53;
@@ -396,7 +367,7 @@ namespace PRESENTACION
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = global::PRESENTACION.Properties.Resources.ComboBox04;
-            this.pictureBox10.Location = new System.Drawing.Point(98, 464);
+            this.pictureBox10.Location = new System.Drawing.Point(97, 421);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(230, 30);
             this.pictureBox10.TabIndex = 55;
@@ -405,7 +376,7 @@ namespace PRESENTACION
             // PibAgregarPertenencia
             // 
             this.PibAgregarPertenencia.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
-            this.PibAgregarPertenencia.Location = new System.Drawing.Point(341, 467);
+            this.PibAgregarPertenencia.Location = new System.Drawing.Point(340, 424);
             this.PibAgregarPertenencia.Name = "PibAgregarPertenencia";
             this.PibAgregarPertenencia.Size = new System.Drawing.Size(24, 24);
             this.PibAgregarPertenencia.TabIndex = 54;
@@ -438,21 +409,11 @@ namespace PRESENTACION
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::PRESENTACION.Properties.Resources.ComboBox04;
-            this.pictureBox8.Location = new System.Drawing.Point(99, 419);
+            this.pictureBox8.Location = new System.Drawing.Point(98, 376);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(230, 30);
             this.pictureBox8.TabIndex = 50;
             this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = global::PRESENTACION.Properties.Resources.ComboBox04;
-            this.pictureBox7.Location = new System.Drawing.Point(99, 376);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(230, 30);
-            this.pictureBox7.TabIndex = 50;
-            this.pictureBox7.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -468,7 +429,7 @@ namespace PRESENTACION
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::PRESENTACION.Properties.Resources.ComboBox04;
-            this.pictureBox2.Location = new System.Drawing.Point(99, 188);
+            this.pictureBox2.Location = new System.Drawing.Point(97, 289);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(230, 30);
             this.pictureBox2.TabIndex = 50;
@@ -488,7 +449,7 @@ namespace PRESENTACION
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::PRESENTACION.Properties.Resources.TextBox03;
-            this.pictureBox3.Location = new System.Drawing.Point(99, 145);
+            this.pictureBox3.Location = new System.Drawing.Point(99, 188);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(230, 30);
             this.pictureBox3.TabIndex = 50;
@@ -507,7 +468,7 @@ namespace PRESENTACION
             // PibAgregarAlmacen
             // 
             this.PibAgregarAlmacen.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
-            this.PibAgregarAlmacen.Location = new System.Drawing.Point(342, 422);
+            this.PibAgregarAlmacen.Location = new System.Drawing.Point(341, 379);
             this.PibAgregarAlmacen.Name = "PibAgregarAlmacen";
             this.PibAgregarAlmacen.Size = new System.Drawing.Size(24, 24);
             this.PibAgregarAlmacen.TabIndex = 49;
@@ -518,7 +479,7 @@ namespace PRESENTACION
             // 
             this.Pib_Agregar_Lab.BackColor = System.Drawing.Color.Transparent;
             this.Pib_Agregar_Lab.Image = global::PRESENTACION.Properties.Resources.BotonFormAgregarNuevo01;
-            this.Pib_Agregar_Lab.Location = new System.Drawing.Point(342, 191);
+            this.Pib_Agregar_Lab.Location = new System.Drawing.Point(340, 292);
             this.Pib_Agregar_Lab.Name = "Pib_Agregar_Lab";
             this.Pib_Agregar_Lab.Size = new System.Drawing.Size(24, 24);
             this.Pib_Agregar_Lab.TabIndex = 48;
@@ -543,7 +504,7 @@ namespace PRESENTACION
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::PRESENTACION.Properties.Resources.TextBox03;
-            this.pictureBox5.Location = new System.Drawing.Point(99, 290);
+            this.pictureBox5.Location = new System.Drawing.Point(99, 145);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(230, 30);
             this.pictureBox5.TabIndex = 50;
@@ -588,11 +549,9 @@ namespace PRESENTACION
             this.Controls.Add(this.PibImagen);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.CmbPresentacion);
             this.Controls.Add(this.cmbCaja);
             this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -600,7 +559,6 @@ namespace PRESENTACION
             this.Controls.Add(this.cmbLab);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox4);
@@ -627,7 +585,6 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.PibImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -649,7 +606,6 @@ namespace PRESENTACION
         private System.Windows.Forms.Label LblMuestra1;
         private System.Windows.Forms.PictureBox Pib_Agregar_Lab;
         private System.Windows.Forms.ComboBox cmbLab;
-        private System.Windows.Forms.ComboBox CmbPresentacion;
         private System.Windows.Forms.ComboBox cmbCaja;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.TextBox textGramaje;
@@ -659,7 +615,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox PibAgregarMedicamento;
         private System.Windows.Forms.PictureBox PibImagen;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -669,7 +624,6 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;

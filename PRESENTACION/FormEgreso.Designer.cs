@@ -88,7 +88,7 @@
             // LblStock
             // 
             this.LblStock.BackColor = System.Drawing.Color.Transparent;
-            this.LblStock.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.LblStock.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.LblStock.ForeColor = System.Drawing.Color.Tomato;
             this.LblStock.Location = new System.Drawing.Point(227, 186);
             this.LblStock.Name = "LblStock";

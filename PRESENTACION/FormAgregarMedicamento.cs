@@ -32,13 +32,6 @@ namespace PRESENTACION
             cmbTipo.DataSource = consultas.tipo();
         }
 
-        void ObtenerPresentacion()
-        {
-            CmbPresentacion.DisplayMember = "pre_descripcion";
-            CmbPresentacion.DataSource = consultas.presentacion();
-
-        }
-
         void ObtenerCaja()
         {
             cmbCaja.DisplayMember = "Alm_Descripcion";
@@ -62,7 +55,6 @@ namespace PRESENTACION
         {
             ObtenerTipo();
             ObtenerCaja();
-            ObtenerPresentacion();
             ObtenerLaboratorio();
             ObtenerPertenencia();
             RellenarPersonal();
@@ -72,7 +64,6 @@ namespace PRESENTACION
             dtFecha_Vencimiento.Value = DateTime.Now;
             cmbLab.Text = "Seleccionar";
             cmbTipo.Text = "Seleccionar";
-            CmbPresentacion.Text = "Seleccionar";
             cmbCaja.Text = "Seleccionar";
             CmbPertenencia.Text = "Seleccionar";
         }
@@ -172,16 +163,6 @@ namespace PRESENTACION
                 errorProvider1.SetError(cmbTipo, "");
             }
 
-            if (CmbPresentacion.Text == "Seleccionar")
-            {
-                errorProvider1.SetError(CmbPresentacion, "Por favor, seleccione una presentacion.");
-                valor = false;
-            }
-            else
-            {
-                errorProvider1.SetError(CmbPresentacion, "");
-            }
-
             if (cmbCaja.Text == "Seleccionar")
             {
                 errorProvider1.SetError(cmbCaja, "Por favor, seleccione una caja.");
@@ -244,7 +225,7 @@ namespace PRESENTACION
                     else img = null;
 
                     string FechaActual = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss");
-                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), 0, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, CmbPresentacion.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
+                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), 0, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, img, CmbPertenencia.SelectedIndex + 1);
                     int CodigoMedicamento = consultas.D_UltimoIdIngresado();
 
                     //string Colaborador;
@@ -275,7 +256,6 @@ namespace PRESENTACION
             cmbCaja.Text = "Seleccionar";
             cmbLab.Text = "Seleccionar";
             cmbTipo.Text = "Seleccionar";
-            CmbPresentacion.Text = "Seleccionar";
             dtFecha_Vencimiento.Value = DateTime.Now;
             PibImagen.Image = Properties.Resources.Imagen01;
             CmbPertenencia.Text = "Seleccionar";
