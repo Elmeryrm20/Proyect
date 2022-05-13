@@ -42,10 +42,12 @@ namespace PRESENTACION
                 errorProvider1.SetError(CmbEncargado, "Seleccione un coordinador");
                 return false;
             }
-            else
+            if (CmbNacionalidad.SelectedIndex == -1 || CmbNacionalidad.Text == "Seleccionar")
             {
-                return true;
+                errorProvider1.SetError(CmbNacionalidad, "Seleccione una Nacionalidad");
+                return false;
             }
+            return true;
         }
 
         private void Imprimir(object sender, PrintPageEventArgs e)
@@ -115,8 +117,8 @@ namespace PRESENTACION
                     if (semana >= 1 && semana <= 7) semana = 1;
                     else if (semana > 7 && semana <= 14) semana = 2;
                     else if (semana > 14 && semana <= 21) semana = 3;
-                    else if(semana > 21 && semana <=28) semana =4;
-                    else  semana =5;
+                    else if (semana > 21 && semana <= 28) semana = 4;
+                    else semana = 5;
 
                     //string Colaborador;
                     //if (CmbColaborador.SelectedIndex < 0)
@@ -127,7 +129,7 @@ namespace PRESENTACION
                     //{
                     //    Colaborador = Colaboradores[CmbColaborador.SelectedIndex,0];
                     //}
-                   consultas.D_ActualizarEgreso(fecha, DNI, CmbNacionalidad.Text, Colaboradores[CmbColaborador.SelectedIndex, 0], Coordinadores[CmbEncargado.SelectedIndex, 0]);
+                    consultas.D_ActualizarEgreso(fecha, DNI, CmbNacionalidad.Text, Colaboradores[CmbColaborador.SelectedIndex, 0], Coordinadores[CmbEncargado.SelectedIndex, 0]);
                     int CodigoEgreso = consultas.D_UltimoIdIngresado();
 
                     consultas.AbrirConexion();
@@ -177,7 +179,8 @@ namespace PRESENTACION
 
             CmbColaborador.SelectedIndex = 0;
             CmbEncargado.SelectedIndex = 0;
-            CmbNacionalidad.SelectedIndex = 0;
+            //CmbNacionalidad.SelectedIndex = 0;
+            CmbNacionalidad.Text = "Seleccionar";
 
             DgvSalida.Rows.Clear();
             PibAgregarMed.Image = Properties.Resources.BotonFormSeleccionarMed05;
@@ -223,7 +226,7 @@ namespace PRESENTACION
 
             CmbNacionalidad.Items.Add("Peruano");
             CmbNacionalidad.Items.Add("Extranjero");
-            CmbNacionalidad.SelectedIndex = 0;
+            //CmbNacionalidad.SelectedIndex = 0;
 
             DesignDataGridView();
 

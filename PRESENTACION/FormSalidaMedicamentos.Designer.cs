@@ -54,6 +54,11 @@ namespace PRESENTACION
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.DgvSalida = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PibGuardarImprimir = new System.Windows.Forms.PictureBox();
             this.PibLimpiar = new System.Windows.Forms.PictureBox();
             this.PibConfirmar = new System.Windows.Forms.PictureBox();
@@ -61,11 +66,6 @@ namespace PRESENTACION
             this.PibAgregarMed = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -117,11 +117,11 @@ namespace PRESENTACION
             this.LblTrabajador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.LblTrabajador.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTrabajador.ForeColor = System.Drawing.Color.White;
-            this.LblTrabajador.Location = new System.Drawing.Point(39, 56);
+            this.LblTrabajador.Location = new System.Drawing.Point(55, 56);
             this.LblTrabajador.Name = "LblTrabajador";
-            this.LblTrabajador.Size = new System.Drawing.Size(69, 16);
+            this.LblTrabajador.Size = new System.Drawing.Size(53, 16);
             this.LblTrabajador.TabIndex = 2;
-            this.LblTrabajador.Text = "Voluntario:";
+            this.LblTrabajador.Text = "Usuario:";
             // 
             // LblEncargado
             // 
@@ -363,6 +363,42 @@ namespace PRESENTACION
             this.DgvSalida.TabIndex = 9;
             this.DgvSalida.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSalida_CellClick);
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Código";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            this.Column4.Width = 71;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Descripción";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 95;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Cantidad";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 79;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Almacén";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 78;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Present.";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 73;
+            // 
             // PibGuardarImprimir
             // 
             this.PibGuardarImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -431,42 +467,6 @@ namespace PRESENTACION
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Código";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            this.Column4.Width = 69;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Descripción";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 95;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Cantidad";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 79;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Almacén";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 78;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Present.";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 73;
             // 
             // FormSalidaMedicamentos
             // 
