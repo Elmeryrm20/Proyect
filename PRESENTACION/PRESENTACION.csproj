@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationRevision>24</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -62,7 +62,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Logo01.ico</ApplicationIcon>
+    <ApplicationIcon>Logo02.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
@@ -963,6 +963,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo01.ico" />
+    <Content Include="Logo02.ico" />
     <None Include="Resources\Logo02.ico" />
     <None Include="Resources\LogoCruzRoja03.jpeg" />
     <None Include="Resources\FondoEntrada01.png" />
