@@ -124,10 +124,9 @@ namespace PRESENTACION
             documento.SetCellValue("A1", "ID");
             documento.SetCellValue("B1", "MEDICAMENTO");
             documento.SetCellValue("C1", "CANTIDAD");
-            documento.SetCellValue("D1", "FECHA DE INGRESO");
-            documento.SetCellValue("E1", "HORA DE INGRESO");
-            documento.SetCellValue("F1", "Nº SEMANA");
-            documento.SetCellValue("G1", "TRABAJADOR");
+            documento.SetCellValue("D1", "FECHA DE EGRESO");
+            documento.SetCellValue("E1", "HORA DE EGRESO");
+            documento.SetCellValue("F1", "USUARIO");
             SLStyle style = new SLStyle();
             style.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
             style.Border.TopBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
@@ -137,8 +136,8 @@ namespace PRESENTACION
             style.Font.FontSize = 10;
             style.Font.FontName = "Book Antique";
             style.Font.Bold = true;
-            documento.SetCellStyle("A1", "G1", style);
-            documento.AutoFitColumn("A", "G");
+            documento.SetCellStyle("A1", "F1", style);
+            documento.AutoFitColumn("A", "F");
 
             for (int i = 0; i < Cantidad; i++)
             {
@@ -149,7 +148,6 @@ namespace PRESENTACION
                 documento.SetCellValue(j, 4, DgvHistorialEgreso.Rows[i].Cells[3].Value.ToString());
                 documento.SetCellValue(j, 5, DgvHistorialEgreso.Rows[i].Cells[4].Value.ToString());
                 documento.SetCellValue(j, 6, DgvHistorialEgreso.Rows[i].Cells[5].Value.ToString());
-                documento.SetCellValue(j, 7, DgvHistorialEgreso.Rows[i].Cells[6].Value.ToString());
             }
             SLStyle estilos = new SLStyle();
             estilos.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
@@ -158,8 +156,8 @@ namespace PRESENTACION
             estilos.Border.BottomBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
             estilos.Font.FontSize = 10;
             estilos.Font.FontName = "Book Antique";
-            documento.SetCellStyle("A2", "G" + (Cantidad + 1), estilos);
-            documento.AutoFitColumn("A", "G");
+            documento.SetCellStyle("A2", "F" + (Cantidad + 1), estilos);
+            documento.AutoFitColumn("A", "F");
 
             string direccion = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             direccion = direccion + "\\" + "Informe_Egreso_" + DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
