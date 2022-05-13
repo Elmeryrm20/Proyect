@@ -224,6 +224,7 @@
             this.Name = "FormDetallesMedicamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FoomDetallesMedicamento";
+            this.Load += new System.EventHandler(this.FormDetallesMedicamento_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             this.panel2.ResumeLayout(false);

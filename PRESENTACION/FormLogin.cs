@@ -258,8 +258,6 @@ namespace PRESENTACION
 
         #region Métodos de los TextBox
 
-
-
         //private bool ActivarTextbox = false;
         private void Txtusuario_Enter(object sender, EventArgs e)
         {
@@ -374,8 +372,17 @@ namespace PRESENTACION
         private void FormLogin_Load(object sender, EventArgs e)
         {
             this.ShowInTaskbar = true;
-            Icon = Properties.Resources.Logo011;
+            Icon = Properties.Resources.Logo02;
 
+        }
+        public void Limpiar()
+        {
+            txtusuario.Text = "DNI";
+            TxtPass.Text = "Contraseña";
+            PibCheckUsu.Visible = false;
+            PibCheckPass.Visible = false;
+            ud.DNI = "";
+            txtusuario.Focus();
         }
 
         private void TxtPass_Click(object sender, EventArgs e)

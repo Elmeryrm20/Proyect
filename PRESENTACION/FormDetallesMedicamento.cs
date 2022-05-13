@@ -64,7 +64,7 @@ namespace PRESENTACION
             try
             {
                 //MemoryStream img = new MemoryStream((byte[])consultas.D_Medicamento_Detallado(valor).Rows[0]["imagen"]);
-                MemoryStream img = new MemoryStream((byte[])dt.Rows[0][9]);
+                MemoryStream img = new MemoryStream((byte[])dt.Rows[0][8]);
                 Bitmap imagen = new Bitmap(img);
                 ptb_Imagen.Image = imagen;
                 ptb_Imagen.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -106,6 +106,11 @@ namespace PRESENTACION
         private void btnSerrar_MouseLeave(object sender, EventArgs e)
         {
             btnSerrar.Image = Properties.Resources.BotonFormVolver01;
+
+        }
+
+        private void FormDetallesMedicamento_Load(object sender, EventArgs e)
+        {
 
         }
     }

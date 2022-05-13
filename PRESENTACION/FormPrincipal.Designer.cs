@@ -156,7 +156,7 @@ namespace PRESENTACION
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.LogoCruzRoja02;
+            this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.LogoCruzRoja03;
             this.pictureBox4.Location = new System.Drawing.Point(48, 11);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 64);

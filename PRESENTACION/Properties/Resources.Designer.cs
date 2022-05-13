@@ -1891,11 +1891,31 @@ namespace PRESENTACION.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon Logo02 {
+            get {
+                object obj = ResourceManager.GetObject("Logo02", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap LogoCruzRoja02 {
             get {
                 object obj = ResourceManager.GetObject("LogoCruzRoja02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoCruzRoja03 {
+            get {
+                object obj = ResourceManager.GetObject("LogoCruzRoja03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

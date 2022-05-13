@@ -963,6 +963,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo01.ico" />
+    <None Include="Resources\Logo02.ico" />
+    <None Include="Resources\LogoCruzRoja03.jpeg" />
     <None Include="Resources\FondoEntrada01.png" />
     <None Include="Resources\FondoSalida01.png" />
     <None Include="Resources\FondoEditarMedicamento01.png" />

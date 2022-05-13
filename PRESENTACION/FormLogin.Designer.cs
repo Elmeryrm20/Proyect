@@ -33,10 +33,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.PibMinimizar = new System.Windows.Forms.PictureBox();
             this.PibCerrar = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtApoyo = new System.Windows.Forms.TextBox();
             this.PibCheckPass = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.PibCheckUsu = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DtgPrueba = new System.Windows.Forms.DataGridView();
@@ -44,9 +44,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibCheckPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCheckUsu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).BeginInit();
@@ -133,6 +133,16 @@
             this.PibCerrar.MouseEnter += new System.EventHandler(this.PibCerrar_MouseEnter);
             this.PibCerrar.MouseLeave += new System.EventHandler(this.PibCerrar_MouseLeave);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.LogoCruzRoja03;
+            this.pictureBox4.Location = new System.Drawing.Point(115, 25);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -171,16 +181,6 @@
             this.PibCheckPass.TabIndex = 18;
             this.PibCheckPass.TabStop = false;
             this.PibCheckPass.Visible = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::PRESENTACION.Properties.Resources.LogoCruzRoja02;
-            this.pictureBox4.Location = new System.Drawing.Point(115, 25);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
             // 
             // PibCheckUsu
             // 
@@ -246,10 +246,10 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PibMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibCheckPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibCheckUsu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPrueba)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibIngresar)).EndInit();

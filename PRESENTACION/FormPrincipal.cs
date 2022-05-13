@@ -110,7 +110,7 @@ namespace PRESENTACION
             ActivarTootip();
             //ShowInTaskbar = true;
             LblNombre.Text = Nombre;
-            Icon = Properties.Resources.Logo011;
+            Icon = Properties.Resources.Logo02;
 
         }
         private void OrdenarBotonesMenu(byte Tipo)
@@ -455,6 +455,7 @@ namespace PRESENTACION
             if (dialogResult == DialogResult.Yes)
             {
                 FormLogin hg = ((FormLogin)Owner);
+                hg.Limpiar();
                 hg.Show();
                 //hg.ShowInTaskbar = true;
                 this.Close();
