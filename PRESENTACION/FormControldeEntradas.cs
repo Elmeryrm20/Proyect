@@ -121,7 +121,7 @@ namespace PRESENTACION
             documento.SetCellValue("D1", "FECHA DE INGRESO");
             documento.SetCellValue("E1", "HORA DE INGRESO");
             documento.SetCellValue("F1", "FECHA VENCIMIENTO");
-            documento.SetCellValue("G1", "TRABAJADOR");
+            documento.SetCellValue("G1", "USUARIO");
 
             SLStyle style = new SLStyle();
             style.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
