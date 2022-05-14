@@ -311,7 +311,7 @@ namespace PRESENTACION
             this.Btn_Cerrar_Sesion.BackColor = System.Drawing.Color.Transparent;
             this.Btn_Cerrar_Sesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Cerrar_Sesion.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrarSesion01;
-            this.Btn_Cerrar_Sesion.Location = new System.Drawing.Point(633, 5);
+            this.Btn_Cerrar_Sesion.Location = new System.Drawing.Point(633, 4);
             this.Btn_Cerrar_Sesion.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Cerrar_Sesion.Name = "Btn_Cerrar_Sesion";
             this.Btn_Cerrar_Sesion.Size = new System.Drawing.Size(24, 24);
@@ -355,7 +355,7 @@ namespace PRESENTACION
             this.PibMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.PibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibMinimizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMinimizar05;
-            this.PibMinimizar.Location = new System.Drawing.Point(661, 5);
+            this.PibMinimizar.Location = new System.Drawing.Point(661, 4);
             this.PibMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.PibMinimizar.Name = "PibMinimizar";
             this.PibMinimizar.Size = new System.Drawing.Size(24, 24);
@@ -371,7 +371,7 @@ namespace PRESENTACION
             this.PibCerrar.BackColor = System.Drawing.Color.Transparent;
             this.PibCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PibCerrar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaCerrar05;
-            this.PibCerrar.Location = new System.Drawing.Point(711, 5);
+            this.PibCerrar.Location = new System.Drawing.Point(711, 4);
             this.PibCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.PibCerrar.Name = "PibCerrar";
             this.PibCerrar.Size = new System.Drawing.Size(24, 24);
@@ -387,7 +387,7 @@ namespace PRESENTACION
             this.Pib_Maximizar.BackColor = System.Drawing.Color.Transparent;
             this.Pib_Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pib_Maximizar.Image = global::PRESENTACION.Properties.Resources.BotonVentanaMaximizar03;
-            this.Pib_Maximizar.Location = new System.Drawing.Point(686, 5);
+            this.Pib_Maximizar.Location = new System.Drawing.Point(686, 4);
             this.Pib_Maximizar.Margin = new System.Windows.Forms.Padding(2);
             this.Pib_Maximizar.Name = "Pib_Maximizar";
             this.Pib_Maximizar.Size = new System.Drawing.Size(24, 24);

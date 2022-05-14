@@ -14,15 +14,17 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
-        public FormEntradaMedicamento(string DNI, string Nombre)
+        public FormEntradaMedicamento(string DNI, string Nombre, byte Cargo)
         {
             InitializeComponent();
             this.DNI = DNI;
+            this.Cargo = Cargo;
             LblVoluntario.Text = Nombre;
 
         }
 
-        string DNI;
+        readonly string DNI;
+        readonly byte Cargo;
         Consultas consultas = new Consultas();
 
         private void PibAgregarMed_Click(object sender, EventArgs e)
@@ -110,6 +112,18 @@ namespace PRESENTACION
             CmbColaborador.SelectedIndex = 0;
             //CmbEncargado.Text = "Seleccionar";
             CmbEncargado.SelectedIndex = 0;
+
+            if (Cargo == 2) //Cargo Coordinador
+            {
+                for (int i = 0; i < Coordinadores.GetLength(0); i++)
+                {
+                    if (DNI == Coordinadores[i, 0])
+                    {
+                        CmbEncargado.SelectedIndex = i;
+                        break;
+                    }
+                }
+            }
         }
 
         private void FormEntradaMedicamento_Load(object sender, EventArgs e)

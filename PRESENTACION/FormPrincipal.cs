@@ -15,14 +15,14 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormPrincipal(string DNI, byte Tipo, string Nombre)
+        public FormPrincipal(string DNI, byte Tipo, string Nombre, byte Cargo)
         {
             InitializeComponent();
 
             this.DNI = DNI;
             this.Nombre = Nombre;
             this.Tipo = Tipo;
-
+            this.Cargo = Cargo;
 
 
         }
@@ -31,7 +31,7 @@ namespace PRESENTACION
         #region Inicializar Variables de Formularios
         readonly string DNI;
         readonly string Nombre;
-        readonly byte Tipo;
+        readonly byte Tipo, Cargo;
 
         Consultas consultas = new Consultas();
         #endregion
@@ -167,7 +167,7 @@ namespace PRESENTACION
                     case 1: Formulario = new FormInicio(DNI, Nombre); break;
                     case 2: Formulario = new FormMedicamentos(DNI); break;
                     case 3: Formulario = new FormAgregarMedicamento(DNI); break;
-                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre); break;
+                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre, Cargo); break;
                     case 5: Formulario = new FormHistorial(DNI); break;
                     case 6: Formulario = new FormConfiguracion(DNI); break;
                     case 7: Formulario = new FormAcercaDe(); break;
@@ -223,13 +223,13 @@ namespace PRESENTACION
                     case 1: Formulario = new FormInicio(DNI, Nombre); break;
                     case 2: Formulario = new FormMedicamentos(DNI); break;
                     case 3: Formulario = new FormAgregarMedicamento(DNI); break;
-                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre); break;
+                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre, Cargo); break;
                     case 5: Formulario = new FormHistorial(DNI); break;
                     case 6: Formulario = new FormConfiguracion(DNI); break;
                     case 7: Formulario = new FormAcercaDe(); break;
                     case 8: Formulario = new FormUsuarios(DNI); break;
                     case 9: Formulario = new FormAgregarUsuario(DNI); break;
-                    case 10: Formulario = new FormEntradaMedicamento(DNI, Nombre); break;
+                    case 10: Formulario = new FormEntradaMedicamento(DNI, Nombre, Cargo); break;
                     default:
                         break;
                 }

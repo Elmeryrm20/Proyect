@@ -107,7 +107,7 @@ namespace PRESENTACION
             {
                 this.Hide();
                 //Thread.Sleep(1000);
-                FormEspera B = new FormEspera(ud.DNI, ud.Tipo, ud.Nombre);
+                FormEspera B = new FormEspera(ud.DNI, ud.Tipo, ud.Nombre,ud.Cargo);
                 AddOwnedForm(B);
                 B.Show();
             }
@@ -133,6 +133,7 @@ namespace PRESENTACION
             //1 Password
             //2 Tipo
             //3 Nombre
+            //4 Cargo
 
             if (txtusuario.Text != ud.DNI) //Es diferente al DNI en el Caché
             {
@@ -144,6 +145,7 @@ namespace PRESENTACION
                     ud.Pass = dt.Rows[0][1].ToString();
                     ud.Tipo = Convert.ToByte(dt.Rows[0][2]);
                     ud.Nombre = dt.Rows[0][3].ToString();
+                    ud.Tipo = Convert.ToByte(dt.Rows[0][4]);
                     AdmitirPass();
 
                 }

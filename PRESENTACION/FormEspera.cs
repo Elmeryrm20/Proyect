@@ -9,15 +9,16 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
-        public FormEspera(string DNI, byte Tipo, string Nombre)
+        public FormEspera(string DNI, byte Tipo, string Nombre,byte Cargo)
         {
             InitializeComponent();
             this.DNI = DNI;
             this.Tipo = Tipo;
             this.Nombre = Nombre;
+            this.Cargo = Cargo;
         }
         readonly string DNI, Nombre;
-        readonly byte Tipo;
+        readonly byte Tipo, Cargo;
 
         //int cont = 0;
         private void timer1_Tick(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace PRESENTACION
         private void AbrirFormularioPrincipal()
         {
             FormLogin hg = ((FormLogin)Owner);
-            FormPrincipal A = new FormPrincipal(DNI, Tipo, Nombre);
+            FormPrincipal A = new FormPrincipal(DNI, Tipo, Nombre,Cargo);
             hg.AddOwnedForm(A);
             A.Show();
         }

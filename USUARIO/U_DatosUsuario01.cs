@@ -12,5 +12,7 @@ namespace USUARIO
         public byte Tipo { get; set; }
         public string Pass { get; set; }
         public string Nombre { get; set; }
+        public byte Cargo { get; set; }
+
     }
 }

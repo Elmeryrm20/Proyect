@@ -14,15 +14,17 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormSalidaMedicamentos(string DNI, string Nombre)
+        public FormSalidaMedicamentos(string DNI, string Nombre,byte Cargo)
         {
             this.DNI = DNI;
+            this.Cargo = Cargo;
             InitializeComponent();
             //this.Nombre = Nombre;
             LblVoluntario.Text = Nombre;
 
         }
         readonly string DNI;
+        readonly byte Cargo;
         Consultas consultas = new Consultas();
 
         private void PibAgregarMed_Click(object sender, System.EventArgs e)
