@@ -92,15 +92,21 @@ namespace PRESENTACION
         {
             DgvHistorialIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvHistorialIngreso.Columns[0].Visible = false;
-            DgvHistorialIngreso.Columns[2].Width = 40;
+            DgvHistorialIngreso.Columns[0].Width = 10;
+            DgvHistorialIngreso.Columns[2].Width = 20;
+            DgvHistorialIngreso.Columns[3].Width = 30;
+            DgvHistorialIngreso.Columns[4].Width = 30;
+            DgvHistorialIngreso.Columns[5].Width = 70;
+            DgvHistorialIngreso.Columns[6].Width = 180;
+
             //dgb_Medicamentos.Columns[0].MinimumWidth = 25;
             //dgb_Medicamentos.Columns[1].Width = 250;
             DgvHistorialIngreso.ColumnHeadersHeight = 35;
-            DgvHistorialIngreso.Columns[0].MinimumWidth = 90;
+            DgvHistorialIngreso.Columns[0].MinimumWidth = 50;
             DgvHistorialIngreso.Columns[1].MinimumWidth = 150;
             DgvHistorialIngreso.Columns[2].MinimumWidth = 40;
-            DgvHistorialIngreso.Columns[3].MinimumWidth = 80;
-            DgvHistorialIngreso.Columns[5].MinimumWidth = 80;
+            DgvHistorialIngreso.Columns[3].MinimumWidth = 40;
+            DgvHistorialIngreso.Columns[5].MinimumWidth = 40;
             DgvHistorialIngreso.Columns[2].HeaderText = "CANT.";
             DgvHistorialIngreso.RowHeadersWidth = 35;
         }
