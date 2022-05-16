@@ -252,6 +252,7 @@ namespace PRESENTACION
             this.PibImprimir.Size = new System.Drawing.Size(110, 40);
             this.PibImprimir.TabIndex = 5;
             this.PibImprimir.TabStop = false;
+            this.PibImprimir.Visible = false;
             this.PibImprimir.Click += new System.EventHandler(this.PibImprimir_Click);
             this.PibImprimir.MouseEnter += new System.EventHandler(this.PibImprimir_MouseEnter_1);
             this.PibImprimir.MouseLeave += new System.EventHandler(this.PibImprimir_MouseLeave);
