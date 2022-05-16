@@ -39,7 +39,7 @@ namespace PRESENTACION
             }
             else if (char.IsSeparator(pE.KeyChar))
             {
-                pE.Handled = false;
+                pE.Handled = true;
             }
             else
             {

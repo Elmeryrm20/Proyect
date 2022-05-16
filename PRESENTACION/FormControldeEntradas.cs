@@ -97,7 +97,7 @@ namespace PRESENTACION
             DgvHistorialIngreso.Columns[3].Width = 30;
             DgvHistorialIngreso.Columns[4].Width = 50;
             DgvHistorialIngreso.Columns[5].Width = 70;
-            DgvHistorialIngreso.Columns[8].Width = 180;
+            DgvHistorialIngreso.Columns[8].Width = 150;
 
             //dgb_Medicamentos.Columns[0].MinimumWidth = 25;
             //dgb_Medicamentos.Columns[1].Width = 250;
