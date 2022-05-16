@@ -481,6 +481,7 @@ namespace PRESENTACION
         }
         private void dgb_Medicamentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            
             //    if (Formato)
             //    {
 
