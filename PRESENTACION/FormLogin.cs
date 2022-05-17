@@ -129,11 +129,12 @@ namespace PRESENTACION
         //Método de Ingreso
         private void Ingresar()
         {
-            //0 Codigo
+            //0 DNI
             //1 Password
             //2 Tipo
             //3 Nombre
-            //4 Cargo
+            //4 Estado
+            //5 Cargo
 
             if (txtusuario.Text != ud.DNI) //Es diferente al DNI en el Caché
             {
@@ -145,7 +146,7 @@ namespace PRESENTACION
                     ud.Pass = dt.Rows[0][1].ToString();
                     ud.Tipo = Convert.ToByte(dt.Rows[0][2]);
                     ud.Nombre = dt.Rows[0][3].ToString();
-                    ud.Tipo = Convert.ToByte(dt.Rows[0][4]);
+                    ud.Cargo = Convert.ToByte(dt.Rows[0][5]);
                     AdmitirPass();
 
                 }

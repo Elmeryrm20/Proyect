@@ -210,11 +210,27 @@ namespace PRESENTACION
             DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(DNI);
             Coordinadores = new string[dt_Coordinador.Rows.Count, 2];
 
-            for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
+            if (Cargo == 2) //Cargo Coordinador
             {
-                Coordinadores[i, 0] = dt_Coordinador.Rows[i][0].ToString();
-                Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
-                CmbEncargado.Items.Add(Coordinadores[i, 1]);
+                for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
+                {
+                    if (DNI == dt_Coordinador.Rows[i][0].ToString())
+                    {
+                        CmbEncargado.Items.Add(dt_Coordinador.Rows[i][1].ToString());
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Coordinadores = new string[dt_Coordinador.Rows.Count, 2];
+
+                for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
+                {
+                    Coordinadores[i, 0] = dt_Coordinador.Rows[i][0].ToString();
+                    Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
+                    CmbEncargado.Items.Add(Coordinadores[i, 1]);
+                }
             }
 
             //CmbColaborador.Text = "Seleccionar";

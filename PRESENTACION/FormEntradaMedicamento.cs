@@ -99,13 +99,28 @@ namespace PRESENTACION
             }
 
             DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(DNI);
-            Coordinadores = new string[dt_Coordinador.Rows.Count, 2];
 
-            for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
+            if (Cargo == 2) //Cargo Coordinador
             {
-                Coordinadores[i, 0] = dt_Coordinador.Rows[i][0].ToString();
-                Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
-                CmbEncargado.Items.Add(Coordinadores[i, 1]);
+                for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
+                {
+                    if (DNI == dt_Coordinador.Rows[i][0].ToString())
+                    {
+                        CmbEncargado.Items.Add(dt_Coordinador.Rows[i][1].ToString());
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Coordinadores = new string[dt_Coordinador.Rows.Count, 2];
+
+                for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
+                {
+                    Coordinadores[i, 0] = dt_Coordinador.Rows[i][0].ToString();
+                    Coordinadores[i, 1] = dt_Coordinador.Rows[i][1].ToString();
+                    CmbEncargado.Items.Add(Coordinadores[i, 1]);
+                }
             }
 
             //CmbColaborador.Text = "Seleccionar";
@@ -113,17 +128,8 @@ namespace PRESENTACION
             //CmbEncargado.Text = "Seleccionar";
             CmbEncargado.SelectedIndex = 0;
 
-            if (Cargo == 2) //Cargo Coordinador
-            {
-                for (int i = 0; i < Coordinadores.GetLength(0); i++)
-                {
-                    if (DNI == Coordinadores[i, 0])
-                    {
-                        CmbEncargado.SelectedIndex = i;
-                        break;
-                    }
-                }
-            }
+
+
         }
 
         private void FormEntradaMedicamento_Load(object sender, EventArgs e)
@@ -252,7 +258,7 @@ namespace PRESENTACION
             PrintDocument doc = new PrintDocument();
             doc.DefaultPageSettings.Landscape = true;
             doc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
-           
+
             PrintPreviewDialog ppd = new PrintPreviewDialog { Document = doc };
             ((Form)ppd).WindowState = FormWindowState.Maximized;
 

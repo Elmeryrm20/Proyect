@@ -146,6 +146,7 @@ namespace PRESENTACION
 
             if (char.IsLetterOrDigit(e.KeyChar)) e.Handled = false;
             else if (char.IsControl(e.KeyChar)) e.Handled = false;
+            else if (char.IsWhiteSpace(e.KeyChar)) e.Handled = false;
             else e.Handled = true;
         }
 

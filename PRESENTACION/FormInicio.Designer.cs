@@ -750,7 +750,7 @@ namespace PRESENTACION
             // LblPorcAgotados
             // 
             this.LblPorcAgotados.BackColor = System.Drawing.Color.White;
-            this.LblPorcAgotados.Font = new System.Drawing.Font("Sakkal Majalla", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPorcAgotados.Font = new System.Drawing.Font("Sakkal Majalla", 28F, System.Drawing.FontStyle.Bold);
             this.LblPorcAgotados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
             this.LblPorcAgotados.Location = new System.Drawing.Point(266, 262);
             this.LblPorcAgotados.Margin = new System.Windows.Forms.Padding(0);
@@ -763,7 +763,7 @@ namespace PRESENTACION
             // LblPorcVencidos
             // 
             this.LblPorcVencidos.BackColor = System.Drawing.Color.White;
-            this.LblPorcVencidos.Font = new System.Drawing.Font("Sakkal Majalla", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPorcVencidos.Font = new System.Drawing.Font("Sakkal Majalla", 28F, System.Drawing.FontStyle.Bold);
             this.LblPorcVencidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(201)))));
             this.LblPorcVencidos.Location = new System.Drawing.Point(266, 188);
             this.LblPorcVencidos.Margin = new System.Windows.Forms.Padding(0);
@@ -776,7 +776,7 @@ namespace PRESENTACION
             // LblNumSalidas
             // 
             this.LblNumSalidas.BackColor = System.Drawing.Color.White;
-            this.LblNumSalidas.Font = new System.Drawing.Font("Sakkal Majalla", 35.75F, System.Drawing.FontStyle.Bold);
+            this.LblNumSalidas.Font = new System.Drawing.Font("Sakkal Majalla", 30F, System.Drawing.FontStyle.Bold);
             this.LblNumSalidas.ForeColor = System.Drawing.Color.Tomato;
             this.LblNumSalidas.Location = new System.Drawing.Point(138, 218);
             this.LblNumSalidas.Margin = new System.Windows.Forms.Padding(0);
@@ -789,7 +789,7 @@ namespace PRESENTACION
             // LblNumEntradas
             // 
             this.LblNumEntradas.BackColor = System.Drawing.Color.White;
-            this.LblNumEntradas.Font = new System.Drawing.Font("Sakkal Majalla", 35.75F, System.Drawing.FontStyle.Bold);
+            this.LblNumEntradas.Font = new System.Drawing.Font("Sakkal Majalla", 30F, System.Drawing.FontStyle.Bold);
             this.LblNumEntradas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
             this.LblNumEntradas.Location = new System.Drawing.Point(18, 218);
             this.LblNumEntradas.Margin = new System.Windows.Forms.Padding(0);
