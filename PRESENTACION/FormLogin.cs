@@ -146,7 +146,7 @@ namespace PRESENTACION
                     ud.Pass = dt.Rows[0][1].ToString();
                     ud.Tipo = Convert.ToByte(dt.Rows[0][2]);
                     ud.Nombre = dt.Rows[0][3].ToString();
-                    //ud.Cargo = Convert.ToByte(dt.Rows[0][5]);
+                    ud.Cargo = Convert.ToByte(dt.Rows[0][5]);
                     AdmitirPass();
 
                 }
