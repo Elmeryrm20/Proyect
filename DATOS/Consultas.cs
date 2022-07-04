@@ -1064,5 +1064,17 @@ namespace DATOS
             }
             Conexion.connection.Close();
         }
+        public DataTable Sp_Medicamentos_por_Ago_Ven()
+        {
+            Conexion.connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand("Sp_Medicamentos_por_Ago_Ven", Conexion.connection);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conexion.connection.Close();
+            return dt;
+        }
+
     }
 }

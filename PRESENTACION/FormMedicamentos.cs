@@ -95,6 +95,7 @@ namespace PRESENTACION
             txb_Buscar.SelectAll();
             txb_Buscar.Focus();
             LblResultados.Visible = false;
+            Chb_MostrarAV.Checked = false;
         }
         #endregion
 
@@ -117,6 +118,7 @@ namespace PRESENTACION
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
             ChbColores.Checked = false;
+            Chb_MostrarAV.Checked = false;
             PibActualizar.Image = Properties.Resources.BotonFormActualizar04;
             cmbTipo.Text = "Seleccionar";
             cmb_Almacen.Text = "Seleccionar";
@@ -144,6 +146,7 @@ namespace PRESENTACION
         private void btn_Filtrar_Click(object sender, EventArgs e)
         {
             ChbColores.Checked = false;
+            Chb_MostrarAV.Checked = false;
 
             try
             {
@@ -574,6 +577,21 @@ namespace PRESENTACION
             direccion = direccion + "\\" + "Informe_Medicamentos_" + DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
             documento.SaveAs(direccion);
             MessageBox.Show("Exportacion exitosa archivo guardado en Documentos", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (Chb_MostrarAV.Checked==true)
+            {
+                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven();
+                DesignDataGridView();
+                FiltradoExitoso();
+            }
+            else
+            {
+                Actualizar();
+            }
+           
         }
     }
 }
