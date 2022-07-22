@@ -1,9 +1,9 @@
 ﻿using DATOS;
+using SpreadsheetLight;
 using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using SpreadsheetLight;
 
 namespace PRESENTACION
 {
@@ -23,13 +23,27 @@ namespace PRESENTACION
         }
         #endregion
 
+        #region Variables
+
         Consultas consultas = new Consultas();
         readonly string DNI;
 
-        #region Métodos al cargar el formulario
+        #endregion
+
+        #region Cargar el formulario
+        private void FormMedicamentos_Load(object sender, EventArgs e)
+        {
+            Rellenartabla();
+            Elementos_Filtrar();
+            Almacen_Filtrar();
+            cmbTipo.SelectedIndex = -1;
+            cmb_Almacen.SelectedIndex = -1;
+            cmbTipo.Text = "Seleccionar";
+            cmb_Almacen.Text = "Seleccionar";
+        }
         public void MaximizarDataGridView()
         {
-            dgb_Medicamentos.Columns[7].Visible = true;
+            //dgb_Medicamentos.Columns[7].Visible = true; //Columna Laboratorio
             //dgb_Medicamentos.Columns[8].Visible = true;
             dgb_Medicamentos.Columns[5].HeaderText = "PRESENTACIÓN";
 
@@ -37,7 +51,7 @@ namespace PRESENTACION
         }
         public void MinimizarDataGridView()
         {
-            dgb_Medicamentos.Columns[7].Visible = false;
+            //dgb_Medicamentos.Columns[7].Visible = false; //Columna Laboratorio
             //dgb_Medicamentos.Columns[8].Visible = false;
             dgb_Medicamentos.Columns[5].HeaderText = "PRESENT.";
             Maximizar = false;
@@ -57,7 +71,7 @@ namespace PRESENTACION
             dgb_Medicamentos.Columns[3].MinimumWidth = 90;
             dgb_Medicamentos.RowHeadersWidth = 35;
             //dgb_Medicamentos.Columns[5].HeaderText = "PRESENTACIÓN";
-            dgb_Medicamentos.Columns[7].HeaderText = "LABORATORIO";
+            //dgb_Medicamentos.Columns[7].HeaderText = "LABORATORIO";
 
             if (Maximizar) MaximizarDataGridView();
             else MinimizarDataGridView();
@@ -99,20 +113,6 @@ namespace PRESENTACION
         }
         #endregion
 
-        #region Sin Usar
-        private void FormMedicamentos_Load(object sender, EventArgs e)
-        {
-            Rellenartabla();
-            Elementos_Filtrar();
-            Almacen_Filtrar();
-            cmbTipo.SelectedIndex = -1;
-            cmb_Almacen.SelectedIndex = -1;
-            cmbTipo.Text = "Seleccionar";
-            cmb_Almacen.Text = "Seleccionar";
-        }
-
-        #endregion
-
         #region Búsqueda,Filtro y obtener ID
         //Búsqueda Dinámica
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -142,6 +142,7 @@ namespace PRESENTACION
             txb_Buscar.Text = "Buscar Medicamento";
             PibActualizar.Image = Properties.Resources.BotonFormActualizar04;
         }
+
         //Botón Filtrar
         private void btn_Filtrar_Click(object sender, EventArgs e)
         {
@@ -288,19 +289,7 @@ namespace PRESENTACION
         }
         #endregion
 
-        int fila = 0;
-        //Obtener Id del Medicamento
-        private void dgb_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                fila = e.RowIndex;
-
-            }
-            //valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
-            //LblIndice.Text = dgb_Medicamentos.Rows[fila].Cells[0].Value.ToString();
-        }
-
+        #region Botones
         private void PibDetalles_MouseEnter(object sender, EventArgs e)
         {
             PibDetalles.Image = Properties.Resources.BotonFormDetalles02;
@@ -371,23 +360,10 @@ namespace PRESENTACION
             Pib_Filtrar.Image = Properties.Resources.BotonFormFiltrar01;
 
         }
+        #endregion
 
-        private void cmb_Almacen_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void dgb_Medicamentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
-            //LblIndice.Text = valor_ID.ToString();
-            if (dgb_Medicamentos.Rows.Count > 0)
-            {
-                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
-                frm1.ShowDialog();
-            }
-        }
-
+        #region Sin Uso
+   
         private void cmbTipo_MouseDown(object sender, MouseEventArgs e)
         {
             //Elementos_Filtrar();
@@ -424,22 +400,52 @@ namespace PRESENTACION
             //cmb_Almacen.DroppedDown = true;
 
         }
+        #endregion
 
-        private void txb_Buscar_Click(object sender, EventArgs e)
-        {
-            if (txb_Buscar.Text == "Buscar Medicamento")
-            {
-                txb_Buscar.Text = "";
-            }
-        }
-
+        #region CheckBox
         //private bool Colores = false;
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (ChbColores.Checked == true) FomarteandoDataGridView(true);
             else FomarteandoDataGridView(false);
         }
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (Chb_MostrarAV.Checked == true)
+            {
+                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven();
+                DesignDataGridView();
+                FiltradoExitoso();
+            }
+            else
+            {
+                Actualizar();
+            }
+        }
 
+        #endregion
+
+        #region DataGridView
+        private void dgb_Medicamentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
+            //LblIndice.Text = valor_ID.ToString();
+            if (dgb_Medicamentos.Rows.Count > 0)
+            {
+                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
+                frm1.ShowDialog();
+            }
+        }
+        private void dgb_Medicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                fila = e.RowIndex;
+
+            }
+            //valor_ID = (int)dgb_Medicamentos.CurrentRow.Cells[0].Value;
+            //LblIndice.Text = dgb_Medicamentos.Rows[fila].Cells[0].Value.ToString();
+        }
 
         void FomarteandoDataGridView(bool formato)
         {
@@ -484,7 +490,7 @@ namespace PRESENTACION
         }
         private void dgb_Medicamentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            
+
             //    if (Formato)
             //    {
 
@@ -524,6 +530,23 @@ namespace PRESENTACION
             //    else FomarteandoDataGridView(false);
 
             //}
+        }
+        #endregion
+
+        int fila = 0;
+        //Obtener Id del Medicamento
+
+        private void cmb_Almacen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txb_Buscar_Click(object sender, EventArgs e)
+        {
+            if (txb_Buscar.Text == "Buscar Medicamento")
+            {
+                txb_Buscar.Text = "";
+            }
         }
 
         private void btn_Informe_Click(object sender, EventArgs e)
@@ -578,21 +601,5 @@ namespace PRESENTACION
             documento.SaveAs(direccion);
             MessageBox.Show("Exportacion exitosa archivo guardado en Documentos", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
-
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (Chb_MostrarAV.Checked==true)
-            {
-                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven();
-                DesignDataGridView();
-                FiltradoExitoso();
-            }
-            else
-            {
-                Actualizar();
-            }
-           
-        }
-
     }
 }
