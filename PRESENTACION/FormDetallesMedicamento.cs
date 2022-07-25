@@ -52,8 +52,8 @@ namespace PRESENTACION
             lbl_Almacen.Text = dt.Rows[0][3].ToString();
             lbl_F_Vencimiento.Text = Convert.ToDateTime(dt.Rows[0][4]).ToShortDateString();
             lbl_Tipo.Text = dt.Rows[0][5].ToString();
-            lbl_Laboratorio.Text = dt.Rows[0][6].ToString();
-            LblPertenencia.Text = dt.Rows[0][7].ToString();
+            //lbl_Laboratorio.Text = dt.Rows[0][6].ToString();
+            LblPertenencia.Text = dt.Rows[0][6].ToString();
 
 
             lbl_Existencia.Text = (Ingreso - Egreso).ToString();
@@ -93,6 +93,7 @@ namespace PRESENTACION
             //-----------------------------------------------
         }
 
+        #region Sin Usar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -112,6 +113,8 @@ namespace PRESENTACION
         private void FormDetallesMedicamento_Load(object sender, EventArgs e)
         {
 
-        }
+        } 
+        #endregion
+
     }
 }

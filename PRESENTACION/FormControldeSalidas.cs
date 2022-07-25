@@ -102,14 +102,14 @@ namespace PRESENTACION
             DgvHistorialEgreso.Columns[2].Width = 20;
             DgvHistorialEgreso.Columns[3].Width = 60;
             DgvHistorialEgreso.Columns[4].Width = 50;
-            DgvHistorialEgreso.Columns[7].Width = 180;
+            //DgvHistorialEgreso.Columns[7].Width = 180;
             DgvHistorialEgreso.ColumnHeadersHeight = 35;
             DgvHistorialEgreso.Columns[0].MinimumWidth = 50;
             DgvHistorialEgreso.Columns[1].MinimumWidth = 150;
             DgvHistorialEgreso.Columns[2].MinimumWidth = 40;
             DgvHistorialEgreso.Columns[3].MinimumWidth = 40;
             DgvHistorialEgreso.Columns[4].MinimumWidth = 40;
-            DgvHistorialEgreso.Columns[7].MinimumWidth = 100;
+            //DgvHistorialEgreso.Columns[7].MinimumWidth = 100;
             DgvHistorialEgreso.Columns[2].HeaderText = "CANT.";
             DgvHistorialEgreso.RowHeadersWidth = 35;
         }

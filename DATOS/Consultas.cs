@@ -672,7 +672,7 @@ namespace DATOS
 
         }
 
-        public void SP_Agregar_Detalle_Ingreso(int Ing_Codigo, int Med_Codigo, int Cantidad, string FechaVencimiento)
+        public void SP_Agregar_Detalle_Ingreso(int Ing_Codigo, int Med_Codigo, int Cantidad, string FechaVencimiento, int Laboratorio)
         {
             //Conexion.connection.Open();
             MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Ingreso", Conexion.connection);
@@ -681,6 +681,7 @@ namespace DATOS
             cmd.Parameters.AddWithValue("Medicamento_Codigo", Med_Codigo);
             cmd.Parameters.AddWithValue("Cantidad", Cantidad);
             cmd.Parameters.AddWithValue("Fecha_Vencimiento", FechaVencimiento);
+            cmd.Parameters.AddWithValue("Laboratorio_Codigo", Laboratorio);
             try
             {
                 cmd.ExecuteNonQuery();

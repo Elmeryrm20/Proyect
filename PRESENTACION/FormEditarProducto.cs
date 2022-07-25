@@ -108,9 +108,9 @@ namespace PRESENTACION
                 cmbCaja.Text = dt.Rows[0][3].ToString(); //Almacén
                 txt_fecha.Text = ((DateTime)dt.Rows[0][4]).ToString("D"); //Fecha Vencimiento
                 cmbTipo.Text = dt.Rows[0][5].ToString(); //Tipo
-                cmbLab.Text = dt.Rows[0][6].ToString();  //Laboratorio
-                CmbPresentacion.Text = dt.Rows[0][7].ToString(); //Presentación
-                CmbPertenencia.Text = dt.Rows[0][8].ToString();
+                //cmbLab.Text = dt.Rows[0][6].ToString();  //Laboratorio
+                CmbPresentacion.Text = dt.Rows[0][6].ToString(); //Presentación
+                CmbPertenencia.Text = dt.Rows[0][7].ToString();
 
                 //txtNombre.Text = consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["COMPOSICIÓN"].ToString();
                 //txt_fecha.Text = ((DateTime)consultas.D_Medicamento_Detallado(id_Medicamento).Rows[0]["FEC. VENCIMIENTO"]).ToString("D");

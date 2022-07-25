@@ -236,7 +236,7 @@ namespace PRESENTACION
                     int CodigoIngreso = consultas.D_UltimoIdIngresado();
 
                     consultas.AbrirConexion();
-                    consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, CodigoMedicamento, int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"));
+                    consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, CodigoMedicamento, int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbLab.SelectedIndex + 1);
                     consultas.CerrarConexion();
 
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
