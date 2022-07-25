@@ -561,7 +561,7 @@ namespace PRESENTACION
                 documento.SetCellValue(j, 5, dgb_Medicamentos.Rows[i].Cells[4].Value.ToString());
                 documento.SetCellValue(j, 6, dgb_Medicamentos.Rows[i].Cells[5].Value.ToString());
                 documento.SetCellValue(j, 7, dgb_Medicamentos.Rows[i].Cells[6].Value.ToString());
-                documento.SetCellValue(j, 8, dgb_Medicamentos.Rows[i].Cells[7].Value.ToString());
+                //documento.SetCellValue(j, 8, dgb_Medicamentos.Rows[i].Cells[7].Value.ToString());
 
             }
             SLStyle estilos = new SLStyle();
