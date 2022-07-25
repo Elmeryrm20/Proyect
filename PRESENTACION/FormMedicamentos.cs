@@ -29,7 +29,7 @@ namespace PRESENTACION
         #region Métodos al cargar el formulario
         public void MaximizarDataGridView()
         {
-            dgb_Medicamentos.Columns[7].Visible = true;
+            //dgb_Medicamentos.Columns[7].Visible = true;
             //dgb_Medicamentos.Columns[8].Visible = true;
             dgb_Medicamentos.Columns[5].HeaderText = "PRESENTACIÓN";
 

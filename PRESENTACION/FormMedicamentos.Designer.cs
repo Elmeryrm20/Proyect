@@ -128,7 +128,6 @@ namespace PRESENTACION
             // 
             // Chb_MostrarAV
             // 
-            this.Chb_MostrarAV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Chb_MostrarAV.AutoSize = true;
             this.Chb_MostrarAV.BackColor = System.Drawing.Color.Transparent;
             this.Chb_MostrarAV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
