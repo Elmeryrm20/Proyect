@@ -14,5 +14,10 @@ namespace PRESENTACION
             this.DNI = DNI;
         }
         readonly string DNI;
+
+        private void pictureBox1_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace PRESENTACION
         }
         public void MinimizarDataGridView()
         {
-            dgb_Medicamentos.Columns[7].Visible = false;
+            //dgb_Medicamentos.Columns[7].Visible = false;
             //dgb_Medicamentos.Columns[8].Visible = false;
             dgb_Medicamentos.Columns[5].HeaderText = "PRESENT.";
             Maximizar = false;
@@ -57,7 +57,7 @@ namespace PRESENTACION
             dgb_Medicamentos.Columns[3].MinimumWidth = 90;
             dgb_Medicamentos.RowHeadersWidth = 35;
             //dgb_Medicamentos.Columns[5].HeaderText = "PRESENTACIÓN";
-            dgb_Medicamentos.Columns[7].HeaderText = "LABORATORIO";
+            //dgb_Medicamentos.Columns[7].HeaderText = "LABORATORIO";
 
             if (Maximizar) MaximizarDataGridView();
             else MinimizarDataGridView();
@@ -66,7 +66,7 @@ namespace PRESENTACION
 
         public void Rellenartabla()
         {
-            dgb_Medicamentos.DataSource = consultas.ConsultaMed();
+            dgb_Medicamentos.DataSource = consultas.ConsultaMed(1);
             DesignDataGridView();
         }
 
@@ -122,7 +122,7 @@ namespace PRESENTACION
             PibActualizar.Image = Properties.Resources.BotonFormActualizar04;
             cmbTipo.Text = "Seleccionar";
             cmb_Almacen.Text = "Seleccionar";
-            DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text);
+            DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text,1);
             dgb_Medicamentos.DataSource = dt;
         }
 
@@ -157,12 +157,12 @@ namespace PRESENTACION
                 {
                     if (cmb_Almacen.SelectedIndex >= 0) //Si selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(cmb_Almacen.SelectedValue.ToString(), cmbTipo.SelectedValue.ToString());
+                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(cmb_Almacen.SelectedValue.ToString(), cmbTipo.SelectedValue.ToString(),1);
                         FiltradoExitoso();
                     }
                     else //No selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedValue.ToString());
+                        dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedValue.ToString(),1);
                         FiltradoExitoso();
                     }
                 }
@@ -170,7 +170,7 @@ namespace PRESENTACION
                 {
                     if (cmb_Almacen.SelectedIndex >= 0)  //Si selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(cmb_Almacen.SelectedValue.ToString());
+                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(cmb_Almacen.SelectedValue.ToString(),1);
                         FiltradoExitoso();
                     }
                     else
@@ -583,7 +583,7 @@ namespace PRESENTACION
         {
             if (Chb_MostrarAV.Checked==true)
             {
-                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven();
+                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven(1);
                 DesignDataGridView();
                 FiltradoExitoso();
             }

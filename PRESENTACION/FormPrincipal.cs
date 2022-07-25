@@ -101,7 +101,7 @@ namespace PRESENTACION
             OrdenarBotonesMenu(Tipo);
 
             Btn_Acerca.Visible = false;
-            Btn_Config.Visible = false;
+            Btn_Config.Visible = true;
             SeleccionarBoton(1);
 
             //AparecerFormulario<FormInicio>();

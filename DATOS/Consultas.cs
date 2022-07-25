@@ -388,12 +388,13 @@ namespace DATOS
             Conexion.connection.Close();
             return tabla;
         }
-        public DataTable ConsultaMed()
+        public DataTable ConsultaMed( int Filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("SP_Consulta_Medicamento_Basico", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Filial", Filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
@@ -809,13 +810,14 @@ namespace DATOS
             return Convert.ToInt32(tabla.Rows[0][0]);
         }
 
-        public DataTable D_Consulta_Dinamica(string Busqueda)
+        public DataTable D_Consulta_Dinamica(string Busqueda ,int filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("SP_Busqueda_Dinamica", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("texto", Busqueda);
+            comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
@@ -868,13 +870,14 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable SP_Consulta_Medicamento_Filtrado(string Tipo)
+        public DataTable SP_Consulta_Medicamento_Filtrado(string Tipo , int filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("SP_Consulta_Medicamento_Filtrado", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Tipo", Tipo);
+            comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -942,20 +945,21 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable SP_Medicamento_Filtrado_Almacen(string Almacen)
+        public DataTable SP_Medicamento_Filtrado_Almacen(string Almacen ,int filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("SP_Medicamento_Filtrado_Almacen", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Almacen", Almacen);
+            comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable SP_Medicamento_Filtrado_Ambos(string Almacen, string tipo)
+        public DataTable SP_Medicamento_Filtrado_Ambos(string Almacen, string tipo ,int filial)
         {
             Conexion.connection.Open();
 
@@ -963,7 +967,7 @@ namespace DATOS
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Almacen", Almacen);
             comando.Parameters.AddWithValue("tipo", tipo);
-
+            comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -1064,11 +1068,13 @@ namespace DATOS
             }
             Conexion.connection.Close();
         }
-        public DataTable Sp_Medicamentos_por_Ago_Ven()
+        public DataTable Sp_Medicamentos_por_Ago_Ven( int filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand cmd = new MySqlCommand("Sp_Medicamentos_por_Ago_Ven", Conexion.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
