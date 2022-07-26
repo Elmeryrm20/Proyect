@@ -66,7 +66,7 @@ namespace PRESENTACION
 
         public void Rellenartabla()
         {
-            dgb_Medicamentos.DataSource = consultas.ConsultaMed(1);
+            dgb_Medicamentos.DataSource = consultas.ConsultaMed(filial_ID());
             DesignDataGridView();
         }
 
@@ -112,6 +112,10 @@ namespace PRESENTACION
         }
 
         #endregion
+        private int filial_ID()
+        {
+            return 2;
+        }
 
         #region Búsqueda,Filtro y obtener ID
         //Búsqueda Dinámica
@@ -122,7 +126,7 @@ namespace PRESENTACION
             PibActualizar.Image = Properties.Resources.BotonFormActualizar04;
             cmbTipo.Text = "Seleccionar";
             cmb_Almacen.Text = "Seleccionar";
-            DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text,1);
+            DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text,filial_ID());
             dgb_Medicamentos.DataSource = dt;
         }
 
@@ -157,12 +161,12 @@ namespace PRESENTACION
                 {
                     if (cmb_Almacen.SelectedIndex >= 0) //Si selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(cmb_Almacen.SelectedValue.ToString(), cmbTipo.SelectedValue.ToString(),1);
+                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(cmb_Almacen.SelectedValue.ToString(), cmbTipo.SelectedValue.ToString(),filial_ID());
                         FiltradoExitoso();
                     }
                     else //No selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedValue.ToString(),1);
+                        dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedValue.ToString(),filial_ID());
                         FiltradoExitoso();
                     }
                 }
@@ -170,7 +174,7 @@ namespace PRESENTACION
                 {
                     if (cmb_Almacen.SelectedIndex >= 0)  //Si selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(cmb_Almacen.SelectedValue.ToString(),1);
+                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(cmb_Almacen.SelectedValue.ToString(),filial_ID());
                         FiltradoExitoso();
                     }
                     else
@@ -583,7 +587,7 @@ namespace PRESENTACION
         {
             if (Chb_MostrarAV.Checked==true)
             {
-                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven(1);
+                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven(filial_ID());
                 DesignDataGridView();
                 FiltradoExitoso();
             }
@@ -591,8 +595,6 @@ namespace PRESENTACION
             {
                 Actualizar();
             }
-           
         }
-
     }
 }

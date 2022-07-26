@@ -22,7 +22,10 @@ namespace PRESENTACION
 
 
         }
-
+        private int filial_ID()
+        {
+            return 1;
+        }
         string Tra_DNI;
 
         validar validacion = new validar();
@@ -205,7 +208,7 @@ namespace PRESENTACION
                 try
                 {
                     string texto = textNombre.Text + " " + textGramaje.Text;
-                    string dt = consultas.D_Consulta_Dinamica(texto,1).Rows[0]["COMPOSICIÓN"].ToString();
+                    string dt = consultas.D_Consulta_Dinamica(texto,filial_ID()).Rows[0]["COMPOSICIÓN"].ToString();
                     if (dt == texto)
                     {
                         MessageBox.Show("El Medicamento Ya existe", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);

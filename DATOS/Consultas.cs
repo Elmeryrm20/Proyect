@@ -411,12 +411,13 @@ namespace DATOS
             return tabla;
         }
 
-        public DataTable D_HistorialIngreso()
+        public DataTable D_HistorialIngreso(int Filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("Sp_HistorialIngreso", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Filial", Filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
@@ -433,12 +434,13 @@ namespace DATOS
             return tabla;
         }
 
-        public DataTable D_HistorialEgreso()
+        public DataTable D_HistorialEgreso(int Filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("Sp_HistorialEgreso", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("Filial", Filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
@@ -975,7 +977,7 @@ namespace DATOS
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable Sp_Filtro_Fecha_HI(string Fecha1, string fecha2)
+        public DataTable Sp_Filtro_Fecha_HI(string Fecha1, string fecha2, int filial)
         {
             Conexion.connection.Open();
 
@@ -983,14 +985,14 @@ namespace DATOS
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Fecha1", Fecha1);
             comando.Parameters.AddWithValue("fecha2", fecha2);
-
+            comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable Sp_Filtro_Fecha_HE(string Fecha1, string fecha2)
+        public DataTable Sp_Filtro_Fecha_HE(string Fecha1, string fecha2, int filial)
         {
             Conexion.connection.Open();
 
@@ -998,33 +1000,35 @@ namespace DATOS
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Fecha1", Fecha1);
             comando.Parameters.AddWithValue("fecha2", fecha2);
-
+            comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable Sp_Filtro_Dinamico_HI(string texto)
+        public DataTable Sp_Filtro_Dinamico_HI(string texto, int filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("Sp_Filtro_Dinamico_HI", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("texto", texto);
+            comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
             Conexion.connection.Close();
             return dt;
         }
-        public DataTable Sp_Filtro_Dinamico_HE(string texto)
+        public DataTable Sp_Filtro_Dinamico_HE(string texto ,int filial)
         {
             Conexion.connection.Open();
 
             MySqlCommand comando = new MySqlCommand("Sp_Filtro_Dinamico_HE", Conexion.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("texto", texto);
+            comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);

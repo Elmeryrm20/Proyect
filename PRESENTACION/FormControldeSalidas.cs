@@ -23,10 +23,13 @@ namespace PRESENTACION
 
 
         Consultas du = new Consultas();
-
+        private int filial_ID()
+        {
+            return 1;
+        }
         private void RellenarDataGridView()
         {
-            DgvHistorialEgreso.DataSource = du.D_HistorialEgreso();
+            DgvHistorialEgreso.DataSource = du.D_HistorialEgreso(filial_ID());
             DgvHistorialEgreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
@@ -65,20 +68,20 @@ namespace PRESENTACION
                 switch (CmbFiltro.SelectedIndex)
                 {
                     case 0:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.AddDays(1).ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.AddDays(1).ToString("yyyy-MM-dd"), filial_ID());
                         break;
                     case 1:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.AddDays(-7).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.AddDays(-7).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"), filial_ID());
                         break;
                     case 2:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.AddDays(-30).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(DateTime.Today.AddDays(-30).ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"), filial_ID());
 
                         break;
                     case 3:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.AddDays(1).ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.AddDays(1).ToString("yyyy-MM-dd"), filial_ID());
                         break;
                     case 4:
-                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"));
+                        DgvHistorialEgreso.DataSource = du.Sp_Filtro_Fecha_HE(dtp_FechaI.Value.ToString("yyyy-MM-dd"), dtp_FechaF.Value.ToString("yyyy-MM-dd"), filial_ID());
                         break;
                     default:
                         break;
@@ -91,7 +94,7 @@ namespace PRESENTACION
 
         private void txt_Texto_KeyUp(object sender, KeyEventArgs e)
         {
-            DgvHistorialEgreso.DataSource = du.Sp_Filtro_Dinamico_HE(txt_Texto.Text);
+            DgvHistorialEgreso.DataSource = du.Sp_Filtro_Dinamico_HE(txt_Texto.Text, filial_ID());
 
         }
         private void DesignDataGridView()
