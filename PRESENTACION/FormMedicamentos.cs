@@ -537,7 +537,7 @@ namespace PRESENTACION
             documento.SetCellValue("E1", "ALMACEN");
             documento.SetCellValue("F1", "PRESENTACION");
             documento.SetCellValue("G1", "PERTENENCIA");
-            documento.SetCellValue("H1", "LABORATORIO");
+           // documento.SetCellValue("H1", "LABORATORIO");
 
             SLStyle style = new SLStyle();
             style.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
@@ -548,8 +548,8 @@ namespace PRESENTACION
             style.Font.FontSize = 10;
             style.Font.FontName = "Book Antique";
             style.Font.Bold = true;
-            documento.SetCellStyle("A1", "H1", style);
-            documento.AutoFitColumn("A", "H");
+            documento.SetCellStyle("A1", "G1", style);
+            documento.AutoFitColumn("A", "G");
 
             for (int i = 0; i < Cantidad; i++)
             {
@@ -571,8 +571,8 @@ namespace PRESENTACION
             estilos.Border.BottomBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
             estilos.Font.FontSize = 10;
             estilos.Font.FontName = "Book Antique";
-            documento.SetCellStyle("A2", "H" + (Cantidad + 1), estilos);
-            documento.AutoFitColumn("A", "H");
+            documento.SetCellStyle("A2", "G" + (Cantidad + 1), estilos);
+            documento.AutoFitColumn("A", "G");
             string direccion = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             direccion = direccion + "\\" + "Informe_Medicamentos_" + DateTime.Now.ToString("dd-MM-yy-HH-mm-ss") + ".xls";
             documento.SaveAs(direccion);
