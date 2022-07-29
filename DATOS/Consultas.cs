@@ -11,7 +11,16 @@ namespace DATOS
 
         public void AbrirConexion()
         {
-            Conexion.connection.Open();
+            
+            try
+            {
+                Conexion.connection.Open();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se ha podido establecer la conección.");
+            }
 
         }
         public void CerrarConexion()
@@ -240,7 +249,7 @@ namespace DATOS
         #region Login
         public DataTable D_Login(string DNI)
         {
-            Conexion.connection.Open();
+            AbrirConexion();
 
             MySqlCommand cmd = new MySqlCommand("SP_Login", Conexion.connection);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -903,7 +912,6 @@ namespace DATOS
             return dt;
         }
         #endregion
-
 
         public void SP_Eliminar_U(String DNI, int Estado)
         {
