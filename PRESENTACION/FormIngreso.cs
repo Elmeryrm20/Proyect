@@ -6,7 +6,7 @@ namespace PRESENTACION
 {
     public partial class FormIngreso : Form
     {
-        Consultas consultas = new Consultas();
+        
 
         #region Constructores
         public FormIngreso()
@@ -22,15 +22,26 @@ namespace PRESENTACION
             this.Tipo = Tipo;
             this.DNI = DNI;
             Ingreso();
+            ObtenerLaboratorio();
 
         }
         #endregion
 
-        int Med_Codigo;
-        string MedNombre;
-        string Almacen;
-        string Tipo;
+        #region Inicializar Variables
+
+        readonly Consultas consultas = new Consultas();
+        readonly int Med_Codigo;
+        readonly string MedNombre;
+        readonly string Almacen;
+        readonly string Tipo;
         readonly string DNI;
+        #endregion
+
+        void ObtenerLaboratorio()
+        {
+            cmbLab.DisplayMember = "Lab_Descripcion";
+            cmbLab.DataSource = consultas.D_Laboratorio();
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -73,7 +84,7 @@ namespace PRESENTACION
                 if (int.Parse(Txt_Cantidad.Text) > 0)
                 {
                     FormMedicamentos FrmMedicamentos = Owner as FormMedicamentos;
-                    FrmMedicamentos.EnviarIngreso(Med_Codigo, MedNombre, int.Parse(Txt_Cantidad.Text), Almacen, Tipo, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"));
+                    FrmMedicamentos.EnviarIngreso(Med_Codigo, MedNombre, int.Parse(Txt_Cantidad.Text), Almacen, Tipo, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"), cmbLab.SelectedIndex + 1, cmbLab.Text);
                     Close();
                 }
             }

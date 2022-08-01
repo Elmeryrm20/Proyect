@@ -34,6 +34,8 @@ namespace PRESENTACION
 
         }
         readonly int id_Medicamento;
+
+        #region Métodos de ComboBox
         void ObtenerTipo()
         {
             cmbTipo.DisplayMember = "tip_descripcion";
@@ -54,7 +56,8 @@ namespace PRESENTACION
         {
             CmbPertenencia.DisplayMember = "Per_Desc";
             CmbPertenencia.DataSource = consultas.D_Pertenencia();
-        }
+        } 
+        #endregion
         private void btnSerrar_Click(object sender, EventArgs e)
         {
             FormMedicamentos fr =Owner as FormMedicamentos;

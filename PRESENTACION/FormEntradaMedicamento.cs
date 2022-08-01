@@ -288,7 +288,8 @@ namespace PRESENTACION
                         //codigo
                         //nombre
                         //cantidad
-                        consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[2].Value.ToString()), DgvEntrada.Rows[i].Cells[5].Value.ToString(), 1);
+                        //laboratorio
+                        consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[2].Value.ToString()), DgvEntrada.Rows[i].Cells[5].Value.ToString(), int.Parse(DgvEntrada.Rows[i].Cells[6].Value.ToString()));
                     }
                     consultas.CerrarConexion();
 

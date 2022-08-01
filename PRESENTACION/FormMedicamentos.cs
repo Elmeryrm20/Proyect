@@ -284,11 +284,11 @@ namespace PRESENTACION
             Principal.EscogerFormulario<FormSalidaMedicamentos>(4);
             Principal.EnviarEgreso(codigo, MedNombre, cantidad, Almacen, Tipo);
         }
-        public void EnviarIngreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo, string FechaVencimiento)
+        public void EnviarIngreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo, string FechaVencimiento, int LabCodigo, string LabNombre)
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
             Principal.EscogerFormulario<FormEntradaMedicamento>(10);
-            Principal.EnviarIngreso(codigo, MedNombre, cantidad, Almacen, Tipo, FechaVencimiento);
+            Principal.EnviarIngreso(codigo, MedNombre, cantidad, Almacen, Tipo, FechaVencimiento, LabCodigo, LabNombre);
         }
         #endregion
 

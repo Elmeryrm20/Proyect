@@ -36,12 +36,6 @@ namespace PRESENTACION
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvEntrada = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl01 = new System.Windows.Forms.Panel();
             this.LblVoluntario = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,6 +58,14 @@ namespace PRESENTACION
             this.PibConfirmar = new System.Windows.Forms.PictureBox();
             this.PibEliminarMed = new System.Windows.Forms.PictureBox();
             this.PibAgregarMed = new System.Windows.Forms.PictureBox();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEntrada)).BeginInit();
             this.Pnl01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -110,7 +112,9 @@ namespace PRESENTACION
             this.Column6,
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column7,
+            this.Column8});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,49 +145,6 @@ namespace PRESENTACION
             this.DgvEntrada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvEntrada.Size = new System.Drawing.Size(529, 283);
             this.DgvEntrada.TabIndex = 16;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Código";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            this.Column4.Width = 71;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Descripción";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 95;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Cantidad";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 79;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Almacén";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 78;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Present.";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 73;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Fec. Vencimiento";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 124;
             // 
             // Pnl01
             // 
@@ -433,6 +394,64 @@ namespace PRESENTACION
             this.PibAgregarMed.MouseEnter += new System.EventHandler(this.PibAgregarMed_MouseEnter);
             this.PibAgregarMed.MouseLeave += new System.EventHandler(this.PibAgregarMed_MouseLeave);
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Código";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            this.Column4.Width = 69;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Descripción";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 95;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Cantidad";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 79;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Almacén";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 78;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Present.";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 73;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Fec. Ven.";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 81;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "LabCodigo";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            this.Column7.Width = 88;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Laboratorio";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 91;
+            // 
             // FormEntradaMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,5 +519,7 @@ namespace PRESENTACION
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

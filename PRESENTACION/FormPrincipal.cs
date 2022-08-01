@@ -671,7 +671,7 @@ namespace PRESENTACION
             }
 
         }
-        public void EnviarIngreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo, string FechaVencimiento)
+        public void EnviarIngreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo, string FechaVencimiento, int LabCodigo, string LabNombre)
         {
             FormEntradaMedicamento FrmEntrada = PnlCuerpo.Controls.OfType<FormEntradaMedicamento>().FirstOrDefault();
 
@@ -687,6 +687,8 @@ namespace PRESENTACION
                 FrmEntrada.DgvEntrada.Rows[n].Cells[3].Value = Almacen;
                 FrmEntrada.DgvEntrada.Rows[n].Cells[4].Value = Tipo;
                 FrmEntrada.DgvEntrada.Rows[n].Cells[5].Value = FechaVencimiento;
+                FrmEntrada.DgvEntrada.Rows[n].Cells[6].Value = LabCodigo;
+                FrmEntrada.DgvEntrada.Rows[n].Cells[7].Value = LabNombre;
                 FrmEntrada.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarEntrada03;
                 short fila = (short)(FrmEntrada.DgvEntrada.Rows.Count - 1);
                 FrmEntrada.DgvEntrada.CurrentCell = FrmEntrada.DgvEntrada.Rows[fila].Cells[1];
