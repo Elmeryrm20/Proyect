@@ -17,6 +17,12 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
+        public FormAgregarAlmacen(byte CodigoFilial)
+        {
+            this.CodigoFilial = CodigoFilial;
+            InitializeComponent();
+        }
+        byte CodigoFilial;
         Consultas consultas = new Consultas();
         private void btnSerrar_Click(object sender, EventArgs e)
         {
@@ -31,7 +37,7 @@ namespace PRESENTACION
             }
             else
             {
-                consultas.SP_Agregar_Almacen(Txt_Nombre.Text);
+                consultas.SP_Agregar_Almacen(Txt_Nombre.Text, CodigoFilial);
                 MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 this.Close(); 
             }

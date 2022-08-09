@@ -14,10 +14,11 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormSalidaMedicamentos(string DNI, string Nombre,byte Cargo)
+        public FormSalidaMedicamentos(string DNI, string Nombre, byte Cargo, byte CodigoFilial)
         {
             this.DNI = DNI;
             this.Cargo = Cargo;
+            this.CodigoFilial =CodigoFilial;
             InitializeComponent();
             //this.Nombre = Nombre;
             LblVoluntario.Text = Nombre;
@@ -25,6 +26,7 @@ namespace PRESENTACION
         }
         readonly string DNI;
         readonly byte Cargo;
+        byte CodigoFilial;
         Consultas consultas = new Consultas();
 
         private void PibAgregarMed_Click(object sender, System.EventArgs e)
@@ -140,7 +142,9 @@ namespace PRESENTACION
                         //codigo
                         //nombre
                         //cantidad
-                        consultas.SP_Agregar_Detalle_Egreso(CodigoEgreso, int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()), semana); ;
+                        consultas.SP_Agregar_Detalle_Egreso(CodigoEgreso, int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()), semana, int.Parse(DgvSalida.Rows[i].Cells[5].Value.ToString()));
+
+                        consultas.D_Actualizar_Stock(int.Parse(DgvSalida.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvSalida.Rows[i].Cells[5].Value.ToString()), DgvSalida.Rows[i].Cells[7].Value.ToString(), -int.Parse(DgvSalida.Rows[i].Cells[2].Value.ToString()));
                     }
                     consultas.CerrarConexion();
 
@@ -198,7 +202,7 @@ namespace PRESENTACION
 
         void RellenarPersonal()
         {
-            DataTable dt_Colaborador = consultas.D_MostrarColaboradores(DNI);
+            DataTable dt_Colaborador = consultas.D_MostrarColaboradores(DNI,CodigoFilial);
             Colaboradores = new string[dt_Colaborador.Rows.Count, 2];
             for (int i = 0; i < dt_Colaborador.Rows.Count; i++)
             {
@@ -207,7 +211,7 @@ namespace PRESENTACION
                 CmbColaborador.Items.Add(Colaboradores[i, 1]);
             }
 
-            DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(DNI);
+            DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(DNI, CodigoFilial);
             Coordinadores = new string[dt_Coordinador.Rows.Count, 2];
 
             if (Cargo == 2) //Cargo Coordinador

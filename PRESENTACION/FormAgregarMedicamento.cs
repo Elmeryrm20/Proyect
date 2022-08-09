@@ -10,37 +10,46 @@ namespace PRESENTACION
     {
         Consultas consultas = new Consultas();
 
+        #region Constructores
         public FormAgregarMedicamento()
         {
             InitializeComponent();
-
         }
-        public FormAgregarMedicamento(string Tra_DNI)
+        public FormAgregarMedicamento(string Tra_DNI, byte CodigoFilial)
         {
             InitializeComponent();
             this.Tra_DNI = Tra_DNI;
+            this.CodigoFilial = CodigoFilial;
+        }
+        #endregion
 
 
-        }
-        private int filial_ID()
-        {
-            return 1;
-        }
+        #region Inicializar Variable
         string Tra_DNI;
-
+        byte CodigoFilial;
         validar validacion = new validar();
+        #endregion
+
         void ObtenerTipo()
         {
             cmbTipo.DisplayMember = "tip_descripcion";
-            cmbTipo.DataSource = consultas.tipo();
+            cmbTipo.DataSource = consultas.D_ListaPresentacion();
         }
 
-        void ObtenerCaja()
+        private string[,] Almacen;
+        void ObtenerAlmacen()
         {
-            cmbCaja.DisplayMember = "Alm_Descripcion";
-            cmbCaja.DataSource = consultas.caja();
-
+            DataTable dt_Almacen = consultas.D_Lista_Almacen(CodigoFilial);
+            Almacen = new string[dt_Almacen.Rows.Count, 2];
+            for (int i = 0; i < dt_Almacen.Rows.Count; i++)
+            {
+                Almacen[i, 0] = dt_Almacen.Rows[i][0].ToString();
+                Almacen[i, 1] = dt_Almacen.Rows[i][1].ToString();
+                cmbCaja.Items.Add(Almacen[i, 1]);
+            }
+            cmbCaja.SelectedIndex = 0;
         }
+
         void ObtenerLaboratorio()
         {
             cmbLab.DisplayMember = "Lab_Descripcion";
@@ -57,7 +66,7 @@ namespace PRESENTACION
         private void FormAgregarMedicamento_Load(object sender, EventArgs e)
         {
             ObtenerTipo();
-            ObtenerCaja();
+            ObtenerAlmacen();
             ObtenerLaboratorio();
             ObtenerPertenencia();
             RellenarPersonal();
@@ -76,7 +85,7 @@ namespace PRESENTACION
 
         void RellenarPersonal()
         {
-            DataTable dt_Colaborador = consultas.D_MostrarColaboradores(Tra_DNI);
+            DataTable dt_Colaborador = consultas.D_MostrarColaboradores(Tra_DNI, CodigoFilial);
             Colaboradores = new string[dt_Colaborador.Rows.Count, 2];
             for (int i = 0; i < dt_Colaborador.Rows.Count; i++)
             {
@@ -85,7 +94,7 @@ namespace PRESENTACION
                 CmbColaborador.Items.Add(Colaboradores[i, 1]);
             }
 
-            DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(Tra_DNI);
+            DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(Tra_DNI, CodigoFilial);
             Coordinadores = new string[dt_Coordinador.Rows.Count, 2];
 
             for (int i = 0; i < dt_Coordinador.Rows.Count; i++)
@@ -193,7 +202,7 @@ namespace PRESENTACION
             {
                 errorProvider1.SetError(CmbEncargado, "");
             }
-            if ((textNombre.Text + textGramaje.Text).Length >80)
+            if ((textNombre.Text + textGramaje.Text).Length > 80)
             {
                 MessageBox.Show("La Composición ha superado el límite de caracteres");
                 valor = false;
@@ -208,7 +217,7 @@ namespace PRESENTACION
                 try
                 {
                     string texto = textNombre.Text + " " + textGramaje.Text;
-                    string dt = consultas.D_Consulta_Dinamica(texto,filial_ID()).Rows[0]["COMPOSICIÓN"].ToString();
+                    string dt = consultas.D_Busqueda_Dinamica(texto, CodigoFilial).Rows[0]["COMPOSICIÓN"].ToString();
                     if (dt == texto)
                     {
                         MessageBox.Show("El Medicamento Ya existe", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -228,18 +237,28 @@ namespace PRESENTACION
                     else img = null;
 
                     string FechaActual = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("HH:mm:ss");
-                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), 0, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, FechaActual, 0, img, CmbPertenencia.SelectedIndex + 1);
+                    consultas.D_AgregarMedicamento((textNombre.Text + " " + textGramaje.Text).ToUpper(), 0, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, int.Parse(Almacen[cmbCaja.SelectedIndex, 0]), 0, img, CmbPertenencia.SelectedIndex + 1, CodigoFilial);
                     int CodigoMedicamento = consultas.D_UltimoIdIngresado();
 
                     //string Colaborador;
                     //if (CmbColaborador.SelectedIndex < 0) Colaborador = "t1Mtbf8p";
                     //else Colaborador = Colaboradores[CmbColaborador.SelectedIndex, 0];
-                    
+
                     consultas.D_ActualizarIngreso(Tra_DNI, FechaActual, Colaboradores[CmbColaborador.SelectedIndex, 0], Coordinadores[CmbEncargado.SelectedIndex, 0]);
                     int CodigoIngreso = consultas.D_UltimoIdIngresado();
 
                     consultas.AbrirConexion();
                     consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, CodigoMedicamento, int.Parse(textCantidad.Text), dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), cmbLab.SelectedIndex + 1);
+
+                    if (consultas.D_Verificar_Stock(CodigoMedicamento, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd")))
+                    {
+                        consultas.D_Actualizar_Stock(CodigoMedicamento, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), int.Parse(textCantidad.Text));
+                    }
+                    else
+                    {
+                        consultas.D_Agregar_Nuevo_Stock(CodigoMedicamento, cmbLab.SelectedIndex + 1, dtFecha_Vencimiento.Value.ToString("yyyy-MM-dd"), int.Parse(textCantidad.Text));
+                    }
+
                     consultas.CerrarConexion();
 
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -456,12 +475,12 @@ namespace PRESENTACION
         {
             if (cmbCaja.SelectedIndex == -1)
             {
-                ObtenerCaja();
+                ObtenerAlmacen();
             }
             else
             {
                 int numero = Convert.ToInt32(cmbCaja.SelectedIndex.ToString());
-                ObtenerCaja();
+                ObtenerAlmacen();
                 cmbCaja.SelectedIndex = numero;
             }
 

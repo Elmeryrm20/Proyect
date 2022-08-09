@@ -12,7 +12,7 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormEgreso(int Med_Codigo, string MedNombre, string DNI, string Almacen, string Tipo)
+        public FormEgreso(int Med_Codigo, string MedNombre, string DNI, string Almacen, string Tipo, byte CodigoFilial)
         {
             InitializeComponent();
             this.Med_Codigo = Med_Codigo;
@@ -20,6 +20,7 @@ namespace PRESENTACION
             this.Almacen = Almacen;
             this.Tipo = Tipo;
             this.DNI = DNI;
+            this.CodigoFilial = CodigoFilial;
             ObtenerIngresoEgreso();
         }
 
@@ -30,6 +31,7 @@ namespace PRESENTACION
         string Almacen;
         string Tipo;
         readonly string DNI;
+        readonly byte CodigoFilial;
 
         private void btnSerrar_Click(object sender, EventArgs e)
         {
@@ -41,7 +43,7 @@ namespace PRESENTACION
         void ObtenerIngresoEgreso()
         {
             DataTable dt = new DataTable();
-            dt = consultas.D_Medicamento_Detallado(Med_Codigo);
+            dt = consultas.D_Detalles_Medicamento(Med_Codigo);
             //lbl_Nombre.Text = consultas.D_Medicamento_Detallado(valor).Rows[0]["COMPOSICIÒN"].ToString();
             //int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
             //int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
@@ -52,11 +54,31 @@ namespace PRESENTACION
             LblStock.Text = (Ingreso - Egreso).ToString();
         }
 
-        //Boton Confirmar
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private bool ValidacionStock()
         {
             if (txtCantidad.Text.Length != 0)
             {
+                errorProvider1.SetError(txtCantidad, "Ingrese una cantidad.");
+                return false;
+            }
+            if (int.Parse(txtCantidad.Text) == 0)
+            {
+                errorProvider1.SetError(txtCantidad, "Ingrese una cantidad.");
+                return false;
+            }
+            if (int.Parse(DgvStock.Rows[fila].Cells[0].Value.ToString()) < int.Parse(txtCantidad.Text)) //Stock<Cantidad
+            {
+                errorProvider1.SetError(txtCantidad, "Ha superado el stock.");
+                return false;
+            }
+            return true;
+        }
+        //Boton Confirmar
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (ValidacionStock())
+            {
+
                 int Existencias = Ingreso - Egreso;
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
                 if (cantidad <= Existencias)
@@ -64,7 +86,7 @@ namespace PRESENTACION
                     Ingreso = 0;
                     Egreso = 0;
                     FormMedicamentos FrmMedicamentos = Owner as FormMedicamentos;
-                    FrmMedicamentos.EnviarEgreso(Med_Codigo, MedNombre, int.Parse(txtCantidad.Text),Almacen,Tipo);
+                    FrmMedicamentos.EnviarEgreso(Med_Codigo, MedNombre, int.Parse(txtCantidad.Text), Almacen, Tipo, int.Parse(DgvStock.Rows[fila].Cells[0].Value.ToString()), DgvStock.Rows[fila].Cells[1].Value.ToString(), DgvStock.Rows[fila].Cells[3].Value.ToString());
 
                     Close();
 
@@ -79,10 +101,10 @@ namespace PRESENTACION
                     //    FrmMed.dgb_Medicamentos.CurrentCell = FrmMed.dgb_Medicamentos.Rows[Med_Codigo - 1].Cells[0];
                     //    Close();
                 }
-                else
-                {
-                    MessageBox.Show("La cantidad supera el Stock.", "Advertencia");
-                }
+                //else
+                //{
+                //    MessageBox.Show("La cantidad supera el Stock.", "Advertencia");
+                //}
 
             }
             else
@@ -116,6 +138,21 @@ namespace PRESENTACION
         {
             btnSerrar.Image = Properties.Resources.BotonFormCancelar05;
 
+        }
+
+        private void FormEgreso_Load(object sender, EventArgs e)
+        {
+            DgvStock.DataSource = consultas.D_Lista_Stock(Med_Codigo);
+        }
+
+        int fila = 0;
+        private void DgvStock_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                fila = e.RowIndex;
+
+            }
         }
     }
 }

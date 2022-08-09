@@ -14,20 +14,29 @@ namespace PRESENTACION
             InitializeComponent();
 
         }
-        public FormAgregarUsuario(string DNI)
+        public FormAgregarUsuario(string DNI, byte CodigoFilial)
         {
             InitializeComponent();
             this.DNI = DNI;
+            this.CodigoFilial = CodigoFilial;
             ObtenerCaja();
             ObtenerCargoTra();
+            ObtenerFilial();
         }
 
         string DNI;
+        byte CodigoFilial;
         void ObtenerCaja()
         {
             cmbTipoDocumento.DisplayMember = "Tid_Descripcion";
             cmbTipoDocumento.DataSource = consultas.D_TipoDNI();
 
+        }
+        void ObtenerFilial()
+        {
+            CmbFilial.DisplayMember = "Fil_Descripcion";
+            CmbFilial.DataSource = consultas.D_Lista_Filial();
+            CmbFilial.SelectedIndex = CodigoFilial - 1;
         }
         void ObtenerCargoTra()
         {
@@ -39,6 +48,7 @@ namespace PRESENTACION
         {
             cmbTipoDocumento.Text = "Seleccione Documento ..";
             cmb_Cargo.Text = "Selecione Cargo..";
+            CmbFilial.Text = "Selecione Filial.";
             dtpFecha_Nacimiento.MaxDate = DateTime.Now.Date;
             dtpFecha_Nacimiento.Value = DateTime.Now.Date;
         }
@@ -69,7 +79,7 @@ namespace PRESENTACION
             {
                 if (ValidarDoc())
                 {
-                    consultas.D_Insertar_Trabajador(txtDocumento.Text, (txtNombre.Text).ToUpper(), (txtApellido.Text).ToUpper(), dtpFecha_Nacimiento.Value.ToString("yyyy-MM-dd"), txtCorreo.Text, txtTelefono.Text, cmbTipoDocumento.SelectedIndex + 1, cmb_Cargo.SelectedIndex + 1);
+                    consultas.D_Insertar_Trabajador(txtDocumento.Text, (txtNombre.Text).ToUpper(), (txtApellido.Text).ToUpper(), dtpFecha_Nacimiento.Value.ToString("yyyy-MM-dd"), txtCorreo.Text, txtTelefono.Text, cmbTipoDocumento.SelectedIndex + 1, cmb_Cargo.SelectedIndex + 1, CmbFilial.SelectedIndex + 1);
                     MessageBox.Show("Datos Ingresados Correctamente.", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 }
@@ -123,6 +133,7 @@ namespace PRESENTACION
             errorProvider1.SetError(cmbTipoDocumento, "");
             errorProvider1.SetError(cmb_Cargo, "");
             errorProvider1.SetError(dtpFecha_Nacimiento, "");
+            errorProvider1.SetError(CmbFilial, "");
         }
 
         private void dtpFecha_Nacimiento_ValueChanged(object sender, EventArgs e)
@@ -152,7 +163,7 @@ namespace PRESENTACION
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==Convert.ToChar("@"))e.Handled = false;
+            if (e.KeyChar == Convert.ToChar("@")) e.Handled = false;
             else if (e.KeyChar == Convert.ToChar(".")) e.Handled = false;
             else if (e.KeyChar == Convert.ToChar("_")) e.Handled = false;
             else if (e.KeyChar == Convert.ToChar("-")) e.Handled = false;

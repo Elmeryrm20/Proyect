@@ -13,19 +13,21 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormUsuarios(string DNI)
+        public FormUsuarios(string DNI, byte CodigoFilial)
         {
             InitializeComponent();
             this.DNI = DNI;
+            this.CodigoFilial = CodigoFilial;
             mostrarUsuario();
             NOMBRE = "\"" + dgb_Usuario.Rows[0].Cells[1].Value.ToString() + "\"";
         }
         string DNI;
         string valor_ID = "";
         string NOMBRE = "";
+        readonly byte CodigoFilial;
         public void mostrarUsuario()
         {
-            dgb_Usuario.DataSource = consultas.ConsultaUsuario();
+            dgb_Usuario.DataSource = consultas.D_Lista_Usuario(CodigoFilial);
             dgb_Usuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -55,7 +57,7 @@ namespace PRESENTACION
         {
             if (valor_ID != "")
             {
-                FormEditarUsuario frm = new FormEditarUsuario(valor_ID);
+                FormEditarUsuario frm = new FormEditarUsuario(valor_ID, CodigoFilial);
                 AddOwnedForm(frm);
                 frm.ShowDialog();
             }
@@ -79,7 +81,7 @@ namespace PRESENTACION
                 if (result == DialogResult.Yes)
                 {
                     consultas.SP_Restablecer_C(valor_ID);
-                    MessageBox.Show("Se a Reestablecido la contraseña de "+ NOMBRE, "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Se a Reestablecido la contraseña de " + NOMBRE, "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 else
                 {
@@ -172,7 +174,7 @@ namespace PRESENTACION
 
         private void bt_AgregarU_MouseLeave(object sender, EventArgs e)
         {
-            bt_AgregarU.Image = Properties.Resources.BotonFormAgregarUsuario01 ;
+            bt_AgregarU.Image = Properties.Resources.BotonFormAgregarUsuario01;
 
         }
 

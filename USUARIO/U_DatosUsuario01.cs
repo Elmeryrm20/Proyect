@@ -13,6 +13,7 @@ namespace USUARIO
         public string Pass { get; set; }
         public string Nombre { get; set; }
         public byte Cargo { get; set; }
+        public byte Filial { get; set; }
 
     }
 }

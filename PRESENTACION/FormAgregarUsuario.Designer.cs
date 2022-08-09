@@ -52,6 +52,9 @@ namespace PRESENTACION
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.dtpFecha_Nacimiento = new PRESENTACION.SelectorDatePicker();
+            this.CmbFilial = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PibAgregarUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -62,6 +65,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDocumento
@@ -131,7 +135,7 @@ namespace PRESENTACION
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(53, 135);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 16);
+            this.label8.Size = new System.Drawing.Size(65, 16);
             this.label8.TabIndex = 11;
             this.label8.Text = "Tipo Doc.:";
             // 
@@ -185,7 +189,7 @@ namespace PRESENTACION
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(326, 260);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 16);
+            this.label9.Size = new System.Drawing.Size(44, 16);
             this.label9.TabIndex = 15;
             this.label9.Text = "Cargo";
             // 
@@ -320,12 +324,45 @@ namespace PRESENTACION
             this.dtpFecha_Nacimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha_Nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha_Nacimiento.Location = new System.Drawing.Point(351, 151);
-            this.dtpFecha_Nacimiento.MinimumSize = new System.Drawing.Size(0, 20);
+            this.dtpFecha_Nacimiento.MinimumSize = new System.Drawing.Size(4, 20);
             this.dtpFecha_Nacimiento.Name = "dtpFecha_Nacimiento";
             this.dtpFecha_Nacimiento.Size = new System.Drawing.Size(147, 23);
             this.dtpFecha_Nacimiento.SkinColor = System.Drawing.Color.White;
             this.dtpFecha_Nacimiento.TabIndex = 75;
             this.dtpFecha_Nacimiento.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            // 
+            // CmbFilial
+            // 
+            this.CmbFilial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmbFilial.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.CmbFilial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
+            this.CmbFilial.FormattingEnabled = true;
+            this.CmbFilial.Location = new System.Drawing.Point(399, 300);
+            this.CmbFilial.Name = "CmbFilial";
+            this.CmbFilial.Size = new System.Drawing.Size(136, 23);
+            this.CmbFilial.TabIndex = 76;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(334, 302);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 16);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "Filial:";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = global::PRESENTACION.Properties.Resources.ComboBox04;
+            this.pictureBox9.Location = new System.Drawing.Point(307, 295);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(230, 30);
+            this.pictureBox9.TabIndex = 78;
+            this.pictureBox9.TabStop = false;
             // 
             // FormAgregarUsuario
             // 
@@ -333,6 +370,9 @@ namespace PRESENTACION
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(141)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(707, 406);
+            this.Controls.Add(this.CmbFilial);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.dtpFecha_Nacimiento);
             this.Controls.Add(this.cmb_Cargo);
             this.Controls.Add(this.label9);
@@ -368,6 +408,7 @@ namespace PRESENTACION
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +437,8 @@ namespace PRESENTACION
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private SelectorDatePicker dtpFecha_Nacimiento;
+        private System.Windows.Forms.ComboBox CmbFilial;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

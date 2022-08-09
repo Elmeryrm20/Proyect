@@ -6,14 +6,14 @@ namespace PRESENTACION
 {
     public partial class FormIngreso : Form
     {
-        
+
 
         #region Constructores
         public FormIngreso()
         {
             InitializeComponent();
         }
-        public FormIngreso(int Med_Codigo, string MedNombre, string DNI, string Almacen, string Tipo)
+        public FormIngreso(int Med_Codigo, string MedNombre, string DNI, string Almacen, string Tipo, byte CodigoFilial)
         {
             InitializeComponent();
             this.Med_Codigo = Med_Codigo;
@@ -21,6 +21,7 @@ namespace PRESENTACION
             this.Almacen = Almacen;
             this.Tipo = Tipo;
             this.DNI = DNI;
+            this.CodigoFilial = CodigoFilial;
             Ingreso();
             ObtenerLaboratorio();
 
@@ -35,6 +36,7 @@ namespace PRESENTACION
         readonly string Almacen;
         readonly string Tipo;
         readonly string DNI;
+        readonly byte CodigoFilial;
         #endregion
 
         void ObtenerLaboratorio()
@@ -54,9 +56,26 @@ namespace PRESENTACION
         }
         void Ingreso()
         {
-            lbl_Nombre.Text = consultas.D_Medicamento_Detallado(Med_Codigo).Rows[0]["COMPOSICIÓN"].ToString();
+            lbl_Nombre.Text = consultas.D_Detalles_Medicamento(Med_Codigo).Rows[0]["COMPOSICIÓN"].ToString();
         }
 
+        private bool ValidarIngreso()
+        {
+            if (int.Parse(Txt_Cantidad.Text) > 0)
+            {
+                if (cmbLab.SelectedIndex == -1)
+                {
+                    errorProvider1.SetError(cmbLab, "Por favor, seleccione un laboratorio.");
+                    return false;
+                }
+                else return true;
+            }
+            else
+            {
+                errorProvider1.SetError(Txt_Cantidad, "Por favor, ingrese una cantidad.");
+                return false;
+            }
+        }
         //Botone de Ingresar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -80,18 +99,17 @@ namespace PRESENTACION
 
             if (Txt_Cantidad.Text != "")
             {
-
-                if (int.Parse(Txt_Cantidad.Text) > 0)
+                if (ValidarIngreso())
                 {
                     FormMedicamentos FrmMedicamentos = Owner as FormMedicamentos;
                     FrmMedicamentos.EnviarIngreso(Med_Codigo, MedNombre, int.Parse(Txt_Cantidad.Text), Almacen, Tipo, dtp_FechaVencimiento.Value.ToString("yyyy-MM-dd"), cmbLab.SelectedIndex + 1, cmbLab.Text);
                     Close();
                 }
             }
-            else
-            {
-                MessageBox.Show("Ingrese una cantidad.", "Información", MessageBoxButtons.OK);
-            }
+            //else
+            //{
+            //    MessageBox.Show("Ingrese una cantidad.", "Información", MessageBoxButtons.OK);
+            //}
         }
 
 

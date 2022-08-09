@@ -22,31 +22,41 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormEditarProducto(int id_Medicamento)
+        public FormEditarProducto(int id_Medicamento, byte CodigoFilial)
         {
             InitializeComponent();
             this.id_Medicamento = id_Medicamento;
             ObtenerTipo();
-            ObtenerCaja();
+            ObtenerAlmacen();
             ObtenerLaboratorio();
             ObtenerPertenencia();
             Consulta_Editar_Medicamento();
 
         }
         readonly int id_Medicamento;
+        readonly byte CodigoFilial;
 
         #region Métodos de ComboBox
         void ObtenerTipo()
         {
             cmbTipo.DisplayMember = "tip_descripcion";
-            cmbTipo.DataSource = consultas.tipo();
+            cmbTipo.DataSource = consultas.D_ListaPresentacion();
         }
-        void ObtenerCaja()
-        {
-            cmbCaja.DisplayMember = "Alm_Descripcion";
-            cmbCaja.DataSource = consultas.caja();
 
+        private string[,] Almacen;
+        void ObtenerAlmacen()
+        {
+            DataTable dt_Almacen = consultas.D_Lista_Almacen(CodigoFilial);
+            Almacen = new string[dt_Almacen.Rows.Count, 2];
+            for (int i = 0; i < dt_Almacen.Rows.Count; i++)
+            {
+                Almacen[i, 0] = dt_Almacen.Rows[i][0].ToString();
+                Almacen[i, 1] = dt_Almacen.Rows[i][1].ToString();
+                cmbCaja.Items.Add(Almacen[i, 1]);
+            }
+            cmbCaja.SelectedIndex = 0;
         }
+
         void ObtenerLaboratorio()
         {
             cmbLab.DisplayMember = "Lab_Descripcion";
@@ -83,12 +93,12 @@ namespace PRESENTACION
                     ptb_Imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     byte[] img = ms.ToArray();
 
-                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex +1);
+                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, int.Parse(Almacen[cmbCaja.SelectedIndex,0]), img, CmbPertenencia.SelectedIndex +1);
                 }
                 else
                 {
                     byte[] img = null;
-                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), cmbLab.SelectedIndex + 1, cmbTipo.SelectedIndex + 1, cmbCaja.SelectedIndex + 1, img, CmbPertenencia.SelectedIndex + 1);
+                    consultas.SP_Editar_Producto(id_Medicamento, (txtNombre.Text).ToUpper(), txt_fecha.Value.ToString("yyyy-MM-dd"), cmbTipo.SelectedIndex + 1, int.Parse(Almacen[cmbCaja.SelectedIndex, 0]), img, CmbPertenencia.SelectedIndex + 1);
                 }
                 MessageBox.Show("Los cambios Guardados", "Excelente!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 SeleccionarFila();
@@ -106,7 +116,7 @@ namespace PRESENTACION
 
             try
             {
-                DataTable dt = consultas.D_Medicamento_Detallado(id_Medicamento);
+                DataTable dt = consultas.D_Detalles_Medicamento(id_Medicamento);
                 txtNombre.Text = dt.Rows[0][0].ToString(); //Composición
                 cmbCaja.Text = dt.Rows[0][3].ToString(); //Almacén
                 txt_fecha.Text = ((DateTime)dt.Rows[0][4]).ToString("D"); //Fecha Vencimiento

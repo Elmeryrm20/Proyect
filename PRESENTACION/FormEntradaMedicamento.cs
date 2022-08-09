@@ -14,17 +14,19 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
-        public FormEntradaMedicamento(string DNI, string Nombre, byte Cargo)
+        public FormEntradaMedicamento(string DNI, string Nombre, byte Cargo, byte CodigoFilial)
         {
             InitializeComponent();
             this.DNI = DNI;
             this.Cargo = Cargo;
+            this.CodigoFilial = CodigoFilial;
             LblVoluntario.Text = Nombre;
 
         }
 
         readonly string DNI;
         readonly byte Cargo;
+        byte CodigoFilial;
         Consultas consultas = new Consultas();
 
         private void PibAgregarMed_Click(object sender, EventArgs e)
@@ -89,7 +91,7 @@ namespace PRESENTACION
 
         void RellenarPersonal()
         {
-            DataTable dt_Colaborador = consultas.D_MostrarColaboradores(DNI);
+            DataTable dt_Colaborador = consultas.D_MostrarColaboradores(DNI, CodigoFilial);
             Colaboradores = new string[dt_Colaborador.Rows.Count, 2];
             for (int i = 0; i < dt_Colaborador.Rows.Count; i++)
             {
@@ -98,7 +100,7 @@ namespace PRESENTACION
                 CmbColaborador.Items.Add(Colaboradores[i, 1]);
             }
 
-            DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(DNI);
+            DataTable dt_Coordinador = consultas.D_MostrarCoordinadores(DNI, CodigoFilial);
 
             if (Cargo == 2) //Cargo Coordinador
             {
@@ -289,9 +291,21 @@ namespace PRESENTACION
                         //nombre
                         //cantidad
                         //laboratorio
-                        consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[2].Value.ToString()), DgvEntrada.Rows[i].Cells[5].Value.ToString(), int.Parse(DgvEntrada.Rows[i].Cells[6].Value.ToString()));
+                        consultas.SP_Agregar_Detalle_Ingreso(CodigoIngreso, int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[2].Value.ToString()), DgvEntrada.Rows[i].Cells[7].Value.ToString(), int.Parse(DgvEntrada.Rows[i].Cells[5].Value.ToString()));
+
+                        //Stock (Actualizar o Agregar)
+                        if (consultas.D_Verificar_Stock(int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[5].Value.ToString()), DgvEntrada.Rows[i].Cells[7].Value.ToString()))
+                        {
+                            consultas.D_Actualizar_Stock(int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[5].Value.ToString()), DgvEntrada.Rows[i].Cells[7].Value.ToString(), int.Parse(DgvEntrada.Rows[i].Cells[2].Value.ToString()));
+                        }
+                        else
+                        {
+                            consultas.D_Agregar_Nuevo_Stock(int.Parse(DgvEntrada.Rows[i].Cells[0].Value.ToString()), int.Parse(DgvEntrada.Rows[i].Cells[5].Value.ToString()), DgvEntrada.Rows[i].Cells[7].Value.ToString(), int.Parse(DgvEntrada.Rows[i].Cells[2].Value.ToString()));
+                        }
                     }
                     consultas.CerrarConexion();
+
+ 
 
                     if (BoolImprimir == true)
                     {

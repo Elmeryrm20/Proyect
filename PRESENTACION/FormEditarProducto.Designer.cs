@@ -112,6 +112,7 @@
             this.cmbLab.Size = new System.Drawing.Size(135, 23);
             this.cmbLab.TabIndex = 51;
             this.cmbLab.Text = "Selecciona Laboratorio";
+            this.cmbLab.Visible = false;
             // 
             // CmbPresentacion
             // 

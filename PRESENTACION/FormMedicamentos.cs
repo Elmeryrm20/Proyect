@@ -1,9 +1,9 @@
 ﻿using DATOS;
+using SpreadsheetLight;
 using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using SpreadsheetLight;
 
 namespace PRESENTACION
 {
@@ -15,16 +15,18 @@ namespace PRESENTACION
             InitializeComponent();
 
         }
-        public FormMedicamentos(string DNI)
+        public FormMedicamentos(string DNI, byte CodigoFilial)
         {
             InitializeComponent();
             this.DNI = DNI;
+            this.CodigoFilial = CodigoFilial;
 
         }
         #endregion
 
         Consultas consultas = new Consultas();
         readonly string DNI;
+        readonly byte CodigoFilial;
 
         #region Métodos al cargar el formulario
         public void MaximizarDataGridView()
@@ -66,7 +68,7 @@ namespace PRESENTACION
 
         public void Rellenartabla()
         {
-            dgb_Medicamentos.DataSource = consultas.ConsultaMed(filial_ID());
+            dgb_Medicamentos.DataSource = consultas.ConsultaMed(CodigoFilial);
             DesignDataGridView();
         }
 
@@ -74,13 +76,21 @@ namespace PRESENTACION
         {
             cmbTipo.DisplayMember = "tip_descripcion";
             cmbTipo.ValueMember = "tip_descripcion";
-            cmbTipo.DataSource = consultas.tipo();
+            cmbTipo.DataSource = consultas.D_ListaPresentacion();
         }
-        void Almacen_Filtrar()
+
+        private string[,] Almacen;
+        void ObtenerAlmacen()
         {
-            cmb_Almacen.DisplayMember = "Alm_Descripcion";
-            cmb_Almacen.ValueMember = "Alm_Descripcion";
-            cmb_Almacen.DataSource = consultas.P_AlmMedicamento();
+            DataTable dt_Almacen = consultas.D_Lista_Almacen(CodigoFilial);
+            Almacen = new string[dt_Almacen.Rows.Count, 2];
+            for (int i = 0; i < dt_Almacen.Rows.Count; i++)
+            {
+                Almacen[i, 0] = dt_Almacen.Rows[i][0].ToString();
+                Almacen[i, 1] = dt_Almacen.Rows[i][1].ToString();
+                cmb_Almacen.Items.Add(Almacen[i, 1]);
+            }
+            cmb_Almacen.SelectedIndex = 0;
         }
         void Actualizar()
         {
@@ -104,7 +114,7 @@ namespace PRESENTACION
         {
             Rellenartabla();
             Elementos_Filtrar();
-            Almacen_Filtrar();
+            ObtenerAlmacen();
             cmbTipo.SelectedIndex = -1;
             cmb_Almacen.SelectedIndex = -1;
             cmbTipo.Text = "Seleccionar";
@@ -112,10 +122,6 @@ namespace PRESENTACION
         }
 
         #endregion
-        private int filial_ID()
-        {
-            return 2;
-        }
 
         #region Búsqueda,Filtro y obtener ID
         //Búsqueda Dinámica
@@ -126,7 +132,7 @@ namespace PRESENTACION
             PibActualizar.Image = Properties.Resources.BotonFormActualizar04;
             cmbTipo.Text = "Seleccionar";
             cmb_Almacen.Text = "Seleccionar";
-            DataTable dt = consultas.D_Consulta_Dinamica(txb_Buscar.Text,filial_ID());
+            DataTable dt = consultas.D_Busqueda_Dinamica(txb_Buscar.Text, CodigoFilial);
             dgb_Medicamentos.DataSource = dt;
         }
 
@@ -161,12 +167,12 @@ namespace PRESENTACION
                 {
                     if (cmb_Almacen.SelectedIndex >= 0) //Si selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Ambos(cmb_Almacen.SelectedValue.ToString(), cmbTipo.SelectedValue.ToString(),filial_ID());
+                        dgb_Medicamentos.DataSource = consultas.D_Filtro_Medicamento_Ambos(cmb_Almacen.SelectedIndex+1,cmbTipo.SelectedIndex+1, CodigoFilial);
                         FiltradoExitoso();
                     }
                     else //No selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Consulta_Medicamento_Filtrado(cmbTipo.SelectedValue.ToString(),filial_ID());
+                        dgb_Medicamentos.DataSource = consultas.D_Filtro_Medicamento_Presentacion(cmbTipo.SelectedIndex + 1, CodigoFilial); //Solo Tipo
                         FiltradoExitoso();
                     }
                 }
@@ -174,7 +180,7 @@ namespace PRESENTACION
                 {
                     if (cmb_Almacen.SelectedIndex >= 0)  //Si selección Almacén
                     {
-                        dgb_Medicamentos.DataSource = consultas.SP_Medicamento_Filtrado_Almacen(cmb_Almacen.SelectedValue.ToString(),filial_ID());
+                        dgb_Medicamentos.DataSource = consultas.D_Filtro_Medicamento_Almacen(cmb_Almacen.SelectedIndex + 1, CodigoFilial); //Solo Almacén
                         FiltradoExitoso();
                     }
                     else
@@ -224,7 +230,7 @@ namespace PRESENTACION
         {
             if (dgb_Medicamentos.Rows.Count > 0)
             {
-                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
+                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.CurrentRow.Cells[0].Value, CodigoFilial);
                 frm1.ShowDialog();
             }
 
@@ -239,7 +245,7 @@ namespace PRESENTACION
                 MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
                 Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
                 Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
-                FormIngreso frm2 = new FormIngreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo);
+                FormIngreso frm2 = new FormIngreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo, CodigoFilial);
                 AddOwnedForm(frm2);
                 frm2.ShowDialog();
             }
@@ -255,7 +261,7 @@ namespace PRESENTACION
                 MedNombre = dgb_Medicamentos.CurrentRow.Cells[1].Value.ToString();
                 Almacen = dgb_Medicamentos.CurrentRow.Cells[4].Value.ToString();
                 Tipo = dgb_Medicamentos.CurrentRow.Cells[5].Value.ToString();
-                FormEgreso frm3 = new FormEgreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo);
+                FormEgreso frm3 = new FormEgreso((int)dgb_Medicamentos.Rows[fila].Cells[0].Value, MedNombre, DNI, Almacen, Tipo, CodigoFilial);
                 AddOwnedForm(frm3);
                 frm3.ShowDialog();
             }
@@ -268,7 +274,7 @@ namespace PRESENTACION
             if (dgb_Medicamentos.Rows.Count > 0)
             {
                 //FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.Rows[fila].Cells[0].Value);
-                FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
+                FormEditarProducto frm4 = new FormEditarProducto((int)dgb_Medicamentos.CurrentRow.Cells[0].Value, CodigoFilial);
                 AddOwnedForm(frm4);
                 frm4.ShowDialog();
             }
@@ -278,11 +284,11 @@ namespace PRESENTACION
         #endregion
 
         #region Métodos Heredados
-        public void EnviarEgreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
+        public void EnviarEgreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo, int LaboratorioCodigo, string LaboratorioNombre, string FechaVencimiento)
         {
             FormPrincipal Principal = (FormPrincipal)Owner;
             Principal.EscogerFormulario<FormSalidaMedicamentos>(4);
-            Principal.EnviarEgreso(codigo, MedNombre, cantidad, Almacen, Tipo);
+            Principal.EnviarEgreso(codigo, MedNombre, cantidad, Almacen, Tipo, LaboratorioCodigo, LaboratorioNombre, FechaVencimiento);
         }
         public void EnviarIngreso(int codigo, string MedNombre, int cantidad, string Almacen, string Tipo, string FechaVencimiento, int LabCodigo, string LabNombre)
         {
@@ -387,7 +393,7 @@ namespace PRESENTACION
             //LblIndice.Text = valor_ID.ToString();
             if (dgb_Medicamentos.Rows.Count > 0)
             {
-                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.CurrentRow.Cells[0].Value);
+                FormDetallesMedicamento frm1 = new FormDetallesMedicamento((int)dgb_Medicamentos.CurrentRow.Cells[0].Value, CodigoFilial);
                 frm1.ShowDialog();
             }
         }
@@ -488,7 +494,7 @@ namespace PRESENTACION
         }
         private void dgb_Medicamentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            
+
             //    if (Formato)
             //    {
 
@@ -541,7 +547,7 @@ namespace PRESENTACION
             documento.SetCellValue("E1", "ALMACEN");
             documento.SetCellValue("F1", "PRESENTACION");
             documento.SetCellValue("G1", "PERTENENCIA");
-           // documento.SetCellValue("H1", "LABORATORIO");
+            // documento.SetCellValue("H1", "LABORATORIO");
 
             SLStyle style = new SLStyle();
             style.Border.LeftBorder.BorderStyle = DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues.Thin;
@@ -585,9 +591,9 @@ namespace PRESENTACION
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (Chb_MostrarAV.Checked==true)
+            if (Chb_MostrarAV.Checked == true)
             {
-                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven(filial_ID());
+                dgb_Medicamentos.DataSource = consultas.Sp_Medicamentos_por_Ago_Ven(CodigoFilial);
                 DesignDataGridView();
                 FiltradoExitoso();
             }

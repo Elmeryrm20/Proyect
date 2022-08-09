@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.btnSerrar = new System.Windows.Forms.PictureBox();
@@ -42,10 +47,12 @@
             this.lbl_Egreso = new System.Windows.Forms.Label();
             this.lbl_Ingeso = new System.Windows.Forms.Label();
             this.ptb_Imagen = new System.Windows.Forms.PictureBox();
+            this.DgvStock = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvStock)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,7 +73,7 @@
             this.lbl_Nombre.Name = "lbl_Nombre";
             this.lbl_Nombre.Size = new System.Drawing.Size(454, 42);
             this.lbl_Nombre.TabIndex = 0;
-            this.lbl_Nombre.Text = "label1";
+            this.lbl_Nombre.Text = "500; 425";
             this.lbl_Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSerrar
@@ -86,6 +93,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.DgvStock);
             this.panel2.Controls.Add(this.btnSerrar);
             this.panel2.Controls.Add(this.LblPertenencia);
             this.panel2.Controls.Add(this.lbl_Porcentage);
@@ -100,7 +108,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(500, 383);
+            this.panel2.Size = new System.Drawing.Size(500, 463);
             this.panel2.TabIndex = 1;
             // 
             // LblPertenencia
@@ -212,12 +220,67 @@
             this.ptb_Imagen.TabStop = false;
             this.ptb_Imagen.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // DgvStock
+            // 
+            this.DgvStock.AllowUserToAddRows = false;
+            this.DgvStock.AllowUserToDeleteRows = false;
+            this.DgvStock.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.DgvStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(238)))));
+            this.DgvStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgvStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvStock.ColumnHeadersHeight = 25;
+            this.DgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvStock.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvStock.EnableHeadersVisualStyles = false;
+            this.DgvStock.GridColor = System.Drawing.Color.Tomato;
+            this.DgvStock.Location = new System.Drawing.Point(89, 377);
+            this.DgvStock.MultiSelect = false;
+            this.DgvStock.Name = "DgvStock";
+            this.DgvStock.ReadOnly = true;
+            this.DgvStock.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvStock.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DgvStock.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Humnst777 BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvStock.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.DgvStock.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.DgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvStock.Size = new System.Drawing.Size(294, 78);
+            this.DgvStock.TabIndex = 11;
+            // 
             // FormDetallesMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PRESENTACION.Properties.Resources.FondoDetalles02;
-            this.ClientSize = new System.Drawing.Size(500, 425);
+            this.ClientSize = new System.Drawing.Size(500, 505);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,6 +293,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,5 +314,6 @@
         private System.Windows.Forms.Label lbl_Porcentage;
         private System.Windows.Forms.Label lbl_Existencia;
         private System.Windows.Forms.Label LblPertenencia;
+        public System.Windows.Forms.DataGridView DgvStock;
     }
 }

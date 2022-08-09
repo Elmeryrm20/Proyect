@@ -10,19 +10,27 @@ namespace PRESENTACION
 {
     public partial class FormDetallesMedicamento : Form
     {
-        Consultas consultas = new Consultas();
+        
+
+        #region Constructores
         public FormDetallesMedicamento()
         {
             InitializeComponent();
-
         }
-        public FormDetallesMedicamento(int valor)
+        public FormDetallesMedicamento(int CodigoMedicamento, byte CodigoFilial)
         {
             InitializeComponent();
-            this.valor = valor;
+            this.CodigoMedicamento = CodigoMedicamento;
+            this.CodigoFilial = CodigoFilial;
             Medicamentos_Detallados();
         }
-        int valor;
+        #endregion
+
+        #region Declarar variables
+        Consultas consultas = new Consultas();
+        int CodigoMedicamento;
+        byte CodigoFilial; 
+        #endregion
 
         private void btnSerrar_Click(object sender, EventArgs e)
         {
@@ -43,22 +51,23 @@ namespace PRESENTACION
             //int Ingreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL INGRESADO"];
             //int Egreso = (int)consultas.D_Medicamento_Detallado(valor).Rows[0]["TOTAL EGRESADO"];
 
-            DataTable dt = consultas.D_Medicamento_Detallado(valor);
+            DataTable dt = consultas.D_Detalles_Medicamento(CodigoMedicamento);
             lbl_Nombre.Text = dt.Rows[0][0].ToString();
             lbl_Ingeso.Text = dt.Rows[0][1].ToString();
             int Ingreso = int.Parse(dt.Rows[0][1].ToString());
             lbl_Egreso.Text = dt.Rows[0][2].ToString();
             int Egreso = int.Parse(dt.Rows[0][2].ToString());
             lbl_Almacen.Text = dt.Rows[0][3].ToString();
-            lbl_F_Vencimiento.Text = Convert.ToDateTime(dt.Rows[0][4]).ToShortDateString();
-            lbl_Tipo.Text = dt.Rows[0][5].ToString();
+            //lbl_F_Vencimiento.Text = Convert.ToDateTime(dt.Rows[0][4]).ToShortDateString();
+            lbl_Tipo.Text = dt.Rows[0][4].ToString();
             //lbl_Laboratorio.Text = dt.Rows[0][6].ToString();
-            LblPertenencia.Text = dt.Rows[0][6].ToString();
-
+            LblPertenencia.Text = dt.Rows[0][5].ToString();
 
             lbl_Existencia.Text = (Ingreso - Egreso).ToString();
             double Porcentaje = Convert.ToDouble((Ingreso - Egreso) * 100 / Ingreso);
             lbl_Porcentage.Text = Math.Round(Porcentaje).ToString() + "%";
+
+            DgvStock.DataSource = consultas.D_Lista_Stock(CodigoMedicamento);
 
             //-----------------Imagen--------------------------
             try

@@ -15,7 +15,7 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
-        public FormPrincipal(string DNI, byte Tipo, string Nombre, byte Cargo)
+        public FormPrincipal(string DNI, byte Tipo, string Nombre, byte Cargo, byte Filial)
         {
             InitializeComponent();
 
@@ -23,7 +23,7 @@ namespace PRESENTACION
             this.Nombre = Nombre;
             this.Tipo = Tipo;
             this.Cargo = Cargo;
-
+            this.Filial = Filial;
 
         }
         #endregion
@@ -31,7 +31,7 @@ namespace PRESENTACION
         #region Inicializar Variables de Formularios
         readonly string DNI;
         readonly string Nombre;
-        readonly byte Tipo, Cargo;
+        readonly byte Tipo, Cargo, Filial;
 
         Consultas consultas = new Consultas();
         #endregion
@@ -165,13 +165,13 @@ namespace PRESENTACION
                 switch (i)
                 {
                     case 1: Formulario = new FormInicio(DNI, Nombre); break;
-                    case 2: Formulario = new FormMedicamentos(DNI); break;
-                    case 3: Formulario = new FormAgregarMedicamento(DNI); break;
+                    case 2: Formulario = new FormMedicamentos(DNI, Filial); break;
+                    case 3: Formulario = new FormAgregarMedicamento(DNI, Filial); break;
                     case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre, Cargo); break;
                     case 5: Formulario = new FormHistorial(DNI); break;
                     case 6: Formulario = new FormConfiguracion(DNI); break;
                     case 7: Formulario = new FormAcercaDe(); break;
-                    case 8: Formulario = new FormUsuarios(DNI); break;
+                    case 8: Formulario = new FormUsuarios(DNI, Filial); break;
                     case 9: Formulario = new FormAgregarUsuario(DNI); break;
                     default:
                         break;
@@ -221,13 +221,13 @@ namespace PRESENTACION
                 switch (indice)
                 {
                     case 1: Formulario = new FormInicio(DNI, Nombre); break;
-                    case 2: Formulario = new FormMedicamentos(DNI); break;
-                    case 3: Formulario = new FormAgregarMedicamento(DNI); break;
+                    case 2: Formulario = new FormMedicamentos(DNI, Filial); break;
+                    case 3: Formulario = new FormAgregarMedicamento(DNI, Filial); break;
                     case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre, Cargo); break;
                     case 5: Formulario = new FormHistorial(DNI); break;
                     case 6: Formulario = new FormConfiguracion(DNI); break;
                     case 7: Formulario = new FormAcercaDe(); break;
-                    case 8: Formulario = new FormUsuarios(DNI); break;
+                    case 8: Formulario = new FormUsuarios(DNI, Filial); break;
                     case 9: Formulario = new FormAgregarUsuario(DNI); break;
                     case 10: Formulario = new FormEntradaMedicamento(DNI, Nombre, Cargo); break;
                     default:
@@ -642,7 +642,7 @@ namespace PRESENTACION
             return true;
         }
 
-        public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo)
+        public void EnviarEgreso(int Codigo, string MedNombre, int cantidad, string Almacen, string Tipo, int LaboratorioCodigo, string LaboratorioNombre, string FechaVencimiento)
         {
             FormSalidaMedicamentos FrmSalida = PnlCuerpo.Controls.OfType<FormSalidaMedicamentos>().FirstOrDefault();
 
@@ -657,6 +657,9 @@ namespace PRESENTACION
                 FrmSalida.DgvSalida.Rows[n].Cells[2].Value = cantidad.ToString();
                 FrmSalida.DgvSalida.Rows[n].Cells[3].Value = Almacen;
                 FrmSalida.DgvSalida.Rows[n].Cells[4].Value = Tipo;
+                FrmSalida.DgvSalida.Rows[n].Cells[5].Value = LaboratorioCodigo.ToString();
+                FrmSalida.DgvSalida.Rows[n].Cells[6].Value = LaboratorioNombre;
+                FrmSalida.DgvSalida.Rows[n].Cells[7].Value = FechaVencimiento;
                 FrmSalida.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarSalida05;
                 short fila = (short)(FrmSalida.DgvSalida.Rows.Count - 1);
                 FrmSalida.DgvSalida.CurrentCell = FrmSalida.DgvSalida.Rows[fila].Cells[1];
@@ -686,10 +689,10 @@ namespace PRESENTACION
                 FrmEntrada.DgvEntrada.Rows[n].Cells[2].Value = cantidad.ToString();
                 FrmEntrada.DgvEntrada.Rows[n].Cells[3].Value = Almacen;
                 FrmEntrada.DgvEntrada.Rows[n].Cells[4].Value = Tipo;
-                FrmEntrada.DgvEntrada.Rows[n].Cells[5].Value = FechaVencimiento;
-                FrmEntrada.DgvEntrada.Rows[n].Cells[6].Value = LabCodigo;
-                FrmEntrada.DgvEntrada.Rows[n].Cells[7].Value = LabNombre;
-                FrmEntrada.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarEntrada03;
+                FrmEntrada.DgvEntrada.Rows[n].Cells[5].Value = LabCodigo.ToString();
+                FrmEntrada.DgvEntrada.Rows[n].Cells[6].Value = LabNombre;
+                FrmEntrada.DgvEntrada.Rows[n].Cells[7].Value = FechaVencimiento;
+                FrmEntrada.PibConfirmar.Image = Properties.Resources.BotonFormConfirmarEntrada03; //Cambiar color botón
                 short fila = (short)(FrmEntrada.DgvEntrada.Rows.Count - 1);
                 FrmEntrada.DgvEntrada.CurrentCell = FrmEntrada.DgvEntrada.Rows[fila].Cells[1];
                 FrmEntrada.fila = fila;

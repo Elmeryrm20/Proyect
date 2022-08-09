@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSerrar = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
@@ -35,8 +36,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtp_FechaVencimiento = new PRESENTACION.SelectorDatePicker();
             this.cmbLab = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,7 +57,7 @@
             this.btnSerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnSerrar.Image = global::PRESENTACION.Properties.Resources.BotonFormCancelar03;
-            this.btnSerrar.Location = new System.Drawing.Point(203, 267);
+            this.btnSerrar.Location = new System.Drawing.Point(280, 267);
             this.btnSerrar.Name = "btnSerrar";
             this.btnSerrar.Size = new System.Drawing.Size(110, 40);
             this.btnSerrar.TabIndex = 3;
@@ -134,6 +137,10 @@
             this.cmbLab.TabIndex = 64;
             this.cmbLab.Text = "Selecciona Laboratorio";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +161,7 @@
             this.Load += new System.EventHandler(this.FormIngreso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +176,6 @@
         private System.Windows.Forms.TextBox Txt_Cantidad;
         private SelectorDatePicker dtp_FechaVencimiento;
         private System.Windows.Forms.ComboBox cmbLab;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
