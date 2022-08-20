@@ -142,6 +142,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHistorial";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormHistorial_Load);
             this.PnlEncabezado.ResumeLayout(false);
             this.PnlEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibSalidas)).EndInit();

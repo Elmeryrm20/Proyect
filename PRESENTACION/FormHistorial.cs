@@ -120,5 +120,10 @@ namespace PRESENTACION
             BtnSalidas.ForeColor = Color.FromArgb(241, 241, 252);
             BtnSalidas.FlatAppearance.BorderSize = 0;
         }
+
+        private void FormHistorial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

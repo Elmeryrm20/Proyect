@@ -167,12 +167,12 @@ namespace PRESENTACION
                     case 1: Formulario = new FormInicio(DNI, Nombre); break;
                     case 2: Formulario = new FormMedicamentos(DNI, Filial); break;
                     case 3: Formulario = new FormAgregarMedicamento(DNI, Filial); break;
-                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre, Cargo); break;
+                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre, Cargo, Filial); break;
                     case 5: Formulario = new FormHistorial(DNI); break;
                     case 6: Formulario = new FormConfiguracion(DNI); break;
                     case 7: Formulario = new FormAcercaDe(); break;
                     case 8: Formulario = new FormUsuarios(DNI, Filial); break;
-                    case 9: Formulario = new FormAgregarUsuario(DNI); break;
+                    case 9: Formulario = new FormAgregarUsuario(DNI, Filial); break;
                     default:
                         break;
                 }
@@ -223,13 +223,13 @@ namespace PRESENTACION
                     case 1: Formulario = new FormInicio(DNI, Nombre); break;
                     case 2: Formulario = new FormMedicamentos(DNI, Filial); break;
                     case 3: Formulario = new FormAgregarMedicamento(DNI, Filial); break;
-                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre, Cargo); break;
+                    case 4: Formulario = new FormSalidaMedicamentos(DNI, Nombre, Cargo, Filial); break;
                     case 5: Formulario = new FormHistorial(DNI); break;
                     case 6: Formulario = new FormConfiguracion(DNI); break;
                     case 7: Formulario = new FormAcercaDe(); break;
                     case 8: Formulario = new FormUsuarios(DNI, Filial); break;
-                    case 9: Formulario = new FormAgregarUsuario(DNI); break;
-                    case 10: Formulario = new FormEntradaMedicamento(DNI, Nombre, Cargo); break;
+                    case 9: Formulario = new FormAgregarUsuario(DNI, Filial); break;
+                    case 10: Formulario = new FormEntradaMedicamento(DNI, Nombre, Cargo, Filial); break;
                     default:
                         break;
                 }
