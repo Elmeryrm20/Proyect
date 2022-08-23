@@ -7,7 +7,7 @@ namespace DATOS
 {
     public class Consultas
     {
-        D_Empleado Conexion = new D_Empleado();
+        D_Empleado de = new D_Empleado();
 
         #region Abrir y Cerrar Conección
         public void AbrirConexion()
@@ -15,7 +15,7 @@ namespace DATOS
 
             try
             {
-                Conexion.connection.Open();
+                de.connection.Open();
             }
             catch (Exception)
             {
@@ -26,16 +26,16 @@ namespace DATOS
         }
         public void CerrarConexion()
         {
-            Conexion.connection.Close();
+            de.connection.Close();
         }
         #endregion
 
         #region Rellenar ComboBox
         public DataTable D_TipoDNI()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_TipoDNI", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_TipoDNI", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -49,14 +49,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_CargoTrabajador()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_CargoTrabajador", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_CargoTrabajador", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -70,14 +70,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_TipoTrabajador()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_TipoTrabajador", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_TipoTrabajador", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -91,14 +91,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_EstadoTrabajador()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_EstadoTrabajador", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_EstadoTrabajador", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -112,14 +112,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_ListaPresentacion()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Lista_Presentacion", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Lista_Presentacion", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -133,14 +133,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_Lista_Almacen(byte Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Lista_Almacen", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Lista_Almacen", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("CodigoFilial", Filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -155,14 +155,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_Pertenencia()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Pertenencia", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Pertenencia", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -176,14 +176,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_Laboratorio()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Laboratorio", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Laboratorio", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -197,14 +197,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_Lista_Filial()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Lista_Filial", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Lista_Filial", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -218,14 +218,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_MostrarColaboradores(string DNI, int Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_MostrarColaboradores", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_MostrarColaboradores", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("DNI", DNI);
             comando.Parameters.AddWithValue("CodigoFilial", Filial);
@@ -241,14 +241,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_MostrarCoordinadores(string DNI, int Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_MostrarCoordinadores", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_MostrarCoordinadores", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("DNI", DNI);
             comando.Parameters.AddWithValue("CodigoFilial", Filial);
@@ -265,7 +265,7 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         #endregion
@@ -275,7 +275,7 @@ namespace DATOS
         {
             AbrirConexion();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Login", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Login", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -290,15 +290,15 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
 
             return dt;
         }
         public DataTable D_Login(string DNI, string password)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
             string query = "SELECT Tra_DNI AS 'DNI', Usu_PASS AS 'Constraseña', Usu_Tipo AS 'Tipo', concat(Tra_Nombre,' ',Tra_Apellido) AS 'Nombre' FROM trabajador WHERE Tra_DNI='" + DNI + "';";
-            MySqlCommand comando = new MySqlCommand(query, Conexion.connection);
+            MySqlCommand comando = new MySqlCommand(query, de.connection);
             comando.ExecuteNonQuery();
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
@@ -312,22 +312,22 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
 
         }
         public DataTable D_Validacion_Pass(string DNI)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Verificar_Pass", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Verificar_Pass", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("texto", DNI);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            Conexion.connection.Close();
+            de.connection.Close();
 
             return dt;
         }
@@ -336,9 +336,9 @@ namespace DATOS
         #region Rellenar DatagridView
         public DataTable D_CategoriasMedicamentos()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_CategoriasMedicamentos", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_CategoriasMedicamentos", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -352,14 +352,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_MayoresEgresos()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_MayoresEgresos", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_MayoresEgresos", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -373,14 +373,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_UltimosAgotados()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_UltimosAgotados", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_UltimosAgotados", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -394,14 +394,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_UltimosEgresos()
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_UltimosEgresos", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_UltimosEgresos", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -415,14 +415,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable ConsultaMed(int Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Consulta_Medicamento_Basico", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Consulta_Medicamento_Basico", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Filial", Filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -437,14 +437,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_HistorialIngreso(int Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_HistorialIngreso", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_HistorialIngreso", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Filial", Filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -459,14 +459,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_HistorialEgreso(int Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_HistorialEgreso", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_HistorialEgreso", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Filial", Filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -481,14 +481,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_Lista_Stock(int CodigoMedicamento)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Lista_Stock", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Lista_Stock", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Medicamento_Codigo", CodigoMedicamento);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -503,14 +503,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         public DataTable D_Lista_Usuario(byte Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_ListaUsuario", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_ListaUsuario", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("CodigoFilial", Filial);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -525,7 +525,7 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
         }
         #endregion
@@ -533,9 +533,9 @@ namespace DATOS
         #region Insertar o Actualizar Base de Datos
         public void D_AgregarDestino(string DNI, string Nombres, string Apellidos, string Nacionalidad, string Telefono, int TipoDNI)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("Sp_AgregarDestino", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("Sp_AgregarDestino", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
             cmd.Parameters.AddWithValue("Nombres", Nombres);
@@ -552,13 +552,13 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
         }
         public void SP_Editar_Usuario(string DNI, string Nombre, string Apellido, string fecha_N, string Correo, string Telefono, int Tipo, int Cargo, int Estado, int Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Editar_Usuario", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Editar_Usuario", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
             cmd.Parameters.AddWithValue("Nombre", Nombre);
@@ -579,13 +579,13 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
 
         }
         public void SP_Restablecer_C(string DNI)
         {
-            Conexion.connection.Open();
-            MySqlCommand cmd = new MySqlCommand("SP_Restablecer_C", Conexion.connection);
+            de.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("SP_Restablecer_C", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
             try
@@ -597,13 +597,13 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
         }
         public void D_AgregarMedicamento(string Med_Composicion, int Med_Total_I, int Laboratorio, string fecha_v, int Tipo, int caja, int Med_Total_E, byte[] imagen, int Pertenencia, int Filial)
         {
 
-            Conexion.connection.Open();
-            MySqlCommand cmd = new MySqlCommand("SP_Ingresar_Medicamento", Conexion.connection);
+            de.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("SP_Ingresar_Medicamento", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Composicion", Med_Composicion);
             cmd.Parameters.AddWithValue("fecha_V", fecha_v);
@@ -624,14 +624,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
 
         }
         public void D_Insertar_Trabajador(string DNI, string Nombre, string Apellido, string Fecha_N, string Direccion, string Telefono, int Tipo, int Cargo, int Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Ingresar_Trabajador", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Ingresar_Trabajador", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Tra_DNI", DNI);
             comando.Parameters.AddWithValue("Tra_Nombre", Nombre);
@@ -652,15 +652,15 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
 
 
         }
         public void D_Insertar_Laboratorio(string Nombre, string Direccion, string Telefono)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Insertar_Laboratorio", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Insertar_Laboratorio", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Descripcion", Nombre);
             comando.Parameters.AddWithValue("Direccion", Direccion);
@@ -674,14 +674,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
 
         }
         public void D_Agregar_Pass(string DNI, string password)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Pass", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Pass", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
             cmd.Parameters.AddWithValue("Pass", password);
@@ -696,14 +696,14 @@ namespace DATOS
                 MessageBox.Show(ex.ToString());
             }
 
-            Conexion.connection.Close();
+            de.connection.Close();
 
         }
         public void D_ActualizarIngreso(string DNI, string Fecha, string Colaborador, string Coordinador)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("Sp_AgregarIngreso", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("Sp_AgregarIngreso", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Ingreso_Fecha", Fecha);
             cmd.Parameters.AddWithValue("Trabajador_DNI", DNI);
@@ -720,14 +720,14 @@ namespace DATOS
             {
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             //return tabla;
 
         }
         public void SP_Agregar_Detalle_Ingreso(int Ing_Codigo, int Med_Codigo, int Cantidad, string FechaVencimiento, int Laboratorio)
         {
             //Conexion.connection.Open();
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Ingreso", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Ingreso", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Ingreso_Codigo", Ing_Codigo);
             cmd.Parameters.AddWithValue("Medicamento_Codigo", Med_Codigo);
@@ -747,8 +747,8 @@ namespace DATOS
         }
         public void D_ActualizarEgreso(string Fecha, string Tra_DNI, string Nacionalidad, string Colaborador, string Coordinador)
         {
-            Conexion.connection.Open();
-            MySqlCommand cmd = new MySqlCommand("Sp_AgregarEgreso", Conexion.connection);
+            de.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("Sp_AgregarEgreso", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Egreso_Fecha", Fecha);
             cmd.Parameters.AddWithValue("Trabajador_DNI", Tra_DNI);
@@ -766,14 +766,14 @@ namespace DATOS
             {
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             //return Convert.ToInt32(tabla.Rows[0][0]);
         }
         public void SP_Agregar_Detalle_Egreso(int Egr_Codigo, int Med_Codigo, int Cantidad, int Semana, int Laboratorio)
         {
             //Conexion.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Egreso", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Detalle_Egreso", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Egreso_Codigo", Egr_Codigo);
             cmd.Parameters.AddWithValue("Medicamento_Codigo", Med_Codigo);
@@ -793,9 +793,9 @@ namespace DATOS
         }
         public void SP_Editar_Producto(int codigo, string composicion, string fecha, int tip, int alm, byte[] imagen, int per)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Editar_Producto", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Editar_Producto", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("codigo", codigo);
             cmd.Parameters.AddWithValue("composicion", composicion);
@@ -813,13 +813,13 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
         }
         public void SP_Agregar_Almacen(string Almacen, int Filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Almacen", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Almacen", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Nombre", Almacen);
             cmd.Parameters.AddWithValue("CodigoFilial", Filial);
@@ -832,13 +832,13 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
         }
         public void SP_Agregar_Pertenencia(string Descripcion, string Telefono)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Pertenencia", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Pertenencia", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Descripcion", Descripcion);
             cmd.Parameters.AddWithValue("Telefono", Telefono);
@@ -851,13 +851,13 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
         }
         public void SP_Eliminar_U(string DNI, int Estado)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SP_Eliminar_U", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Eliminar_U", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("DNI", DNI);
             cmd.Parameters.AddWithValue("ESTADO", Estado);
@@ -870,12 +870,12 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
         }
         public void D_Agregar_Nuevo_Stock(int CodigoMedicamento, int CodigoLaboratorio, string FechaVencimiento, int Cantidad)
         {
             //Conexion.connection.Open();
-            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Nuevo_Stock", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Agregar_Nuevo_Stock", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Medicamento_Codigo", CodigoMedicamento);
             cmd.Parameters.AddWithValue("Laboratorio_Codigo", CodigoLaboratorio);
@@ -894,7 +894,7 @@ namespace DATOS
         public void D_Actualizar_Stock(int CodigoMedicamento, int CodigoLaboratorio, string FechaVencimiento, int Cantidad)
         {
             //Conexion.connection.Open();
-            MySqlCommand cmd = new MySqlCommand("SP_Actualizar_Stock", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("SP_Actualizar_Stock", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Medicamento_Codigo", CodigoMedicamento);
             cmd.Parameters.AddWithValue("Laboratorio_Codigo", CodigoLaboratorio);
@@ -917,7 +917,7 @@ namespace DATOS
         {
             //Conexion.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Verificar_Stock", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Verificar_Stock", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Medicamento_Codigo", CodigoMedicamento);
             comando.Parameters.AddWithValue("Laboratorio_Codigo", CodigoLaboratorio);
@@ -930,21 +930,21 @@ namespace DATOS
         }
         public DataTable SP_Existencia_T(string DNI)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Existencia_T", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Existencia_T", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("DNI", DNI);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public int D_UltimoIdIngresado()
         {
-            Conexion.connection.Open();
-            MySqlCommand comando = new MySqlCommand("SP_UltimoIdInsertado", Conexion.connection);
+            de.connection.Open();
+            MySqlCommand comando = new MySqlCommand("SP_UltimoIdInsertado", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             DataTable tabla = new DataTable();
@@ -958,14 +958,14 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return Convert.ToInt32(tabla.Rows[0][0]);
         }
         public DataTable D_Busqueda_Dinamica(string Busqueda, int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Busqueda_Dinamica", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Busqueda_Dinamica", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("texto", Busqueda);
             comando.Parameters.AddWithValue("Filial", filial);
@@ -980,15 +980,15 @@ namespace DATOS
             {
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return tabla;
 
         }
         public DataTable D_Detalles_Medicamento(int ID_Medicamento)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Detalles_Medicamento", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Detalles_Medicamento", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Id_Medicamento", ID_Medicamento);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
@@ -1003,33 +1003,33 @@ namespace DATOS
 
                 MessageBox.Show(ex.ToString());
             }
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public DataTable SP_ListaU_Para_Edit(string Med_Codigo)
         {
-            Conexion.connection.Open();
-            MySqlCommand cmd = new MySqlCommand("SP_ListaU_Para_Edit", Conexion.connection);
+            de.connection.Open();
+            MySqlCommand cmd = new MySqlCommand("SP_ListaU_Para_Edit", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Codigo", Med_Codigo);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public DataTable D_DashBoard_Indicadores(string fecha1, string fecha2)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_DashBoard_Indicadores", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_DashBoard_Indicadores", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("fecha1", fecha1);
             comando.Parameters.AddWithValue("fecha2", fecha2);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         #endregion
@@ -1037,38 +1037,38 @@ namespace DATOS
         #region Filtros
         public DataTable D_Filtro_Medicamento_Presentacion(int Presentacion, int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Filtro_Medicamento_Presentacion", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Filtro_Medicamento_Presentacion", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Presentacion", Presentacion);
             comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
 
         }
         public DataTable D_Filtro_Medicamento_Almacen(int Almacen, int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Filtro_Medicamento_Almacen", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Filtro_Medicamento_Almacen", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Almacen", Almacen);
             comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public DataTable D_Filtro_Medicamento_Ambos(int Almacen, int Presentacion, int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("SP_Filtro_Medicamento_Ambos", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("SP_Filtro_Medicamento_Ambos", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Almacen", Almacen);
             comando.Parameters.AddWithValue("Presentacion", Presentacion);
@@ -1076,14 +1076,14 @@ namespace DATOS
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public DataTable Sp_Filtro_Fecha_HI(string Fecha1, string fecha2, int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Fecha_HI", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Fecha_HI", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Fecha1", Fecha1);
             comando.Parameters.AddWithValue("fecha2", fecha2);
@@ -1091,14 +1091,14 @@ namespace DATOS
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public DataTable Sp_Filtro_Fecha_HE(string Fecha1, string fecha2, int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Fecha_HE", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Fecha_HE", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("Fecha1", Fecha1);
             comando.Parameters.AddWithValue("fecha2", fecha2);
@@ -1106,48 +1106,48 @@ namespace DATOS
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public DataTable Sp_Filtro_Dinamico_HI(string texto, int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Dinamico_HI", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Dinamico_HI", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("texto", texto);
             comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public DataTable Sp_Filtro_Dinamico_HE(string texto, int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Dinamico_HE", Conexion.connection);
+            MySqlCommand comando = new MySqlCommand("Sp_Filtro_Dinamico_HE", de.connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("texto", texto);
             comando.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         public DataTable Sp_Medicamentos_por_Ago_Ven(int filial)
         {
-            Conexion.connection.Open();
+            de.connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("Sp_Medicamentos_por_Ago_Ven", Conexion.connection);
+            MySqlCommand cmd = new MySqlCommand("Sp_Medicamentos_por_Ago_Ven", de.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("Filial", filial);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Conexion.connection.Close();
+            de.connection.Close();
             return dt;
         }
         #endregion
